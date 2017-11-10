@@ -1,10 +1,11 @@
+<div class="form-group"><label class="col-sm-8 col-sm-offset-4">Паспортные данные*</label></div>
 <div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Серия и номер паспорта</label>
-    <input type="tel" class="form-control ec tip" id="passport" name="passport" placeholder="0000 000000" title="Пожалуйста, введите серию и номер паспорта" data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Пожалуйста, введите номер и серию паспорта" required>
+    <input type="tel" class="form-control ec tip" id="passport" name="passport" placeholder="Серия и номер паспорта" title="Пожалуйста, введите серию и номер паспорта" data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Пожалуйста, введите номер и серию паспорта" required>
     <span id="passportstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
 
-<div class="form-group" style="display: none;">
+<div class="form-group hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs hidden-sm">Серия и номер паспорта</label>
 	<div class="col-sm-4">
 		<input type="tel" class="form-control ec" id="passport-s" name="passport_s" placeholder="0000" title="Серия паспорта" data-validation="number" data-validation-allowing="range[1;9999]" data-validation-error-msg="Пожалуйста, введите серию паспорта" required>
@@ -14,11 +15,11 @@
 	</div>
 </div>
 <div class="form-group has-feedback">
-    <label class="control-label label-required hidden-xs hidden-sm">Дата выдачи</label>
-    <input type="text" class="form-control ec tip" name="passportdate" id="passportdate" placeholder="ДД/ММ/ГГГГ" title="Пожалуйста, выберете дату выдачи паспорта" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату выдачи паспорта" required>
+    <label class="control-label label-required hidden-xs hidden-sm">Дата выдачи паспорта</label>
+    <input type="text" class="form-control ec tip" name="passportdate" id="passportdate" placeholder="Дата выдачи паспорта" title="Пожалуйста, выберете дату выдачи паспорта" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату выдачи паспорта" required>
     <span id="passportdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
-<div class="form-group" style="display: none">
+<div class="form-group hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs hidden-sm">Дата выдачи*</label>
 	<div class="col-sm-2">
 			<select class="form-control ec" id="passport_dd" name="passport_dd" required>
@@ -61,22 +62,22 @@
 
 <div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Код подразделения*</label>
-    <input type="tel" class="form-control ec tip"  name="passport_code" id="passport_code" placeholder="000-000" title="Пожалуйста, укажите код подразделения" data-validation="custom" data-validation-regexp="^([0-9]{3}\-[0-9]{3})$" data-validation-error-msg="Пожалуйста, введите код подразделения" required>
+    <input type="tel" class="form-control ec tip"  name="passport_code" id="passport_code" placeholder="Код подразделения" title="Пожалуйста, укажите код подразделения" data-validation="custom" data-validation-regexp="^([0-9]{3}\-[0-9]{3})$" data-validation-error-msg="Пожалуйста, введите код подразделения" required>
     <span id="passport_codestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
 <div class="form-group has-feedback">
-    <label class="control-label label-required hidden-xs hidden-sm">Кем выдан*</label>
-    <input type="text" class="form-control ec tip" name="passport_who" id="passport_who" placeholder="" title="Пожалуйста, укажите кем выдан паспорт" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\№\(\)\s\d]+$" data-validation-error-msg="Пожалуйста, укажите, кем выдан паспорт" required>
+    <label class="control-label label-required hidden-xs hidden-sm">Кем выдан паспорт*</label>
+    <input type="text" class="form-control ec tip" name="passport_who" id="passport_who" placeholder="Кем выдан паспорт" title="Пожалуйста, укажите кем выдан паспорт" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\№\(\)\s\d]+$" data-validation-error-msg="Пожалуйста, укажите, кем выдан паспорт" required>
     <span id="passport_whostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
 
 <div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Место рождения*</label>
-    <input type="text" class="form-control ec tip" name="birthplace" id="birthplace" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите место рождения" required>
+    <input type="text" class="form-control ec tip" name="birthplace" id="birthplace" placeholder="Место рождения" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите место рождения" required>
     <span id="birthplacestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
 <div class="clearfix">&nbsp;</div>
-<div class="form-group"><label class="col-sm-8 col-sm-offset-4 hidden-xs hidden-sm">Место жительства*</label></div>
+<div class="form-group"><label class="col-sm-8 col-sm-offset-4">Место жительства*</label></div>
 <div class="form-group">
 	<label class="control-label label-required hidden-xs hidden-sm">Регион*</label>	
 	<select class="form-control ec" id="region" name="region" autocomplete="off" required>
@@ -97,27 +98,27 @@
 </div>
 <div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Улица*</label>
-    <input type="text" class="form-control ec tip" name="street" id="street" title="Улица" required title="Пожалуйста, укажите, улицу" pattern="^[А-Яа-яЁё\s\d]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s\d]+$" data-validation-error-msg="Пожалуйста, укажите, улицу">
+    <input type="text" class="form-control ec tip" name="street" id="street" placeholder="Улица" title="Улица" required title="Пожалуйста, укажите, улицу" pattern="^[А-Яа-яЁё\s\d]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s\d]+$" data-validation-error-msg="Пожалуйста, укажите, улицу">
     <span id="streetstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
 <div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Номер дома*</label>
-    <input type="text" class="form-control ec tip" name="building" id="building" title="Дом" required title="Пожалуйста, укажите, номер дома" pattern="^[А-Яа-яЁё0-9\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, номер дома">
+    <input type="text" class="form-control ec tip" name="building"  placeholder="Номер дома" id="building" title="Дом" required title="Пожалуйста, укажите, номер дома" pattern="^[А-Яа-яЁё0-9\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, номер дома">
     <span id="buildingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
     <p class="help-block">Например: 9а</p>
 </div>
 <div class="form-group has-feedback" style="display:none;">
     <label class="control-label hidden-xs hidden-sm">Строение (корпус)</label>
-    <input type="text" class="form-control ec tip" name="housing" id="housing" title="Пожалуйста, укажите, строение (корпус)" pattern="^[А-Яа-яЁё0-9\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, строение (корпус)" data-validation-optional="true">
+    <input type="text" class="form-control ec tip" name="housing" id="housing" placeholder="Строение (корпус)" title="Пожалуйста, укажите, строение (корпус)" pattern="^[А-Яа-яЁё0-9\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, строение (корпус)" data-validation-optional="true">
     <span id="housingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
 <div class="form-group has-feedback">
     <label class="control-label hidden-xs hidden-sm">Квартира</label>
-    <input type="text" class="form-control ec tip" name="flat" id="flat" title="Пожалуйста, укажите, номер квартиры" pattern="^[А-Яа-яЁё0-9\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, номер квартиры" data-validation-optional="true">
+    <input type="text" class="form-control ec tip" name="flat" id="flat" placeholder="Квартира" title="Пожалуйста, укажите, номер квартиры" pattern="^[А-Яа-яЁё0-9\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, номер квартиры" data-validation-optional="true">
     <span id="flatstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>    
 </div>
 <div class="clearfix">&nbsp;</div>
-<div class="form-group"><label class="col-sm-8 col-sm-offset-4 hidden-xs hidden-sm">Регистрация (прописка)</label></div>
+<div class="form-group"><label class="col-sm-8 col-sm-offset-4">Регистрация (прописка)</label></div>
 <div class="form-group">
 	<label class="control-label label-required hidden-xs hidden-sm">Тип регистрации*</label>
 		<select class="form-control ec" name="reg_type" id="reg_type" required>
