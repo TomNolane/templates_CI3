@@ -1,0 +1,141 @@
+.ex-info {
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: center;
+    margin-top: 59px;
+    margin-bottom: 31px;
+  }
+  .ex-info-wraper {
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
+    .ex-info-text {
+      padding-top: 24px;
+      p {
+        padding-top: 36px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.2px;
+      }
+      span {
+
+        color: #8a8a8a;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .ex-about-zaim {
+    .ex-about-zaim-block {
+      height: 292px;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      border: 2px solid #dedede;
+      overflow: hidden;
+      cursor: pointer;
+      p {
+        padding: 27px 76px 22px 29px;
+        color: #8a8a8a;
+        font-size: 12px;
+        font-weight: 300;
+      }
+      h4 {
+        margin-bottom: 27px;
+        height: 60px;
+        padding-left: 29px;
+        padding-right: 30px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+      }
+
+      img {
+        width: 100%;
+        max-width: 100%;
+        vertical-align: top;
+      }
+      @media screen and (max-width: 991px) and (min-width: 768px) {
+        height: auto;
+      }
+      @media screen and (max-width: 767px) and (min-width: 320px) {
+        height: auto;
+      }
+    }
+    .ex-active {
+      border-radius: 5px;
+      border: 2px solid #1991eb;
+    }
+  }
+
+  .ex-condition {
+    .col-sm-5.text-center {
+      padding-top: 38px;
+    }
+    p {
+      margin-bottom: 30px;
+      opacity: 0.6;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 26px;
+    }
+    .form-group {
+      margin-bottom: 30px;
+      input {
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid #e2e3e4;
+        outline: none;
+        &:focus {
+          border: 1px solid #2ea2f8;
+        }
+
+      }
+      .ex-main-btn {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+    }
+  }
+
+  .ex-about {
+    .ex-wrapper {
+      margin: 0 auto;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      border: 1px solid #dedede;
+    }
+    .ex-for-image {
+      margin: 21px auto;
+      height: 60px;
+      width: 60px;
+      @include border-radius(50%);
+      background-color: #d8d8d8;
+    }
+    h3 {
+      color: #354052;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 32px;
+      margin-bottom: 8px;
+      margin-top: 21px;
+    }
+    p {
+      padding-right: 61px;
+      padding-bottom: 18px;
+      color: #354052;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+    }
+  }
+
+}
+
+

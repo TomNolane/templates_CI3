@@ -1,0 +1,48 @@
+.ex-feedback {
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: center;
+    margin-top: 59px;
+    margin-bottom: 31px;
+  }
+  input {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e2e3e4;
+    outline: none;
+  }
+  input:focus {
+    border-color: #2ea2f8;
+  }
+  button {
+    background-color: #249DED;
+    color: #FFFFFF;
+    height: 60px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    border: none;
+    font-size: 18px;
+  }
+  textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #e2e3e4;
+    height: 203px;
+    background-color: #ffffff;
+    resize: none;
+    outline: none;
+    padding: 20px;
+  }
+  textarea:focus {
+    border-color: #2ea2f8;
+  }
+}
+
+
+

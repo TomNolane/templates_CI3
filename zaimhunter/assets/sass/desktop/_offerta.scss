@@ -1,0 +1,141 @@
+.ex-offerta {
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: center;
+    margin-top: 59px;
+    margin-bottom: 31px;
+  }
+  .ex-offerta-block {
+    margin-bottom: 30px;
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #ffffff;
+    //border: 1px solid #CBCCCD;
+    .ex-wrapper {
+      @include prefix(border-radius, 3px);
+      background-color: #fff;
+      padding: 20px 0 0;
+      .ex-table-scope {
+        padding: 18px 30px 25px 27px;
+
+        table {
+          width: 100%;
+          thead {
+            tr {
+              th {
+                padding-bottom: 16px;
+                color:#363636;
+                font-size: 15px;
+                font-weight: 600;
+                &:last-of-type {
+                  text-align: center;
+                }
+              }
+            }
+            .ex-oferta-user {
+              position: relative;
+              img {
+                padding-left: 20px;
+              }
+              span {
+                position: absolute;
+                bottom: 5px;
+                right: 0;
+                z-index: 9999;
+                padding-top: 5px;
+                background-color: #a9a5b6;
+                color: #fff;
+
+              }
+            }
+          }
+          tr {
+            td {
+              font-size: 10px;
+              font-weight: 400;
+              line-height: 19px;
+              letter-spacing: 0.19px;
+              &:last-of-type {
+                font-size: 12px;
+                text-align: right;
+              }
+            }
+          }
+
+        }
+      }
+      .ex-offerta-foot {
+        background-color: #f9f9f9;
+        padding: 20px;
+        .ex-main-btn {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          background: #c5ccde;
+          border: none;
+        }
+      }
+
+    }
+    &:hover {
+      .ex-wrapper {
+        box-shadow: 0 1px 3px 2px #5376f0;
+        //border: 1px solid #5376f0;
+        .ex-table-scope {
+          table {
+            thead {
+              tr {
+                th {
+                  color: #5376f0
+                }
+              }
+              .ex-oferta-user {
+                span {
+                  background-color: #496ef0;
+                }
+              }
+            }
+          }
+        }
+        .ex-offerta-foot {
+          .ex-main-btn {
+            background: #00c548;
+          }
+        }
+
+      }
+    }
+  }
+  .ex-active-offerta {
+    .ex-wrapper {
+      border: 1px solid #5376f0;
+      .ex-table-scope {
+        table {
+          thead {
+            tr {
+              th {
+                color: #5376f0
+              }
+            }
+            .ex-oferta-user {
+              span {
+                background-color: #496ef0;
+              }
+            }
+          }
+        }
+      }
+      .ex-offerta-foot {
+        .ex-main-btn {
+          background: #00c548;
+        }
+      }
+
+    }
+  }
+
+}
+
+
+

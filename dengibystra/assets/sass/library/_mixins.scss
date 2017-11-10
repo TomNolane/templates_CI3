@@ -1,0 +1,80 @@
+@function em($px, $body:14) {
+  @return ($px/$body)+em;
+}
+
+//Px to procent
+
+@function proc($target, $context:320) {
+  @return ($target/$context)*100%;
+}
+
+//Letter Spacing Photoshop to css
+@function lt($lt) {
+  @return $lt/1000+em;
+}
+
+//Box sizing
+@mixin bt($type:border-box) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing:    $type;
+  box-sizing:         $type;
+}
+
+//prefix for all browsers
+@mixin prefix ($property, $value,
+                 $moz:    true,
+                 $webkit: true,
+                 $o:      false,
+                 $ms:     true,
+                 $spec:   true) {
+  @if $moz    {    -moz-#{$property}: $value; }
+  @if $webkit { -webkit-#{$property}: $value; }
+  @if $o      {      -o-#{$property}: $value; }
+  @if $ms     {     -ms-#{$property}: $value; }
+  @if $spec   {         #{$property}: $value; }
+}
+
+//placeholder prefix for all browsers
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animation ($delay, $duration, $animation) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -o-animation-delay: $delay;
+  -o-animation-duration: $duration;
+  -o-animation-name: $animation;
+  -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}

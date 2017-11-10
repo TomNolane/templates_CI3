@@ -1,0 +1,179 @@
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #dddddd;
+    opacity: 1;
+}
+
+.stepwizard-step p {
+    margin-top: 10px;
+}
+
+.stepwizard-row {
+    display: table-row;
+}
+
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+
+.stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+}
+
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
+.form-steps-line{
+    position:relative;
+}
+
+.form-steps-line::before {
+    top: 35px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+}
+/*
+#surprize h1{
+    background:rgba(255,255,255,0.9);
+    border-radius:5px;
+    line-height:80px;
+    text-align:center;
+}
+*/
+#surprize .bg{
+    padding:15px 20px;
+}
+
+#surprize .logo{
+    height:100px;
+    line-height:100px;
+    text-align:center;
+}
+
+#surprize .logo img{
+    max-width:80%;
+    vertical-align:middle;
+}
+
+.recommend2{
+    position:absolute;
+    right: 35px;
+    top: 30px;
+}
+
+.modal-header, .modal-body{color:#333;}
+
+#loading{border-radius:5px;z-index:20000;margin-left:-100px;margin-top:-25px;width:200px;height:50px;background:white;
+filter:alpha(opacity=90);-moz-opacity: 0.9;-khtml-opacity: 0.9;opacity: 0.9;border:1px solid silver;position:fixed;left:50%;top:50%;text-align:center;
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);}
+#loading span{color:#333;font-weight:bold;line-height:48px;filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity:1;opacity:1;}
+
+.slider_head_top {border-radius:5px;margin-bottom:15px;}
+
+.slider_head_top .percent_rate {
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 30%;
+}
+.slider_head_top .hint_block {
+    color: #fff;
+    float: left;
+    height: 90px;
+    padding-top: 18px;
+    position: relative;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.slider_head_top .probability {
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 28px;
+    width: 20%;
+}
+
+.slider_head_top .credit_hint {
+    border-radius:5px;
+    font-size: 17px;
+    line-height: 21px;
+    padding: 22px 10px 0 30px;
+    width: 50%;
+}
+.slider_head_top .credit_hint::after {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 12px 0 12px 12px;
+    content: "";
+    display: none;
+    height: 0;
+    left: 0;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}
+
+.slider_head_top.green {background: #67a128;}
+.slider_head_top.green .credit_hint {background: #588c20;}
+.slider_head_top.green .credit_hint::after {
+    border-color: transparent transparent transparent #67a128;
+    display: block;
+}
+.js-irs-0.green .irs-single {background: #67a128;}
+
+.slider_head_top.yellow {background: #ff9600;}
+.slider_head_top.yellow .credit_hint {background: #e38601;}
+.slider_head_top.yellow .credit_hint::after {
+    border-color: transparent transparent transparent #ff9600;
+    display: block;
+}
+.js-irs-0.yellow .irs-single {background: #ff9600;}
+
+.slider_head_top.red {background: #e24d4a;}
+.slider_head_top.red .credit_hint {background: #ce4947;}
+.slider_head_top.red .credit_hint::after {
+    border-color: transparent transparent transparent #e24d4a;
+    display: block;
+}
+.js-irs-0.red .irs-single {background: #e24d4a;}
+
+.sidebar .media-left i {color:#555;font-size:50px;line-height:80px;}
+.sidebar .media-heading {font-weight:bold;}
+.sidebar {margin-top:170px;}
+
+img.lock{margin:0;float:left;width:40px;height:40px;}
+
+@media screen and (min-width:240px) and (max-width:350px) {
+    .reviews .middle{clear:both;display:table;}
+}

@@ -1,0 +1,180 @@
+.ex-form {
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .ex-form-image {
+    text-align: right;
+    padding-top: 94px;
+  }
+  .ex-anketa3-block {
+    .ex-main-btn {
+      margin-top: 30px;
+      background-color: #00c247;
+      border: none;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+  }
+  .ex-anketa-head {
+    h2 {
+      margin-top: 0 !important;
+      margin-bottom: 44px !important;
+      padding-left: 100px;
+      font-weight: 400 !important;
+    }
+    img {
+      position: absolute;
+      vertical-align: text-bottom;
+    }
+  }
+  .ex-anketa-main {
+    margin-bottom: 28px;
+    padding: 30px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: 1px solid #dedede;
+    background-color: #ffffff;
+    .form-group {
+      margin-bottom: 20px;
+      input {
+          padding: 10px 13px;
+          width: 100%;
+          height: 36px;
+          border-radius: 10px;
+          border: 1px solid #e2e3e4;
+          background-color: #ffffff;
+          outline: none;
+        @include placeholder {
+          font-weight: 400;
+        }
+        &:focus {
+          border: 1px solid #1991eb;
+        }
+      }
+      select {
+        padding: 8px 13px;
+        width: 100%;
+        height: 36px;
+        border-radius: 10px;
+        border: 1px solid #e2e3e4;
+        background-color: #ffffff;
+        outline: none;
+        &:focus {
+          border: 1px solid #1991eb;
+        }
+      }
+      &.ex-error {
+        input {
+          box-shadow: none;
+          outline: none;
+          padding-right: 30px;
+          border: 1px solid #f40000;
+          @include placeholder {
+            color: red;
+            font-weight: 700;
+            letter-spacing: 0.81px;
+          }
+          &:focus {
+            border: 1px solid #1991eb;
+            outline: none;
+          }
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          margin-top: -6px;
+          right: 15px;
+          width: 7px;
+          height: 13px;
+          background: url(../img/question-icon.png) no-repeat;
+        }
+
+        p {
+          font-size: 11px;
+          letter-spacing: 0.21px;
+          margin-top: 6px;
+          margin-bottom: 0;
+          color: red;
+        }
+      }
+    }
+  }
+  .ex-calc-wraper {
+    padding-left: 13px;
+    padding-bottom: 17px;
+    .ex-val-block {
+      border-bottom: 1px solid rgba(#979797, 0.3);
+      #ex-slider-val {
+        font-size: 48px;
+        font-weight: 900;
+        line-height: 48px;
+        i {
+          vertical-align: middle;
+          margin-left: 43px;
+          width: 117px;
+          height: 36px;
+          display: inline-block;
+          background: url(../img/rub.png) no-repeat;
+          -webkit-background-size: contain;
+        }
+      }
+    }
+    .ex-zaim-time {
+      padding-left: 0;
+      text-align: center;
+      border-radius: 15px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background-color: #f9fafc;
+      li {
+        width: 60px;
+        display: inline-block;
+        padding: 21px;
+      }
+      .ex-active-time {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+        border-radius: 15px;
+        background-color: #1991eb;
+        color: #fff;
+      }
+    }
+    .ex-range-scope {
+      height: 380px;
+      padding-top: 16px;
+
+      .irs-single {
+        display: none;
+      }
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 101px;
+        right: 0;
+        width: 513px;
+        height: 358px;
+        opacity: 0.91;
+        background-image: url('../img/creditcard-pic.png');
+        background-repeat: no-repeat;
+        z-index: -1;
+      }
+    }
+
+  }
+  p {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+  .ex-input-error {
+    border: 1px solid red;
+    border-radius: 10px;
+
+  }
+}
