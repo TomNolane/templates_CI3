@@ -1,5 +1,5 @@
 <?php 
-if(!isset($my_title))
+if(!isset($my_title)) 
 	$my_title = 'Срочные займы круглосуточно без проверок Онлайн';
 
 if(!isset($description))

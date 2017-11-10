@@ -1,17 +1,37 @@
+<?php 
+if(!isset($my_title))
+	$my_title = 'Срочные займы круглосуточно без проверок Онлайн';
+
+if(!isset($description))
+	$description = 'Dengimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории. Только у нас лучшие кредитные предложения!';
+?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dengimo.ru</title>
+<title><?php echo $my_title;?></title>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="IE=Edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html" />
-<meta name="Description" content="Dengimo — лучших онлайн сервис в РФ по подбору займов"/>
+<meta name="Description" content="<?php echo $description;?>"/>
 <meta name="Keywords" content="займ, займы, онлайн, деньги, заем"/>
 <meta name="robots" content="none"/> 
 <meta name="copyright" lang="en" content="Dengimo.ru" />
 <meta http-equiv="cleartype" content="on" /> 
 <link rel="shortcut icon" type="image/png" href="/templates/dengimo/img/favicon.png" />
+
+<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн"/>
+<meta property="og:description" content="Dengimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
+<meta property="og:image" content="https://dengimo.ru/templates/dengimo/img/atmo.png">
+<meta property="og:type" content="website"/>
+<meta property="og:url" content= "https://dengimo.ru/" />
+
+<meta name="twitter:card" content="https://dengimo.ru/templates/dengimo/img/atmo.png">
+<meta name="twitter:title" content="Срочные займы круглосуточно без проверок Онлайн">
+<meta name="twitter:description" content="Dengimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!">
+<meta name="twitter:image:src" content="https://dengimo.ru/templates/dengimo/img/atmo.png">
+<meta name="twitter:url" content="https://dengimo.ru/">
+<meta name="twitter:domain" content="dengimo.ru"> 
 
 <link href="/modules/jquery.ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" media="screen">
 <link href="/modules/jquery.ion.rangeslider/css/ion.rangeSlider.skinHTML5.css" rel="stylesheet" media="screen">
@@ -19,7 +39,7 @@
 <link href="/modules/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
-<link href="/templates/dengimo/style.css?ver=3" rel="stylesheet" media="screen">
+<link href="/templates/dengimo/style.css?ver=4" rel="stylesheet" media="screen">
 
 <script src="/modules/jquery/jquery-1.11.3.min.js"></script>
 
