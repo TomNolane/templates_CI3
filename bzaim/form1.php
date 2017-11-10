@@ -7,7 +7,7 @@
         <span id="amountstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
 <div class="form-group has-feedback has-success">	
-        <label class="control-label label-required">Срок*</label>
+        <label class="control-label label-required hidden-xs hidden-sm">Срок*</label>
         <input type="text" class="form-control" id="period2" value="От 61 дня" readonly/>
         <span id="periodstatus" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
 </div>
@@ -37,7 +37,7 @@
 </div>
 <div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Дата рождения</label>
-    <input type="text" class="form-control ec tip" name="birthdate" id="birthdate" placeholder="ДД/ММ/ГГГГ" title="Пожалуйста, выберете свою дату рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения" required>
+    <input type="text" class="form-control ec tip" name="birthdate" id="birthdate" placeholder="Дата рождения" title="Пожалуйста, выберете свою дату рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения" required>
     <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
 <div class="form-group has-feedback">

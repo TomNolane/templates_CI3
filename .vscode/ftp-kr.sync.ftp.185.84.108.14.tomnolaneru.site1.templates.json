@@ -10,13 +10,33 @@
             "files": [
                 {
                     "type": "-",
+                    "name": "header.php",
+                    "size": 8450
+                },
+                {
+                    "type": "-",
                     "name": "footer.php",
                     "size": 22897
                 },
                 {
                     "type": "-",
-                    "name": "header.php",
-                    "size": 8285
+                    "name": "index.php",
+                    "size": 21539
+                },
+                {
+                    "type": "-",
+                    "name": "form1.php",
+                    "size": 6152
+                },
+                {
+                    "type": "-",
+                    "name": "form2.php",
+                    "size": 12948
+                },
+                {
+                    "type": "-",
+                    "name": "form.php",
+                    "size": 30599
                 }
             ]
         },
@@ -36,50 +56,7 @@
             "type": "d",
             "name": "dengimo",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "internal-about.php",
-                    "size": 9472
-                },
-                {
-                    "type": "-",
-                    "name": "header.php",
-                    "size": 9121
-                },
-                {
-                    "type": "d",
-                    "name": "css",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "-",
-                            "name": "style.css",
-                            "size": 7992
-                        }
-                    ]
-                },
-                {
-                    "type": "-",
-                    "name": "internal.php",
-                    "size": 7572
-                },
-                {
-                    "type": "-",
-                    "name": "style.css",
-                    "size": 16538
-                },
-                {
-                    "type": "-",
-                    "name": "footer.php",
-                    "size": 27197
-                },
-                {
-                    "type": "-",
-                    "name": "index.php",
-                    "size": 21668
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
