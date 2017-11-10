@@ -1,10 +1,19 @@
 <?php require 'header.php'; ?>
-<header>
+<style>
+    .index_special {
+        margin-top: -80px !important;
+    }
+    .index_specail2 {
+        padding-bottom: 80px;
+    }
+</style>
+
+<header class="index_specail2">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="header-content">
-                    <div class="header-content-inner">
+                    <div class="header-content-inner index_special">
                         <h1>Моментальные займы</h1>
                         <h2> онлайн за 15 минут</h2>
                     </div>
