@@ -17,7 +17,7 @@
                         <h1>Моментальные займы</h1>
                         <h2> онлайн за 15 минут</h2>
                     </div>
-                    <div class="header-content-inner hidden-md hidden-lg">
+                    <div class="header-content-inner index_special2 hidden-md hidden-lg">
                         <h1>Моментальные займы</h1>
                         <h2> онлайн за 15 минут</h2>
                     </div>
