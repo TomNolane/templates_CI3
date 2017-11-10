@@ -6,6 +6,9 @@
 <link href="/modules/poshytip-1.2/src/tip-twitter/tip-twitter.css" rel="stylesheet">
 <style>
     #ya-rtb{display: none;}
+    .has-feedback label~.form-control-feedback {
+        top: 0px !important;
+    }
 </style>    
 <?php
 // IP
