@@ -1,0 +1,127 @@
+{
+    "type": "d",
+    "name": "",
+    "size": 4096,
+    "files": [
+        {
+            "type": "d",
+            "name": "bzaim",
+            "size": 4096,
+            "files": [
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 22897
+                },
+                {
+                    "type": "-",
+                    "name": "header.php",
+                    "size": 8285
+                }
+            ]
+        },
+        {
+            "type": "d",
+            "name": "common",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "dengibystra",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "dengimo",
+            "size": 4096,
+            "files": [
+                {
+                    "type": "-",
+                    "name": "internal-about.php",
+                    "size": 9472
+                },
+                {
+                    "type": "-",
+                    "name": "header.php",
+                    "size": 9121
+                },
+                {
+                    "type": "d",
+                    "name": "css",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "-",
+                            "name": "style.css",
+                            "size": 7992
+                        }
+                    ]
+                },
+                {
+                    "type": "-",
+                    "name": "internal.php",
+                    "size": 7572
+                },
+                {
+                    "type": "-",
+                    "name": "style.css",
+                    "size": 16538
+                },
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 27197
+                },
+                {
+                    "type": "-",
+                    "name": "index.php",
+                    "size": 21668
+                }
+            ]
+        },
+        {
+            "type": "d",
+            "name": "dengoman",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "edenga",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "godzaim",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "rublimo",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "vkredito",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "zaimhome",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "zaimhunter",
+            "size": 4096,
+            "files": []
+        }
+    ]
+}

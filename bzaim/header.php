@@ -6,9 +6,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="robots" content="none"/> -->
 	
 	<meta http-equiv="Content-Type" content="text/html" />
     <meta name="Description" content="Bzaim5.ru — лучший онлайн сервис выгодных займов"/>
@@ -89,17 +86,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <body id="page-top">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFB33N7"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
+
 <!-- End Google Tag Manager (noscript) -->
     <nav id="mainNav" class="navbar navbar-default">
         <div class="container">
+
+
+        <div class="row">
+        <div class="col-sm-3">
+
+
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="/"><img alt="" src="/templates/bzaim/img/logo.png"></a>
+                <a class="navbar-brand page-scroll" href="/"><img alt="logo.png" src="/templates/bzaim/img/logo.png"></a>
             </div>
+
+
+
+
+            </div> 
+
+
+ 
+        <div class="col-sm-9">
+
+
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -110,6 +125,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="/faq">Вопрос-ответ</a></li>
                     <li><a href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a></li>
                 </ul>
+            </div>
+
+
+            </div> 
             </div>
             <!-- /.navbar-collapse -->
         </div>
