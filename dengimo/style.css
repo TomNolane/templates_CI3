@@ -832,3 +832,21 @@ footer .copy{
         margin-top: 30px;
     }
 }
+.navbar-nav > li > a:hover {
+    color: #000000;
+}
+.font07 {
+    font-size: 0.7em;
+}
+.col_black {
+    color: #000000 !important;
+}
+.col_middle {
+    color: #617486 !important;
+}
+.decore-none {
+    text-decoration: none;
+}
+.index_special {
+    font-size: 1.4em !important;
+}
