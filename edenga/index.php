@@ -6,7 +6,7 @@
     </div>
 </section>
 
-<section class="calc" id="calc">
+<section class="calc img-responsive" id="calc">
 <div class="container">
 	<div class="row">           
 		<div class="col-sm-12 hidden-sm hidden-xs text-center">
