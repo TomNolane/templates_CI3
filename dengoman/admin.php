@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
 <title>Админка</title>
 <meta charset="utf-8">
