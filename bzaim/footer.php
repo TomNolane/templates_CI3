@@ -2,7 +2,7 @@
 <div id="ya-rtb">
     <div id="yandex_rtb_R-A-243981-3"></div>
     <div id="yandex_rtb_R-A-243981-1"></div>
-</div>
+</div> 
 
 <footer>
         <div class="container">
