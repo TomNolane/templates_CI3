@@ -3,8 +3,19 @@
     .index_special {
         margin-top: -80px !important;
     }
+
     .index_specail2 {
         padding-bottom: 80px;
+    }
+
+    .index_specail3 {
+        padding-bottom: 0px !important;
+    }
+
+    @media (min-width: 992px) and (max-width: 992px) {
+        .index_special {
+            margin-top: 0px !important;
+        }
     }
 </style>
 
@@ -14,7 +25,7 @@
             <div class="col-md-12 text-center">
                 <div class="header-content">
                     <div class="header-content-inner index_special hidden-sm hidden-xs">
-                        <h1>Моментальные займы</h1>
+                        <h1 class="">Моментальные займы</h1>
                         <h2> онлайн за 15 минут</h2>
                     </div>
                     <div class="header-content-inner index_special2 hidden-md hidden-lg">
@@ -189,8 +200,8 @@
             <div class="col-xs-12">
                 <p>Сервис
                     <b>Bzaim5</b> экономит ваше время и энергию. Заявку можно подать из любой точки страны. Главное условие
-                    - наличие интернета. 
-                    <br> С нашей помощью вы легко улучшите кредитную историю, если до этого возникали какие-то проблемы. 
+                    - наличие интернета.
+                    <br> С нашей помощью вы легко улучшите кредитную историю, если до этого возникали какие-то проблемы.
                     <br>
                     <b>Bzaim5</b> - современное решение финансовых затруднений.</p>
             </div>
@@ -202,17 +213,17 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h3 class="text-center">
+                <h3>
                     <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Особенности сервиса</h3>
             </div>
             <div class="col-xs-12">
                 <p>
                     <b>Bzaim5</b> - это не отдельная микрофинансовая организация, а посредник между заемщиком и кредитором.
                     Мы сотрудничаем с 35 лицензированными МФО, так что гарантируем надежность компаний, с которыми будут
-                    иметь дело наши клиенты. 
-					<br>Вы можете самостоятельно выбрать наиболее выгодные условия кредитования и мгновенно получить ответ на заявку.
-					<br>
-					Высокую скорость обработки данных обеспечивает уникальная технология скоринга. Проверка информации осуществляется
+                    иметь дело наши клиенты.
+                    <br>Вы можете самостоятельно выбрать наиболее выгодные условия кредитования и мгновенно получить ответ на
+                    заявку.
+                    <br> Высокую скорость обработки данных обеспечивает уникальная технология скоринга. Проверка информации осуществляется
                     всего 15 минут. После этого вы уже можете получить желаемый перевод.</p>
 
             </div>
@@ -224,14 +235,15 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h3 class="text-center">
+                <h3>
                     <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Условия займа</h3>
             </div>
             <div class="col-xs-12">
                 <div class="white indent">
                     <ul>
                         <li>Сумма первого займа не более 10 000 рублей, кредит можно получить со ставкой 0%, если он будет погашен
-                            вовремя.</li>
+                            вовремя.
+                        </li>
                         <li>Размер кредита от 1000 до 100 000 рублей.</li>
                         <li>Процент начисляется каждый день, ставка составляет от 0,08% до 0,98%. В месяц в среднем выходит 4,5%,
                             в год - от 30% до 360%.</li>
@@ -248,49 +260,68 @@
 <section class="conditions hidden-xs">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
-                <h3>
-                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Что нужно для получения займа?</h3>
-            </div>
-            <div class="col-xs-12">
-                <div class="white indent">
-                    <ul>
-                        <li>Иметь доступ к интернету.</li>
-                        <li>Паспорт гражданина Российской Федерации.</li>
-                        <li>Быть возрастом от 18 до 70 лет.</li>
-                    </ul>
+            <div class="col-xs-6">
+                <div class="col-xs-12">
+                    <h3>
+                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Что нужно для получения займа?</h3>
+                </div>
+                <div class="col-xs-12">
+                    <div class="white indent">
+                        <ul>
+                            <li>
+                                <b>Иметь доступ к интернету;</b>
+                            </li>
+                            <li>
+                                <b>Паспорт гражданина Российской Федерации;</b>
+                            </li>
+                            <li>
+                                <b>Быть возрастом от 18 до 70 лет.</b>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12">
                     <p>Вы можете получить деньги даже с плохой кредитной историей. Среди клиентов сервиса Bzaim5 есть и студенты,
                         и пенсионеры, и простые рабочие, и руководители крупных предприятий. Ваш социальный статус не имеет
-                        значения. </p> 
+                        значения. </p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+            <div class="col-xs-6">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>
+                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Как можно погасить займ?</h3>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="white indent">
+                            <ul>
+                                <li>
+                                    <b>Банковским переводом;</b>
+                                </li>
+                                <li>
+                                    <b>Электронным платежом;</b>
+                                </li>
+                                <li>
+                                    <b>С помощью платежных терминалов.</b>
+                                </li>
+                            </ul>
 
-<section class="conditions hidden-xs">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h3>
-                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Как можно погасить займ?</h3>
-            </div>
-            <div class="col-xs-12">
-                <div class="white indent"> 
-                    <ul>
-                        <li>Банковским переводом.</li>
-                        <li>Электронным платежом.</li>
-                        <li>С помощью платежных терминалов.</li>
-                    </ul> 
-                    <p>Все подробности о получении и погашении онлайн-займов можно получить у наших менеджеров.<br>Решайте свои финансовые проблемы быстро - с
-                        <b>Bzaim5</b>.
-                        <a href="/form">Регистрируйтесь!</a>
-                    <br>Лицензии организаций-партнеров: №651303552003006, №651303045003951, №2110177000478 </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <p>Все подробности о получении и погашении онлайн-займов можно получить у наших менеджеров. Решайте
+                            свои финансовые проблемы быстро - с
+                            <b>Bzaim5</b>.
+                            <a href="/form">Регистрируйтесь!</a>
+                         <br>Лицензии организаций-партнеров: №651303552003006, №651303045003951, №2110177000478 </p>
+
+                    </div> 
                 </div>
+
             </div>
         </div>
     </div>
-</section>
+</section> 
 
 <section class="conditions hidden-xs">
     <div class="container">
