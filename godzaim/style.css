@@ -1167,7 +1167,7 @@ footer .copy{
     }
     .calc {
         background-image:url(img/mobile/atmo.png);
-        <!--height:270px;-->
+        /* height:270px; */
     }
     .calc h1 {
         font-size: 18px;
@@ -1225,7 +1225,7 @@ footer .copy{
     .calc {
         background-position:79% 42%;
         background-image:url(img/mobile/atmo.png);
-        <!--height:278px;-->
+        /* height:278px;  */
     }
     .calc h1 {
         margin: 10px 0 0;

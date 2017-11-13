@@ -1,5 +1,5 @@
 <?php require 'header.php'; ?>
-
+<div style="height: 27px;"></div>
 <section class="calc" id="calc">
 	<div class="container">
 		<div class="row">
