@@ -23,18 +23,18 @@ if(!isset($description))
 	<meta name="copyright" lang="ru" content="Rublimo.ru" />
 	<meta http-equiv="cleartype" content="on" />
 
-	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн"/>
+	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="Rublimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
-	<meta property="og:image" content="https://rublimo.ru/templates/rublimo/img/atmo.png">
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content= "https://rublimo.ru/" />
+	<meta property="og:image" content="https://rublimo.ru/templates/rublimo/img/atmo.png"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://rublimo.ru/" />
 
-	<meta name="twitter:card" content="https://rublimo.ru/templates/rublimo/img/atmo.png">
-	<meta name="twitter:title" content="Срочные займы круглосуточно без проверок Онлайн">
-	<meta name="twitter:description" content="Rublimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!">
-	<meta name="twitter:image:src" content="https://rublimo.ru/templates/rublimo/img/atmo.png">
-	<meta name="twitter:url" content="https://rublimo.ru/">
-	<meta name="twitter:domain" content="rublimo.ru"> 
+	<meta name="twitter:card" content="https://rublimo.ru/templates/rublimo/img/atmo.png"/>
+	<meta name="twitter:title" content="Срочные займы круглосуточно без проверок Онлайн"/>
+	<meta name="twitter:description" content="Rublimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
+	<meta name="twitter:image:src" content="https://rublimo.ru/templates/rublimo/img/atmo.png"/>
+	<meta name="twitter:url" content="https://rublimo.ru/"/>
+	<meta name="twitter:domain" content="rublimo.ru"/>
 
 	<link rel="shortcut icon" type="image/png" href="/templates/rublimo/img/favicon.png" />
 	<link href="/modules/jquery.ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" media="screen" />
@@ -59,17 +59,11 @@ if(!isset($description))
 					  });
 					</script>';
 		} 
-	?>
-	 
-
+	?> 
 	<?php
 		require 'sendpuls.php';
 		require 'google_tag_manager.php';
-	?>
- 
-	
-
-	
+	?> 
 </head>
 
 <body>
@@ -78,101 +72,84 @@ if(!isset($description))
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZBK47T" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
-<div class="container">
-	<div class="row">
-
-	<nav class="navbar">  
-	<div class="col-md-12">
-				<div class="navbar-header">
-					<a rel="nofollow" class="navbar-brand" href="/">
-						<img alt="Rublimo.ru" class="img-responsive" src="/templates/rublimo/img/logo.png">
-					</a>
+	<div class="container">
+		<div class="row"> 
+			<nav class="navbar">
+				<div class="col-md-12">
+					<div class="navbar-header">
+						<a rel="nofollow" class="navbar-brand" href="/">
+							<img alt="Rublimo.ru" class="img-responsive" src="/templates/rublimo/img/logo.png">
+						</a>
+					</div>
+					<div class="navbar-collapsem hidden-xs" id="navbar-collapse-1">
+						<ul class="nav navbar-nav menu">
+							<li class="dropdown">
+								<a rel="nofollow" href="#" class="dropdown-toggle" data-toggle="dropdown" id="text-decoration">
+									О сервисе
+									<span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a rel="nofollow" href="/about" id="text-decoration">О нас</a>
+									</li>
+									<li>
+										<a rel="nofollow" href="/contacts" id="text-decoration">Контакты</a>
+									</li>
+									<li>
+										<a rel="nofollow" href="/info" id="text-decoration">Статьи о займах</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a rel="nofollow" href="/zaim-card" id="text-decoration">Займ на банковскую карту</a>
+									</li>
+									<li>
+										<a rel="nofollow" href="/zaim-qiwi" id="text-decoration">Займ на QIWI-кошелек</a>
+									</li>
+									<li>
+										<a rel="nofollow" href="/zaim-yandex" id="text-decoration">Займ на Яндекс.Деньги</a>
+									</li>
+									<li>
+										<a rel="nofollow" href="/zaim-contact" id="text-decoration">Займ через Contact</a>
+									</li>
+									<li>
+										<a rel="nofollow" href="/zaim-bank" id="text-decoration">Займ на банковский счет</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a rel="nofollow" id="text-decoration" href="/<?php echo $this->input->cookie('lk')? 'lk' : 'form'; ?>">Получить деньги</a>
+							</li>
+							<li>
+								<a rel="nofollow" id="text-decoration" href="/faq">Вопросы-ответы</a>
+							</li>
+							<li>
+								<a rel="nofollow" id="text-decoration" href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a>
+							</li>
+							<li class="dropdown">
+								<a rel="nofollow" href="#" class="dropdown-toggle" data-toggle="dropdown" id="text-decoration">
+									Документы
+									<span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a rel="nofollow" href="/oferta" id="text-decoration">Публичная оферта</a>
+									</li>
+									<li>
+										<a rel="nofollow" href="/agree" id="text-decoration">Пользовательское соглашение</a>
+									</li>
+									<li>
+										<a rel="nofollow" href="/soglasie" id="text-decoration">Обработка данных</a>
+									</li>
+									<li>
+										<a rel="nofollow" href="/rules" id="text-decoration">Правила предоставления займов</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<div class="navbar-collapsem hidden-xs" id="navbar-collapse-1">
-					<ul class="nav navbar-nav menu">
-						<li class="dropdown">
-							<a rel="nofollow" href="#" class="dropdown-toggle" data-toggle="dropdown" id="text-decoration">
-								О сервисе
-								<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<li>
-									<a rel="nofollow" href="/about" id="text-decoration">О нас</a>
-								</li>
-								<li>
-									<a rel="nofollow" href="/contacts" id="text-decoration">Контакты</a>
-								</li>
-								<li>
-									<a rel="nofollow" href="/info" id="text-decoration">Статьи о займах</a>
-								</li>
-								<li class="divider"></li>
-								<li>
-									<a rel="nofollow" href="/zaim-card" id="text-decoration">Займ на банковскую карту</a>
-								</li>
-								<li>
-									<a rel="nofollow" href="/zaim-qiwi" id="text-decoration">Займ на QIWI-кошелек</a>
-								</li>
-								<li>
-									<a rel="nofollow" href="/zaim-yandex" id="text-decoration">Займ на Яндекс.Деньги</a>
-								</li>
-								<li>
-									<a rel="nofollow" href="/zaim-contact" id="text-decoration">Займ через Contact</a>
-								</li>
-								<li>
-									<a rel="nofollow" href="/zaim-bank" id="text-decoration">Займ на банковский счет</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a rel="nofollow" id="text-decoration" href="/<?php echo $this->input->cookie('lk')? 'lk' : 'form'; ?>">Получить деньги</a>
-						</li>
-						<li>
-							<a rel="nofollow" id="text-decoration" href="/faq">Вопросы-ответы</a>
-						</li>
-						<li>
-							<a rel="nofollow" id="text-decoration" href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a>
-						</li>
-						<li class="dropdown">
-							<a rel="nofollow" href="#" class="dropdown-toggle" data-toggle="dropdown" id="text-decoration">
-								Документы
-								<span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu">
-								<li>
-									<a rel="nofollow" href="/oferta" id="text-decoration">Публичная оферта</a>
-								</li>
-								<li>
-									<a rel="nofollow" href="/agree" id="text-decoration">Пользовательское соглашение</a>
-								</li>
-								<li>
-									<a rel="nofollow" href="/soglasie" id="text-decoration">Обработка данных</a>
-								</li>
-								<li>
-									<a rel="nofollow" href="/rules" id="text-decoration">Правила предоставления займов</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<!--ul class="nav navbar-nav navbar-right hidden-sm hidden-xs hidden-md" style="padding-top: 25px;">
-				<a href="/<?php echo $this->input->cookie('lk')? 'lk' : 'form'; ?>" class="navbar-btn navbar-btn-small visible-sm">
-					<img src="/templates/rublimo/img/mobile/lk.png" alt="rublimo.ru">
-				</a>
-				<?php if ($this->input->cookie('lk')) { ?>
-				<a href="/lk" class="hidden-xs hidden-sm">					
-					<strong class="hidden-md hidden-sm hidden-xs"><span class="f ec"></span><br><span class="i ec"></span> <span class="o ec"></span></strong>
-				</a>
-				<?php } else { ?>
-				<a href="/form" class="hidden-xs hidden-sm">
-					<span class="ico"><i class="glyphicon glyphicon-user"></i></span>
-					<span class="text">Личный<br>кабинет</span>
-				</a>
-				<?php } ?>
-			</ul-->
-				</div> 
-				</div> 
-	</nav>
-	
-	</div> 
+			</nav> 
+		</div>
 	</div>
 	<!-- Modal -->
 	<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">

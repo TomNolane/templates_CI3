@@ -1,16 +1,18 @@
 <?php require 'header.php'; ?>
-<div style="height: 27px;"></div>
+<!-- <div style="height: 27px;"></div> -->
 <section class="calc" id="calc">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-7 col-sm-offset-1 hidden-sm hidden-xs text-center">
-				<h1>
+				<h1 style="padding-top: 160px;">
 					<span>Моментальные займы онлайн</span>
 				</h1>
 			</div>
 			<div class="col-sm-5 col-sm-offset-2 hidden-xs hidden-sm">
 				<div class="form text-center">
-					<h3><b class="text-uppercase">Выберите сумму и срок</b></h3>
+					<h3>
+						<b class="text-uppercase">Выберите сумму и срок</b>
+					</h3>
 					<form id="anketa" action="/form" method="post">
 						<input type="hidden" class="period" name="period" value="10" />
 						<input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
@@ -53,7 +55,7 @@
 			<div class="col-xs-12 visible-xs visible-sm text-center">
 				<div itemscope itemtype="http://schema.org/Offer">
 					<h2 itemprop="name" id="getmoney">Моментальные
-					<br>займы онлайн</h2>
+						<br>займы онлайн</h2>
 				</div>
 				<div class="form text-center">
 					<form id="anketa" action="/form" method="post">
@@ -89,15 +91,15 @@
 									<span>%</span>
 								</span>
 							</div>
-						</div> 
+						</div>
 						<div class="shadow">
 							<button type="submit" class="btn">Оформить займ</button>
-						</div> 
+						</div>
 					</form>
 				</div>
 			</div>
 		</div>
-	</div> 
+	</div>
 </section>
 <div class="doc">
 	<section class="howto hidden-xs">
@@ -184,15 +186,18 @@
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-sm-7">
-				<div itemscope itemtype="http://schema.org/Offer">
-					<h3 itemprop="name" id="font26"><b>Улучшение кредитной истории</b></h3><br>
-					<p>Сервис Rublimo дает возможность получить займ онлайн даже если имеются значительные просрочки платежей.</p>
-					<p>Программа состоит из трех шагов с последовательным увеличением суммы займа.</p>
-					<p>После выполнения программы, клиенту доступно получение займа на стандартных выгодных условиях нашего сервиса.</p>
-					<div class="shadow">
-						<a itemprop="url" href="/history" class="btn">Узнать подробнее</a>
+					<div itemscope itemtype="http://schema.org/Offer">
+						<h3 itemprop="name" id="font26">
+							<b>Улучшение кредитной истории</b>
+						</h3>
+						<br>
+						<p>Сервис Rublimo дает возможность получить займ онлайн даже если имеются значительные просрочки платежей.</p>
+						<p>Программа состоит из трех шагов с последовательным увеличением суммы займа.</p>
+						<p>После выполнения программы, клиенту доступно получение займа на стандартных выгодных условиях нашего сервиса.</p>
+						<div class="shadow">
+							<a itemprop="url" href="/history" class="btn">Узнать подробнее</a>
+						</div>
 					</div>
-				</div>
 				</div>
 				<div class="col-sm-5">
 					<img src="/templates/rublimo/img/man.png" alt="man">
@@ -206,7 +211,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 text-center">
-						<h3 id="font26"><b>Отзывы клиентов</b></h3>
+						<h3 id="font26">
+							<b>Отзывы клиентов</b>
+						</h3>
 					</div>
 				</div>
 				<div class="row">
@@ -265,13 +272,18 @@
 				<div class="row">
 					<div class="col-sm-12 great-support-box wow fadeInLeft">
 						<div class="great-support-box-text great-support-box-text-left">
-							<h3 id="font26"><b>Быстрые кредиты в режиме онлайн</b></h3>
-							<p class="medium-paragraph">В жизни каждого человека бывают ситуации, когда срочно нужны деньги: поломка бытовой техники, автомобиля, внезапная болезнь и т. д. Займы онлайн — услуга от компании RUBLIMO. Наш сервис поможет вам выбрать наиболее выгодные предложения по кредитования от тридцати пяти микрофинансовых организаций.</p>
-							<p class="medium-paragraph">Услуги RUBLIMO помогут вам оперативно оформить микрозайм онлайн без лишней бумажной волокиты. С помощью нашего сервиса можно быстро решить спонтанно возникшие денежные трудности на самых выгодных условиях.</p>
+							<h3 id="font26">
+								<b>Быстрые кредиты в режиме онлайн</b>
+							</h3>
+							<p class="medium-paragraph">В жизни каждого человека бывают ситуации, когда срочно нужны деньги: поломка бытовой техники, автомобиля, внезапная
+								болезнь и т. д. Займы онлайн — услуга от компании RUBLIMO. Наш сервис поможет вам выбрать наиболее выгодные предложения
+								по кредитования от тридцати пяти микрофинансовых организаций.</p>
+							<p class="medium-paragraph">Услуги RUBLIMO помогут вам оперативно оформить микрозайм онлайн без лишней бумажной волокиты. С помощью нашего сервиса
+								можно быстро решить спонтанно возникшие денежные трудности на самых выгодных условиях.</p>
 						</div>
 					</div>
 				</div>
-			</div> 
+			</div>
 		</div>
 
 		<!-- More services -->
@@ -281,13 +293,13 @@
 				<div class="row">
 					<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
 						<h3 id="font26">
-						<b>Что нужно для получения микрокредита?</b>
+							<b>Что нужно для получения микрокредита?</b>
 						</h3>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-12 great-support-box wow fadeInLeft">
-						<div class="great-support-box-text great-support-box-text-left"> 
+						<div class="great-support-box-text great-support-box-text-left">
 							<p class="medium-paragraph">
 								Получения займа онлайн — простая и удобная процедура. Для решения задачи вам понадобиться:
 							</p>
@@ -298,7 +310,9 @@
 								<li>кошелек одной из систем интернет-платежей или банковская карта.</li>
 							</ul>
 							<p class="medium-paragraph">
-								Процесс оформления микрозайма занимает около пятнадцати минут. После обработки вашей заявки, и получения положительного решения вы получите проверочный код по СМС. После этого деньги будут перечислены по указанному адресату (карта, банковский счет и т. д.)
+								Процесс оформления микрозайма занимает около пятнадцати минут. После обработки вашей заявки, и получения положительного решения
+								вы получите проверочный код по СМС. После этого деньги будут перечислены по указанному адресату (карта, банковский
+								счет и т. д.)
 							</p>
 						</div>
 					</div>
@@ -313,46 +327,27 @@
 				<div class="row">
 					<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
 						<h3 id="font26">
-						<b>Сотрудничество с нами имеет ряд преимуществ:</b>
+							<b>Сотрудничество с нами имеет ряд преимуществ:</b>
 						</h3>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-12 great-support-box wow fadeInLeft">
 						<div class="great-support-box-text great-support-box-text-left">
-						<ol>
-							<li>Мы предлагаем прозрачные условия микрокредитования от 35 официальных финансовых организаций.</li>
-							<li>Процедура оформления займа проходит на 100% в режиме онлайн. Вы сможете получить деньги в любое время и в любом месте.</li>
-							<li>Оформление займа проходит без залога.</li>
-							<li>Для получения микрокредита не нужны справки о доходах и поручители.</li>
-							<li>В пакет документов входит только скан паспорта РФ.</li>
-							<li>Удобный личный кабинет.</li>
-							<li>Срочный займ онлайн оформляется в считанные минуты.</li>
-						</ol>
+							<ol>
+								<li>Мы предлагаем прозрачные условия микрокредитования от 35 официальных финансовых организаций.</li>
+								<li>Процедура оформления займа проходит на 100% в режиме онлайн. Вы сможете получить деньги в любое время и в любом месте.</li>
+								<li>Оформление займа проходит без залога.</li>
+								<li>Для получения микрокредита не нужны справки о доходах и поручители.</li>
+								<li>В пакет документов входит только скан паспорта РФ.</li>
+								<li>Удобный личный кабинет.</li>
+								<li>Срочный займ онлайн оформляется в считанные минуты.</li>
+							</ol>
 							<p class="medium-paragraph">
-							Использование сервиса RUBLIMO дает возможность выбрать наиболее удобный вариант кредитования. Вы получаете всю актуальную информацию о существующих кредитных предложениях от самых лучших микрокредитных организаций. 
+								Использование сервиса RUBLIMO дает возможность выбрать наиболее удобный вариант кредитования. Вы получаете всю актуальную
+								информацию о существующих кредитных предложениях от самых лучших микрокредитных организаций.
 							</p>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div> 
-	</div>
-
-	<div class="portfolio-container hidden-xs section-container section-container-gray-bg">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
-					<h3 id="font26">
-					<b>RUBLIMO: безопасно и быстро</b>
-					</h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12 great-support-box wow fadeInLeft">
-					<div class="great-support-box-text great-support-box-text-left">
-						<p class="medium-paragraph">Сервис обеспечивает максимальную защиту ваших персональных данных. Система соответствует мировым стандартам. Поэтому вероятность утечки данных исключена. Применяемая технология позволяет сделать обработку информации быстрой и оперативной. Ваши заявки на оформление микрозайма происходят в режиме реального времени. Система постоянно совершенствуется и улучшается.</p>
-						<p class="medium-paragraph">На нашем сайте регулярно публикуются аналитические и познавательные статьи на тему займов онлайн. Портал RUBLIMO позволит вам первым узнавать актуальные новости из мира микрокредитования. Все это делает использования нашего ресурса выгодным и удобным.	</p>
 					</div>
 				</div>
 			</div>
@@ -364,15 +359,43 @@
 			<div class="row">
 				<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
 					<h3 id="font26">
-					<b>Кредит в течении 15 минут</b>
+						<b>RUBLIMO: безопасно и быстро</b>
 					</h3>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-12 great-support-box wow fadeInLeft">
 					<div class="great-support-box-text great-support-box-text-left">
-						<p class="medium-paragraph">Сервис RUBLIMO актуален для пользователей, которые срочно нуждаются в финансовой поддержке. Мы поможем вам оформить микрокредит быстро и выгодно. Вам не придется отдельно мониторить каждую микрокредитную организацию в поисках лучших условий сотрудничества. RUBLIMO позволит вам сделать правильный выбор в максимально сжатые сроки.</p>
-						<p class="medium-paragraph">Пользоваться нашими услугами можно на отдыхе, станции технического обслуживания автомобилей, в магазине и других местах. Зайдя на наш портал с любого мобильного устройства, вы сможете получить необходимую вам сумму в течении всего лишь 15 минут.</p>
+						<p class="medium-paragraph">Сервис обеспечивает максимальную защиту ваших персональных данных. Система соответствует мировым стандартам. Поэтому
+							вероятность утечки данных исключена. Применяемая технология позволяет сделать обработку информации быстрой и оперативной.
+							Ваши заявки на оформление микрозайма происходят в режиме реального времени. Система постоянно совершенствуется и улучшается.</p>
+						<p class="medium-paragraph">На нашем сайте регулярно публикуются аналитические и познавательные статьи на тему займов онлайн. Портал RUBLIMO позволит
+							вам первым узнавать актуальные новости из мира микрокредитования. Все это делает использования нашего ресурса выгодным
+							и удобным. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="portfolio-container hidden-xs section-container section-container-gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
+					<h3 id="font26">
+						<b>Кредит в течении 15 минут</b>
+					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 great-support-box wow fadeInLeft">
+					<div class="great-support-box-text great-support-box-text-left">
+						<p class="medium-paragraph">Сервис RUBLIMO актуален для пользователей, которые срочно нуждаются в финансовой поддержке. Мы поможем вам оформить
+							микрокредит быстро и выгодно. Вам не придется отдельно мониторить каждую микрокредитную организацию в поисках лучших
+							условий сотрудничества. RUBLIMO позволит вам сделать правильный выбор в максимально сжатые сроки.</p>
+						<p class="medium-paragraph">Пользоваться нашими услугами можно на отдыхе, станции технического обслуживания автомобилей, в магазине и других местах.
+							Зайдя на наш портал с любого мобильного устройства, вы сможете получить необходимую вам сумму в течении всего лишь
+							15 минут.</p>
 					</div>
 				</div>
 			</div>
@@ -380,10 +403,12 @@
 	</div>
 
 	<div class="blog-container hidden-xs section-container">
-		<div class="container"> 
+		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 blog section-description wow fadeIn text-center">
-					<h3 id="font26"><b>Информация о кредиторах с которыми мы сотрудничаем:</b></h3>
+					<h3 id="font26">
+						<b>Информация о кредиторах с которыми мы сотрудничаем:</b>
+					</h3>
 					<div class="divider-1 wow fadeInUp">
 						<span></span>
 					</div>
