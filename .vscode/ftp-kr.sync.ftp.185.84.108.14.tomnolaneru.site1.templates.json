@@ -9,21 +9,9 @@
             "size": 4096,
             "files": [
                 {
-                    "type": "d",
-                    "name": "css",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "-",
-                            "name": "new-age.css",
-                            "size": 9934
-                        }
-                    ]
-                },
-                {
                     "type": "-",
-                    "name": "index.php",
-                    "size": 23290
+                    "name": "footer.php",
+                    "size": 23049
                 }
             ]
         },
@@ -67,7 +55,272 @@
             "type": "d",
             "name": "rublimo",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "admin.php",
+                    "size": 4830
+                },
+                {
+                    "type": "-",
+                    "name": "confirm.php",
+                    "size": 6949
+                },
+                {
+                    "type": "d",
+                    "name": "css",
+                    "size": 4096,
+                    "files": []
+                },
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 24430
+                },
+                {
+                    "type": "-",
+                    "name": "form.php",
+                    "size": 21434
+                },
+                {
+                    "type": "-",
+                    "name": "form1.php",
+                    "size": 9257
+                },
+                {
+                    "type": "-",
+                    "name": "form2.php",
+                    "size": 13575
+                },
+                {
+                    "type": "-",
+                    "name": "form3.php",
+                    "size": 8587
+                },
+                {
+                    "type": "-",
+                    "name": "google_tag_manager.php",
+                    "size": 1922
+                },
+                {
+                    "type": "-",
+                    "name": "header.php",
+                    "size": 9048
+                },
+                {
+                    "type": "-",
+                    "name": "history.php",
+                    "size": 7474
+                },
+                {
+                    "type": "d",
+                    "name": "img",
+                    "size": 4096,
+                    "files": []
+                },
+                {
+                    "type": "-",
+                    "name": "index.php",
+                    "size": 24211
+                },
+                {
+                    "type": "-",
+                    "name": "internal-404.php",
+                    "size": 860
+                },
+                {
+                    "type": "-",
+                    "name": "internal-about.php",
+                    "size": 3359
+                },
+                {
+                    "type": "-",
+                    "name": "internal-agree.php",
+                    "size": 8595
+                },
+                {
+                    "type": "-",
+                    "name": "internal-contacts.php",
+                    "size": 12377
+                },
+                {
+                    "type": "-",
+                    "name": "internal-docs.php",
+                    "size": 18267
+                },
+                {
+                    "type": "-",
+                    "name": "internal-docs2.php",
+                    "size": 9766
+                },
+                {
+                    "type": "-",
+                    "name": "internal-faq.php",
+                    "size": 10824
+                },
+                {
+                    "type": "-",
+                    "name": "internal-getzaim.php",
+                    "size": 6311
+                },
+                {
+                    "type": "-",
+                    "name": "internal-info.php",
+                    "size": 12055
+                },
+                {
+                    "type": "-",
+                    "name": "internal-oferta.php",
+                    "size": 9713
+                },
+                {
+                    "type": "-",
+                    "name": "internal-rules.php",
+                    "size": 3514
+                },
+                {
+                    "type": "-",
+                    "name": "internal-sidebar.php",
+                    "size": 5073
+                },
+                {
+                    "type": "-",
+                    "name": "internal-soglasie.php",
+                    "size": 5670
+                },
+                {
+                    "type": "-",
+                    "name": "internal-zaim-bank.php",
+                    "size": 5638
+                },
+                {
+                    "type": "-",
+                    "name": "internal-zaim-button.php",
+                    "size": 179
+                },
+                {
+                    "type": "-",
+                    "name": "internal-zaim-card.php",
+                    "size": 5818
+                },
+                {
+                    "type": "-",
+                    "name": "internal-zaim-contact.php",
+                    "size": 5559
+                },
+                {
+                    "type": "-",
+                    "name": "internal-zaim-qiwi.php",
+                    "size": 5669
+                },
+                {
+                    "type": "-",
+                    "name": "internal-zaim-yandex.php",
+                    "size": 5861
+                },
+                {
+                    "type": "-",
+                    "name": "internal.php",
+                    "size": 9199
+                },
+                {
+                    "type": "d",
+                    "name": "js",
+                    "size": 4096,
+                    "files": []
+                },
+                {
+                    "type": "d",
+                    "name": "lk",
+                    "size": 4096,
+                    "files": []
+                },
+                {
+                    "type": "-",
+                    "name": "lk-activate.php",
+                    "size": 566
+                },
+                {
+                    "type": "-",
+                    "name": "lk-data.php",
+                    "size": 2182
+                },
+                {
+                    "type": "-",
+                    "name": "lk-history.php",
+                    "size": 1142
+                },
+                {
+                    "type": "-",
+                    "name": "lk-index.php",
+                    "size": 144
+                },
+                {
+                    "type": "-",
+                    "name": "lk-sidebar.php",
+                    "size": 1588
+                },
+                {
+                    "type": "-",
+                    "name": "lk-subscribe.php",
+                    "size": 990
+                },
+                {
+                    "type": "-",
+                    "name": "lk.php",
+                    "size": 8814
+                },
+                {
+                    "type": "-",
+                    "name": "robots.txt",
+                    "size": 188
+                },
+                {
+                    "type": "-",
+                    "name": "sendpuls.php",
+                    "size": 144
+                },
+                {
+                    "type": "-",
+                    "name": "sidebar_end.php",
+                    "size": 22
+                },
+                {
+                    "type": "-",
+                    "name": "sidebar_end2.php",
+                    "size": 52
+                },
+                {
+                    "type": "-",
+                    "name": "sidebar_start.php",
+                    "size": 189
+                },
+                {
+                    "type": "-",
+                    "name": "sidebar_start2.php",
+                    "size": 115
+                },
+                {
+                    "type": "-",
+                    "name": "sitemap.xml",
+                    "size": 3187
+                },
+                {
+                    "type": "-",
+                    "name": "style.css",
+                    "size": 18043
+                },
+                {
+                    "type": "-",
+                    "name": "style.min.css",
+                    "size": 14333
+                },
+                {
+                    "type": "-",
+                    "name": "для htaccess.txt",
+                    "size": 1830
+                }
+            ]
         },
         {
             "type": "d",
@@ -85,33 +338,7 @@
             "type": "d",
             "name": "zaimhunter",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "index.php",
-                    "size": 20145
-                },
-                {
-                    "type": "-",
-                    "name": "lk.php",
-                    "size": 3281
-                },
-                {
-                    "type": "-",
-                    "name": "internal-faq.php",
-                    "size": 7099
-                },
-                {
-                    "type": "-",
-                    "name": "header.php",
-                    "size": 6785
-                },
-                {
-                    "type": "-",
-                    "name": "footer.php",
-                    "size": 22902
-                }
-            ]
+            "files": []
         }
     ]
 }
