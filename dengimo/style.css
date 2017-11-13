@@ -266,8 +266,8 @@ p.text-indent{
 
 
 .calc{
-    background:url(img/atmo.png) center top no-repeat;
-    height:720px;
+    background:url(img/atmo.png) center no-repeat;
+    height:710px;
 }
 .calc h1{
     color:#000;
@@ -276,7 +276,8 @@ p.text-indent{
     font-weight:800;
     /*font-family:'latoheavy', 'Lato', sans-serif;*/
     line-height:48px;
-    margin:135px 0 36px;
+    /* margin:135px 0 36px; */ /* Tom Nolane margin:135px 0 36px;  */
+    margin:55px 0 36px;
 }
 .calc h2{
     color:#000;
