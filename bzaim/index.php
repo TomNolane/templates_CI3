@@ -1,7 +1,7 @@
 <?php require 'header.php'; ?>
 <style>
     .index_special {
-        margin-top: -80px !important;
+        margin-top: -20px !important;
     }
 
     .index_specail2 {
@@ -26,7 +26,7 @@
                 <div class="header-content">
                     <div class="header-content-inner index_special hidden-sm hidden-xs">
                         <h1 class="">Моментальные займы</h1>
-                        <h2> онлайн за 15 минут</h2>
+                        <h2 style="margin-top: -20px; margin-bottom: -20px;"> онлайн за 15 минут</h2>
                     </div>
                     <div class="header-content-inner index_special2 hidden-md hidden-lg">
                         <h1>Моментальные займы</h1>
@@ -79,7 +79,7 @@
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
-                                <button type="submit" class="btn btn-xl btn-success">Получить деньги</button>
+                                <button type="submit" style="margin-top: 30px;" class="btn btn-xl btn-success">Получить деньги</button>
                             </form>
                         </div>
                     </div>

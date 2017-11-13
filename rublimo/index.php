@@ -89,17 +89,15 @@
 									<span>%</span>
 								</span>
 							</div>
-						</div>
-
+						</div> 
 						<div class="shadow">
 							<button type="submit" class="btn">Оформить займ</button>
-						</div>
-
+						</div> 
 					</form>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> 
 </section>
 <div class="doc">
 	<section class="howto hidden-xs">

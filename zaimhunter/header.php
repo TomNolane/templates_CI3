@@ -39,7 +39,7 @@ if(!isset($description))
     <link rel="manifest" href="/templates/zaimhunter/favicon/manifest.json">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/templates/zaimhunter/assets/css/style.css?ver=2">
+    <link rel="stylesheet" href="/templates/zaimhunter/assets/css/style.css?ver=3">
     <link rel="stylesheet" href="/modules/jquery-ui/1.10.4/css/smoothness/jquery-ui-1.10.4.custom.min.css" type="text/css">
     <link rel="stylesheet" href="/templates/dengibystra/assets/css/suggestions.min.css" type="text/css" />
     <link rel="stylesheet" href="/modules/poshytip-1.2/src/tip-twitter/tip-twitter.css" type="text/css">
