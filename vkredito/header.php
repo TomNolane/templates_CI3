@@ -24,7 +24,7 @@
 
 <script src="/modules/jquery/jquery-1.11.3.min.js"></script>
 <?php if ($this->uri->segment(1) != 'form') {
-    require 'templates/common/googlesyndication.php';
+    require 'templates/common/googlesyndication2.php';
 }?>
 
 <!--[if lte IE 9]>
