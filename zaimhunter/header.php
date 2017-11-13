@@ -45,8 +45,8 @@ if(!isset($description))
     <link rel="stylesheet" href="/modules/poshytip-1.2/src/tip-twitter/tip-twitter.css" type="text/css">
 
     <!-- Adsense -->
-    <?php if ($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'confirm') {
-        require 'adsense.php';
+    <?php if ($this->uri->segment(1) != 'form') {
+        require 'templates/common/googlesyndication.php';
     }?>
 
     <!-- Сендпульс Sendpulse --> 
