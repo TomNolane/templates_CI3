@@ -478,9 +478,9 @@ echo "<script>$(document).ready(function () {
     }
     else
     {
-        var pathname = "window.location.pathname",  substring = "lk", substring2 = "form";
+        var pathname = window.location.pathname,  substring = "lk";
         
-        if(pathname.indexOf(substring) !== -1 ||  pathname.indexOf(substring2) !== -1)
+        if(pathname.indexOf(substring) !== -1)
         {
             document.getElementById( 'special_footer' ).style.display = 'none';
         }
