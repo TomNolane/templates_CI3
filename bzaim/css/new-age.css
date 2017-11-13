@@ -168,7 +168,7 @@ header {
 }
 header .header-content {
   text-align: center;
-  padding: 150px 0 50px;
+  /* padding: 150px 0 50px; */
   position: relative;
 }
 header .header-content .header-content-inner {
@@ -200,8 +200,8 @@ header .device-container .screen img {
     /* min-height: 100%; */
   }
   header .header-content {
-    text-align: center;
-    padding: 0;
+    /* text-align: center; */
+    /* padding: 0; */
   }
   header .header-content .header-content-inner {
 

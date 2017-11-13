@@ -21,13 +21,17 @@
                         {
                             echo '8 (960) 950 93 53<br>';
                         }
-                    ?>
-                    Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
+                    ?> 
+
+                    <span id="special_footer">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
                     Максимальная процентная ставка по займу составляет
                     0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок
                     пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате
                     31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
-                    ИП «Бабакова К.К.»ОГРНИП 316222500122426 ИНН 222511216499
+                    ИП «Бабакова К.К.»ОГРНИП 316222500122426 ИНН 222511216499</span>
+
+
+
                 </p>
             </div> 
         </div>
@@ -211,7 +215,7 @@ echo "<script>$(document).ready(function () {
 <script src="/templates/zaimhunter/assets/js/custom.js?ver=1"></script>
 <script src="/templates/zaimhunter/assets/js/ion.rangeSlider.js"></script>
 
-<script>
+<script> 
     function goToForm() {
         var tt = $('#ex-slider-val').text();
         tt = tt.split(" ").join("");
@@ -466,6 +470,26 @@ echo "<script>$(document).ready(function () {
 
     });
 </script>
+<script>
+    var client_w = screen.width;
+    if(Number(client_w) > 767)
+    {
+        document.getElementById( 'special_footer' ).style.display = 'block';
+    }
+    else
+    {
+        var pathname = "window.location.pathname",  substring = "lk", substring2 = "form";
+        
+        if(pathname.indexOf(substring) !== -1 ||  pathname.indexOf(substring2) !== -1)
+        {
+            document.getElementById( 'special_footer' ).style.display = 'none';
+        }
+        else
+        {
+            document.getElementById( 'special_footer' ).style.display = 'block';
+        }
+    }
+</script>
 
 <?php
 if ($this->uri->segment(1) == 'lk') 
@@ -525,6 +549,7 @@ if(isset($_GET['email']))
 ?>
 
 <?php require 'yandex_metrika.php'; ?>
+
 
 </body>
 </html>

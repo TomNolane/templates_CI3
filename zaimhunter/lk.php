@@ -79,5 +79,5 @@ echo '<div class="col-md-3">
     </div>
 </main>
 
-<br><br><br>
+<div class="special_box hidden-xs hidden-sm"></div>
 <?php require 'footer.php'; ?>

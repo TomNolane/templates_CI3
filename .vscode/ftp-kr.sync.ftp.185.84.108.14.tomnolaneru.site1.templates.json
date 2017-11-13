@@ -9,41 +9,21 @@
             "size": 4096,
             "files": [
                 {
-                    "type": "-",
-                    "name": "form3.php",
-                    "size": 8428
-                },
-                {
-                    "type": "-",
-                    "name": "index.php",
-                    "size": 22161
-                },
-                {
-                    "type": "-",
-                    "name": "form1.php",
-                    "size": 6172
-                },
-                {
-                    "type": "-",
-                    "name": "form2.php",
-                    "size": 13022
-                },
-                {
-                    "type": "-",
-                    "name": "form.php",
-                    "size": 30903
-                },
-                {
                     "type": "d",
                     "name": "css",
                     "size": 0,
                     "files": [
                         {
                             "type": "-",
-                            "name": "style.css",
-                            "size": 9262
+                            "name": "new-age.css",
+                            "size": 9934
                         }
                     ]
+                },
+                {
+                    "type": "-",
+                    "name": "index.php",
+                    "size": 23290
                 }
             ]
         },
@@ -105,7 +85,33 @@
             "type": "d",
             "name": "zaimhunter",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "index.php",
+                    "size": 20145
+                },
+                {
+                    "type": "-",
+                    "name": "lk.php",
+                    "size": 3281
+                },
+                {
+                    "type": "-",
+                    "name": "internal-faq.php",
+                    "size": 7099
+                },
+                {
+                    "type": "-",
+                    "name": "header.php",
+                    "size": 6785
+                },
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 22902
+                }
+            ]
         }
     ]
 }

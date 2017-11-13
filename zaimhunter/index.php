@@ -35,7 +35,7 @@
                             <p>
                                 <span class="ex-unique"></span>
                                     <center><a class="btn ex-main-btn ex-total special_index5 hidden-xs hidden-sm visible-md visible-lg" onclick="<?php echo $this->input->cookie('lk')? 'goToLk()' : 'goToForm()';?>"></a></center>
-                                    <a class="btn ex-main-btn ex-total special_index5 hidden-lg hidden-md visible-xs visible-sm" style="width: 100%;margin-top:-30px;background-color: #00be46 !important;" onclick="<?php echo $this->input->cookie('lk')? 'goToLk()' : 'goToForm()';?>"></a>
+                                    <a class="ex-total hidden-lg hidden-md visible-xs visible-sm" style="width: 100%;margin-top:-30px; color: #000000 !important;" onclick="<?php echo $this->input->cookie('lk')? 'goToLk()' : 'goToForm()';?>"></a>
                                     
                                 <!-- <button class="ex-main-btn ex-total"></button> -->
                             </p>

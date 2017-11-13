@@ -47,3 +47,4 @@
         </div>
     </div>
 </main>
+<div class="special_box hidden-xs hidden-sm"></div>
