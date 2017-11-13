@@ -484,6 +484,12 @@ $(document).ready(function () {
     $('#next1').click(function () { 
         if (validate1()) { 
             $('input[name="step"]').val('1');
+ 
+            if(Number(screen.width) < 767) 
+            { 
+                document.getElementById( 'special_footer' ).style.display = 'none';
+            } 
+
             send_form(); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstTabContent').removeClass('in active');
