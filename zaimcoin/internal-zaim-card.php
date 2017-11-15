@@ -6,7 +6,7 @@
                     <h1>Способы получения денег</h1>
                     <div class="ex-nav-menu">
                         <ul class="text-center">
-                            <li><a href="zaim-card">Займ на банковскую карту</a></li>
+                            <li><a class="spec_active" href="zaim-card">Займ на банковскую карту</a></li>
                             <li><a href="zaim-yandex">Займ на Яндекс.Деньги</a></li>
                             <li><a href="zaim-contact">Займ на Contact</a></li>
                             <li><a href="zaim-qiwi">Займ на Qiwi кошелек</a></li>
