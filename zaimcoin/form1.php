@@ -15,7 +15,6 @@
                         </figure>
                         <div class="ex-slider-info">
                             <span>1 000</span>
-                            <!-- <span>50 000</span> -->
                             <span>100 000</span>
                         </div>
                     </div>
@@ -89,7 +88,7 @@
             <label class="control-label col-md-2" for="phone">Телефон</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
-                    <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Введите свой № телефона" title="Пожалуйста, введите свой № телефона"
+                    <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Введите свой номер телефона" title="Пожалуйста, введите свой номер телефона"
                     data-validation-error-msg="Пожалуйста, введите номер телефона"   required>
                     <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>

@@ -1,6 +1,6 @@
 function setcookie(name, value, expires, path, domain, secure) {
     var date_coock = new Date;
-    date_coock.setDate(date.getHours() + 1);
+    date_coock.setDate(date_coock.getHours() + 1);
     date_coock = date_coock.toUTCString();
     expires = date_coock;
     document.cookie = name + "=" + escape(value) +

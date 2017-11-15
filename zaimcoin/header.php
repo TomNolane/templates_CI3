@@ -116,7 +116,7 @@ if(!isset($description))
                         <ul class="dropdown-menu">
                             <!-- <li><a href="/docs">Правовые документы</a></li> -->
                             <li><a href="/oferta">Публичная оферта</a></li>
-                            <li><a href="/agree">Пользовательское соглашение</a></li>
+                            <!-- <li><a href="/agree">Пользовательское соглашение</a></li> -->
                             <li><a href="/soglasie">Cогласие на обработку данных</a></li>
                             <li><a href="/rules">Правила предоставления</a></li>
                         </ul>

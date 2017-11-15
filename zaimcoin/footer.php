@@ -1,4 +1,5 @@
 <?php 
+$from = '15';
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') 
 {
 echo '<footer class="ex-main-footer">
@@ -231,8 +232,7 @@ if($this->uri->segment(1) == 'form')
         from: <?php 
 
         if(isset($_GET['amount'])) 
-        { 
-            $from = '15';
+        {  
             switch($_GET['amount'])
             {
                 case '1000': $from = '0' ; break;
