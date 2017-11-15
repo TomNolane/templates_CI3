@@ -13312,3 +13312,7 @@ header .navbar-default {
     text-align: center;
   }
 }
+.spec_active {
+        border-bottom: 4px solid #5e00ff;
+        color: #354052 !important;
+    } 

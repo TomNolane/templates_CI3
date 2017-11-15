@@ -9,7 +9,7 @@
                             <li><a href="zaim-card">Займ на банковскую карту</a></li>
                             <li><a href="zaim-yandex">Займ на Яндекс.Деньги</a></li>
                             <li><a href="zaim-contact">Займ на Contact</a></li>
-                            <li><a href="zaim-qiwi">Займ на Qiwi кошелек</a></li>
+                            <li><a class="spec_active" href="zaim-qiwi">Займ на Qiwi кошелек</a></li>
                             <li><a href="zaim-bank">Займ на банковский счет</a></li>
                         </ul>
                     </div>
@@ -32,7 +32,6 @@
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
                     <div class="text-center">
-                        <!-- <button class="ex-orange-btn">Получить деньги</button> -->
                         <button class="ex-orange-btn" onClick="window.location.href = window.location.origin + '/form'; return false;">Получить деньги</button>
                     </div>
                 </div>

@@ -10,7 +10,7 @@
                             <li><a href="zaim-yandex">Займ на Яндекс.Деньги</a></li>
                             <li><a href="zaim-contact">Займ на Contact</a></li>
                             <li><a href="zaim-qiwi">Займ на Qiwi кошелек</a></li>
-                            <li><a href="zaim-bank">Займ на банковский счет</a></li>
+                            <li><a class="spec_active" href="zaim-bank">Займ на банковский счет</a></li>
                         </ul>
                     </div>
                 </div>
