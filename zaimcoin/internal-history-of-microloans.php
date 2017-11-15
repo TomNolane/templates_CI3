@@ -12,7 +12,7 @@
             <h1>История появления микрозаймов в мире и в России</h1>
         </div>
         <div class="ex-img-block">
-            <img src="/templates/zaimcoin/assets/img/full-image5.png" class="img-responsive" alt="full-image5.png">
+            <img src="/templates/zaimcoin/assets/img/full-image5.jpg" class="img-responsive" alt="full-image5.jpg">
         </div>
         <div class="container">
             <div class="row">

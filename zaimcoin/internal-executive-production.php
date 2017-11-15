@@ -12,7 +12,7 @@
             <h1>Исполнительное производство</h1>
         </div>
         <div class="ex-img-block">
-            <img src="/templates/zaimcoin/assets/img/full-image3.png" class="img-responsive" alt="full-image3.png">
+            <img src="/templates/zaimcoin/assets/img/full-image3.jpg" class="img-responsive" alt="full-image3.jpg">
         </div>
         <div class="container">
             <div class="row">

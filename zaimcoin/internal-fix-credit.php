@@ -12,7 +12,7 @@
             <h1>Исправление кредитной истории</h1>
         </div>
         <div class="ex-img-block">
-            <img src="/templates/zaimcoin/assets/img/full-image4.png" class="img-responsive" alt="full-image4.png">
+            <img src="/templates/zaimcoin/assets/img/full-image4.jpg" class="img-responsive" alt="full-image4.jpg">
         </div>
         <div class="container">
             <div class="row">

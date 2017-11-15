@@ -95,7 +95,7 @@ if(!isset($description))
                             <li><a rel="nofollow" href="/rules">Правила предоставления займов</a></li>
                         </ul>
                     </li>
-                    <li><a rel="nofollow" href="/<?php echo $this->input->cookie('lk')? 'lk' : 'form'; ?>">Получение денег</a></li>
+                    <li><a rel="nofollow" href="/<?php echo $this->input->cookie('lk')? 'form' : 'form'; ?>">Получение денег</a></li>
                     <li><a rel="nofollow" href="/faq">Вопрос - ответ</a></li>
                     <li><a rel="nofollow" href="" data-toggle="modal" data-target="#helpModal">Обратная связь</a></li>
                 </ul>

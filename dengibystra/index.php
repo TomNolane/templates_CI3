@@ -50,18 +50,12 @@
                     <div class="col-sm-5 ex-for-button text-center">
                         <button class="ex-main-btn " type="submit">Получить деньги</button>
                     </div>
-
                 </form>
-
-
                 </div>
             </div>
         </div>
     </div>
-
-
 </div>
-
 <div class="ex-get-money">
     <div class="container">
         <div class="row">
@@ -69,7 +63,7 @@
 			<h1 class="hidden-md hidden-lg visible-xs visible-sm" style="margin-top: 10px; margin-bottom: 10px;">Как получить деньги сейчас?</h1> 
             <div class="col-md-6 hidden-xs hidden-sm visible-md visible-lg">
                 <div class="ex-get-money-block">
-                <a href="/form"><img src="templates/dengibystra/assets/img/calc.png" alt="" class="ex-vh-center"></a>
+                <a href="/form"><img src="templates/dengibystra/assets/img/calc.png" alt="calc.png" class="ex-vh-center"></a>
                 </div>
             </div>
             <div class="col-md-6 hidden-xs hidden-sm visible-md visible-lg">
@@ -88,14 +82,14 @@
             </div>
             <div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm">
 				<div class="ex-get-money-block" style="margin-bottom: 15px;">
-					<a href="/form"><img src="templates/dengibystra/assets/img/calc.png" alt="" class="ex-vh-center"></a>
+					<a href="/form"><img src="templates/dengibystra/assets/img/calc.png" alt="calc.png" class="ex-vh-center"></a>
                 </div> 
             </div> 
         </div> 
         <div class="row">
             <div class="col-md-6 hidden-xs hidden-sm visible-md visible-lg">
                 <div class="ex-get-money-block">
-                   <a href="/form"> <img src="templates/dengibystra/assets/img/spasibo.png" alt="" class="ex-vh-center"></a>
+                   <a href="/form"> <img src="templates/dengibystra/assets/img/spasibo.png" alt="spasibo.png" class="ex-vh-center"></a>
                 </div>
             </div>
             <div class="col-md-6 hidden-xs hidden-sm visible-md visible-lg">
@@ -114,14 +108,14 @@
             </div>
             <div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm">
                 <div class="ex-get-money-block" style="margin-bottom: 15px;">
-                   <a href="/form"> <img src="templates/dengibystra/assets/img/spasibo.png" alt="" class="ex-vh-center"></a>
+                   <a href="/form"> <img src="templates/dengibystra/assets/img/spasibo.png" alt="spasibo.png" class="ex-vh-center"></a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 hidden-xs hidden-sm visible-md visible-lg">
                 <div class="ex-get-money-block">
-					<a href="/form"><img src="templates/dengibystra/assets/img/screen.png" alt="" class="ex-vh-center"></a>
+					<a href="/form"><img src="templates/dengibystra/assets/img/screen.png" alt="screen.png" class="ex-vh-center"></a>
                 </div>
             </div>
             <div class="col-md-6 hidden-xs hidden-sm visible-md visible-lg">
@@ -140,7 +134,7 @@
             </div>
             <div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm">
 				<div class="ex-get-money-block" style="margin-bottom: 15px;">
-					<a href="/form"><img src="templates/dengibystra/assets/img/screen.png" alt="" class="ex-vh-center"></a>
+					<a href="/form"><img src="templates/dengibystra/assets/img/screen.png" alt="screen.png" class="ex-vh-center"></a>
                 </div> 
             </div>
         </div>

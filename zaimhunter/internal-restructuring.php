@@ -4,7 +4,7 @@
             <h1>Реструктуризация кредита</h1> 
         </div>
         <div class="ex-info-wraper">
-            <img src="/templates/zaimhunter/assets/img/infoimage2.png" alt="infoimage2.png">
+            <img src="/templates/zaimhunter/assets/img/infoimage2.jpg" alt="infoimage2.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1">
@@ -42,7 +42,7 @@
                                         <br>долговую яму</h4>
                                 </div>
                                 <div class="col-sm-7 ">
-                                    <img src="/templates/zaimhunter/assets/img/infoimage2-1.png" alt="infoimage2-1.png">
+                                    <img src="/templates/zaimhunter/assets/img/infoimage2-1.jpg" alt="infoimage2-1.jpg">
                                 </div>
                             </div>
                             </a>
@@ -53,7 +53,7 @@
                         <a id="href" href="/refinancing">
                             <div class=" ex-about-zaim-block" id="special"> 
                                 <h4>Рефинансирование</h4>
-                                <img src="/templates/zaimhunter/assets/img/3.png" alt="3.png">
+                                <img src="/templates/zaimhunter/assets/img/3.jpg" alt="3.jpg">
                             </div>
                             </a>
                         </div>
@@ -62,7 +62,7 @@
                             <div class="ex-about-zaim-block" id="special2"> 
                                 <h4>Банкротство<br>
                                     физических лиц</h4>
-                                <img src="/templates/zaimhunter/assets/img/4.png" alt="4.png">
+                                <img src="/templates/zaimhunter/assets/img/4.jpg" alt="4.jpg">
                             </div>
                             </a>
                         </div>

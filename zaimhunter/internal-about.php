@@ -5,7 +5,7 @@
             <h1>Займы онлайн: мгновенная финансовая помощь</h1>
         </div>
         <div class="ex-info-wraper">
-            <img src="/templates/zaimhunter/assets/img/aboutimage.png" alt="aboutimage.png">
+            <img src="/templates/zaimhunter/assets/img/aboutimage.jpg" alt="aboutimage.jpg">
             <div class="container">
                 <div class="ex-info-text">
                     <p class="text-justify">Объяснять, зачем вам срочно потребовались деньги, всегда неудобно и
@@ -88,7 +88,7 @@
                             <h4>Непосильные кредиты:
                                 как не попасть<br>
                                 в долговую яму</h4>
-                            <img src="/templates/zaimhunter/assets/img/1.png" alt="1.png">
+                            <img src="/templates/zaimhunter/assets/img/1.jpg" alt="1.jpg">
                         </div>
                         </a>
                     </div>
@@ -97,7 +97,7 @@
                         <div id="special2" class="ex-about-zaim-block">
                             <h4>Реструктуризация
                                 кредита</h4>
-                            <img src="/templates/zaimhunter/assets/img/2.png" alt="2.png">
+                            <img src="/templates/zaimhunter/assets/img/2.jpg" alt="2.jpg">
                         </div>
                         </a>
                     </div>
@@ -105,7 +105,7 @@
                         <a id="href" href="/refinancing">
                         <div id="special3" class=" ex-about-zaim-block">
                             <h4>Рефинансирование</h4>
-                            <img src="/templates/zaimhunter/assets/img/3.png" alt="3.png">
+                            <img src="/templates/zaimhunter/assets/img/3.jpg" alt="3.jpg">
                         </div>
                         </a>
                     </div>
@@ -114,7 +114,7 @@
                         <div id="special4" class="ex-about-zaim-block">
                             <h4>Банкротство<br>
                                 физических лиц</h4>
-                            <img src="/templates/zaimhunter/assets/img/4.png" alt="4.png">
+                            <img src="/templates/zaimhunter/assets/img/4.jpg" alt="4.jpg">
                         </div>
                         </a>
                     </div>

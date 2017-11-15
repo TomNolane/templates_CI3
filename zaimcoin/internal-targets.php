@@ -12,7 +12,7 @@
             <h1>Для каких целей чаще всего берут микрокредиты</h1>
         </div>
         <div class="ex-img-block">
-            <img src="/templates/zaimcoin/assets/img/full-image2.png" class="img-responsive" alt="full-image2.png">
+            <img src="/templates/zaimcoin/assets/img/full-image2.jpg" class="img-responsive" alt="full-image2.jpg">
         </div>
         <div class="container">
             <div class="row">

@@ -12183,7 +12183,7 @@ button.close {
 .ex-main-footer {
   background-color: #34495e;
   padding: 55px 0 40px;
-  color: #ffffff;
+  color: #cecece; /* #ffffff */
   position: absolute;
   width: 100%;
   bottom: 0;

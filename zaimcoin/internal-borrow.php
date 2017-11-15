@@ -12,7 +12,7 @@
             <h1>Где взять деньги в долг, если в кредите отказано</h1>
         </div>
         <div class="ex-img-block">
-            <img src="/templates/zaimcoin/assets/img/full-image1.png" class="img-responsive" alt="full-image1.png">
+            <img src="/templates/zaimcoin/assets/img/full-image1.jpg" class="img-responsive" alt="full-image1.jpg">
         </div>
         <div class="container">
             <div class="row">

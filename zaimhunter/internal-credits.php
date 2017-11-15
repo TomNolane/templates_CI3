@@ -5,7 +5,7 @@
                 как не попасть в долговую яму</h1>
         </div>
         <div class="ex-info-wraper">
-            <img src="/templates/zaimhunter/assets/img/info.png" alt="info.png">
+            <img src="/templates/zaimhunter/assets/img/info.jpg" alt="info.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1">
@@ -49,7 +49,7 @@
                                     <h4>Реструктуризация кредита</h4>
                                 </div>
                                 <div class="col-sm-7 ">
-                                    <img src="/templates/zaimhunter/assets/img/infoimage1.png" alt="infoimage1.png" class="img-responsive">
+                                    <img src="/templates/zaimhunter/assets/img/infoimage1.jpg" alt="infoimage1.jpg" class="img-responsive">
                                 </div>
                                 </div>
                             </a>
@@ -60,7 +60,7 @@
                             <a id="href" href="/refinancing">
                             <div class="ex-about-zaim-block" id="special">
                                 <h4>Рефинансирование</h4>
-                                <img src="/templates/zaimhunter/assets/img/3.png" alt="3.png" class="img-responsive">
+                                <img src="/templates/zaimhunter/assets/img/3.jpg" alt="3.jpg" class="img-responsive">
                             </div>
                             </a>
                         </div>
@@ -69,7 +69,7 @@
                             <div class="ex-about-zaim-block" id="special2">
                                 <h4>Банкротство<br>
                                     физических лиц</h4>
-                                <img src="/templates/zaimhunter/assets/img/4.png" alt="4.png" class="img-responsive">
+                                <img src="/templates/zaimhunter/assets/img/4.jpg" alt="4.jpg" class="img-responsive">
                             </div>
                             </a>
                         </div>
