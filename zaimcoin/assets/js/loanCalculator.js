@@ -2,12 +2,20 @@
 
 //-----------------------Initializing--------------------------
 $(document).ready(function () {
-    //-----------------------Declaration of variables--------------------------
-
-
-
-
-    var currentLoanSize = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val()),
+    //-----------------------Declaration of variables-------------------------
+    var url_string = window.location.href; //window.location.href
+    var url = new URL(url_string);
+    var c = url.searchParams.get("amount");
+    var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());
+    if(c)
+    {
+        if(c > 100000 || c < 1000)
+        {
+            c = 20000;
+        }
+        gg = c; 
+    }
+    var currentLoanSize = gg,
         range = $("#rangeSlider"),
         commissionPercantage = 13,
         rangeUpperValue =  $('#ex-slider-val'),

@@ -1,5 +1,4 @@
 <?php 
-
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') 
 {
 echo '<footer class="ex-main-footer">
@@ -181,18 +180,16 @@ else
 <![endif]-->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 <script type="text/javascript" src="/templates/zaimcoin/assets/js/jquery.suggestions.min.js"></script> 
-<script src="/templates/zaimcoin/assets/js/coockie.js"></script>
-<script src="/templates/zaimcoin/assets/js/settings_main.js?ver=1"></script>
+<script src="/templates/zaimcoin/assets/js/coockie.js?ver=1"></script>
+<script src="/templates/zaimcoin/assets/js/settings_main.js?ver=2"></script>
 <script src="/templates/zaimcoin/assets/js/custom.js?ver=1"></script>
 <script src="/templates/zaimcoin/assets/js/ion.rangeSlider.min.js"></script>
-
-
 
 <?php 
 if($this->uri->segment(1) == 'form')
 { 
-    echo '<script src="/templates/zaimcoin/assets/js/loanCalculator.js?ver=1"></script>';
-    echo '<script src="/templates/zaimcoin/assets/js/settings_form.js?ver=1"></script>';
+    echo '<script src="/templates/zaimcoin/assets/js/loanCalculator.js?ver=2"></script>';
+    echo '<script src="/templates/zaimcoin/assets/js/settings_form.js?ver=2"></script>'; 
 } 
 ?> 
 
@@ -231,10 +228,48 @@ if($this->uri->segment(1) == 'form')
         hide_from_to: true,
         keyboard: true,
         grid: false,
-        from: <?php if(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd'];?>,
+        from: <?php 
+
+        if(isset($_GET['amount'])) 
+        { 
+            $from = '15';
+            switch($_GET['amount'])
+            {
+                case '1000': $from = '0' ; break;
+                case '2000': $from = '1' ; break;
+                case '3000': $from = '2' ; break;
+                case '4000': $from = '3' ; break;
+                case '5000': $from = '4' ; break;
+                case '6000': $from = '5' ; break;
+                case '7000': $from = '6' ; break;
+                case '8000': $from = '7' ; break;
+                case '9000': $from = '8' ; break;
+                case '10000': $from = '9' ; break;
+                case '11000': $from = '10' ; break;
+                case '12000': $from = '11' ; break;
+                case '13000': $from = '12' ; break;
+                case '14000': $from = '13' ; break;
+                case '15000': $from = '14' ; break;
+                case '20000': $from = '15' ; break;
+                case '25000': $from = '16' ; break;
+                case '30000': $from = '17' ; break;
+                case '40000': $from = '18' ; break;
+                case '50000': $from = '19' ; break;
+                case '80000': $from = '20' ; break;
+                case '100000': $from = '21' ; break;
+            }
+            echo $from; 
+        }
+        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        ?>,
         values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
         onFinish: function (data) {
-            return false;
+            $('#amount').val(data.from_value);
+            $('#form_slrd').val(data.from);
+        }, 
+        onLoad: function (data) {
+            $('#amount').val(data.from_value);
+            $('#form_slrd').val(data.from);
         },
         onChange: function (range) {
             if (range.from_value <= 10000) {
@@ -397,16 +432,18 @@ echo "<script>$(document).ready(function () {
     var slider3 = $('#rangeSlider').data('ionRangeSlider');
 
     var slider_plus = true;
-    var n = 15;
+    var n = 10;
     var slider_init = setInterval(function () {
         if (slider_plus) {
             n++;
         } else {
             n--;
         }
-        if (n == 21) {
+        if (n == 21 && n != ".$from.") {
             slider_plus = false;
-        } else if (n == 5) {
+        }else if (n == ".$from." && slider_plus == false) {
+            clearInterval(slider_init);
+        }else if (n == 21 && n == ".$from.") {
             clearInterval(slider_init);
         }
  
@@ -503,7 +540,7 @@ elseif($this->uri->segment(1) == 'lk')
 ?>
 <!-- всплывающее окошко -->
 <?php 
-if ($this->uri->segment(1) == 'form6') 
+if ($this->uri->segment(1) == 'form') 
 { 
     require 'templates/common/js.php';
     if(isset($_GET['popup']) and $_GET['popup']==1 ){
