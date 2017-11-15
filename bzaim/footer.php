@@ -2,7 +2,7 @@
 <div id="ya-rtb">
     <div id="yandex_rtb_R-A-243981-3"></div>
     <div id="yandex_rtb_R-A-243981-1"></div>
-</div> 
+</div>
 
 <footer>
         <div class="container">
@@ -10,14 +10,14 @@
 		<div class="row">
                     <div class="col-md-2">
                         <div>
-                            <a href="/"><img src="/templates/bzaim/img/logo-f.png" align="" alt="logo-f.png" class="logo"></a>
+                            <img src="/templates/bzaim/img/logo-f.png" align="" class="logo">
                         </div>
                     </div>
                     <div class="col-md-4">
                             <p>Сервис по подбору выгодных онлайн займов</p>
                             <p>находящийся по адресу</p>
                             <p>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201</p>
-                            <p><a href="mailto:support@bzaim5.ru" target="_blank">support@bzaim5.ru</a> 8 (960) 950 93 53</p>            
+                            <p>support@вашиденьги5.ru 8 (960) 950 93 53</p>            
                     </div>
                     <div class="col-md-6">
                         <div class="hidden-xs">
@@ -37,7 +37,7 @@
             </div>
             </div>
     </footer>
-
+</div>
     <!-- Plugin JavaScript -->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
     <!-- Theme JavaScript -->
@@ -181,7 +181,7 @@
                             }
                             else if (range.from_value <= 30000) {
                                 $('#p').val('21');
-                                $('#period2').val('От 61 до 130 дне1');
+                                $('#period2').val('От 61 до 130 дней');
                             }
                             else if (range.from_value <= 50000) {
                                 $('#p').val('30');
@@ -226,7 +226,7 @@
             $('input#passport_code').mask("nnn-nnn", { "placeholder": "___-___" });
             $('input#birthdate').mask("nn/nn/nnnn", { "placeholder": "__/__/__" });
             $('input#passportdate').mask("nn/nn/nnnn", { "placeholder": "__/__/__" });
-            $('input#work_salary').mask("nnnn?nn", { "placeholder": "" });
+            $('input#work_salary').mask("nnnn?n", { "placeholder": "" });
             $('input#work_experience').mask("n?nn", { "placeholder": "" });       
             $('input#flat').mask("n?***", { "placeholder": "" });
             $('input#building').mask("n?***", { "placeholder": "" });
@@ -250,7 +250,7 @@
     <img src="//top-fwz1.mail.ru/counter?id=2857840;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
     </div></noscript>
     <!-- //Rating@Mail.ru counter -->
-    <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter35589670 = new Ya.Metrika({ id:35589670, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/35589670" style="position:absolute; left:-9999px;" alt="yandex.ru/watch/35589670" /></div></noscript> <!-- /Yandex.Metrika counter -->    
+    <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter35589670 = new Ya.Metrika({ id:35589670, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/35589670" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->    
     <script>
     function markTarget(target,param,id){
         if (typeof yaCounter35589670 == 'undefined') return;
@@ -309,7 +309,7 @@
         } else { f(); }
     })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/45336951" style="position:absolute; left:-9999px;" alt="yandex.ru/watch/45336951" /></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/45336951" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <!-- Общий счетчик Mail.ru ЛидМафия->
 <!-- Rating@Mail.ru counter -->
@@ -324,7 +324,7 @@ _tmr.push({id: "2916281", type: "pageView", start: (new Date()).getTime()});
   if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
 })(document, window, "topmailru-code");
 </script><noscript><div>
-<img src="//top-fwz1.mail.ru/counter?id=2916281;js=na" style="border:0;position:absolute;left:-9999px;" alt="mail.ru/counter" />
+<img src="//top-fwz1.mail.ru/counter?id=2916281;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
 </div></noscript>
 <!-- //Rating@Mail.ru counter -->    
 <script type="text/javascript">
@@ -393,7 +393,7 @@ var google_remarketing_only = true;
 </script>
 <noscript>
 <div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="doubleclick.net" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/841045099/?guid=ON&amp;script=0"/>
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/841045099/?guid=ON&amp;script=0"/>
 </div>
 </noscript>
 </body>
