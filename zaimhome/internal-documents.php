@@ -4,16 +4,16 @@
         <h2 class="text-center">Документы и разрешительная документация</h2>
         <div class="row">
             <div class="col-md-3 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2">
-                <figure><img src="/templates/zaimhome/assets/img/doc1.png" alt="Missing image"></figure>
+                <figure><img src="/templates/zaimhome/assets/img/doc1.jpg" alt="Missing image"></figure>
             </div>
             <div class="col-md-3 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2">
-                <figure><img src="/templates/zaimhome/assets/img/doc2.png" alt="Missing image"></figure>
+                <figure><img src="/templates/zaimhome/assets/img/doc2.jpg" alt="Missing image"></figure>
             </div>
             <div class="col-md-3 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2">
-                <figure><img src="/templates/zaimhome/assets/img/doc3.png" alt="Missing image"></figure>
+                <figure><img src="/templates/zaimhome/assets/img/doc3.jpg" alt="Missing image"></figure>
             </div>
             <div class="col-md-3 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2">
-                <figure><img src="/templates/zaimhome/assets/img/doc4.png" alt="Missing image"></figure>
+                <figure><img src="/templates/zaimhome/assets/img/doc4.jpg" alt="Missing image"></figure>
             </div>
         </div>
         <p>Услуги на проекте Zaimhome оказываются юридическим лицом ООО «Гутлид», которое действует в интересах и по поручению организации ООО Микрокредитная Компания «Берлин» Свидетельство о внесении сведений о юридическом лице в государственный реестр микрофинансовых организаций № 1703045008133, которая на основании ФЗ "О потребительском кредите (займе)" от 21.12.2013 N 353-ФЗ имеет право осуществлять профессиональную деятельность по предоставлению потребительских займов.</p>

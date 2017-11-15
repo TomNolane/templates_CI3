@@ -14,14 +14,8 @@
                 </div>
                 <div class="col-lg-1 col-xs-0"></div>
                 <div class="col-lg-5 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-                    <div class="ex-calc-wraper">
-                    <!-- <h3 class="text-center hidden-xs hidden-sm">К возврату</h3>  -->
-                    <h3 class="visible-sm visible-xs hidden-md hidden-lg special_index2 font26 text-center"><b>Мгновенные займы онлайн.</b></h3><br>
-                        <!-- <figure class="ex-val-block">
-                            <p id="ex-slider-val" class="text-right"></p>
-                        </figure> -->
-
-
+                    <div class="ex-calc-wraper"> 
+                    <h3 class="visible-sm visible-xs hidden-md hidden-lg special_index2 font26 text-center"><b>Мгновенные займы онлайн.</b></h3><br> 
                         <form id="anketa" action="/form" method="post">
                         <div class="ex-calc-block text-center">
                             <p class="font26 hidden-xs hidden-sm visible-md visible-lg"><b>Срок займа (в днях)</b></p>
@@ -31,16 +25,11 @@
                                 <li><span>365</span></li> 
                             </ul>
                             <p class="ex-time"></p>
-                            <!-- <p>к возврату</p> -->
                             <p>
                                 <span class="ex-unique"></span>
-                                    <center><a class="btn ex-main-btn ex-total special_index5 hidden-xs hidden-sm visible-md visible-lg" onclick="<?php echo $this->input->cookie('lk')? 'goToLk()' : 'goToForm()';?>"></a></center>
-                                    <a class="ex-total hidden-lg hidden-md visible-xs visible-sm" style="width: 100%;margin-top:-30px; color: #000000 !important;" onclick="<?php echo $this->input->cookie('lk')? 'goToLk()' : 'goToForm()';?>"></a>
-                                    
-                                <!-- <button class="ex-main-btn ex-total"></button> -->
+                                    <center><a class="btn ex-main-btn ex-total special_index5 hidden-xs hidden-sm visible-md visible-lg" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>"></a></center>
+                                    <a class="ex-total hidden-lg hidden-md visible-xs visible-sm" style="width: 100%;margin-top:-30px; color: #000000 !important;" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>"></a>
                             </p>
-                            <!--<p><span class="ex-unique">К возврату:</span>-->
-                            <!--<p class="ex-total"></p></p>-->
                         </div>
 
                         <input type="hidden" id="amount" name="amount" value="20000" />
@@ -66,7 +55,7 @@
                         <p id="ex-slider-val" class="text-center hidden-xs hidden-sm"></p>
                         <p id="ex-slider-val" class="val2 text-left hidden-md hidden-lg"></p>
                     </figure> 
-                    <center><a class="btn ex-main-btn hidden-lg hidden-md visible-xs visible-sm" style="width: 100%;" onclick="<?php echo $this->input->cookie('lk')? 'goToLk()' : 'goToForm()';?>">Получить деньги</a>
+                    <center><a class="btn ex-main-btn hidden-lg hidden-md visible-xs visible-sm" style="width: 100%;" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">Получить деньги</a>
                     <p class="font23 hidden-lg hidden-md visible-sm visible-xs" style="margin-top:10px;"><b>Срок займа (в днях)</b></p></center>
                         <ul class="ex-zaim-time ex-zaim-time2 visible-xs visible-sm hidden-md hidden-lg" id="index_special" style="margin-bottom: 20px;"> 
                             <li class="ex-active-time" id="ex-active-time"><span>61</span></li>
@@ -74,8 +63,7 @@
                             <li><span>365</span></li> 
                         </ul>
                     <div class="text-center">
-                        <center><a class="btn ex-main-btn hidden-xs hidden-sm visible-md visible-lg" style="width: 65%;" onclick="<?php echo $this->input->cookie('lk')? 'goToLk()' : 'goToForm()';?>">Получить деньги</a></center>
-                        
+                        <center><a class="btn ex-main-btn hidden-xs hidden-sm visible-md visible-lg" style="width: 65%;" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">Получить деньги</a></center>
                     </div>
                     </form>
                     </div>
@@ -172,7 +160,7 @@
                             <h4>Непосильные кредиты:
                                 как не попасть<br>
                                 в долговую яму</h4>
-                            <img src="/templates/zaimhunter/assets/img/1.png" alt="1.png">
+                            <img src="/templates/zaimhunter/assets/img/1.jpg" alt="1.png">
                         </div>
                     </a>
                 </div>
@@ -181,7 +169,7 @@
                         <div class="ex-about-zaim-block">
                             <h4>Реструктуризация
                                 кредита</h4>
-                            <img src="/templates/zaimhunter/assets/img/2.png" alt="2.png">
+                            <img src="/templates/zaimhunter/assets/img/2.jpg" alt="2.png">
                         </div>
                     </a>
                 </div> 
@@ -189,7 +177,7 @@
                     <a id="href" href="/refinancing">
                         <div class=" ex-about-zaim-block">
                             <h4>Рефинансирование</h4>
-                        <img src="/templates/zaimhunter/assets/img/3.png" alt="3.png">
+                        <img src="/templates/zaimhunter/assets/img/3.jpg" alt="3.png">
                         </div>
                     </a>
                 </div>
@@ -198,7 +186,7 @@
                         <div class="ex-about-zaim-block">
                             <h4>Банкротство<br>
                                 физических лиц</h4> 
-                            <img src="/templates/zaimhunter/assets/img/4.png" alt="4.png">
+                            <img src="/templates/zaimhunter/assets/img/4.jpg" alt="4.png">
                         </div>
                     </a>
                 </div>

@@ -11,39 +11,9 @@
             <input type="hidden" id="form_slrd" name="form_slrd" value="15" /> 
             <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>"> 
             <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>         
-            <div class="ex-calc-wraper">
-
-
-
+            <div class="ex-calc-wraper"> 
                 <div class="row">
                     <div class="col-md-8" id="specialIndex">
-                        <div class="ex-range-scope">
-                            <div id="ex-main-slider-range">
-                                <figure class="ex-range-slider">
-                                    <input type="text" id="rangeSlider" name="rangeSlider" value="0"/>
-                                </figure>
-                                <div class="ex-slider-info">
-                                    <span>1 000</span>
-                                    <!-- <span>50 000</span> -->
-                                    <span>100 000</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" id="specialIndex2">
-                        <figure class="ex-val-block">
-                            <p id="ex-slider-val"></p>
-                        </figure>
-                    </div>
-                </div>
-                
-                <!-- <div class="row" id="specialIndex2">
-                <div class="col-md-4">
-                        <figure class="ex-val-block">
-                            <p id="ex-slider-val"></p>
-                        </figure>
-                    </div>
-                    <div class="col-md-8">
                         <div class="ex-range-scope">
                             <div id="ex-main-slider-range">
                                 <figure class="ex-range-slider">
@@ -56,11 +26,12 @@
                             </div>
                         </div>
                     </div>
-                   
-                </div> -->
-
-
-
+                    <div class="col-md-4" id="specialIndex2">
+                        <figure class="ex-val-block">
+                            <p id="ex-slider-val"></p>
+                        </figure>
+                    </div>
+                </div> 
                 <div class="row ex-tab-section">
                     <div class="col-md-8">
                         <ul class="ex-calc-block ">
@@ -86,10 +57,9 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-4 ex-for-button text-center">
-                        <!-- <button class="ex-orange-btn">Получить деньги</button> -->
-                        <a  onclick="<?php echo $this->input->cookie('lk')? 'goToLk()' : 'goToForm()';?>"><input class="ex-orange-btn" type="button" value="Получить деньги"></a>
-                        <!-- <a class="btn ex-orange-btn" onclick="<?php echo $this->input->cookie('lk')? 'goToLk()' : 'goToForm()';?>"></a> -->
+                    <div class="col-md-4 ex-for-button text-center"> 
+                        <a  onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>"><input class="ex-orange-btn" type="button" value="Получить деньги"></a>
+                        <!-- <a class="btn ex-orange-btn" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>"></a> -->
                     </div>
                 </div>
             </div>

@@ -88,7 +88,7 @@
                     </li>
 
                     <li>
-                        <a href="/<?php echo $this->input->cookie('lk')? 'lk' : 'form'; ?>">Получить деньги</a> 
+                        <a href="/<?php echo $this->input->cookie('lk')? 'form' : 'form'; ?>">Получить деньги</a> 
                     </li> 
                     <li class="dropdown">
                         <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">Информация
@@ -98,9 +98,9 @@
                             <li>
                                 <a href="offerta" class="hov">Публичная оферта</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="contract" class="hov">Пользовательское соглашение</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="rules" class="hov">Правила предоставления займов</a>
                             </li>

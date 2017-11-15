@@ -12,7 +12,7 @@
             <h1>Как МФО поощряют постоянных клиентов</h1>
         </div>
         <div class="ex-img-block">
-            <img src="/templates/zaimcoin/assets/img/full-image6.png" class="img-responsive" alt="full-image6.png">
+            <img src="/templates/zaimcoin/assets/img/full-image6.jpg" class="img-responsive" alt="full-image6.jpg">
         </div>
         <div class="container">
             <div class="row">

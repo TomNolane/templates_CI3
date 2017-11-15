@@ -12,7 +12,7 @@
             <h1>5 типичных ошибок заемщиков</h1>
         </div>
         <div class="ex-img-block">
-            <img src="/templates/zaimcoin/assets/img/full-image8.png" class="img-responsive" alt="full-image8.png">
+            <img src="/templates/zaimcoin/assets/img/full-image8.jpg" class="img-responsive" alt="full-image8.jpg">
         </div>
         <div class="container">
             <div class="row">

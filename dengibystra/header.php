@@ -72,8 +72,7 @@ if(!isset($description))
                     </a>
                 </div>
                 <div id="navbarCollapse" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- <li><a href="/about">О проекте</a></li>  -->
+                    <ul class="nav navbar-nav navbar-right"> 
                         <li class="dropdown">
                             <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">О проекте
                                 <span class="caret"></span>
@@ -96,9 +95,9 @@ if(!isset($description))
                                 <li>
                                     <a href="/oferta" class="hov">Публичная оферта</a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="/contract" class="hov">Пользовательское соглашение</a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="/rules" class="hov">Правила предоставления займов</a>
                                 </li>

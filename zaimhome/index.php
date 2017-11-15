@@ -36,7 +36,7 @@
                                             <span>100 тыс.</span>
                                         </div>
                                     </div>
-                                    <button  type="button" class="btn btn-primary" onclick="<?php echo $this->input->cookie('lk')? 'goToLk()' : 'goToForm()';?>">получить деньги</button>
+                                    <button  type="button" class="btn btn-primary" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">получить деньги</button>
 									
 									
 								</form>
