@@ -60,7 +60,7 @@ $y = 0; $y1 = 'height: 80px; max-width: 240px;'; $y2 = 'height: 100px; max-width
     $item['link'] = str_replace("#site", $domen, $item['link']);        
 echo ' <tr> 
                 <td><center><a   href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
-                <img  src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
+                <img  src="/templates/common/img/offers/'.$item['img'].'.png" class="'.$item['img'].'" alt="'.$item['title'].'">
             </a></center></td>
                 <td>     
                     <div><span class="table_text">Прооцентная ставка</span><span class="table_text2 text-right"> <b>от '.$item["percent"].'%</b>&emsp;&emsp;&emsp;</span></div> 
@@ -86,7 +86,7 @@ echo ' <tr>
 echo '        
         <tr> 
             <td><center> <a   href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
-            <img src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
+            <img src="/templates/common/img/offers/'.$item['img'].'.png" class="'.$item['img'].'" alt="'.$item['title'].'">
         </a></center></td>
                  
             </tr>  

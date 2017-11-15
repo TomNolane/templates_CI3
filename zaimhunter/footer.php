@@ -29,9 +29,6 @@
                     пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате
                     31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
                     ИП «Бабакова К.К.»ОГРНИП 316222500122426 ИНН 222511216499</span>
-
-
-
                 </p>
             </div> 
         </div>
@@ -547,6 +544,32 @@ if(isset($_GET['email']))
     echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
 }
 ?>
+<script>
+function markTarget(target,param, id){
+    if (typeof yaCounter46581393 == 'undefined') return;
+	if (typeof param == 'undefined') yaCounter46581393.reachGoal(target);
+	else yaCounter46581393.reachGoal(target,param);
+        
+        $.ajax({
+            type: 'POST',
+            url: '/pixel/',
+            data: 'id='+id+'&pixel='+param,
+            success: function(data){
+                //console.log(data);
+            }
+        });
+}
+function traffic(site, page){
+    $.ajax({
+        type: 'POST',
+        url: '/traffic/',
+        data: 'site='+site+'&page='+page,
+            success: function(data){
+                //console.log(data);
+            }
+    });    
+}
+</script>
 
 <?php require 'yandex_metrika.php'; ?>
 

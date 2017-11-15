@@ -13386,3 +13386,6 @@ header .navbar-default {
   font-weight: 200;
   margin-top: 47px; 
 }
+.kredito24, .zaymer, .moneyman, .vivus{
+    max-width: 80%;
+}
