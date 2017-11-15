@@ -11735,7 +11735,7 @@ header .navbar-default {
   padding-top: 32px;
   padding-bottom: 39px;
   color: #c0c0c0; /* Tom Nolane #262626*/
-  font-size: 12px;
+  font-size: 10px; /* Tom Nolane 12px*/
   font-weight: 400;
   line-height: 20px;
   margin-bottom: 0;
@@ -12671,7 +12671,7 @@ header .navbar-default {
   padding-top: 17px;
   padding-bottom: 49px;
   color: #c0c0c0;
-  font-size: 12px;
+  font-size: 10px; /* Tom Nolane 12px */
   font-weight: 400;
   line-height: 20px;
   border-top: 1px solid #ffffff;
@@ -13138,7 +13138,7 @@ header .navbar-default {
 .ex-faq p {
   padding: 0;
   margin: 0;
-  font-size: 18px;
+  font-size: 18px; 
   font-weight: 400;
   line-height: 30px;
 }

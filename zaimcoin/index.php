@@ -4,7 +4,7 @@
         <div class="container">
             <h1 class="hidden-xs">Если деньги нужны срочно,<br>
                 есть проверенное и надежное решение</h1>
-            <h2>Zaimcoin - скорая фaнансовая помощь</h2>
+            <h2>Zaimcoin - скорая финансовая помощь</h2>
             <form id="anketa" action="/form" method="post">
             <input type="hidden" id="amount" name="amount" value="20000" />
             <input type="hidden" id="period" name="period" value="21" />
