@@ -5,7 +5,7 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
 echo '<footer class="ex-main-footer">
     <div class="container">
         <div class="ex-foot-logo text-center">
-            <a href="/"><img src="/templates/zaimcoin/assets/img/logo-footer.svg" alt="logo-footer.svg"></a>
+            <a href="/"><img src="/templates/zaimcoin/assets/img/logo-footer.png" alt="logo-footer.png"></a>
         </div>
         <div class="ex-foot-content text-center hidden-xs hidden-sm">
             <h4>Условия займа</h4>
@@ -125,7 +125,7 @@ else
             <div class="modal-body"> 
                 <div class="row">
                     <div class="col-xs-12">
-                        <form action="">
+                        <form>
                             <div class="form-group has-feedback">
                                 <label class="control-label" for="feedback-name">Имя</label>
                                 <div class="">
@@ -151,8 +151,7 @@ else
                                 <label class="control-label " for="feedback-comment">Текст сообщения</label>
                                 <div class="">
                                     <div class="ex-wrapper">
-                                        <textarea type="text" id="feedback-comment" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"
-                                    requiredplaceholder="Текст сообщения"></textarea>
+                                        <textarea  id="feedback-comment" placeholder="Текст вашего сообщения" title="Текст вашего сообщения" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -295,55 +294,7 @@ if($this->uri->segment(1) == 'form')
             $('#form_slrd').val(range.from);
         },
     }); 
-    }); 
-    
-    function setcookie(name, value, expires, path, domain, secure) {
-        document.cookie = name + "=" + escape(value) +
-            ((expires) ? "; expires=" + (new Date(expires)) : "") +
-            ((path) ? "; path=" + path : "; path=/") +
-            ((domain) ? "; domain=" + domain : "") +
-            ((secure) ? "; secure" : "");
-    }
-
-    function traffic(site, page) {
-        $.ajax({
-            type: 'POST',
-            url: '/traffic/',
-            data: 'site=' + site + '&page=' + page,
-            success: function (data) {
-                //console.log(data);
-            }
-        });
-    }
-    jQuery.fn.swap = function(b) {
-    b = jQuery(b)[0];
-    var a = this[0],
-        a2 = a.cloneNode(true),
-        b2 = b.cloneNode(true),
-        stack = this;
-
-    a.parentNode.replaceChild(b2, a);
-    b.parentNode.replaceChild(a2, b);
-
-    stack[0] = a2;
-    return this.pushStack( stack );
-    }; 
-    var client_w = screen.width; 
-    var pathname = window.location.pathname,  substring = "index";
-        
-    if(pathname.indexOf(substring) !== -1)
-    {
-        if(Number(client_w) > 767)
-        {
-            document.getElementById( "specialFooter" ).style.display = "inline";  
-        }
-        else
-        {
-                document.getElementById( "specialFooter" ).style.display = "none"; 
-                $('#specialIndex').swap('#specialIndex2');
-                $('#ex-slider-val').css('margin-top','0');
-        }
-    }  
+});   
     function getcookie(name) {
         var cookie = " " + document.cookie;
         var search = " " + name + "=";
@@ -427,7 +378,39 @@ if($this->uri->segment(1) == 'form')
 <?php
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index')
 { 
-echo '<script src="/templates/zaimcoin/assets/js/loanCalculator.js?ver=1"></script>';
+echo '<script>jQuery.fn.swap = function(b) {
+    b = jQuery(b)[0];
+    var a = this[0],
+        a2 = a.cloneNode(true),
+        b2 = b.cloneNode(true),
+        stack = this;
+
+    a.parentNode.replaceChild(b2, a);
+    b.parentNode.replaceChild(a2, b);
+
+    stack[0] = a2;
+    return this.pushStack( stack );
+    }; 
+    var client_w = screen.width; 
+    var pathname = window.location.pathname,  substring = "/";
+        
+    if(pathname.indexOf(substring) !== -1)
+    {
+        if(Number(client_w) > 767)
+        {
+             document.getElementById( "specialFooter" ).style.display = "inline";  
+        }
+        else
+        {
+                document.getElementById( "specialFooter" ).style.display = "none"; 
+                $("#specialIndex").swap("#specialIndex2");
+                $("#ex-slider-val").css("margin-top","0");
+        }
+    }  </script>';
+
+
+
+echo '<script src="/templates/zaimcoin/assets/js/loanCalculator.js?ver=2"></script>';
 echo "<script>$(document).ready(function () {
     var slider3 = $('#rangeSlider').data('ionRangeSlider');
 
@@ -555,7 +538,7 @@ if ($this->uri->segment(1) == 'form')
                                 <div class="modal-body text-center">
                                         <div class="row">
                                                 <div class="col-md-12">
-                                                    <img src="/templates/common/img/popup.jpg">                                             
+                                                    <img src="templates/common/img/popup.jpg" alt="popup.jpg">                                             
                                                     <h2>'.$popup_text.'</h2>
                                                     <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
                                                 </div>
@@ -588,11 +571,9 @@ if(isset($_GET['email']))
     echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
 }
 ?>
-<!-- всплывающее окошко -->
-<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46652025 = new Ya.Metrika({ id:46652025, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/46652025" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
-<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46652922 = new Ya.Metrika({ id:46652922, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/46652922" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<!-- всплывающее окошко --> 
 <?php
- //require 'yandexmetrika.php';
+ require 'yandexmetrika.php';
  require 'googleanalytics.php';
 ?>
 <script>
