@@ -10,15 +10,15 @@ if(!isset($description))
 <head>
     <meta charset="UTF-8">
     <title><?php echo $my_title;?></title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <!-- <meta http-equiv="Content-Type" content="text/html" /> -->
 	<meta name="Description" content="<?php echo $description;?>" />
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="Zaimcoin.ru" />
-    <meta http-equiv="cleartype" content="on" />
+    <!-- <meta http-equiv="cleartype" content="on" /> -->
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/templates/zaimcoin/favicon/57x57.png">
@@ -38,6 +38,7 @@ if(!isset($description))
     <meta name="theme-color" content="#ffffff"> 
 
     <!-- CSS -->
+    <link href="/modules/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="/templates/zaimcoin/assets/css/style.css">
     <link rel="stylesheet" href="/modules/jquery-ui/1.10.4/css/smoothness/jquery-ui-1.10.4.custom.min.css" type="text/css">
 
@@ -47,7 +48,7 @@ if(!isset($description))
         }
     ?> 
     <link rel="stylesheet" href="/templates/zaimcoin/assets/css/suggestions.min.css" type="text/css" />
-    <link rel="stylesheet" href="/modules/poshytip-1.2/src/tip-twitter/tip-twitter.css" type="text/css">
+    <link rel="stylesheet" href="/templates/zaimcoin/assets/css/tip-twitter.css" type="text/css">
     <style>
         #special_footer, .special_forms {
             cursor:pointer !important;
@@ -88,7 +89,7 @@ if(!isset($description))
 </head>
 <body>
 <header>
-    <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header">
+    <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header" style="z-index: 777 !important;">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -98,7 +99,7 @@ if(!isset($description))
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/" class="navbar-brand">
-                    <img src="/templates/zaimcoin/assets/img/logo.svg" alt="logo.svg">
+                    <img src="templates/zaimcoin/assets/img/logo.png" alt="logo.png">
                 </a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse">
@@ -122,8 +123,7 @@ if(!isset($description))
                         </ul>
                     </li>
                     <li><a href="/faq">FAQ</a></li>
-                    <li class="ex-hes-border "><a href="#" data-toggle="modal" data-target="#helpModal">СВЯЗАТЬСЯ С
-                        НАМИ</a></li>
+                    <li class="ex-hes-border "><a href="#" data-toggle="modal" data-target="#helpModal">СВЯЗАТЬСЯ С НАМИ</a></li>
                 </ul>
             </div>
         </div>

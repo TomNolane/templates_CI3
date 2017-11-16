@@ -2,8 +2,7 @@
 <main>
     <section class="ex-main">
         <div class="container">
-            <h1 class="hidden-xs">Если деньги нужны срочно,<br>
-                есть проверенное и надежное решение</h1>
+            <h1 class="hidden-xs">Если деньги нужны срочно,<br> есть проверенное и надежное решение</h1>
             <h2>Zaimcoin - скорая финансовая помощь</h2>
             <form id="anketa" action="/form" method="post">
             <input type="hidden" id="amount" name="amount" value="20000" />
@@ -57,9 +56,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-4 ex-for-button text-center"> 
-                        <a  onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>"><input class="ex-orange-btn" type="button" value="Получить деньги"></a>
-                        <!-- <a class="btn ex-orange-btn" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>"></a> -->
+                    <div class="col-md-4 ex-for-button text-center" style=" margin-top: 20px;"> 
+                        <a class="ex-orange-btn" style="cursor: pointer;" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">&nbsp;&nbsp;&nbsp;Получить деньги&nbsp;&nbsp;&nbsp;</a> 
                     </div>
                 </div>
             </div>
