@@ -32,7 +32,7 @@
                                     data-validation-allowing="range[1;999999]" data-validation-error-msg="Пожалуйста, введите номер паспорта"
                                     required>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@
                         <div class="col-md-6 col-sm-12">
                             <div class="form-group has-feedback">
                                 <label class="label-required" for="passportdate" style="font-size: 10px;">Дата выдачи паспорта</label>
-                                <input  style="padding: 15px 5px 15px 5px !important;" type="text" class="form-control ec tip" name="passportdate" id="passportdate"
+                                <input style="padding: 15px 5px 15px 5px !important;" type="text" class="form-control ec tip" name="passportdate" id="passportdate"
                                     placeholder="Дата выдачи паспорта" title="Пожалуйста, выберете дату выдачи паспорта" data-validation="custom"
                                     data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Дата выдачи паспорта"
                                     required>
@@ -63,7 +63,7 @@
                         <!-- Скрываем старую форму даты выдачи -->
                         <div class="form-group" style="display: none;">
                             <label class="label-required hidden-xs">Дата выдачи*</label>
-                            <div class="col-sm-2"> 
+                            <div class="col-sm-2">
                                 <select class="form-control ec" id="passport_dd" name="passport_dd" required>
                                     <option value="0">День</option>
                                     <?php
@@ -159,45 +159,45 @@
                     </div>
                 </div>
             </div>
-            <div class="row"> 
-                        <div class="col-sm-6">
-                            <div class="form-group has-feedback">
-                                <label class="label-required" for="street">Улица</label>
-                                <input type="text" class="form-control ec tip" name="street" id="street" placeholder="Улица" title="Пожалуйста, укажите название улицы"
-                                    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
-                                    data-validation-error-msg="Укажите улицу" required>
-                                <span id="streetstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group has-feedback">
-                                <label class="label-required" for="building">№ дома</label>
-                                <input type="text" class="form-control ec tip" name="building" id="building" placeholder="№ дома" title="Укажите № дома"
-                                    data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите № дома"
-                                    required>
-                                <span id="buildingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            </div>
-                        </div>  
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group has-feedback">
+                        <label class="label-required" for="street">Улица</label>
+                        <input type="text" class="form-control ec tip" name="street" id="street" placeholder="Улица" title="Пожалуйста, укажите название улицы"
+                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
+                            data-validation-error-msg="Укажите улицу" required>
+                        <span id="streetstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                    </div>
                 </div>
-                <div class="row"> 
-                        <div class="col-sm-6">
-                            <div class="form-group has-feedback">
-                                <label for="housing">Строение</label>
-                                <input type="text" class="form-control ec tip" name="housing" placeholder="Строение/корпус" title="Пожалуйста, укажите номер корпуса или строения"
-                                    id="housing" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$"
-                                    data-validation-error-msg="Укажите строение/корпус" data-validation-optional="true">
-                                <span id="housingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group has-feedback">
-                                <label for="flat">№ квартиры</label>
-                                <input type="text" class="form-control ec tip" name="flat" placeholder="Квартира" title="Пожалуйста, укажите номер квартиры"
-                                    id="flat" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, номер квартиры"
-                                    data-validation-optional="true">
-                                <span id="flatstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            </div>
-                        </div>  
+                <div class="col-sm-6">
+                    <div class="form-group has-feedback">
+                        <label class="label-required" for="building">№ дома</label>
+                        <input type="text" class="form-control ec tip" name="building" id="building" placeholder="№ дома" title="Укажите № дома"
+                            data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите № дома"
+                            required>
+                        <span id="buildingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group has-feedback">
+                        <label for="housing">Строение</label>
+                        <input type="text" class="form-control ec tip" name="housing" placeholder="Строение/корпус" title="Пожалуйста, укажите номер корпуса или строения"
+                            id="housing" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите строение/корпус"
+                            data-validation-optional="true">
+                        <span id="housingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group has-feedback">
+                        <label for="flat">№ квартиры</label>
+                        <input type="text" class="form-control ec tip" name="flat" placeholder="Квартира" title="Пожалуйста, укажите номер квартиры"
+                            id="flat" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, номер квартиры"
+                            data-validation-optional="true">
+                        <span id="flatstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
@@ -212,122 +212,30 @@
                 </div>
             </div>
 
-            <div class="row">
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                    <div class="row">
-                                        <label class="col-sm-9 label-required" for="">
-                                            Регистрация совпадает с местом жительства
-                                        </label>
-                                        <div class="col-sm-3">
-                                            <div class="row ">
-                                                <div class="col-xs-6">
-                                                    <input type="radio" class="reg_same ec" name="reg_same" value="1"
-                                                           required checked="checked">
-                                                    <label id="asd"> Да</label>
-                                                </div>
-                                                <div class="col-xs-6">
-                                                    <input type="radio" class="reg_same ec" name="reg_same" value="0"
-                                                           required>
-                                                    <label id="asd"> Нет</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-            <!-- <div class="row">
-                <div class="col-sm-12"> 
-                    <fieldset id="reg_same" style="display:none;">
-                        <div class="form-group">
-                            <label class="col-sm-9 label-required">
-                                 Регистрация совпадает с местом жительства 
+            <div class="row hidden">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <div class="row">
+                            <label class="col-sm-9 label-required" for="">
+                                Регистрация совпадает с местом жительства
                             </label>
                             <div class="col-sm-3">
-                                <div class="pull-right">
-                                    <label  >
-                                        <input  type="radio" class="reg_same ec" name="reg_same" value="1" required checked="checked"> Да</label>
-                                    <label   >
-                                        <input  type="radio" class="reg_same ec" name="reg_same" value="0" required> Нет</label>
-                                </div>
-                            </div> 
-                        </div>
-                    </fieldset>
-                </div>
-            </div> -->
-
-            <div class="row">
-                <div class="col-md-12">
-                    <fieldset id="reg_address" style="display:none;">
-                        <div class="form-group" style="margin-top: 40px;">
-                            <label class="control-label col-md-4 label-required ">Регион*</label>
-                            <div class="col-md-8">
-                                <select style="margin-bottom: 20px; padding: 5px 15px 5px 15px;" class="form-control ec" id="reg_region" name="reg_region" id="reg_region" autocomplete="off">
-                                    <option value="0">Регион</option>
-                                    <?php
-                            if (isset($regions) && is_array($regions))
-                            {
-                                foreach($regions as $region)
-                                echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
-                            }
-                            ?>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-md-4 label-required ">Населённый пункт*</label>
-                            <div class="col-md-8">
-                                <div class="ex-wrapper">
-                                    <input type="text" class="form-control ec" name="reg_city" id="reg_city" title="Населённый пункт" value="<?php echo isset($city_name)? $city_name : ''; ?>">
+                                <div class="row ">
+                                    <div class="col-xs-6">
+                                        <input type="radio" class="reg_same ec" name="reg_same" value="1" required checked="checked">
+                                        <label id="asd"> Да</label>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input type="radio" class="reg_same ec" name="reg_same" value="0" required>
+                                        <label id="asd"> Нет</label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label class="control-label col-md-4 label-required ">Улица*</label>
-                            <div class="col-md-8">
-                                <div class="ex-wrapper">
-                                    <input type="text" class="form-control ec" name="reg_street" id="reg_street">
-                                </div>
-                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-md-4 label-required ">Номер дома*</label>
-                            <div class="col-md-8">
-                                <div class="ex-wrapper">
-                                    <input type="text" class="form-control ec" name="reg_building" id="reg_building" title="Дом">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group" style="display:none;">
-                            <label class="control-label col-md-4">Строение</label>
-                            <div class="col-md-8">
-                                <div class="ex-wrapper">
-                                    <input type="text" class="form-control ec" name="reg_housing" id="reg_housing">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-md-4">Квартира</label>
-                            <div class="col-md-8">
-                                <div class="ex-wrapper">
-                                    <input type="text" class="form-control ec" name="reg_flat" id="reg_flat">
-                                </div>
-                            </div>
-                        </div>
-
-                    </fieldset>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -336,7 +244,7 @@
         <div class="col-sm-8 col-sm-offset-2 text-right">
             <div class="row">
                 <div class="col-sm-8"></div>
-                <div class="col-sm-4"> 
+                <div class="col-sm-4">
                     <input type="button" class="ex-main-btn" value="Далее" id="next2">
                 </div>
             </div>

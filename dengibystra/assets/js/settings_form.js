@@ -486,14 +486,14 @@ $(document).ready(function () {
         setcookies();
     });
 
-    $('#getMoney').click(function () {
+    $('#getmoney').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');                       
             //$('#form-modal').show();
             send_form(true, '/lk');
             markTarget('form-step-3');
 
-            //window.location = '/thanks';
+            window.location = '/lk';
         }
         showBzzz = false;
         setcookies();

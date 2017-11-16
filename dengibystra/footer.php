@@ -69,8 +69,7 @@ echo '<footer class="ex-start-footer">
 }
 else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'spasibo' )
 {
-    echo ' 
-    <footer class="ex-footer">
+    echo '<footer class="ex-footer">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
