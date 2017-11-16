@@ -13,6 +13,19 @@
                 </div>
             </div>
         </div>
+        <div class="form-group hidden">
+            <label class="col-sm-4 control-label label-required hidden-xs">Серия и номер паспорта</label>
+            <div class="col-sm-4">
+                <input type="tel" class="form-control ec" id="passport-s" name="passport_s" placeholder="0000" title="Серия паспорта" data-validation="number"
+                    data-validation-allowing="range[1;9999]" data-validation-error-msg="Пожалуйста, введите серию паспорта"
+                    required>
+            </div>
+            <div class="col-sm-4">
+                <input type="tel" class="form-control ec" id="passport-n" name="passport_n" placeholder="000000" title="Номер паспорта" data-validation="number"
+                    data-validation-allowing="range[1;999999]" data-validation-error-msg="Пожалуйста, введите номер паспорта"
+                    required>
+            </div>
+        </div>
         <div class="form-group has-feedback ex-error">
             <label class="control-label col-md-2" for="dateOf">Дата выдачи</label>
             <div class="col-md-8">

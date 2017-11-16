@@ -121,14 +121,12 @@
                         </div> 
                 </div>
             </div>
-
         </div>
     </div> 
 <div class="ex-anketa-foot">
     <div class="row">
-        <div class="col-sm-8 col-sm-offset-2 text-right">
-            <!-- <button class="ex-main-btn">Получить заем</button> -->
-            <button type="submit" class="ex-main-btn" id="getMoney" style="width: 100%;text-transform: uppercase;">получить займ</button>
+        <div class="col-sm-8 col-sm-offset-2 text-right"> 
+            <button type="submit" class="ex-main-btn" id="getmoney" style="width: 100%;text-transform: uppercase;">получить займ</button>
         </div>
     </div>
 </div>

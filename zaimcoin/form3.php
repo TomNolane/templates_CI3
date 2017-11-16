@@ -129,7 +129,7 @@
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-right"> 
-                <a  id="getMoney" onClick=""><input class="ex-blue-btn" type="button" value="Получить заём"></a> 
+                <a  id="getmoney" onClick=""><input class="ex-blue-btn" type="button" value="Получить заём"></a> 
             </div>
         </div>
 

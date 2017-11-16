@@ -5,7 +5,7 @@ if(!isset($my_title))
 if(!isset($description))
 	$description = 'Zaimcoin - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!';
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">

@@ -131,8 +131,7 @@ include "header.php";
 </style>
 
 <div class="container ex-form">
-    <h1 class="text-center" id="to_scroll">Заполните анкету</h1> 
-    <!-- START FORM --- -->
+    <h1 class="text-center" id="to_scroll">Заполните анкету</h1>  
         <form class="tab-content" id="anketa" action="/lk" method="post" onsubmit="return validate();" autocomplete="off">
             <div role="tabpanel" class="ex-anketa1-block tab-pane fade in active col-xs-12" id="firstTabContent">
                 <?php require 'form1.php'; ?>
@@ -153,7 +152,7 @@ include "header.php";
         <div class="row">
             <div class="col-xs-12">
                 <div class="text-center">
-                    <a href=""><img src="templates/dengibystra/assets/img/logo-2.svg" alt=""></a>
+                    <a href="/"><img src="/templates/dengibystra/assets/img/logo-2.svg" alt="logo-2.svg"></a>
                     <p>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
                         <a href="mailto:support@dengibystra.ru" target="_blank">support@dengibystra.ru</a></p>
                 </div>

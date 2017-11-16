@@ -97,7 +97,7 @@ else
     echo '<footer class="ex-main-footer-bg">
     <div class="container">
         <div class="ex-foot-logo text-center">
-            <a href="/"><img src="/templates/zaimcoin/assets/img/logo-footer.svg" alt="logo-footer.svg"></a>
+            <a href="/"><img src="/templates/zaimcoin/assets/img/logo-footer.png" alt="logo-footer.png"></a>
         </div>
 
         <p>Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург,
@@ -180,9 +180,9 @@ else
 <![endif]-->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 <script type="text/javascript" src="/templates/zaimcoin/assets/js/jquery.suggestions.min.js"></script> 
-<script src="/templates/zaimcoin/assets/js/coockie.js?ver=1"></script>
-<script src="/templates/zaimcoin/assets/js/settings_main.js?ver=2"></script>
-<script src="/templates/zaimcoin/assets/js/custom.js?ver=1"></script>
+<script src="/templates/zaimcoin/assets/js/coockie.js"></script>
+<script src="/templates/zaimcoin/assets/js/settings_main.js"></script>
+<script src="/templates/zaimcoin/assets/js/custom.js"></script>
 <script src="/templates/zaimcoin/assets/js/ion.rangeSlider.min.js"></script>
 
 <?php 
@@ -392,25 +392,23 @@ echo '<script>jQuery.fn.swap = function(b) {
     return this.pushStack( stack );
     }; 
     var client_w = screen.width; 
-    var pathname = window.location.pathname,  substring = "/";
+    var pathname = window.location.pathname,  substring = "sdf";
         
     if(pathname.indexOf(substring) !== -1)
     {
         if(Number(client_w) > 767)
         {
-             document.getElementById( "specialFooter" ).style.display = "inline";  
+             //document.getElementById( "specialFooter" ).style.display = "inline";  
         }
         else
         {
-                document.getElementById( "specialFooter" ).style.display = "none"; 
-                $("#specialIndex").swap("#specialIndex2");
-                $("#ex-slider-val").css("margin-top","0");
+                //document.getElementById( "specialFooter" ).style.display = "none"; 
+                //$("#specialIndex").swap("#specialIndex2");
+                //$("#ex-slider-val").css("margin-top","0");
         }
     }  </script>';
 
-
-
-echo '<script src="/templates/zaimcoin/assets/js/loanCalculator.js?ver=2"></script>';
+echo '<script src="/templates/zaimcoin/assets/js/loanCalculator.js"></script>';
 echo "<script>$(document).ready(function () {
     var slider3 = $('#rangeSlider').data('ionRangeSlider');
 

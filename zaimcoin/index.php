@@ -1,4 +1,4 @@
-<?php include_once 'header.php';?>
+<?php include 'header.php';?>
 <main>
     <section class="ex-main">
         <div class="container">
@@ -19,7 +19,7 @@
                                     <input type="text" id="rangeSlider" name="rangeSlider" value="0"/>
                                 </figure>
                                 <div class="ex-slider-info">
-                                    <span>1 000</span> 
+                                    <span>1 000</span>  
                                     <span>100 000</span>
                                 </div>
                             </div>
@@ -145,4 +145,4 @@
         </div>
     </section>
 </main>
-<?php include_once 'footer.php';?>
+<?php include 'footer.php';?>
