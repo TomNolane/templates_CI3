@@ -71,16 +71,13 @@
                     <label for="gender0"> Женский </label>
                 </div>
             </div>
-        </div>
-            
+        </div>  
         <div class="form-group has-feedback">
             <label class="control-label col-md-2" for="birthdate">Дата рождения</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
-                    <input type="text" class="form-control ec tip special_form" name="birthdate" id="birthdate" placeholder="День рождения" title="Пожалуйста, выберете свою дату рождения"
-                    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения"
-                    required>
-                    <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> 
+                    <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Пожалуйста, выберете свою дату рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения" required>
+                    <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
             </div>
         </div>
@@ -121,7 +118,7 @@
             <div class="col-md-8 col-md-offset-2 ex-agreement-check">
                 <label class="checkbox-inline">
                     <span>Я согласен на обработку персональных данных и с публичной офертой</span>
-                    <input type="checkbox" onClick="checkMe();" id="agree" value="1" checked>
+                    <input type="checkbox" onClick="checkme_form();" id="agree" value="1" checked>
                     <i></i>
                 </label>
                 <label id="display-none">
@@ -131,11 +128,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-right">
-                <!-- <button id="submitOne" type="submit" class="ex-blue-btn" data-target="#secondTabContent" aria-controls="secondTabContent"
-                    data-toggle="tab">Далее
-                </button> -->
-                <a class="ex-blue-btn text-center special_forms" id="next1">Далее <i class="fa fa-caret-right"></i></a>
+            <div class="col-md-8 col-md-offset-2 text-right"> 
+            <button class="ex-blue-btn special_forms" id="next1"> Далее </button>
+                <!-- <a class="btn ex-blue-btn text-center special_forms" id="next1">Далее <i class="fa fa-caret-right"></i></a> -->
             </div>
         </div>
     </div>

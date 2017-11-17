@@ -1,7 +1,6 @@
-$(document).ready(function () {
-    var url_string = window.location.href;
-    var url = new URL(url_string);
-    var c = url.searchParams.get("amount");
+$(document).ready(function () { 
+    var c = getParameterByName('amount');
+    console.log(c); 
     var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());
     if (c != null) {
         if (c > 100000 || c < 1000) {
@@ -9,7 +8,7 @@ $(document).ready(function () {
         }
         gg = c;
     } 
-    var currentLoanSize = gg,
+    var currentLoanSize = gg;
         range = $("#rangeSlider"),
         commissionPercantage = 13,
         rangeUpperValue = $('#ex-slider-val'),
@@ -102,3 +101,12 @@ $(document).ready(function () {
         setDynamicTimePeriod();
     });
 });
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}

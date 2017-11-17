@@ -2911,6 +2911,9 @@ header .navbar-default{background-color:#fff !important;}
 .ex-calc-block{ display:inline-grid;width:100%;}
 }
 @media (max-width:767px){.ex-main .ex-calc-wraper .ex-val-block{padding:5px 30px;}
+.ex-faq h1 {padding-top: 20px !important;/*Tom Nolane*/font-size: 22px !important;/*Tom Nolane*/}
+.ex-all-articles .ex-articles-block {margin-top: 20px !important;/*Tom Nolane*/;}
+.ex-article .ex-date-news {padding: 23px 0 26px 0 !important;/*Tom Nolane*/;}
 }
 .ex-main .ex-calc-wraper .ex-tab-section{margin-top:17px;margin-bottom:129px;}
 .ex-main .ex-calc-wraper .ex-tab-section .ex-calc-block{font-size:0;padding:0;margin:0;}
@@ -2959,6 +2962,7 @@ header .navbar-default{background-color:#fff !important;}
 .ex-main-footer p{padding-top:0px;}
 .ex-main h2{text-align:center;color:#ffffff;font-size:30px;font-weight:600;line-height:30px;margin:20px 0;}
 }
+#spec_form{margin-bottom:-100px !important;}/* Tom Nolane */
 @media (max-width:767px){.ex-main .ex-calc-wraper .ex-range-scope #ex-main-slider-range{padding:0;}
 #spec_form{margin-bottom:-100px;}
 }
@@ -3109,7 +3113,7 @@ header .navbar-default{background-color:#fff !important;}
 .ex-faq p:last-child{padding-bottom:72px;}
 .ex-spasibo{padding-bottom:10px;}/* Tom Nolane 80px */
 .ex-spasibo h1{margin-top:36px;text-align:center;font-size:36px;font-weight:900;line-height:48px;margin-bottom:80px;}
-@media (max-width:414px){.ex-spasibo h1{font-size:17px;margin-top:30px;margin-bottom:20px;}
+@media (max-width:414px){.ex-spasibo h1{font-size:15px/*Tom Nolane 17px*/;margin-top:30px;margin-bottom:20px;line-height: 16px/*Tom Nolane*/;}
 }
 .ex-spasibo table{border-collapse:separate;border-spacing:0;width:100%;
 /* table-layout:fixed; */
@@ -3148,3 +3152,4 @@ width:80%;white-space:nowrap;font-weight:600;text-overflow:ellipsis;overflow:hid
 #ex-slider-val{white-space:nowrap;margin-top:20px;text-align:center;}
 }
 .spec_active{border-bottom:4px solid #5e00ff;color:#354052 !important;}
+.special_forms{margin-bottom: 20px !important;margin-top: 20px !important;}

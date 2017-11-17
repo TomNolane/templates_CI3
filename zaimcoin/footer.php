@@ -476,8 +476,22 @@ echo "<script async>$(document).ready(function () {
 });</script>";
 }
 elseif($this->uri->segment(1) == 'lk')
-{
+{ 
     echo '<script>
+    var client_w = screen.width; 
+    var pathname = window.location.pathname, substring4 = "lk";
+        
+    if(pathname.indexOf(substring4) !== -1)
+    {
+        if(Number(client_w) > 767)
+        { 
+            document.getElementById( "sp_footer2" ).style.display = "inline";
+        } 
+        else
+        { 
+            document.getElementById( "sp_footer2" ).style.display = "none";
+        }
+    }
     var offers = '.json_encode($data).'
     var by_reg = null;
     $(document).ready(function () {

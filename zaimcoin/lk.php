@@ -22,7 +22,7 @@ $this->load->model('pixel/pixel_model', 'pixel');
 $pixel = $this->pixel->stat('zaimcoin.ru');
 ?>
 <div class="container ex-spasibo">
-            <h1>Вам автоматически одобрен займ<br>
+            <h1>Вам автоматически одобрен займ 
                 в следующих организациях:</h1>
             <table class="hidden-xs hidden-sm">
                 <thead><tr>
@@ -80,11 +80,9 @@ $pixel = $this->pixel->stat('zaimcoin.ru');
                                 </tr>  
                                 <tr>
                                     <td>  
-                                            <div style="margin: 0 30px;"> <span class="table_text">&emsp;&emsp;&emsp;Прооцентная ставка</span><span class="table_text2 text-right"> от '.$item["percent"].'%&emsp;&emsp;&emsp;</span>  </div>  
-                                            <br>
-                                            <div style="margin: 0 30px;"><span class="table_text text-left">&emsp;&emsp;&emsp;Максимальная сумма</span><span class="table_text2 text-right"> '.$item["amount"].' рублей&emsp;&emsp;&emsp;</span></div> 
-                                            <br>
-                                            <div style="margin: 0 30px;"><span class="table_text text-left">&emsp;&emsp;&emsp;Максимальный срок</span><span class="table_text2 text-right"> '.$item["period"].' дней&emsp;&emsp;&emsp;</span></div> 
+                                            <div> Прооцентная ставка от '.$item["percent"].'% </div>
+                                            <div> Максимальная сумма '.$item["amount"].' рублей </div>
+                                            <div> Максимальный срок  '.$item["period"].' дней </div>
                                     </td>
                                 </tr>
                                 <tr>
