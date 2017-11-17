@@ -9,12 +9,12 @@
         </div>
 </div>
 <div class="form-group has-feedback has-success hidden-xs">
-            <label class="col-sm-4 control-label label-required hidden-xs">Сумма</label>
-            <div class="col-sm-8 col-xs-12">
-                <div class="form-slider green irs2">
-                    <input type="text" class="amount2" name="amount" value="<?php if(empty($_POST['amount'])){if(empty($_GET['amount'])){echo'6000';}else{echo $_GET['amount'];}}else{echo $_POST['amount'];} ?>" />
-                </div>
-            </div>    
+	<label class="col-sm-4 control-label label-required hidden-xs">Сумма</label>
+	<div class="col-sm-8 col-xs-12">
+		<div class="form-slider green irs2">
+			<input type="text" class="amount2" name="amount" value="<?php if(empty($_POST['amount'])){if(empty($_GET['amount'])){echo'6000';}else{echo $_GET['amount'];}}else{echo $_POST['amount'];} ?>" />
+		</div>
+	</div> 
 </div>
 <div class="form-group has-feedback has-success hidden-xs">
             <label class="col-sm-4 control-label label-required hidden-xs">Срок</label>

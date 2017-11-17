@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 <title>Dengoman.ru</title>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="IE=Edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html" />
+<!-- <meta http-equiv="Content-Type" content="text/html" /> -->
 <meta name="Description" content="Dengoman — сервис срочных онлайм заемов"/>
 <meta name="Keywords" content="срочный заем, займы, онлайн, деньги"/>
 <meta name="robots" content="none"/> 
-<meta name="copyright" lang="en" content="Dengoman.ru" />
-<meta http-equiv="cleartype" content="on" /> 
+<meta name="copyright" lang="ru" content="Dengoman.ru" />
+<!-- <meta http-equiv="cleartype" content="on" />  -->
 <link rel="shortcut icon" type="image/png" href="/templates/dengoman/img/favicon.png" />
 
 <link href="/modules/jquery.ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" media="screen">
@@ -74,7 +74,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="/"><img alt="" src="/templates/dengoman/img/logo.png"></a>
+			<a class="navbar-brand" href="/"><img alt="logo.png" src="/templates/dengoman/img/logo.png"></a>
 			
 			<button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
 				<span class="sr-only">Раскрыть меню</span>
@@ -84,7 +84,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="collapse navbar-collapse" id="navbar-collapse-1">
 			<ul class="nav navbar-nav menu">
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Займы</a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Займы <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="/info/#card">На банковскую карту</a></li>
 						<li><a href="/info/#qiwi">На QIWI-кошелёк</a></li>
@@ -93,7 +93,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</ul>
 				</li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Сервис</a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Сервис <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="/about">О нас</a></li>
 						<li><a href="/faq">Вопрос-ответ</a></li>
@@ -101,9 +101,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</ul>
 				</li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Документы</a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Документы <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="/docs/#agree">Пользовательское соглашение</a></li>
+						<!-- <li><a href="/docs/#agree">Пользовательское соглашение</a></li> -->
 						<li><a href="/docs/#rules">Правила предоставления займов</a></li>
 						<li><a href="/docs/#personal">Согласие на обработку данных</a></li>
 						<li><a href="/docs/#oferta">Публичная оферта</a></li>
@@ -113,8 +113,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <li class="visible-xs-block">
                                     <?php if ($this->input->cookie('lk')) { ?>
                                     <a href="/lk" class="navbar-btn hidden-xs">
-                                            <span class="visible-sm visible-md">Получить займ</span>
-                                            <span class="hidden-sm hidden-md"><span class="f ec"></span> <span class="i ec"></span> <span class="o ec"></span></span>
+										<span class="visible-sm visible-md">Получить займ</span>
+										<span class="hidden-sm hidden-md"><span class="f ec"></span> <span class="i ec"></span> <span class="o ec"></span></span>
                                     </a>
                                     <?php } else { ?>
                                     <a href="/form" class="navbar-btn">Получить займ</a>
