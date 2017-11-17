@@ -24,7 +24,7 @@ $pixel = $this->pixel->stat('zaimcoin.ru');
 <div class="container ex-spasibo">
             <h1>Вам автоматически одобрен займ<br>
                 в следующих организациях:</h1>
-            <table>
+            <table class="hidden-xs hidden-sm">
                 <thead><tr>
                 <th scope="col">МФО</th>
                 <th scope="col">Процентная ставка</th>
@@ -41,7 +41,7 @@ $pixel = $this->pixel->stat('zaimcoin.ru');
                         $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
                         $item['link'] = str_replace("#site", $domen, $item['link']);
 
-                    echo ' <tr>
+                    echo '<tr>
                                 <td data-label="МФО"><div><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><img class="img-responsive  lk-img '.$item['title'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'""></a></div></td>
                                 <td data-label="Процентная ставка"><div>от '.$item['percent'].'%</div></td>
                                 <td data-label="Максимальный срок"><div> до '.$item['period'].' дней </div></td>
@@ -49,8 +49,47 @@ $pixel = $this->pixel->stat('zaimcoin.ru');
                                 <td data-label=""><div>
                                 <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" class="ex-orange-btn" target="_blank">Получить деньги</a>
                                 </div></td>
-                            </tr> '; 
+                            </tr>';  
                     }
+                ?>
+                </tbody>
+            </table>
+            <table class="hidden-md hidden-lg">
+                <!-- <thead><tr>
+                <th scope="col">МФО</th>
+                <th scope="col">Процентная ставка</th>
+                <th scope="col">Максимальный срок</th>
+                <th scope="col">Максимальная сумма</th>
+                <th scope="col"></th>
+                </tr>
+                </thead> -->
+                <tbody>
+
+                <?php 
+                    foreach($data as $item)
+                    {
+                        $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
+                        $item['link'] = str_replace("#site", $domen, $item['link']);
+
+            echo '
+                            <tr> 
+                                <td><center> <a   href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
+                                <img src="/templates/common/img/offers/'.$item['img'].'.png" class="'.$item['img'].'" alt="'.$item['title'].'">
+                            </a></center></td>
+                                     
+                                </tr>  
+                                <tr>
+                                    <td>  
+                                            <div style="margin: 0 30px;"> <span class="table_text">&emsp;&emsp;&emsp;Прооцентная ставка</span><span class="table_text2 text-right"> от '.$item["percent"].'%&emsp;&emsp;&emsp;</span>  </div>  
+                                            <br>
+                                            <div style="margin: 0 30px;"><span class="table_text text-left">&emsp;&emsp;&emsp;Максимальная сумма</span><span class="table_text2 text-right"> '.$item["amount"].' рублей&emsp;&emsp;&emsp;</span></div> 
+                                            <br>
+                                            <div style="margin: 0 30px;"><span class="table_text text-left">&emsp;&emsp;&emsp;Максимальный срок</span><span class="table_text2 text-right"> '.$item["period"].' дней&emsp;&emsp;&emsp;</span></div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                <td><a style="color: #000000" href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')"   target="_blank"><button class="ex-orange-btn">Получить деньги</button></a></td>
+                                </tr>';}
                 ?>
                 </tbody>
             </table>

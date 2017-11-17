@@ -75,7 +75,13 @@ if(!isset($description))
 
     <!-- Adsense -->
     <?php if ($this->uri->segment(1) != 'form') {
-        require 'templates/common/googlesyndication.php';
+        //require 'templates/common/googlesyndication.php';
+        echo '<script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-2044590115529379",
+            enable_page_level_ads: true
+        });
+    </script>';
     }?>
 
     <!-- Сендпульс Sendpulse --> 

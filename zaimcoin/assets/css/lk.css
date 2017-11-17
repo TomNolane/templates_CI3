@@ -23,17 +23,21 @@
   
     /* line 120, ../sass/desktop/_spasibo.scss */
     table tr {
-      border-bottom: 3px solid #ddd;
+      /* border-bottom: 3px solid #ddd; Tom Nolane */ 
       display: block;
-      margin-bottom: .625em;
+      margin-bottom: .625em; 
     }
-  
+    .ex-spasibo table tr td {
+      padding-top: 10px !important; /* Tom Nolane */
+      padding-bottom: 10px !important;/* Tom Nolane */
+    }
     /* line 125, ../sass/desktop/_spasibo.scss */
     table td {
       border-bottom: 1px solid #ddd;
       display: block;
       font-size: .8em;
       text-align: right;
+     
     }
   
     /* line 131, ../sass/desktop/_spasibo.scss */

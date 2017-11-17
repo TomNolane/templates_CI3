@@ -9,8 +9,8 @@ echo '<footer class="ex-start-footer">
         <div class="row">
             <div class="col-sm-5">
                 <div class="ex-footer-logo">
-                    <a href="#">
-                        <img src="templates/dengibystra/assets/img/logo-foot.svg" alt="">
+                    <a href="/">
+                        <img src="templates/dengibystra/assets/img/logo-foot.svg" alt="logo-foot.svg">
                     </a>
                 </div>
                 <p class="ex-text">

@@ -449,6 +449,23 @@ $(document).ready(function () {
     $('#next1').click(function () { 
         if (validate1()) { 
             $('input[name="step"]').val('1'); 
+
+            var client_w2 = screen.width; 
+            var pathname2 = window.location.pathname,  substring3 = "form";
+                
+            if(pathname2.indexOf(substring3) !== -1)
+            {
+                if(Number(client_w2) > 767)
+                {
+                    document.getElementById( "sp_footer1" ).style.display = "none"; 
+                    document.getElementById( "sp_footer2" ).style.display = "inline";  
+                }
+                else
+                {
+                    document.getElementById( "sp_footer1" ).style.display = "none"; 
+                    document.getElementById( "sp_footer2" ).style.display = "none";  
+                }
+            }   
             send_form(); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstTabContent').removeClass('in active');
