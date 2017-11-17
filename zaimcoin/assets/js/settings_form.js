@@ -174,8 +174,7 @@ function validate3() {
 	} else return true;
 	return false;
 } 
-$(document).ready(function () {
-    checkMe();
+$(document).ready(function () { 
     // $("#ex-slider-val").text(getcookie("sldr"));
     // $("#amount").val(getcookie("sldr")); 
     // $("#period").val(getcookie("per"));
@@ -457,12 +456,12 @@ $(document).ready(function () {
             {
                 if(Number(client_w2) > 767)
                 {
-                    document.getElementById( "sp_footer1" ).style.display = "none"; 
+                    //document.getElementById( "sp_footer1" ).style.display = "none"; 
                     document.getElementById( "sp_footer2" ).style.display = "inline";  
                 }
                 else
                 {
-                    document.getElementById( "sp_footer1" ).style.display = "none"; 
+                    //document.getElementById( "sp_footer1" ).style.display = "none"; 
                     document.getElementById( "sp_footer2" ).style.display = "none";  
                 }
             }   
