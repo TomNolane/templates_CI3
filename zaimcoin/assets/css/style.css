@@ -3107,26 +3107,30 @@ header .navbar-default{background-color:#fff !important;}
 .ex-faq h2{padding-top:56px;padding-bottom:10px;font-size:22px;font-weight:700;line-height:36px;margin:0;}
 .ex-faq p{padding:0;margin:0;font-size:18px;font-weight:400;line-height:30px;}
 .ex-faq p:last-child{padding-bottom:72px;}
-.ex-spasibo{padding-bottom:80px;}
+.ex-spasibo{padding-bottom:10px;}/* Tom Nolane 80px */
 .ex-spasibo h1{margin-top:36px;text-align:center;font-size:36px;font-weight:900;line-height:48px;margin-bottom:80px;}
 @media (max-width:414px){.ex-spasibo h1{font-size:17px;margin-top:30px;margin-bottom:20px;}
 }
-.ex-spasibo table{border-collapse:separate;border-spacing:0;width:100%;table-layout:fixed;}
+.ex-spasibo table{border-collapse:separate;border-spacing:0;width:100%;
+/* table-layout:fixed; */
+}
 .ex-spasibo table thead tr{background-color:#5c6be5;box-shadow:0 2px 3px rgba(66, 140, 225, 0.16);}
 .ex-spasibo table thead tr th{padding-top:14px;padding-bottom:13px;text-align:center;color:#ffffff;font-size:14px;font-weight:500;line-height:24px;}
 .ex-spasibo table thead tr th:last-child{border-top-right-radius:5px;border-bottom-right-radius:5px;}
 .ex-spasibo table thead tr th:first-child{border-top-left-radius:5px;border-bottom-left-radius:5px;}
 .ex-spasibo table tr:hover{box-shadow:0 2px 4px rgba(0, 0, 0, 0.18);border-radius:5px;cursor:pointer;}
 .ex-spasibo table tr:hover td{border-bottom:1px solid transparent;}
-.ex-spasibo table tr td{border-bottom:1px solid #c2c2c2;padding-top:25px;padding-bottom:19px;text-align:center;color:#333333;font-size:18px;font-weight:700;line-height:24px;}
-.ex-spasibo table tr td:first-child img{width:100%;max-width:100%;vertical-align:top;}
+.ex-spasibo table tr td{border-bottom:1px solid #c2c2c2;padding-top:25px;padding-bottom:35px;/*Tom Nolane 19px*/text-align:center;color:#333333;font-size:18px;font-weight:700;line-height:24px;}
+.ex-spasibo table tr td:first-child img{width:90%;max-width:90%;vertical-align:top;max-height: 70px;/* Tom Nolane */}
 @media (max-width:767px){.ex-spasibo table tr td:first-child img{width:80%;}
 }
 @media (max-width:768px){.ex-spasibo table tr td{font-size:12px;}
 }
 @media (max-width:414px){.ex-spasibo table tr td{font-size:13px;padding-left:15px;}
 }
-.ex-spasibo table tr td .ex-orange-btn{margin-top:0;margin-bottom:0;padding:12px 20px;width:80%;white-space:nowrap;font-weight:600;text-overflow:ellipsis;overflow:hidden;font-size:12px;}
+.ex-spasibo table tr td .ex-orange-btn{margin-top:0;margin-bottom:0;
+padding:20px; /* Tom Nolane 12px 20px; */
+width:80%;white-space:nowrap;font-weight:600;text-overflow:ellipsis;overflow:hidden;font-size:12px;}
 @media (max-width:768px){.ex-spasibo table tr td .ex-orange-btn{font-size:12px;width:100%;}
 }
 .form-group.has-feedback.has-success > div > div > input{border-color:#3c763d !important;color:#3c763d !important;}

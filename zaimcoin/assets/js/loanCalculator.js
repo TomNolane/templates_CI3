@@ -2,7 +2,6 @@ $(document).ready(function () {
     var url_string = window.location.href;
     var url = new URL(url_string);
     var c = url.searchParams.get("amount");
-    console.log(c);
     var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());
     if (c != null) {
         if (c > 100000 || c < 1000) {

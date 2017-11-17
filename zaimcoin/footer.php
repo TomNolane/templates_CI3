@@ -82,7 +82,7 @@ echo '<footer class="ex-main-footer">
             <div id="special_footer" class="ex-for-btn"><a onclick="goToUp(); return false;">ВЕРНУТЬСЯ В НАЧАЛО</a></div>
         </div>
         <p>Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург,
-            ул. Осипенко, 12, оф 201 | <a href="mailto:support@zaimcoin.ru" target="_blank">support@zaimcoin.ru</a> <span id="specialFooter">8 (960) 950 93.</span>
+            ул. Осипенко, 12, оф 201 | <a href="mailto:support@zaimcoin.ru" target="_blank">support@zaimcoin.ru</a> <span id="sp_footer1">8 (960) 950 93.</span>
             Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
             Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
             Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
@@ -102,12 +102,12 @@ else
 
         <p>Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург,
             ул. Осипенко, 12, оф 201 | support@zaimcoin.ru
-            Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
+            <span id="sp_footer2">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
             Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
             Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
             за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.
             Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения | ИП «Бабакова
-            К.К.»ОГРНИП 316222500122426 ИНН 222511216499</p>
+            К.К.»ОГРНИП 316222500122426 ИНН 222511216499</span></p>
     </div>
 </footer>';
 }
@@ -392,24 +392,38 @@ echo '<script>jQuery.fn.swap = function(b) {
     return this.pushStack( stack );
     }; 
     var client_w = screen.width; 
-    var pathname = window.location.pathname,  substring = "sdf";
+    var pathname = window.location.pathname,  substring = "/", substring2 = "index", substring4 = "lk";
         
-    if(pathname.indexOf(substring) !== -1)
+    if(pathname.indexOf(substring) !== -1 || pathname.indexOf(substring2) !== -1)
     {
         if(Number(client_w) > 767)
         {
-             //document.getElementById( "specialFooter" ).style.display = "inline";  
-        }
+             document.getElementById( "sp_footer1" ).style.display = "inline";  
+        } 
         else
         {
-                //document.getElementById( "specialFooter" ).style.display = "none"; 
-                //$("#specialIndex").swap("#specialIndex2");
-                //$("#ex-slider-val").css("margin-top","0");
+            document.getElementById( "sp_footer1" ).style.display = "none"; 
+            $("#specialIndex").swap("#specialIndex2");
+            $("#ex-slider-val").css("margin-top","0");
         }
-    }  </script>';
+    }
+    else if(pathname.indexOf(substring4) !== -1)
+    {
+        if(Number(client_w) > 767)
+        {
+            document.getElementById( "sp_footer1" ).style.display = "inline"; 
+            document.getElementById( "sp_footer2" ).style.display = "inline";
+        } 
+        else
+        {
+            document.getElementById( "sp_footer1" ).style.display = "none"; 
+            document.getElementById( "sp_footer2" ).style.display = "none";
+        }
+    }
+    </script>';
 
 echo '<script src="/templates/zaimcoin/assets/js/loanCalculator.js"></script>';
-echo "<script>$(document).ready(function () {
+echo "<script async>$(document).ready(function () {
     var slider3 = $('#rangeSlider').data('ionRangeSlider');
 
     var slider_plus = true;
@@ -600,5 +614,6 @@ function traffic(site, page){
     });    
 }
 </script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>
 </html>
