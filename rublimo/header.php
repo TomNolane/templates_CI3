@@ -1,4 +1,4 @@
-<?php 
+<?php  
 if(!isset($my_title)) 
 	$my_title = 'Срочные займы круглосуточно без проверок Онлайн';
 
@@ -20,6 +20,11 @@ if(!isset($description))
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="Rublimo.ru" /> 
+
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<!-- <meta http-equiv="Expires" content="0"> -->
+	<meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
 
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="Rublimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
@@ -79,9 +84,8 @@ if(!isset($description))
 	<noscript>
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZBK47T" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
-	<!-- End Google Tag Manager (noscript) -->
-	 
-		<div class="row"> 
+	<!-- End Google Tag Manager (noscript) --> 
+		<div classe="row"> 
 			<nav class="navbar">
 				<div class="col-md-12">
 					<div class="navbar-header">
@@ -157,7 +161,7 @@ if(!isset($description))
 					</div>
 				</div>
 			</nav> 
-		</div>  
+		</div>   
 	<!-- Modal -->
 	<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
 		<div class="modal-dialog" role="document">
