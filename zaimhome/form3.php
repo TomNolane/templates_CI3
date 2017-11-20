@@ -93,7 +93,7 @@
 <label class="control-label col-md-4 label-required">Улица</label>
 <div class="col-md-6">
     <div class="ex-wrapper">
-        <input type="text" class="form-control ec tip" name="work_street" placeholder="Улица" title="Пожалуйста, укажите улицу" id="work_street" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, улицу" required>
+        <input type="text" class="form-control ec tip" name="work_street" placeholder="Улица" title="Пожалуйста, укажите улицу" id="work_street" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Пожалуйста, укажите, улицу" required>
         <span id="work_streetstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
     </div>
 </div>

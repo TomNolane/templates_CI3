@@ -81,15 +81,15 @@
                 function update_offers() {
                     var str = ".results tbody tr";
                     //var curr = clone(by_reg.length? by_reg : offers);
-                    var ot_card = $(".offer-type[data-id="card"]").prop("checked");
-                    var ot_qiwi = $(".offer-type[data-id="qiwi"]").prop("checked");
-                    var ot_yandex = $(".offer-type[data-id="yandex"]").prop("checked");
-                    var ot_contact = $(".offer-type[data-id="contact"]").prop("checked");
+                    var ot_card = $(".offer-type[data-id=\"card\"]").prop("checked");
+                    var ot_qiwi = $(".offer-type[data-id=\"qiwi\"]").prop("checked");
+                    var ot_yandex = $(".offer-type[data-id=\"yandex\"]").prop("checked");
+                    var ot_contact = $(".offer-type[data-id=\"contact\"]").prop("checked");
                     // Прячем всё
                     $(str).hide();
                     // Пробегаемся по списку офферов
                     ((by_reg !== null)? by_reg : offers).forEach(function(offer, i){
-                        var $tr = $(str + "[data-id="" + offer.id + ""]");
+                        var $tr = $(str + "[data-id=\"" + offer.id + "\"]");
                         if ($tr.data("amount") >= amount){
                             if (ot_card && !!$tr.data("card") == ot_card) $tr.show();
                             else if (ot_qiwi && !!$tr.data("qiwi") == ot_qiwi) $tr.show();
@@ -134,7 +134,7 @@ echo '<script src="/modules/3dgallery/js/modernizr.custom.53451.js"></script>
 <script>
 	$(document).ready(function () {
         $("#dg-container").gallery();
-        traffic("rublimo.ru", "0");
+        //traffic("rublimo.ru", "0");
 	}); 
 </script>
 ';

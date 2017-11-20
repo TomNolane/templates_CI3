@@ -67,7 +67,7 @@
             </div>
             <div class="form-group has-feedback">
                 <input type="text" class="form-control ec tip" name="work_street" placeholder="Улица" title="Пожалуйста, укажите улицу" id="work_street"
-                    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, улицу"
+                    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Пожалуйста, укажите, улицу"
                     required>
                 <span id="work_streetstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>

@@ -91,7 +91,7 @@
                 <div class="col-sm-6"> 
                             <div class="form-group has-feedback">
                                 <label class="label-required" for="work_street">Улица</label>
-                                <input type="text" class="form-control ec tip" name="work_street" placeholder="Улица" title="Укажите улицу" id="work_street" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите улицу" required>
+                                <input type="text" class="form-control ec tip" name="work_street" placeholder="Улица" title="Укажите улицу" id="work_street" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Укажите улицу" required>
                                 <span id="work_streetstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 </div>
                         </div>

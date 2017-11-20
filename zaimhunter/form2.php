@@ -134,7 +134,7 @@
                         </div> 
 
                         <div class="row">
-                            <div class="col-xs-12">
+                            <div class="col-xs-12 hidden">
                                 <div class="form-group">
                                     <div class="row">
                                         <label class="col-sm-9 label-required" for="">
