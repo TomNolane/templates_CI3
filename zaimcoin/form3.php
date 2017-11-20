@@ -129,13 +129,13 @@
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-right"> 
-                <a  id="getmoney" onClick=""><input class="ex-blue-btn" type="button" value="Получить заём"></a> 
+                <a  id="getmoney"><input class="ex-blue-btn" type="button" value="Получить заём"></a> 
             </div>
         </div>
 
     </div>
 </div>
-<div class="ex-inf-anceta">
+<div class="ex-inf-anceta"
     <img src="/templates/zaimcoin/assets/img/icon-4.png" alt="icon-4.png">
     <p id="spec_form">Деньги ждут вас</p>
 </div>

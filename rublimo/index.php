@@ -1,5 +1,4 @@
 <?php require 'header.php'; ?>
-<!-- <div style="height: 27px;"></div> -->
 <section class="calc" id="calc">
 	<div class="container">
 		<div class="row">
@@ -383,7 +382,7 @@
 			<div class="row">
 				<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
 					<h3 id="font26">
-						<b>Кредит в течении 15 минут</b>
+						<b>Кредит в течение 15 минут</b>
 					</h3>
 				</div>
 			</div>
@@ -505,18 +504,5 @@
 	</div>
 </div>
 <link href="/modules/3dgallery/css/style.css" rel="stylesheet" media="screen">
-<script src="/modules/3dgallery/js/modernizr.custom.53451.js"></script>
-<script src="/modules/3dgallery/js/jquery.gallery.js"></script>
-
-<script>
-	$(document).ready(function () {
-		$('#dg-container').gallery();
-	});
-</script>
-<script>
-	$(document).ready(function () {
-		traffic('rublimo.ru', '0');
-	});
-</script>
 
 <?php require 'footer.php'; ?>

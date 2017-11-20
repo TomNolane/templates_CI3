@@ -329,7 +329,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 				</div>
 			</div>
 		</div>
-
+		<script src="/modules/jquery/jquery-1.11.3.min.js"></script>
 		<script src="/templates/rublimo/js/validate.min.js?ver=4"></script>
 		<script src="/modules/poshytip-1.2/src/jquery.poshytip.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>

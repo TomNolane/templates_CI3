@@ -71,6 +71,7 @@ a, a:hover, a:visited, a:focus{
     height:100%;
     max-height:73px;
     max-width:231px;
+    margin-left: 10px;
 }
 .navbar-nav > li > a{
     color:#444444;
@@ -96,7 +97,7 @@ a, a:hover, a:visited, a:focus{
     padding:8px 0;
 }
 .navbar .navbar-nav {
-  display: inline-block;
+  display: inline;
   float: none;
   vertical-align: top;
 }
@@ -142,8 +143,8 @@ a, a:hover, a:visited, a:focus{
 }
 
 .calc{
-    background:url(img/atmo.png) center bottom no-repeat;
-    height:745px; /* Tom Nolane 585px */
+    background:url(/templates/rublimo/img/atmo.png) center bottom no-repeat; /* Tom Nolane /templates/rublimo */
+    height:752px; /* Tom Nolane 585px */
 }
 .calc h1{
     color:#333;
@@ -385,7 +386,7 @@ a, a:hover, a:visited, a:focus{
 
 
 .rating{
-    background:#ffd25b url(img/rating-bg.png) top center repeat-y;
+    background:#ffd25b url(/templates/rublimo/img/rating-bg.png) top center repeat-y;
     height:555px;
 }
 .rating h2{
@@ -405,11 +406,11 @@ a, a:hover, a:visited, a:focus{
 
 
 .reviews{
-    background:#efefef url(img/reviews-bg.png) bottom center repeat-x;
+    background:#efefef url(/templates/rublimo/img/reviews-bg.png) bottom center repeat-x;
     height:790px;
 }
 .reviews .pattern{
-    background:url(img/reviews-pattern.png) bottom center repeat-x;
+    background:url(/templates/rublimo/img/reviews-pattern.png) bottom center repeat-x;
     height:790px;
     padding-bottom:145px;
 }
@@ -598,7 +599,7 @@ a, a:hover, a:visited, a:focus{
 }
 
 .history{
-    background:url(img/history/bg.png) center top no-repeat;
+    background:url(/templates/rublimo/img/history/bg.png) center top no-repeat;
 }
 .history .stepbox{
     background:#ffffff;
@@ -607,7 +608,7 @@ a, a:hover, a:visited, a:focus{
     text-align:center;
 }
 .history .stepbox .stepbox-head{
-    background:url(img/history/arrow.png) right center no-repeat;
+    background:url(/templates/rublimo/img/history/arrow.png) right center no-repeat;
     border-radius:10px;
     color:#ffffff;
     font-size:30px;
@@ -735,7 +736,7 @@ footer .copy{
     }
     .calc {
         background-position:79% 42%;
-        background-image:url(img/mobile/atmo.png);
+        background-image:url(/templates/rublimo/img/mobile/atmo.png);
         height:400px;
     }
     .calc h1 {
@@ -783,7 +784,7 @@ footer .copy{
     }
     .calc {
         background-position:79% 42%;
-        background-image:url(img/mobile/atmo.png);
+        background-image:url(/templates/rublimo/img/mobile/atmo.png);
         height:410px;
     }
     .calc h1 {
@@ -931,3 +932,69 @@ footer .copy{
 #loading {
     display:none;
 }
+.rectangl {
+    height: 200px;
+}
+.cd-container {
+    width: 90%;
+    max-width: 768px;
+    margin: 2em auto;
+  }
+  .cd-container::after {
+    /* clearfix */
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .cd-top {
+    z-index: 16;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: url(/templates/rublimo/img/cd-top-arrow.png) center 50% no-repeat rgb(113, 195, 134);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+  }
+  .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+  }
+  .cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+  }
+  .cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+  }
+  .no-touch .cd-top:hover {
+    background-color: #e86256;
+    opacity: 1;
+  }
+  @media only screen and (min-width: 768px) {
+    .cd-top {
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .cd-top {
+      height: 60px;
+      width: 60px;
+      right: 30px;
+      bottom: 30px;
+    }
+  }

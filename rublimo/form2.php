@@ -160,7 +160,7 @@
     </div>
 </div>
 
-<fieldset id="reg_same">
+<fieldset id="reg_same" class="hidden">
 <div class="form-group">
 	<label class="col-sm-9 control-label label-required"><b>Регистрация совпадает с местом жительства</b></label>
 	<div class="col-sm-3">

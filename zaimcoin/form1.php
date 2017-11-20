@@ -57,21 +57,8 @@
                     <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
             </div>
-        </div>
-
-        <div class="form-group has-feedback text-left hidden">
-            <label class="col-sm-4 control-label label-required hidden-xs">Пол</label>
-            <div class="col-sm-8 col-xs-12">
-                <div class="radio radio-info radio-inline">
-                    <input type="radio" id="gender1" value="1" name="gender" checked="checked" required>
-                    <label for="gender1"> Мужской </label>
-                </div>
-                <div class="radio radio-info radio-inline">
-                    <input type="radio" id="gender0" value="0" name="gender" required>
-                    <label for="gender0"> Женский </label>
-                </div>
-            </div>
-        </div>  
+         </div> 
+        <input type="hidden" id="gender" value="1" name="gender" required> 
         <div class="form-group has-feedback">
             <label class="control-label col-md-2" for="birthdate">Дата рождения</label>
             <div class="col-md-8">
@@ -129,8 +116,9 @@
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-right"> 
-            <button class="ex-blue-btn special_forms" id="next1"> Далее </button>
-                <!-- <a class="btn ex-blue-btn text-center special_forms" id="next1">Далее <i class="fa fa-caret-right"></i></a> -->
+                <a id="next1">
+                    <button class="ex-blue-btn special_forms"> Далее </button>
+                </a> 
             </div>
         </div>
     </div>
@@ -138,4 +126,4 @@
 <div class="ex-inf-anceta">
     <img src="/templates/zaimcoin/assets/img/doc.png" alt="doc.png">
     <p id="spec_form">Заполнение анкеты не обязывает вас взять займ. Вы сможете подтвердить его или отказаться от предложения</p>
-</div>
+</div> 

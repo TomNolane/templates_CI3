@@ -7,7 +7,7 @@ if(!isset($description))
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
 	<title>
@@ -15,13 +15,11 @@ if(!isset($description))
 	</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="IE=Edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="Content-Type" content="text/html" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
 	<meta name="Description" content="<?php echo $description;?>" />
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
-	<meta name="copyright" lang="ru" content="Rublimo.ru" />
-	<meta http-equiv="cleartype" content="on" />
+	<meta name="copyright" lang="ru" content="Rublimo.ru" /> 
 
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="Rublimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
@@ -37,13 +35,23 @@ if(!isset($description))
 	<meta name="twitter:domain" content="rublimo.ru"/>
 
 	<link rel="shortcut icon" type="image/png" href="/templates/rublimo/img/favicon.png" />
-	<link href="/modules/jquery.ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" media="screen" />
-	<link href="/modules/jquery.ion.rangeslider/css/ion.rangeSlider.skinHTML5.css" rel="stylesheet" media="screen" />
-	<link href="/modules/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen" />
-	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
-	<link href="/templates/rublimo/style.min.css" rel="stylesheet" media="screen" />
-
-	<script src="/modules/jquery/jquery-1.11.3.min.js"></script>
+	<?php 
+		echo '<style>';
+		require "templates/rublimo/css/ion.rangeSlider.css"; 
+		echo '</style>'; 
+		echo '<style>'; 
+		require "templates/rublimo/css/ion.rangeSlider.skinHTML5.css"; 
+		echo '</style>'; 
+		echo '<style>'; 
+		require "templates/rublimo/css/bootstrap.min.css"; 
+		echo '</style>'; 
+		echo '<style>'; 
+		require "templates/rublimo/css/font-awesome.min.css"; 
+		echo '</style>'; 
+		echo '<style>'; 
+		require "templates/rublimo/style.min.css"; 
+		echo '</style>'; 
+	?> 
 
 	<!--[if lte IE 9]>
 	<script src="/modules/html5shiv/html5shiv.js"></script>
@@ -72,7 +80,7 @@ if(!isset($description))
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZBK47T" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	<div class="container">
+	 
 		<div class="row"> 
 			<nav class="navbar">
 				<div class="col-md-12">
@@ -134,9 +142,9 @@ if(!isset($description))
 									<li>
 										<a rel="nofollow" href="/oferta" id="text-decoration">Публичная оферта</a>
 									</li>
-									<li>
+									<!-- <li>
 										<a rel="nofollow" href="/agree" id="text-decoration">Пользовательское соглашение</a>
-									</li>
+									</li> -->
 									<li>
 										<a rel="nofollow" href="/soglasie" id="text-decoration">Обработка данных</a>
 									</li>
@@ -149,8 +157,7 @@ if(!isset($description))
 					</div>
 				</div>
 			</nav> 
-		</div>
-	</div>
+		</div>  
 	<!-- Modal -->
 	<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
 		<div class="modal-dialog" role="document">

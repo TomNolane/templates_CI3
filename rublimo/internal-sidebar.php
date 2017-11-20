@@ -23,7 +23,7 @@ elseif ($this->uri->segment(1) == 'oferta' || $this->uri->segment(1) == 'agree' 
 
 <div class="docs-sidebar">
 	<a href="/oferta" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'oferta') echo ' active'; ?>">Публичная оферта</a>
-	<a href="/agree" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'agree') echo ' active'; ?>">Пользовательское соглашение</a>
+	<!-- <a href="/agree" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'agree') echo ' active'; ?>">Пользовательское соглашение</a> -->
 	<a href="/soglasie" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'soglasie') echo ' active'; ?>">Согласие на обработку данных</a>
 	<a href="/rules" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'rules') echo ' active'; ?>">Правила предоставления займов</a>
 </div>
@@ -32,15 +32,7 @@ elseif ($this->uri->segment(1) == 'oferta' || $this->uri->segment(1) == 'agree' 
 }
 elseif ($this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-yandex' || $this->uri->segment(1) == 'zaim-contact' || $this->uri->segment(1) == 'zaim-bank')
 {
-?>
-
-<!-- <div class="docs-sidebar">
-	<a href="/zaim-card" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'zaim-card') echo ' active'; ?>">Займ на банковскую карту</a>
-	<a href="/zaim-qiwi" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'zaim-qiwi') echo ' active'; ?>">Займ на QIWI кошелёк</a>
-	<a href="/zaim-yandex" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'zaim-yandex') echo ' active'; ?>">Займ на Яндекс.Деньги</a>
-	<a href="/zaim-contact" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'zaim-contact') echo ' active'; ?>">Займ через CONTACT</a>
-	<a href="/zaim-bank" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'zaim-bank') echo ' active'; ?>">Займ на банковский счёт</a>
-</div> -->
+?> 
 
 <?php
 }
