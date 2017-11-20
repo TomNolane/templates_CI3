@@ -1,3 +1,4 @@
+<a href="#0" class="cd-top">Наверх</a>
 <div class="buffer"></div>  
 <div id="ya-rtb">
     <div id="yandex_rtb_R-A-244327-2"></div>
@@ -29,10 +30,123 @@
     <div class="clearfix">&nbsp;</div>
 </footer>
 
+<?php
+		if ($this->uri->segment(1) != 'form') 
+		{
+			echo '<script src="/modules/jquery/jquery-1.11.3.min.js"></script>';
+        }
+        
+        if($this->uri->segment(1) == 'faq')
+        {
+            echo "<script>
+            $(document).ready(function(){
+              $('.panel-title a').click(function(){
+                $('.panel-heading').removeClass('green');
+                if ($(this).hasClass('collapsed')) $(this).parent().parent().addClass('green');
+              });
+            });
+            </script>";
+        }
+        elseif($this->uri->segment(1) == 'lk')
+        {
+            echo '<script>
+            var offers = '.json_encode($data).';
+            var by_reg = null;
+            $(document).ready(function(){
+                $("#region").change(function(){
+                    $.getJSON("/offers/by_region/" + $(this).val())
+                    .done(function(data){
+                        if (data.length) {
+                            by_reg = data;
+                            update_offers();
+                            /*$(".results tr").hide();
+                            data.forEach(function(index, offer){
+                                $(".results tr[data-id="" + offer.id + ""]").show();
+                            });*/
+                        }
+                        else
+                        {
+                            by_reg = null;
+                            $(".results tr").show();
+                        }
+                    })
+                    .fail(function(){$(".results tr").show();})
+                    .always(function(){/*Loading(0);*/});
+                });
+                
+                $(".offer-type").change(function(){
+                    update_offers();
+                });
+                
+                function update_offers() {
+                    var str = ".results tbody tr";
+                    //var curr = clone(by_reg.length? by_reg : offers);
+                    var ot_card = $(".offer-type[data-id="card"]").prop("checked");
+                    var ot_qiwi = $(".offer-type[data-id="qiwi"]").prop("checked");
+                    var ot_yandex = $(".offer-type[data-id="yandex"]").prop("checked");
+                    var ot_contact = $(".offer-type[data-id="contact"]").prop("checked");
+                    // Прячем всё
+                    $(str).hide();
+                    // Пробегаемся по списку офферов
+                    ((by_reg !== null)? by_reg : offers).forEach(function(offer, i){
+                        var $tr = $(str + "[data-id="" + offer.id + ""]");
+                        if ($tr.data("amount") >= amount){
+                            if (ot_card && !!$tr.data("card") == ot_card) $tr.show();
+                            else if (ot_qiwi && !!$tr.data("qiwi") == ot_qiwi) $tr.show();
+                            else if (ot_yandex && !!$tr.data("yandex") == ot_yandex) $tr.show();
+                            else if (ot_contact && !!$tr.data("contact") == ot_contact) $tr.show();
+                        }
+                    });
+                }
+            });
+            
+            function clone(o) {
+                if(!o || "object" !== typeof o) return o;
+                
+                var c = "function" === typeof o.pop ? [] : {};
+                var p, v;
+                for(p in o) {
+                    if(o.hasOwnProperty(p)) {
+                        v = o[p];
+                        if(v && "object" === typeof v) {
+                            c[p] = clone(v);
+                        }
+                        else {
+                            c[p] = v;
+                        }
+                    }
+                }
+                return c;
+            }
+            </script>';
+        }
+	?> 
+
 <script src="/modules/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="/modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js"></script>
-<script src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script> 
+
+<?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index') { 
+
+echo '<script src="/modules/3dgallery/js/modernizr.custom.53451.js"></script>
+<script src="/templates/rublimo/js/jquery.gallery.js"></script> 
+
 <script>
+	$(document).ready(function () {
+        $("#dg-container").gallery();
+        traffic("rublimo.ru", "0");
+	}); 
+</script>
+';
+} 
+?>
+
+
+<script>
+//backtotop
+jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});
+
+
     $('.amount2').ionRangeSlider({
         values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000,
             20000, 25000, 30000, 40000, 50000, 80000, 100000
@@ -290,8 +404,8 @@
         }
 
         $('.results tr').each(function (indx, element) {
-                    if ($(element).data('amount') < slider.result.from) $(element).hide();
-                    else $(element).show();
+            if ($(element).data('amount') < slider.result.from) $(element).hide();
+            else $(element).show();
         });
          
          $('.a').text(String(slider.result.from_value).split(/(?=(?:\d{3})+$)/).join(' ') + 'P');

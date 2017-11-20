@@ -75,22 +75,8 @@
                         <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     </div>
                 </div>
-            </div> 
-
-            <div class="form-group has-feedback text-left" style="display: none;">
-                <label class="col-sm-4 control-label label-required hidden-xs">Пол</label>
-                <div class="col-sm-8 col-xs-12">
-                    <div class="radio radio-info radio-inline">
-                        <input type="radio" id="gender1" value="1" name="gender" checked="checked" required>
-                        <label for="gender1"> Мужской </label>
-                    </div>
-                    <div class="radio radio-info radio-inline">
-                        <input type="radio" id="gender0" value="0" name="gender" required>
-                        <label for="gender0"> Женский </label>
-                    </div>
-                </div>
-            </div> 
-
+            </div>  
+            <input type="hidden" id="gender" value="1" name="gender" required> 
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">

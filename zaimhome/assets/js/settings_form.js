@@ -487,7 +487,7 @@ $(document).ready(function () {
         setcookies();
     });
 
-    $('#getMoney').click(function () {
+    $('#getmoney').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');                       
             //$('#form-modal').show();

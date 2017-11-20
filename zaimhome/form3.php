@@ -131,6 +131,6 @@
 
 <div class="form-group">
     <div class="col-md-6 col-md-offset-4">
-        <button type="submit" class="ex-main-btn" id="getMoney" style="width: 100%;text-transform: uppercase;">получить займ</button>
+        <button type="submit" class="ex-main-btn" id="getmoney" style="width: 100%;text-transform: uppercase;">получить займ</button>
     </div>
 </div> 

@@ -62,7 +62,7 @@
     </div>
 </div>
 
-<div class="form-group has-feedback text-left" style="display: none;">
+<!-- <div class="form-group has-feedback text-left" style="display: none;">
     <label class="col-sm-4 control-label label-required hidden-xs">Пол</label>
     <div class="col-sm-8 col-xs-12">
         <div class="radio radio-info radio-inline">
@@ -74,8 +74,8 @@
             <label for="gender0"> Женский </label>
         </div>
     </div>
-</div> 
-
+</div>  -->
+<input type="hidden" id="gender" value="1" name="gender" required> 
 <div class="form-group has-feedback">
     <label class="control-label col-md-4 label-required">Дата рождения</label>
     <div class="col-md-6">

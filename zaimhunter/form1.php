@@ -28,7 +28,7 @@
 			    <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div> 
 
-            <div class="form-group has-feedback text-left" style="display: none;">
+            <!-- <div class="form-group has-feedback text-left" style="display: none;">
                 <label class="col-sm-4 control-label label-required hidden-xs">Пол</label>
                 <div class="col-sm-8 col-xs-12">
                     <div class="radio radio-info radio-inline">
@@ -40,8 +40,8 @@
                         <label for="gender0"> Женский </label>
                     </div>
                 </div>
-            </div>
-
+            </div> -->
+            <input type="hidden" id="gender" value="1" name="gender" required> 
             <div class="form-group has-feedback ex-arrow-on">
                 <input type="text" class="form-control ec tip special_form" name="birthdate" id="birthdate" placeholder="День рождения" title="Пожалуйста, выберете свою дату рождения"
 			    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения"

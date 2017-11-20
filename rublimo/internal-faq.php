@@ -132,7 +132,7 @@
     </div>
     <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
       <div class="panel-body">
-        Да, Вы имете возможность подать заявку в нашей компании.
+        Да, Вы имеете возможность подать заявку в нашей компании.
       </div>
     </div>
   </div>
@@ -147,7 +147,7 @@
     </div>
     <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
       <div class="panel-body">
-        После вынесения решения по Вашей заявке Вам будет осуществлен звонок или выслано соответсвующее письмо на Вашу электоронную почту.
+        После вынесения решения по Вашей заявке Вам будет осуществлен звонок или выслано соответствующее письмо на Вашу электронную почту.
       </div>
     </div>
   </div>
@@ -168,11 +168,4 @@
   </div>
 </div>
 
-<script>
-$(document).ready(function(){
-  $('.panel-title a').click(function(){
-    $('.panel-heading').removeClass('green');
-    if ($(this).hasClass('collapsed')) $(this).parent().parent().addClass('green');
-  });
-});
-</script>
+ 
