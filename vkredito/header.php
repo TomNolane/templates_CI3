@@ -15,12 +15,25 @@
 
 <link rel="shortcut icon" type="image/png" href="/templates/vkredito/img/favicon.png" />
 
-<link href="/modules/jquery.ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" media="screen">
+<!-- <link href="/modules/jquery.ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" media="screen">
 
 <link href="/modules/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"> -->
 
-<link href="/templates/vkredito/style.css?ver=4" rel="stylesheet" media="screen">
+<?php
+	echo '<style>'; 
+	require "modules/jquery.ion.rangeslider/css/ion.rangeSlider.css"; 
+	echo '</style>';
+	echo '<link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">'; 
+	echo '<style>'; 
+	require "modules/bootstrap/3.3.6/css/bootstrap.min.css"; 
+	echo '</style>';
+	echo '<style>'; 
+	require "templates/vkredito/style.css"; 
+	echo '</style>';
+	
+?>
+<!-- <link href="/templates/vkredito/style.css?ver=4" rel="stylesheet" media="screen"> -->
 
 <script src="/modules/jquery/jquery-1.11.3.min.js"></script>
 <?php if ($this->uri->segment(1) != 'form') {
