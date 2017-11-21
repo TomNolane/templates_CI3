@@ -1,4 +1,9 @@
-<?php require 'header.php'; ?>
+<?php 
+if(!isset($my_title))
+{
+	$my_title = 'Заполните анкету!';
+}  
+require 'header.php'; ?>
 
 <link href="/templates/rublimo/css/form.min.css" rel="stylesheet" media="screen">
 <link href="/modules/jquery-ui/1.10.4/css/smoothness/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">

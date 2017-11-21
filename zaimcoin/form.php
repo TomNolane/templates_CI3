@@ -1,4 +1,8 @@
-<?php  
+<?php
+if(!isset($my_title))
+{
+    $my_title = 'Заполните анкету!';
+}  
 require 'header.php';
 // IP
 $this->load->helper('ip');

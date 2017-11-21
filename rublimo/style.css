@@ -241,7 +241,7 @@ a, a:hover, a:visited, a:focus{
     border-color:#dacd9b;
 }
 .green .irs-bar, .green .irs-bar-edge, .green .irs-slider{
-    background:#71c386;
+    background:#0db738;
     border-color:#82c995;
 }
 .red .irs-bar, .red .irs-bar-edge, .red .irs-slider{
@@ -1001,4 +1001,11 @@ footer .copy{
   .row {
     margin-right: 0px;  
      margin-left: 0px;
+}
+.ind_head {
+    padding-top: 168px;
+}
+.ind_spec2 {
+    border: 2px solid; 
+    background:#0db738;   
 }

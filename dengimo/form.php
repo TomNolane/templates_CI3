@@ -1,4 +1,9 @@
-<?php require 'header.php'; ?>
+<?php 
+if(!isset($my_title))
+{
+    $my_title = 'Заполните анкету!';
+}  
+require 'header.php'; ?>
 
 <link href="/templates/dengimo/css/form.css?ver=1" rel="stylesheet" media="screen">
 <link href="https://cdn.jsdelivr.net/jquery.suggestions/16.8/css/suggestions.css" type="text/css" rel="stylesheet" />

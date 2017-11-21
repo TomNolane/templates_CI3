@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-7 col-sm-offset-1 hidden-sm hidden-xs text-center">
-				<h1 style="padding-top: 160px;">
+				<h1 class="ind_head">
 					<span>Моментальные займы онлайн</span>
 				</h1>
 			</div>
@@ -92,7 +92,7 @@
 							</div>
 						</div>
 						<div class="shadow">
-							<button type="submit" class="btn">Оформить займ</button>
+							<button type="submit" class="btn ind_spec2">Оформить займ</button>
 						</div>
 					</form>
 				</div>

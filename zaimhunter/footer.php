@@ -571,8 +571,9 @@ function traffic(site, page){
 }
 </script>
 
-<?php require 'yandex_metrika.php'; ?>
-
-
+<?php 
+require 'yandex_metrika.php';
+require 'google_analytics.php';
+?>
 </body>
 </html>

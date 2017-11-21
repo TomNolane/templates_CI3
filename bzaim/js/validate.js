@@ -43,7 +43,7 @@ function validate1(){
 	else if ($('select[name="birth_mm"]').val().length != 2) {error('Вы не указали месяц рождения.'); return false;}
 	else if ($('select[name="birth_yyyy"]').val().length != 4) {error('Вы не указали год рождения.'); return false;}	
 */
-        else if ($('select[name="gender"]').val() != '0' && $('select[name="gender"]').val() != '1') {error('Вы не указали пол.'); return false;}
+	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {error('Вы не указали пол.'); return false;}
 	else if ($('input[name="phone"]').val().length != 16) {error('Номер телефона указан неверно.'); return false;}
 	else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {error('Email указан неверно.'); return false;}
 	else if (!$('#agree').prop('checked')) {error('Вы не подтвердили своё согласие с условиями сервиса.'); return false;}

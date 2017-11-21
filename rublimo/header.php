@@ -22,8 +22,7 @@ if(!isset($description))
 	<meta name="copyright" lang="ru" content="Rublimo.ru" /> 
 
 	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Cache-control" content="no-cache">
-	<!-- <meta http-equiv="Expires" content="0"> -->
+	<meta http-equiv="Cache-control" content="no-cache"> 
 	<meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
 
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
