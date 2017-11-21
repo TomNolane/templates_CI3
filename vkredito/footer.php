@@ -9,19 +9,19 @@
 <footer>
 <div class="container">
 	<div class="row">
-		<div class="col-md-2 col-sm-4 hidden-xs">
+		<div class="col-md-2 col-sm-4 col-xs-12">
 			<a href="/"><img src="/templates/vkredito/img/logo.png" class="logo"></a>
                 </div>
-                <div class="col-md-4 col-sm-4 hidden-xs">
+                <div class="col-md-4 col-sm-4 col-xs-12">
                         <div style="font-size: 11px;">
-                            <p>Сервис по подбору выгодных онлайн займов находящийся по адресу</p>
-                            <p>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201</p>
-                            <p>support@vkredito.ru 8 (960) 950 93 53</p>
+                            <p>Сервис по подбору выгодных онлайн займов находящийся по адресу
+                            <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
+                            <br>support@vkredito.ru <span class="hidden-xs hidden-sm">8 (960) 950 93 53</span></p>
                         </div>
                 </div>
-                <div class="col-md-6 col-sm-4 hidden-xs">
-                    <p style="font-size: 10px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.</p>                    
-                    <p class="gut" style="font-size: 10px;">ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499.</p>
+                <div class="col-md-6 hidden-xs hidden-sm">
+                    <p style="font-size: 10px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
+                    <br>ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499.</p>
                 </div>
 	</div>
 	
@@ -29,16 +29,27 @@
 </div>
 </footer>
 
-<script src="/modules/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<?php
+	echo '<script>'; 
+	require "modules/bootstrap/3.3.6/js/bootstrap.min.js"; 
+    echo '</script>';
+    echo '<script>'; 
+	require "modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js"; 
+    echo '</script>';
+    echo '<script>'; 
+	require "modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"; 
+    echo '</script>';
+?>
+<!-- <script src="/modules/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="/modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js"></script>
-<script src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script> -->
 <script charset="UTF-8" src="//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/e6b74be27c8e9745fa917326e851497b_1.js" async></script>
 <script>
 $('.docs, .info').click(function(){
     var href = $(this).attr("href");
     var hash = href.substr(href.indexOf("#"));
     $('.collapse').collapse('hide');
-    $(hash + '.collapse').collapse('show');    
+    $(hash + '.collapse').collapse('show');
     $('html, body').animate({scrollTop: $($(hash)).offset().top -100 }, 1000);
 });    
 function setcookie(name, value, expires, path, domain, secure)
@@ -104,39 +115,7 @@ $(document).ready(function(){
         $('input#work_experience').mask("n?nn", { "placeholder": "" });       
         $('input#flat').mask("n?***", { "placeholder": "" });
         $('input#building').mask("n?***", { "placeholder": "" });
-        $('input#work_house').mask("n?***", { "placeholder": "" });       
-	//$('.fancybox').fancybox();
-	/*
-	$('.ec').each(function(){
-		var variant = ($(this).context.tagName == 'SPAN')? $(this).context.classList[0] : $(this).attr('name');
-		var value = getcookie(variant);
-		if (value !== null) {
-			if ($(this).context.tagName == 'INPUT'){
-				if ($(this).context.type == 'radio' || $(this).context.type == 'checkbox'){
-					$(this).prop('checked', ($(this).val() == value));
-				}
-				else $(this).val(value);
-			}
-			else if ($(this).context.tagName == 'SELECT') $(this).find('option[value="' + value + '"]').attr('selected', true);
-			else if ($(this).context.tagName == 'SPAN'){
-				if (variant == 'reg_region' && value == '0') $(this).text('Совадает с адресом проживания');
-				else $(this).text(value);
-			}
-		}
-		//setcookie('lk', '1');
-	});
-	
-	
-	ec.get('lk', function(value){
-		var variants = ['f', 'i', 'o'];
-		if (typeof value != 'undefined' && !!value) {
-			variants.forEach(function(variant, id){
-				ec.get(variant, function(value){
-					if (typeof value != 'undefined') $('.' + variant).text(value);
-				});
-			});
-		}
-	});*/
+        $('input#work_house').mask("n?***", { "placeholder": "" });
 	
 	$('.amount').ionRangeSlider({
 		min: 1000,
@@ -200,7 +179,7 @@ $(document).ready(function(){
             }
         });        
 	<?php if ($this->uri->segment(1) == '') { ?>
-	var slider = $('.amount').data('ionRangeSlider');//console.log(slider);
+	var slider = $('.amount').data('ionRangeSlider');
 	var slider_plus = true;
 	var slider_intl = setInterval(function(){
 		var step = slider_plus? slider.options.from+slider.options.step : slider.options.from-slider.options.step;
