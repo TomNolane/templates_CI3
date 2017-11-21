@@ -27,14 +27,7 @@
     <input type="text" class="form-control ec tip" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое отчество" required>
     <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
-<input type="hidden" id="gender" name="gender" value="1">
-<div class="form-group text-left has-feedback" style="display: none;">
-    <label class="control-label label-required">Пол*</label>
-    <select class="form-control ec tip" name="gender" id="gender" required>
-        <option value="1" selected="selected">Мужской</option>
-        <option value="0">Женский</option>
-    </select>
-</div>
+<input type="hidden" id="gender" value="1" name="gender" required>
 <div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Дата рождения</label>
     <input type="text" class="form-control ec tip" name="birthdate" id="birthdate" placeholder="Дата рождения" title="Пожалуйста, выберете свою дату рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения" required>

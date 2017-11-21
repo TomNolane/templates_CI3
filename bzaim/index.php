@@ -1,24 +1,4 @@
 <?php require 'header.php'; ?>
-<style>
-    .index_special {
-        margin-top: -20px !important;
-    }
-
-    .index_specail2 {
-        padding-bottom: 80px;
-    }
-
-    .index_specail3 {
-        padding-bottom: 0px !important;
-    }
-
-    @media (min-width: 992px) and (max-width: 992px) {
-        .index_special {
-            margin-top: 0px !important;
-        }
-    }
-</style>
-
 <header class="index_specail2">
     <div class="container">
         <div class="row">
@@ -26,7 +6,7 @@
                 <div class="header-content">
                     <div class="header-content-inner index_special hidden-sm hidden-xs">
                         <h1 class="">Моментальные займы</h1>
-                        <h2 style="margin-top: -20px; margin-bottom: -20px;"> онлайн за 15 минут</h2>
+                        <h2 class="idnex_spec56"> онлайн за 15 минут</h2>
                     </div>
                     <div class="header-content-inner index_special2 hidden-md hidden-lg">
                         <h1>Моментальные займы</h1>
@@ -190,7 +170,7 @@
             <div class="col-xs-3">
                 <div class="white">
                     <p>
-                        <b>можно быть уверенным, что займ одобрят - решение по выдаче микрокредита в 97% положительное.</b>
+                        <b>можно быть уверенным, что займ одобрят - решение по выдаче микрокредита в 97% положительных.</b>
                     </p>
                 </div>
             </div>
@@ -392,10 +372,5 @@
             </div>
         </div>
     </div>
-</section>
-<script>
-    $(document).ready(function () {
-        traffic('bzaim5.ru', '0');
-    });
-</script>
+</section> 
 <?php require 'footer.php'; ?>
