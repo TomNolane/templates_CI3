@@ -1,41 +1,64 @@
+<?php  
+if(!isset($my_title)) 
+	$my_title = 'Срочные займы круглосуточно без проверок Онлайн';
+
+if(!isset($description))
+	$description = 'Vkredito - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории. Только у нас лучшие кредитные предложения!';
+?>
+
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-<title>Vkredito.ru</title>
+<title>
+<?php echo $my_title;?>
+</title>
 <meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="IE=Edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="x-ua-compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+<meta name="Description" content="<?php echo $description;?>" />
+<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
+<meta name="robots" content="all" />
+<meta name="copyright" lang="ru" content="Vkredito.ru" /> 
 
-<meta http-equiv="Content-Type" content="text/html" />
-<meta name="Description" content="Vkredito — лучших онлайн сервис в РФ по подбору займов"/>
-<meta name="Keywords" content="онлайн займ, займы, онлайн, деньги, заем"/>
-<meta name="robots" content="none"/> 
-<meta name="copyright" lang="en" content="Vkredito.ru" />
-<meta http-equiv="cleartype" content="on" /> 
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache"> 
+<meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
 
-<link rel="shortcut icon" type="image/png" href="/templates/vkredito/img/favicon.png" />
+<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
+<meta property="og:description" content="Vkredito - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
+<meta property="og:image" content="https://Vkredito.ru/templates/vkredito/img/bg.png"/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://Vkredito.ru/" />
 
-<!-- <link href="/modules/jquery.ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" media="screen">
+<meta name="twitter:card" content="https://Vkredito.ru/templates/vkredito/img/bg.png"/>
+<meta name="twitter:title" content="Срочные займы круглосуточно без проверок Онлайн"/>
+<meta name="twitter:description" content="Vkredito - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
+<meta name="twitter:image:src" content="https://Vkredito.ru/templates/vkredito/img/bg.png"/>
+<meta name="twitter:url" content="https://Vkredito.ru/"/>
+<meta name="twitter:domain" content="Vkredito.ru"/> 
 
-<link href="/modules/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"> -->
+<link rel="shortcut icon" type="image/png" href="/templates/vkredito/img/favicon.png" /> 
 
 <?php
-	echo '<style>'; 
-	require "modules/jquery.ion.rangeslider/css/ion.rangeSlider.css"; 
-	echo '</style>';
-	echo '<link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">'; 
-	echo '<style>'; 
-	require "modules/bootstrap/3.3.6/css/bootstrap.min.css"; 
+	// CSS
+	echo '<style>';
+	require "templates/vkredito/css/ion.rangeSlider.css"; 
 	echo '</style>';
 	echo '<style>'; 
+	require "templates/vkredito/css/font-awesome.min.css"; 
+	echo '</style>';
+	echo '<style>';
+	require "templates/vkredito/css/bootstrap.min.css"; 
+	echo '</style>';
+	echo '<style>';
 	require "templates/vkredito/style.css"; 
-	echo '</style>';
-	
-?>
-<!-- <link href="/templates/vkredito/style.css?ver=4" rel="stylesheet" media="screen"> -->
+	echo '</style>'; 
 
-<script src="/modules/jquery/jquery-1.11.3.min.js"></script>
+	// JS
+	echo '<script>'; 
+	require "modules/jquery/jquery-1.11.3.min.js"; 
+    echo '</script>'; 
+?>
 <?php if ($this->uri->segment(1) != 'form') {
     require 'templates/common/googlesyndication2.php';
 }?>
@@ -60,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
  ga('create', 'UA-45591397-16', 'auto', {'name': 'vteleport_ru', 'allowLinker':true});
  ga('vteleport_ru.require', 'linker');
- ga('vteleport_ru.linker:autoLink',['onezaim.com','onezaim.ru','manimo.su','manimo.ru','my-zaim.com','my-zaim.ru','upfinance.ru','ezaimo.net','ezaimo.ru','tratimo.ru','vivuso.ru','vspz.ru','zaim365.ru','zaimmigom.ru','optima-zaim.ru', 'safezaim.com', 'zaimsrazu.ru', 'zanimalov.ru', 'getzaim.su', 'gutfin.ru', 'zanimalo.ru', 'kredito24.su', 'kredito24-mail.ru', 'zaimo-mail.ru', 'zaimomail.ru', 'mail-kredito.ru', 'kreditomail.ru', 'mail-zaimo.ru', 'dengimo.ru', 'dengoman.ru', 'edenga.ru', ' rublimo.ru', 'vkredito.ru', 'bzaim5.ru', 'dengibystra.ru']);
+ ga('vteleport_ru.linker:autoLink',['onezaim.com','onezaim.ru','manimo.su','manimo.ru','my-zaim.com','my-zaim.ru','upfinance.ru','ezaimo.net','ezaimo.ru','tratimo.ru','vivuso.ru','vspz.ru','zaim365.ru','zaimmigom.ru','optima-zaim.ru', 'safezaim.com', 'zaimsrazu.ru', 'zanimalov.ru', 'getzaim.su', 'gutfin.ru', 'zanimalo.ru', 'kredito24.su', 'kredito24-mail.ru', 'zaimo-mail.ru', 'zaimomail.ru', 'mail-kredito.ru', 'kreditomail.ru', 'mail-zaimo.ru', 'dengimo.ru', 'dengoman.ru', 'edenga.ru', ' rublimo.ru', 'vkredito.ru', 'Vkredito.ru', 'dengibystra.ru']);
 
  ga(function() {
    var gaTracker = ga.getByName('vteleport_ru');
@@ -74,12 +97,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQ8TJJ9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQ8TJJ9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <div class="page">
-
 <nav class="navbar">
 	<div class="container">
 		<div class="navbar-header">

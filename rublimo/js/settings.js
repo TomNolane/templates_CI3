@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    
 function init($surname, $name, $patronymic) {
   var self = {};
   self.$surname = $surname;
@@ -68,19 +67,15 @@ $("#email").suggestions({
     modules : 'date,sanitize'
   });
   $('input').on('validation', function(evt, valid) {
-        if(valid){
-            // console.log($(this)[0].name);
-            if($(this)[0].name == 'birthdate' || $(this)[0].name == 'passportdate' || $(this)[0].name == 'passport_code' || $(this)[0].name == 'passport' || $(this)[0].name == 'passport_who' || $(this)[0].name == 'birthplace' || $(this)[0].name == 'city' || $(this)[0].name == 'street' || $(this)[0].name == 'building' || $(this)[0].name == 'work_experience' || $(this)[0].name == 'work_occupation' || $(this)[0].name == 'work_phone' || $(this)[0].name == 'work_salary' || $(this)[0].name == 'work_city' || $(this)[0].name == 'work_street' || $(this)[0].name == 'work_house')
+        if(valid){ 
+        if($(this)[0].name == 'birthdate' || $(this)[0].name == 'passportdate' || $(this)[0].name == 'passport_code' || $(this)[0].name == 'passport' || $(this)[0].name == 'passport_who' || $(this)[0].name == 'birthplace' || $(this)[0].name == 'city' || $(this)[0].name == 'street' || $(this)[0].name == 'building' || $(this)[0].name == 'work_experience' || $(this)[0].name == 'work_occupation' || $(this)[0].name == 'work_phone' || $(this)[0].name == 'work_salary' || $(this)[0].name == 'work_city' || $(this)[0].name == 'work_street' || $(this)[0].name == 'work_house')
             {
                 $(this).css('margin-bottom','0px');
             } 
-
             $(this).parent().prev().removeClass('label_er').addClass('label_true');
             $(this).removeClass('er');
             $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
-
         } else { 
-
             $(this).parent().prev().addClass('label_er').removeClass('label_true');
             $('#'+this.id+'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
             $(this).addClass('er');
@@ -92,45 +87,44 @@ $("#email").suggestions({
         }
   });
   $('#phone').blur(function(){
-    //console.log( $('#phone').val() );
     $.ajax({
 	type: 'POST',
 	url: '/validate/phone/',
 	data: 'phone='+$('#phone').val(),
-	success: function(data){          
+	success: function(data){
             validator = JSON.parse(data);
-            if(validator.status){
-                //console.log(validator.operator);
+            if(validator.status)
+            {
                 $('#phonestatus').removeClass('glyphicon-remove').removeClass('glyphicon-ok');
                 $('#phonestatus').html('<img src="/templates/common/img/mobile/'+validator.operator+'.png" width="24px" />');
                 $('#phonestatus').parent().parent().removeClass('has-error').addClass('has-success');
-                if(validator.operator == 'undefined'){
+                if(validator.operator == 'undefined')
+                {
                     $('#phonestatus').html('');
                     $('#phonestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok');
-                }                
-            }else{
-                //console.log('error');
+                }
+            }
+            else
+            {
                 $('#phonestatus').html('');
                 $('#phonestatus').removeClass('glyphicon-ok').addClass('glyphicon-remove');
                 $('#phonestatus').parent().parent().removeClass('has-success').addClass('has-error');
             }
-            
-        }    
-    });   
+        }
+    });
   });
   $('#passport_code').blur(function(){
     $.ajax({
 	type: 'POST',
 	url: '/validate/passport_code/',
 	data: 'passport_code='+$('#passport_code').val(),
-	success: function(data){
-            //console.log(data);    
+	success: function(data){ 
             validator = JSON.parse(data);
             if(validator.status){
                 $('#passport_who').val(validator.who);
             }else{
             }   
-        }    
+        }
     });   
   });    
   var lang=0;
@@ -141,7 +135,7 @@ $("#email").suggestions({
             var input = $(this),
             text = input.val().replace(/[^а-яёА-ЯЁ0-9-_\s]/g, "");
             //text = '';
-            input.val(text);         
+            input.val(text);
           if(lang==1){
               
               $(this).parent().addClass('has-error');

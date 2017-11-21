@@ -326,9 +326,8 @@ if(!isset($description))
     require "templates/bzaim/css/style.css"; 
     echo '</style>'; 
 
-
-    if ($this->uri->segment(1) == 'form') {
-
+    if ($this->uri->segment(1) == 'form') 
+    {
     echo '<style> 
     @media only screen and (min-width: 768px)  {
         .has-feedback label~.form-control-feedback {
