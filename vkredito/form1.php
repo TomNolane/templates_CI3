@@ -39,7 +39,7 @@
     <div class="form-group has-feedback">
             <label class="col-sm-4 control-label label-required hidden-xs">Дата рождения</label>
             <div class="col-sm-8 col-xs-12"><div class="shadow">
-                    <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Пожалуйста, выберете свою дату рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения" required>
+                <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Пожалуйста, выберете свою дату рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения" required>
                 <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div></div>
     </div>
