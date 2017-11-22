@@ -32,7 +32,7 @@ $pixel = $this->pixel->stat('bzaim5.ru');
                         echo '<h1 class="title" style="text-shadow: #fff 0 0 6px;"><span class="subtitle">Ваша подписка успешно активирована <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span><br/><span id="i"></span>, Вам автоматически одобрен займ в следующих организациях:</h1>';
                     }
                     else{
-                        echo'<h1 class="title" style="color: #000; text-shadow: #fff 0 0 6px;"><span id="i"></span>, Вам автоматически одобрен займ в следующих организациях:</h1>';
+                        echo'<h1 class="title" style="color: #000; text-shadow: #fff 0 0 6px;">Вам автоматически одобрен займ в следующих организациях:</h1>';
                     }
                 ?>
                             <?php
