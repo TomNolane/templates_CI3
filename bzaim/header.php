@@ -454,11 +454,47 @@ if(!isset($description))
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFB33N7" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <nav id="mainNav" class="navbar navbar-default">
+    
+
+    <nav class="navbar">
+	<div class="container">
+   
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/"><img alt="logo.png" src="/templates/bzaim/img/logo.png"></a>
+			
+			<button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Раскрыть меню</span>
+				<i class="glyphicon glyphicon-menu-hamburger"></i>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/form">Получить деньги</a>
+                </li>
+                <li>
+                    <a href="/about">О нас</a>
+                </li>
+                <li>
+                    <a href="/article">О займах</a>
+                </li>
+                <li>
+                    <a href="/faq">Вопрос-ответ</a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a>
+                </li>
+            </ul>
+        </div>
+        
+	</div>
+    </nav>
+
+
+    <!-- <nav id="mainNav" class="navbar navbar-default">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
-                    <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="col-sm-3"> 
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
@@ -469,8 +505,7 @@ if(!isset($description))
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-9">
-                    <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="col-sm-9"> 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li>
@@ -491,11 +526,9 @@ if(!isset($description))
                         </ul>
                     </div>
                 </div>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+            </div> 
+        </div> 
+    </nav> -->
     <!-- Modal -->
     <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
         <div class="modal-dialog" role="document">
