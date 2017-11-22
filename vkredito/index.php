@@ -93,10 +93,17 @@
         </div>
     </div>
 </section>
-
-<section class="about white hidden-xs">
+<div id="ya-rtb hidden-md hidden-lg">
+    <div id="yandex_rtb_R-A-249178-1"></div>
+    <div id="yandex_rtb_R-A-249178-2"></div>
+</div>
+<section class="about white hidden-xs hidden-sm">
     <div class="container">
         <div class="row">
+            <div id="ya-rtb">
+                <div id="yandex_rtb_R-A-249178-1"></div>
+                <div id="yandex_rtb_R-A-249178-2"></div>
+            </div>
             <div class="col-xs-12 text-center">
                 <h2>Срочные онлайн займы - мгновенное решение ваших проблем</h2>
                 <p>Хотите получить кредит здесь и сейчас? Нет времени ждать? Вам поможет сервис Vkredito. С нашей помощью вы
@@ -117,7 +124,7 @@
     </div>
 </section>
 
-<section class="advantage white">
+<section class="advantage white hidden-xs hidden-sm">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-center">

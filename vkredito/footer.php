@@ -1,9 +1,13 @@
 <div class="buffer"></div>
-<div id="ya-rtb">
-    <div id="yandex_rtb_R-A-249178-1"></div>
-    <div id="yandex_rtb_R-A-249178-2"></div>
-</div>
+<?php if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') 
+{
+    echo '<div id="ya-rtb">
+            <div id="yandex_rtb_R-A-249178-1"></div>
+            <div id="yandex_rtb_R-A-249178-2"></div>
+        </div>';
+}?>
 
+<a href="#0" class="cd-top">Наверх</a>
 <footer>
     <div class="container">
         <div class="row">
@@ -118,6 +122,22 @@
 <script charset="UTF-8" src="//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/e6b74be27c8e9745fa917326e851497b_1.js"
     async></script>
 <script>
+    //backtotop
+    jQuery(document).ready(function (o) {
+        var l = 300,
+            s = 1200,
+            c = 700,
+            d = o(".cd-top");
+        o(window).scroll(function () {
+            o(this).scrollTop() > l ? d.addClass("cd-is-visible") : d.removeClass(
+                "cd-is-visible cd-fade-out"), o(this).scrollTop() > s && d.addClass("cd-fade-out")
+        }), d.on("click", function (l) {
+            l.preventDefault(), o("body,html").animate({
+                scrollTop: 0
+            }, c)
+        })
+    });
+
     $('.docs, .info').click(function () {
         var href = $(this).attr("href");
         var hash = href.substr(href.indexOf("#"));
