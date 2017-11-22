@@ -109,7 +109,7 @@ span.green{
 <div class="container">
     <div class="row">
         <div class="col-xs-12 text-center">
-			<h1><span id="i">Прарарп</span>, Вам автоматически одобрен займ<br>в следующих организациях:</h1>
+			<h1>Вам автоматически одобрен займ<br>в следующих организациях:</h1>
 			<p>Вероятность забрать <span id="amount_lk" class="green">30000 рублей</span> сейчас  <span class="percent_top green"> 95%</span></p>
 		</div>
 	</div>

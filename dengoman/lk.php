@@ -26,7 +26,7 @@ $pixel = $this->pixel->stat('dengoman.ru');
 <link href="/templates/dengoman/css/lk.css" rel="stylesheet" media="screen">
     
 <div class="container lk">
-	<h1><span id="i"></span>, Вам автоматически одобрен займ в следующих организациях:</h1>
+	<h1>Вам автоматически одобрен займ в следующих организациях:</h1>
 	<div class="row">
             <div class="col-md-12">
                 <div class="text-center hidden-xs">

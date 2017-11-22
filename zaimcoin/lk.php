@@ -54,15 +54,7 @@ $pixel = $this->pixel->stat('zaimcoin.ru');
                 ?>
                 </tbody>
             </table>
-            <table class="hidden-md hidden-lg">
-                <!-- <thead><tr>
-                <th scope="col">МФО</th>
-                <th scope="col">Процентная ставка</th>
-                <th scope="col">Максимальный срок</th>
-                <th scope="col">Максимальная сумма</th>
-                <th scope="col"></th>
-                </tr>
-                </thead> -->
+            <table class="hidden-md hidden-lg"> 
                 <tbody>
 
                 <?php 
