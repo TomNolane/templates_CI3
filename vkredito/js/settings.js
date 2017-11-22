@@ -1,5 +1,16 @@
+$('#agree').change(function(){
+    if ($('#agree:checked').val() == '1')
+    {
+        $('#next').css('display','block');
+    }
+        
+    else
+    {
+        $('#next').css('display','none');
+    }
+       
+});
 $(document).ready(function(){
-    
 function init($surname, $name, $patronymic) {
   var self = {};
   self.$surname = $surname;
@@ -78,7 +89,7 @@ $("#email").suggestions({
     $('#phonestatus').html('');
     $.ajax({
 	type: 'POST',
-	url: 'https://vkredito.ru/validate/phone/',
+	url: '/validate/phone/',
 	data: 'phone='+$('#phone').val(),
 	success: function(data){          
             validator = JSON.parse(data);
@@ -104,7 +115,7 @@ $("#email").suggestions({
   $('#passport_code').blur(function(){
     $.ajax({
 	type: 'POST',
-	url: 'https://vkredito.ru/validate/passport_code/',
+	url: '/validate/passport_code/',
 	data: 'passport_code='+$('#passport_code').val(),
 	success: function(data){
             //console.log(data);    

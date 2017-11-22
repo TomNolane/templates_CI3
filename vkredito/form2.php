@@ -162,7 +162,7 @@
 	</div>
 </div>
 
-<fieldset id="reg_same" style="display:none;">
+<fieldset id="reg_same" class="hidden">
 <div class="form-group">
 	<label class="col-sm-9 control-label label-required"><b>Регистрация совпадает с местом жительства</b></label>
 	<div class="col-sm-3">

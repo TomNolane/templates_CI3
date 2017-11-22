@@ -12,33 +12,7 @@
             "type": "d",
             "name": "bzaim",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "form3.php",
-                    "size": 8400
-                },
-                {
-                    "type": "-",
-                    "name": "form2.php",
-                    "size": 12995
-                },
-                {
-                    "type": "-",
-                    "name": "footer.php",
-                    "size": 31145
-                },
-                {
-                    "type": "-",
-                    "name": "lk.php",
-                    "size": 5095
-                },
-                {
-                    "type": "-",
-                    "name": "form.php",
-                    "size": 14900
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",

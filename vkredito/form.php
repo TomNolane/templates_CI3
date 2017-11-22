@@ -90,7 +90,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 					<li role="presentation" class="disabled hidden-xs"><a href="#form3" id="step3">Работа</a></li>
 				</ul>
 
-			<div class="col-md-8 col-xs-12 text-center">
+			<div class="col-md-8 col-xs-12">
 				<form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
                                         <input type="hidden" name="referer" value="<?=$referer?>">
                                         <input type="hidden" name="id" value="">  
@@ -169,64 +169,5 @@ if(isset($_SERVER['HTTP_REFERER'])){
                         </div>
 		</div>
 	</div>
-</div>
-<script src="/templates/vkredito/js/validate.js?ver=2"></script>
-<script src="/modules/poshytip-1.2/src/jquery.poshytip.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-<script src="/modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js"></script>
-<!--[if lt IE 10]>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-<![endif]-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.suggestions/16.8/js/jquery.suggestions.min.js"></script>
-<script src="/templates/vkredito/js/settings.js?ver=2"></script>
-<script>
-    $(document).ready(function(){
-        traffic('vkredito.ru', '1');
-    });
-</script>        
-<?php require 'templates/common/js.php'; ?>
-<?php
-if(isset($_GET['popup']) and $_GET['popup']==1 ){
-    echo '    
-<!-- Modal Popup-->
-<div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                            <div class="modal-header text-center">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                            </div>
-                            <div class="modal-body text-center">
-                                    <div class="row">
-                                            <div class="col-md-12">
-                                                <img src="/templates/common/img/popup.jpg">                                             
-                                                <h2>'.$popup_text.'</h2>
-                                                <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                                            </div>
-                                    </div>
-                            </div>
-                    </div>
-            </div>
-</div>
-
-        <script type= " text/javascript">
-            $(window).load(function(){
-                $("#popup").modal("show");
-            });
-        </script>';
-}
-?>
-
-<?php
-if(isset($_GET['email'])){
-    //данные пользователя
-    $this->load->model('user/user_model', 'user');
-    $user_data = $this->user->get_user($_GET['email']);
-    $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
-    $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
-    foreach ($user_data as $name => $item){
-        echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
-    }
-    echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
-}
-?>
+</div> 
 <?php require 'footer.php'; ?>

@@ -104,7 +104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <nav class="navbar">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="/"><img alt="" src="/templates/vkredito/img/logo.png"></a>
+			<a class="navbar-brand" href="/"><img alt="logo.png" src="/templates/vkredito/img/logo.png"></a>
 			
 			<button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
 				<span class="sr-only">Раскрыть меню</span>
@@ -114,9 +114,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<div class="collapse navbar-collapse" id="navbar-collapse-1">
 			<ul class="nav navbar-nav menu">
 				<li><a href="/about">О проекте</a></li>
-                                <li><a href="/faq">Вопрос-ответ</a></li>
-				<li><a href="/<?php echo $this->input->cookie('lk')? 'lk' : 'form'; ?>">Забрать деньги</a></li>
-                                <li><a href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a></li>
+				<li><a href="/faq">Вопрос-ответ</a></li>
+				<li><a href="/form">Забрать деньги</a></li>
+				<li><a href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a></li>
 			</ul>
 		</div>
 	</div>
