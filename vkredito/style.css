@@ -156,7 +156,7 @@ footer .menu a{font-size:14px;font-family:'Myriad Pro';font-weight:400;line-heig
 .close-ribbon:before{content:"";font-size:0.5em;position:absolute;border-style:solid;border-color:transparent transparent #3F9E80 transparent;top:-1em;right:19px;border-width:0 0 1em 0.7em;z-index:-1;}
 .ribbon-prob{font-size:18px;position:inherit;right:-30px;}
 .lk-trigger{background-color:#fff;border-radius:10px;margin:20px 0;padding:10px 5px;}
-.btn-default{color:#ссс !important;background-color:#fff !important;border-color:#ccc !important;}
+.btn-default{color: #сссccc !important;background-color: #ffffff !important;border-color: #ccc !important;}
 .arrow-down p{color:#8e8e8e;}
 @media screen and (max-width:1200px){.contacts-item{height:450px;}
 .howto #video{max-width:402px;}
@@ -205,3 +205,66 @@ footer .social{width:30px;}
 }
 @media screen and (max-width:320px){.am{width:89.6%;}
 }
+.cd-container {
+    width: 90%;
+    max-width: 768px;
+    margin: 2em auto;
+  }
+  .cd-container::after {
+    /* clearfix */
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .cd-top {
+    z-index: 16;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: url(/templates/rublimo/img/cd-top-arrow.png) center 50% no-repeat rgb(113, 195, 134);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+  }
+  .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+  }
+  .cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+  }
+  .cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+  }
+  .no-touch .cd-top:hover {
+    background-color: #e86256;
+    opacity: 1;
+  }
+  @media only screen and (min-width: 768px) {
+    .cd-top {
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .cd-top {
+      height: 60px;
+      width: 60px;
+      right: 30px;
+      bottom: 30px;
+    }
+  }
