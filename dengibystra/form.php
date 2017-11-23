@@ -154,7 +154,7 @@ include "header.php";
                 <div class="text-center">
                     <a href="/"><img src="/templates/dengibystra/assets/img/logo-2.svg" alt="logo-2.svg"></a>
                     <p>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
-                        <a href="mailto:support@dengibystra.ru" target="_blank">support@dengibystra.ru</a></p>
+                    <a href="mailto:support@dengibystra.ru" target="_blank">support@dengibystra.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
                 </div>
             </div>
         </div>

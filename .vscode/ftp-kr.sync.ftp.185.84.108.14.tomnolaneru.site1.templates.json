@@ -4,11 +4,6 @@
     "size": 4096,
     "files": [
         {
-            "type": "-",
-            "name": ".htaccess",
-            "size": 1573
-        },
-        {
             "type": "d",
             "name": "bzaim",
             "size": 4096,
@@ -77,6 +72,12 @@
         {
             "type": "d",
             "name": "zaimhunter",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "zaimol",
             "size": 4096,
             "files": []
         }

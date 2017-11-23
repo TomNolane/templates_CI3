@@ -14,11 +14,11 @@
                     <img src="/templates/dengimo/img/logo-footer.png" class="logo">    
                 </a>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12  hidden-xs hidden-sm">
+            <div class="col-md-4 col-sm-4 col-xs-12">
                 <p class="footer-text">
                     Сервис по подбору выгодных онлайн займов находящийся по адресу:
                     Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
-                    <br/>email: <a href="mailto:support@dengimo.ru" target="_blank">support@dengimo.ru</a> 8 (960) 950 93 53
+                    <br/>email: <a href="mailto:support@dengimo.ru" target="_blank">support@dengimo.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
                 </p>
             </div>
             <div class="gut col-md-5 col-sm-5 col-xs-12  hidden-xs hidden-sm">
