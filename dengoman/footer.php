@@ -14,14 +14,14 @@
                         </h1>
                         <div class="footer-copyright"></div>
                     </div>
-                    <div class="col-md-3" >
+                    <div class="col-md-3 col-xs-12 col-sm-12" >
                         <div class="footer-text" style="font-size: 10px; line-height: 1;">
                             <p>Сервис по подбору выгодных онлайн займов находящийся по адресу </p> 
                             <p>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 </p> 
-                            <p>support@dengoman.ru 8 (960) 950 93 53</p>
+                            <p><a href="mailto:support@dengoman.ru">support@dengoman.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
                         </div>   
                     </div>      
-                    <div class="col-md-6">
+                    <div class="col-md-6 hidden-xs hidden-sm">
                         <p style="font-size: 9px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.</p>
                         <p class="gut" style="font-size: 10px;">ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499.</p>
                     </div>
@@ -119,40 +119,7 @@ $(document).ready(function(){
             $('input#work_experience').mask("n?nn", { "placeholder": "" });       
             $('input#flat').mask("n?***", { "placeholder": "" });
             $('input#building').mask("n?***", { "placeholder": "" });
-            $('input#work_house').mask("n?***", { "placeholder": "" });       
-	//$('.fancybox').fancybox();
-	/*
-	$('.ec').each(function(){
-		var variant = ($(this).context.tagName == 'SPAN')? $(this).context.classList[0] : $(this).attr('name');
-		var value = getcookie(variant);
-		if (value !== null) {
-			if ($(this).context.tagName == 'INPUT'){
-				if ($(this).context.type == 'radio' || $(this).context.type == 'checkbox'){
-					$(this).prop('checked', ($(this).val() == value));
-				}
-				else $(this).val(value);
-			}
-			else if ($(this).context.tagName == 'SELECT') $(this).find('option[value="' + value + '"]').attr('selected', true);
-			else if ($(this).context.tagName == 'SPAN'){
-				if (variant == 'reg_region' && value == '0') $(this).text('Совадает с адресом проживания');
-				else $(this).text(value);
-			}
-		}
-		//setcookie('lk', '1');
-	});
-	
-	
-	ec.get('lk', function(value){
-		var variants = ['f', 'i', 'o'];
-		if (typeof value != 'undefined' && !!value) {
-			variants.forEach(function(variant, id){
-				ec.get(variant, function(value){
-					if (typeof value != 'undefined') $('.' + variant).text(value);
-				});
-			});
-		}
-	});*/
-	
+            $('input#work_house').mask("n?***", { "placeholder": "" });
 	function Loading(flag){
 		if (typeof flag == 'undefined'){
                     document.getElementById('loading').style.display = 'block';
