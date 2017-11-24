@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic,cyrillic-ext');
+
+
+@font-face {
+  font-family: 'Terminal';
+  src: url('../fonts/Terminal.eot');
+  src: url('../fonts/Terminal.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Terminal.woff') format('woff'),
+  url('../fonts/Terminal.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}

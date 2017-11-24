@@ -16,9 +16,8 @@
                     </div>
                     <div class="col-md-3 col-xs-12 col-sm-12" >
                         <div class="footer-text" style="font-size: 10px; line-height: 1;">
-                            <p>Сервис по подбору выгодных онлайн займов находящийся по адресу </p> 
-                            <p>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 </p> 
-                            <p><a href="mailto:support@dengoman.ru">support@dengoman.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
+                            <p>Сервис по подбору выгодных онлайн займов находящийся по адресу <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
+							<br><a href="mailto:support@dengoman.ru">support@dengoman.ru</a> <span class="hidden-xs hidden-sm"> | +7(495) 006 19 61</span></p>
                         </div>   
                     </div>      
                     <div class="col-md-6 hidden-xs hidden-sm">

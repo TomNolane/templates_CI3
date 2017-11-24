@@ -951,6 +951,7 @@ footer .copy{
     display: inline-block;
     height: 40px;
     width: 40px;
+    border-radius: 15px;
     position: fixed;
     bottom: 40px;
     right: 10px;
@@ -1008,4 +1009,7 @@ footer .copy{
 .ind_spec2 {
     border: 2px solid; 
     background:#0db738;   
+}
+.special_news {
+    margin:30px;
 }

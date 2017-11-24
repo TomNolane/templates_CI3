@@ -154,7 +154,8 @@ body{webkit-tap-highlight-color:#222222;}
     overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
-    background: url(/templates/bzaim/img/cd-top-arrow.png) center 50% no-repeat rgb(92, 184, 92);
+    background: url(/templates/bzaim/img/cd-top-arrow.png) center 50% no-repeat rgb(69, 64, 64);
+    border-radius: 15px;
     visibility: hidden;
     opacity: 0;
     -webkit-transition: opacity .3s 0s, visibility 0s .3s;

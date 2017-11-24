@@ -62,6 +62,16 @@ switch($this->uri->segment(1))
 		$my_title = 'Основные Правила для Предоставления Срочных Займов'; 
 		$description = 'Онлайн сервис  RUBLIMO предоставления срочных займов и кредитов с самой низкой процентной ставкой предоставляет условия для получения займов';
 		break;
+	case 'news1': 
+		$my_title = 'Где взять займ на карту Сбербанка?'; 
+		$description = 'Сбербанк - самое популярное финучреждение у россиян. Обладателями его карт являются более 80% граждан РФ. Широкий спектр услуг и карточных продуктов Сбербанка в совокупности с его высоким уровнем надежности делают его таким распространенным.';
+		break;
+	case 'news2': 
+		$my_title = 'Как получить онлайн-кредит на кошелек Яндекс.Деньги?'; 
+		$description = 'Оформление займа на Яндекс.Кошелек - самый быстрый способ получить нужную сумму. Перевод осуществляется буквально в течение
+		2-3 минут, тогда как на банковскую карточку или другую электронную систему - часто сутки и более. Если вы не хотите тратить
+		ни секунды личного времени, такой вид займа для вас.';
+		break;
 	default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'Rublimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
 }
 
@@ -127,6 +137,18 @@ require 'header.php';
 		require 'internal-contacts.php';
 		require 'sidebar_end.php';
 	} 
+	elseif ($this->uri->segment(1) == 'news1')
+	{
+		require 'sidebar_start2.php';
+		require 'internal-news1.php'; 
+		require 'sidebar_end.php';
+	}
+	elseif ($this->uri->segment(1) == 'news2')
+	{
+		require 'sidebar_start2.php';
+		require 'internal-news2.php'; 
+		require 'sidebar_end.php';
+	}
 	elseif ($this->uri->segment(1) == 'zaim-card') { require 'sidebar_start.php'; require 'internal-zaim-card.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}
 	elseif ($this->uri->segment(1) == 'zaim-qiwi') { require 'sidebar_start.php'; require 'internal-zaim-qiwi.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}
 	elseif ($this->uri->segment(1) == 'zaim-yandex') { require 'sidebar_start.php'; require 'internal-zaim-yandex.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}

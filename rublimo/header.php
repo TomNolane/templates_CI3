@@ -128,7 +128,21 @@ if(!isset($description))
 								</ul>
 							</li>
 							<li>
-								<a rel="nofollow" id="text-decoration" href="/<?php echo $this->input->cookie('lk')? 'lk' : 'form'; ?>">Получить деньги</a>
+								<a rel="nofollow" id="text-decoration" href="/form">Получить деньги</a>
+							</li>
+							<li class="dropdown">
+								<a rel="nofollow" href="#" class="dropdown-toggle" data-toggle="dropdown" id="text-decoration">
+									Новости
+									<span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a rel="nofollow" href="/news1" id="text-decoration">Где взять займ на карту Сбербанка?</a>
+									</li>
+									<li>
+										<a rel="nofollow" href="/news2" id="text-decoration">Как получить кредит на Яндекс.Деньги?</a>
+									</li> 
+								</ul>
 							</li>
 							<li>
 								<a rel="nofollow" id="text-decoration" href="/faq">Вопросы-ответы</a>
