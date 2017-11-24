@@ -11487,7 +11487,7 @@ main.ex-main-counter .ex-draft .ex-wrapper p {
   -webkit-background-size: cover;
   background-size: cover;
   background-position: 50% 0;
-  padding-top: 70px;
+  padding-top: 10px; /* Tom Nolane 70 px*/
 }
 /* line 9, ../sass/desktop/_homepage.scss */
 .ex-section-1 h1 {

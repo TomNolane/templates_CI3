@@ -12178,7 +12178,9 @@ button.close {
     margin-bottom: 60px;
   }
 }
-
+.ex-main-footer a {
+  color: #cecece;
+}
 /* line 1, ../sass/desktop/_footer.scss */
 .ex-main-footer {
   background-color: #34495e;

@@ -18,7 +18,7 @@
                     <p>находящийся по адресу</p>
                     <p>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201</p>
                     <p>
-                        <a href="mailto:support@bzaim5.ru" target="_blank">support@bzaim5.ru</a><span class="hidden-xs hidden-sm">8 (960) 950 93 53</span></p>
+                        <a href="mailto:support@bzaim5.ru" target="_blank"> | support@bzaim5.ru</a><span class="hidden-xs hidden-sm"> | +7(495) 006 19 61</span></p>
                 </div>
                 <div class="col-md-6 hidden-xs hidden-sm">
                         <div class="row">

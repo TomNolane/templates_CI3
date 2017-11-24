@@ -12303,6 +12303,9 @@ header {
   line-height: 12px;
   letter-spacing: 0.21px;
 }
+.ex-start-footer .ex-main-footer a{
+  color: #929292;
+}
 
 @media (max-width: 768px) {
   /* line 34, ../sass/desktop/_footer.scss */

@@ -415,7 +415,8 @@ if(!isset($description))
         }
 
         .index_specail2 {
-            padding-bottom: 65px;
+            padding-top: 115px;
+            padding-bottom: 115px;
         }
 
         .index_specail3 {
