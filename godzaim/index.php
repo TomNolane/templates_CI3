@@ -52,7 +52,7 @@
 				<div class="row">
 					<div class=" kri1 col-lg-4  col-md-6 col-sm-6 col-xs-12">
 						<div class="service-item services-third">
-							<img class="imggg1" src="/templates/godzaim/img/img1.png" alt="">
+							<img class="imggg1" src="/templates/godzaim/img/img1.png" alt="img1.png">
 						</div>
 						<div class="service-text">
 							<div class="service-num pull-left">1</div>
@@ -64,13 +64,13 @@
 							</div>
 							<div class="clearfix"></div>
 						</div>
-						<img src="/templates/godzaim/img/index/arrow.png" class="service-arrow">
+						<img src="/templates/godzaim/img/index/arrow.png" class="service-arrow" alt="arrow.png">
 					</div> 
 
 
 						<div class=" kri2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
 						<div class="service-item services-third">
-							<img class="imggg1" src="/templates/godzaim/img/img3.png" alt="">
+							<img class="imggg1" src="/templates/godzaim/img/img3.png" alt="img3.png">
 						</div>
 						<div class="service-text">
 							<div class="service-num pull-left">2</div>
@@ -84,13 +84,13 @@
 							</div>
 							<div class="clearfix"></div>
 						</div>
-						<img  src="/templates/godzaim/img/index/arrow.png" class="service-arrow">
+						<img  src="/templates/godzaim/img/index/arrow.png" class="service-arrow" alt="arrow.png">
 					</div>
 
 	
 					<div class=" kri3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
 						<div class="service-item services-third">
-							<img class="imggg1" src="/templates/godzaim/img/img4.png" alt="">
+							<img class="imggg1" src="/templates/godzaim/img/img4.png" alt="img4.png">
 						</div>
 						<div class="service-text">
 							<div class="service-num pull-left">3</div>
@@ -149,28 +149,8 @@
 			<p>4,5(%) * 6(мес) = 27% за 6 месяцев(27% * 50 000руб (сумма займа) )/100% = 13 500 рублей (сумма начисленных процентов) 50 000 + 13 500 = 63 500 рублей - это сумма необходимых денег к возврату через 6 месяцев.</p>
 			<p>В случае нарушения сроков, размер неустойки составляет 0,10% от суммы просрочки в день, но не более 10% от суммы займа. В случае длительной задержки выплаты информация будет передана в БКИ.</p>
 			<p>Продление займа возможно при своевременном информировании кредитора (до наступления даты возврата займа) и уплаты процентов за первичный срок займа. Дополнительных комиссий за продление займа не предусмотрено.</p>
-		</div>
-                
-		<!--div class="docum hidden-xs">
-			<h6>Документы и разрешительная документация:</h6>
-			<p>Услуги на проекте Godzaim оказываются юридическим лицом ООО «Гутлид», которое действует в интересах и по поручению организации ООО Микрокредитная Компания «Берлин» Свидетельство о внесении сведений о юридическом лице в государственный реестр микрофинансовых организаций № 1703045008133, которая на основании ФЗ "О потребительском кредите (займе)" от 21.12.2013 N 353-ФЗ имеет право осуществлять профессиональную деятельность по предоставлению потребительских займов.</p>
-			<p>Проект осуществляет только подбор микрозаймов для клиентов, а именно, между клиентом который желает взять займ, и кредитным учреждением, а также некредитными финансовыми организациями в случаях, определенных федеральными законами об их деятельности, которые занимаются выдачей займов. Проект не является финансовым учреждением, банком или кредитором, и не несёт ответственности за любые заключенные договоры кредитования или условия. Чтобы оформить заявку на получение займа, Вам необходимо пройти регистрацию и аутентификацию на проекте. Ссылка на документы и разрешительную документацию организаций в интересах которых действует юридическое лицо ООО «Гутлид».</p>
-			<p>Телефон:8 (960) 950 93 53</p>
-			<p>Россия, Ленинградская обл. г. Санкт-Петербург, ул. ул. Осипенко, 12, оф 201</p>
-		</div-->
-	</div>
-	<!--div class="docs-wrap hidden-xs">
-		<div class="docs">
-			<div class="doc-top">
-				<img src="/templates/godzaim/img/doc1.png" alt="">
-			<img src="/templates/godzaim/img/doc2.png" alt="">
-			</div>
-			<div class="doc-bot">
-				<img src="/templates/godzaim/img/doc3.png" alt="">
-			<img src="/templates/godzaim/img/doc4.png" alt="">
-			</div>
-		</div>
-	</div-->
+		</div> 
+	</div> 
 	<div class="ser hidden-xs">
 		<div class="what-be">
 			<h6>Что будет при невыплате заёмных средств:</h6>

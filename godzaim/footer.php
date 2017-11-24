@@ -235,6 +235,8 @@ $(document).ready(function(){
 		prettify_enabled: true,
         hide_from_to: true, 
 		onChange:function(range){
+            $('.irs-single').text('').append("<span>вероятность 12%</span>");
+            $('.irs-single').css('margin-left', '0');
 			var percent = 0;
 			var attr = '';
 			var color = '';
