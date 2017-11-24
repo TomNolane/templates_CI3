@@ -4785,7 +4785,7 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #f85d5e;
 }
 
 @media (min-width: 768px) {
@@ -11111,7 +11111,7 @@ aside.ex-aside-menu {
   background-image: linear-gradient(180deg, #ffe879 0%, #ffcd44 100%);
   position: fixed;
   height: 100%;
-  max-width: 500px;
+  max-width: 300px;
   width: 100%;
   top: 0;
   z-index: 99999;
@@ -11153,7 +11153,7 @@ aside.ex-aside-menu::-webkit-scrollbar-thumb {
 aside.ex-aside-menu div {
   padding-top: 30px;
   padding-right: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   text-align: right;
 }
 /* line 36, ../sass/desktop/_asideMenu.scss */
@@ -11187,7 +11187,7 @@ aside.ex-aside-menu main button {
   font-weight: 400;
   line-height: 40px;
   text-transform: uppercase;
-  margin-bottom: 53px;
+  margin-bottom: 20px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -11217,7 +11217,7 @@ aside.ex-aside-menu main ul li a {
 }
 /* line 83, ../sass/desktop/_asideMenu.scss */
 aside.ex-aside-menu main ul li:nth-child(5) {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 /* line 86, ../sass/desktop/_asideMenu.scss */
 aside.ex-aside-menu main ul li:last-of-type {
