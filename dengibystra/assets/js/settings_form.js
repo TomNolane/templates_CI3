@@ -408,7 +408,7 @@ $(document).ready(function () {
         monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
         dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
         firstDay: 1,
-        yearRange: "-60:-19",
+        yearRange: "-70:-19",
         defaultDate: "01/01/1998",
         isRTL: false,
         onSelect: function (date) {
