@@ -61,7 +61,7 @@
 }
 
 .irs-slider {
-  background:url(templates/godzaim/img/rombbb2.png) no-repeat center center;
+  background:url(/templates/godzaim/img/rombbb2.png) no-repeat center center;
     border:none;
     border-radius:0;
     box-shadow:none;
@@ -73,6 +73,7 @@
 } 
 .irs-slider.state_hover, .irs-slider:hover {
     background: #FFF;
+    background:url(/templates/godzaim/img/rombbb2.png) no-repeat center center;
 }
 
 .irs-min, .irs-max {
@@ -92,13 +93,16 @@
 }
 
 .irs-from, .irs-to, .irs-single {
-    color: #fff;
-    font-size: 14px; line-height: 1.333;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.333;
     text-shadow: none;
     padding: 1px 5px;
     background: #428bca;
     border-radius: 3px;
     -moz-border-radius: 3px;
+    
 }
 .lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single {
     background: #999;

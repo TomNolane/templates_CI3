@@ -5,6 +5,12 @@
     "files": [
         {
             "type": "d",
+            "name": ".vscode",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
             "name": "bzaim",
             "size": 4096,
             "files": []
@@ -19,7 +25,27 @@
             "type": "d",
             "name": "dengibystra",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "d",
+                    "name": "assets",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "js",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "loanCalculator.js",
+                                    "size": 6300
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "d",
@@ -45,69 +71,71 @@
             "size": 4096,
             "files": [
                 {
+                    "type": "-",
+                    "name": "google_tag_manager.php",
+                    "size": 424
+                },
+                {
+                    "type": "-",
+                    "name": "google_analytics.php",
+                    "size": 1248
+                },
+                {
+                    "type": "-",
+                    "name": "header.php",
+                    "size": 5157
+                },
+                {
                     "type": "d",
                     "name": "css",
                     "size": 0,
                     "files": [
                         {
                             "type": "-",
+                            "name": "style.min.css",
+                            "size": 25725
+                        },
+                        {
+                            "type": "-",
                             "name": "style.css",
-                            "size": 28213
+                            "size": 28465
                         },
                         {
                             "type": "-",
-                            "name": "suggestions.min.css",
-                            "size": 9253
+                            "name": "service.css",
+                            "size": 8860
                         },
                         {
                             "type": "-",
-                            "name": "bootstrap.css",
-                            "size": 152938
-                        },
-                        {
-                            "type": "-",
-                            "name": "bootstrap.css.map",
-                            "size": 389323
-                        },
-                        {
-                            "type": "-",
-                            "name": "bootstrap.min.css",
-                            "size": 121367
-                        },
-                        {
-                            "type": "-",
-                            "name": "bootstrap.min.css.map",
-                            "size": 54416
-                        },
-                        {
-                            "type": "-",
-                            "name": "bootstrap-theme.css",
-                            "size": 26719
-                        },
-                        {
-                            "type": "-",
-                            "name": "bootstrap-theme.css.map",
-                            "size": 47706
-                        },
-                        {
-                            "type": "-",
-                            "name": "bootstrap-theme.min.css",
-                            "size": 23414
-                        },
-                        {
-                            "type": "-",
-                            "name": "bootstrap-theme.min.css.map",
-                            "size": 5532
-                        },
-                        {
-                            "type": "-",
-                            "name": "font-awesome.min.css",
-                            "size": 29168
+                            "name": "ion.rangeSlider.skinHTML5.css",
+                            "size": 2811
                         },
                         {
                             "type": "-",
                             "name": "ion.rangeSlider.css",
                             "size": 2040
+                        }
+                    ]
+                },
+                {
+                    "type": "-",
+                    "name": "style.min.css",
+                    "size": 19517
+                },
+                {
+                    "type": "d",
+                    "name": "img",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "-",
+                            "name": "psD405.tmp",
+                            "size": 15872
+                        },
+                        {
+                            "type": "-",
+                            "name": "rombbb2.png",
+                            "size": 18510
                         }
                     ]
                 },
@@ -118,201 +146,25 @@
                     "files": [
                         {
                             "type": "-",
-                            "name": "jquery.form-validator.js",
-                            "size": 29177
+                            "name": "jquery.gallery.js",
+                            "size": 10457
                         },
                         {
                             "type": "-",
-                            "name": "jquery.suggestions.min.js",
-                            "size": 48189
+                            "name": "ion.rangeSlider.min.js",
+                            "size": 58824
                         }
                     ]
                 },
                 {
-                    "type": "d",
-                    "name": "fonts",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "-",
-                            "name": "fontawesome-webfont.svg",
-                            "size": 447050
-                        },
-                        {
-                            "type": "-",
-                            "name": "FontAwesome.otf",
-                            "size": 134808
-                        },
-                        {
-                            "type": "-",
-                            "name": "generator_config.txt",
-                            "size": 608
-                        },
-                        {
-                            "type": "-",
-                            "name": "glyphicons-halflings-regular.eot",
-                            "size": 20127
-                        },
-                        {
-                            "type": "-",
-                            "name": "glyphicons-halflings-regular.svg",
-                            "size": 109025
-                        },
-                        {
-                            "type": "-",
-                            "name": "glyphicons-halflings-regular.ttf",
-                            "size": 45404
-                        },
-                        {
-                            "type": "-",
-                            "name": "glyphicons-halflings-regular.woff",
-                            "size": 23424
-                        },
-                        {
-                            "type": "-",
-                            "name": "glyphicons-halflings-regular.woff2",
-                            "size": 18028
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-bold-demo.html",
-                            "size": 37774
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-bold-webfont.woff",
-                            "size": 41848
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-bold-webfont.woff2",
-                            "size": 33916
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-heavy-demo.html",
-                            "size": 37820
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-heavy-webfont.woff",
-                            "size": 42088
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-heavy-webfont.woff2",
-                            "size": 34104
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-medium-demo.html",
-                            "size": 37826
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-medium-webfont.woff",
-                            "size": 41916
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-medium-webfont.woff2",
-                            "size": 33928
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-regular-demo.html",
-                            "size": 37792
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-regular-webfont.woff",
-                            "size": 42060
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-regular-webfont.woff2",
-                            "size": 33944
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-semibold-demo.html",
-                            "size": 37838
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-semibold-webfont.woff",
-                            "size": 42308
-                        },
-                        {
-                            "type": "-",
-                            "name": "lato-semibold-webfont.woff2",
-                            "size": 34332
-                        },
-                        {
-                            "type": "-",
-                            "name": "sfuidisplay-medium.otf",
-                            "size": 140916
-                        },
-                        {
-                            "type": "-",
-                            "name": "sfuidisplay-regular.otf",
-                            "size": 128224
-                        },
-                        {
-                            "type": "-",
-                            "name": "stylesheet.css",
-                            "size": 1164
-                        },
-                        {
-                            "type": "d",
-                            "name": "specimen_files",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "grid_12-825-55-15.css",
-                                    "size": 4597
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "specimen_stylesheet.css",
-                                    "size": 7310
-                                }
-                            ]
-                        },
-                        {
-                            "type": "-",
-                            "name": "fontawesome-webfont.eot",
-                            "size": 165742
-                        },
-                        {
-                            "type": "-",
-                            "name": "fontawesome-webfont.ttf",
-                            "size": 165548
-                        },
-                        {
-                            "type": "-",
-                            "name": "fontawesome-webfont.woff",
-                            "size": 98024
-                        },
-                        {
-                            "type": "-",
-                            "name": "fontawesome-webfont.woff2",
-                            "size": 77160
-                        }
-                    ]
+                    "type": "-",
+                    "name": "index.php",
+                    "size": 12702
                 },
                 {
-                    "type": "d",
-                    "name": "img",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "-",
-                            "name": "tip-twitter_arrows.gif",
-                            "size": 87
-                        }
-                    ]
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 24613
                 }
             ]
         },
@@ -350,47 +202,7 @@
             "type": "d",
             "name": "zaimol",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "form2.php",
-                    "size": 11498
-                },
-                {
-                    "type": "d",
-                    "name": "assets",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "d",
-                            "name": "css",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "style_custom.css",
-                                    "size": 2822
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "style_custom.min.css",
-                                    "size": 1895
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "style.css",
-                                    "size": 361384
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "style.min.css",
-                                    "size": 204433
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "files": []
         }
     ]
 }
