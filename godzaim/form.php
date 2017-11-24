@@ -5,10 +5,12 @@ if(!isset($my_title))
 }  
 require 'header.php'; ?>
 
-<link href="/modules/awesome-bootstrap-checkbox-master/awesome-bootstrap-checkbox.css" rel="stylesheet">
+<!-- <link href="/modules/awesome-bootstrap-checkbox-master/awesome-bootstrap-checkbox.css" rel="stylesheet">
 <link href="/modules/jquery-ui/1.10.4/css/smoothness/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/jquery.suggestions/16.8/css/suggestions.css" type="text/css" rel="stylesheet" />
-<link href="/modules/poshytip-1.2/src/tip-twitter/tip-twitter.css" rel="stylesheet">
+<link href="/modules/poshytip-1.2/src/tip-twitter/tip-twitter.css" rel="stylesheet"> -->
+
+
 
 <?php
 // IP
@@ -76,34 +78,6 @@ if(isset($_SERVER['HTTP_REFERER'])){
     $ad_id = '5';
 }
 ?>
-
-<style>
-#ya-rtb{display: none;}
-h1 {
-	font-size:34px;
-    margin:25px 0 5px;
-}
-p.descr{
-	color:#a9a9a9;
-	font-size:18px;
-	font-weight:bold;
-	text-align:center;
-}
-label span{
-	color:red;
-}
-/* .help-block {
-	font-size:15px;
-	font-weight:normal;
-	text-align:left;
-} */
-
-.help-block {
-		margin-top: -15px !important; 
-		color: #bc5351 !important;
-		font-weight: 700;
-	}
-</style>
 
 <div class="container">
 
@@ -190,15 +164,38 @@ label span{
 		</div>
 	</div>
 </div>
-<script src="/templates/godzaim/js/validate.js?ver=2"></script>
+
+
+
+<?php
+    echo '<script>';
+    require 'templates/godzaim/js/validate.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/godzaim/js/jquery.form-validator.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/godzaim/js/jquery.suggestions.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/godzaim/js/settings.js';
+    echo '</script>';
+?>
+<!-- <script src="/templates/godzaim/js/validate.js?ver=2"></script>
 <script src="/modules/poshytip-1.2/src/jquery.poshytip.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-<script src="/modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="/modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js"></script> -->
 <!--[if lt IE 10]>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif]-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.suggestions/16.8/js/jquery.suggestions.min.js"></script>
-<script src="/templates/godzaim/js/settings.js?ver=1"></script>
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.suggestions/16.8/js/jquery.suggestions.min.js"></script>
+<script src="/templates/godzaim/js/settings.js?ver=1"></script> -->
 <script>
     $(document).ready(function(){
         traffic('godzaim.ru', '1');

@@ -20,7 +20,7 @@
 
 <input id="period" name="period" value="<?php if(empty($_POST['period'])){echo'10';}else{echo $_POST['period'];} ?>" type="hidden">
 
-<div class="form-group has-feedback" style="margin-bottom: -17px;">
+<div class="form-group has-feedback" >
 	<label class="col-sm-4 control-label label-required hidden-xs">Фамилия</label>
 	<div class="col-sm-8 col-xs-12">
 		<input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию"
@@ -30,7 +30,7 @@
 
 	</div>
 </div>
-<div class="form-group has-feedback" style="margin-bottom: -17px;">
+<div class="form-group has-feedback" >
 	<label class="col-sm-4 control-label label-required hidden-xs">Имя</label>
 	<div class="col-sm-8 col-xs-12">
 		<input type="text" class="form-control ec tip sp_push_custom_data" name="i" id="i" placeholder="Имя" title="Пожалуйста, введите свое имя"
@@ -39,7 +39,7 @@
 		<span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 	</div>
 </div>
-<div class="form-group has-feedback" style="margin-bottom: -17px;">
+<div class="form-group has-feedback" >
 	<label class="col-sm-4 control-label label-required hidden-xs">Отчество</label>
 	<div class="col-sm-8 col-xs-12">
 		<input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество"
@@ -48,19 +48,7 @@
 		<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 	</div>
 </div>
-<div class="form-group has-feedback text-left" style="display:none;">
-	<label class="col-sm-4 control-label label-required hidden-xs">Пол</label>
-	<div class="col-sm-8 col-xs-12">
-		<div class="radio radio-info radio-inline">
-			<input type="radio" id="gender1" value="1" name="gender" checked="checked" required>
-			<label for="gender1"> Мужской </label>
-		</div>
-		<div class="radio radio-info radio-inline">
-			<input type="radio" id="gender0" value="0" name="gender" required>
-			<label for="gender0"> Женский </label>
-		</div>
-	</div>
-</div>
+<input type="hidden" id="gender" value="1" name="gender" required> 
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Дата рождения</label>
 	<div class="col-sm-8 col-xs-12"> 
@@ -73,7 +61,7 @@
 </div>
 
 
-<div class="form-group has-feedback" style="margin-bottom: -17px;">
+<div class="form-group has-feedback" >
 	<label class="col-sm-4 control-label label-required hidden-xs">Телефон</label>
 	<div class="col-sm-8 col-xs-12">
 		<input style="margin-bottom: 20px;" type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон"
@@ -84,7 +72,7 @@
 </div>
 
 
-<div class="form-group has-feedback" style="margin-bottom: -17px;"> 
+<div class="form-group has-feedback" > 
 	<label class="col-sm-4 control-label label-required hidden-xs">Почта</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Пожалуйста, введите свой email адрес"

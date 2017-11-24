@@ -20,12 +20,12 @@
 							<input type="text" id="amount" class="amount" name="amount" value="" />
 							<input type="hidden" id="period" name="period" value="" />
 							<input type="hidden" id="from_" name="from_" value="" />
-							<div class="calc-period">
-								<div class="calc-period-item" id="period-1">1-7<br>дней</div>
-								<div class="calc-period-item" id="period-2">8-14<br>дней</div>
-								<div class="calc-period-item" id="period-3">15-30<br>дней</div>
-								<div class="calc-period-item" id="period-4">1-6<br>мес.</div>
-								<div class="calc-period-item" id="period-5">7-12<br>мес.</div>
+							<div class="calc-period"> 
+								<div class="calc-period-item" id="period-1">61-100<br>дней</div>
+								<div class="calc-period-item" id="period-2">100-130<br>мес.</div>
+								<div class="calc-period-item" id="period-3">130-200<br>мес.</div>
+								<div class="calc-period-item" id="period-4">200-250<br>мес.</div>
+								<div class="calc-period-item" id="period-5">250-365<br>мес.</div>
 								<div class="clearfix"></div>
 							</div>
 							<div class="text-center"><button type="submit" class="btn btn-primary btn-lg button-get">Получить деньги</button></div>
