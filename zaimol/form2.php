@@ -149,7 +149,7 @@
                     <div class="media-left">
                         <ul class="ex-coincidence-check">
                             <li>
-                                <input type="radio" id="f-option" name="selector">
+                                <input type="radio" name="reg_same" value="1" id="f-option" checked>
                                 <label for="f-option">Да</label>
                                 <div class="check"></div>
                             </li>
