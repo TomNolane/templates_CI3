@@ -951,6 +951,7 @@ footer .copy{
     display: inline-block;
     height: 40px;
     width: 40px;
+    border-radius: 15px;
     position: fixed;
     bottom: 40px;
     right: 10px;

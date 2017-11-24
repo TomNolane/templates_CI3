@@ -221,6 +221,7 @@ footer .social{width:30px;}
     display: inline-block;
     height: 40px;
     width: 40px;
+    border-radius: 15px;
     position: fixed;
     bottom: 40px;
     right: 10px;
@@ -229,7 +230,7 @@ footer .social{width:30px;}
     overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
-    background: url(/templates/rublimo/img/cd-top-arrow.png) center 50% no-repeat rgb(113, 195, 134);
+    background: url(/templates/rublimo/img/cd-top-arrow.png) center 50% no-repeat #7acaf6;
     visibility: hidden;
     opacity: 0;
     -webkit-transition: opacity .3s 0s, visibility 0s .3s;
