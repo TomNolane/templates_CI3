@@ -1,19 +1,19 @@
 @import url(reset.css);
 @font-face {
     font-family:Roboto Bold;
-    src: url("../fonts/RobotoBold/RobotoBold.ttf");
+    src: url("templates/godzaim/fonts/RobotoBold/RobotoBold.ttf");
 }
 @font-face {
     font-family:Roboto Light;
-    src: url("../fonts/RobotoLight/RobotoLight.ttf");
+    src: url("templates/godzaim/fonts/RobotoLight/RobotoLight.ttf");
 }
 @font-face {
     font-family:Roboto Regular;
-    src: url("../fonts/RobotoRegular/RobotoRegular.ttf");
+    src: url("templates/godzaim/fonts/RobotoRegular/RobotoRegular.ttf");
 }
 @font-face {
     font-family:Roboto Meduim;
-    src: url("../fonts/RobotoMedium/RobotoMedium.ttf");
+    src: url("templates/godzaim/fonts/RobotoMedium/RobotoMedium.ttf");
 }
 
 
@@ -148,7 +148,7 @@ font-family: 20px;
      color:#1b1b1b;
     font-family: Roboto Regular;
     font-size: 15px;  
-    list-style-image: url(../img/list-style.png);
+    list-style-image: url(templates/godzaim/img/list-style.png);
     margin-bottom: 3px;
 }
 .about .uslov p {
