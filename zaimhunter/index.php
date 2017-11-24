@@ -47,7 +47,7 @@
                                 </figure>
                                 <div class="ex-slider-info">
                                     <span>1000</span> 
-                                    <span>10000</span>
+                                    <span>100 000</span>
                                 </div>
                             </div> 
                         </div> 

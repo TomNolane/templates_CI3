@@ -12,13 +12,13 @@
                     <img src="/templates/rublimo/img/logo-footer.png" alt="logo" class="logo">
                 </a>
             </div>
-            <div class="col-md-4 hidden-xs">
+            <div class="col-md-4 col-xs-12">
                 <p class="gut" id="font10">
                     «RUBLIMO» - сервис по подбору выгодных онлайн займов находящийся по адресу: Россия, Ленинградская обл. г. Санкт-Петербург,
-                    ул. Осипенко, 12, оф 201 email: support@rublimo.ru, телефон: 8 (960) 950 93 53
+                    ул. Осипенко, 12, оф 201 email: <a href="mailto:support@rublimo.ru" target="_blank">support@rublimo.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
                 </p>
             </div>
-            <div class="col-md-6 hidden-xs">
+            <div class="col-md-6 hidden-xs hidden-sm">
                 <p class="gut" id="font10">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная
                     процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости
                     займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят
