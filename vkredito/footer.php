@@ -21,7 +21,7 @@
                     <p>Сервис по подбору выгодных онлайн займов находящийся по адресу
                         <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
                         <br><a href="mailto:support@vkredito.ru" target="_blank">support@vkredito.ru</a>
-                        <span class="hidden-xs hidden-sm">+7(495) 006 19 61</span>
+                        <span class="hidden-xs hidden-sm"> | +7(495) 006 19 61</span>
                     </p>
                 </div>
             </div>

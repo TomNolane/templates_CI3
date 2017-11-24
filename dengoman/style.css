@@ -665,7 +665,7 @@ footer .social .fa-inverse{
     color:#424955;
 }
 footer a{
-    opacity:0.5;
+    opacity:1;
 }
 footer a:hover{
     opacity:1;

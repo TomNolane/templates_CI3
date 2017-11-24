@@ -1,0 +1,56 @@
+section.ex-documents{
+  background-color: #fbfbfb;
+  padding: 87px 0;
+  main.container{
+    h1{
+      margin-top: 0;
+      margin-bottom: 65px;
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 54px;
+      text-transform: uppercase;
+      @media (max-width: 767px) {
+        font-size: 25px;
+      }
+    }
+    #menu1{
+      font-size: 16px;
+      line-height: 24px;
+      p{
+        text-indent: 30px;
+        &:first-of-type{
+          text-indent: 0;
+        }
+      }
+      ul{
+        padding-left: 20px;
+        &:first-of-type{
+          margin: 30px 0;
+        }
+        &:last-of-type{
+          margin-bottom: 30px;
+        }
+      }
+    }
+    #menu2{
+      font-size: 16px;
+      line-height: 24px;
+      p{
+        &.ex-mb{
+          margin-bottom: 45px;
+        }
+      }
+      ul{
+        margin-bottom: 45px;
+        padding-left: 20px;
+      }
+    }
+    .ex-main-btn{
+      max-width: 500px;
+      width: 100%;
+      display: inline-block;
+      margin-top: 110px;
+    }
+  }
+}
+
