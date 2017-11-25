@@ -17,15 +17,19 @@
 						<form id="anketa" action="/form/" method="post">
 							<span class="form-sum-label">Сумма</span>
 							<span class="form-sum-value"></span>
-							<input type="text" id="amount" class="amount" name="amount" value="" />
-							<input type="hidden" id="period" name="period" value="" />
+							<!-- <input type="text" id="amount" class="amount" name="amount" value="" /> -->
+							<input type="hidden" id="amount" class="amount" name="amount" value="20000" />
+							<input type="hidden" id="period" name="period" value="21" />
+							<input type="hidden" id="form_slrd" name="form_slrd" value="15" /> 
+							<input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>"> 
+							<?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?> 
 							<input type="hidden" id="from_" name="from_" value="" />
 							<div class="calc-period"> 
-								<div class="calc-period-item" id="period-1">61-100<br>дней</div>
-								<div class="calc-period-item" id="period-2">100-130<br>мес.</div>
-								<div class="calc-period-item" id="period-3">130-200<br>мес.</div>
-								<div class="calc-period-item" id="period-4">200-250<br>мес.</div>
-								<div class="calc-period-item" id="period-5">250-365<br>мес.</div>
+								<div class="calc-period-item index_spec7" id="period-0">61<br>день</div>
+								<div class="calc-period-item" id="period-1">61<br>день</div>
+								<div class="calc-period-item" id="period-2">130<br>дней</div>
+								<div class="calc-period-item" id="period-3">365<br>дней</div> 
+								<div class="calc-period-item index_spec7" id="period-8">365<br>дней</div> 
 								<div class="clearfix"></div>
 							</div>
 							<div class="text-center"><button type="submit" class="btn btn-primary btn-lg button-get">Получить деньги</button></div>
