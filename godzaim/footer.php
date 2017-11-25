@@ -1,4 +1,4 @@
-
+<?php $from = '15'; ?>
 <div id="ya-rtb">
     <div id="yandex_rtb_R-A-249178-1"></div>
     <div id="yandex_rtb_R-A-249178-2"></div>
@@ -136,6 +136,16 @@ echo '</script>';
             return (setStr);
         }
 
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
         function GetMoney() {
             $('form#anketa').submit();
         }
@@ -250,65 +260,117 @@ echo '</script>';
                     13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000
                 ],
                 min: 1000,
-                max: 100000,
-                //step: 1000,
-                from: 13,
+                max: 100000, 
+                from: <?php 
+
+        if(isset($_GET['amount'])) 
+        {  
+            switch($_GET['amount'])
+            {
+                case '1000': $from = '0' ; break;
+                case '2000': $from = '1' ; break;
+                case '3000': $from = '2' ; break;
+                case '4000': $from = '3' ; break;
+                case '5000': $from = '4' ; break;
+                case '6000': $from = '5' ; break;
+                case '7000': $from = '6' ; break;
+                case '8000': $from = '7' ; break;
+                case '9000': $from = '8' ; break;
+                case '10000': $from = '9' ; break;
+                case '11000': $from = '10' ; break;
+                case '12000': $from = '11' ; break;
+                case '13000': $from = '12' ; break;
+                case '14000': $from = '13' ; break;
+                case '15000': $from = '14' ; break;
+                case '20000': $from = '15' ; break;
+                case '25000': $from = '16' ; break;
+                case '30000': $from = '17' ; break;
+                case '40000': $from = '18' ; break;
+                case '50000': $from = '19' ; break;
+                case '80000': $from = '20' ; break;
+                case '100000': $from = '21' ; break;
+            }
+            echo $from; 
+        }
+        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        ?>, 
                 prettify_enabled: true,
                 hide_from_to: true,
                 onChange: function (range) {
                     $('.irs-single').text('').append("<span>" + range.from_value + " руб</span>");
-                    var ff = parseFloat($('.irs-slider.single').css('left').replace('px', '')) + 5;
+                    var ff = parseFloat($('.irs-slider.single').css('left').replace('px', '')) - 20;
                     $('.irs-single').css('margin-left', ff);
                     $('.irs-single').css('margin-top', '30');
-                    // $('.irs-single').css('margin-left', '0');
+                    
                     var percent = 0;
                     var attr = '';
                     var color = '';
+                    var n = range.from;
 
                     $('.form-sum-value').text(range.from_value + ' Р');
                     $('.calc-period-item').removeClass('active');
-
-                    if (range.from_value <= 7000) {
-                        $('#period').val('14');
+                    
+                    if (n <= 9) {
+                        $('#period').val('7'); 
+                        $('#form_slrd').val(n);
+                        $('#amount').val(range.from_value);
                         $('#period-1').addClass('active');
                         perc = '97';
                         attr = 'Автоматическое одобрение';
                         color = 'green';
                         day_comment = 'От 61 дня';
                         day = 1;
-                    } else if (range.from_value <= 15000) {
-                        $('#period').val('14');
-                        $('#period-2').addClass('active');
+                    } else if (n <= 14 && n > 9) {
+                        $('#period').val('14'); 
+                        $('#form_slrd').val(n);
+                        $('#amount').val(range.from_value);
+                        $('#period-1').addClass('active');
                         perc = '94';
-                        attr = 'Может понадобиться паспорт';
+                        attr = 'Автоматическое одобрение';
                         color = 'green';
-                        day_comment = 'От 100 дней';
-                        day = 15;
-                    } else if (range.from_value <= 30000) {
-                        $('#period').val('21');
-                        $('#period-3').addClass('active');
+                        day_comment = 'От 61 дня';
+                        day = 14;
+                    } else if (n <= 15 && n > 14) {
+                        $('#period').val('21'); 
+                        $('#form_slrd').val(n);
+                        $('#amount').val(range.from_value);
+                        $('#period-1').addClass('active');
                         perc = '84';
-                        attr = 'Нужен только паспорт';
-                        color = 'orange';
+                        attr = 'Автоматическое одобрение';
+                        color = 'green';
+                        day_comment = 'От 61 дня';
+                        day = 14;
+                    } else if (n < 17 && n > 15) {
+                        $('#period').val('21'); 
+                        $('#form_slrd').val(n);
+                        $('#amount').val(range.from_value);
+                        $('#period-1').addClass('active');
+                        perc = '84';
+                        attr = 'Автоматическое одобрение';
+                        color = 'green';
                         day_comment = 'От 130 дней';
-                        day = 15;
-                    } else if (range.from_value <= 50000) {
-                        $('#period').val('30');
-                        $('#period-4').addClass('active');
+                        day = 21;
+                    } else if (n <= 19 && n >= 17) {
+                        $('#period').val('30'); 
+                        $('#form_slrd').val(n);
+                        $('#amount').val(range.from_value);
+                        $('#period-2').addClass('active');
                         perc = '72';
-                        attr = 'Нужна справка о доходах';
-                        color = 'orange';
+                        attr = 'Автоматическое одобрение';
+                        color = 'green';
                         day_comment = 'От 200 дней';
-                        day = 15;
-                    } else {
-                        $('#period').val('30');
-                        $('#period-5').addClass('active');
+                        day = 21;
+                    } else  {
+                        $('#period').val('30'); 
+                        $('#form_slrd').val(n);
+                        $('#amount').val(range.from_value);
+                        $('#period-3').addClass('active');
                         perc = '64';
                         attr = 'Нужна справка о доходах';
                         color = 'red';
-                        day_comment = 'От 250 дней';
+                        day_comment = 'до 365 дней';
                         day = 30;
-                    }
+                    } 
 
                     $('.current_amount').text(String(range.from_value).split(/(?=(?:\d{3})+$)/).join(
                         ' '));
@@ -334,16 +396,48 @@ echo '</script>';
                 ],
                 min: 1000,
                 max: 100000,
-                from: 13,
+                postfix: ' руб',
+                from: <?php 
+
+        if(isset($_GET['amount'])) 
+        {  
+            switch($_GET['amount'])
+            {
+                case '1000': $from = '0' ; break;
+                case '2000': $from = '1' ; break;
+                case '3000': $from = '2' ; break;
+                case '4000': $from = '3' ; break;
+                case '5000': $from = '4' ; break;
+                case '6000': $from = '5' ; break;
+                case '7000': $from = '6' ; break;
+                case '8000': $from = '7' ; break;
+                case '9000': $from = '8' ; break;
+                case '10000': $from = '9' ; break;
+                case '11000': $from = '10' ; break;
+                case '12000': $from = '11' ; break;
+                case '13000': $from = '12' ; break;
+                case '14000': $from = '13' ; break;
+                case '15000': $from = '14' ; break;
+                case '20000': $from = '15' ; break;
+                case '25000': $from = '16' ; break;
+                case '30000': $from = '17' ; break;
+                case '40000': $from = '18' ; break;
+                case '50000': $from = '19' ; break;
+                case '80000': $from = '20' ; break;
+                case '100000': $from = '21' ; break;
+            }
+            echo $from; 
+        }
+        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        ?>,
                 onStart: function (range) {
                     $('.form-sum-value').text(
-                        <?php echo empty($_POST['amount'])? 14000 : $_POST['amount']; ?> + ' Р'
-                    );
-                    range.from = <?php echo empty($_POST['from_'])? 13 : $_POST['from_']; ?>;
-                },
-                <?php //echo empty($_POST['amount'])? 15000 : $_POST['amount']; ?>
+                        <?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>  + ' Р'
+                    ); 
+                }, 
                 onChange: function (range) {
                     $('.form-sum-value').text(range.from_value + ' Р');
+                    
                     if (range.from_value <= 10000) {
                         $('#period').val('7');
                         $('#period2').val('От 61 до 130 дней');
@@ -366,66 +460,96 @@ echo '</script>';
                 }
             });
 
-            <?php if ($this->uri->segment(1) == '') { ?>
-            var slider = $('.amount').data('ionRangeSlider');
-            var slider_plus = true;
-            var slider_intl = setInterval(function () {
-                var step = slider_plus ? slider.options.from + slider.options.step : slider.options.from -
-                    slider.options.step;
-                $('.form-sum-value').text(slider.options.values[slider.options.from] + ' Р');
-                if (step == slider.options.max) slider_plus = false;
-                if (step < <?php echo empty($_POST['amount'])? 13 : $_POST['amount']; ?>) {
-                    clearInterval(slider_intl);
-                } else slider.update({
-                    from: step
-                });
+            <?php if ($this->uri->segment(1) == '') { ?> 
+                var slider3 = $('#amount').data('ionRangeSlider'); 
+                var slider_plus = true;
+                var n = 10;
+                var slider_init = setInterval(function () {
+                    if (slider_plus) {
+                        n++;
+                    } else {
+                        n--;
+                    }
+                    if (n == 21 && n != <?php echo $from; ?>) {
+                        slider_plus = false;
+                    }else if (n == <?php echo $from; ?> && slider_plus == false) {
+                        clearInterval(slider_init);
+                    }else if (n == 21 && n == <?php echo $from; ?>) {
+                        clearInterval(slider_init);
+                    }
+             
+                    slider3.update({
+                        from: n
+                    });  
 
-                $('.irs-single').text('').append("<span>" + slider.result.from_value + " руб</span>");
-                var ff = parseFloat($('.irs-slider.single').css('left').replace('px', '')) + 5;
-                $('.irs-single').css('margin-left', ff);
+                    $('.irs-single').text('').append("<span>" + slider3.result.from_value + " руб</span>");
+                    var ff = parseFloat($('.irs-slider.single').css('left').replace('px', '')) - 20;
+                    $('.irs-single').css('margin-left', ff);
+                    $('.irs-single').css('margin-top', '30');
 
                 $('.calc-period-item').removeClass('active');
-                if (slider.result.from_value <= 7000) {
-                    $('#period').val('14');
+
+                if (n <= 9) {
+                    $('#period').val('7'); 
+                    $('#form_slrd').val(n);
+                    $('#amount').val(slider3.result.from_value);
                     $('#period-1').addClass('active');
                     perc = '97';
                     attr = 'Автоматическое одобрение';
                     color = 'green';
                     day_comment = 'От 61 дня';
                     day = 1;
-                } else if (slider.result.from_value <= 15000) {
-                    $('#period').val('14');
-                    $('#period-2').addClass('active');
+                } else if (n <= 14 && n > 9) {
+                    $('#period').val('14'); 
+                    $('#form_slrd').val(n);
+                    $('#amount').val(slider3.result.from_value);
+                    $('#period-1').addClass('active');
                     perc = '94';
-                    attr = 'Может понадобиться паспорт';
+                    attr = 'Автоматическое одобрение';
                     color = 'green';
-                    day_comment = 'От 100 дней';
-                    day = 15;
-                } else if (slider.result.from_value <= 30000) {
-                    $('#period').val('21');
-                    $('#period-3').addClass('active');
+                    day_comment = 'От 61 дня';
+                    day = 14;
+                } else if (n <= 15 && n > 14) {
+                    $('#period').val('21'); 
+                    $('#form_slrd').val(n);
+                    $('#amount').val(slider3.result.from_value);
+                    $('#period-1').addClass('active');
                     perc = '84';
-                    attr = 'Нужен только паспорт';
-                    color = 'orange';
+                    attr = 'Автоматическое одобрение';
+                    color = 'green';
+                    day_comment = 'От 61 дня';
+                    day = 14;
+                } else if (n < 17 && n > 15) {
+                    $('#period').val('21'); 
+                    $('#form_slrd').val(n);
+                    $('#amount').val(slider3.result.from_value);
+                    $('#period-1').addClass('active');
+                    perc = '84';
+                    attr = 'Автоматическое одобрение';
+                    color = 'green';
                     day_comment = 'От 130 дней';
-                    day = 15;
-                } else if (slider.result.from_value <= 50000) {
-                    $('#period').val('30');
-                    $('#period-4').addClass('active');
+                    day = 21;
+                } else if (n <= 19 && n >= 17) {
+                    $('#period').val('30'); 
+                    $('#form_slrd').val(n);
+                    $('#amount').val(slider3.result.from_value);
+                    $('#period-2').addClass('active');
                     perc = '72';
-                    attr = 'Нужна справка о доходах';
-                    color = 'orange';
+                    attr = 'Автоматическое одобрение';
+                    color = 'green';
                     day_comment = 'От 200 дней';
-                    day = 15;
-                } else {
-                    $('#period').val('30');
-                    $('#period-5').addClass('active');
+                    day = 21;
+                } else  {
+                    $('#period').val('30'); 
+                    $('#form_slrd').val(n);
+                    $('#amount').val(slider3.result.from_value);
+                    $('#period-3').addClass('active');
                     perc = '64';
                     attr = 'Нужна справка о доходах';
                     color = 'red';
-                    day_comment = 'От 250 дней';
+                    day_comment = 'до 365 дней';
                     day = 30;
-                }
+                }  
 
             }, 5);
             <?php } ?>

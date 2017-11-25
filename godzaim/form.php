@@ -3,15 +3,7 @@ if(!isset($my_title))
 {
     $my_title = 'Заполните анкету!';
 }  
-require 'header.php'; ?>
-
-<!-- <link href="/modules/awesome-bootstrap-checkbox-master/awesome-bootstrap-checkbox.css" rel="stylesheet">
-<link href="/modules/jquery-ui/1.10.4/css/smoothness/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/jquery.suggestions/16.8/css/suggestions.css" type="text/css" rel="stylesheet" />
-<link href="/modules/poshytip-1.2/src/tip-twitter/tip-twitter.css" rel="stylesheet"> -->
-
-
-
+require 'header.php'; ?> 
 <?php
 // IP
 $this->load->helper('ip');
