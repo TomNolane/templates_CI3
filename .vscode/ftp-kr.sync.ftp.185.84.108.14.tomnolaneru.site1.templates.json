@@ -49,30 +49,7 @@
             "type": "d",
             "name": "godzaim",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "form1.php",
-                    "size": 7323
-                },
-                {
-                    "type": "-",
-                    "name": "footer.php",
-                    "size": 41501
-                },
-                {
-                    "type": "d",
-                    "name": "img",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "-",
-                            "name": "rombbb2.png",
-                            "size": 3042
-                        }
-                    ]
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
@@ -98,55 +75,20 @@
             "size": 4096,
             "files": [
                 {
+                    "type": "-",
+                    "name": ".ftpquota",
+                    "size": 12
+                },
+                {
                     "type": "d",
                     "name": "assets",
-                    "size": 0,
+                    "size": 4096,
                     "files": [
                         {
                             "type": "d",
                             "name": "css",
-                            "size": 0,
+                            "size": 4096,
                             "files": [
-                                {
-                                    "type": "-",
-                                    "name": "tip-twitter.css",
-                                    "size": 999
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "main.css",
-                                    "size": 775
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "style.css",
-                                    "size": 184093
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "jquery-ui-1.10.4.custom.min.css",
-                                    "size": 25111
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "bootstrap.css",
-                                    "size": 152938
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "bootstrap.css.map",
-                                    "size": 389323
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "bootstrap.min.css",
-                                    "size": 121367
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "bootstrap.min.css.map",
-                                    "size": 54416
-                                },
                                 {
                                     "type": "-",
                                     "name": "bootstrap-theme.css",
@@ -169,167 +111,71 @@
                                 },
                                 {
                                     "type": "-",
+                                    "name": "bootstrap.css",
+                                    "size": 152986
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "bootstrap.css.map",
+                                    "size": 389323
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "bootstrap.min.css",
+                                    "size": 121367
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "bootstrap.min.css.map",
+                                    "size": 54416
+                                },
+                                {
+                                    "type": "-",
                                     "name": "font-awesome.min.css",
                                     "size": 29168
-                                }
-                            ]
-                        },
-                        {
-                            "type": "d",
-                            "name": "img",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "header-logo.png",
-                                    "size": 2424
                                 },
                                 {
                                     "type": "-",
-                                    "name": "master-card.png",
-                                    "size": 3745
+                                    "name": "jquery-ui-1.10.4.custom.min.css",
+                                    "size": 25489
                                 },
                                 {
                                     "type": "-",
-                                    "name": "notebook.png",
-                                    "size": 11087
+                                    "name": "main.css",
+                                    "size": 775
                                 },
                                 {
                                     "type": "-",
-                                    "name": "ruble-icon.png",
-                                    "size": 287
+                                    "name": "mobileStyle.css",
+                                    "size": 338128
                                 },
                                 {
                                     "type": "-",
-                                    "name": "signature.png",
-                                    "size": 8926
+                                    "name": "style.css",
+                                    "size": 184075
                                 },
                                 {
                                     "type": "-",
-                                    "name": "tip-twitter_arrows.gif",
-                                    "size": 87
-                                }
-                            ]
-                        },
-                        {
-                            "type": "d",
-                            "name": "js",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "coockie.js",
-                                    "size": 1143
+                                    "name": "suggestions.min.css",
+                                    "size": 9253
                                 },
                                 {
                                     "type": "-",
-                                    "name": "custom.js",
-                                    "size": 2719
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "loanCalculator.js",
-                                    "size": 2453
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "modal.js",
-                                    "size": 2543
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "settings_form.js",
-                                    "size": 20286
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "settings_index.js",
-                                    "size": 3551
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "settings_main.js",
-                                    "size": 3267
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "jquery.form-validator.js",
-                                    "size": 29177
-                                }
-                            ]
-                        },
-                        {
-                            "type": "d",
-                            "name": "images",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "animated-overlay.gif",
-                                    "size": 1738
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "ui-bg_glass_55_fbf9ee_1x400.png",
-                                    "size": 335
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "ui-bg_glass_65_ffffff_1x400.png",
-                                    "size": 207
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "ui-bg_glass_75_dadada_1x400.png",
-                                    "size": 262
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "ui-bg_glass_75_e6e6e6_1x400.png",
-                                    "size": 262
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "ui-bg_glass_95_fef1ec_1x400.png",
-                                    "size": 332
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "ui-bg_highlight-soft_75_cccccc_1x100.png",
-                                    "size": 280
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "ui-icons_222222_256x240.png",
-                                    "size": 6922
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "ui-icons_2e83ff_256x240.png",
-                                    "size": 4549
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "ui-icons_454545_256x240.png",
-                                    "size": 6992
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "ui-icons_888888_256x240.png",
-                                    "size": 6999
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "ui-icons_cd0a0a_256x240.png",
-                                    "size": 4549
+                                    "name": "tip-twitter.css",
+                                    "size": 999
                                 }
                             ]
                         },
                         {
                             "type": "d",
                             "name": "fonts",
-                            "size": 0,
+                            "size": 4096,
                             "files": [
+                                {
+                                    "type": "-",
+                                    "name": "FontAwesome.otf",
+                                    "size": 134808
+                                },
                                 {
                                     "type": "-",
                                     "name": "fontawesome-webfont.eot",
@@ -357,13 +203,33 @@
                                 },
                                 {
                                     "type": "-",
-                                    "name": "FontAwesome.otf",
-                                    "size": 134808
+                                    "name": "generator_config.txt",
+                                    "size": 608
                                 },
                                 {
                                     "type": "-",
-                                    "name": "generator_config.txt",
-                                    "size": 608
+                                    "name": "glyphicons-halflings-regular.eot",
+                                    "size": 20127
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "glyphicons-halflings-regular.svg",
+                                    "size": 109025
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "glyphicons-halflings-regular.ttf",
+                                    "size": 45404
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "glyphicons-halflings-regular.woff",
+                                    "size": 23424
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "glyphicons-halflings-regular.woff2",
+                                    "size": 18028
                                 },
                                 {
                                     "type": "-",
@@ -451,14 +317,9 @@
                                     "size": 128224
                                 },
                                 {
-                                    "type": "-",
-                                    "name": "stylesheet.css",
-                                    "size": 1164
-                                },
-                                {
                                     "type": "d",
                                     "name": "specimen_files",
-                                    "size": 0,
+                                    "size": 4096,
                                     "files": [
                                         {
                                             "type": "-",
@@ -474,28 +335,581 @@
                                 },
                                 {
                                     "type": "-",
-                                    "name": "glyphicons-halflings-regular.eot",
-                                    "size": 20127
+                                    "name": "stylesheet.css",
+                                    "size": 1164
+                                }
+                            ]
+                        },
+                        {
+                            "type": "d",
+                            "name": "images",
+                            "size": 4096,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "animated-overlay.gif",
+                                    "size": 1738
                                 },
                                 {
                                     "type": "-",
-                                    "name": "glyphicons-halflings-regular.svg",
-                                    "size": 109025
+                                    "name": "ui-bg_glass_55_fbf9ee_1x400.png",
+                                    "size": 335
                                 },
                                 {
                                     "type": "-",
-                                    "name": "glyphicons-halflings-regular.ttf",
-                                    "size": 45404
+                                    "name": "ui-bg_glass_65_ffffff_1x400.png",
+                                    "size": 207
                                 },
                                 {
                                     "type": "-",
-                                    "name": "glyphicons-halflings-regular.woff",
-                                    "size": 23424
+                                    "name": "ui-bg_glass_75_dadada_1x400.png",
+                                    "size": 262
                                 },
                                 {
                                     "type": "-",
-                                    "name": "glyphicons-halflings-regular.woff2",
-                                    "size": 18028
+                                    "name": "ui-bg_glass_75_e6e6e6_1x400.png",
+                                    "size": 262
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "ui-bg_glass_95_fef1ec_1x400.png",
+                                    "size": 332
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "ui-bg_highlight-soft_75_cccccc_1x100.png",
+                                    "size": 280
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "ui-icons_222222_256x240.png",
+                                    "size": 6922
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "ui-icons_2e83ff_256x240.png",
+                                    "size": 4549
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "ui-icons_454545_256x240.png",
+                                    "size": 6992
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "ui-icons_888888_256x240.png",
+                                    "size": 6999
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "ui-icons_cd0a0a_256x240.png",
+                                    "size": 4549
+                                }
+                            ]
+                        },
+                        {
+                            "type": "d",
+                            "name": "img",
+                            "size": 4096,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "5-layers.png",
+                                    "size": 1737
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "Zaimhome_logo.svg",
+                                    "size": 5213
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "contatc-logo.png",
+                                    "size": 10478
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "doc1.jpg",
+                                    "size": 159212
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "doc2.jpg",
+                                    "size": 92802
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "doc3.jpg",
+                                    "size": 106759
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "doc4.jpg",
+                                    "size": 50977
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "header-logo.png",
+                                    "size": 2424
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "home-bg.jpg",
+                                    "size": 33811
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "kredito.png",
+                                    "size": 5266
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "master-card-2.png",
+                                    "size": 3098
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "master-card.png",
+                                    "size": 3745
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "minus-icon.png",
+                                    "size": 1043
+                                },
+                                {
+                                    "type": "d",
+                                    "name": "mobile",
+                                    "size": 4096,
+                                    "files": [
+                                        {
+                                            "type": "-",
+                                            "name": "arrow-down.png",
+                                            "size": 199
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "close.svg",
+                                            "size": 639
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "company.png",
+                                            "size": 873
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "envelop.png",
+                                            "size": 1126
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "hamburger-icon.png",
+                                            "size": 146
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "logo-mobile.png",
+                                            "size": 1642
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "mobile-bg.png",
+                                            "size": 28289
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "ok.png",
+                                            "size": 189
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "ruble-sm.png",
+                                            "size": 222
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "ruble-white.png",
+                                            "size": 274
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "ruble.png",
+                                            "size": 276
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "moneyMan.png",
+                                    "size": 955
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "notebook.png",
+                                    "size": 11087
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "plus-icon.png",
+                                    "size": 1085
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "qiwi.png",
+                                    "size": 4616
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "question-icon.png",
+                                    "size": 1160
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "ruble-currency-sign.svg",
+                                    "size": 1875
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "ruble-icon-small.png",
+                                    "size": 1249
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "ruble-icon.png",
+                                    "size": 287
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "signature.png",
+                                    "size": 8926
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "tip-twitter_arrows.gif",
+                                    "size": 87
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "vivus.png",
+                                    "size": 5225
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "yandex.png",
+                                    "size": 3330
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "zaymer.png",
+                                    "size": 957
+                                }
+                            ]
+                        },
+                        {
+                            "type": "d",
+                            "name": "js",
+                            "size": 4096,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "coockie.js",
+                                    "size": 1143
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "custom.js",
+                                    "size": 2719
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "j-rating.js",
+                                    "size": 3524
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "jquery.form-validator.js",
+                                    "size": 29177
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "jquery.suggestions.min.js",
+                                    "size": 47854
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "loanCalculator.js",
+                                    "size": 3739
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "modal.js",
+                                    "size": 2543
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "oSpP.js",
+                                    "size": 22008
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "owl.carousel.min.js",
+                                    "size": 42766
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "settings_form.js",
+                                    "size": 20286
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "settings_index.js",
+                                    "size": 3551
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "settings_main.js",
+                                    "size": 3267
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "settings_thanks.js",
+                                    "size": 343
+                                }
+                            ]
+                        },
+                        {
+                            "type": "d",
+                            "name": "sass",
+                            "size": 4096,
+                            "files": [
+                                {
+                                    "type": "d",
+                                    "name": "core",
+                                    "size": 4096,
+                                    "files": [
+                                        {
+                                            "type": "-",
+                                            "name": "_fonts.scss",
+                                            "size": 607
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_global.scss",
+                                            "size": 2752
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_glyphicons.scss",
+                                            "size": 19225
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_variables.scss",
+                                            "size": 614
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "d",
+                                    "name": "desktop",
+                                    "size": 4096,
+                                    "files": [
+                                        {
+                                            "type": "-",
+                                            "name": "_FAQ.scss",
+                                            "size": 1430
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_about.scss",
+                                            "size": 254
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_agreementPages.scss",
+                                            "size": 1043
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_counterBlock.scss",
+                                            "size": 3434
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_documents.scss",
+                                            "size": 632
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_footer.scss",
+                                            "size": 899
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_form.scss",
+                                            "size": 6084
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_header.scss",
+                                            "size": 676
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_howReceive.scss",
+                                            "size": 1136
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_modal.scss",
+                                            "size": 1901
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_receiveMoney.scss",
+                                            "size": 4701
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_rules.scss",
+                                            "size": 1320
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_thanks.scss",
+                                            "size": 1500
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "d",
+                                    "name": "library",
+                                    "size": 4096,
+                                    "files": [
+                                        {
+                                            "type": "-",
+                                            "name": "_bootstrap.scss",
+                                            "size": 152212
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_datepicker.scss",
+                                            "size": 10310
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_fancybox.scss",
+                                            "size": 18594
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_ionRangeSlider.scss",
+                                            "size": 7221
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_mixins.scss",
+                                            "size": 2171
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_owlCarousel.scss",
+                                            "size": 5424
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_rate.scss",
+                                            "size": 633
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "d",
+                                    "name": "mobile",
+                                    "size": 4096,
+                                    "files": [
+                                        {
+                                            "type": "-",
+                                            "name": "_about.scss",
+                                            "size": 301
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_agreement.scss",
+                                            "size": 187
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_asideMenu.scss",
+                                            "size": 1184
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_documents.scss",
+                                            "size": 1141
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_email.scss",
+                                            "size": 1866
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_footer.scss",
+                                            "size": 402
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_form.scss",
+                                            "size": 3087
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_global.scss",
+                                            "size": 2291
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_header.scss",
+                                            "size": 605
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_homepage.scss",
+                                            "size": 3448
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_modal.scss",
+                                            "size": 1291
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_moneyOn.scss",
+                                            "size": 1755
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_onlineZaim.scss",
+                                            "size": 577
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "_zaimOnline.scss",
+                                            "size": 1690
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "mobileStyle.scss",
+                                    "size": 900
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "style.scss",
+                                    "size": 1171
                                 }
                             ]
                         }
@@ -503,8 +917,299 @@
                 },
                 {
                     "type": "-",
+                    "name": "config.rb",
+                    "size": 932
+                },
+                {
+                    "type": "d",
+                    "name": "favicon",
+                    "size": 4096,
+                    "files": [
+                        {
+                            "type": "-",
+                            "name": "android-icon-144x144.png",
+                            "size": 11988
+                        },
+                        {
+                            "type": "-",
+                            "name": "android-icon-192x192.png",
+                            "size": 17237
+                        },
+                        {
+                            "type": "-",
+                            "name": "android-icon-36x36.png",
+                            "size": 2080
+                        },
+                        {
+                            "type": "-",
+                            "name": "android-icon-48x48.png",
+                            "size": 2748
+                        },
+                        {
+                            "type": "-",
+                            "name": "android-icon-72x72.png",
+                            "size": 4457
+                        },
+                        {
+                            "type": "-",
+                            "name": "android-icon-96x96.png",
+                            "size": 6572
+                        },
+                        {
+                            "type": "-",
+                            "name": "apple-icon-114x114.png",
+                            "size": 8477
+                        },
+                        {
+                            "type": "-",
+                            "name": "apple-icon-120x120.png",
+                            "size": 9043
+                        },
+                        {
+                            "type": "-",
+                            "name": "apple-icon-144x144.png",
+                            "size": 11988
+                        },
+                        {
+                            "type": "-",
+                            "name": "apple-icon-152x152.png",
+                            "size": 12848
+                        },
+                        {
+                            "type": "-",
+                            "name": "apple-icon-180x180.png",
+                            "size": 16756
+                        },
+                        {
+                            "type": "-",
+                            "name": "apple-icon-57x57.png",
+                            "size": 3300
+                        },
+                        {
+                            "type": "-",
+                            "name": "apple-icon-60x60.png",
+                            "size": 3588
+                        },
+                        {
+                            "type": "-",
+                            "name": "apple-icon-72x72.png",
+                            "size": 4457
+                        },
+                        {
+                            "type": "-",
+                            "name": "apple-icon-76x76.png",
+                            "size": 4827
+                        },
+                        {
+                            "type": "-",
+                            "name": "apple-icon-precomposed.png",
+                            "size": 17885
+                        },
+                        {
+                            "type": "-",
+                            "name": "apple-icon.png",
+                            "size": 17885
+                        },
+                        {
+                            "type": "-",
+                            "name": "browserconfig.xml",
+                            "size": 281
+                        },
+                        {
+                            "type": "-",
+                            "name": "favicon-16x16.png",
+                            "size": 1125
+                        },
+                        {
+                            "type": "-",
+                            "name": "favicon-32x32.png",
+                            "size": 2015
+                        },
+                        {
+                            "type": "-",
+                            "name": "favicon-96x96.png",
+                            "size": 6572
+                        },
+                        {
+                            "type": "-",
+                            "name": "favicon.ico",
+                            "size": 1150
+                        },
+                        {
+                            "type": "-",
+                            "name": "manifest.json",
+                            "size": 720
+                        },
+                        {
+                            "type": "-",
+                            "name": "ms-icon-144x144.png",
+                            "size": 11988
+                        },
+                        {
+                            "type": "-",
+                            "name": "ms-icon-150x150.png",
+                            "size": 12621
+                        },
+                        {
+                            "type": "-",
+                            "name": "ms-icon-310x310.png",
+                            "size": 35885
+                        },
+                        {
+                            "type": "-",
+                            "name": "ms-icon-70x70.png",
+                            "size": 4283
+                        }
+                    ]
+                },
+                {
+                    "type": "d",
+                    "name": "fonts",
+                    "size": 4096,
+                    "files": [
+                        {
+                            "type": "-",
+                            "name": "glyphicons-halflings-regular.eot",
+                            "size": 20127
+                        },
+                        {
+                            "type": "-",
+                            "name": "glyphicons-halflings-regular.svg",
+                            "size": 108738
+                        },
+                        {
+                            "type": "-",
+                            "name": "glyphicons-halflings-regular.ttf",
+                            "size": 45404
+                        },
+                        {
+                            "type": "-",
+                            "name": "glyphicons-halflings-regular.woff",
+                            "size": 23424
+                        },
+                        {
+                            "type": "-",
+                            "name": "glyphicons-halflings-regular.woff2",
+                            "size": 18028
+                        }
+                    ]
+                },
+                {
+                    "type": "-",
+                    "name": "footer.bak",
+                    "size": 60
+                },
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 17533
+                },
+                {
+                    "type": "-",
+                    "name": "form.php",
+                    "size": 7083
+                },
+                {
+                    "type": "-",
+                    "name": "form1.php",
+                    "size": 7566
+                },
+                {
+                    "type": "-",
+                    "name": "form2.php",
+                    "size": 13917
+                },
+                {
+                    "type": "-",
+                    "name": "form3.php",
+                    "size": 9418
+                },
+                {
+                    "type": "-",
+                    "name": "googlesyndication.php",
+                    "size": 260
+                },
+                {
+                    "type": "-",
                     "name": "header.php",
-                    "size": 9615
+                    "size": 9355
+                },
+                {
+                    "type": "d",
+                    "name": "img",
+                    "size": 4096,
+                    "files": [
+                        {
+                            "type": "-",
+                            "name": "favicon.png",
+                            "size": 1125
+                        }
+                    ]
+                },
+                {
+                    "type": "-",
+                    "name": "index.php",
+                    "size": 6309
+                },
+                {
+                    "type": "-",
+                    "name": "internal-about.php",
+                    "size": 3556
+                },
+                {
+                    "type": "-",
+                    "name": "internal-agreement.php",
+                    "size": 9283
+                },
+                {
+                    "type": "-",
+                    "name": "internal-contract.php",
+                    "size": 7144
+                },
+                {
+                    "type": "-",
+                    "name": "internal-documents.php",
+                    "size": 7561
+                },
+                {
+                    "type": "-",
+                    "name": "internal-faq.php",
+                    "size": 14017
+                },
+                {
+                    "type": "-",
+                    "name": "internal-money.php",
+                    "size": 6859
+                },
+                {
+                    "type": "-",
+                    "name": "internal-offerta.php",
+                    "size": 6366
+                },
+                {
+                    "type": "-",
+                    "name": "internal-receiveMoney.php",
+                    "size": 6859
+                },
+                {
+                    "type": "-",
+                    "name": "internal-rules.php",
+                    "size": 7053
+                },
+                {
+                    "type": "-",
+                    "name": "internal-thanks.php",
+                    "size": 3556
+                },
+                {
+                    "type": "-",
+                    "name": "internal.php",
+                    "size": 9309
+                },
+                {
+                    "type": "-",
+                    "name": "lk.php",
+                    "size": 3556
                 },
                 {
                     "type": "-",
@@ -513,13 +1218,8 @@
                 },
                 {
                     "type": "-",
-                    "name": "internal.php",
-                    "size": 9055
-                },
-                {
-                    "type": "-",
-                    "name": "footer.php",
-                    "size": 17358
+                    "name": "yandexmetrikacounter.php",
+                    "size": 1140
                 }
             ]
         },
