@@ -85,7 +85,7 @@ switch($this->uri->segment(1))
     elseif ($this->uri->segment(1) == 'faq') { require 'internal-faq.php';}
     elseif ($this->uri->segment(1) == 'documents') { require 'internal-documents.php';}
     elseif ($this->uri->segment(1) == 'contract'){ require 'internal-contract.php'; }
-    elseif ($this->uri->segment(1) == 'offerta') { require 'internal-offerta.php';}
+    elseif ($this->uri->segment(1) == 'oferta') { require 'internal-oferta.php';}
     elseif ($this->uri->segment(1) == 'money'){ require 'internal-money.php';}
     elseif ($this->uri->segment(1) == 'lk'){ $my_title = "Спасибо от Zaimhome.ru";  require 'lk.php';}
     elseif ($this->uri->segment(1) == 'rules') { require 'internal-rules.php';}

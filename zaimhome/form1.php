@@ -93,7 +93,7 @@
         <input type="checkbox" value="" id="agree" onclick="checkMe();" checked>
         <i></i>
     </label>
-    <label style="display: none">
+    <label class="hidden">
         <input type="checkbox" id="marketing" value="1" checked>
         <b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
     </label>

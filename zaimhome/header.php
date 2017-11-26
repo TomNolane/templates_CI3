@@ -36,7 +36,6 @@ if(!isset($description))
     <meta name="twitter:image:src" content="https://zaimhome.ru/templates/zaimhome/assets/img/header-logo.png"/>
     <meta name="twitter:url" content="https://zaimhome.ru/"/>
     <meta name="twitter:domain" content="zaimhome.ru"/>
-    
     <!-- favicon -->
     <meta name="msapplication-TileImage" content="/templates/zaimhome/ms-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="57x57" href="/templates/zaimhome/favicon/apple-icon-57x57.png">
@@ -53,12 +52,10 @@ if(!isset($description))
     <link rel="icon" type="image/png" sizes="96x96" href="/templates/zaimhome/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/templates/zaimhome/favicon/favicon-16x16.png">
     <link rel="manifest" href="/templates/zaimhome/favicon/manifest.json">
-
-
     <!-- style -->
     <?php
     echo '<style>';
-    require 'templates/zaimhome/assets/css/style.css';
+    require 'templates/zaimhome/assets/css/style.min.css';
     echo '</style>';
     echo '<style>';
     require 'templates/zaimhome/assets/css/main.css';
@@ -69,23 +66,72 @@ if(!isset($description))
     echo '<style>';
     require 'templates/zaimhome/assets/css/suggestions.min.css';
     echo '</style>'; 
-    echo '<style>';
-    require 'templates/zaimhome/assets/css/tip-twitter.css';
-    echo '</style>';
-    ?>
+    echo '<style>'; 
+    echo '.tip-twitter {
+        opacity:0.8;
+        z-index:1000;
+        text-align:left;
+        border-radius:4px;
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        padding:8px 8px;
+        max-width:200px;
+        color:#fff;
+        background-color:#000; 
+    }
+    .tip-twitter .tip-inner {
+        font:bold 11px/14px "Lucida Grande",sans-serif;
+    }
 
-    <!-- <link rel="stylesheet" href="/templates/zaimhome/assets/css/style.css" type="text/css">
-    <link rel="stylesheet" href="/templates/zaimhome/assets/css/main.css" type="text/css">
-    <link rel="stylesheet" href="/modules/jquery-ui/1.10.4/css/smoothness/jquery-ui-1.10.4.custom.min.css" type="text/css">
-    <link rel="stylesheet" href="/templates/zaimhome/assets/css/suggestions.min.css" type="text/css" />
-    <link rel="stylesheet" href="/modules/poshytip-1.2/src/tip-twitter/tip-twitter.css" type="text/css"> -->
+    /* Configure an arrow image - the script will automatically position it on the correct side of the tip */
+    .tip-twitter .tip-arrow-top {
+        margin-top:-5px;
+        margin-left:-5px; /* approx. half the width to center it */
+        top:0;
+        left:50%;
+        width:9px;
+        height:5px;
+        background:url(/templates/zaimhome/assets/img/tip-twitter_arrows.gif) no-repeat;
+    }
+    .tip-twitter .tip-arrow-right {
+        margin-top:-4px; /* approx. half the height to center it */
+        margin-left:0;
+        top:50%;
+        left:100%;
+        width:5px;
+        height:9px;
+        background:url(/templates/zaimhome/assets/img/tip-twitter_arrows.gif) no-repeat -9px 0;
+    }
+    .tip-twitter .tip-arrow-bottom {
+        margin-top:0;
+        margin-left:-5px; /* approx. half the width to center it */
+        top:100%;
+        left:50%;
+        width:9px;
+        height:5px;
+        background:url(/templates/zaimhome/assets/img/tip-twitter_arrows.gif) no-repeat -18px 0;
+    }
+    .tip-twitter .tip-arrow-left {
+        margin-top:-4px; /* approx. half the height to center it */
+        margin-left:-5px;
+        top:50%;
+        left:0;
+        width:5px;
+        height:9px;
+        background:url(/templates/zaimhome/assets/img/tip-twitter_arrows.gif) no-repeat -27px 0;
+    }
+    body {
+        padding: 0 !important;
+    }
+    '; 
+    echo '</style>'; 
+    ?> 
     <!-- javascript -->
     <?php
     echo '<script>';
     require 'templates/zaimhome/assets/js/oSpP.js';
     echo '</script>';
-    ?>
-    <!-- <script charset="UTF-8" src="/templates/zaimhome/assets/js/oSpP.js" async></script> -->
+    ?> 
     <!--[if lte IE 9]>
     <script src="/modules/html5shiv/html5shiv.js"></script>
     <![endif]-->
@@ -114,9 +160,6 @@ if(!isset($description))
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- <li>
-                        <a href="about">О сервисе</a>
-                    </li> -->
                     <li class="dropdown">
                         <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">О сервисе
                             <span class="caret"></span>
@@ -130,7 +173,6 @@ if(!isset($description))
                             </li> 
                         </ul>
                     </li>
-
                     <li>
                         <a href="/form">Получить деньги</a> 
                     </li> 
@@ -140,7 +182,7 @@ if(!isset($description))
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="/offerta" class="hov">Публичная оферта</a>
+                                <a href="/oferta" class="hov">Публичная оферта</a>
                             </li> 
                             <li>
                                 <a href="/rules" class="hov">Правила предоставления займов</a>
