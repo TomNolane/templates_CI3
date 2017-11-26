@@ -293,7 +293,7 @@ echo '</script>';
             echo $from; 
         }
         elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
-        ?>, 
+        ?>,  
                 prettify_enabled: true,
                 hide_from_to: true,
                 onChange: function (range) {

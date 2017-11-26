@@ -1,3 +1,4 @@
+<?php $from = '15'; $px = '63.974'; ?>
 <footer class="ex-main-footer">
     <div class="container" style="width: 100%">
         <div class="col-sm-3 text-center">
@@ -150,10 +151,140 @@ if ($this->uri->segment(1) == 'form')
 
 
 <?php 
- if ($this->uri->segment(1) == '') {
-    echo '<script type="text/javascript" src="/templates/zaimhome/assets/js/settings_index.js"></script>';
-} 
-?>     
+ if ($this->uri->segment(1) == '') {?>
+    <script>function goToForm() {
+    var tt = $('#ex-slider-val').text();
+    tt = tt.split(" ").join("");
+    setcookie('sldr', tt, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
+    var slider = $("#rangeSlider").data("ionRangeSlider");
+    var from2 = slider.result.from;
+    $('#from_slrd').val(from2);
+    setcookie('sldr2', from2, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
+    var days = $('#period').val();
+    if (days === '') days = 21;
+    setcookie('per', days, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
+    var days2 = $('#period2').val();
+    setcookie('per2', days2, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
+    $('#anketa').submit();
+};
+
+function goToLk() {
+    window.location.href = window.location.origin + '/lk';
+};
+
+function goToUp() {
+    $('html, body').animate({
+        scrollTop: $('.ex-range-scope').offset().top
+    }, 1000);
+}
+
+function goToReceiveMoney() {
+    window.location.href = window.location.origin + '/money';
+}
+$("#rangeSlider").ionRangeSlider({
+    hide_min_max: true,
+    hide_from_to: true,
+    keyboard: true,
+    grid: false,
+    from: <?php 
+
+        if(isset($_GET['amount'])) 
+        {  
+            switch($_GET['amount'])
+            {
+                case '1000': $from = '0' ; break;
+                case '2000': $from = '1' ; break;
+                case '3000': $from = '2' ; break;
+                case '4000': $from = '3' ; break;
+                case '5000': $from = '4' ; break;
+                case '6000': $from = '5' ; break;
+                case '7000': $from = '6' ; break;
+                case '8000': $from = '7' ; break;
+                case '9000': $from = '8' ; break;
+                case '10000': $from = '9' ; break;
+                case '11000': $from = '10' ; break;
+                case '12000': $from = '11' ; break;
+                case '13000': $from = '12' ; break;
+                case '14000': $from = '13' ; break;
+                case '15000': $from = '14' ; break;
+                case '20000': $from = '15' ; break;
+                case '25000': $from = '16' ; break;
+                case '30000': $from = '17' ; break;
+                case '40000': $from = '18' ; break;
+                case '50000': $from = '19' ; break;
+                case '80000': $from = '20' ; break;
+                case '100000': $from = '21' ; break;
+            }
+            echo $from; 
+        }
+        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        ?>,
+    values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
+    onChange: function (range) {
+        if (range.from_value <= 10000) {
+            $('#period').val('7');
+            $('#period2').val('От 61 до 130 дней');
+        } else if (range.from_value <= 15000) {
+            $('#period').val('14');
+            $('#period2').val('От 61 до 130 дней');
+        } else if (range.from_value <= 20000) {
+            $('#period').val('21');
+            $('#period2').val('От 61 до 130 дней');
+        } else if (range.from_value <= 30000) {
+            $('#period').val('21');
+            $('#period2').val('От 61 до 130 дней');
+        } else if (range.from_value <= 50000) {
+            $('#period').val('30');
+            $('#period2').val('От 130 до 250 дней');
+        } else {
+            $('#period').val('30');
+            $('#period2').val('От 250 до 365 дней');
+        }
+    }
+});
+$(document).ready(function () {
+    var slider3 = $('#rangeSlider').data('ionRangeSlider');
+    var slider_plus = true;
+    var n = 10;
+    var slider_init = setInterval(function () {
+        if (slider_plus) {
+            n++;
+        } else {
+            n--;
+        }
+        if (n == 21 && n != <?php echo $from;?>) {
+            slider_plus = false;
+        }else if (n == <?php echo $from;?> && slider_plus == false) {
+            clearInterval(slider_init);
+        }else if (n == 21 && n == <?php echo $from;?>) {
+            clearInterval(slider_init);
+        }
+ 
+        slider3.update({
+            from: n
+        }); 
+        if (n <= 9) {
+            $('#period').val('7');
+            $('#period2').val('От 61 до 130 дней');
+        } else if (n <= 14 && n > 9) {
+            $('#period').val('14');
+            $('#period2').val('От 61 до 130 дней');
+        } else if (n <= 15 && n > 14) {
+            $('#period').val('21');
+            $('#period2').val('От 61 до 130 дней');
+        } else if (n <= 17 && n > 15) {
+            $('#period').val('21');
+            $('#period2').val('От 61 до 130 дней');
+        } else if (n <= 19 && n > 17) {
+            $('#period').val('30');
+            $('#period2').val('От 130 до 250 дней');
+        } else if (n > 19) {
+            $('#period').val('30');
+            $('#period2').val('От 250 до 365 дней');
+        }
+    }, 5);
+});</script>;
+<?php}?>
 
 <?php
     if(isset($_GET['email']))

@@ -1,22 +1,20 @@
-//deleteAllCookies(); 
 function goToForm() {
     var tt = $('#ex-slider-val').text();
     tt = tt.split(" ").join("");
     setcookie('sldr', tt, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
     var slider = $("#rangeSlider").data("ionRangeSlider");
     var from2 = slider.result.from;
-	$('#from_slrd').val(from2);
+    $('#from_slrd').val(from2);
     setcookie('sldr2', from2, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
     var days = $('#period').val();
     if (days === '') days = 21;
     setcookie('per', days, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
     var days2 = $('#period2').val();
-    setcookie('per2', days2, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/'); 
-	$('#anketa').submit();
-   // window.location.href = window.location.origin + '/form';
+    setcookie('per2', days2, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
+    $('#anketa').submit();
 };
 
-function goToLk() { 
+function goToLk() {
     window.location.href = window.location.origin + '/lk';
 };
 
@@ -29,7 +27,6 @@ function goToUp() {
 function goToReceiveMoney() {
     window.location.href = window.location.origin + '/receiveMoney';
 }
-
 $("#rangeSlider").ionRangeSlider({
     hide_min_max: true,
     hide_from_to: true,
@@ -59,10 +56,8 @@ $("#rangeSlider").ionRangeSlider({
         }
     }
 });
-
 $(document).ready(function () {
     var slider3 = $('#rangeSlider').data('ionRangeSlider');
-
     var slider_plus = true;
     var n = 6;
     var slider_init = setInterval(function () {
@@ -76,11 +71,9 @@ $(document).ready(function () {
         } else if (n == 5) {
             clearInterval(slider_init);
         }
-
         slider3.update({
             from: n
         });
-
         if (n <= 9) {
             $('#period').val('7');
             $('#period2').val('От 61 до 130 дней');
@@ -100,6 +93,5 @@ $(document).ready(function () {
             $('#period').val('30');
             $('#period2').val('От 250 до 365 дней');
         }
-
     }, 50);
 });
