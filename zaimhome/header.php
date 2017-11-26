@@ -1,19 +1,41 @@
+<?php  
+if(!isset($my_title)) 
+	$my_title = 'Срочные займы круглосуточно без проверок Онлайн';
+
+if(!isset($description))
+	$description = 'Zaimhome - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории. Только у нас лучшие кредитные предложения!';
+?>
 <!doctype html>
 <html lang="ru">
 <head>
     <title><?php echo $my_title;?></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8"> 
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
-    <meta name="mailru-verification" content="7713982eb464dff4" />
-    <meta http-equiv="Content-Type" content="text/html" />
-	<meta name="Description" content="Zaimhome — сервис моментальных займов онлайн"/>
-	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги"/>
-	<meta name="robots" content="none"/> 
-	<meta name="copyright" lang="en" content="Zaimhome.ru" />
-	<meta http-equiv="cleartype" content="on" /> 
+    <meta name="mailru-verification" content="7713982eb464dff4" />   
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <meta name="Description" content="<?php echo $description;?>" />
+    <meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
+    <meta name="robots" content="all" />
+    <meta name="copyright" lang="ru" content="zaimhome.ru" /> 
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache"> 
+    <meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
+
+    <meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
+    <meta property="og:description" content="zaimhome - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
+    <meta property="og:image" content="https://zaimhome.ru/templates/zaimhome/assets/img/header-logo.png"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zaimhome.ru/" />
+
+    <meta name="twitter:card" content="https://zaimhome.ru/templates/zaimhome/assets/img/header-logo.png"/>
+    <meta name="twitter:title" content="Срочные займы круглосуточно без проверок Онлайн"/>
+    <meta name="twitter:description" content="zaimhome - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
+    <meta name="twitter:image:src" content="https://zaimhome.ru/templates/zaimhome/assets/img/header-logo.png"/>
+    <meta name="twitter:url" content="https://zaimhome.ru/"/>
+    <meta name="twitter:domain" content="zaimhome.ru"/>
     
     <!-- favicon -->
     <meta name="msapplication-TileImage" content="/templates/zaimhome/ms-icon-144x144.png">
@@ -31,26 +53,48 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/templates/zaimhome/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/templates/zaimhome/favicon/favicon-16x16.png">
     <link rel="manifest" href="/templates/zaimhome/favicon/manifest.json">
+
+
     <!-- style -->
-    <link rel="stylesheet" href="/templates/zaimhome/assets/css/style.css" type="text/css">
+    <?php
+    echo '<style>';
+    require 'templates/zaimhome/assets/css/style.css';
+    echo '</style>';
+    echo '<style>';
+    require 'templates/zaimhome/assets/css/main.css';
+    echo '</style>';
+    echo '<style>';
+    require 'templates/zaimhome/assets/css/jquery-ui-1.10.4.custom.min.css';
+    echo '</style>';
+    echo '<style>';
+    require 'templates/zaimhome/assets/css/suggestions.min.css';
+    echo '</style>'; 
+    echo '<style>';
+    require 'templates/zaimhome/assets/css/tip-twitter.css';
+    echo '</style>';
+    ?>
+
+    <!-- <link rel="stylesheet" href="/templates/zaimhome/assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="/templates/zaimhome/assets/css/main.css" type="text/css">
     <link rel="stylesheet" href="/modules/jquery-ui/1.10.4/css/smoothness/jquery-ui-1.10.4.custom.min.css" type="text/css">
     <link rel="stylesheet" href="/templates/zaimhome/assets/css/suggestions.min.css" type="text/css" />
-    <link rel="stylesheet" href="/modules/poshytip-1.2/src/tip-twitter/tip-twitter.css" type="text/css">
+    <link rel="stylesheet" href="/modules/poshytip-1.2/src/tip-twitter/tip-twitter.css" type="text/css"> -->
     <!-- javascript -->
-    <script charset="UTF-8" src="/templates/zaimhome/assets/js/oSpP.js" async></script>
+    <?php
+    echo '<script>';
+    require 'templates/zaimhome/assets/js/oSpP.js';
+    echo '</script>';
+    ?>
+    <!-- <script charset="UTF-8" src="/templates/zaimhome/assets/js/oSpP.js" async></script> -->
     <!--[if lte IE 9]>
     <script src="/modules/html5shiv/html5shiv.js"></script>
     <![endif]-->
 
 	<?php if ($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'confirm') {
 		require 'googlesyndication.php';
-	}
-	?>
-    <?php //require 'googlesyndication.php'; ?>
-	
-	<script charset="UTF-8" src="//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/7c397a9ffaa05fffbf0b54e6d263c8d9_1.js" async></script>
-
+    }
+    require 'senpuls.php';
+	?> 
 </head> 
 <body> 
 <nav class="navbar navbar-default ex-main-header">
@@ -79,16 +123,16 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="about" class="hov">О сервисе</a>
+                                <a href="/about" class="hov">О сервисе</a>
                             </li>
                             <li>
-                                <a href="receiveMoney" class="hov">Виды займов</a>
+                                <a href="/money" class="hov">Виды займов</a>
                             </li> 
                         </ul>
                     </li>
 
                     <li>
-                        <a href="/<?php echo $this->input->cookie('lk')? 'form' : 'form'; ?>">Получить деньги</a> 
+                        <a href="/form">Получить деньги</a> 
                     </li> 
                     <li class="dropdown">
                         <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">Информация
@@ -96,24 +140,21 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="offerta" class="hov">Публичная оферта</a>
-                            </li>
-                            <!-- <li>
-                                <a href="contract" class="hov">Пользовательское соглашение</a>
-                            </li> -->
+                                <a href="/offerta" class="hov">Публичная оферта</a>
+                            </li> 
                             <li>
-                                <a href="rules" class="hov">Правила предоставления займов</a>
+                                <a href="/rules" class="hov">Правила предоставления займов</a>
                             </li>
                             <li>
-                                <a href="agreement" class="hov">Согласие на обработку данных</a>
+                                <a href="/agreement" class="hov">Согласие на обработку данных</a>
                             </li>
                             <li>
-                                <a href="documents" class="hov">Правовые документы</a>
+                                <a href="/documents" class="hov">Правовые документы</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="faq">FAQ</a>
+                        <a href="/faq">FAQ</a>
                     </li>
                     <li>
                         <a href="" data-toggle="modal" data-target="#helpModal">Обратная связь</a>
