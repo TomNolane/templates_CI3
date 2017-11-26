@@ -1,4 +1,4 @@
-<?php $from = '15'; ?>
+<?php $from = '15'; $px = '63.974'; ?>
 <div id="ya-rtb">
     <div id="yandex_rtb_R-A-249178-1"></div>
     <div id="yandex_rtb_R-A-249178-2"></div>
@@ -395,8 +395,8 @@ echo '</script>';
                     13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000
                 ],
                 min: 1000,
-                max: 100000,
-                postfix: ' руб',
+                max: 100000, 
+                // postfix: ' руб',
                 from: <?php 
 
         if(isset($_GET['amount'])) 
@@ -430,13 +430,87 @@ echo '</script>';
         }
         elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
         ?>,
+        prettify_enabled: true,
+                hide_from_to: true,
                 onStart: function (range) {
                     $('.form-sum-value').text(
                         <?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>  + ' Р'
                     ); 
-                }, 
+
+
+                    <?php 
+
+                    if(isset($_GET['amount'])) 
+                    {  
+                        switch($_GET['amount'])
+                        {
+                            case '1000': $px = '0' ; break;
+                            case '2000': $px = '4.26493' ; break;
+                            case '3000': $px = '8.52986' ; break;
+                            case '4000': $px = '12.7948' ; break;
+                            case '5000': $px = '17.0597' ; break;
+                            case '6000': $px = '21.3247' ; break;
+                            case '7000': $px = '25.5896' ; break;
+                            case '8000': $px = '29.8545' ; break;
+                            case '9000': $px = '34.1195' ; break;
+                            case '10000': $px = '38.3844' ; break;
+                            case '11000': $px = '42.6493' ; break;
+                            case '12000': $px = '46.9142' ; break;
+                            case '13000': $px = '51.1792' ; break;
+                            case '14000': $px = '55.4441' ; break;
+                            case '15000': $px = '59.709' ; break;
+                            case '20000': $px = '63.974' ; break;
+                            case '25000': $px = '68.2389' ; break;
+                            case '30000': $px = '72.5038' ; break;
+                            case '40000': $px = '76.7688' ; break;
+                            case '50000': $px = '81.0337' ; break;
+                            case '80000': $px = '85.2986' ; break;
+                            case '100000': $px = '89.5636' ; break;
+                        } 
+                    }
+                    elseif(isset($_POST['amount'])) 
+                    {  
+                        switch($_POST['amount'])
+                        {
+                            case '1000': $px = '0' ; break;
+                            case '2000': $px = '4.26493' ; break;
+                            case '3000': $px = '8.52986' ; break;
+                            case '4000': $px = '12.7948' ; break;
+                            case '5000': $px = '17.0597' ; break;
+                            case '6000': $px = '21.3247' ; break;
+                            case '7000': $px = '25.5896' ; break;
+                            case '8000': $px = '29.8545' ; break;
+                            case '9000': $px = '34.1195' ; break;
+                            case '10000': $px = '38.3844' ; break;
+                            case '11000': $px = '42.6493' ; break;
+                            case '12000': $px = '46.9142' ; break;
+                            case '13000': $px = '51.1792' ; break;
+                            case '14000': $px = '55.4441' ; break;
+                            case '15000': $px = '59.709' ; break;
+                            case '20000': $px = '63.974' ; break;
+                            case '25000': $px = '68.2389' ; break;
+                            case '30000': $px = '72.5038' ; break;
+                            case '40000': $px = '76.7688' ; break;
+                            case '50000': $px = '81.0337' ; break;
+                            case '80000': $px = '85.2986' ; break;
+                            case '100000': $px = '89.5636' ; break;
+                        } 
+                    } 
+                    ?>
+
+                    $('.irs-single').text('').append("<span>" + <?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?> + " руб</span>"); 
+                    <?php $px = ($px - 3.5) . '%';?>
+                    $('.irs-single').css({'margin-left': '<?php echo $px; ?>'}); 
+                    $('.irs-single').css('margin-top', '30'); 
+                },  
                 onChange: function (range) {
                     $('.form-sum-value').text(range.from_value + ' Р');
+
+                    $('.irs-single').text('').append("<span>" + range.from_value + " руб</span>");
+                    var ff = parseFloat($('.irs-slider.single').css('left').replace('px', '')) - 12;
+                    $('.irs-single').css('margin-left', ff);
+                    $('.irs-single').css('margin-top', '30');
+
                     
                     if (range.from_value <= 10000) {
                         $('#period').val('7');
