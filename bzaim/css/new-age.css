@@ -145,6 +145,7 @@ body{webkit-tap-highlight-color:#222222;}
     z-index: 16;
     display: inline-block;
     height: 40px;
+    border-radius: 15px;
     width: 40px;
     position: fixed;
     bottom: 40px;

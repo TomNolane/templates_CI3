@@ -7,7 +7,7 @@
 	</div>
 </div> 
  
-<input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 21 : $_POST['period']; ?>" />
+<input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 15 : $_POST['period']; ?>" />
 
 <div class="form-group">
 	<label class="col-sm-4 control-label label-required green">Срок

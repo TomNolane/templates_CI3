@@ -232,6 +232,8 @@ $(document).ready(function(){
 		if (validate1()) {
 			send_form();
             $('#step2').removeClass('off');
+            $('.spec_footer4').css('visibility','hidden');
+            $('.spec_footer5').css('visibility','hidden'); 
 			$('.form-steps-green-line').addClass('step2');
 			$('.form-steps-line').show();
 			$('#form-steps a[href="#form2"]').tab('show');
