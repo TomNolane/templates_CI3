@@ -130,6 +130,12 @@ if(!isset($description))
 		'; 
 		echo '</style>'; 
 
+		if ($this->uri->segment(1) == 'lk') {
+			echo '<style>'; 
+			require "templates/godzaim/css/style_lk.css"; 
+			echo '</style>'; 
+		}
+
 		//js
 		echo '<script>'; 
 		require "modules/jquery/jquery-1.11.3.min.js"; 
