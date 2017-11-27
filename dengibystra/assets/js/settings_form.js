@@ -453,7 +453,8 @@ $(document).ready(function () {
     $('#next1').click(function () { 
         if (validate1()) { 
             $('input[name="step"]').val('1');
-            send_form(); 
+            send_form();
+            $('.spec_footer4').css('visibility','hidden'); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstTabContent').removeClass('in active');
             $('#secondTabContent').addClass('in active');

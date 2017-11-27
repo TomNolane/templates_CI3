@@ -38,8 +38,6 @@ if(!isset($description))
 	<meta name="twitter:url" content="https://bzaim5.ru/"/>
 	<meta name="twitter:domain" content="bzaim5.ru"/>
     <link rel="shortcut icon" type="image/png" href="/templates/bzaim/img/favicon.png" /> 
-
-    
      <!-- CSS --> 
     <?php 
     echo '<style>'; 
