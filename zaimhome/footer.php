@@ -3,9 +3,9 @@
     <div class="container" style="width: 100%">
         <div class="col-sm-3 text-center">
             <div class="ex-footer-logo">
-                <img src="/templates/zaimhome/assets/img/header-logo.png" alt="Missing image" style="margin-top: 30px;">
+                <a href="/"><img src="/templates/zaimhome/assets/img/header-logo.png" alt="Missing image" style="margin-top: 30px;"></a>
             </div>
-            <p>Сервис выгодного онлайн займа</p>
+            <p class="special_footer3">Сервис выгодного онлайн займа</p>
         </div>
         <div class="col-sm-3 small">
             <p>Сервис по подбору выгодных онлайн займов
