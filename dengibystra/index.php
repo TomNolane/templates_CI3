@@ -29,7 +29,6 @@
             <div class="ex-range-scope">
                 <div class="row">
                 <form id="anketa" action="/form" method="post"> 
-
                 <input type="hidden" id="period" name="period" value="21" />
                 <input type="hidden" id="form_slrd" name="form_slrd" value="15" /> 
                 <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>"> 
@@ -44,7 +43,6 @@
                                 <span class="ex-probability"></span>
                             </figure>
                             <div class="ex-slider-info">
-
                             </div>
                         </div>
                     </div>
@@ -61,7 +59,7 @@
     <div class="container">
         <div class="row">
             <h1 class="hidden-xs hidden-sm visible-md visible-lg">Как получить деньги сейчас?</h1> 
-			<h1 class="hidden-md hidden-lg visible-xs visible-sm" style="margin-top: 10px; margin-bottom: 10px;">Как получить деньги сейчас?</h1> 
+			<h1 class="hidden-md hidden-lg visible-xs visible-sm special_ind42">Как получить деньги сейчас?</h1> 
             <div class="col-md-6 hidden-xs hidden-sm visible-md visible-lg">
                 <div class="ex-get-money-block">
                 <a href="/form"><img src="templates/dengibystra/assets/img/calc.png" alt="calc.png" class="ex-vh-center"></a>
@@ -74,15 +72,15 @@
                     <p>После выбора суммы вам необходимо заполнить простую анкету внеся корректные данные</p>
                 </div>
             </div> 
-			<div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm" style="margin-top: 0px;">
-                <div class="ex-get-money-steps" style="padding-top: 0px;">
-                    <span style="float: left; margin-right: 10px;">1</span>
-                    <h3 style="font-size: 18px; margin-top: 0px;">Выберите сумму займа и заполните простую анкету</h3>
+			<div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm special_ind34">
+                <div class="ex-get-money-steps special_ind35">
+                    <span clas="special_ind36">1</span>
+                    <h3 class="special_ind41">Выберите сумму займа и заполните простую анкету</h3>
                     <p>После выбора суммы вам необходимо заполнить простую анкету внеся корректные данные</p>
                 </div>
             </div>
             <div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm">
-				<div class="ex-get-money-block" style="margin-bottom: 15px;">
+				<div class="ex-get-money-block special_ind38">
 					<a href="/form"><img src="templates/dengibystra/assets/img/calc.png" alt="calc.png" class="ex-vh-center"></a>
                 </div> 
             </div> 
@@ -100,15 +98,15 @@
                     <p>После заполнения анкеты вам будут доступны организации с автоматически одобренным займом. В большинстве случаев уже через 15 минут деньги вам переведут</p>
                 </div>
             </div> 
-			<div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm" style="margin-top: 0px;">
-			<div class="ex-get-money-steps" style="padding-top: 0px;">
-				<span style="float: left; margin-right: 10px;">2</span>
-				<h3 style="font-size: 20px; margin-top: 0px;">Все происходит практически мгновенно</h3>
+			<div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm special_ind34">
+			<div class="ex-get-money-steps special_ind35">
+				<span class="special_ind40">2</span>
+				<h3 class="special_ind39">Все происходит практически мгновенно</h3>
 				<p>После заполнения анкеты вам будут доступны организации с автоматически одобренным займом. В большинстве случаев уже через 15 минут деньги вам переведут</p>
                 </div> 
             </div>
             <div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm">
-                <div class="ex-get-money-block" style="margin-bottom: 15px;">
+                <div class="ex-get-money-block special_ind38">
                    <a href="/form"> <img src="templates/dengibystra/assets/img/spasibo.png" alt="spasibo.png" class="ex-vh-center"></a>
                 </div>
             </div>
@@ -126,15 +124,15 @@
                     <p>На карту VISA, MAESTRO, QIWI кошелёк, Яндекс.Деньги, через систему CONTACT, банковский счёт</p>
                 </div>
             </div> 
-			<div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm" style="margin-top: 0px;">
-                <div class="ex-get-money-steps" style="padding-top: 0px;">
-                    <span style="float: left; margin-right: 10px;">3</span>
-                    <h3 style="font-size: 20px; margin-top: 0px;">Получите деньги</h3>
+			<div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm special_ind34">
+                <div class="ex-get-money-steps special_ind35">
+                    <span class="special_ind36">3</span>
+                    <h3 class="special_ind37">Получите деньги</h3>
                     <p>На карту VISA, MAESTRO, QIWI кошелёк, Яндекс.Деньги, через систему CONTACT, банковский счёт</p>
                 </div>
             </div>
             <div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm">
-				<div class="ex-get-money-block" style="margin-bottom: 15px;">
+				<div class="ex-get-money-block special_ind38">
 					<a href="/form"><img src="templates/dengibystra/assets/img/screen.png" alt="screen.png" class="ex-vh-center"></a>
                 </div> 
             </div>
@@ -153,8 +151,8 @@
                         ваши финансовые проблемы. Вы получите займ мгновенно - буквально через 15 минут - и сможете распоряжаться
                         им по собственному усмотрению.</p>
                 </div>
-				<div class="ex-info-block hidden-md hidden-lg visible-xs visible-sm" style="margin-top: 15px;margin-bottom: 0px;">
-                    <h3 id="ddd" style="margin-top: 0px;">О проекте</h3> 
+				<div class="ex-info-block hidden special_ind33">
+                    <h3 id="ddd special_ind34">О проекте</h3> 
                     <p>Dengibystra - это самый удобный и выгодный сервис по получению онлайн-займов. Благодаря используемым
                         принципам обработки данных нашим клиентом может стать любой гражданин России. Даже если вы пенсионер,
                         студент или у вас плохая кредитная история, не бойтесь обратиться за помощью. Мы оперативно решим
@@ -205,9 +203,6 @@
                     <p>Услуги на проекте «Сервис» оказываются юридическим лицом ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН
                         222511216499.
                         <br>
-                        <!-- , которое действует в интересах
-                        и по поручению организации ООО Микрокредитная Компания «Берлин»  -->
-                        <!-- Свидетельство о внесении сведений о юридическом лице в государственный реестр микрофинансовых организаций № 1703045008133, которая -->
                         На основании ФЗ "О потребительском кредите (займе)" от 21.12.2013 N 353-ФЗ имеет право осуществлять профессиональную деятельность
                         по предоставлению потребительских займов.
                     </p>
@@ -218,7 +213,6 @@
                         банком или кредитором, и не несёт ответственности за любые заключенные договоры кредитования или
                         условия. Чтобы оформить заявку на получение займа, Вам необходимо пройти регистрацию и аутентификацию
                         на проекте.
-                        <!-- Ссылка на документы и разрешительную документацию организаций в интересах которых действует юридическое лицо ООО «Гутлид». -->
                     </p>
                 </div>
                 <div class="ex-info-block hidden-xs hidden-sm">
@@ -242,5 +236,4 @@
         </div>
     </div>
 </div>
-
 <?php include 'footer.php';?>
