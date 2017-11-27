@@ -371,39 +371,122 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
             values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000,
                 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000
             ],
+            postfix: ' Р',
+            prettify_enabled: true,
+            hide_from_to: false,
             from: <?php 
-            if(isset($_GET['amount'])) 
-            {  
-                switch($_GET['amount'])
-                {
-                    case '1000': $from = '0' ; break;
-                    case '2000': $from = '1' ; break;
-                    case '3000': $from = '2' ; break;
-                    case '4000': $from = '3' ; break;
-                    case '5000': $from = '4' ; break;
-                    case '6000': $from = '5' ; break;
-                    case '7000': $from = '6' ; break;
-                    case '8000': $from = '7' ; break;
-                    case '9000': $from = '8' ; break;
-                    case '10000': $from = '9' ; break;
-                    case '11000': $from = '10' ; break;
-                    case '12000': $from = '11' ; break;
-                    case '13000': $from = '12' ; break;
-                    case '14000': $from = '13' ; break;
-                    case '15000': $from = '14' ; break;
-                    case '20000': $from = '15' ; break;
-                    case '25000': $from = '16' ; break;
-                    case '30000': $from = '17' ; break;
-                    case '40000': $from = '18' ; break;
-                    case '50000': $from = '19' ; break;
-                    case '80000': $from = '20' ; break;
-                    case '100000': $from = '21' ; break;
-                }
-                echo $from; 
+        if(isset($_GET['amount'])) 
+        {  
+            switch($_GET['amount'])
+            {
+                case '1000': $from = '0' ; break;
+                case '2000': $from = '1' ; break;
+                case '3000': $from = '2' ; break;
+                case '4000': $from = '3' ; break;
+                case '5000': $from = '4' ; break;
+                case '6000': $from = '5' ; break;
+                case '7000': $from = '6' ; break;
+                case '8000': $from = '7' ; break;
+                case '9000': $from = '8' ; break;
+                case '10000': $from = '9' ; break;
+                case '11000': $from = '10' ; break;
+                case '12000': $from = '11' ; break;
+                case '13000': $from = '12' ; break;
+                case '14000': $from = '13' ; break;
+                case '15000': $from = '14' ; break;
+                case '20000': $from = '15' ; break;
+                case '25000': $from = '16' ; break;
+                case '30000': $from = '17' ; break;
+                case '40000': $from = '18' ; break;
+                case '50000': $from = '19' ; break;
+                case '80000': $from = '20' ; break;
+                case '100000': $from = '21' ; break;
             }
-            elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
-            ?>, 
+            echo $from; 
+        }
+        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        ?>, 
             onChange: function (range) {
+                amount = range.from_value;
+                $('#form_slrd').val(range.from);
+                updateComm();
+            }
+        });
+
+        var updateComm = function () {
+            if (amount <= 30000) {
+                percent = 1.3;
+                comm1 = Math.ceil((amount / 100) * percent) * day;
+                comm2 = 0;
+            }
+            if (amount > 30000) {
+                percent = 0.2;
+                comm1 = 390 * day;
+                comm2 = Math.ceil(((amount - 30000) / 100) * percent) * day;
+            }
+            if (amount < 30000) {
+                prob = 97;
+                current_day = 'от 61 дня';
+            } else if (amount < 50000) {
+                prob = 97;
+                current_day = 'от 130 дней';
+            } else if (amount >= 50000 && amount <= 70000) {
+                prob = 72;
+                current_day = 'от 180 дней';
+            } else {
+                prob = 64;
+                current_day = 'до 365 дней';
+            } 
+            comm = comm1 + comm2;
+            summ = amount + comm;
+            $('.current_amount').text(String(amount).split(/(?=(?:\d{3})+$)/).join(' '));
+            $('.current_comm').text(comm);
+            //$('.current_percent').text(percent);
+            $('.current_prob').text(prob);
+            $('.current_day').text(current_day);
+            $('.current_summ').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
+            //console.log(comm1 +' '+comm2);
+        };
+        $('.amount3').ionRangeSlider({
+            values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000,
+                14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000
+            ],
+            postfix: ' Р',
+            prettify_enabled: true,
+            hide_from_to: false,
+            from: <?php 
+        if(isset($_GET['amount'])) 
+        {  
+            switch($_GET['amount'])
+            {
+                case '1000': $from = '0' ; break;
+                case '2000': $from = '1' ; break;
+                case '3000': $from = '2' ; break;
+                case '4000': $from = '3' ; break;
+                case '5000': $from = '4' ; break;
+                case '6000': $from = '5' ; break;
+                case '7000': $from = '6' ; break;
+                case '8000': $from = '7' ; break;
+                case '9000': $from = '8' ; break;
+                case '10000': $from = '9' ; break;
+                case '11000': $from = '10' ; break;
+                case '12000': $from = '11' ; break;
+                case '13000': $from = '12' ; break;
+                case '14000': $from = '13' ; break;
+                case '15000': $from = '14' ; break;
+                case '20000': $from = '15' ; break;
+                case '25000': $from = '16' ; break;
+                case '30000': $from = '17' ; break;
+                case '40000': $from = '18' ; break;
+                case '50000': $from = '19' ; break;
+                case '80000': $from = '20' ; break;
+                case '100000': $from = '21' ; break;
+            }
+            echo $from; 
+        }
+        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        ?>, 
+        onChange: function (range) { 
                 if (range.from_value <= 10000) {
                     $('#p').val('7');
                     $('#period2').val('От 61 до 130 дней');
@@ -423,13 +506,48 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
                     $('#p').val('30');
                     $('#period2').val('От 250 до 365 дней');
                 }
-                $('#form_slrd').val(range.from);
+                $('#form_slrd').val(range.from); 
             }
         });
 
+        var updateComm = function () {
+            if (amount <= 30000) {
+                percent = 1.3;
+                comm1 = Math.ceil((amount / 100) * percent) * day;
+                comm2 = 0;
+            }
+            if (amount > 30000) {
+                percent = 0.2;
+                comm1 = 390 * day;
+                comm2 = Math.ceil(((amount - 30000) / 100) * percent) * day;
+            }
+            if (amount < 30000) {
+                prob = 97;
+                current_day = 'от 61 дня';
+            } else if (amount < 50000) {
+                prob = 97;
+                current_day = 'от 130 дней';
+            } else if (amount >= 50000 && amount <= 70000) {
+                prob = 72;
+                current_day = 'от 180 дней';
+            } else {
+                prob = 64;
+                current_day = 'до 365 дней';
+            } 
+            comm = comm1 + comm2;
+            summ = amount + comm;
+            $('.current_amount').text(String(amount).split(/(?=(?:\d{3})+$)/).join(' '));
+            $('.current_comm').text(comm);
+            //$('.current_percent').text(percent);
+            $('.current_prob').text(prob);
+            $('.current_day').text(current_day);
+            $('.current_summ').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
+            //console.log(comm1 +' '+comm2);
+        }; 
         
         <?php if ($this->uri->segment(1) == '') { ?>
         var slider = $('.amount').data('ionRangeSlider');
+        var slider2 = $('.amount2').data('ionRangeSlider');
         var slider_plus = true;
         var n = 10;
         var slider_init = setInterval(function () {
@@ -449,7 +567,9 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
         slider.update({
             from: n
         });
-
+        slider2.update({
+            from: n
+        });
         $('#form_slrd').val(n);
 
         if (slider.result.from_value <= 30000) {
@@ -485,7 +605,7 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
         $('.current_day').text(current_day);
         $('.current_summ').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
 
-    }, 50);
+    }, 5);
 <?php } ?>
 
         $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";

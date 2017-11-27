@@ -463,7 +463,13 @@ if(!isset($description))
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <?php if ($this->uri->segment(1) != 'form') {
-        require 'templates/common/googlesyndication.php';
+        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-8603290384746847",
+            enable_page_level_ads: true
+          });
+        </script>';
     }?>
     <?php 
     require 'sendpuls.php';
