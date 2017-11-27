@@ -101,8 +101,8 @@ footer .menu a{font-size:10px;font-family:'Myriad Pro';font-weight:400;}
 #circle, .tip-twitter{display:none;}
 .navbar .navbar-nav{width:100%;padding:0px 10%;}
 header .header-content{padding:0px;}
-header .header-content .header-content-inner{padding:20px;}
-.h1, h1{font-size:20px;}
+header .header-content .header-content-inner{padding:10px;}
+.h1, h1{font-size:20px;line-height:0.4;}
 #birthdate, #passportdate{user-select:none;}
 .title.lk{font-size:30px;padding:0;}
 #email_confirm, #email_later{padding:10px;}
@@ -127,3 +127,6 @@ header .header-content .header-content-inner h1{margin-top:0;margin-bottom:0;fon
 background-color:#454040 !important;}
 .navbar-nav > li > a{color:#ffffff; text-transform:uppercase; font-size: 16px; }
 .navbar-nav > li > a:hover{color: #000000;}
+.footer_spec99 {
+    font-size: 10px;
+}

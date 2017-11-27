@@ -1,3 +1,4 @@
+<?php $from = '15'; $px = '63.974'; ?>
 <div class="buffer"></div>
 <div id="ya-rtb">
     <div id="yandex_rtb_R-A-243981-3"></div>
@@ -13,18 +14,16 @@
                         <img src="/templates/bzaim/img/logo-f.png" align="" alt="logo" class="logo">
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12">
+                <div class="col-md-4 col-xs-12 spec_footer4">
                     <p>Сервис по подбору выгодных онлайн займов</p>
                     <p>находящийся по адресу</p>
-                    <p>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201</p>
-                    <p>
-                        <a href="mailto:support@bzaim5.ru" target="_blank"> | support@bzaim5.ru</a><span class="hidden-xs hidden-sm"> | +7(495) 006 19 61</span></p>
+                    <p>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201  <a href="mailto:support@bzaim5.ru" target="_blank"> | support@bzaim5.ru</a><span class="hidden-xs hidden-sm"> | +7(495) 006 19 61</span></p>
                 </div>
-                <div class="col-md-6 hidden-xs hidden-sm">
+                <div class="col-md-6 hidden-xs hidden-sm spec_footer5">
                         <div class="row">
                             <div class="col-sm-12 great-support-box wow fadeInLeft">
                                 <div class="great-support-box-text great-support-box-text-left">
-                                    <p style="font-size: 10px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61
+                                    <p class="footer_spec99">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61
                                         до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная
                                         0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10
                                         недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате
@@ -33,7 +32,7 @@
                                 </div>
                             </div>
                         </div> 
-                    <div style="font-size: 10px;">
+                    <div class="footer_spec99">
                         ИП «Бабакова К.К.»ОГРНИП 316222500122426 ИНН 222511216499.
                     </div>
                 </div>
@@ -42,17 +41,36 @@
     </div>
 </footer>
 </div>
+
+
+<?php
+    echo '<script>';
+    require 'templates/bzaim/vendor/jquery/jquery.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/bzaim/vendor/bootstrap/js/bootstrap.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/bzaim/js/get_parameter.js';
+    echo '</script>';
+?>
 <!-- jQuery -->
-<script src="/templates/bzaim/vendor/jquery/jquery.min.js"></script>
+<!-- <script src="/templates/bzaim/vendor/jquery/jquery.min.js"></script> -->
 <!-- Bootstrap Core JavaScript -->
-<script src="/templates/bzaim/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- <script src="/templates/bzaim/vendor/bootstrap/js/bootstrap.min.js"></script> -->
 
 <!-- Plugin JavaScript -->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
 <!-- Theme JavaScript -->
 
-<script src="/modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js"></script>
-<script src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script>
+<!-- <script src="/modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js"></script>
+<script src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script> -->
 <!--[if lt IE 10]>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
@@ -99,11 +117,25 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
         }
         echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
     }  
-        echo '<script src="/templates/bzaim/js/validate.js?ver=5"></script>
-        <script src="/modules/poshytip-1.2/src/jquery.poshytip.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-        <script src="/modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js"></script> 
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.suggestions/16.8/js/jquery.suggestions.min.js"></script>
+    echo '<script>';
+    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+    echo '</script>'; 
+    echo '<script>';
+    require 'templates/bzaim/js/validate.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/bzaim/js/jquery.form-validator.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/bzaim/js/jquery.suggestions.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/bzaim/js/settings.js';
+    echo '</script>';
+        echo '
         <script type="text/javascript">
             $("#email").suggestions({
                 serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
@@ -112,8 +144,7 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
                 count: 3,
                 scrollOnFocus: false
             });    
-        </script>';
-        echo '<script src="/templates/bzaim/js/settings.js"></script>';
+        </script>'; 
         
     }
     elseif($this->uri->segment(1) == 'lk')
@@ -254,8 +285,8 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
             }
         });
 
-        var amount = 15000;
-        var day = 10;
+        var amount = 20000;
+        var day = 15;
         $('.amount').ionRangeSlider({
             values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000,
                 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000
@@ -263,8 +294,41 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
             postfix: ' Р',
             prettify_enabled: true,
             hide_from_to: false,
+            from: <?php 
+        if(isset($_GET['amount'])) 
+        {  
+            switch($_GET['amount'])
+            {
+                case '1000': $from = '0' ; break;
+                case '2000': $from = '1' ; break;
+                case '3000': $from = '2' ; break;
+                case '4000': $from = '3' ; break;
+                case '5000': $from = '4' ; break;
+                case '6000': $from = '5' ; break;
+                case '7000': $from = '6' ; break;
+                case '8000': $from = '7' ; break;
+                case '9000': $from = '8' ; break;
+                case '10000': $from = '9' ; break;
+                case '11000': $from = '10' ; break;
+                case '12000': $from = '11' ; break;
+                case '13000': $from = '12' ; break;
+                case '14000': $from = '13' ; break;
+                case '15000': $from = '14' ; break;
+                case '20000': $from = '15' ; break;
+                case '25000': $from = '16' ; break;
+                case '30000': $from = '17' ; break;
+                case '40000': $from = '18' ; break;
+                case '50000': $from = '19' ; break;
+                case '80000': $from = '20' ; break;
+                case '100000': $from = '21' ; break;
+            }
+            echo $from; 
+        }
+        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        ?>, 
             onChange: function (range) {
                 amount = range.from_value;
+                $('#form_slrd').val(range.from);
                 updateComm();
             }
         });
@@ -292,7 +356,7 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
             } else {
                 prob = 64;
                 current_day = 'до 365 дней';
-            }
+            } 
             comm = comm1 + comm2;
             summ = amount + comm;
             $('.current_amount').text(String(amount).split(/(?=(?:\d{3})+$)/).join(' '));
@@ -307,6 +371,38 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
             values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000,
                 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000
             ],
+            from: <?php 
+            if(isset($_GET['amount'])) 
+            {  
+                switch($_GET['amount'])
+                {
+                    case '1000': $from = '0' ; break;
+                    case '2000': $from = '1' ; break;
+                    case '3000': $from = '2' ; break;
+                    case '4000': $from = '3' ; break;
+                    case '5000': $from = '4' ; break;
+                    case '6000': $from = '5' ; break;
+                    case '7000': $from = '6' ; break;
+                    case '8000': $from = '7' ; break;
+                    case '9000': $from = '8' ; break;
+                    case '10000': $from = '9' ; break;
+                    case '11000': $from = '10' ; break;
+                    case '12000': $from = '11' ; break;
+                    case '13000': $from = '12' ; break;
+                    case '14000': $from = '13' ; break;
+                    case '15000': $from = '14' ; break;
+                    case '20000': $from = '15' ; break;
+                    case '25000': $from = '16' ; break;
+                    case '30000': $from = '17' ; break;
+                    case '40000': $from = '18' ; break;
+                    case '50000': $from = '19' ; break;
+                    case '80000': $from = '20' ; break;
+                    case '100000': $from = '21' ; break;
+                }
+                echo $from; 
+            }
+            elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+            ?>, 
             onChange: function (range) {
                 if (range.from_value <= 10000) {
                     $('#p').val('7');
@@ -327,64 +423,70 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
                     $('#p').val('30');
                     $('#period2').val('От 250 до 365 дней');
                 }
+                $('#form_slrd').val(range.from);
             }
         });
 
-        var slider = $('.amount').data('ionRangeSlider');
+        
         <?php if ($this->uri->segment(1) == '') { ?>
+        var slider = $('.amount').data('ionRangeSlider');
         var slider_plus = true;
-        var n = 6;
+        var n = 10;
         var slider_init = setInterval(function () {
-            if (slider_plus) {
-                n++;
-            } else {
-                n--;
-            }
-            if (n == 21) {
-                slider_plus = false;
-            } else if (n == 5) {
-                clearInterval(slider_init);
-            }
+        if (slider_plus) {
+            n++;
+        } else {
+            n--;
+        }
+        if (n == 21 && n != <?php echo $from; ?>) {
+            slider_plus = false;
+        }else if (n == <?php echo $from; ?> && slider_plus == false) {
+            clearInterval(slider_init);
+        }else if (n == 21 && n == <?php echo $from; ?>) {
+            clearInterval(slider_init);
+        }
 
-            slider.update({
-                from: n
-            });
+        slider.update({
+            from: n
+        });
 
-            if (slider.result.from_value <= 30000) {
-                percent = 1.3;
-                comm1 = Math.ceil((slider.result.from_value / 100) * percent) * day;
-                comm2 = 0;
-            }
-            if (slider.result.from_value > 30000) {
-                percent = 0.2;
-                comm1 = 390 * day;
-                comm2 = Math.ceil(((slider.result.from_value - 30000) / 100) * percent) * day;
-            }
-            if (slider.result.from_value < 30000) {
-                prob = 97;
-                current_day = 'от 61 дня';
-            } else if (slider.result.from_value < 50000) {
-                prob = 97;
-                current_day = 'от 130 дней';
-            } else if (slider.result.from_value >= 50000 && slider.result.from_value <= 70000) {
-                prob = 72;
-                current_day = 'от 180 дней';
-            } else {
-                prob = 64;
-                current_day = 'до 365 дней';
-            }
-            comm = comm1 + comm2;
-            summ = slider.result.from_value + comm;
-            $('.current_amount').text(String(slider.result.from_value).split(/(?=(?:\d{3})+$)/).join(
-                ' '));
-            $('.current_comm').text(comm);
-            //$('.current_percent').text(percent);
-            $('.current_prob').text(prob);
-            $('.current_day').text(current_day);
-            $('.current_summ').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
+        $('#form_slrd').val(n);
 
-        }, 50);
-        <?php } ?>
+        if (slider.result.from_value <= 30000) {
+            percent = 1.3;
+            comm1 = Math.ceil((slider.result.from_value / 100) * percent) * day;
+            comm2 = 0;
+        }
+        if (slider.result.from_value > 30000) {
+            percent = 0.2;
+            comm1 = 390 * day;
+            comm2 = Math.ceil(((slider.result.from_value - 30000) / 100) * percent) * day;
+        }
+        if (slider.result.from_value < 30000) {
+            prob = 97;
+            current_day = 'от 61 дня';
+        } else if (slider.result.from_value < 50000) {
+            prob = 97;
+            current_day = 'от 130 дней';
+        } else if (slider.result.from_value >= 50000 && slider.result.from_value <= 70000) {
+            prob = 72;
+            current_day = 'от 180 дней';
+        } else {
+            prob = 64;
+            current_day = 'до 365 дней';
+        }
+        comm = comm1 + comm2;
+        summ = slider.result.from_value + comm;
+        $('.current_amount').text(String(slider.result.from_value).split(/(?=(?:\d{3})+$)/).join(
+            ' '));
+        $('.current_comm').text(comm);
+        //$('.current_percent').text(percent);
+        $('.current_prob').text(prob);
+        $('.current_day').text(current_day);
+        $('.current_summ').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
+
+    }, 50);
+<?php } ?>
 
         $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
         $('[data-toggle="popover"]').popover();
@@ -489,7 +591,7 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
 </script>
 <noscript>
     <div>
-        <img src="https://mc.yandex.ru/watch/35589670" style="position:absolute; left:-9999px;" alt="" />
+        <img src="https://mc.yandex.ru/watch/35589670" style="position:absolute; left:-9999px;" alt="mc.yandex.ru/watch" />
     </div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
@@ -498,18 +600,14 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
         if (typeof yaCounter35589670 == 'undefined') return;
         if (typeof param == 'undefined') yaCounter35589670.reachGoal(target);
         else yaCounter35589670.reachGoal(target, param);
-
         $.ajax({
             type: 'POST',
             url: '/pixel/',
             data: 'id=' + id + '&pixel=' + param,
             success: function (data) {
-                //console.log(data);
             }
         });
-
     }
-
     function traffic(site, page) {
         $.ajax({
             type: 'POST',
@@ -597,7 +695,7 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
 </script>
 <noscript>
     <div>
-        <img src="//top-fwz1.mail.ru/counter?id=2916281;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
+        <img src="//top-fwz1.mail.ru/counter?id=2916281;js=na" style="border:0;position:absolute;left:-9999px;" alt="top-fwz1.mail.ru" />
     </div>
 </noscript>
 <!-- //Rating@Mail.ru counter -->

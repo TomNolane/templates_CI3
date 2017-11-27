@@ -187,12 +187,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif]-->
 <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.suggestions/16.8/js/jquery.suggestions.min.js"></script>
-<script src="/templates/godzaim/js/settings.js?ver=1"></script> -->
-<script>
-    $(document).ready(function(){
-        traffic('godzaim.ru', '1');
-    });
-</script>        
+<script src="/templates/godzaim/js/settings.js?ver=1"></script> --> 
 <?php require 'templates/common/js.php'; ?>
 <?php
 if(isset($_GET['popup']) and $_GET['popup']==1 ){

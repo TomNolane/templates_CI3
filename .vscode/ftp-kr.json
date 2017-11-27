@@ -8,7 +8,7 @@
     "fileNameEncoding": "utf8",
     "ignoreWrongFileEncoding": true,
     "createSyncCache": true,
-    "autoUpload": false,
+    "autoUpload": true,
     "autoDelete": false,
     "autoDownload": false,
     "disableFtp": false,
