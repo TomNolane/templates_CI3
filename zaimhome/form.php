@@ -89,7 +89,7 @@ require 'header.php';
             </div>
             <div class="row tab-content">
                 <form class="form-horizontal form-label form-css-label" id="anketa" action="/lk" method="post" onsubmit="return validate();"
-                    autocomplete="off">
+                    autocomplete="off" novalidate>
                     <input type="hidden" name="referer" value="<?=$referer?>">
                     <input type="hidden" name="id" value="">
                     <input type="hidden" name="step" value="1">
