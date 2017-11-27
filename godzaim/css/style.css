@@ -456,3 +456,11 @@ h1, h2{font-size:30px;}
 @font-face{font-family:SFUIDisplayMedium;src:url("fonts/SFUIDisplay-Medium.otf") format("opentype");}
 @font-face{font-family:SFUIDisplayRegular;src:url("fonts/SFUIDisplay-Regular.otf") format("opentype");}
 .form-sum-value, .form-sum-label{visibility:hidden;}
+.footer-wrap p{
+    color: #969696;
+    font-size: 10px;
+}
+.footer-wrap a{
+    color: #969696;
+    font-size: 10px;
+}

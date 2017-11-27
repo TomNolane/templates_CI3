@@ -10,10 +10,10 @@
         <br class="hidden-xs hidden-sm">
         <div class="row">
             <div class="col-md-2 col-xs-12">
-                <img src="/templates/godzaim/img/logo-footer.png" class="logo">
+                <a href="/"><img src="/templates/godzaim/img/logo-footer.png" class="logo"></a>
             </div>
             <div class="col-md-3 col-md-offset-1 col-xs-12">
-                <p style="font-size: 10px; color: #fff;">
+                <p>
                     Cервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. ул. Осипенко,
                     12, оф 201
                     <a href="mailto:support@godzaim.ru" target="_blank">support@godzaim.ru</a>
@@ -21,7 +21,7 @@
                 </p>
             </div>
             <div class="col-md-6 hidden-xs hidden-sm">
-                <p style="font-size: 10px; color: #fff;">
+                <p>
                     Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная
                     ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём
                     20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб.
