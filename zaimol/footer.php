@@ -1,5 +1,4 @@
 <?php $from = '15'; 
-
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
 {
     echo '<a href="#0" class="cd-top">Наверх</a>';
@@ -9,7 +8,6 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 <div class="container">
     <div>
         <a href="/"><img src="/templates/zaimol/assets/img/logo-footer.png" alt="missed"></a>
-        <!-- <span class="ex-scroll-top"></span> -->
     </div>
     <p>
         Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <a class="spec_index3" href="mailto:support@zaimol.ru">support@zaimol.ru</a> &nbsp; <span class="hidden-xs hidden-sm">| +7(495) 006 19 61

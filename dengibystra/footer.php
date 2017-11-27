@@ -1,8 +1,14 @@
+<?php $from = '15'; ?>
 <div id="ya-rtb">
 	<div class="visible-xs visible-sm hidden-md hidden-lg" id="yandex_rtb_R-A-247243-1"></div>
 	<div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-247243-3"></div>
 </div>
-
+<?php
+if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
+{
+    echo '<a href="#0" class="cd-top">Наверх</a>';
+}
+?>
 <?php if ($this->uri->segment(1) != 'confirm'  && $this->uri->segment(1) != 'spasibo' && $this->uri->segment(1) != 'lk' ) {
 echo '<footer class="ex-start-footer">
     <div class="container">
@@ -10,10 +16,10 @@ echo '<footer class="ex-start-footer">
             <div class="col-sm-5">
                 <div class="ex-footer-logo">
                     <a href="/">
-                        <img src="templates/dengibystra/assets/img/logo-foot.svg" alt="logo-foot.svg">
+                        <img src="templates/dengibystra/assets/img/logo-foot.png" alt="logo-foot.png">
                     </a>
                 </div>
-                <p class="ex-text">
+                <p class="ex-text spec_footer4">
                     <span class="hidden">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная
                     ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём
                     20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб.
@@ -24,7 +30,7 @@ echo '<footer class="ex-start-footer">
                 </p>
             </div>
             <div class="col-sm-1"></div>
-            <div class="col-sm-3 hidden-xs hidden-sm">
+            <div class="col-sm-3 hidden-xs hidden-sm spec_footer4">
                 <p class="ex-list-title">Документы</p>
                 <ul>
                     <li>
@@ -44,27 +50,25 @@ echo '<footer class="ex-start-footer">
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-3 hidden-xs hidden-sm">
+            <div class="col-sm-3 hidden-xs hidden-sm spec_footer6">
                 <p class="ex-list-title">Получение денег</p>
                 <ul>
                     <li>
-                        <a href="/zaim">Займ на банковскую карту</a>
+                        <a href="/money">Займ на банковскую карту</a>
                     </li>
                     <li>
-                        <a href="/zaim">Займ на QIWI кошелёк</a>
+                        <a href="/money">Займ на QIWI кошелёк</a>
                     </li>
                     <li>
-                        <a href="/zaim">Займ через Contact</a>
+                        <a href="/money">Займ через Contact</a>
                     </li>
                     <li>
-                        <a href="/zaim">Займ на Яндекс.Деньги</a>
+                        <a href="/money">Займ на Яндекс.Деньги</a>
                     </li>
                 </ul>
-
             </div>
         </div>
     </div>
-
 </footer>';
 }
 else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'spasibo' )
@@ -74,8 +78,8 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
             <div class="row">
                 <div class="col-xs-12">
                     <div class="text-center">
-                        <a href="/"><img src="templates/dengibystra/assets/img/logo-2.svg" alt="logo-2"></a>
-                        <p>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
+                        <a href="/"><img src="templates/dengibystra/assets/img/logo-2.png" alt="logo-2"></a>
+                        <p class="spec_footer4">Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
                             <a href="mailto:support@dengibystra.ru" target="_blank">support@dengibystra.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
                     </div>
                 </div>
@@ -83,10 +87,7 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
         </div>
     </footer>';
 } 
-
 ?>
-
-
 <!-- Modal -->
 <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
     <div class="modal-dialog" role="document">
@@ -130,57 +131,186 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
     </div>
 </div>
 <!-- Modal -->
-
-<script type="text/javascript" src="/modules/jquery/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="/modules/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script>
-<script type="text/javascript" src="/modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js"></script>
-<script type="text/javascript" src="/modules/poshytip-1.2/src/jquery.poshytip.min.js"></script>
-<script type="text/javascript" src="/modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js"></script>
+<?php
+    echo '<script>';
+    require 'modules/jquery/jquery-1.11.3.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/jquery.form-validator.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/jquery.suggestions.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/coockie.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/modal.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/custom.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/settings_main.js';
+    echo '</script>';
+    echo '//backtotop
+    <script>
+    jQuery(document).ready(function (o) {
+        var l = 300,
+            s = 1200,
+            c = 700,
+            d = o(".cd-top");
+        o(window).scroll(function () {
+            o(this).scrollTop() > l ? d.addClass("cd-is-visible") : d.removeClass(
+                "cd-is-visible cd-fade-out"), o(this).scrollTop() > s && d.addClass("cd-fade-out")
+        }), d.on("click", function (l) {
+            l.preventDefault(), o("body,html").animate({
+                scrollTop: 0
+            }, c)
+        })
+    });</script>'; 
+    echo '<script>';
+        require 'templates/dengibystra/assets/js/get_parameter.js';
+    echo '</script>';
+?> 
 <!--[if lt IE 10]>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-<![endif]-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-<script type="text/javascript" src="/templates/dengibystra/assets/js/jquery.suggestions.min.js"></script>
-<script type="text/javascript" src="/templates/dengibystra/assets/js/coockie.js"></script>
-
-<script type="text/javascript" src="/templates/dengibystra/assets/js/modal.js"></script>
-<script type="text/javascript" src="/templates/dengibystra/assets/js/custom.js?ver=2"></script>
-<script type="text/javascript" src="/templates/dengibystra/assets/js/settings_main.js?ver=2"></script>
-
-
-
-<?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') { 
-echo '<script type="text/javascript" src="/templates/dengibystra/assets/js/loanCalculator.js?ver=2"></script>';
-echo '<script type="text/javascript">$("#rangeSlider").ionRangeSlider({
-    hide_min_max: true, 
-    keyboard: true, 
-    from: 15,
-    values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
-	onChange: function (range3) {
+<![endif]--> 
+<?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/loanCalculator.js';
+    echo '</script>'; 
+    ?>
+        <script type="text/javascript">
+        $("#rangeSlider").ionRangeSlider({
+        hide_min_max: true, 
+        keyboard: true, 
+        from: <?php 
+        if(isset($_GET['amount'])) 
+        {  
+            switch($_GET['amount'])
+            {
+                case '1000': $from = '0' ; break;
+                case '2000': $from = '1' ; break;
+                case '3000': $from = '2' ; break;
+                case '4000': $from = '3' ; break;
+                case '5000': $from = '4' ; break;
+                case '6000': $from = '5' ; break;
+                case '7000': $from = '6' ; break;
+                case '8000': $from = '7' ; break;
+                case '9000': $from = '8' ; break;
+                case '10000': $from = '9' ; break;
+                case '11000': $from = '10' ; break;
+                case '12000': $from = '11' ; break;
+                case '13000': $from = '12' ; break;
+                case '14000': $from = '13' ; break;
+                case '15000': $from = '14' ; break;
+                case '20000': $from = '15' ; break;
+                case '25000': $from = '16' ; break;
+                case '30000': $from = '17' ; break;
+                case '40000': $from = '18' ; break;
+                case '50000': $from = '19' ; break;
+                case '80000': $from = '20' ; break;
+                case '100000': $from = '21' ; break;
+            }
+            echo $from; 
+        }
+        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        ?>,
+        values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
+        onChange: function (range3) {
                 if (range3.from_value <= 10000) {
                     $("#period").val("7");
                     $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
                 } else if (range3.from_value <= 15000) {
                     $("#period").val("14");
                     $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
                 } else if (range3.from_value <= 20000) {
                     $("#period").val("21");
                     $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
                 } else if (range3.from_value <= 30000) {
                     $("#period").val("21");
                     $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('85');
                 } else if (range3.from_value <= 50000) {
                     $("#period").val("30");
                     $("#period2").val("От 130 до 250 дней");
+                    $('#percent').val('77');
                 } else {
                     $("#period").val("30");
                     $("#period2").val("От 250 до 365 дней");
+                    $('#percent').val('65');
                 }
                 $("#amount").val(range3.from_value);
             }
-  
-});</script>';
+});
+        var slider = $('#rangeSlider').data('ionRangeSlider'); 
+        var slider_plus = true;
+        var n = 10;
+        var slider_init = setInterval(function () {
+            if (slider_plus) {
+                n++;
+            } else {
+                n--;
+            }
+            if (n == 21 && n != <?php echo $from; ?>) {
+                slider_plus = false;
+            }else if (n == <?php echo $from; ?> && slider_plus == false) {
+                clearInterval(slider_init);
+            }else if (n == 21 && n == <?php echo $from; ?>) {
+                clearInterval(slider_init);
+            }
+
+            slider.update({
+                from: n
+            }); 
+
+            if (n <= 9) {
+            $('#period').val('7');
+            $('#period2').val('От 61 до 130 дней');
+            $('#percent').val('95');
+            } else if (n <= 14 && n > 9) {
+                $('#period').val('14');
+                $('#period2').val('От 61 до 130 дней');
+                $('#percent').val('95');
+            } else if (n <= 15 && n > 14) {
+                $('#period').val('21');
+                $('#period2').val('От 61 до 130 дней');
+                $('#percent').val('95');
+            } else if (n <= 17 && n > 15) {
+                $('#period').val('21');
+                $('#period2').val('От 61 до 130 дней');
+                $('#percent').val('85');
+            } else if (n <= 19 && n > 17) {
+                $('#period').val('30');
+                $('#period2').val('От 130 до 250 дней');
+                $('#percent').val('77');
+            } else if (n > 19) {
+                $('#period').val('30');
+                $('#period2').val('От 250 до 365 дней');
+                $('#percent').val('65');
+            }
+        }, 5);
+        </script>
+<?php
 } 
 elseif($this->uri->segment(1) == 'lk')
 {
@@ -237,15 +367,11 @@ elseif($this->uri->segment(1) == 'lk')
         return c;
     } 
 </script>';
- 
 }
 
+include "googleadservices_all.php"; 
 
-?>
-
-<?php include "googleadservices_all.php"; ?>
-
-<?php if ($this->uri->segment(1) == 'confirm') {
+if ($this->uri->segment(1) == 'confirm') {
 echo ' <script>
 $(document).ready(function () {
     if (getcookie("i")) {
@@ -315,15 +441,11 @@ $("#btn2").click(function () {
     window.open($("#email_confirm2").attr("href"));
 }); 
 </script>';
-    } ?>
-	
-<?php include "yandexmetrika.php"; ?> 
-
-<?php if ($this->uri->segment(1) != 'form') { 
-include "Yandex.php";
+    }
+include "yandexmetrika.php"; 
+if ($this->uri->segment(1) != 'form') { 
+    include "Yandex.php";
 }
 ?>
-
 </body>
-
 </html>

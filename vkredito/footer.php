@@ -7,7 +7,12 @@
         </div>';
 }?>
 
-<a href="#0" class="cd-top">Наверх</a>
+<?php
+if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
+{
+    echo '<a href="#0" class="cd-top">Наверх</a>';
+}
+?>
 <footer>
     <div class="container">
         <div class="row">

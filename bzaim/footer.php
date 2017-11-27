@@ -4,7 +4,12 @@
     <div id="yandex_rtb_R-A-243981-3"></div>
     <div id="yandex_rtb_R-A-243981-1"></div>
 </div>
-<a href="#0" class="cd-top">Наверх</a>
+<?php
+if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
+{
+    echo '<a href="#0" class="cd-top">Наверх</a>';
+}
+?>
 <footer>
     <div class="container">
         <div class="col-md-12 col-xs-12">

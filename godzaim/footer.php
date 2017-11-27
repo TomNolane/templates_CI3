@@ -1,4 +1,10 @@
 <?php $from = '15'; $px = '63.974'; ?>
+<?php
+if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
+{
+    echo '<a href="#0" class="cd-top">Наверх</a>';
+}
+?>
 <div id="ya-rtb">
     <div id="yandex_rtb_R-A-249178-1"></div>
     <div id="yandex_rtb_R-A-249178-2"></div>

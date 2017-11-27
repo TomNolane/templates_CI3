@@ -1,4 +1,9 @@
-<a href="#0" class="cd-top">Наверх</a>
+<?php
+if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
+{
+    echo '<a href="#0" class="cd-top">Наверх</a>';
+}
+?>
 <div class="buffer"></div>  
 <div id="ya-rtb">
     <div id="yandex_rtb_R-A-244327-2"></div>

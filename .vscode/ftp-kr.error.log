@@ -1,0 +1,7 @@
+[Error]
+message: Unable to identify the local data socket: Address already in use[425]
+[Stack Trace]
+Error: Unable to identify the local data socket: Address already in use[425]
+	at _errorWrap (C:\Users\tomnolane\.vscode\extensions\ruakr.ftp-kr-1.1.7\out\ftp.js:529:16)
+	at _put.catch.then.catch (C:\Users\tomnolane\.vscode\extensions\ruakr.ftp-kr-1.1.7\out\ftp.js:192:19)
+	at <anonymous>
