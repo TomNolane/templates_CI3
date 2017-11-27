@@ -126,6 +126,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                                     <input type="hidden" name="id" value="">
                                                     <input type="hidden" name="step" value="1">
                                                     <input type="hidden" name="ad_id" value="<?=$ad_id?>">
+                                                    <input type="hidden" name="display" id="display" value="0">
                                                     <input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 15 : $_POST['period']; ?>" />
                                                     <div class="tab-content text-left">
                                                         <div id="form1" class="tab-pane fade in active">
