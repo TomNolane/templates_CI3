@@ -13461,3 +13461,38 @@ header .navbar-default {
   .special_text_decor {
     text-decoration: none !important;
   }
+  @media only screen and (max-width: 768px) {
+    .ex-calc-wraper {
+      margin: 20px auto !important;
+    }
+  }
+  .special_ind33 {
+    margin-top: 15px;margin-bottom: 0px;
+  }
+  .special_ind34 {
+    margin-top: 0px !important;
+  }
+  .special_ind35 {
+    padding-top: 0px !important;
+  }
+  .special_ind36 {
+    float: left !important; margin-right: 10px !important;
+  }
+  .special_ind37 {
+    font-size: 20px !important; margin-top: 0px !important;
+  }
+  .special_ind38 {
+    margin-bottom: 15px !important;
+  }
+  .special_ind39 {
+    font-size: 20px !important; margin-top: 0px !important;
+  }
+  .special_ind40 {
+    float: left !important; margin-right: 10px !important;
+  }
+  .special_ind41 {
+    font-size: 18px !important; margin-top: 0px !important;
+  } 
+  .special_ind42 {
+    margin-top: 10px !important; margin-bottom: 10px !important;
+  }
