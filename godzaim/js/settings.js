@@ -233,7 +233,9 @@ $("#email").suggestions({
 			$('.form-steps-green-line').addClass('step2');
 			$('.form-steps-line').show();
 			$('#form-steps a[href="#form2"]').tab('show');
-			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
+            $('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
+            $('.spec_footer4').css('visibility','hidden');
+            $('.spec_footer5').css('visibility','hidden'); 
 			markTarget('form-step-1');
                         time1=time;
                         time=0;
