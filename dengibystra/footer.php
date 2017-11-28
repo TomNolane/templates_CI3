@@ -168,7 +168,7 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
     echo '<script>';
     require 'templates/dengibystra/assets/js/settings_main.js';
     echo '</script>';
-    echo '//backtotop
+    echo '<!-- backtotop -->
     <script>
     jQuery(document).ready(function (o) {
         var l = 300,

@@ -13,75 +13,7 @@
             "type": "d",
             "name": "bzaim",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "header.php",
-                    "size": 51987
-                },
-                {
-                    "type": "-",
-                    "name": "lk.php",
-                    "size": 5162
-                },
-                {
-                    "type": "d",
-                    "name": "css",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "-",
-                            "name": "style.css",
-                            "size": 7023
-                        },
-                        {
-                            "type": "-",
-                            "name": "style.min.css",
-                            "size": 6354
-                        },
-                        {
-                            "type": "-",
-                            "name": "new-age.css",
-                            "size": 10534
-                        },
-                        {
-                            "type": "-",
-                            "name": "new-age.min.css",
-                            "size": 8652
-                        },
-                        {
-                            "type": "-",
-                            "name": "bootstrap.css",
-                            "size": 152959
-                        },
-                        {
-                            "type": "-",
-                            "name": "bootstrap.min.css",
-                            "size": 116997
-                        }
-                    ]
-                },
-                {
-                    "type": "-",
-                    "name": "index.php",
-                    "size": 22718
-                },
-                {
-                    "type": "-",
-                    "name": "footer.php",
-                    "size": 39765
-                },
-                {
-                    "type": "-",
-                    "name": "form1.php",
-                    "size": 6909
-                },
-                {
-                    "type": "-",
-                    "name": "form.php",
-                    "size": 14685
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
@@ -95,122 +27,9 @@
             "size": 4096,
             "files": [
                 {
-                    "type": "d",
-                    "name": "assets",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "d",
-                            "name": "css",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "style_lk.css",
-                                    "size": 90
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "style.css",
-                                    "size": 318660
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "style.min.css",
-                                    "size": 158492
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "uniqueSingle.min.css",
-                                    "size": 612
-                                }
-                            ]
-                        },
-                        {
-                            "type": "d",
-                            "name": "js",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "settings_form.js",
-                                    "size": 28115
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "get_parameter.js",
-                                    "size": 390
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "jquery.form-validator.js",
-                                    "size": 29177
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "loanCalculator.js",
-                                    "size": 5262
-                                }
-                            ]
-                        },
-                        {
-                            "type": "d",
-                            "name": "img",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "logo-foot.png",
-                                    "size": 4066
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "logo.png",
-                                    "size": 6705
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "logo-2.png",
-                                    "size": 3843
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "tip-twitter_arrows.gif",
-                                    "size": 87
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "-",
-                    "name": "header.php",
-                    "size": 12473
-                },
-                {
-                    "type": "-",
-                    "name": "footer.php",
-                    "size": 20937
-                },
-                {
                     "type": "-",
                     "name": "form.php",
-                    "size": 21711
-                },
-                {
-                    "type": "-",
-                    "name": "sendpuls.php",
-                    "size": 144
-                },
-                {
-                    "type": "-",
-                    "name": "index.php",
-                    "size": 18437
-                },
-                {
-                    "type": "-",
-                    "name": "form1.php",
-                    "size": 8563
+                    "size": 22000
                 }
             ]
         },
@@ -236,13 +55,64 @@
             "type": "d",
             "name": "godzaim",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 42127
+                },
+                {
+                    "type": "d",
+                    "name": "css",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "-",
+                            "name": "style.css",
+                            "size": 30402
+                        },
+                        {
+                            "type": "-",
+                            "name": "style.min.css",
+                            "size": 26925
+                        }
+                    ]
+                },
+                {
+                    "type": "-",
+                    "name": "style.css",
+                    "size": 27840
+                },
+                {
+                    "type": "-",
+                    "name": "style.min.css",
+                    "size": 20615
+                },
+                {
+                    "type": "d",
+                    "name": "img",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "-",
+                            "name": "cd-top-arrow.png",
+                            "size": 261
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "d",
             "name": "rublimo",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "internal-news2.php",
+                    "size": 13272
+                }
+            ]
         },
         {
             "type": "d",
@@ -254,13 +124,7 @@
             "type": "d",
             "name": "zaimcoin",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "footer.php",
-                    "size": 29597
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",

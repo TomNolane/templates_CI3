@@ -225,7 +225,7 @@ include "header.php";
     echo '<script>';
     require 'templates/dengibystra/assets/js/settings_form.js';
     echo '</script>';
-    echo '//backtotop
+    echo '<!-- backtotop -->
     <script>
     jQuery(document).ready(function (o) {
         var l = 300,

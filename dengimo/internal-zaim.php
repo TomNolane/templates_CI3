@@ -2,17 +2,16 @@
     <div class="container container-services text-center">
         <div class="row">
             <h1 class="title">Получение займа</h1>
-            
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title pull-left">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Займ на банковскую карту</a>                         
-                        </h4>                       
+                        </h4>
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="pull-right">
                             <div id="circle"></div>
                         </a>
-                        <img class="pull-right" src="/templates/edenga/img/zaim/1.png">
+                        <img class="pull-right" src="/templates/dengimo/img/zaim/1.png" alt="1.png">
                         <div class="clearfix"></div>
                     </div>
                     <div id="collapse1" class="panel-collapse collapse">
@@ -26,7 +25,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title pull-left">
@@ -35,20 +33,19 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="pull-right">
                             <div id="circle"></div>
                         </a>
-                        <img class="pull-right" src="/templates/edenga/img/zaim/2.png">
-                        <div class="clearfix"></div>                        
+                        <img class="pull-right" src="/templates/dengimo/img/zaim/2.png" alt="2.png">
+                        <div class="clearfix"></div>
                     </div>
                     <div id="collapse2" class="panel-collapse collapse">
                         <div class="panel-body text-left">
 Заём на QIWI-кошелек имеет множество преимуществ. Первое из них – это скорость получения денежных средств. Это в разы быстрее, чем получать кредит в банке. Заявка оформляется и рассматривается в считанные минуты.<br/>
-Таким образом, уже спустя максимум полчаса у вас на счету появятся средства. При этом неважно, где вы работаете, какая у вас заработная плата, социальный статус и т. д. Таким образом, заём на QIWI-кошелек – это отличный способ быстро получить деньги. Отказаться в кредите могут только тем, у кого плохая кредитная история, либо же тем, кто уже погашает более одного кредита.проверок кредитной истории и не выходя из дома.<br/>
+Таким образом, уже спустя максимум полчаса у вас на счету появятся средства. При этом неважно, где вы работаете, какая у вас заработная плата, социальный статус и т. д. Таким образом, заём на QIWI-кошелек – это отличный способ быстро получить деньги. Отказаться в кредите могут только тем, у кого плохая кредитная история, либо же тем, кто уже погашает более одного кредита. Без проверок кредитной истории и не выходя из дома.<br/>
                         </div>
                         <div class="panel-footer clearfix">
                             <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
                         </div>                        
                     </div>
                 </div>
-
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title pull-left">
@@ -57,8 +54,8 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="pull-right">
                             <div id="circle"></div>
                         </a>
-                        <img class="pull-right" src="/templates/edenga/img/zaim/3.png">
-                        <div class="clearfix"></div>                        
+                        <img class="pull-right" src="/templates/dengimo/img/zaim/3.png" alt="3.png">
+                        <div class="clearfix"></div>
                     </div>
                     <div id="collapse3" class="panel-collapse collapse">
                         <div class="panel-body text-left">
@@ -71,10 +68,9 @@
                         </div>
                         <div class="panel-footer clearfix">
                             <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
-                        </div>                        
+                        </div>
                     </div>
-                </div>    
-
+                </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title pull-left">
@@ -83,8 +79,8 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="pull-right">
                             <div id="circle"></div>
                         </a>
-                        <img class="pull-right" src="/templates/edenga/img/zaim/4.png">
-                        <div class="clearfix"></div>                        
+                        <img class="pull-right" src="/templates/dengimo/img/zaim/4.png" alt="4.png">
+                        <div class="clearfix"></div>
                     </div>
                     <div id="collapse4" class="panel-collapse collapse">
                         <div class="panel-body text-left">
@@ -94,16 +90,15 @@
 	•	нет обычной для оффлайна бумажной волокиты, процедура оформления упрощена до предела.<br/>
 Чтобы получить средства через платежную систему Yandex, надо:<br/>
 	•	создать кошелек Яндекс.Деньги, пройти идентификацию счета;<br/>
-	•	заполнить заявку на сайте онлайн севиса "Edenga";<br/>
+	•	заполнить заявку на сайте онлайн севиса "dengimo";<br/>
 	•	дождаться звонка менеджера компании;<br/>
 	•	получить деньги.<br/>
-Если все сделано правильно, решение будет принято мгновенно, и средства сразу поступят на кошелек Яндекс Деньги. Их можно будет обналичить или потратить в Интернете.проверок кредитной истории и не выходя из дома.<br/>
+Если все сделано правильно, решение будет принято мгновенно, и средства сразу поступят на кошелек Яндекс Деньги. Их можно будет обналичить или потратить в Интернете. Без проверок кредитной истории и не выходя из дома.<br/>
                     </div>
                     <div class="panel-footer clearfix">
                         <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
-                    </div>                        
-                </div> 
-                
+                    </div>
+                </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title pull-left">
@@ -112,8 +107,8 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="pull-right">
                             <div id="circle"></div>
                         </a>
-                        <img class="pull-right" src="/templates/edenga/img/zaim/1.png">
-                        <div class="clearfix"></div>                        
+                        <img class="pull-right" src="/templates/dengimo/img/zaim/1.png" alt="1.png">
+                        <div class="clearfix"></div>
                     </div>
                     <div id="collapse5" class="panel-collapse collapse">
                         <div class="panel-body text-left">
@@ -125,11 +120,10 @@
                         </div>
                         <div class="panel-footer clearfix">
                             <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
-                        </div>                        
+                        </div> 
                     </div>
-                </div>                
+                </div> 
             </div>
-            
         </div>
     </div>
 </section>

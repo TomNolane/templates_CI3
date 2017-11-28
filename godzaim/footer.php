@@ -96,6 +96,22 @@ echo '</script>';
 echo '<script>'; 
 require "modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"; 
 echo '</script>';
+echo '<!-- backtotop -->
+<script>
+jQuery(document).ready(function (o) {
+    var l = 300,
+        s = 1200,
+        c = 700,
+        d = o(".cd-top");
+    o(window).scroll(function () {
+        o(this).scrollTop() > l ? d.addClass("cd-is-visible") : d.removeClass(
+            "cd-is-visible cd-fade-out"), o(this).scrollTop() > s && d.addClass("cd-fade-out")
+    }), d.on("click", function (l) {
+        l.preventDefault(), o("body,html").animate({
+            scrollTop: 0
+        }, c)
+    })
+});</script>'; 
 ?>
     <script>
         function setcookie(name, value, expires, path, domain, secure) {
@@ -441,11 +457,8 @@ echo '</script>';
                 onStart: function (range) {
                     $('.form-sum-value').text(
                         <?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>  + ' Р'
-                    ); 
-
-
-                    <?php 
-
+                    );
+                    <?php
                     if(isset($_GET['amount'])) 
                     {  
                         switch($_GET['amount'])
@@ -517,7 +530,6 @@ echo '</script>';
                     $('.irs-single').css('margin-left', ff);
                     $('.irs-single').css('margin-top', '30');
 
-                    
                     if (range.from_value <= 10000) {
                         $('#period').val('7');
                         $('#period2').val('От 61 до 130 дней');
@@ -647,10 +659,8 @@ echo '</script>';
                 url: '/pixel/',
                 data: 'id=' + id + '&pixel=' + param,
                 success: function (data) {
-                    //console.log(data);
                 }
             });
-
         }
     </script>
     <!-- Rating@Mail.ru counter -->
