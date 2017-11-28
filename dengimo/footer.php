@@ -1,5 +1,4 @@
 </div>
-
 <div class="buffer"></div> 
 <div id="ya-rtb">
 <div id="yandex_rtb_R-A-232716-8"></div>
@@ -11,7 +10,7 @@
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <a href="/">
-                    <img src="/templates/dengimo/img/logo-footer.png" class="logo">    
+                    <img src="/templates/dengimo/img/logo-footer.png" class="logo" alt="logo-footer.png">
                 </a>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12">
@@ -25,11 +24,10 @@
                 <p style="font-size: 9px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
                 <br>ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499.</p>
             </div>
-        </div>            
+        </div>
     </div>
 </div>
 </footer>
-
 <script src="/modules/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="/modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js"></script>
 <script src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script>
