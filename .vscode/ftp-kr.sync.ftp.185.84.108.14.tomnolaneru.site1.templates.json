@@ -25,13 +25,7 @@
             "type": "d",
             "name": "dengibystra",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "form.php",
-                    "size": 22000
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
@@ -59,46 +53,7 @@
                 {
                     "type": "-",
                     "name": "footer.php",
-                    "size": 42127
-                },
-                {
-                    "type": "d",
-                    "name": "css",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "-",
-                            "name": "style.css",
-                            "size": 30402
-                        },
-                        {
-                            "type": "-",
-                            "name": "style.min.css",
-                            "size": 26925
-                        }
-                    ]
-                },
-                {
-                    "type": "-",
-                    "name": "style.css",
-                    "size": 27840
-                },
-                {
-                    "type": "-",
-                    "name": "style.min.css",
-                    "size": 20615
-                },
-                {
-                    "type": "d",
-                    "name": "img",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "-",
-                            "name": "cd-top-arrow.png",
-                            "size": 261
-                        }
-                    ]
+                    "size": 43381
                 }
             ]
         },
@@ -106,13 +61,7 @@
             "type": "d",
             "name": "rublimo",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "internal-news2.php",
-                    "size": 13272
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",

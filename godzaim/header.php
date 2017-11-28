@@ -135,7 +135,18 @@ if(!isset($description))
 			require "templates/godzaim/css/style_lk.css"; 
 			echo '</style>'; 
 		}
-
+		elseif($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index') {
+			echo '<style>
+			.buffer {
+				height: 0px;
+			}
+			.rtb {
+				background-color: #ffffff;
+				min-width: 100%;
+			}
+			</style>';
+		}
+		
 		//js
 		echo '<script>'; 
 		require "modules/jquery/jquery-1.11.3.min.js"; 

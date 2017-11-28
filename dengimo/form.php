@@ -105,15 +105,16 @@ if(isset($_SERVER['HTTP_REFERER'])){
 <div class="row">
 	<div class="col-md-8 col-md-offset-1 col-xs-12">
 		<form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
+        <input type="hidden" name="display" id="display" value="0">
+
+
+
+
+
 			<input type="hidden" name="referer" value="<?=$referer?>">
 			<input type="hidden" name="id" value="">
-                        <input type="hidden" name="step" value="1">
-                        <input type="hidden" name="ad_id" value="<?=$ad_id?>">
-                                      
-			<?php
-			//if (!empty($_REQUEST['ad_id']))
-			//echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">';
-			?>
+            <input type="hidden" name="step" value="1">
+            <input type="hidden" name="ad_id" value="<?=$ad_id?>"> 
 				
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane active" id="form1">
