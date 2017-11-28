@@ -890,7 +890,7 @@ footer .copy{
     font-size: 26px !important;
 }
 .help-block {
-    margin-top: -15px !important; 
+    /* margin-top: -15px !important;  */
     color: #bc5351 !important;
     font-weight: 700 !important;
 }

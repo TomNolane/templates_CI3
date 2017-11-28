@@ -5,16 +5,6 @@ if(!isset($my_title))
 	$description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }  
 require 'header.php'; ?>
-
-<link href="/templates/rublimo/css/form.min.css" rel="stylesheet" media="screen">
-<link href="/modules/jquery-ui/1.10.4/css/smoothness/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/jquery.suggestions/16.8/css/suggestions.css" type="text/css" rel="stylesheet" />
-<link href="/modules/poshytip-1.2/src/tip-twitter/tip-twitter.css" rel="stylesheet">
-<style>
-	#ya-rtb {
-		display: none;
-	}
-</style>
 <?php
 // IP
 $this->load->helper('ip');
@@ -73,9 +63,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
     $ad_id = '4';
 }
 ?>
-
 	<div class="container">
-
 		<section class="steps">
 			<div class="row">
 				<div class="col-xs-12">
@@ -103,17 +91,15 @@ if(isset($_SERVER['HTTP_REFERER'])){
 				</div>
 			</div>
 		</section>
-
 		<section>
 			<div class="row">
 				<div class="col-sm-12 col-xs-12">
 					<center><h3 class="htitle"><b>Заполните свои личные данные</b></h3></center>
-					<h3 id="display-none">Заполните свои паспортные данные</h3>
-					<h3 id="display-none">Заполните свои личные данные</h3>
+					<h3 class="hidden">Заполните свои паспортные данные</h3>
+					<h3 class="hidden">Заполните свои личные данные</h3>
 				</div>
 			</div>
 		</section>
-
 		<section class="hidden-sm hidden-xs">
 			<div class="row">
 				<div class="col-sm-12 col-xs-12 text-center">
@@ -135,17 +121,16 @@ if(isset($_SERVER['HTTP_REFERER'])){
 				</div>
 			</div>
 		</section>
-
 		<section class="form">
 			<div class="row">
 				<div class="col-md-10 col-xs-12">
 					<form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
-						<input type="hidden" name="referer" value="<?=$referer?>">
-						<input type="hidden" name="id" value="">
-						<input type="hidden" name="step" value="1">
-						<input type="hidden" name="ad_id" value="<?=$ad_id?>">
+					<input type="hidden" name="referer" value="<?=$referer?>">
+					<input type="hidden" name="id" value="">
+					<input type="hidden" name="step" value="1">
+					<input type="hidden" name="ad_id" value="<?=$ad_id?>"> 
+					<!-- <input type="hidden" id="amount" name="amount" value="<?php //if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>" />  -->
 						<input type="hidden" name="display" value="1" class="visible-xs">
-
 						<div class="tab-content">
 							<div role="tabpanel" class="tab-pane active" id="form1">
 								<?php require 'form1.php'; ?>
@@ -172,13 +157,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
 							</div>
 						</div>
 					</div>
-
 					</div>
-
 				</div>
 			</div>
 		</section>
-
 		<section class="triggers hidden-xs hidden-sm" id="display-none">
 			<div class="row">
 				<div class="col-sm-2 col-sm-offset-2">
@@ -223,7 +205,6 @@ if(isset($_SERVER['HTTP_REFERER'])){
 					</div>
 				</div>
 			</div>
-
 			<div class="call-to-action-container section-container section-container-image-bg">
 				<div class="container">
 					<div class="row">
@@ -258,7 +239,6 @@ if(isset($_SERVER['HTTP_REFERER'])){
 					</div>
 				</div>
 			</div>
-
 			<div class="call-to-action-container section-container section-container-image-bg">
 				<div class="container">
 					<div class="row">
@@ -336,59 +316,4 @@ if(isset($_SERVER['HTTP_REFERER'])){
 				</div>
 			</div>
 		</div>
-		<script src="/modules/jquery/jquery-1.11.3.min.js"></script>
-		<script src="/templates/rublimo/js/validate.min.js?ver=4"></script>
-		<script src="/modules/poshytip-1.2/src/jquery.poshytip.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-		<script src="/modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js"></script>
-		<!--[if lt IE 10]>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-<![endif]-->
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.suggestions/16.8/js/jquery.suggestions.min.js"></script>
-		<script src="/templates/rublimo/js/settings.min.js?ver=3"></script>
-		<?php require 'templates/common/js.php'; ?>
-		<?php
-if(isset($_GET['popup']) and $_GET['popup']==1 ){
-    echo '    
-<!-- Modal Popup-->
-<div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                            <div class="modal-header text-center">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                            </div>
-                            <div class="modal-body text-center">
-                                    <div class="row">
-                                            <div class="col-md-12">
-                                                <img src="/templates/common/img/popup.jpg" alt="popup">                                             
-                                                <h3>'.$popup_text.'</h3>
-                                                <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                                            </div>
-                                    </div>
-                            </div>
-                    </div>
-            </div>
-</div>
-
-        <script type= " text/javascript">
-            $(window).load(function(){
-                $("#popup").modal("show");
-            });
-        </script>';
-}
-?>
-
-<?php
-	if(isset($_GET['email'])){
-		//данные пользователя
-		$this->load->model('user/user_model', 'user');
-		$user_data = $this->user->get_user($_GET['email']);
-		$user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
-		$user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
-		foreach ($user_data as $name => $item){
-			echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
-		}
-		echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
-	}
-?>
 <?php require 'footer.php'; ?>
