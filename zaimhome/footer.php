@@ -1,4 +1,12 @@
-<?php $from = '15'; $px = '63.974'; ?>
+<?php
+    $from = '15'; $px = '63.974'; 
+    if ($this->uri->segment(1) != 'form') {
+        echo '<!-- Декстоп Yandex.RTB R-A-257494-1 -->
+        <div class="hidden-xs hidden-sm"><div id="yandex_rtb_R-A-257494-1"></div></div>
+        <!-- Мобайл Yandex.RTB R-A-257494-3 -->
+        <div class="hidden-md hidden-lg"><div id="yandex_rtb_R-A-257494-3"></div></div>';
+    }
+?>
 <footer class="ex-main-footer">
     <div class="container" style="width: 100%">
         <div class="col-sm-3 text-center">
@@ -475,5 +483,9 @@ function traffic(site, page){
     });    
 }
 </script>
-
+<?php  
+    if ($this->uri->segment(1) != 'form') {
+        require 'yandex_rtb.php';
+    }
+?>
  

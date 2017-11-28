@@ -4,11 +4,14 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 {
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-?>
-<div id="ya-rtb">
-    <div id="yandex_rtb_R-A-249178-1"></div>
-    <div id="yandex_rtb_R-A-249178-2"></div>
-</div>
+
+if ($this->uri->segment(1) != 'form') {
+    echo '<!-- Декстоп Yandex.RTB R-A-257495-1 -->
+    <div class="hidden-xs hidden-sm"><div id="yandex_rtb_R-A-257495-1"></div></div>
+    <!-- Мобильная Yandex.RTB R-A-257495-2 -->
+    <div class="hidden-md hidden-lg"><div id="yandex_rtb_R-A-257495-2"></div></div>';
+}
+?> 
 </div>
 <div class="buffer"></div>
 <div class="footer-wrap">
@@ -647,7 +650,12 @@ jQuery(document).ready(function (o) {
             <?php } ?>
         });
     </script>
-    <?php require 'yandex_metrika.php'; ?>
+    <?php 
+        require 'yandex_metrika.php'; 
+        if ($this->uri->segment(1) != 'form') {
+            require 'yandex_rtb.php';
+        }
+    ?>
     <script>
         function markTarget(target, param, id) {
             if (typeof yaCounter46347456 == 'undefined') return;
