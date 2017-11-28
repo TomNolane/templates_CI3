@@ -63,7 +63,16 @@ if(!isset($description))
     echo '</script>'; 
 ?>
 <?php if ($this->uri->segment(1) != 'form') {
-    require 'templates/common/googlesyndication2.php';
+    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Vkredito -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-2472854344350368"
+		 data-ad-slot="4958100911"
+		 data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>';
 }?>
 
 <!--[if lte IE 9]>
