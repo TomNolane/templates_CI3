@@ -574,6 +574,7 @@ $(document).ready(function () {
     if (isMobile) {
         $('#birthdate').prop('readonly', true);
         $('#passportdate').prop('readonly', true);
+        $('#display').val(1);
     } else {
         $('.tip').poshytip({
             className: 'tip-twitter',

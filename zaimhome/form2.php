@@ -92,7 +92,6 @@
         </div>
     </div>
 </div>
-
 <div class="form-group has-feedback">
     <label class="control-label col-md-4 label-required" for="street">Улица</label>
     <div class="col-md-6">
@@ -104,7 +103,6 @@
         </div>
     </div>
 </div>
-
 <div class="form-group has-feedback">
     <label class="control-label col-md-4 label-required" for="building">Номер дома</label>
     <div class="col-md-6">

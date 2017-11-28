@@ -1,14 +1,6 @@
 <?php require 'header.php'; ?>
-
-<style>
-.buffer {
-    height: 85px;
-}
-</style>
-
 	<section id="hero-area">
 		<div class="container">
-			
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2  title-row">
 					<h1 class="title title-header">Займы онлайн</h1>
@@ -215,7 +207,4 @@
 		</div>
 	</div>
 </div>
-
-<div class="buffer"></div>
-
 <?php require 'footer.php'; ?>

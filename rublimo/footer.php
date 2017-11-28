@@ -808,6 +808,7 @@ echo '<script>
                     s.async = true;
                     t.parentNode.insertBefore(s, t);
                 })(this, this.document, "yandexContextAsyncCallbacks");
+                $('#display').val(1);
             } else {
                 (function (w, d, n, s, t) {
                     w[n] = w[n] || [];

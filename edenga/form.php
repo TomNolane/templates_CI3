@@ -86,20 +86,15 @@ if(isset($_SERVER['HTTP_REFERER'])){
 
 			<div class="col-md-6 col-md-offset-2 col-sm-6 col-xs-11 form-body">
 				<form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
-                                        <input type="hidden" name="referer" value="<?=$referer?>">
-                                        <input type="hidden" name="id" value="">
-                                        <input type="hidden" name="step" value="1">
-                                        <input type="hidden" name="ad_id" value="<?=$ad_id?>">
-                                        <?php
-                                                        /*
-                                                            if (!empty($_REQUEST['utm_campaign'])){
-                                                                $ad_id = '3'.$_REQUEST['utm_campaign'];                          
-                                                            } else {
-                                                                $ad_id = '3';
-                                                            }
-                                                                echo '<input type="hidden" name="ad_id" value="'.$ad_id.'">';
-                                                        */
-                                        ?>                                        
+                <input type="hidden" name="display" id="display" value="0">
+
+
+
+
+                <input type="hidden" name="referer" value="<?=$referer?>">
+                <input type="hidden" name="id" value="">
+                <input type="hidden" name="step" value="1">
+                <input type="hidden" name="ad_id" value="<?=$ad_id?>">                                  
 					<div class="tab-content">
 						<div id="form1" class="tab-pane fade in active">
 							<?php require 'form1.php'; ?>

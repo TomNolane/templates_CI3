@@ -279,6 +279,7 @@ _tmr.push({id: "2916281", type: "pageView", start: (new Date()).getTime()});
             s.async = true;
             t.parentNode.insertBefore(s, t);
             })(this, this.document, "yandexContextAsyncCallbacks");
+            $('#display').val(1);
         }else{
             (function(w, d, n, s, t) {
             w[n] = w[n] || [];
