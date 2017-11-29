@@ -307,7 +307,7 @@ $(document).ready(function () {
                 $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
                 if($(this)[0].name == 'birthdate' || $(this)[0].name == 'passportdate' || $(this)[0].name == 'passport_code' || $(this)[0].name == 'passport' || $(this)[0].name == 'passport_who' || $(this)[0].name == 'birthplace' || $(this)[0].name == 'city' || $(this)[0].name == 'street' || $(this)[0].name == 'building' || $(this)[0].name == 'work_experience' || $(this)[0].name == 'work_occupation' || $(this)[0].name == 'work_phone' || $(this)[0].name == 'work_salary' || $(this)[0].name == 'work_city' || $(this)[0].name == 'work_street' || $(this)[0].name == 'work_house')
                 {
-                    // $(this).css('margin-bottom','20px');  
+                    // $(this).css('margin-bottom','20px');   
                 } 
             } 
     });
