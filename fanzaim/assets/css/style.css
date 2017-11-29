@@ -9,8 +9,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @font-face {
   font-family: 'Rounds';
-  src: url("../fonts/RoundsBlack.eot");
-  src: url("../fonts/RoundsBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/RoundsBlack.woff") format("woff"), url("../fonts/RoundsBlack.ttf") format("truetype");
+  src: url("/templates/fanzaim/assets/fonts/RoundsBlack.eot");
+  src: url("/templates/fanzaim/assets/fonts/RoundsBlack.eot?#iefix") format("embedded-opentype"), url("/templates/fanzaim/assets/fonts/RoundsBlack.woff") format("woff"), url("/templates/fanzaim/assets/fonts/RoundsBlack.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -552,8 +552,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/glyphicons-halflings-regular.eot");
-  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("/templates/fanzaim/assets/fonts/glyphicons-halflings-regular.eot");
+  src: url("/templates/fanzaim/assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/templates/fanzaim/assets/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/templates/fanzaim/assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/templates/fanzaim/assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/templates/fanzaim/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 /* line 269, ../sass/library/_bootstrap.scss */
 .glyphicon {
@@ -10893,7 +10893,7 @@ button.close {
 #exMainHeader .navbar-header .navbar-brand {
   width: 191px;
   height: 37px;
-  background-image: url(../img/icons/fanzaim-logo.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/fanzaim-logo.png);
   background-repeat: no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
@@ -11015,7 +11015,7 @@ button.close {
 }
 /* line 102, ../sass/desktop/_header.scss */
 #exMainHeader .navbar-nav .dropdown a.ex-on-off i {
-  background-image: url(../img/icons/triangle.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/triangle.png);
 }
 /* line 106, ../sass/desktop/_header.scss */
 #exMainHeader .navbar-nav .dropdown a i {
@@ -11023,7 +11023,7 @@ button.close {
   width: 12px;
   height: 12px;
   margin-left: 5px;
-  background-image: url(../img/icons/trianglePassive.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/trianglePassive.png);
   -webkit-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
@@ -11198,7 +11198,7 @@ footer.ex-main-footer p {
 /* line 1, ../sass/desktop/_homepage.scss */
 section.ex-section-1 {
   position: relative;
-  background-image: url(../img/pic.png);
+  background-image: url(/templates/fanzaim/assets/img/pic.png);
   background-repeat: no-repeat;
   background-position: center;
   min-height: 900px;
@@ -11234,7 +11234,7 @@ section.ex-section-1 .container .ex-green-cover:before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../img/pic.png);
+  background-image: url(/templates/fanzaim/assets/img/pic.png);
   background-position: -390px -50px;
 }
 @media (max-width: 1200px) {
@@ -11372,7 +11372,7 @@ section.ex-section-1 .container main .ex-counter-block p i {
   display: inline-block;
   width: 44px;
   height: 70px;
-  background-image: url(../img/icons/ruble.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/ruble.png);
   -webkit-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
@@ -11475,37 +11475,37 @@ section.ex-section-1 .container main .ex-virtual-money .col-md-2 .ex-wrapper i {
 section.ex-section-1 .container main .ex-virtual-money .col-md-2:first-of-type i {
   width: 87px;
   height: 30px;
-  background-image: url(../img/icons/visa.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/visa.png);
 }
 /* line 221, ../sass/desktop/_homepage.scss */
 section.ex-section-1 .container main .ex-virtual-money .col-md-2:nth-child(2) i {
   width: 127px;
   height: 25px;
-  background-image: url(../img/icons/yandex.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/yandex.png);
 }
 /* line 228, ../sass/desktop/_homepage.scss */
 section.ex-section-1 .container main .ex-virtual-money .col-md-2:nth-child(3) i {
   width: 63px;
   height: 39px;
-  background-image: url(../img/icons/mastercard.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/mastercard.png);
 }
 /* line 235, ../sass/desktop/_homepage.scss */
 section.ex-section-1 .container main .ex-virtual-money .col-md-2:nth-child(4) i {
   width: 102px;
   height: 37px;
-  background-image: url(../img/icons/qiwi.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/qiwi.png);
 }
 /* line 242, ../sass/desktop/_homepage.scss */
 section.ex-section-1 .container main .ex-virtual-money .col-md-2:nth-child(5) i {
   width: 64px;
   height: 41px;
-  background-image: url(../img/icons/contact.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/contact.png);
 }
 /* line 249, ../sass/desktop/_homepage.scss */
 section.ex-section-1 .container main .ex-virtual-money .col-md-2:last-of-type i {
   width: 43px;
   height: 43px;
-  background-image: url(../img/icons/bank.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/bank.png);
 }
 @media (max-width: 991px) {
   /* line 196, ../sass/desktop/_homepage.scss */
@@ -11582,11 +11582,11 @@ section.ex-section-2 .ex-actions #customNav div:first-of-type {
 }
 /* line 312, ../sass/desktop/_homepage.scss */
 section.ex-section-2 .ex-actions #customNav div:first-of-type:before {
-  background-image: url(../img/icons/triangleLeft.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/triangleLeft.png);
 }
 /* line 317, ../sass/desktop/_homepage.scss */
 section.ex-section-2 .ex-actions #customNav div:last-of-type:before {
-  background-image: url(../img/icons/triangleRight.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/triangleRight.png);
 }
 @media (min-width: 1200px) {
   /* line 271, ../sass/desktop/_homepage.scss */
@@ -11810,7 +11810,7 @@ section.ex-section-3 main .col-sm-4:first-of-type .ex-wrapper:before {
   height: 276px;
   right: -40px;
   top: -53px;
-  background-image: url(../img/icons/arrow-first.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/arrow-first.png);
 }
 /* line 486, ../sass/desktop/_homepage.scss */
 section.ex-section-3 main .col-sm-4:first-of-type .ex-wrapper span {
@@ -11841,7 +11841,7 @@ section.ex-section-3 main .col-sm-4:nth-child(2) .ex-wrapper:before {
   height: 276px;
   right: -40px;
   top: -53px;
-  background-image: url(../img/icons/arrow-second.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/arrow-second.png);
 }
 @media screen and (max-width: 1199px) and (min-width: 992px) {
   /* line 501, ../sass/desktop/_homepage.scss */
@@ -11901,7 +11901,7 @@ section.ex-section-3 main .col-sm-4:last-of-type .ex-wrapper:before {
   height: 276px;
   right: -14px;
   top: -53px;
-  background-image: url(../img/icons/arrow-third.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/arrow-third.png);
 }
 @media screen and (max-width: 1199px) and (min-width: 992px) {
   /* line 542, ../sass/desktop/_homepage.scss */
@@ -12818,7 +12818,7 @@ main.ex-main-form .tab-content .ex-wrapper.ex-val-select p i {
   display: inline-block;
   width: 44px;
   height: 70px;
-  background-image: url(../img/icons/ruble.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/ruble.png);
   -webkit-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
@@ -12851,7 +12851,7 @@ main.ex-main-form .tab-content .ex-wrapper.ex-success:after {
   height: 9px;
   right: 22px;
   top: 19px;
-  background-image: url(../img/icons/icon-check.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/icon-check.png);
   background-repeat: no-repeat;
 }
 /* line 86, ../sass/desktop/_form.scss */
@@ -12898,7 +12898,7 @@ main.ex-main-form .tab-content .ex-wrapper.ex-error:after {
   height: 9px;
   right: 22px;
   top: 19px;
-  background-image: url(../img/icons/icon-cross.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/icon-cross.png);
   background-repeat: no-repeat;
 }
 /* line 111, ../sass/desktop/_form.scss */
@@ -12968,7 +12968,7 @@ main.ex-main-form .tab-content .ex-wrapper.ex-arrow:after {
   height: 9px;
   right: 22px;
   top: 21px;
-  background-image: url(../img/icons/icon-arrow.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/icon-arrow.png);
   background-repeat: no-repeat;
 }
 /* line 141, ../sass/desktop/_form.scss */
@@ -13375,14 +13375,14 @@ main.ex-receive ul {
 main.ex-receive ul li:first-of-type {
   width: 310px;
   height: 60px;
-  background-image: url(../img/icons/fanzaim-logo.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/fanzaim-logo.png);
   background-repeat: no-repeat;
 }
 /* line 35, ../sass/desktop/_receiveMoney.scss */
 main.ex-receive ul li:nth-child(2) {
   width: 87px;
   height: 87px;
-  background-image: url(../img/icons/transfer-money.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/transfer-money.png);
   background-repeat: no-repeat;
 }
 @media (max-width: 767px) {
@@ -13414,14 +13414,14 @@ main.ex-receive .ex-main-btn {
 main.ex-receive.ex-contact ul li:last-of-type {
   width: 139px;
   height: 89px;
-  background-image: url(../img/icons/contact2.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/contact2.png);
   background-repeat: no-repeat;
 }
 /* line 77, ../sass/desktop/_receiveMoney.scss */
 main.ex-receive.ex-bank ul li:last-of-type {
   width: 124px;
   height: 113px;
-  background-image: url(../img/icons/bank2.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/bank2.png);
   background-repeat: no-repeat;
 }
 @media (min-width: 768px) {
@@ -13435,20 +13435,23 @@ main.ex-receive.ex-bank ul li:last-of-type {
 main.ex-receive.ex-yandex ul li:last-of-type {
   width: 270px;
   height: 60px;
-  background-image: url(../img/icons/yandex2.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/yandex2.png);
   background-repeat: no-repeat;
 }
 /* line 105, ../sass/desktop/_receiveMoney.scss */
 main.ex-receive.ex-qiwi ul li:last-of-type {
   width: 232px;
   height: 83px;
-  background-image: url(../img/icons/qiwi2.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/qiwi2.png);
   background-repeat: no-repeat;
 }
 /* line 117, ../sass/desktop/_receiveMoney.scss */
 main.ex-receive.ex-bankingCard ul li:last-of-type {
   width: 282px;
   height: 62px;
-  background-image: url(../img/icons/visa2.png);
+  background-image: url(/templates/fanzaim/assets/img/icons/visa2.png);
   background-repeat: no-repeat;
 }
+.ex-main-footer  a {
+  color: #b0b0b0;
+} 

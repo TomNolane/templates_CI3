@@ -38,6 +38,8 @@ if(!isset($description))
 	<meta name="twitter:url" content="https://bzaim5.ru/"/>
 	<meta name="twitter:domain" content="bzaim5.ru"/>
     <link rel="shortcut icon" type="image/png" href="/templates/bzaim/img/favicon.png" /> 
+
+    
      <!-- CSS --> 
     <?php 
     echo '<style>'; 
@@ -461,7 +463,7 @@ if(!isset($description))
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <?php if ($this->uri->segment(1) != 'form') {
-        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        echo '
         <script>
           (adsbygoogle = window.adsbygoogle || []).push({
             google_ad_client: "ca-pub-8603290384746847",

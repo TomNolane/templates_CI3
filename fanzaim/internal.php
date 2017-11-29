@@ -6,21 +6,9 @@ switch($this->uri->segment(1))
 		$my_title = 'Лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
 		$description = 'Fanzaim осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
 		break;
-	case 'contacts': 
-		$my_title = 'Где лучше взять срочный Займ без отказа'; 
-		$description = 'Здесь Вы найдете подробную информацию о кредиторах, представленных на нашем онлайн сервисе экстренных денежных займов и кредитов';
-		break;
 	case 'faq': 
 		$my_title = 'Часто задаваемые вопросы, возникающие при получении займов'; 
 		$description = 'В данном разделе Вы найдете ответы на самые часто задаваемые вопросы об условиях получения срочных займах и особенностях предоставления данных';
-		break;
-	case 'info': 
-		$my_title = 'Как получить мгновенный онлайн займ БЕЗ Отказа'; 
-		$description = 'Подробная информация о получении срочных займов: какие проценты, возможности возврата займа наличными или имуществом,нужно ли платить налог с договора займа';
-		break;
-	case 'docs': 
-		$my_title = 'Правовые документы Онлайн Сервиса по Предоставлению Займов'; 
-		$description = 'Сайт имеет право изменить условия настоящего Соглашения разместив на сайте новою редакцию Соглашения. Изменения вступают в силу через 5 (пять) рабочих дней';
 		break;
 	case 'oferta': 
 		$my_title = 'Публичная Оферта Онлайн Сервиса по Предоставлению Займов'; 
@@ -66,16 +54,47 @@ switch($this->uri->segment(1))
 		$my_title = 'Статьи о займах'; 
 		$description = 'Актуальные статьи о займах и кредитах. О том как правильно взять займ, погасить его, как  оформить заявку на кредит с плохой кредитной историей и многое другое.';
 		break;
+	case 'micofinance':
+		$my_title = 'Микрофинансовые организации и их роль'; 
+		$description = 'Микрофинансовые организации (МФО) – это небанковские финансовые организации. Они обеспечивают потребности в микрозаймах малого и среднего бизнеса, а также домашних хозяйств.';
+		break;
+	case 'microcredit':
+		$my_title = 'Микрокредиты и их преимущества'; 
+		$description = 'В жизни многих людей происходят ситуации, когда всё идёт не по плану и очень срочно нужны деньги. Зачастую банки не могут выдать человеку нужную сумму незамедлительно. На это может быть множество причин: отсутствие у заемщика постоянной работы, несоответствие возрастной категории, испорченная кредитная история, низкий уровень зарплаты.';
+		break;
+	case 'accumulate':
+		$my_title = 'Как накопить деньги: основные принципы'; 
+		$description = 'Каждый из нас хотя бы раз сталкивался с недостатком денежных средств. Конечно же, это не самый приятный момент, но и впадать в депрессивное состояние из-за этого абсолютно не стоит (хотя бы потому, что существуют сервисы срочной финансовой помощи).';
+		break;
+	case '9-rules':
+		$my_title = '9 правил для гармоничных отношений с деньгами'; 
+		$description = 'Предлагаем эти девять способов оптимизации вашего бюджета. И кто знает, может быть, они помогут стать вам немного счастливее.';
+		break;
+	case 'harmony':
+		$my_title = 'С чем нужно определиться перед тем, как взять займ'; 
+		$description = 'Решили взять онлайн микрозайм? Тогда предлагаем вам задать себе следующие вопросы:';
+		break;
+	case 'problems':
+		$my_title = 'Как снять финансовый стресс и не волноваться'; 
+		$description = 'Деньги и неудовлетворительное финансовое состояние являются одной из главнейших причин повседневного стресса – подтверждают исследования.';
+		break;
 	default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'Fanzaim - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
-}
-
-    require 'header.php'; 
- 
+} 
     if ($this->uri->segment(1) == 'about') require 'internal-about.php';
-    elseif ($this->uri->segment(1) == 'docs') require 'internal-docs.php';
-    elseif ($this->uri->segment(1) == 'contacts') require 'internal-contacts.php';
     elseif ($this->uri->segment(1) == 'faq') require 'internal-faq.php';
-    elseif ($this->uri->segment(1) == 'info') require 'internal-info.php';
-    
-    require 'footer.php';
+    elseif ($this->uri->segment(1) == 'rules') require 'internal-rules.php';
+	elseif ($this->uri->segment(1) == 'oferta') require 'internal-oferta.php';
+	elseif ($this->uri->segment(1) == 'soglasie') require 'internal-soglasie.php';
+	elseif ($this->uri->segment(1) == 'zaim-bank') require 'internal-zaim-bank.php'; 
+	elseif ($this->uri->segment(1) == 'zaim-qiwi') require 'internal-zaim-qiwi.php';
+	elseif ($this->uri->segment(1) == 'zaim-yandex') require 'internal-zaim-yandex.php';
+	elseif ($this->uri->segment(1) == 'zaim-contact') require 'internal-zaim-contact.php';
+	elseif ($this->uri->segment(1) == 'zaim-card') require 'internal-zaim-card.php';
+	elseif ($this->uri->segment(1) == 'micofinance') require 'internal-micofinance.php';
+	elseif ($this->uri->segment(1) == 'microcredit') require 'internal-microcredit.php';
+	elseif ($this->uri->segment(1) == 'accumulate') require 'internal-accumulate.php';
+	elseif ($this->uri->segment(1) == 'allarticles') require 'internal-allarticles.php';
+	elseif ($this->uri->segment(1) == '9-rules') require 'internal-9-rules.php';
+	elseif ($this->uri->segment(1) == 'harmony') require 'internal-harmony.php';
+	elseif ($this->uri->segment(1) == 'problems') require 'internal-problems.php'; 
 ?>

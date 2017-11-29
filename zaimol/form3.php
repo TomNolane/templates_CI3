@@ -1,5 +1,5 @@
 <section class="ex-main-form">
-<div class="row">
+<div class="row"> 
     <div class="col-xs-12">
         <div class="form-group has-feedback">
             <label class="control-label col-md-4" for="work">Вид трудоустройства</label>

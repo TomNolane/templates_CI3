@@ -3,7 +3,15 @@
 //-----------------------Initializing--------------------------
 $(document).ready(function () {
     //-----------------------Declaration of variables--------------------------
-    var currentLoanSize = 20000,
+        var c = getParameterByName('amount');
+        var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());
+        if (c != null) {
+            if (c > 100000 || c < 1000) {
+                c = 20000;
+            }
+            gg = c;
+        };
+        var currentLoanSize =  parseInt(gg),
         range = $("#rangeSlider"),
         commissionPercantage = 13,
         bet = 'от 1.27%',
