@@ -317,6 +317,14 @@ $(document).ready(function () {
         addon: "none",
         scrollOnFocus: false
     });
+    $("#feedback-email2").suggestions({
+        serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
+        token: "78fc76023580df0ec78566913b31a87d909f1ec0",
+        type: "EMAIL",
+        count: 3,
+        addon: "none",
+        scrollOnFocus: false
+    });
     $.validate({
         lang: 'ru',
         modules: 'date,sanitize'
@@ -443,6 +451,20 @@ $(document).ready(function () {
             if (lang == 1) {
                 $(this).parent().addClass('ex-error');
                 $(this).after('<span class="help-block form-error">Пожалуйста, смените раскладку клавиатуры на <span class="label label-info">EN</span></span>');
+            }
+        } else {
+            lang = 0;
+            $(this).parent().removeClass('ex-error');
+            $(this).next("span").text(' ');
+        }
+    });
+    $('#feedback-email2').on('keyup keypress', function (e) {
+        if ($(this).val().match(/([а-яёА-ЯЁ]+)/)) {
+            lang++;
+            $(this).val('');
+            if (lang == 1) {
+               $(this).parent().addClass('ex-error');
+               $(this).after('<span class="help-block form-error">Пожалуйста, смените раскладку клавиатуры на <span class="label label-info">EN</span></span>');
             }
         } else {
             lang = 0;

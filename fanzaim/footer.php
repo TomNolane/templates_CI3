@@ -208,10 +208,19 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     function Loading(flag) {
         if (typeof flag == 'undefined') { 
             $('#feedback-send').prop('disabled', true);
-            $('#feedback-send').html('Отправка <i class="fa fa-spinner fa-spin fa-pulse"></i>');
+            $('#feedback-send').html('Отправлено <i class="fa fa-spinner fa-spin fa-pulse"></i>');
         } else if (!flag) {
             $('#feedback-send').html('Отправить');
             $('#feedback-send').prop('disabled', false); 
+        }
+    }
+    function Loading2(flag) {
+        if (typeof flag == 'undefined') { 
+            $('#feedback-send2').prop('disabled', true);
+            $('#feedback-send2').html('Отправлено <i class="fa fa-spinner fa-spin fa-pulse"></i>');
+        } else if (!flag) {
+            $('#feedback-send2').html('Отправить');
+            $('#feedback-send2').prop('disabled', false); 
         }
     }
     $('#feedback-send').click(function () {
@@ -239,7 +248,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
                         $('#askQuestion').modal('hide');
                         Loading(0); 
                         alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
-                        
+                        $('#feedback-send').prop("disabled", true);
                     }
                 } else {
                     alert('Не получилось отправить. Попробуйте ещё раз.');
@@ -252,6 +261,45 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
             });
         } else {
             Loading(0);
+            alert('Пожалуйста, заполните все поля.');
+        }
+    });  
+    $('#feedback-send2').click(function () {
+        Loading2();
+
+        var data2 = {
+            name: $('#feedback-name2').val(),
+            phone: $('#feedback-phone2').val(),
+            email: $('#feedback-email2').val(),
+            comment: $('#feedback-comment2').val()
+        };
+
+        if ((typeof data2.phone != 'undefined' && data2.phone != '') && (typeof data2.email != 'undefined' && data2
+                .email != '') && (typeof data2.comment != 'undefined' && data2.comment != '')) {
+            $.ajax({
+                url: '/feedback/',
+                type: 'POST',
+                dataType: 'json',
+                data: data2
+            }).done(function (response) {
+                if (response != null) {
+                    if (typeof response.error != 'undefined') {
+                        alert('Ошибка. ' + response.error);
+                    } else { 
+                        Loading(0); 
+                        alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
+                        $('#feedback-send2').prop("disabled", true);
+                    }
+                } else {
+                    alert('Не получилось отправить. Попробуйте ещё раз.'); 
+                }
+            }).fail(function (jqxhr, textStatus, error) {
+                alert('Не получилось отправить. Попробуйте ещё раз.');
+            }).always(function () {
+                Loading(0);
+            });
+        } else {
+            Loading2(0);
             alert('Пожалуйста, заполните все поля.');
         }
     });  
