@@ -561,7 +561,10 @@ function clone(o) {
 	return c;
 }
 </script>
-<?php } ?>
+<?php } 
+
+require 'yandex_metrika.php';
+?>
 <script>
 function markTarget(target,param,id){
     if (typeof yaCounter39556840 == 'undefined') return;
