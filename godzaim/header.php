@@ -142,7 +142,7 @@ if(!isset($description))
 			}
 			.rtb {
 				background-color: #ffffff;
-				min-width: 100%;
+				 min-width: 100%;   
 			}
 			</style>';
 		}

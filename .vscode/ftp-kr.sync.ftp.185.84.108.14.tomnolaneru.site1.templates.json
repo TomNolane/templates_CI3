@@ -31,7 +31,65 @@
             "type": "d",
             "name": "dengimo",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 29812
+                },
+                {
+                    "type": "-",
+                    "name": "form.php",
+                    "size": 14279
+                },
+                {
+                    "type": "-",
+                    "name": "style.css",
+                    "size": 16638
+                },
+                {
+                    "type": "-",
+                    "name": "style.min.css",
+                    "size": 11415
+                },
+                {
+                    "type": "-",
+                    "name": "index.php",
+                    "size": 21496
+                },
+                {
+                    "type": "-",
+                    "name": "header.php",
+                    "size": 36013
+                },
+                {
+                    "type": "d",
+                    "name": "js",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "-",
+                            "name": "settings.js",
+                            "size": 17940
+                        }
+                    ]
+                },
+                {
+                    "type": "-",
+                    "name": "sendpuls.php",
+                    "size": 144
+                },
+                {
+                    "type": "-",
+                    "name": "yandex_metrika.php",
+                    "size": 837
+                },
+                {
+                    "type": "-",
+                    "name": "form2.php",
+                    "size": 13930
+                }
+            ]
         },
         {
             "type": "d",
@@ -52,8 +110,23 @@
             "files": [
                 {
                     "type": "-",
+                    "name": "index.php",
+                    "size": 13277
+                },
+                {
+                    "type": "-",
+                    "name": "header.php",
+                    "size": 33358
+                },
+                {
+                    "type": "-",
                     "name": "footer.php",
-                    "size": 43381
+                    "size": 44961
+                },
+                {
+                    "type": "-",
+                    "name": "internal-article.php",
+                    "size": 15062
                 }
             ]
         },
