@@ -11,9 +11,31 @@
         },
         {
             "type": "d",
-            "name": "bzaim",
+            "name": "Fanzaim",
             "size": 4096,
             "files": []
+        },
+        {
+            "type": "d",
+            "name": "bzaim",
+            "size": 4096,
+            "files": [
+                {
+                    "type": "-",
+                    "name": "footer.bak",
+                    "size": 39974
+                },
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 40407
+                },
+                {
+                    "type": "-",
+                    "name": "header.php",
+                    "size": 51909
+                }
+            ]
         },
         {
             "type": "d",
@@ -31,65 +53,7 @@
             "type": "d",
             "name": "dengimo",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "footer.php",
-                    "size": 29812
-                },
-                {
-                    "type": "-",
-                    "name": "form.php",
-                    "size": 14279
-                },
-                {
-                    "type": "-",
-                    "name": "style.css",
-                    "size": 16638
-                },
-                {
-                    "type": "-",
-                    "name": "style.min.css",
-                    "size": 11415
-                },
-                {
-                    "type": "-",
-                    "name": "index.php",
-                    "size": 21496
-                },
-                {
-                    "type": "-",
-                    "name": "header.php",
-                    "size": 36013
-                },
-                {
-                    "type": "d",
-                    "name": "js",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "-",
-                            "name": "settings.js",
-                            "size": 17940
-                        }
-                    ]
-                },
-                {
-                    "type": "-",
-                    "name": "sendpuls.php",
-                    "size": 144
-                },
-                {
-                    "type": "-",
-                    "name": "yandex_metrika.php",
-                    "size": 837
-                },
-                {
-                    "type": "-",
-                    "name": "form2.php",
-                    "size": 13930
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
@@ -105,28 +69,237 @@
         },
         {
             "type": "d",
+            "name": "fanzaim",
+            "size": 4096,
+            "files": [
+                {
+                    "type": "-",
+                    "name": "form3.php",
+                    "size": 9453
+                },
+                {
+                    "type": "d",
+                    "name": "assets",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "css",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "style_custom.css",
+                                    "size": 2718
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "style_custom.min.css",
+                                    "size": 1503
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "style.css",
+                                    "size": 343193
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "style_lk.css",
+                                    "size": 80
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "style.min.css",
+                                    "size": 203394
+                                }
+                            ]
+                        },
+                        {
+                            "type": "d",
+                            "name": "js",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "settings_form.js",
+                                    "size": 31641
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "settings_form.min.js",
+                                    "size": 19820
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "settings_main.js",
+                                    "size": 4508
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "jquery.form-validator.js",
+                                    "size": 29175
+                                }
+                            ]
+                        },
+                        {
+                            "type": "d",
+                            "name": "fonts",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "glyphicons-halflings-regular.woff2",
+                                    "size": 18028
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "glyphicons-halflings-regular.eot",
+                                    "size": 20127
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "glyphicons-halflings-regular.svg",
+                                    "size": 109025
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "glyphicons-halflings-regular.ttf",
+                                    "size": 45404
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "glyphicons-halflings-regular.woff",
+                                    "size": 23424
+                                }
+                            ]
+                        },
+                        {
+                            "type": "d",
+                            "name": "img",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "7.jpg",
+                                    "size": 63663
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "cd-top-arrow.png",
+                                    "size": 261
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "Fanzaim-logo-footer.png",
+                                    "size": 1602
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "article2.jpg",
+                                    "size": 99382
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "article1.jpg",
+                                    "size": 43540
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "article3.jpg",
+                                    "size": 48398
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "article4.jpg",
+                                    "size": 45177
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "article5.jpg",
+                                    "size": 35599
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "article6.jpg",
+                                    "size": 48475
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "-",
+                    "name": "header.php",
+                    "size": 12473
+                },
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 19927
+                },
+                {
+                    "type": "-",
+                    "name": "form1.php",
+                    "size": 7745
+                },
+                {
+                    "type": "-",
+                    "name": "form.php",
+                    "size": 5388
+                },
+                {
+                    "type": "-",
+                    "name": "form2.php",
+                    "size": 12437
+                },
+                {
+                    "type": "-",
+                    "name": "lk.php",
+                    "size": 3593
+                },
+                {
+                    "type": "-",
+                    "name": "internal-about.php",
+                    "size": 5311
+                },
+                {
+                    "type": "d",
+                    "name": "img",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "-",
+                            "name": "favicon.png",
+                            "size": 1318
+                        },
+                        {
+                            "type": "-",
+                            "name": "favicon-16x16.png",
+                            "size": 1318
+                        },
+                        {
+                            "type": "-",
+                            "name": "favicon.ico",
+                            "size": 1150
+                        }
+                    ]
+                },
+                {
+                    "type": "-",
+                    "name": "internal-soglasie.php",
+                    "size": 8861
+                }
+            ]
+        },
+        {
+            "type": "d",
             "name": "godzaim",
             "size": 4096,
             "files": [
                 {
                     "type": "-",
-                    "name": "index.php",
-                    "size": 13277
-                },
-                {
-                    "type": "-",
-                    "name": "header.php",
-                    "size": 33358
-                },
-                {
-                    "type": "-",
                     "name": "footer.php",
-                    "size": 44961
-                },
-                {
-                    "type": "-",
-                    "name": "internal-article.php",
-                    "size": 15062
+                    "size": 45286
                 }
             ]
         },
@@ -152,7 +325,13 @@
             "type": "d",
             "name": "zaimhome",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 21792
+                }
+            ]
         },
         {
             "type": "d",

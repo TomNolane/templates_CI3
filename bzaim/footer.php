@@ -9,7 +9,20 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 {
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-?>
+
+if($this->uri->segment(1) != 'form')
+{
+	echo '<!-- Bzaim5 -->
+<div class="text-center"><ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2472854344350368"
+     data-ad-slot="5905432642"
+     data-ad-format="auto"></ins></div>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>';
+}
+?> 
 <footer>
     <div class="container">
         <div class="col-md-12 col-xs-12">
@@ -869,6 +882,7 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
         })(this, this.document, "yandexContextAsyncCallbacks");
     }
 </script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
