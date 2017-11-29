@@ -1,0 +1,61 @@
+main.ex-faq{
+  background-color: #f7f7f7;
+  padding: 55px 0 100px;
+  h2{
+    margin-top: 0;
+    color: #1c2237;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 33px;
+  }
+  .panel{
+    margin-bottom: 15px;
+    .panel-heading{
+      background-color: transparent;
+      padding: 0;
+      h4{
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.34px;
+        a{
+          background-color: #45E2C1;
+          display: block;
+          padding: 20px 57px;
+          text-decoration: none;
+          @include prefix(transition, all 0.4s linear);
+          &:focus{
+            background-color: rgba(#bbd1cc, 0.7);
+          }
+        }
+        @media (max-width: 600px) {
+          font-size: 16px;
+          line-height: 18px;
+          a{
+            padding: 20px 15px;
+          }
+        }
+      }
+    }
+    .panel-body{
+      padding: 17px 57px 26px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+      @media (max-width: 600px) {
+        padding: 20px 15px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+  button{
+    max-width: 400px;
+    display: block;
+    margin: 55px auto 0;
+  }
+}
