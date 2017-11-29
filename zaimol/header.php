@@ -394,6 +394,12 @@ if(!isset($description))
 		}
 		'; 
 		echo '</style>'; 
+		if ($this->uri->segment(1) == 'lk') 
+		{
+			echo '<style>';
+			require "templates/zaimol/assets/css/style_lk.css";
+			echo '</style>';
+		}
 	?> 
 
 	<!--[if lte IE 9]>

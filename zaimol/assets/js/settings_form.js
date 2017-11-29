@@ -461,6 +461,7 @@ $(document).ready(function () {
     $('#next1').click(function () { 
         if (validate1()) { 
             $('input[name="step"]').val('1'); 
+            $('.spec_footer4').css('visibility','hidden');
 
             var client_w2 = screen.width; 
             var pathname2 = window.location.pathname,  substring3 = "form";

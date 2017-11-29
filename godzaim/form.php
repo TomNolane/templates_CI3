@@ -107,8 +107,8 @@ if(isset($_SERVER['HTTP_REFERER'])){
 							<?php require('form2.php'); ?>
 							<div class="clearfix">&nbsp;</div>
                                 <div class="form-group">
-                                    <div class="col-md-4 col-md-offset-4"><div class="pull-left"><a class="btn btn-primary btn-next" id="back"><i class="fa fa-arrow-left"></i> Назад</a></div></div>
-                                    <div class="col-md-4"><div class="pull-right"><a class="btn btn-primary btn-next" id="next2">Далее <i class="fa fa-arrow-right"></i></a></div></div>
+                                    <div class="col-md-4 col-md-offset-4 hidden"><div class="pull-left"><a class="btn btn-primary btn-next" id="back"><i class="fa fa-arrow-left"></i> Назад</a></div></div>
+                                    <div class="col-md-12"><div class="pull-right"><a class="btn btn-primary btn-next" id="next2">Далее <i class="fa fa-arrow-right"></i></a></div></div>
                             </div>
 							<div class="clearfix"></div>
 						</div>
