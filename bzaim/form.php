@@ -135,7 +135,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                                         </div>
                                                         <div id="form2" class="tab-pane fade">
                                                             <?php require('form2.php'); ?>
-                                                            <div class="col-md-4 col-xs-6 hidden-sm hidden-xs">
+                                                            <div class="col-md-4 col-xs-6 hidden">
                                                                 <a href="#form1" class="btn btn-xl btn-success btn-next pull-left btn_form_spec" id="back">
                                                                     <i class="fa fa-arrow-left"></i> Назад</a>
                                                             </div>
