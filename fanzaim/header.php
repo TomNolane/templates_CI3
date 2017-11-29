@@ -183,46 +183,6 @@
             </div>
         </div>
     </nav>
-    <!-- Modal -->
-	<!-- <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header text-center">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					<h3 class="modal-title" id="feedbackModalLabel">Остались вопросы?</h3>
-					<p>Просто заполните форму и наш специалист свяжется с Вами</p>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="col-md-10 col-md-offset-1 col-sm-12 modal-body-form">
-							<div class="form-group">
-								<input type="text" class="form-control input-lg" id="feedback-name" placeholder="Имя" title="Имя">
-							</div>
-							<div class="form-group">
-								<input type="tel" class="form-control input-lg" id="feedback-phone" placeholder="Телефон" title="Телефон">
-							</div>
-							<div class="form-group">
-								<input type="email" class="form-control input-lg" id="feedback-email" placeholder="Email" title="Email" required>
-							</div>
-							<div class="form-group">
-								<textarea class="form-control input-lg" id="feedback-comment" rows="3" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"
-								    required></textarea>
-							</div>
-							<div class="form-group">
-								<button type="button" class="btn btn-success btn-lg btn-block" id="feedback-send">Отправить</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-	<!-- <div id="loading hidden">
-		<span>
-			<i class="fa fa-spinner fa-spin fa-pulse"></i> Загрузка...</span>
-    </div> -->
     <div id="askQuestion" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
