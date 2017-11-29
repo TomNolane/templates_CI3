@@ -63,15 +63,12 @@ if(!isset($description))
     echo '</script>'; 
 ?>
 <?php if ($this->uri->segment(1) != 'form') {
-    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- Vkredito -->
-	<ins class="adsbygoogle"
-		 style="display:block"
-		 data-ad-client="ca-pub-2472854344350368"
-		 data-ad-slot="4958100911"
-		 data-ad-format="auto"></ins>
+    echo '
 	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
+	  (adsbygoogle = window.adsbygoogle || []).push({
+		google_ad_client: "ca-pub-2472854344350368",
+		enable_page_level_ads: true
+	  });
 	</script>';
 }?>
 

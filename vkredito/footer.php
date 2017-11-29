@@ -1,13 +1,22 @@
-<div class="buffer"></div>
 <?php if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') 
 {
     echo '<div id="ya-rtb">
             <div id="yandex_rtb_R-A-249178-1"></div>
             <div id="yandex_rtb_R-A-249178-2"></div>
-        </div>';
-}?>
-
-<?php
+        </div>'; 
+}
+if ($this->uri->segment(1) != 'form')
+{
+    echo '<!-- Vkredito -->
+    <center><ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-2472854344350368"
+            data-ad-slot="4958100911"
+            data-ad-format="auto"></ins></center>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
+} 
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
 {
     echo '<a href="#0" class="cd-top">Наверх</a>';
@@ -587,6 +596,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
         })(this, this.document, "yandexContextAsyncCallbacks");
     }
 </script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Код тега ремаркетинга Google -->
 <!--------------------------------------------------
 С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
