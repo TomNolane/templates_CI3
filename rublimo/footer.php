@@ -2,14 +2,27 @@
 $from = '15'; 
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
 {
-    echo '<a href="#0" class="cd-top">Наверх</a>';
+    echo '<a href="#0" class="cd-top">Наверх</a>'; 
 }
-?>
-    <div class="buffer"></div>
+if($this->uri->segment(1) != 'form')
+{
+    echo '<div class="buffer"></div>
     <div id="ya-rtb">
         <div id="yandex_rtb_R-A-244327-2"></div>
         <div id="yandex_rtb_R-A-244327-1"></div>
-    </div>
+    </div>';
+    echo '<!-- Rublimo -->
+    <div class="text-center"><ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2472854344350368"
+         data-ad-slot="8958099258"
+         data-ad-format="auto"></ins></div>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
+}
+?> 
+    
     <footer>
         <div class="container">
             <div class="row">
@@ -828,6 +841,7 @@ echo '<script>
                 })(this, this.document, "yandexContextAsyncCallbacks");
             }
         </script>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
         <!-- Код тега ремаркетинга Google -->
         <!--------------------------------------------------
 С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.

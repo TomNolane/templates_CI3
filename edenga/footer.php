@@ -11,15 +11,15 @@ if($this->uri->segment(1) != 'form')
             <div id="yandex_rtb_R-A-243982-2"></div>
             <div id="yandex_rtb_R-A-243982-1"></div>
         </div>';
-	echo '<!-- Bzaim5 -->
-        <div class="text-center"><div class="text-center"><ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-2472854344350368"
-            data-ad-slot="5905432642"
-            data-ad-format="auto"></ins></div></div>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
+	echo '<!-- Edenga -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2472854344350368"
+         data-ad-slot="2277140837"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
 }
 ?>
 

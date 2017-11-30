@@ -1,15 +1,28 @@
+</div>
 <?php $from = '15';
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
 {
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
+
+if($this->uri->segment(1) != 'form')
+{
+    echo '<div class="buffer"></div> 
+    <div id="ya-rtb">
+    <div id="yandex_rtb_R-A-232716-8"></div>
+    <div id="yandex_rtb_R-A-232716-7"></div>
+    </div>';
+    echo '<!-- Dengimo -->
+    <div class="text-center"><ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2472854344350368"
+         data-ad-slot="5613750615"
+         data-ad-format="auto"></ins></div>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
+}
 ?> 
-</div>
-<div class="buffer"></div> 
-<div id="ya-rtb">
-<div id="yandex_rtb_R-A-232716-8"></div>
-<div id="yandex_rtb_R-A-232716-7"></div>
-</div>
 <footer>
 <div class="container">
     <div class="col-md-12 col-sm-12 col-xs-12">
