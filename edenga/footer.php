@@ -1,10 +1,14 @@
+<?php $from = '15'; ?>
 <div class="clearfix buffer"></div>
-<div id="ya-rtb"><div id="yandex_rtb_R-A-243982-2"></div><div id="yandex_rtb_R-A-243982-1"></div></div>
+<div id="ya-rtb">
+    <div id="yandex_rtb_R-A-243982-2"></div>
+    <div id="yandex_rtb_R-A-243982-1"></div>
+</div>
 <footer class="">
     <div class="container">
         <div class="row">
             <div class="col-md-2 col-xs-12">
-                <img src="/templates/edenga/img/logo.png" class="logo">
+                <a href="/"><img src="/templates/edenga/img/logo.png" class="logo"></a>
             </div>
             <div class="col-md-3 col-xs-12 spec_footer4">
                 Cервис по подбору выгодных онлайн займов находящийся по адресу Россия, Новосибирская область г. Новосибирск, ул. Маршала Покрышкина, 12, оф 201
@@ -28,6 +32,8 @@ echo '</script>';
 echo '<script>';
 require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
 echo '</script>';
+echo '<script>
+jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});</script>';
 
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index') 
 {
@@ -36,12 +42,61 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri-
     echo '</script>';
     echo '<script>';
     require 'modules/3dgallery/js/jquery.gallery.js';
-    echo '</script>';
+    echo '</script>'; 
     echo '<script>
     $(document).ready(function () {
         $("#dg-container").gallery();
     });
     </script> ';
+}elseif ($this->uri->segment(1) == 'form') {
+    echo '<script>';
+    require 'templates/edenga/js/jquery.suggestions.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/edenga/js/settings.js';
+    echo '</script>';
+
+    require 'templates/common/js.php';
+    if(isset($_GET['email'])){
+        //данные пользователя
+        $this->load->model('user/user_model', 'user');
+        $user_data = $this->user->get_user($_GET['email']);
+        $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
+        $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
+        foreach ($user_data as $name => $item){
+            echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
+        }
+        echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
+    }
+
+    if(isset($_GET['popup']) and $_GET['popup']==1 ){
+        echo '    
+    <!-- Modal Popup-->
+    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                                <div class="modal-header text-center">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
+                                </div>
+                                <div class="modal-body text-center">
+                                        <div class="row">
+                                                <div class="col-md-12">
+                                                    <img src="/templates/common/img/popup.jpg">                                             
+                                                    <h2>'.$popup_text.'</h2>
+                                                    <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+    </div>
+    
+            <script type= " text/javascript">
+                $(window).load(function(){
+                    $("#popup").modal("show");
+                });
+            </script>';
+    }
 }
 ?>  
 
@@ -147,46 +202,47 @@ $(document).ready(function(){
         $('input#birthdate').mask("nn/nn/nnnn");
         $('input#passportdate').mask("nn/nn/nnnn");
         $('input#work_salary').mask("nnnn?nn", { "placeholder": "" });
-        $('input#work_experience').mask("n?nn", { "placeholder": "" });       
+        $('input#work_experience').mask("n?nn", { "placeholder": "" });
         $('input#flat').mask("n?***", { "placeholder": "" });
         $('input#building').mask("n?***", { "placeholder": "" });
-        $('input#work_house').mask("n?***", { "placeholder": "" });        
-	//$('.fancybox').fancybox();
-	/*
-	$('.ec').each(function(){
-		var variant = ($(this).context.tagName == 'SPAN')? $(this).context.classList[0] : $(this).attr('name');
-		var value = getcookie(variant);
-		if (value !== null) {
-			if ($(this).context.tagName == 'INPUT'){
-				if ($(this).context.type == 'radio' || $(this).context.type == 'checkbox'){
-					$(this).prop('checked', ($(this).val() == value));
-				}
-				else $(this).val(value);
-			}
-			else if ($(this).context.tagName == 'SELECT') $(this).find('option[value="' + value + '"]').attr('selected', true);
-			else if ($(this).context.tagName == 'SPAN'){
-				if (variant == 'reg_region' && value == '0') $(this).text('Совадает с адресом проживания');
-				else $(this).text(value);
-			}
-		}
-		//setcookie('lk', '1');
-	});
-	
-	
-	ec.get('lk', function(value){
-		var variants = ['f', 'i', 'o'];
-		if (typeof value != 'undefined' && !!value) {
-			variants.forEach(function(variant, id){
-				ec.get(variant, function(value){
-					if (typeof value != 'undefined') $('.' + variant).text(value);
-				});
-			});
-		}
-	});*/
+        $('input#work_house').mask("n?***", { "placeholder": "" });
 	
 	$('.amount').ionRangeSlider({
                 values: [1000, 2000, 3000, 4000, 5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,20000,25000,30000,40000,50000,80000,100000],    
                 hide_min_max: true,
+                from: <?php 
+
+        if(isset($_GET['amount'])) 
+        {  
+            switch($_GET['amount'])
+            {
+                case '1000': $from = '0' ; break;
+                case '2000': $from = '1' ; break;
+                case '3000': $from = '2' ; break;
+                case '4000': $from = '3' ; break;
+                case '5000': $from = '4' ; break;
+                case '6000': $from = '5' ; break;
+                case '7000': $from = '6' ; break;
+                case '8000': $from = '7' ; break;
+                case '9000': $from = '8' ; break;
+                case '10000': $from = '9' ; break;
+                case '11000': $from = '10' ; break;
+                case '12000': $from = '11' ; break;
+                case '13000': $from = '12' ; break;
+                case '14000': $from = '13' ; break;
+                case '15000': $from = '14' ; break;
+                case '20000': $from = '15' ; break;
+                case '25000': $from = '16' ; break;
+                case '30000': $from = '17' ; break;
+                case '40000': $from = '18' ; break;
+                case '50000': $from = '19' ; break;
+                case '80000': $from = '20' ; break;
+                case '100000': $from = '21' ; break;
+            }
+            echo $from; 
+        }
+        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        ?>,
 		onChange:function(range){
 			var percent = 0;
 			var attr = '';
@@ -194,9 +250,9 @@ $(document).ready(function(){
                         
 			if (range.from_value <= 7000) {
                                 period.update({
-                                    from: 15                                 
+                                    from: 15
                                 });
-                                $('#period2').val('7');
+                                $('#period2').val('7'); 
 				perc = 97;
 				attr = 'Автоматическое одобрение';
 				color = 'green';
@@ -205,7 +261,7 @@ $(document).ready(function(){
 			}
 			else if (range.from_value <= 15000) {
                                 period.update({
-                                    from: 30                                 
+                                    from: 30
                                 });
                                 $('#period2').val('14');
 				perc = 94;
@@ -216,7 +272,7 @@ $(document).ready(function(){
 			}
 			else if (range.from_value <= 30000) {
                                 period.update({
-                                    from: 120                                 
+                                    from: 120
                                 });
                                 $('#period2').val('21');
 				perc = 84;
@@ -227,7 +283,7 @@ $(document).ready(function(){
 			}
 			else if (range.from_value <= 50000) {
                                 period.update({
-                                    from: 240                                 
+                                    from: 240
                                 });          
                                 $('#period2').val('30');
 				perc = 72;
@@ -246,8 +302,9 @@ $(document).ready(function(){
 				color = 'red';
                                 day_comment = 'От 365 дней';
                                 day=30;
-			}                        
-                        
+			}
+            $('#amount').val(range.from_value);
+            $('#form_slrd').val(range.from);        
 			$('.current_amount').text(String(range.from_value).split(/(?=(?:\d{3})+$)/).join(' '));
 			$('.percent_rate').text(perc + '%');
                         $('.comment').text(attr);
@@ -265,25 +322,83 @@ $(document).ready(function(){
 	var slider = $('.amount').data('ionRangeSlider');
         <?php if ($this->uri->segment(1) == '') { ?>
             var slider_plus = true;
-            var n=6;
-            var slider_init = setInterval(function() {
-                if(slider_plus){
+            var n = 10;
+            var slider_init = setInterval(function () {
+                if (slider_plus) {
                     n++;
-                }else{
+                } else {
                     n--;
                 }
-                if(n == 21){
+                if (n == 21 && n != <?php echo $from;?>) {
                     slider_plus = false;
-                } else if(n == 5){
+                }else if (n == <?php echo $from;?> && slider_plus == false) {
+                    clearInterval(slider_init);
+                }else if (n == 21 && n == <?php echo $from;?>) {
                     clearInterval(slider_init);
                 }
-
+         
                 slider.update({
                     from: n
                 });
 
-            }, 50);        
-        <?php } ?>        
+                if (slider.result.from_value <= 7000) {
+                                period.update({
+                                    from: 15
+                                });
+                                $('#period2').val('7'); 
+				perc = 97;
+				attr = 'Автоматическое одобрение';
+				color = 'green';
+                                day_comment = 'От 61 дня';
+                                day=1;
+			}
+			else if (slider.result.from_value <= 15000) {
+                                period.update({
+                                    from: 30
+                                });
+                                $('#period2').val('14');
+				perc = 94;
+				attr = 'Может понадобиться паспорт';
+				color = 'green';
+                                day_comment = 'От 130 дней';
+                                day=15;
+			}
+			else if (slider.result.from_value <= 30000) {
+                                period.update({
+                                    from: 120
+                                });
+                                $('#period2').val('21');
+				perc = 84;
+				attr = 'Нужен только паспорт';
+				color = 'orange';
+                                day_comment = 'От 130 дней';
+                                day=15;
+			}
+			else if (slider.result.from_value <= 50000) {
+                                period.update({
+                                    from: 240
+                                });          
+                                $('#period2').val('30');
+				perc = 72;
+				attr = 'Нужна справка о доходах';
+				color = 'orange';
+                                day_comment = 'От 230 дней';
+                                day=15;
+			}
+			else {
+                                period.update({
+                                    from: 350                                 
+                                });       
+                                $('#period2').val('30');
+				perc = 64;
+				attr = 'Нужна справка о доходах';
+				color = 'red';
+                                day_comment = 'От 365 дней';
+                                day=30;
+			} 
+
+            }, 50);
+        <?php } ?>
 	$('#period').ionRangeSlider({
 		min: 65,
 		max: 365,
@@ -302,7 +417,39 @@ $(document).ready(function(){
 	var slider_intl = setInterval(function(){
 		var step = slider_plus? slider.options.from+slider.options.step : slider.options.from-slider.options.step;
 		if (step == slider.options.max) slider_plus = false;
-		if (step < <?php echo empty($_POST['amount'])? 15000 : $_POST['amount']; ?>) {
+		if (step < <?php 
+
+        if(isset($_GET['amount'])) 
+        {  
+            switch($_GET['amount'])
+            {
+                case '1000': $from = '0' ; break;
+                case '2000': $from = '1' ; break;
+                case '3000': $from = '2' ; break;
+                case '4000': $from = '3' ; break;
+                case '5000': $from = '4' ; break;
+                case '6000': $from = '5' ; break;
+                case '7000': $from = '6' ; break;
+                case '8000': $from = '7' ; break;
+                case '9000': $from = '8' ; break;
+                case '10000': $from = '9' ; break;
+                case '11000': $from = '10' ; break;
+                case '12000': $from = '11' ; break;
+                case '13000': $from = '12' ; break;
+                case '14000': $from = '13' ; break;
+                case '15000': $from = '14' ; break;
+                case '20000': $from = '15' ; break;
+                case '25000': $from = '16' ; break;
+                case '30000': $from = '17' ; break;
+                case '40000': $from = '18' ; break;
+                case '50000': $from = '19' ; break;
+                case '80000': $from = '20' ; break;
+                case '100000': $from = '21' ; break;
+            }
+            echo $from; 
+        }
+        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        ?>) {
 			clearInterval(slider_intl);
 		}
 		else slider.update({from:step});
@@ -334,6 +481,39 @@ $(document).ready(function(){
 <script>
     $('.amount2').ionRangeSlider({
         values: [1000, 2000, 3000, 4000, 5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,20000,25000,30000,40000,50000,80000,100000],
+        from: <?php 
+
+        if(isset($_GET['amount'])) 
+        {  
+            switch($_GET['amount'])
+            {
+                case '1000': $from = '0' ; break;
+                case '2000': $from = '1' ; break;
+                case '3000': $from = '2' ; break;
+                case '4000': $from = '3' ; break;
+                case '5000': $from = '4' ; break;
+                case '6000': $from = '5' ; break;
+                case '7000': $from = '6' ; break;
+                case '8000': $from = '7' ; break;
+                case '9000': $from = '8' ; break;
+                case '10000': $from = '9' ; break;
+                case '11000': $from = '10' ; break;
+                case '12000': $from = '11' ; break;
+                case '13000': $from = '12' ; break;
+                case '14000': $from = '13' ; break;
+                case '15000': $from = '14' ; break;
+                case '20000': $from = '15' ; break;
+                case '25000': $from = '16' ; break;
+                case '30000': $from = '17' ; break;
+                case '40000': $from = '18' ; break;
+                case '50000': $from = '19' ; break;
+                case '80000': $from = '20' ; break;
+                case '100000': $from = '21' ; break;
+            }
+            echo $from; 
+        }
+        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        ?>,
         onChange:function(range){
             		if (range.from_value <= 10000) {
                             $('#p').val('7');
