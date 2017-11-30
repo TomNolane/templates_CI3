@@ -13496,3 +13496,7 @@ header .navbar-default {
   .special_ind42 {
     margin-top: 10px !important; margin-bottom: 10px !important;
   }
+  #ya-rtb {
+    text-align: center !important;
+    min-width: 100% !important; 
+  }

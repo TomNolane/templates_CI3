@@ -4,6 +4,20 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
 ?>
+<?php
+if($this->uri->segment(1) != 'form')
+{ 
+	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Zaimol -->
+    <div class="text-center"><ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2472854344350368"
+         data-ad-slot="2964903524"
+         data-ad-format="auto"></ins></div>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
+}
+?>
 <footer class="ex-main-footer">
 <div class="container">
     <div>

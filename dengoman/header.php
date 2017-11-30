@@ -20,6 +20,14 @@
 <link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 <link href="/templates/dengoman/style.css?ver=2" rel="stylesheet" media="screen">
+	<?php
+		if ($this->uri->segment(1) == 'lk') 
+		{
+			echo '<style>';
+			require "templates/dengoman/css/style_lk.css";
+			echo '</style>';
+		}
+	?>
 
 <script src="/modules/jquery/jquery-1.11.3.min.js"></script>
 
