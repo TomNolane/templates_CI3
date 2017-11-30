@@ -1,9 +1,28 @@
 <?php $from = '15'; ?>
 <div class="clearfix buffer"></div>
-<div id="ya-rtb">
-    <div id="yandex_rtb_R-A-243982-2"></div>
-    <div id="yandex_rtb_R-A-243982-1"></div>
-</div>
+<?php
+if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
+{
+    echo '<a href="#0" class="cd-top">Наверх</a>';
+}
+if($this->uri->segment(1) != 'form')
+{
+    echo '<div id="ya-rtb">
+            <div id="yandex_rtb_R-A-243982-2"></div>
+            <div id="yandex_rtb_R-A-243982-1"></div>
+        </div>';
+	echo '<!-- Bzaim5 -->
+        <div class="text-center"><div class="text-center"><ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-2472854344350368"
+            data-ad-slot="5905432642"
+            data-ad-format="auto"></ins></div></div>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
+}
+?>
+
 <footer class="">
     <div class="container">
         <div class="row">
@@ -21,8 +40,11 @@
         </div>
         <div class="clearfix">&nbsp;</div>
     </div>
-</footer>
+</footer> 
 <?php
+echo '<script>';
+require 'templates/bzaim/vendor/jquery/jquery.min.js';
+echo '</script>';
 echo '<script>';
 require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
 echo '</script>';
@@ -31,6 +53,9 @@ require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
 echo '</script>';
 echo '<script>';
 require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
+echo '</script>';
+echo '<script>';
+require 'templates/edenga/js/get_parameter.js';
 echo '</script>';
 echo '<script>
 jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});</script>';
@@ -49,26 +74,7 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri-
     });
     </script> ';
 }elseif ($this->uri->segment(1) == 'form') {
-    echo '<script>';
-    require 'templates/edenga/js/jquery.suggestions.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/edenga/js/settings.js';
-    echo '</script>';
-
-    require 'templates/common/js.php';
-    if(isset($_GET['email'])){
-        //данные пользователя
-        $this->load->model('user/user_model', 'user');
-        $user_data = $this->user->get_user($_GET['email']);
-        $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
-        $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
-        foreach ($user_data as $name => $item){
-            echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
-        }
-        echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
-    }
-
+    require 'templates/common/js.php'; 
     if(isset($_GET['popup']) and $_GET['popup']==1 ){
         echo '    
     <!-- Modal Popup-->
@@ -96,10 +102,68 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri-
                     $("#popup").modal("show");
                 });
             </script>';
-    }
-}
+    } 
+     
+        if(isset($_GET['email'])){
+            //данные пользователя
+            $this->load->model('user/user_model', 'user');
+            $user_data = $this->user->get_user($_GET['email']);
+            $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
+            $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
+            foreach ($user_data as $name => $item){
+                echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
+            }
+            echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
+        }  
+        echo '<script>';
+        require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+        echo '</script>'; 
+        echo '<script>';
+        require 'templates/edenga/js/validate.js';
+        echo '</script>';
+        echo '<script>';
+        require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
+        echo '</script>';
+        echo '<script>';
+        require 'templates/edenga/js/jquery.form-validator.js';
+        echo '</script>';
+        echo '<script>';
+        require 'templates/edenga/js/jquery.suggestions.min.js';
+        echo '</script>';
+        echo '<script>';
+        require 'templates/edenga/js/settings.js';
+        echo '</script>';
+        echo '
+            <script type="text/javascript">
+                $("#email").suggestions({
+                    serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
+                    token: "78fc76023580df0ec78566913b31a87d909f1ec0",
+                    type: "EMAIL",
+                    count: 3,
+                    scrollOnFocus: false
+                });
+                $("#feedback-email").suggestions({
+                    serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
+                    token: "78fc76023580df0ec78566913b31a87d909f1ec0",
+                    type: "EMAIL",
+                    count: 3,
+                    scrollOnFocus: false
+                });
+            </script>'; 
+            
+        }
 ?>  
-
+<script>
+  $(document).ready(function () {
+    if (location.hash) {
+      location.hash && $(location.hash + '.collapse').collapse('show');
+      $('body').animate({
+        scrollTop: $($(location.hash).parent()).offset().top - 50
+      }, 1000);
+      return false;
+    }
+  });
+</script>
 <script>
 function setcookie(name, value, expires, path, domain, secure)
 {
@@ -471,18 +535,16 @@ $(document).ready(function(){
 		comm = comm1 + comm2;
 		summ = amount + comm;
 		$('.perc').text(percent);
-                $('.am').text(amount);              
-                $('.comm').text(comm);
-                $('.sum').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));                
-	};  
-        
+        $('.am').text(amount);
+        $('.comm').text(comm);
+        $('.sum').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
+	};
 });
 </script>
 <script>
     $('.amount2').ionRangeSlider({
         values: [1000, 2000, 3000, 4000, 5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,20000,25000,30000,40000,50000,80000,100000],
         from: <?php 
-
         if(isset($_GET['amount'])) 
         {  
             switch($_GET['amount'])
@@ -515,34 +577,108 @@ $(document).ready(function(){
         elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
         ?>,
         onChange:function(range){
-            		if (range.from_value <= 10000) {
-                            $('#p').val('7');
-                            $('#period2').val('От 61 дня');
+            if (range.from_value <= 10000) {
+                $('#p').val('7');
+                $('#period2').val('От 61 дня');
 			}
 			else if (range.from_value <= 15000) {
-                            $('#p').val('14');
-                            $('#period2').val('От 61 дня');
+                $('#p').val('14');
+                $('#period2').val('От 61 дня');
 			}
 			else if (range.from_value <= 20000) {
-                            $('#p').val('21');
-                            $('#period2').val('От 130 дней');
+                $('#p').val('21');
+                $('#period2').val('От 130 дней');
 			}
 			else if (range.from_value <= 30000) {
-                            $('#p').val('30');
-                            $('#period2').val('От 130 дней');
+                $('#p').val('30');
+                $('#period2').val('От 130 дней');
 			}
 			else if (range.from_value <= 50000) {
-                            $('#p').val('30');
-                            $('#period2').val('От 260 дней');
+                $('#p').val('30');
+                $('#period2').val('От 260 дней');
 			}
 			else {
-                            $('#p').val('30');
-                            $('#period2').val('От 365 дней');
+                $('#p').val('30');
+                $('#period2').val('От 365 дней');
 			}    
-	}
-    });    
+	    }
+    });
 </script>
-<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter40307865 = new Ya.Metrika({ id:40307865, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/40307865" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->   
+<?php
+if($this->uri->segment(1) == 'reviews'){
+    echo '<script>';
+    require 'modules/owl/owl.carousel.js';
+    echo '</script>';
+    echo "<script>
+    $(document).ready(function() {
+     
+      $('#owl-demo').owlCarousel({
+     
+          autoPlay: 5000, //Set AutoPlay to 3 seconds
+     
+          items : 2,
+          itemsDesktop : [1199,3],
+          itemsDesktopSmall : [979,3],
+          navigation : false
+      });
+     
+    });
+    </script>";
+}elseif($this->uri->segment(1) == 'lk'){?>
+<script>
+var offers = <?php echo json_encode($data); ?>;
+var by_reg = null;
+$(document).ready(function(){
+	$('.offer-type').change(function(){
+		update_offers();
+	});
+    if (getcookie('i')){
+        var i = getcookie('i');
+        $('.i').text(i);
+    }	
+	function update_offers() {
+		var str = '.results tbody tr';
+		//var curr = clone(by_reg.length? by_reg : offers);
+		var ot_card = $('.offer-type[data-id="card"]').prop('checked');
+		var ot_qiwi = $('.offer-type[data-id="qiwi"]').prop('checked');
+		var ot_yandex = $('.offer-type[data-id="yandex"]').prop('checked');
+		var ot_contact = $('.offer-type[data-id="contact"]').prop('checked');
+		// Прячем всё
+		$(str).hide();
+		// Пробегаемся по списку офферов
+		((by_reg !== null)? by_reg : offers).forEach(function(offer, i){
+			var $tr = $(str + '[data-id="' + offer.id + '"]');
+			if ($tr.data('amount') >= amount){
+				if (ot_card && !!$tr.data('card') == ot_card) $tr.show();
+				else if (ot_qiwi && !!$tr.data('qiwi') == ot_qiwi) $tr.show();
+				else if (ot_yandex && !!$tr.data('yandex') == ot_yandex) $tr.show();
+				else if (ot_contact && !!$tr.data('contact') == ot_contact) $tr.show();
+			}
+		});
+	}
+});
+
+function clone(o) {
+	if(!o || 'object' !== typeof o) return o;
+	
+	var c = 'function' === typeof o.pop ? [] : {};
+	var p, v;
+	for(p in o) {
+		if(o.hasOwnProperty(p)) {
+			v = o[p];
+			if(v && 'object' === typeof v) {
+				c[p] = clone(v);
+			}
+			else {
+				c[p] = v;
+			}
+		}
+	}
+	return c;
+}
+</script>
+<?php } ?>
+<?php require 'yandex_metrika.php'; ?> 
 <script>
 function markTarget(target,param,id){
     if (typeof yaCounter40307865 == 'undefined') return;
@@ -556,8 +692,7 @@ function markTarget(target,param,id){
             success: function(data){
                 //console.log(data);
             }
-        });        
-        
+        });
 }
 </script>
 <!-- Rating@Mail.ru counter -->
@@ -578,7 +713,6 @@ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, fal
 <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=oUIrxEEED8qFrsbZJVRzG6duZ39T8*M4rPAzc85XgSNJGHvUfFFTr*9nZ58V0olTf5G3bB6OmSvKfhe0KKVpL59wDXvoeJKk6bhKowF8eH0ftUpimXiJQjVbz966t3x2pGl72xUo/MH3sCBkZn*ZLtslFpEET2fM*kev/d/iwPU-&pixel_id=1000099083';</script>
 <!--Константин Гутлид-->
 <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=wqJ*K2aGdcpg2liN6EhsYyFiF/6V/WyeQDg3Fhe0LS0BD72zEww9dHFpCCZoPNfX5wX32Mp*ZUkoX15dQfo7LWYGZpJPbd10TICdApDxTC6EeiIgyRTsu8jBiK9Y1NV5KNux8UYE2rP10qeO297yIxm5gcl9RV2TyjnYnnP2EzU-&pixel_id=1000099729';</script>
-
 <!-- Общий счетчик Yandex.Metrika ЛидМафия->
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
@@ -593,7 +727,6 @@ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, fal
                 });
             } catch(e) { }
         });
-
         var n = d.getElementsByTagName("script")[0],
             s = d.createElement("script"),
             f = function () { n.parentNode.insertBefore(s, n); };

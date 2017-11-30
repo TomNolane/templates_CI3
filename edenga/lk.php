@@ -21,20 +21,17 @@ $regions = $this->geo->regions();
 $this->load->model('pixel/pixel_model', 'pixel');
 $pixel = $this->pixel->stat('edenga.ru');
 ?>
-<link rel="stylesheet" href="/modules/owl/owl.carousel.css">
-<link rel="stylesheet" href="/modules/owl/owl.theme.css">
-
 <section class="lk-bg" id="lk-bg">
-    <div class="container">        
-        <div class="row hidden-sm hidden-xs">           
+    <div class="container">
+        <div class="row hidden-sm hidden-xs">
             <div class="item visible-md hidden-lg">
-                <div class="review">            
+                <div class="review">
                     <div class="col-md-4 review-div" style="padding: 75px 0 135px;">
                         <div class="col-md-8">
                             <p style="font-size: 16px;">Вам автоматически одобрен займ в следующих организациях:</p>
                         </div>
                         <div class="col-md-4">
-                            <img src="/templates/edenga/img/lk/1.png" align="right" style="max-width: 100px;"/>
+                            <img src="/templates/edenga/img/lk/1.png" align="right" alt="1.png" style="max-width: 100px;"/>
                         </div>  
                     </div>
                     <div class="col-md-4 review-div" style="padding: 75px 0 135px;">
@@ -42,7 +39,7 @@ $pixel = $this->pixel->stat('edenga.ru');
                             <p style="font-size: 16px;">Выдаем займы с любой кредитной историей</p>
                         </div>
                         <div class="col-md-4">
-                            <img src="/templates/edenga/img/lk/2.png" align="right" style="max-width: 100px;"/>
+                            <img src="/templates/edenga/img/lk/2.png" alt="2.png" align="right" style="max-width: 100px;"/>
                         </div>  
                     </div>
                     <div class="col-md-4 review-div" style="padding: 75px 0 135px;">
@@ -50,7 +47,7 @@ $pixel = $this->pixel->stat('edenga.ru');
                             <p style="font-size: 16px;">Моментальное одобрение</p>
                         </div>
                         <div class="col-md-4">
-                            <img src="/templates/edenga/img/lk/3.png" align="right" style="max-width: 100px;"/>
+                            <img src="/templates/edenga/img/lk/3.png" alt="3.png" align="right" style="max-width: 100px;"/>
                         </div>   
                     </div> 
                 </div> 
@@ -58,7 +55,7 @@ $pixel = $this->pixel->stat('edenga.ru');
         </div>        
         <div class="row pixel">
             <div class="col-sm-12 text-center ">
-                <h3><span class="i"></span>, Вам автоматически одобрен займ в следующих организациях:</h3>
+                <h3>Вам автоматически одобрен займ в следующих организациях:</h3>
                 <div class="col-md-12 hidden-sm hidden-xs">
                     <?php
                         foreach($data as $item){
@@ -107,58 +104,7 @@ $pixel = $this->pixel->stat('edenga.ru');
     </div>    
 </section>
 <div class="hidden-lg hidden-md hidden-sm hidden-xs" style="height: 200px;"></div>
-<script>
-var offers = <?php echo json_encode($data); ?>;
-var by_reg = null;
-$(document).ready(function(){
-	$('.offer-type').change(function(){
-		update_offers();
-	});
-    if (getcookie('i')){
-        var i = getcookie('i');
-        $('.i').text(i);
-    }	
-	function update_offers() {
-		var str = '.results tbody tr';
-		//var curr = clone(by_reg.length? by_reg : offers);
-		var ot_card = $('.offer-type[data-id="card"]').prop('checked');
-		var ot_qiwi = $('.offer-type[data-id="qiwi"]').prop('checked');
-		var ot_yandex = $('.offer-type[data-id="yandex"]').prop('checked');
-		var ot_contact = $('.offer-type[data-id="contact"]').prop('checked');
-		// Прячем всё
-		$(str).hide();
-		// Пробегаемся по списку офферов
-		((by_reg !== null)? by_reg : offers).forEach(function(offer, i){
-			var $tr = $(str + '[data-id="' + offer.id + '"]');
-			if ($tr.data('amount') >= amount){
-				if (ot_card && !!$tr.data('card') == ot_card) $tr.show();
-				else if (ot_qiwi && !!$tr.data('qiwi') == ot_qiwi) $tr.show();
-				else if (ot_yandex && !!$tr.data('yandex') == ot_yandex) $tr.show();
-				else if (ot_contact && !!$tr.data('contact') == ot_contact) $tr.show();
-			}
-		});
-	}
-});
 
-function clone(o) {
-	if(!o || 'object' !== typeof o) return o;
-	
-	var c = 'function' === typeof o.pop ? [] : {};
-	var p, v;
-	for(p in o) {
-		if(o.hasOwnProperty(p)) {
-			v = o[p];
-			if(v && 'object' === typeof v) {
-				c[p] = clone(v);
-			}
-			else {
-				c[p] = v;
-			}
-		}
-	}
-	return c;
-}
-</script>
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
 Page -->
