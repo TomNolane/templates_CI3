@@ -11,7 +11,7 @@
     "autoUpload": true,
     "autoDelete": false,
     "autoDownload": false,
-    "disableFtp": true,
+    "disableFtp": false,
     "ignore": [
         ".git",
         "/.vscode/chrome",
