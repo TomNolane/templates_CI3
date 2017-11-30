@@ -58,8 +58,18 @@
             "files": [
                 {
                     "type": "-",
-                    "name": "header.php",
-                    "size": 12843
+                    "name": "form1.php",
+                    "size": 7542
+                },
+                {
+                    "type": "-",
+                    "name": "form2.php",
+                    "size": 11954
+                },
+                {
+                    "type": "-",
+                    "name": "form3.php",
+                    "size": 9060
                 },
                 {
                     "type": "d",
@@ -74,26 +84,16 @@
                                 {
                                     "type": "-",
                                     "name": "style.css",
-                                    "size": 343518
+                                    "size": 343794
                                 },
                                 {
                                     "type": "-",
                                     "name": "style.min.css",
-                                    "size": 203578
+                                    "size": 203768
                                 }
                             ]
                         }
                     ]
-                },
-                {
-                    "type": "-",
-                    "name": "index.php",
-                    "size": 20697
-                },
-                {
-                    "type": "-",
-                    "name": "form1.php",
-                    "size": 7775
                 }
             ]
         },
@@ -101,13 +101,7 @@
             "type": "d",
             "name": "godzaim",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "lk.php",
-                    "size": 6244
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
