@@ -7,7 +7,13 @@
             "type": "d",
             "name": ".vscode",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "ftp-kr.json",
+                    "size": 772
+                }
+            ]
         },
         {
             "type": "d",
@@ -49,7 +55,44 @@
             "type": "d",
             "name": "fanzaim",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "d",
+                    "name": "assets",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "css",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "style.min.css",
+                                    "size": 203161
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "style.css",
+                                    "size": 343011
+                                }
+                            ]
+                        },
+                        {
+                            "type": "d",
+                            "name": "js",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "custom.js",
+                                    "size": 2230
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "d",

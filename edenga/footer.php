@@ -1,5 +1,4 @@
 <div class="clearfix buffer"></div>
-
 <div id="ya-rtb"><div id="yandex_rtb_R-A-243982-2"></div><div id="yandex_rtb_R-A-243982-1"></div></div>
 <footer class="">
     <div class="container">
@@ -7,11 +6,11 @@
             <div class="col-md-2 col-xs-12">
                 <img src="/templates/edenga/img/logo.png" class="logo">
             </div>
-            <div class="col-md-3 col-xs-12">
+            <div class="col-md-3 col-xs-12 spec_footer4">
                 Cервис по подбору выгодных онлайн займов находящийся по адресу Россия, Новосибирская область г. Новосибирск, ул. Маршала Покрышкина, 12, оф 201
                 Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 <a href="mailto:support@edenga.ru" target="_blank">mailto:support@edenga.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
             </div>
-            <div class="col-md-7 hidden-xs hidden-sm">
+            <div class="col-md-7 hidden-xs hidden-sm spec_footer5">
                 Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
                 ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499.
             </div>    
@@ -19,10 +18,33 @@
         <div class="clearfix">&nbsp;</div>
     </div>
 </footer>
+<?php
+echo '<script>';
+require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
+echo '</script>';
+echo '<script>';
+require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
+echo '</script>';
+echo '<script>';
+require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
+echo '</script>';
 
-<script src="/modules/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="/modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js"></script>
-<script src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script>
+if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index') 
+{
+    echo '<script>';
+    require 'modules/3dgallery/js/modernizr.custom.53451.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/3dgallery/js/jquery.gallery.js';
+    echo '</script>';
+    echo '<script>
+    $(document).ready(function () {
+        $("#dg-container").gallery();
+    });
+    </script> ';
+}
+?>  
+
 <script>
 function setcookie(name, value, expires, path, domain, secure)
 {
