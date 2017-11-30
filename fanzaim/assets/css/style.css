@@ -11329,23 +11329,24 @@ section.ex-section-1 .container main h1 span:last-of-type {
 @media (max-width: 480px) {
   /* line 63, ../sass/desktop/_homepage.scss */
   section.ex-section-1 .container main h1 {
-    font-size: 35px;
+    font-size: 20px;
     line-height: 30px;
-    margin-top: 50px;
+    margin: 10px;
   }
   /* line 101, ../sass/desktop/_homepage.scss */
   section.ex-section-1 .container main h1 span:first-of-type {
-    font-size: 35px;
-    line-height: 81px;
+    font-size: 20px;
+    line-height: 30px;
   }
   /* line 105, ../sass/desktop/_homepage.scss */
   section.ex-section-1 .container main h1 span:nth-child(2) {
-    font-size: 28px;
+    font-size: 20px;
     line-height: 30px;
   }
   /* line 109, ../sass/desktop/_homepage.scss */
   section.ex-section-1 .container main h1 span:last-of-type {
-    font-size: 30px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 /* line 115, ../sass/desktop/_homepage.scss */
@@ -11433,9 +11434,18 @@ section.ex-section-1 .container main .ex-counter-block .ex-wrapper div {
   font-weight: 700;
 }
 @media (max-width: 480px) {
+  section.ex-section-1 {
+    min-height: 600px !important;
+  }
+  main.ex-main-form {
+    padding: 10px 0 !important;
+  }
+  main.ex-main-form .tab-content .ex-step-info {
+    margin: 10px 0 !important;
+  }
   /* line 115, ../sass/desktop/_homepage.scss */
   section.ex-section-1 .container main .ex-counter-block {
-    margin: 40px auto 0;
+    margin: 10px auto 0;
   }
   /* line 186, ../sass/desktop/_homepage.scss */
   section.ex-section-1 .container main .ex-counter-block p {
@@ -12437,8 +12447,14 @@ main.ex-approved h2 {
 @media (max-width: 480px) {
   /* line 4, ../sass/desktop/_offerta.scss */
   main.ex-approved h2 {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 17px;
+    line-height: 23px;
+  }
+  main.ex-approved .ex-wrapper {
+    padding: 10px !important;
+  }
+  main.ex-approved h2 {
+    margin-bottom: 0px !important;
   }
 }
 /* line 17, ../sass/desktop/_offerta.scss */
@@ -12768,7 +12784,7 @@ main.ex-main-form .tab-content h2 {
 @media (max-width: 414px) {
   /* line 6, ../sass/desktop/_form.scss */
   main.ex-main-form .tab-content h2 {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
   }
 }
@@ -12833,14 +12849,23 @@ main.ex-main-form .tab-content .ex-wrapper.ex-val-select p i {
 @media (max-width: 560px) {
   /* line 39, ../sass/desktop/_form.scss */
   main.ex-main-form .tab-content .ex-wrapper.ex-val-select p {
-    font-size: 37px;
-    padding: 9px 15px;
+    font-size: 32px;
+    padding: 1px 15px;
   }
   /* line 67, ../sass/desktop/_form.scss */
   main.ex-main-form .tab-content .ex-wrapper.ex-val-select p i {
     width: 20px;
-    height: 35px;
+    height: 28px;
     margin-left: 10px;
+  }
+  .form-group {
+    margin-bottom: 0px !important; 
+  }
+  main.ex-main-form .tab-content .ex-main-btn {
+        margin-top: 10px !important;
+  }
+  main.ex-approved {
+    padding: 10px 0 !important;
   }
 }
 /* line 76, ../sass/desktop/_form.scss */

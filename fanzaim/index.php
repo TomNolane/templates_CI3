@@ -49,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row ex-virtual-money">
+                <div class="row ex-virtual-money hidden-xs hidden-sm">
                     <div class="col-md-2">
                         <div class="ex-wrapper">
                             <a href="/zaim-card">
@@ -97,7 +97,7 @@
         </div>
     </form>
 </section>
-<section class="ex-section-2">
+<section class="ex-section-2 hidden-xs hidden-sm">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -176,7 +176,7 @@
         </div>
     </div>
 </section>
-<section class="ex-section-3">
+<section class="ex-section-3 hidden-xs hidden-sm">
     <h2 class="text-center">Как получить займ</h2>
     <div class="container">
         <main>
@@ -240,7 +240,7 @@
         </main>
     </div>
 </section>
-<section class="ex-section-4">
+<section class="ex-section-4 hidden-xs hidden-sm">
     <h2 class="text-center">Отзывы о нас</h2>
     <div class="container">
         <div class="row">
@@ -309,7 +309,7 @@
                 </article>
             </div>
         </div>
-        <div class="row">
+        <div class="row hidden-xs hidden-sm">
             <div class="col-xs-12">
                 <div class="ex-subscribe">
                     <div class="row">
