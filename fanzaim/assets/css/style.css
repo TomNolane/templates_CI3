@@ -10929,7 +10929,7 @@ button.close {
 }
 /* line 35, ../sass/desktop/_header.scss */
 #exMainHeader .navbar-nav .dropdown.open {
-  position: static;
+  position: initial;
 }
 /* line 37, ../sass/desktop/_header.scss */
 #exMainHeader .navbar-nav .dropdown.open .dropdown-menu {

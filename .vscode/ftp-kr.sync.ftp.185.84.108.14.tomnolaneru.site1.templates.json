@@ -11,12 +11,6 @@
         },
         {
             "type": "d",
-            "name": "Fanzaim",
-            "size": 4096,
-            "files": []
-        },
-        {
-            "type": "d",
             "name": "bzaim",
             "size": 4096,
             "files": []
@@ -55,47 +49,7 @@
             "type": "d",
             "name": "fanzaim",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "form1.php",
-                    "size": 7542
-                },
-                {
-                    "type": "-",
-                    "name": "form2.php",
-                    "size": 11954
-                },
-                {
-                    "type": "-",
-                    "name": "form3.php",
-                    "size": 9060
-                },
-                {
-                    "type": "d",
-                    "name": "assets",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "d",
-                            "name": "css",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "style.css",
-                                    "size": 343794
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "style.min.css",
-                                    "size": 203768
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",

@@ -44,6 +44,7 @@ $(document).ready(function () {
     });
     dropdownToggle.on('click', function (e) {
         $(this).toggleClass('ex-on-off');
+        $(this).parent().css('position','initial');
     });
     menu.on('click', function (e) {
         e.stopPropagation();
