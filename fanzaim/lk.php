@@ -54,12 +54,9 @@
                                             <td>'.number_format($item['amount'],0,'',' ').' рублей</td>
                                         </tr>
                                     </table>
-                                    <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn hidden-md hidden-lg">Получить деньги</button></a>
+                                    <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn">Получить деньги</button></a>
                                 </div>
-                            </div>
-                            <div class="ex-cover hidden-xs hidden-sm">
-                            <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn">Получить деньги</button></a>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div> ';

@@ -12463,7 +12463,7 @@ main.ex-approved .ex-main-info .col-md-6 {
 }
 /* line 18, ../sass/desktop/_offerta.scss */
 main.ex-approved .ex-main-info .col-md-6:first-of-type {
-  height: 120px;
+  height: 198px;
 }
 /* line 22, ../sass/desktop/_offerta.scss */
 main.ex-approved .ex-main-info .col-md-6 img {
@@ -12554,41 +12554,11 @@ main.ex-approved .ex-wrapper {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   padding: 27px 50px 12px 0;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
-/* line 98, ../sass/desktop/_offerta.scss */
-main.ex-approved .ex-wrapper:hover .ex-cover {
-  visibility: visible;
-  opacity: 1;
-}
-/* line 103, ../sass/desktop/_offerta.scss */
-main.ex-approved .ex-wrapper .ex-cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  visibility: hidden;
-  opacity: 0;
-  background-color: rgba(130, 232, 209, 0.8);
-  -moz-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-/* line 114, ../sass/desktop/_offerta.scss */
-main.ex-approved .ex-wrapper .ex-cover button {
-  position: relative;
-  max-width: 360px;
-  float: right;
-  margin-right: 70px;
-  top: 50%;
-  z-index: 3;
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+main.ex-approved .ex-wrapper .ex-main-btn {
+  margin-top: 20px;
 }
 @media (max-width: 991px) {
   /* line 91, ../sass/desktop/_offerta.scss */
