@@ -140,8 +140,9 @@ $pixel = $this->pixel->stat('godzaim.ru');
 			</div>
 			<div class="row">
 				<?php
-        foreach($data as $item)
-		{
+        foreach($data as $item){
+            $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
+            $item['link'] = str_replace("#site", $domen, $item['link']); 
             echo '
 			<div class="col-sm-6">
 				<div class="offer-item">
