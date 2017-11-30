@@ -156,7 +156,7 @@ footer .menu a{font-size:14px;font-family:'Myriad Pro';font-weight:400;line-heig
 .close-ribbon:before{content:"";font-size:0.5em;position:absolute;border-style:solid;border-color:transparent transparent #3F9E80 transparent;top:-1em;right:19px;border-width:0 0 1em 0.7em;z-index:-1;}
 .ribbon-prob{font-size:18px;position:inherit;right:-30px;}
 .lk-trigger{background-color:#fff;border-radius:10px;margin:20px 0;padding:10px 5px;}
-.btn-default{color: #сссccc !important;background-color: #ffffff !important;border-color: #ccc !important;}
+.btn-default{color: #сссccc !important; background-color: #ffffff !important;border-color: #ccc !important;}
 .arrow-down p{color:#8e8e8e;}
 @media screen and (max-width:1200px){.contacts-item{height:450px;}
 .howto #video{max-width:402px;}
@@ -299,4 +299,8 @@ color: #b94a48 !important;
 }
 .label_true {
 color: #3c763d !important;
+}
+#ya-rtb {
+  text-align: center !important;
+  min-width: 100% !important; 
 }

@@ -2,9 +2,9 @@
     $from = '15'; $px = '63.974'; 
     if ($this->uri->segment(1) != 'form') {
         echo '<!-- Декстоп Yandex.RTB R-A-257494-1 -->
-        <div class="hidden-xs hidden-sm"><div id="yandex_rtb_R-A-257494-1"></div></div>
+        <center><div id="ya-rtb" class="text-center spec_ind_foot"><div class="hidden-xs hidden-sm"><div id="yandex_rtb_R-A-257494-1"></div></div>
         <!-- Мобайл Yandex.RTB R-A-257494-3 -->
-        <div class="hidden-md hidden-lg"><div id="yandex_rtb_R-A-257494-3"></div></div>';
+        <div class="hidden-md hidden-lg"><div id="yandex_rtb_R-A-257494-3"></div></div></div></center>';
         echo '<!-- Zaimhome  -->
         <div class="text-center"><ins class="adsbygoogle"
         style="display:block"

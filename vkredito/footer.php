@@ -1,18 +1,16 @@
-<?php if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') 
-{
-    echo '<div id="ya-rtb">
-            <div id="yandex_rtb_R-A-249178-1"></div>
-            <div id="yandex_rtb_R-A-249178-2"></div>
-        </div>'; 
-}
+<?php 
 if ($this->uri->segment(1) != 'form')
 {
+    echo '<div id="ya-rtb">
+    <div id="yandex_rtb_R-A-249178-1"></div>
+    <div id="yandex_rtb_R-A-249178-2"></div>
+    </div>';
     echo '<!-- Vkredito -->
-    <center><ins class="adsbygoogle"
+    <center><div class="text-center"><ins class="adsbygoogle"
             style="display:block"
             data-ad-client="ca-pub-2472854344350368"
             data-ad-slot="4958100911"
-            data-ad-format="auto"></ins></center>
+            data-ad-format="auto"></ins></div></center>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
