@@ -195,7 +195,7 @@
                     </div>
                     <div id="collapse10" class="panel-collapse collapse">
                         <div class="panel-body text-left">
-После вынесения решения по Вашей заявке Вам будет осуществлен звонок или выслано соответсвующее письмо на Вашу электоронную почту.                            
+После вынесения решения по Вашей заявке Вам будет осуществлен звонок или выслано соответствующее письмо на Вашу электронную почту.                            
                         </div>
                         <div class="panel-footer clearfix">
                             <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>

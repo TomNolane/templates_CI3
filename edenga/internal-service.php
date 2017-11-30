@@ -1,8 +1,7 @@
 <section id="services">
     <div class="container container-services text-center">
         <div class="row">
-            <h1 class="title">Сервис</h1>
-            
+            <h1 class="title">Сервис</h1> 
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">

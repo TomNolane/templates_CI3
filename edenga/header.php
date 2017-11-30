@@ -62,11 +62,26 @@ if(!isset($description))
 			echo '<style>';
 			require "templates/edenga/css/style_lk.css";
 			echo '</style>';
+			echo '<style>';
+			require "modules/owl/owl.carousel.css";
+			echo '</style>';
+			echo '<style>';
+			require "modules/owl/owl.theme.css";
+			echo '</style>'; 
 		}
 		elseif ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index') 
 		{
 			echo '<style>';
 			require "modules/3dgallery/css/style.css";
+			echo '</style>';
+		}
+		elseif ($this->uri->segment(1) == 'reviews') 
+		{ 
+			echo '<style>';
+			require "modules/owl/owl.carousel.css";
+			echo '</style>';
+			echo '<style>';
+			require "modules/owl/owl.theme.css";
 			echo '</style>';
 		}
 		elseif ($this->uri->segment(1) == 'form') 

@@ -77,22 +77,10 @@ if($this->uri->segment(1) != 'form')
     echo '<script>';
     require 'templates/bzaim/js/get_parameter.js';
     echo '</script>';
-?>
-<!-- jQuery -->
-<!-- <script src="/templates/bzaim/vendor/jquery/jquery.min.js"></script> -->
-<!-- Bootstrap Core JavaScript -->
-<!-- <script src="/templates/bzaim/vendor/bootstrap/js/bootstrap.min.js"></script> -->
-
-<!-- Plugin JavaScript -->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
-<!-- Theme JavaScript -->
-
-<!-- <script src="/modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js"></script>
-<script src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script> -->
+?> 
 <!--[if lt IE 10]>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
-
 <?php if ($this->uri->segment(1) == 'form') {
 require 'templates/common/js.php'; 
 if(isset($_GET['popup']) and $_GET['popup']==1 ){
