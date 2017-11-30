@@ -1,8 +1,23 @@
-<?php $from = '15'; ?>
-<div id="ya-rtb">
+<?php $from = '15'; 
+if($this->uri->segment(1) != 'form')
+{
+    echo '<div class="text-center" id="ya-rtb">
 	<div class="visible-xs visible-sm hidden-md hidden-lg" id="yandex_rtb_R-A-247243-1"></div>
 	<div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-247243-3"></div>
-</div>
+    </div>';
+	echo '<!-- Dengibystra -->
+<div class="text-center"><div class="text-center">
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2472854344350368"
+     data-ad-slot="6995647878"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>';
+}
+?>
+
 <?php
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
 {
