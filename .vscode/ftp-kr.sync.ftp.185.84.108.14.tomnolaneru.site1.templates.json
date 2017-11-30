@@ -55,13 +55,59 @@
             "type": "d",
             "name": "fanzaim",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "header.php",
+                    "size": 12843
+                },
+                {
+                    "type": "d",
+                    "name": "assets",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "css",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "style.css",
+                                    "size": 343518
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "style.min.css",
+                                    "size": 203578
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "-",
+                    "name": "index.php",
+                    "size": 20697
+                },
+                {
+                    "type": "-",
+                    "name": "form1.php",
+                    "size": 7775
+                }
+            ]
         },
         {
             "type": "d",
             "name": "godzaim",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "lk.php",
+                    "size": 6244
+                }
+            ]
         },
         {
             "type": "d",

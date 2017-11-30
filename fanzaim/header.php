@@ -1,11 +1,36 @@
-<!doctype html>
-<html lang="en">
+<?php  
+if(!isset($my_title)) 
+	$my_title = 'Срочные займы круглосуточно без проверок Онлайн';
+
+if(!isset($description))
+	$description = 'Fanzaim - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории. Только у нас лучшие кредитные предложения!';
+?>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fanzaim</title>
+	<title><?php echo $my_title;?></title>
+    <!-- meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+	<meta name="Description" content="<?php echo $description;?>" />
+	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
+	<meta name="robots" content="all" />
+	<meta name="copyright" lang="ru" content="fanzaim.ru" /> 
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-control" content="no-cache"> 
+	<meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
+	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
+	<meta property="og:description" content="fanzaim - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
+	<meta property="og:image" content="https://fanzaim.ru/templates/fanzaim/assets/img/pic.png"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://fanzaim.ru/" />
+	<meta name="twitter:card" content="https://fanzaim.ru/templates/fanzaim/assets/img/pic.png"/>
+	<meta name="twitter:title" content="Срочные займы круглосуточно без проверок Онлайн"/>
+	<meta name="twitter:description" content="fanzaim - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
+	<meta name="twitter:image:src" content="https://fanzaim.ru/templates/fanzaim/assets/img/pic.png"/>
+	<meta name="twitter:url" content="https://fanzaim.ru/"/>
+	<meta name="twitter:domain" content="fanzaim.ru"/>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="/templates/fanzaim/favicon/apple-icon-57x57.png">
