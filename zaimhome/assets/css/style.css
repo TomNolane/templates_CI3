@@ -3230,3 +3230,7 @@ td.visible-print{display:table-cell !important;}
 .special_footer3 {
     color: #ffffff;
 }
+.spec_ind_foot {
+    text-align: center !important;
+    min-width: 100% !important; 
+  }

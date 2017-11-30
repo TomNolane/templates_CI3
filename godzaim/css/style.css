@@ -529,3 +529,7 @@ h1, h2{font-size:30px;}
       bottom: 30px;
     }
   }
+  .spec_ind_foot {
+    text-align: center !important;
+    min-width: 100% !important; 
+  }

@@ -8,7 +8,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 <?php
 if ($this->uri->segment(1) != 'form') {
     echo '<!-- Декстоп Yandex.RTB R-A-257495-1 -->
-    <center><div id="ya-rtb"><div class="hidden-xs hidden-sm rtb text-center" id="yandex_rtb_R-A-257495-1"></div>
+    <center><div id="ya-rtb" class="text-center spec_ind_foot"><div class="hidden-xs hidden-sm rtb text-center" id="yandex_rtb_R-A-257495-1"></div>
     <!-- Мобильная Yandex.RTB R-A-257495-2 -->
      <div class="hidden-md hidden-lg rtb text-center" id="yandex_rtb_R-A-257495-2"></div></div></center>';
      echo '<!-- Godzaim  -->
@@ -886,5 +886,4 @@ jQuery(document).ready(function (o) {
         gtag('config', 'UA-108410422-1');
     </script>
     </body>
-
     </html>
