@@ -159,7 +159,7 @@ if(!isset($description))
 		})(window, document, 'script', 'dataLayer', 'GTM-FVT9Z22');
 	</script>
 	<!-- End Google Tag Manager -->
-	<script>
+	<!-- <script>
 		(function (i, s, o, g, r, a, m) {
 			i['GoogleAnalyticsObject'] = r;
 			i[r] = i[r] || function () {
@@ -192,7 +192,7 @@ if(!isset($description))
 		});
 
 		ga('vteleport_ru.send', 'pageview');
-	</script>
+	</script> -->
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
