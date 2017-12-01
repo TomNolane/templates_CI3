@@ -134,6 +134,111 @@ if(!isset($description))
 			echo '<style>'; 
 			require "templates/godzaim/css/style_lk.css"; 
 			echo '</style>'; 
+			echo '<style>
+			body {
+				background-color: #e3e3e3;
+				background: url(\'/templates/godzaim/img/lk/bg.png\') center center no-repeat;
+				background-size: cover;
+			}
+	
+			h1 {
+				color: #093b3f;
+				font-size: 30px;
+				margin: 30px 0 20px;
+			}
+	
+			p {
+				color: #050505;
+				font-size: 22px;
+			}
+	
+			span.green {
+				color: #597b28;
+				font-size: 24px;
+				font-weight: bold;
+			}
+	
+			.btn,
+			.btn:hover,
+			.btn:focus,
+			.btn:active,
+			.btn:visited,
+			.btn.focus {
+				background: #597b28;
+				border-color: #597b28;
+				border-radius: 5px;
+			}
+	
+			.page {
+				background: rgba(227, 227, 227, 0.8);
+			}
+	
+			#lk .border {
+				border: 2px solid #597b28;
+			}
+	
+			#lk .rounded {
+				border-radius: 6px;
+			}
+	
+			#lk .shadow {
+				box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.5);
+			}
+	
+			.offer-item {
+				margin: 10px auto;
+				max-width: 450px;
+				padding: 15px 30px;
+				text-align: center;
+			}
+	
+			.offer-image {
+				background: #fff;
+				height: 45px;
+				margin: 0 auto -30px;
+				position: relative;
+				text-align: center;
+				width: 175px;
+				z-index: 1;
+			}
+	
+			.offer-image img {
+				width: 100%;
+				height: 100%;
+				max-width: 175px;
+				max-height: 75px;
+			}
+	
+			.offer-panel {
+				background: #e8e8e8;
+				padding: 50px 30px 40px;
+			}
+	
+			.offer-data {
+				border: 4px solid #597b28;
+				color: #2b2b2b;
+				padding: 0 20px;
+			}
+	
+			.offer-amount {
+				font-size: 24px;
+				font-weight: bold;
+			}
+	
+			.offer-percent {
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 32px;
+			}
+	
+			.offer-item a {
+				margin-top: -24px;
+			}
+	
+			.hidden-lk {
+				display: none;
+			}
+		</style>';
 		}
 		elseif($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index') {
 			echo '<style>

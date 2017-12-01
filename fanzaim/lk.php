@@ -32,7 +32,7 @@
 
                     echo '<div class="row">
                     <div class="col-md-10 col-md-offset-1">
-                        <div class="ex-wrapper">
+                        <div class="ex-wrapper wrapper_spec">
                             <div class="row ex-main-info">
                                 <div class="col-md-6">
                                 <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
@@ -54,7 +54,7 @@
                                             <td>'.number_format($item['amount'],0,'',' ').' рублей</td>
                                         </tr>
                                     </table>
-                                    <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn">Получить деньги</button></a>
+                                    <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn btn_spec">Получить деньги</button></a>
                                 </div>
                             </div> 
                         </div>

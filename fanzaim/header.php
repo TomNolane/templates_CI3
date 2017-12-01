@@ -127,7 +127,7 @@ if(!isset($description))
      if ($this->uri->segment(1) == 'lk') 
      {
          echo '<style>';
-         require "templates/dengimo/css/style_lk.css";
+         require "templates/fanzaim/assets/css/style_lk.css";
          echo '</style>';
      }
      ?> 
