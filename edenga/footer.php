@@ -347,7 +347,7 @@ $(document).ready(function(){
 			}
 			else {
                                 period.update({
-                                    from: 350                                 
+                                    from: 365
                                 });       
                                 $('#period2').val('30');
 				perc = 64;
@@ -450,7 +450,7 @@ $(document).ready(function(){
 			}
 			else {
                                 period.update({
-                                    from: 350
+                                    from: 365
                                 });       
                                 $('#period2').val('30');
 				perc = 64;
@@ -480,24 +480,20 @@ $(document).ready(function(){
             $('.sum').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
 
             updateComm();
-            }, 50);
-
-            
-
-
+            }, 50); 
         <?php } ?>
 	$('#period').ionRangeSlider({
 		min: 65,
 		max: 365,
 		from: <?php echo empty($_POST['period'])? 10 : $_POST['period']; ?>,
 		postfix: ' сут.',
-                from_fixed: true,
-		onChange:function(range){			
-			day = range.from;
-                        updateComm();                        
+        from_fixed: true,
+		onChange:function(range){
+            day = range.from;
+            updateComm();
 		}
 	});
-        var period = $("#period").data("ionRangeSlider");
+    var period = $("#period").data("ionRangeSlider");
 	<?php if ($this->uri->segment(1) == '') { ?>
 	var slider = $('.amount').data('ionRangeSlider');//console.log(slider);
 	var slider_plus = true;
@@ -546,12 +542,12 @@ $(document).ready(function(){
         var updateComm = function () {
             
 		if(amount<=30000){
-                        percent = 1.3;
+            percent = 1.3;
 			comm1 = Math.ceil((amount/100)*percent)*day;
 			comm2 = 0;
 		}
 		if(amount>30000){
-                        percent=0.2;
+            percent=0.2;
 			comm1 = 390*day;
 			comm2 = Math.ceil(((amount-30000)/100)*percent)*day;
 		}
@@ -562,15 +558,18 @@ $(document).ready(function(){
         $('.comm').text(comm);
         $('.sum').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
 
+        <?php if ($this->uri->segment(1) == '') {  ?>
         var slider3 = $('.amount').data('ionRangeSlider');
         $('#amount').val(slider3.result.from_value);
         $('#form_slrd').val(slider3.result.from);
+        
 
         $('.current-button-main.am').text(amount);
         $('.current-button-main.current_period').text(day_comment);
         $('.current-button-main.comm').text(comm);
         $('.current-button-main.sum').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
         $('.current-button-main.percent_rate').text(percent+'%');
+        <?php } ?>
     };
     $('.amount2').ionRangeSlider({
         values: [1000, 2000, 3000, 4000, 5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,20000,25000,30000,40000,50000,80000,100000],
