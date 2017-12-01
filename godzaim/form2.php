@@ -6,7 +6,7 @@
                 <span id="passportstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
         </div>
 </div>
- 
+
 <div class="form-group" style="display: none;">
 	<label class="col-sm-4 control-label label-required hidden-xs">Серия и номер паспорта</label>
 	<div class="col-sm-4">
@@ -16,7 +16,6 @@
 		<input type="tel" class="form-control ec" id="passport-n" name="passport_n" placeholder="000000" title="Номер паспорта"  data-validation="number" data-validation-allowing="range[1;999999]" data-validation-error-msg="Пожалуйста, введите номер паспорта" required>
 	</div>
 </div>
-
 <!-- Скрываем старую форму даты выдачи -->
 <div class="form-group" style="display: none;">
 	<label class="col-sm-4 control-label label-required hidden-xs">Дата выдачи*</label>
@@ -162,7 +161,7 @@
 	</div>
 </div>
 
-<fieldset id="reg_same" style="display:none;">
+<fieldset id="reg_same" class="hidden">
 <div class="form-group">
 	<label class="col-sm-9 control-label label-required"><b>Регистрация совпадает с местом жительства</b></label>
 	<div class="col-sm-3">
@@ -175,7 +174,7 @@
 </div>
 </fieldset>
 
-<fieldset id="reg_address" style="display:none;">
+<fieldset id="reg_address" class="hidden">
 	<div class="form-group">
 		<label class="col-sm-4 control-label label-required hidden-xs">Регион*</label>
 		<div class="col-sm-8 col-xs-12">

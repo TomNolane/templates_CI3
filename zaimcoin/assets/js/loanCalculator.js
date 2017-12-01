@@ -1,6 +1,5 @@
 $(document).ready(function () { 
-    var c = getParameterByName('amount');
-    console.log(c); 
+    var c = getParameterByName('amount'); 
     var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());
     if (c != null) {
         if (c > 100000 || c < 1000) {

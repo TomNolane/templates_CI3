@@ -320,11 +320,18 @@ if(!isset($description))
     require "templates/bzaim/css/suggestions.min.css"; 
     echo '</style>'; 
     echo '<style>'; 
-    require "templates/bzaim/css/new-age.css"; 
+    require "templates/bzaim/css/new-age.min.css"; 
     echo '</style>'; 
     echo '<style>'; 
-    require "templates/bzaim/css/style.css"; 
+    require "templates/bzaim/css/style.min.css"; 
     echo '</style>'; 
+
+    if ($this->uri->segment(1) == 'lk') 
+    {
+    echo '<style>';
+    require "templates/bzaim/css/style_lk.css";
+    echo '</style>';
+    }
 
     if ($this->uri->segment(1) == 'form') 
     {
@@ -414,9 +421,24 @@ if(!isset($description))
             margin-top: -20px !important;
         }
 
-        .index_specail2 {
-            padding-top: 115px;
-            padding-bottom: 115px;
+        @media only screen and (max-width: 768px)  {
+            .index_specail2 {
+                padding-top: 0px;
+                padding-bottom: 15px;
+            }
+            .spec_lk1 {
+                padding-bottom: 12px;
+            }
+            .title {
+                font-size: 20px;
+                margin-top: 0px;
+            } 
+        }
+        @media only screen and (min-width: 768px)  {
+            .index_specail2 {
+                padding-top: 115px;
+                padding-bottom: 115px;
+            }
         }
 
         .index_specail3 {
@@ -441,7 +463,13 @@ if(!isset($description))
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <?php if ($this->uri->segment(1) != 'form') {
-        require 'templates/common/googlesyndication.php';
+        echo '
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-8603290384746847",
+            enable_page_level_ads: true
+          });
+        </script>';
     }?>
     <?php 
     require 'sendpuls.php';

@@ -1,9 +1,6 @@
-<link rel="stylesheet" href="/modules/owl/owl.carousel.css">
-<link rel="stylesheet" href="/modules/owl/owl.theme.css">
 <section id="reviews">
         <div class="row">
             <h1 class="title">Отзывы</h1>
-            
             <div id="owl-demo">
                 <div class="item">
                     <div class="review">
@@ -15,7 +12,7 @@
                     </div>
                     <div class="user text-center">
                         <div class="col-md-4">
-                            <img src="/templates/edenga/img/reviews/1.png" class="img-circle">
+                            <img src="/templates/edenga/img/reviews/1.png" alt="1.png" class="img-circle">
                         </div>
                         <div class="col-md-4">
                             <div class="name">Журавлева Алевтина</div>
@@ -30,22 +27,22 @@
                     </div>
                     <div class="user text-center">
                         <div class="col-md-4">
-                            <img src="/templates/edenga/img/reviews/2.png" class="img-circle">
+                            <img src="/templates/edenga/img/reviews/2.png" alt="2.png" class="img-circle">
                         </div>
                         <div class="col-md-4">
                             <div class="name">Карпов Иван</div>
                         </div>
-                    </div>        
+                    </div>
                 </div>
                 <div class="item">
                     <div class="review">
                         <div class="col-md-12">
                             <p>Спасибо огромное компании Еденьга! Действительно сильно выручили! Главное - не надо бегать по друзьям, одалживая деньги! Буду с вами сотрудничать!</p>
-                        </div>            
+                        </div>
                     </div>
                     <div class="user text-center">
                         <div class="col-md-4">
-                            <img src="/templates/edenga/img/reviews/3.png" class="img-circle">
+                            <img src="/templates/edenga/img/reviews/3.png" alt="3.png" class="img-circle">
                         </div>
                         <div class="col-md-4">
                             <div class="name">Елизавета Дарова</div>
@@ -60,7 +57,7 @@
                     </div>
                     <div class="user text-center">
                         <div class="col-md-4">
-                            <img src="/templates/edenga/img/reviews/4.png" class="img-circle">
+                            <img src="/templates/edenga/img/reviews/4.png" alt="4.png" class="img-circle">
                         </div>
                         <div class="col-md-4">
                             <div class="name">Михаил Терентьев</div>
@@ -73,21 +70,3 @@
                 <button type="button" class="btn btn-primary btn-lg button-get" data-toggle="modal" data-target="#feedbackModal">Оставить отзыв</button>
             </div>
 </section>
-
-<!-- Include js plugin -->
-<script src="/modules/owl/owl.carousel.js"></script>
-<script>
-$(document).ready(function() {
- 
-  $("#owl-demo").owlCarousel({
- 
-      autoPlay: 5000, //Set AutoPlay to 3 seconds
- 
-      items : 2,
-      itemsDesktop : [1199,3],
-      itemsDesktopSmall : [979,3],
-      navigation : false
-  });
- 
-});
-</script>

@@ -175,7 +175,7 @@
 </div>
 </fieldset>
 
-<fieldset id="reg_address" style="display:none;">
+<fieldset id="reg_address" class="hidden">
 	<div class="form-group">
 		<label class="col-sm-4 control-label label-required hidden-xs">Регион*</label>
 		<div class="col-sm-8 col-xs-12">

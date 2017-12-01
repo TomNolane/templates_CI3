@@ -1,4 +1,5 @@
 <?php
+$my_title = "Вам автоматически одобрен займ";
 require 'header.php';
 $this->load->model('offers/offers_model', 'offers');
 $data = $this->offers->all();
@@ -42,7 +43,7 @@ $pixel = $this->pixel->stat('bzaim5.ru');
                                     $item['link'] = str_replace("#site", $domen, $item['link']);                                    
                                     echo '
                                     <div class="col-md-12 offer-lk">
-                                            <div class="col-md-3">
+                                            <div class="col-md-3 spec_lk1">
                                                 <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
                                                     <img src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'" class="offers-img">
                                                 </a>                        
@@ -112,9 +113,5 @@ src="//www.googleadservices.com/pagead/conversion.js">
 <img height="1" width="1" style="border-style:none;" alt=""  
 src="//www.googleadservices.com/pagead/conversion/832752781/?label=9no7CIzpqHgQjZmLjQM&amp;guid=ON&amp;script=0"/>
 </div>
-</noscript>
-
-<?php
-    //print_r ($_COOKIE);
-?>
+</noscript> 
 <?php require 'footer.php'; ?>

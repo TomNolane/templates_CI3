@@ -9,7 +9,7 @@
                     data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Пожалуйста, введите номер и серию паспорта"
                     required>
                 </div>
-            </div>
+            </div> 
         </div>
         <div class="form-group hidden">
         <label class="col-sm-4 control-label label-required hidden-xs">Серия и номер паспорта</label>
@@ -68,7 +68,7 @@
             <label class="control-label col-md-4" for="region">Регион</label>
             <div class="col-md-6">
                 <div class="ex-wrapper ex-arrow">
-                <select class="form-control ec tip" id="region" name="region" autocomplete="off" required>
+                <select class="form-control ec tip special_form99" id="region" name="region" autocomplete="off" required>
                 <option value="0">-- Выберите регион --</option>
                 <?php
                 if (isset($regions) && is_array($regions))
@@ -135,11 +135,11 @@
             <label class="control-label col-md-4" for="reg_type">Тип регистрации</label>
             <div class="col-md-6">
                 <div class="ex-wrapper ex-arrow">
-                <select class="form-control ec" name="reg_type" id="reg_type" required>
-                <option value="1">Постоянная регистрация</option>
-                <option value="0">Без регистрации</option>
-                <option value="2">Временная регистрация</option>
-            </select>
+                <select class="form-control ec special_form99" name="reg_type" id="reg_type" required>
+                    <option value="1">Постоянная регистрация</option>
+                    <option value="0">Без регистрации</option>
+                    <option value="2">Временная регистрация</option>
+                </select>
                 </div>
             </div>
         </div>

@@ -6,16 +6,20 @@
                 <div class="col-lg-12 hidden-xs">
                     <h1>Моментальные займы онлайн</h1>
                 </div>
+                <form id="anketa" action="/form" method="post">
                 <div class="col-lg-7 col-md-8 col-sm-10 col-xs-12 hidden-xs">
                     <div class="form">
                         <h2>Выберите сумму и срок займа</h2>
-                        <form id="anketa" action="/form" method="post">
-                            <input type="hidden" id="period" name="period" value="30" />
-                            <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
-                            <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
+                            <input type="hidden" id="period" name="period" value="21" />
+                            <input type="hidden" id="period2" name="period2" value="20000" />
+                            <input type="hidden" id="form_slrd" name="form_slrd" value="15" /> 
+                            <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>"> 
+                            <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?> 
+                            <input type="hidden" class="sldr" id="sldr" name="sldr" value="15" />
+                            <input type="hidden" class="percent" id="percent" name="percent" value="95" />
                             <div class="form-slider green">
                                 <div class="pull-left">
-                                    <input type="text" class="amount" name="amount" value="6" />
+                                    <input type="text" class="amount" name="amount" value="15" />
                                 </div>
                                 <div class="form-label-2 pull-right">
                                     <span class="current_amount">6 000</span>
@@ -55,23 +59,17 @@
                                     </div>
                                     <div class="form-info-title">Вероятность</div>
                                 </span>
-                            </div>
-
+                            </div> 
                             <div class="col-md-12 col-sm-12 text-center">
                                 <button type="submit" class="btn">Получить деньги</button>
-                            </div>
-                        </form>
+                            </div> 
                     </div>
                 </div>
                 <div class="col-xs-12 visible-xs text-center">
                     <h1 id="getmoney">Моментальные займы онлайн</h1>
                     <div class="form text-center">
-                        <form id="anketa" action="/form" method="post">
-                            <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
-                            <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
-                            <input type="hidden" id="period" name="period" value="30" />
                             <div class="form-slider green">
-                                <input type="text" class="amount" name="amount" value="6000" />
+                                <input type="text" class="amount amount2" name="amount" value="6000" />
                                 <div class="clearfix"></div>
                             </div>
                             <div class="col-sm-12 info">
@@ -98,10 +96,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn">Получить деньги</button>
-                        </form>
+                            <button type="submit" class="btn">Получить деньги</button> 
                     </div>
                 </div>
+            </form>
             </div>
         </div>
     </section>
@@ -112,15 +110,12 @@
                     <div class="col-xs-12">
                         <h2 class="text-center"><span class="index_special"><b>Dengimo</b></span> - моментальные займы онлайн</h2>
                         <p class="col_middle">Нужно срочно решить финансовые проблемы? Dengimo готов в этом помочь прямо сейчас. Просто зарегистрируйтесь на сайте, дождитесь одобрения заявки и получите деньги. В 97% случаев будет принято решение в вашу пользу. </p>
-                        
                         <p class="col_middle">Клиенты Dengimo могут не беспокоиться об отказе. Наш сервис не просто проверяет кредитную историю, он способен ее улучшить. В результате вы сможете взять займ на более выгодных условиях и всегда держать свои финансы под контролем.</p>
-                        
                         <p class="col_middle">Деньги быстро, просто и выгодно - это Dengimo. С нами можно забыть об экономических сложностях!</p>
                     </div>
                 </div>
             </div>
         </section>
-
         <section class="algo white visible-xs">
             <div class="container">
                 <h2 class="text-center">Быстрое получение денег</h2>
@@ -128,7 +123,7 @@
                     <div class="col-xs-4 text-center">
                         <div class="algo-item">
                             <a href="/form">
-                                <img src="/templates/dengimo/img/steps/1.png">
+                                <img src="/templates/dengimo/img/steps/1.png" alt="1.png">
                             </a>
                         </div>
                         Выберите сумму
@@ -136,7 +131,7 @@
                     <div class="col-xs-4 text-center">
                         <div class="algo-item">
                             <a href="/form">
-                                <img src="/templates/dengimo/img/steps/2.png">
+                                <img src="/templates/dengimo/img/steps/2.png" alt="2.png">
                             </a>
                         </div>
                         Заполните анкету
@@ -144,7 +139,7 @@
                     <div class="col-xs-4 text-center">
                         <div class="algo-item">
                             <a href="/form">
-                                <img src="/templates/dengimo/img/steps/3.png">
+                                <img src="/templates/dengimo/img/steps/3.png" alt="3.png">
                             </a>
                         </div>
                         Получите деньги
@@ -152,7 +147,6 @@
                 </div>
             </div>
         </section>
-
         <section class="conditions hidden-xs">
             <div class="container">
                 <div class="row">
@@ -192,7 +186,6 @@
                 </div>
             </div>
         </section>
- 
         <section class="conditions hidden-xs">
             <div class="container">
                 <div class="row">
@@ -212,7 +205,6 @@
                 </div>
             </div>
         </section>
-
         <section class="conditions hidden-xs">
             <div class="container">
                 <div class="row">
@@ -240,7 +232,6 @@
                 </div>
             </div>
         </section>
-
         <section class="conditions hidden-xs">
             <div class="container">
                 <div class="row">
@@ -311,17 +302,6 @@
                 </div>
             </div>
         </section>
-    </div>
-    <script>
-        $(document).ready(function () {
-            $('#carousel-index').on('slide.bs.carousel', function (e) {
-                $('.carousel-super').removeClass('active');
-                $('.carousel-super[data-slide="' + e.relatedTarget.id + '"]').addClass('active');
-            });
-            traffic('dengimo.ru', '0');
-        });
-    </script>
-</div>
-<?php //require FCPATH.'templates/common/bzzz.php'; ?>
-
+    </div> 
+</div> 
 <?php require 'footer.php'; ?>

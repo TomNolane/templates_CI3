@@ -1,0 +1,122 @@
+body{
+  position: relative;
+  color: $main!important;
+  font-family: $roboto!important;
+}
+.ex-main-btn{
+  width: 100%;
+  padding: 20px 0 15px;
+  border: none;
+  outline: none;
+  background-color: #1399e1;
+  color: $white;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include prefix(border-radius, 5px);
+}
+
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ex-adds{
+  height: 220px;
+  background-color: #d8d8d8;
+}
+
+.ex-sticky{
+  position: relative;
+  width: 100%;
+  float: left;
+  padding-bottom: 255px;
+  min-height: 100vh;
+  .ex-sticky-footer{
+    position:absolute;
+    width:100%;
+    min-height: 255px;
+    bottom:0;
+    left:0;
+  }
+}
+
+.ex-agreement-check{
+  label{
+    margin-top: 15px!important;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-weight: 700;
+    padding-top: 3px!important;
+    &:hover input ~ i{
+      background: #f8f8f8;
+    }
+    &:focus input ~ i{
+      background: #f8f8f8;
+    }
+    span{
+      display: inline-block;
+      margin-left: 15px;
+      margin-top: 2px;
+      font-size: 14px;
+      font-weight: 400;
+      @media (max-width: 991px) {
+        font-size: 12px;
+        margin-top: 4px;
+      }
+    }
+    input{
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      left: 0;
+      margin-left: 0!important;
+      &:checked ~ i{
+        background: #4a90e2;
+        &:after{
+          display: block;
+        }
+      }
+
+    }
+    i{
+      display: inline-block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 24px;
+      width: 24px;
+      background: #ffffff;
+      border: 1px solid #c8cfce;
+      @include prefix(border-radius, 5px);
+      &:after{
+        content: '';
+        position: absolute;
+        display: none;
+        left: 8px;
+        top: 4px;
+        width: 5px;
+        height: 10px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        @include prefix(border-radius, 4px);
+      }
+    }
+  }
+  button{
+    margin-top: 28px;
+  }
+}
+
+.ex-dn{
+  display: none!important;
+}

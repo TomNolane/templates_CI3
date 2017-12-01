@@ -1,15 +1,49 @@
 <?php 
-
 if(!isset($my_title))
 {
     $my_title = 'Заполните анкету!';
-}  
+} 
+$percent = '95';
+if(isset($_GET['amount']) && !empty($_GET['amount'])) 
+{ 
+    switch($_GET['amount']) 
+    { 
+        case '1000': $percent = '95' ; break;
+        case '2000': $percent = '95' ; break;
+        case '3000': $percent = '95' ; break;
+        case '4000': $percent = '95' ; break;
+        case '5000': $percent = '95' ; break;
+        case '6000': $percent = '95' ; break;
+        case '7000': $percent = '95' ; break;
+        case '8000': $percent = '95' ; break;
+        case '9000': $percent = '95' ; break;
+        case '10000': $percent = '95' ; break;
+        case '11000': $percent = '95' ; break;
+        case '12000': $percent = '95' ; break;
+        case '13000': $percent = '95' ; break;
+        case '14000': $percent = '95' ; break;
+        case '15000': $percent = '95' ; break;
+        case '20000': $percent = '95' ; break;
+        case '25000': $percent = '95' ; break;
+        case '30000': $percent = '85' ; break;
+        case '40000': $percent = '77' ; break;
+        case '50000': $percent = '77' ; break;
+        case '80000': $percent = '65' ; break;
+        case '100000': $percent = '65' ; break;
+    } 
+}
+elseif(isset($_POST['percent']) && !empty($_POST['percent']))
+    $percent = $_POST['percent'];
+ 
+if(!isset($my_title))
+{
+    $my_title = 'Заполните анкету!';
+}
 
 if(!isset($description))
 {
     $description = 'описание анкеты!';
-}  
-
+}
 
 // IP
 $this->load->helper('ip');
@@ -53,10 +87,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     break;
                 case 'google':
                     $utm = '4';
-                    break;    
+                    break;
                 case 'google_cms':
                     $utm = '5';
-                    break;                
+                    break;
                 default:
                     $utm = '0';
             }
@@ -70,69 +104,19 @@ if(isset($_SERVER['HTTP_REFERER'])){
 }
 
 include "header.php"; 
-
-
 ?>
- <div class="ex-bounds"></div>
-<style>#ya-rtb{display: none;}</style>
-<style>
-    .has-error .help-block {
-        display : none;
-    }
-    .ex-form .ex-anketa-main .form-group input {
-        padding: 15px 5px 15px 15px;
-    } 
-    ::placeholder {
-        font-size: 13px !important;
-    }
-    ::-webkit-input-placeholder {
-        font-size: 13px !important;
-    }
-    ::-moz-placeholder {
-        font-size: 13px !important;
-    }
-    .ex-form .ex-anketa-main .form-group select {
-        font-size: 14px;
-        padding: 15px 35px 15px 5px;
-    }
-    .ex-wrapper {
-        margin-bottom: 20px;
-    }
-    .ex-form .ex-anketa-main .form-group {
-        padding-bottom: 0px !important;
-    }
-    #passport_code::placeholder , #passportdate::placeholder{
-        font-size: 10px !important; 
-    }
-    #passport_code::-moz-placeholder, #passportdate::-moz-placeholder {
-        font-size: 10px !important; 
-    }
-    #passport_code::-webkit-input-placeholder, #passportdate::-webkit-input-placeholder {
-        font-size: 10px !important; 
-    }
-    .irs-single { 
-         margin-left: -37px !important; 
-}
-.form-group input[type="radio"]{
-  width: 15px !important;
-  height: 15px !important;
- 
-}
-.reg_same {
-    display: inline-block !important;
-  vertical-align: middle !important;
-  margin-bottom: 0 !important;
-}
-.asd {
-    display: inline-block !important ;
-  vertical-align: middle !important;
-  margin-bottom: 0 !important;
-}
-</style>
-
+<input type="hidden" class="percent" id="percent" name="percent" value="<?php echo $percent;?>" />
+<div class="ex-bounds"></div>
 <div class="container ex-form">
     <h1 class="text-center" id="to_scroll">Заполните анкету</h1>  
-        <form class="tab-content" id="anketa" action="/lk" method="post" onsubmit="return validate();" autocomplete="off">
+        <form class="tab-content" id="anketa" action="/lk" method="post" onsubmit="return validate();" autocomplete="off" novalidate>
+            <input type="hidden" name="referer" value="<?=$referer?>">
+            <input type="hidden" name="id" value="">
+            <input type="hidden" name="step" value="1">
+            <input type="hidden" name="ad_id" value="<?=$ad_id?>"> 
+            <input type="hidden" name="display" id="display" value="0">
+            <input type="hidden" id="amount" name="amount" value="<?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>" />
+            <input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 21 : $_POST['period']; ?>" />
             <div role="tabpanel" class="ex-anketa1-block tab-pane fade in active col-xs-12" id="firstTabContent">
                 <?php require 'form1.php'; ?>
             </div>
@@ -142,26 +126,22 @@ include "header.php";
             <div role="tabpanel" class="ex-anketa3-block tab-pane col-xs-12" id="lastTabContent">
             <?php require 'form3.php'; ?>
             </div>
-        </form>  
-</div> 
-
-
+        </form>
+</div>
 <!-- FOOTER -->
 <footer class="ex-footer">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
                 <div class="text-center">
-                    <a href="/"><img src="/templates/dengibystra/assets/img/logo-2.svg" alt="logo-2.svg"></a>
-                    <p>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
-                    <a href="mailto:support@dengibystra.ru" target="_blank">support@dengibystra.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
+                    <a href="/"><img src="/templates/dengibystra/assets/img/logo-2.png" alt="logo-2.png"></a>
+                    <p class="spec_footer4">Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
+                        <a href="mailto:support@dengibystra.ru" target="_blank">support@dengibystra.ru</a></p>
                 </div>
             </div>
         </div>
     </div>
 </footer> 
-
-
 <!-- Modal -->
 <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
     <div class="modal-dialog" role="document">
@@ -206,58 +186,151 @@ include "header.php";
 </div>
 <!-- Modal -->
 
-<script type="text/javascript" src="/modules/jquery/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="/modules/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
-<script type="text/javascript" src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script>
-<script type="text/javascript" src="/modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js"></script>
-<script type="text/javascript" src="/modules/poshytip-1.2/src/jquery.poshytip.min.js"></script>
-<script type="text/javascript" src="/modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js"></script>
+<?php
+    echo '<script>';
+    require 'modules/jquery/jquery-1.11.3.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/jquery.form-validator.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/jquery.suggestions.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/coockie.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/modal.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/custom.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/settings_main.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/settings_form.js';
+    echo '</script>';
+    echo '<!-- backtotop -->
+    <script>
+    jQuery(document).ready(function (o) {
+        var l = 300,
+            s = 1200,
+            c = 700,
+            d = o(".cd-top");
+        o(window).scroll(function () {
+            o(this).scrollTop() > l ? d.addClass("cd-is-visible") : d.removeClass(
+                "cd-is-visible cd-fade-out"), o(this).scrollTop() > s && d.addClass("cd-fade-out")
+        }), d.on("click", function (l) {
+            l.preventDefault(), o("body,html").animate({
+                scrollTop: 0
+            }, c)
+        })
+    }); 
+    </script>'; 
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/get_parameter.js';
+    echo '</script>';
+?> 
 <!--[if lt IE 10]>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-<![endif]--> 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script> 
-<script type="text/javascript" src="/templates/dengibystra/assets/js/jquery.suggestions.min.js"></script>
-<script type="text/javascript" src="/templates/dengibystra/assets/js/coockie.js"></script> 
-<script type="text/javascript" src="/templates/dengibystra/assets/js/modal.js"></script>
-<script type="text/javascript" src="/templates/dengibystra/assets/js/custom.js"></script> 
-<script type="text/javascript" src="/templates/dengibystra/assets/js/settings_main.js"></script> 
-<script type="text/javascript" src="/templates/dengibystra/assets/js/settings_form.js"></script> 
- 
-
+<![endif]-->  
 <script>  
      $("#rangeSlider").ionRangeSlider({
             hide_min_max: true, 
             keyboard: true, 
-            from: <?php if(empty($_POST['sldr'])) echo'15';else{echo $_POST['sldr'];} ?>,
+            from: <?php 
+        if(isset($_GET['amount'])) 
+        {  
+            switch($_GET['amount'])
+            {
+                case '1000': $from = '0' ; break;
+                case '2000': $from = '1' ; break;
+                case '3000': $from = '2' ; break;
+                case '4000': $from = '3' ; break;
+                case '5000': $from = '4' ; break;
+                case '6000': $from = '5' ; break;
+                case '7000': $from = '6' ; break;
+                case '8000': $from = '7' ; break;
+                case '9000': $from = '8' ; break;
+                case '10000': $from = '9' ; break;
+                case '11000': $from = '10' ; break;
+                case '12000': $from = '11' ; break;
+                case '13000': $from = '12' ; break;
+                case '14000': $from = '13' ; break;
+                case '15000': $from = '14' ; break;
+                case '20000': $from = '15' ; break;
+                case '25000': $from = '16' ; break;
+                case '30000': $from = '17' ; break;
+                case '40000': $from = '18' ; break;
+                case '50000': $from = '19' ; break;
+                case '80000': $from = '20' ; break;
+                case '100000': $from = '21' ; break;
+            }
+            echo $from; 
+        }
+        elseif(!isset($_POST['sldr'])) echo '15'; else echo $_POST['sldr']; 
+        ?>,
             values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000], 
             onChange: function (range3) {
                 if (range3.from_value <= 10000) {
                     $("#period").val("7");
                     $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
                 } else if (range3.from_value <= 15000) {
                     $("#period").val("14");
                     $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
                 } else if (range3.from_value <= 20000) {
                     $("#period").val("21");
                     $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
                 } else if (range3.from_value <= 30000) {
                     $("#period").val("21");
                     $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('85');
                 } else if (range3.from_value <= 50000) {
                     $("#period").val("30");
                     $("#period2").val("От 130 до 250 дней");
+                    $('#percent').val('77');
                 } else {
                     $("#period").val("30");
                     $("#period2").val("От 250 до 365 дней");
+                    $('#percent').val('65');
                 }
                 $("#amount").val(range3.from_value);
+                $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
             },
             onFinish: function() {
-                $('.irs-single').attr('style', $('.irs-single').attr('style') + ';' + 'margin-left: 0px !important');
+               // $('.irs-single').attr('style', $('.irs-single').attr('style') + ';' + 'margin-left: 0px !important');
+               // $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
             }
-        });      
-        $(document).ready(function () {  
-    var currentLoanSize = <?php if(empty($_POST['amount'])) echo'20000';else{echo $_POST['amount'];} ?>,
+        }); 
+        var c = getParameterByName('amount');
+        var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());
+        if (c != null) {
+            if (c > 100000 || c < 1000) {
+                c = 20000;
+            }
+            gg = c;
+        }  
+    $(document).ready(function () { 
+        var currentLoanSize = gg,
         range = $("#rangeSlider"),
         commissionPercantage = 13,
         rangeUpperValue =  $('#ex-slider-val'),
@@ -267,7 +340,7 @@ include "header.php";
         returnTable = $('.ex-total'),
         probabilityTable = $('.irs-single'),
         probabilityTable2 = $('.ex-prob'),
-        probability = 95,
+        probability = <?php echo $percent ;?>,
         time = '130-200 дней',
         commission = (currentLoanSize * commissionPercantage) / 100,
         returnTotal = currentLoanSize + commission,
@@ -319,7 +392,6 @@ include "header.php";
         probabilityTable2.text('').append("<span>"+ probability+"%</span>"); 
     range.on("change", function () { 
         probabilityTable.attr('style', probabilityTable.attr('style') + ';' + 'margin-left: -37px !important');
-        // probabilityTable.css('margin-left', '-37px', '!important');  
         currentLoanSize = parseInt($(this).prop("value"));
         commission = (currentLoanSize * commissionPercantage) / 100;
         returnTotal = currentLoanSize + commission;
@@ -331,47 +403,42 @@ include "header.php";
         commissionTableSize.html("<span>"+commissionToShow+" рублей</span>");
         returnTable.html("<span>"+totalToShow+" рублей</span>");
         setDynamicProbability();
-        setDynamicTimePeriod();  
-    });    
+        setDynamicTimePeriod();
+    });
 });
 </script>
-
-
 <!-- всплывающее окошко -->
-<?php 
-if ($this->uri->segment(1) == 'form') 
-{ 
-    require 'templates/common/js.php';
-    if(isset($_GET['popup']) and $_GET['popup']==1 ){
-        echo '    
-    <!-- Modal Popup-->
-    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-                <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                                <div class="modal-header text-center">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                                </div>
-                                <div class="modal-body text-center">
-                                        <div class="row">
-                                                <div class="col-md-12">
-                                                    <img src="/templates/common/img/popup.jpg">                                             
-                                                    <h2>'.$popup_text.'</h2>
-                                                    <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-    </div>
+<?php  
+require 'templates/common/js.php';
+if(isset($_GET['popup']) and $_GET['popup']==1 ){
+    echo '    
+<!-- Modal Popup-->
+<div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                            <div class="modal-header text-center">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
+                            </div>
+                            <div class="modal-body text-center">
+                                    <div class="row">
+                                            <div class="col-md-12">
+                                                <img src="/templates/common/img/popup.jpg">                                             
+                                                <h2>'.$popup_text.'</h2>
+                                                <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                                            </div>
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+</div>
 
-            <script type= " text/javascript">
-                $(window).load(function(){
-                    $("#popup").modal("show");
-                });
-               
-            </script>';
-    }
-}
+        <script type= " text/javascript">
+            $(window).load(function(){
+                $("#popup").modal("show");
+            });
+            
+        </script>';
+} 
 
 if(isset($_GET['email']))
 {

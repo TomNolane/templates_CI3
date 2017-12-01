@@ -1,7 +1,6 @@
 <h1>Получение займа</h1>
 <div class="clearfix">&nbsp;</div>
 <div class="clearfix">&nbsp;</div>
-
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-default">
     <div class="panel-heading green" role="tab" id="heading1">
@@ -23,27 +22,25 @@
       </div>
     </div>
   </div>
-  
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="heading2">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
           Займ на QIWI-кошелек
         </a>
-		<img src="/templates/dengimo/img/info/qiwi.png" class="pull-right hidden-xs">
+		<img src="/templates/dengimo/img/info/qiwi.png" alt="qiwi.png" class="pull-right hidden-xs">
       </h4>
     </div>
     <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
       <div class="panel-body">
 		<p>Заём на QIWI-кошелек имеет множество преимуществ. Первое из них – это скорость получения денежных средств. Это в разы быстрее, чем получать кредит в банке. Заявка оформляется и рассматривается в считанные минуты.</p>
-		<p>Таким образом, уже спустя максимум полчаса у вас на счету появятся средства. При этом неважно, где вы работаете, какая у вас заработная плата, социальный статус и т. д. Таким образом, заём на QIWI-кошелек – это отличный способ быстро получить деньги. Отказаться в кредите могут только тем, у кого плохая кредитная история, либо же тем, кто уже погашает более одного кредита.проверок кредитной истории и не выходя из дома.</p>
+		<p>Таким образом, уже спустя максимум полчаса у вас на счету появятся средства. При этом неважно, где вы работаете, какая у вас заработная плата, социальный статус и т. д. Таким образом, заём на QIWI-кошелек – это отличный способ быстро получить деньги. Отказаться в кредите могут только тем, у кого плохая кредитная история, либо же тем, кто уже погашает более одного кредита. Без проверок кредитной истории и не выходя из дома.</p>
 		<div class="clearfix">&nbsp;</div>
 		<div class="shadow pull-right"><a href="/form" class="btn btn-get">Получить займ</a></div>
 		<div class="clearfix"></div>
       </div>
     </div>
   </div>
-  
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="heading3">
       <h4 class="panel-title">
@@ -69,14 +66,13 @@
       </div>
     </div>
   </div>
-  
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="heading4">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
           Займ на Яндекс.Деньги
         </a>
-		<img src="/templates/dengimo/img/info/yandex.png" class="pull-right hidden-xs">
+		<img src="/templates/dengimo/img/info/yandex.png" alt="yandex.png" class="pull-right hidden-xs">
       </h4>
     </div>
     <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
@@ -102,12 +98,3 @@
     </div>
   </div>
 </div>
-
-<script>
-$(document).ready(function(){
-  /*$('.panel-title a').click(function(){
-    $('.panel-heading').removeClass('green');
-    if ($(this).hasClass('collapsed')) $(this).parent().parent().addClass('green');
-  });*/
-});
-</script>

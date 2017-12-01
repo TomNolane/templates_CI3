@@ -64,7 +64,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 <div class="container ex-form">
     <h1 class="text-center" id="to_scroll">Заполните анкету</h1>
     <form id="anketa" action="/lk" method="post" onsubmit="return validate();" autocomplete="off" class="tab-content">
-
+        <input type="hidden" name="display" id="display" value="0">
         <input type="hidden" name="referer" value="<?=$referer?>">
         <input type="hidden" name="id" value="">
         <input type="hidden" name="step" value="1">
