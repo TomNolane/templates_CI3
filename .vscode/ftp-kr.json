@@ -8,10 +8,10 @@
     "fileNameEncoding": "utf8",
     "ignoreWrongFileEncoding": true,
     "createSyncCache": true,
-    "autoUpload": true,
+    "autoUpload": false,
     "autoDelete": false,
     "autoDownload": false,
-    "disableFtp": false,
+    "disableFtp": true,
     "ignore": [
         ".git",
         "/.vscode/chrome",
