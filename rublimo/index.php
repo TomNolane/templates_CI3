@@ -13,9 +13,11 @@
 						<b class="text-uppercase">Выберите сумму и срок</b>
 					</h3>
 					<form id="anketa" action="/form" method="post">
-						<input type="hidden" class="period" name="period" value="10" />
-						<input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
-						<?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
+					<input type="hidden" id="amount" name="amount" value="20000" />
+					<input type="hidden" id="period" name="period" value="21" />
+					<input type="hidden" id="form_slrd" name="form_slrd" value="15" />
+					<input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
+					<?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
 						<div class="form-slider green">
 							<!-- <div class="form-label-1 pull-left">Сумма:</div> -->
 							<!-- <div class="form-label-2 pull-right"><span class="current_amount">15 000</span> <i class="fa fa-rub"></i></div>-->
@@ -64,7 +66,7 @@
 
 						<div class="form-slider green">
 							<div class="clearfix"></div>
-							<input type="text" class="amount" name="amount" value="15000" />
+							<input type="text" class="amount amount2" name="amount" value="15000" />
 							<div class="form-label-3 pull-left">1 000</div>
 							<div class="form-label-3 pull-right">100 000</div>
 							<div class="clearfix"></div>

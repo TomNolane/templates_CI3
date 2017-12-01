@@ -1,17 +1,29 @@
 <?php $from = '15'; 
-
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
 {
     echo '<a href="#0" class="cd-top">Наверх</a>';
+}
+?>
+<?php
+if($this->uri->segment(1) != 'form')
+{ 
+	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Zaimol -->
+    <div class="text-center"><ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2472854344350368"
+         data-ad-slot="2964903524"
+         data-ad-format="auto"></ins></div>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
 }
 ?>
 <footer class="ex-main-footer">
 <div class="container">
     <div>
         <a href="/"><img src="/templates/zaimol/assets/img/logo-footer.png" alt="missed"></a>
-        <!-- <span class="ex-scroll-top"></span> -->
     </div>
-    <p>
+    <p class="spec_footer4">
         Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <a class="spec_index3" href="mailto:support@zaimol.ru">support@zaimol.ru</a> &nbsp; <span class="hidden-xs hidden-sm">| +7(495) 006 19 61
         <br>Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
         Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.

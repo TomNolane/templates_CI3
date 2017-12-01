@@ -2,7 +2,6 @@
     require 'header.php';
 ?> 
 <style>#ya-rtb{display: none;}</style>
-
      <div class="container new_style hidden-sm hidden-xs" style="width: 100%; margin-top: 150px; margin-bottom: -70px;  min-height: 100%;">
         <div class="row">            
             <div class="col-md-3 text-left arrow-down">

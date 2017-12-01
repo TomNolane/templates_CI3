@@ -2,10 +2,16 @@
 
 //-----------------------Initializing--------------------------
 $(document).ready(function () { 
-    
-
     //-----------------------Declaration of variables--------------------------
-    var currentLoanSize = 20000,
+    var c = getParameterByName('amount');
+    var gg = parseInt(($('.amount').val().trim().length < 1) ? 20000 : $('.amount').val());
+    if (c != null) {
+        if (c > 100000 || c < 1000) {
+            c = 20000;
+        }
+        gg = c;
+    }  
+    var currentLoanSize = gg,
         range = $("#rangeSlider"),
         commissionPercantage = 13,
         rangeUpperValue =  $('#ex-slider-val'),
@@ -87,47 +93,5 @@ $(document).ready(function () {
         returnTable.html("<span>"+totalToShow+" рублей</span>");
         setDynamicProbability();
         setDynamicTimePeriod();  
-    }); 
-    
-    var slider3 = range.data('ionRangeSlider'); 
-    var slider_plus = true;
-    var n = 6;
-    var slider_init = setInterval(function () {
-        if (slider_plus) {
-            n++;
-        } else {
-            n--;
-        }
-        if (n == 21) {
-            slider_plus = false;
-        } else if (n == 5) {
-            clearInterval(slider_init);
-        }
-
-        slider3.update({
-            from: n
-        });
-
-        if (n <= 9) {
-            $('#period').val('7');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (n <= 14 && n > 9) {
-            $('#period').val('14');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (n <= 15 && n > 14) {
-            $('#period').val('21');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (n <= 17 && n > 15) {
-            $('#period').val('21');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (n <= 19 && n > 17) {
-            $('#period').val('30');
-            $('#period2').val('От 130 до 250 дней');
-        } else if (n > 19) {
-            $('#period').val('30');
-            $('#period2').val('От 250 до 365 дней');
-        }
-
-    }, 50);
-    
+    });
 });

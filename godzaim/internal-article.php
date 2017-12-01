@@ -2,7 +2,6 @@
     <div class="container container-services text-center">
         <div class="row">
             <h1 class="title">Статьи о займах</h1>
-
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -29,7 +28,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title pull-left">

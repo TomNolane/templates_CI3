@@ -9,17 +9,15 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="row">
-
                         <div class="col-md-12 col-sm-12">
                             <div class="form-group has-feedback">
-                                <label class="label-required">Серия и номер паспорта</label>
+                                <label class="label-required" for="passport">Серия и номер паспорта</label>
                                 <input type="tel" class="form-control ec tip" id="passport" name="passport" placeholder="Номер и серия паспорта" title="Введите серию и номер паспорта"
                                     data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Введите номер и серию паспорта"
                                     required>
                                 <span id="passportstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
                         </div>
-
                         <div class="form-group" style="display: none;">
                             <label class="col-sm-4 control-label label-required hidden-xs">Серия и номер паспорта</label>
                             <div class="col-sm-4">
@@ -35,7 +33,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-sm-6">
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
@@ -47,11 +44,9 @@
                                 <span id="passport_codestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
                         </div>
-
-
                         <div class="col-md-6 col-sm-12">
                             <div class="form-group has-feedback">
-                                <label class="label-required" for="passportdate" style="font-size: 10px;">Дата выдачи паспорта</label>
+                                <label class="label-required special_form7" for="passportdate">Дата выдачи паспорта</label>
                                 <input style="padding: 15px 5px 15px 5px !important;" type="text" class="form-control ec tip" name="passportdate" id="passportdate"
                                     placeholder="Дата выдачи паспорта" title="Пожалуйста, выберете дату выдачи паспорта" data-validation="custom"
                                     data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Дата выдачи паспорта"
@@ -59,56 +54,10 @@
                                 <span id="passportdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
                         </div>
-
-                        <!-- Скрываем старую форму даты выдачи -->
-                        <div class="form-group" style="display: none;">
-                            <label class="label-required hidden-xs">Дата выдачи*</label>
-                            <div class="col-sm-2">
-                                <select class="form-control ec" id="passport_dd" name="passport_dd" required>
-                                    <option value="0">День</option>
-                                    <?php
-                                        for($i=1;$i<=31;$i++)
-                                        echo '<option value="'.(($i<10)? '0' : '').$i.'">'.$i.'</option>';
-                                        ?>
-                                </select>
-                            </div>
-                            <div class="col-sm-3">
-                                <select class="form-control ec" id="passport_mm" name="passport_mm" required>
-                                    <option value="0">Месяц</option>
-                                    <option value="01">Январь</option>
-                                    <option value="02">Февраль</option>
-                                    <option value="03">Март</option>
-                                    <option value="04">Апрель</option>
-                                    <option value="05">Май</option>
-                                    <option value="06">Июнь</option>
-                                    <option value="07">Июль</option>
-                                    <option value="08">Август</option>
-                                    <option value="09">Сентябрь</option>
-                                    <option value="10">Октябрь</option>
-                                    <option value="11">Ноябрь</option>
-                                    <option value="12">Декабрь</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-3">
-                                <select class="form-control ec" id="passport_yyyy" name="passport_yyyy" required>
-                                    <option value="0">Год</option>
-                                    <?php
-                                    for($i=1980;$i<=date('Y');$i++)
-                                    echo '<option value="'.$i.'">'.$i.'</option>';
-                                    ?>
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Скрываем старую форму даты выдачи -->
-
-
-
                     </div>
                 </div>
             </div>
             <div class="row">
-
-
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
                         <label class="label-required" for="passport_who">Кем выдан</label>
@@ -118,7 +67,6 @@
                         <span id="passport_whostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     </div>
                 </div>
-
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
                         <label class="label-required" for="birthplace">Место рождения</label>
@@ -128,8 +76,6 @@
                         <span id="birthplacestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     </div>
                 </div>
-
-
             </div>
             <div class="row">
                 <div class="col-sm-6">
@@ -147,11 +93,9 @@
                         </select>
                     </div>
                 </div>
-
-
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
-                        <label class="label-required" for="citystatus">Населенный пункт</label>
+                        <label class="label-required" for="city">Населенный пункт</label>
                         <input type="text" class="form-control ec tip" name="city" id="city" placeholder="Населённый пункт" title="Укажите город в котором вы живете"
                             value="<?php echo isset($city_name)? $city_name : ''; ?>" pattern="^[А-Яа-яЁё\s]+$" data-validation="custom"
                             data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт">
@@ -211,7 +155,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="row hidden">
                 <div class="col-xs-12">
                     <div class="form-group">
@@ -231,7 +174,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

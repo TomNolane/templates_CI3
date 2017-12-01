@@ -8,12 +8,7 @@ if(!isset($description))
 {
     $description = 'описание анкеты!';
 }  
-require 'header.php'; ?>
-
-    <!-- <link href="/modules/awesome-bootstrap-checkbox-master/awesome-bootstrap-checkbox.css" rel="stylesheet">
-<link href="/modules/jquery-ui/1.10.4/css/smoothness/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/jquery.suggestions/16.8/css/suggestions.css" type="text/css" rel="stylesheet" />
-<link href="/modules/poshytip-1.2/src/tip-twitter/tip-twitter.css" rel="stylesheet"> -->
+require 'header.php'; ?> 
     <style>
         #ya-rtb {
             display: none;
@@ -126,6 +121,8 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                                     <input type="hidden" name="id" value="">
                                                     <input type="hidden" name="step" value="1">
                                                     <input type="hidden" name="ad_id" value="<?=$ad_id?>">
+                                                    <input type="hidden" name="display" id="display" value="0">
+                                                    <input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 15 : $_POST['period']; ?>" />
                                                     <div class="tab-content text-left">
                                                         <div id="form1" class="tab-pane fade in active">
                                                             <?php require 'form1.php'; ?>
@@ -138,7 +135,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                                         </div>
                                                         <div id="form2" class="tab-pane fade">
                                                             <?php require('form2.php'); ?>
-                                                            <div class="col-md-4 col-xs-6 hidden-sm hidden-xs">
+                                                            <div class="col-md-4 col-xs-6 hidden">
                                                                 <a href="#form1" class="btn btn-xl btn-success btn-next pull-left btn_form_spec" id="back">
                                                                     <i class="fa fa-arrow-left"></i> Назад</a>
                                                             </div>

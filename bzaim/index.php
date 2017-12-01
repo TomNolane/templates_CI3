@@ -13,10 +13,13 @@
                         <h2> онлайн за 15 минут</h2>
                     </div>
 
+                    <form id="anketa" action="/form" method="post"> 
+                    <!-- NORMAL SCREEN -->
                     <div class="col-md-8 col-md-offset-2 hidden-sm hidden-xs text-center">
                         <div class="form">
-                            <form id="anketa" action="/form" method="post">
-                                <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
+                                <input type="hidden" id="period" name="period" value="21" />
+                                <input type="hidden" id="form_slrd" name="form_slrd" value="15" /> 
+                                <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>"> 
                                 <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
                                 <div class="sliders">
                                     <div class="form-slider orange">
@@ -59,20 +62,18 @@
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
-                                <button type="submit" style="margin-top: 30px;" class="btn btn-xl btn-success">Получить деньги</button>
-                            </form>
+                                <button type="submit" class="btn btn-xl btn-success special_index5">Получить деньги</button>
                         </div>
                     </div>
+                    <!-- /NORMAL SCREEN -->
+                    <!-- SMALL SCREEN -->
                     <div class="col-xs-12 visible-xs visible-sm text-center">
                         <div class="form text-center">
-                            <form id="anketa" action="/form" method="post">
                                 <div class="panel panel-head">
                                     <div class="panel-heading">
-                                        <h1>Выберите сумму</h1>
-                                        <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
-                                        <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
+                                        <h1>Выберите сумму</h1> 
                                         <div class="form-slider white">
-                                            <input type="text" class="amount" name="amount" value="6000" />
+                                            <input type="text" class="amount2" name="amount" value="20000" />
                                             <div class="clearfix"></div>
                                         </div>
                                         <button type="submit" class="btn btn-xl btn-success">Получить деньги</button>
@@ -107,17 +108,15 @@
                                         </div>
                                     </div>
                                 </div>
-
-                            </form>
                         </div>
                     </div>
-
+                    <!-- /SMALL SCREEN -->
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </header>
-
 <section class="about conditions white hidden-xs">
     <div class="container">
         <div class="row">
@@ -138,7 +137,6 @@
         </div>
     </div>
 </section>
-
 <section class="conditions hidden-xs">
     <div class="container">
         <div class="row">
@@ -188,7 +186,6 @@
         </div>
     </div>
 </section>
-
 <section class="conditions hidden-xs">
     <div class="container">
         <div class="row">
@@ -210,7 +207,6 @@
         </div>
     </div>
 </section>
-
 <section class="conditions hidden-xs">
     <div class="container">
         <div class="row">
@@ -236,7 +232,6 @@
         </div>
     </div>
 </section>
-
 <section class="conditions hidden-xs">
     <div class="container">
         <div class="row">
@@ -302,7 +297,6 @@
         </div>
     </div>
 </section> 
-
 <section class="conditions hidden-xs">
     <div class="container">
         <div class="row">

@@ -75,7 +75,7 @@
                     <label class="control-label col-md-4" for="delays_type">Кредитная история</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper ex-arrow">
-                            <select class="form-control ec" name="delays_type" id="delays_type" required>
+                            <select class="form-control ec special_form99" name="delays_type" id="delays_type" required>
                                 <option value="never">Никогда не брал(а) кредитов</option>
                                 <option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
                                 <option value="credit_open_no_delay">Кредиты есть, просрочек нет</option>

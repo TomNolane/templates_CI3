@@ -4,7 +4,7 @@
 		<div class="">
 			<div>Сумма</div>
 			<div id="font40">
-				<?php if(empty($_POST['amount'])){if(empty($_GET['amount'])){echo'6000';}else{echo $_GET['amount'];}}else{echo $_POST['amount'];} ?> рублей</div>
+				<?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?> рублей</div>
 			<div id="form-4">Срок до 130 дней</div>
 		</div>
 	</div>
@@ -13,7 +13,7 @@
 	<label class="col-sm-4 control-label label-required hidden-xs">Сумма</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="form-slider green irs2">
-			<input type="text" class="amount2" name="amount" value="<?php if(empty($_POST['amount'])){if(empty($_GET['amount'])){echo'6000';}else{echo $_GET['amount'];}}else{echo $_POST['amount'];} ?>"
+			<input type="text" class="amount2" name="amount" value="<?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>"
 			/>
 		</div>
 	</div>
@@ -27,10 +27,8 @@
 		</div>
 	</div>
 </div>
-<input type="hidden" id="period" name="period" value="<?php if(empty($_POST['period'])){echo'10';}else{echo $_POST['period'];} ?>"/>
-
-
-<div class="form-group has-feedback" id="form-5"> 
+<input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 21 : $_POST['period']; ?>"/>
+<div class="form-group has-feedback"> 
 	<label class="col-sm-4 control-label label-required hidden-xs">Фамилия</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию"
@@ -40,9 +38,7 @@
 	 
 	</div>
 </div>
-
-
-<div class="form-group has-feedback" id="form-5">
+<div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Имя</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="text" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Пожалуйста, введите свое имя" data-sanitize="capitalize"
@@ -52,9 +48,7 @@
 	 
 	</div>
 </div>
-
-
-<div class="form-group has-feedback" id="form-5">
+<div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Отчество</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="text" class="form-control ec tip" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество"
@@ -64,7 +58,6 @@
 		 
 	</div>
 </div> 
-
 <input type="hidden" id="gender" value="1" name="gender" required>
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Дата рождения</label>
@@ -75,7 +68,6 @@
 			<span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> 
 	</div>
 </div>
-
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Телефон</label>
 	<div class="col-sm-8 col-xs-12">
@@ -85,7 +77,7 @@
 	</div>
 </div>
 
-<div class="form-group has-feedback" id="form-5">
+<div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Почта</label>
 	<div class="col-sm-8 col-xs-12"> 
 		<input type="email" class="form-control ec tip" name="email" id="email" title="Пожалуйста, введите свой email адрес" placeholder="Email"

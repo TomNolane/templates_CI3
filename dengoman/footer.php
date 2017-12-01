@@ -1,28 +1,43 @@
 </div>
 <div class="buffer"></div>
-<div id="ya-rtb">
-<div id="yandex_rtb_R-A-243980-1"></div>
-<div id="yandex_rtb_R-A-243980-3"></div>
-</div>
+<?php 
+if($this->uri->segment(1) != 'form')
+{
+    echo '<div class="text-center" id="ya-rtb">
+    <div id="yandex_rtb_R-A-243980-1"></div>
+    <div id="yandex_rtb_R-A-243980-3"></div>
+    </div>';
+	echo '<!-- Dengoman -->
+    <div class="text-center"><ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2472854344350368"
+         data-ad-slot="8460649073"
+         data-ad-format="auto"></ins></div>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
+}
+?>
+
 <footer>
         <div class="container">
             <div class="col-md-12 hidden-xs hidden-sm">
 		<div class="row">
                     <div class="col-md-3">
                         <h1 style="text-align: left; margin: 10px;">
-                            Dengoman                           
+                            Dengoman
                         </h1>
                         <div class="footer-copyright"></div>
                     </div>
                     <div class="col-md-3 col-xs-12 col-sm-12" >
-                        <div class="footer-text" style="font-size: 10px; line-height: 1;">
+                        <div class="footer-text spec_footer4" style="font-size: 10px; line-height: 1;">
                             <p>Сервис по подбору выгодных онлайн займов находящийся по адресу <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
 							<br><a href="mailto:support@dengoman.ru">support@dengoman.ru</a> <span class="hidden-xs hidden-sm"> | +7(495) 006 19 61</span></p>
                         </div>   
                     </div>      
-                    <div class="col-md-6 hidden-xs hidden-sm">
-                        <p style="font-size: 9px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.</p>
-                        <p class="gut" style="font-size: 10px;">ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499.</p>
+                    <div class="col-md-6 hidden-xs hidden-sm spec_footer5">
+                        <p style="font-size: 9px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
+                            <br>ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499.</p>
                     </div>
                 </div>     
             </div>    
@@ -279,6 +294,7 @@ _tmr.push({id: "2916281", type: "pageView", start: (new Date()).getTime()});
             s.async = true;
             t.parentNode.insertBefore(s, t);
             })(this, this.document, "yandexContextAsyncCallbacks");
+            $('#display').val(1);
         }else{
             (function(w, d, n, s, t) {
             w[n] = w[n] || [];

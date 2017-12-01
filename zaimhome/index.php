@@ -17,19 +17,19 @@
                             <div class="col-md-7">
                                 <div class="ex-range-scope">
 								
-								<form id="anketa" action="/form" method="post">
-									<input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>"> 
-									<?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?> 
+								<form id="anketa" action="/form" method="post"> 
 									
                                     <h2>Какую сумму займа вы хотите получить?</h2>
                                     <div id="ex-main-slider-range">
                                         <figure class="ex-range-slider">
                                             <p id="ex-slider-val"></p>
                                             <i></i>
-                                            <input type="text" id="rangeSlider" name="rangeSlider" value="20000" />
-                                            <input type="hidden" id="period" value="21" />
-                                            <input type="hidden" id="period2" value="" />
-											<input type="hidden" name="from_slrd"  id="from_slrd" value="" />
+                                            <input type="text" id="rangeSlider" name="rangeSlider"/>
+                                            <input type="hidden" id="amount" name="amount" value="20000" />
+                                            <input type="hidden" id="period" name="period" value="21" />
+                                            <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
+                                            <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
+                                            <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?> 
                                         </figure>
                                         <div class="ex-slider-info">
                                             <span>1 тыс.</span>
@@ -106,9 +106,6 @@
         </div>
     </div>
 </div>
-
 <?php require 'footer.php';?>
-
 </body>
-
 </html>

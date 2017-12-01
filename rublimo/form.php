@@ -1,19 +1,10 @@
 <?php 
 if(!isset($my_title))
 {
-	$my_title = 'Заполните анкету!';
+	$my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Rublimo';
+	$description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }  
 require 'header.php'; ?>
-
-<link href="/templates/rublimo/css/form.min.css" rel="stylesheet" media="screen">
-<link href="/modules/jquery-ui/1.10.4/css/smoothness/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/jquery.suggestions/16.8/css/suggestions.css" type="text/css" rel="stylesheet" />
-<link href="/modules/poshytip-1.2/src/tip-twitter/tip-twitter.css" rel="stylesheet">
-<style>
-	#ya-rtb {
-		display: none;
-	}
-</style>
 <?php
 // IP
 $this->load->helper('ip');
@@ -72,9 +63,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
     $ad_id = '4';
 }
 ?>
-
 	<div class="container">
-
 		<section class="steps">
 			<div class="row">
 				<div class="col-xs-12">
@@ -102,17 +91,15 @@ if(isset($_SERVER['HTTP_REFERER'])){
 				</div>
 			</div>
 		</section>
-
 		<section>
 			<div class="row">
 				<div class="col-sm-12 col-xs-12">
 					<center><h3 class="htitle"><b>Заполните свои личные данные</b></h3></center>
-					<h3 id="display-none">Заполните свои паспортные данные</h3>
-					<h3 id="display-none">Заполните свои личные данные</h3>
+					<h3 class="hidden">Заполните свои паспортные данные</h3>
+					<h3 class="hidden">Заполните свои личные данные</h3>
 				</div>
 			</div>
 		</section>
-
 		<section class="hidden-sm hidden-xs">
 			<div class="row">
 				<div class="col-sm-12 col-xs-12 text-center">
@@ -134,17 +121,16 @@ if(isset($_SERVER['HTTP_REFERER'])){
 				</div>
 			</div>
 		</section>
-
 		<section class="form">
 			<div class="row">
 				<div class="col-md-10 col-xs-12">
 					<form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
-						<input type="hidden" name="referer" value="<?=$referer?>">
-						<input type="hidden" name="id" value="">
-						<input type="hidden" name="step" value="1">
-						<input type="hidden" name="ad_id" value="<?=$ad_id?>">
+					<input type="hidden" name="referer" value="<?=$referer?>">
+					<input type="hidden" name="id" value="">
+					<input type="hidden" name="step" value="1">
+					<input type="hidden" name="ad_id" value="<?=$ad_id?>"> 
+					<!-- <input type="hidden" id="amount" name="amount" value="<?php //if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>" />  -->
 						<input type="hidden" name="display" value="1" class="visible-xs">
-
 						<div class="tab-content">
 							<div role="tabpanel" class="tab-pane active" id="form1">
 								<?php require 'form1.php'; ?>
@@ -171,13 +157,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
 							</div>
 						</div>
 					</div>
-
 					</div>
-
 				</div>
 			</div>
 		</section>
-
 		<section class="triggers hidden-xs hidden-sm" id="display-none">
 			<div class="row">
 				<div class="col-sm-2 col-sm-offset-2">
@@ -198,98 +181,6 @@ if(isset($_SERVER['HTTP_REFERER'])){
 				</div>
 			</div>
 		</section>
-		<div id="display-none">
-		<div class="hidden-xs" id="form-3">
-			<div class="call-to-action-container section-container section-container-image-bg">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
-							<h3>
-								Оформление заявки на кредит
-							</h3>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12 great-support-box wow fadeInLeft">
-							<div class="great-support-box-text great-support-box-text-left">
-								<p class="medium-paragraph">
-									Чтобы получить микрокредит нужно пройти процедуру оформления заявки. Она включает в себя несколько этапов. На прохождение
-									процедуры вам понадобиться максимум пятнадцать минут. Сервис RUBLIMO предложит актуальные предложения от самых лучших
-									микрокредитных организаций. Вы сможете выбрать наиболее удобный для вас вариант.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="call-to-action-container section-container section-container-image-bg">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
-							<h3>
-								Как получить микрозайм?
-							</h3>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12 great-support-box wow fadeInLeft">
-							<div class="great-support-box-text great-support-box-text-left">
-								<p class="medium-paragraph">Заявка на займ оформляется быстро. Для прохождения процедуры вам необходимо:</p>
-								<ul>
-									<li>выбрать параметры кредитования (сумму и срок выплаты);</li>
-									<li>указать имя фамилию и отчество;</li>
-									<li>заполнить поле «дата рождения»;</li>
-									<li>указать свой номер мобильного телефона;</li>
-									<li>написать адрес своей электронной почты;</li>
-									<li>указать информацию о своей кредитной истории.</li>
-								</ul>
-								<p class="medium-paragraph">После нажатия кнопки "продолжить" появятся следующие поля, которые также нужно заполнить. Введите свои паспортные
-									данные: серия, номер паспорта, и дату его выдачи. Ниже нужно заполнить поля с информацией о вашей регистрации и
-									месте жительства. Обязательно указать совпадают они или нет. После этого нужно снова нажать кнопку «Далее».</p>
-								<p class="medium-paragraph">Теперь заполните поля с информацией о месте вашей работе. Необходимо указать вид трудоустройства, название компании
-									и вашу должность. Кроме этого, следует вписать рабочий номер телефона, а также указать размер своего стажа и зарплату
-									в рублях. Ниже будут поля, в которые нужно вписать информацию о местонахождении компании, где вы работаете.</p>
-								<p class="medium-paragraph">После отправления заявки необходимо подтвердить адрес своей электронной почты. Для этого нажмите кнопку с соответствующей
-									надписью. Далее действуйте согласно инструкциям, указанным в письме.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="call-to-action-container section-container section-container-image-bg">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
-							<h3>
-								Сотрудничество с RUBLIMO безопасное и быстрое
-							</h3>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12 great-support-box wow fadeInLeft">
-							<div class="great-support-box-text great-support-box-text-left">
-								<p class="medium-paragraph">Наш сервис надежно защищает ваши персональные данные. Система защиты очень эффективная. Мы гарантируем, что информация
-									о вас не будет передаваться третьим лицам. Используемые сервисом технологии позволяют осуществлять быструю обработку
-									данных. Ваша онлайн заявка на займ будет быстро рассмотрена в режиме реального времени. Наша система регулярно обновляется
-									и совершенствуется.</p>
-								<p class="medium-paragraph">На сайте портала RUBLIMO можно прочитать массу полезных материалов о микрокредитах в России и за рубежом. С нашей
-									помощью вы сможете первым узнавать наиболее актуальные новости о различных аспектах кредитования. Поэтому пользоваться
-									порталом RUBLIMO удобно, выгодно и практично.</p>
-								<p class="medium-paragraph">Наш сервис создан для помощи людям нуждающимся в быстрой кредитной поддержке. RUBLIMO дает возможность подать заявку
-									на займ и быстро получить необходимую вам сумму. Оформить микрозайм стало еще проще. Нет нужды самостоятельно мониторить
-									условия кредитования в разных микрокредитных организациях. Мы поможем вам подобрать наиболее выгодные и актуальные
-									предложения от лидеров рынка.</p>
-								<p class="medium-paragraph">Пользоваться услугами RUBLIMO можно находясь на отдыхе, в магазине, ресторане и автомастерской и других местах. Зайдя
-									на наш сайт со смартфона или планшета, можно быстро получить недостающие средства в течение 15 минут.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>
 		<div class="clearfix">&nbsp;</div>
 		<!-- Modal -->
@@ -335,59 +226,4 @@ if(isset($_SERVER['HTTP_REFERER'])){
 				</div>
 			</div>
 		</div>
-		<script src="/modules/jquery/jquery-1.11.3.min.js"></script>
-		<script src="/templates/rublimo/js/validate.min.js?ver=4"></script>
-		<script src="/modules/poshytip-1.2/src/jquery.poshytip.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-		<script src="/modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js"></script>
-		<!--[if lt IE 10]>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-<![endif]-->
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.suggestions/16.8/js/jquery.suggestions.min.js"></script>
-		<script src="/templates/rublimo/js/settings.min.js?ver=3"></script>
-		<?php require 'templates/common/js.php'; ?>
-		<?php
-if(isset($_GET['popup']) and $_GET['popup']==1 ){
-    echo '    
-<!-- Modal Popup-->
-<div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                            <div class="modal-header text-center">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                            </div>
-                            <div class="modal-body text-center">
-                                    <div class="row">
-                                            <div class="col-md-12">
-                                                <img src="/templates/common/img/popup.jpg" alt="popup">                                             
-                                                <h3>'.$popup_text.'</h3>
-                                                <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                                            </div>
-                                    </div>
-                            </div>
-                    </div>
-            </div>
-</div>
-
-        <script type= " text/javascript">
-            $(window).load(function(){
-                $("#popup").modal("show");
-            });
-        </script>';
-}
-?>
-
-<?php
-	if(isset($_GET['email'])){
-		//данные пользователя
-		$this->load->model('user/user_model', 'user');
-		$user_data = $this->user->get_user($_GET['email']);
-		$user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
-		$user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
-		foreach ($user_data as $name => $item){
-			echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
-		}
-		echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
-	}
-?>
 <?php require 'footer.php'; ?>

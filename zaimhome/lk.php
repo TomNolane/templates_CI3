@@ -1,5 +1,5 @@
 <?php 
-$my_title = "Спасибо от Zaimhome.ru";
+$my_title = "Вам автоматически одобрен займ";
 $this->load->model('offers/offers_model', 'offers');
 $data = $this->offers->all();
 // IP
@@ -31,7 +31,7 @@ $pixel = $this->pixel->stat('zaimhome.ru');
             $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
             $item['link'] = str_replace("#site", $domen, $item['link']);                    
             echo '<div class="col-md-3 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2">
-            <div class="ex-wrapper">
+            <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" style="text-decoration: none; color: white;" target="_blank"><div class="ex-wrapper">
                 <div class="rating'.$ii.'"></div><span class="ex-how-many">'.$item['prob'].' отзыва</span>
                 <table class="table">
                     <tbody>
@@ -50,19 +50,19 @@ $pixel = $this->pixel->stat('zaimhome.ru');
                     </tbody>
                 </table>
                 <div class="ex-bottom-info">
-                <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" style="text-decoration: none; color: white;" target="_blank"><img  '.$item['img'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'" style="width:100%; min-height: 45px; height:84px;"></a>
+               <img  '.$item['img'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'" style="width:100%; min-height: 45px; height:84px;">
                 </div>
             </div>
             <button class="ex-main-btn"><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" style="text-decoration: none; color: white;" target="_blank">получить деньги</a></button>
-        </div>
+        </div></a>
 ';$ii++;}
 ?>
     </div>
 </div>
-<div class="ex-adds">
+<!-- <div class="ex-adds">
     <div></div>
     <div></div>
-</div>
+</div> -->
 
  
 <?php require 'footer.php';?>

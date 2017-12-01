@@ -1,6 +1,6 @@
 <?php
+    $my_title = 'Вам автоматически одобрен займ';
     require 'header.php';
-
     $this->load->model('offers/offers_model', 'offers');
     $data = $this->offers->all();
     // IP
@@ -20,31 +20,7 @@
     //pixel stat
     $this->load->model('pixel/pixel_model', 'pixel');
     $pixel = $this->pixel->stat('dengibystra.ru');
-?>
-
-    <style>
-        .table_text {
-            color: #000000 !important;
-            font-family: Roboto;
-            font-size: 10px;
-            font-weight: 500;
-            line-height: 12px;
-            letter-spacing: 0.29px;
-            float: left;
-        }
-
-        .table_text2 {
-            color: #000000 !important;
-            font-family: Roboto;
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 12px;
-            letter-spacing: 0.29px;
-            float: right;
-        }
-    </style>
-
-
+?> 
     <div class="ex-bounds"></div>
     <div class="ex-main-spasibo">
         <div class="container">
@@ -59,18 +35,19 @@ $y = 0; $y1 = 'height: 80px; max-width: 240px;'; $y2 = 'height: 100px; max-width
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
     $item['link'] = str_replace("#site", $domen, $item['link']);        
 echo ' <tr> 
-                <td><center><a   href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
-                <img  src="/templates/common/img/offers/'.$item['img'].'.png" class="'.$item['img'].'" alt="'.$item['title'].'">
-            </a></center></td>
-                <td>     
+                <td><center>
+                <a   href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><img  src="/templates/common/img/offers/'.$item['img'].'.png" class="'.$item['img'].'" alt="'.$item['title'].'"></a>
+            </center></td>
+                <td><a   href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
                     <div><span class="table_text">Прооцентная ставка</span><span class="table_text2 text-right"> <b>от '.$item["percent"].'%</b>&emsp;&emsp;&emsp;</span></div> 
                     <br>
                     <div><span class="table_text text-left">Максимальная сумма</span><span class="table_text2 text-right"> <b>'.$item["amount"].' рублей</b>&emsp;&emsp;&emsp;</span></div> 
                     <br>
-                    <div><span class="table_text text-left">Максимальный срок</span><span class="table_text2 text-right"> <b>'.$item["period"].' дней</b>&emsp;&emsp;&emsp;</span></div> 
+                    <div><span class="table_text text-left">Максимальный срок</span><span class="table_text2 text-right"> <b>'.$item["period"].' дней</b>&emsp;&emsp;&emsp;</span></div>
+                    </a>
                 </td> 
                 <td><a style="color: #000000" href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')"   target="_blank"><button class="ex-main-btn ">Получить деньги</button></a></td>
-            </tr> 
+                </tr>
             '; $y++;
         }
             ?>
@@ -92,11 +69,13 @@ echo '
             </tr>  
             <tr>
                 <td>  
+                <a   href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
                         <div style="margin: 0 30px;"> <span class="table_text">&emsp;&emsp;&emsp;Прооцентная ставка</span><span class="table_text2 text-right"> от '.$item["percent"].'%&emsp;&emsp;&emsp;</span>  </div>  
                         <br>
                         <div style="margin: 0 30px;"><span class="table_text text-left">&emsp;&emsp;&emsp;Максимальная сумма</span><span class="table_text2 text-right"> '.$item["amount"].' рублей&emsp;&emsp;&emsp;</span></div> 
                         <br>
                         <div style="margin: 0 30px;"><span class="table_text text-left">&emsp;&emsp;&emsp;Максимальный срок</span><span class="table_text2 text-right"> '.$item["period"].' дней&emsp;&emsp;&emsp;</span></div> 
+                        </a>
                 </td>
             </tr>
             <tr>

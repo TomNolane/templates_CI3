@@ -214,7 +214,9 @@ $("#email").suggestions({
                         $('#pageh').text('Заполните паспортные данные');
 			$('.form-steps-green-line').addClass('step2');
 			$('.form-steps-line').show();
-			$('#form-steps a[href="#form2"]').tab('show');
+            $('#form-steps a[href="#form2"]').tab('show');
+            $('.spec_footer4').css('visibility','hidden');
+            $('.spec_footer5').css('visibility','hidden'); 
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			markTarget('form-step-1');
                         traffic('dengoman.ru', '2');

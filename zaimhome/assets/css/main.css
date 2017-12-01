@@ -1,40 +1,11 @@
-#my_btn {
-    display: none;
-}   
-.form-control.ec.tip.suggestions-input.error::placeholder {
-    color: #f54b5e;
-}
-
-.form-control.ec.tip.suggestions-input.error::-moz-placeholder {
-    color: #f54b5e;
-}
-
-.form-control.ec.tip.suggestions-input.error::-webkit-input-placeholder {
-    color: #f54b5e;
-} 
-
-.form-control.ec.tip.hasDatepicker.error::placeholder {
-    color: #f54b5e;
-}
-.form-control.ec.tip.hasDatepicker.error::-moz-placeholder {
-    color: #f54b5e;
-}
-.form-control.ec.tip.hasDatepicker.error::-webkit-input-placeholder {
-    color: #f54b5e;
-}
-.form-control.ec.tip.error::placeholder {
-    color: #f54b5e;
-}
-.form-control.ec.tip.error::-moz-placeholder {
-    color: #f54b5e;
-}
-.form-control.ec.tip.error::-webkit-input-placeholder {
-    color: #f54b5e;
-}
-.hov:hover {
-    color: black !important;
-}
-.hov {
-    font-size: 14px !important;
-    font-weight: 700 !important;
-}
+.form-control.ec.tip.suggestions-input.error::placeholder{color:#f54b5e;}
+.form-control.ec.tip.suggestions-input.error::-moz-placeholder{color:#f54b5e;}
+.form-control.ec.tip.suggestions-input.error::-webkit-input-placeholder{color:#f54b5e;}
+.form-control.ec.tip.hasDatepicker.error::placeholder{color:#f54b5e;}
+.form-control.ec.tip.hasDatepicker.error::-moz-placeholder{color:#f54b5e;}
+.form-control.ec.tip.hasDatepicker.error::-webkit-input-placeholder{color:#f54b5e;}
+.form-control.ec.tip.error::placeholder{color:#f54b5e;}
+.form-control.ec.tip.error::-moz-placeholder{color:#f54b5e;}
+.form-control.ec.tip.error::-webkit-input-placeholder{color:#f54b5e;}
+.hov:hover{color:black !important;}
+.hov{font-size:14px !important;font-weight:700 !important;}

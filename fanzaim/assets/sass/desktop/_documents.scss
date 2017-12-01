@@ -1,0 +1,67 @@
+body.ex-sticky{
+  background-color: #f7f7f7;
+}
+main.ex-documents{
+  padding: 55px 0 100px;
+  background-color: #f7f7f7;
+  h2{
+    color: #1c2237;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 32px;
+    margin-bottom: 35px;
+    margin-top: 0;
+    @media (max-width: 480px) {
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+  p{
+    text-indent: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    @media (max-width: 480px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  ul{
+    padding-left: 20px;
+    &:first-of-type{
+      margin: 35px 0;
+    }
+    &:last-of-type{
+      margin-bottom: 35px;
+    }
+    li{
+      text-indent: 5px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+      margin-bottom: 10px;
+    }
+  }
+  button{
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+  &.ex-custom{
+    p{
+      text-indent: initial;
+    }
+    ul{
+      &:first-of-type{
+        margin-top: 35px;
+        margin-bottom: 0;
+      }
+      &:last-of-type{
+        margin: 0;
+      }
+    }
+  }
+}
