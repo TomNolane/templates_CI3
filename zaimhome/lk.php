@@ -1,5 +1,5 @@
 <?php 
-$my_title = "Вам автоматически одобрен займ ";
+$my_title = "Вам автоматически одобрен займ";
 $this->load->model('offers/offers_model', 'offers');
 $data = $this->offers->all();
 // IP

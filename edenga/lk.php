@@ -60,7 +60,7 @@ $pixel = $this->pixel->stat('edenga.ru');
                     <?php
                         foreach($data as $item){
                                     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-                                    $item['link'] = str_replace("#site", $domen, $item['link']);                            
+                                    $item['link'] = str_replace("#site", $domen, $item['link']);
                             echo '
                                 <div class="col-md-6 review-mddiv tab">
                                     <div>
@@ -72,13 +72,12 @@ $pixel = $this->pixel->stat('edenga.ru');
                                     <hr/>
                                     <div>
                                         <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" class="btn btn-success btn-lk" target="_blank">Получить деньги</a>
-                                    </div>                                    
+                                    </div>
                                 </div>
                             ';
                         }
                     ?>
-                </div>            
-
+                </div>
                 <div class="results-small visible-xs visible-sm">
                     <?php
                         foreach($data as $item){

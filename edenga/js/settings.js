@@ -1,3 +1,14 @@
+function checkme_form() {
+    var y = document.getElementById('agree');
+    if (y != null) {
+        if (y.checked) {  
+            $('#next1').css("display", "block");
+        } else { 
+            $('#next1').css("display", "none");
+        }
+    }
+}
+
 var re = /^[а-яА-Я0-9\/]+$/i;
 var re_rc = /^[а-яА-Яё,\W\.\s-]+$/i;
 var re_email = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
@@ -358,17 +369,17 @@ $(document).ready(function () {
                 validator = JSON.parse(data);
                 if (validator.status) { 
                     $('#spec_form2').removeClass('label_er').addClass('label_true');
-                    // $('#phonestatus').removeClass('glyphicon-remove').removeClass('glyphicon-ok');
+                    $('#phonestatus').removeClass('glyphicon-remove').removeClass('glyphicon-ok');
                     $('#phonestatus').html('<img src="/templates/common/img/mobile/' + validator.operator + '.png" width="24px" />');
                     $('#phone').parent().removeClass('ex-error').addClass('ex-success');
                     if (validator.operator == 'undefined') {
                         $('#phonestatus').html('');
-                        // $('#phonestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok');
+                        $('#phonestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok');
                     }
                 } else { 
                     $('#phonestatus').html('');
                     $('#spec_form2').addClass('label_er').removeClass('label_true');
-                    // $('#phonestatus').removeClass('glyphicon-ok').addClass('glyphicon-remove');
+                    $('#phonestatus').removeClass('glyphicon-ok').addClass('glyphicon-remove');
                     $('#phone').parent().removeClass('ex-success').addClass('ex-error');
                 } 
             }
@@ -530,6 +541,10 @@ $(document).ready(function () {
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstStep').removeClass('in active');
             $('#secondStep').addClass('in active');
+            $('.form-steps-green-line').addClass('step2');
+			$('.form-steps-line').show();
+			$('#form-steps a[href="#form2"]').tab('show');
+			$('#htitle').text('Заполните паспортные данные');
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
@@ -550,6 +565,11 @@ $(document).ready(function () {
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondStep').removeClass('in active');
             $('#thirdStep').addClass('in active');
+            $('#step3').removeClass('off');
+			$('.form-steps-green-line').addClass('step3');
+			$('.form-steps-line').show();
+			$('#htitle').text('Заполните данные о работе');
+			$('#form-steps a[href="#form3"]').tab('show');
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);

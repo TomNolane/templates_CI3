@@ -132,9 +132,9 @@ require 'header.php';
           elseif ($this->uri->segment(1) == 'faq') {require 'internal-faq.php';}
           elseif ($this->uri->segment(1) == 'info') {require 'internal-info.php';}
           elseif ($this->uri->segment(1) == 'reviews') {require 'internal-reviews.php';}
-      		elseif ($this->uri->segment(1) == 'zaim') {require 'internal-zaim.php';}
-			    elseif ($this->uri->segment(1) == 'docs') {require 'internal-docs.php';}
-			    elseif ($this->uri->segment(1) == 'service') {require 'internal-service.php';}
+          elseif ($this->uri->segment(1) == 'zaim') {require 'internal-zaim.php';}
+          elseif ($this->uri->segment(1) == 'docs') {require 'internal-docs.php';}
+          elseif ($this->uri->segment(1) == 'service') {require 'internal-service.php';}
           elseif ($this->uri->segment(1) == 'article') {require 'internal-article.php';}
 			?>
     </div>

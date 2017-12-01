@@ -3,7 +3,65 @@ if(!isset($my_title))
 {
 	$my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Fanzaim';
 	$description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
-}  
+}
+$days = 'От 130 до 200 дней'; $days2 = 'Срок до 200 дней';
+if(isset($_GET['amount'])) 
+{  
+    switch($_GET['amount'])
+    {
+        case '1000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '2000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '3000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '4000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '5000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '6000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '7000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '8000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '9000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '10000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '11000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '12000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '13000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '14000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '15000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '20000': $days = 'От 130 до 200 дней' ; $days2 = 'Срок до 200 дней'; break;
+        case '25000': $days = 'От 130 до 200 дней' ; $days2 = 'Срок до 200 дней'; break;
+        case '30000': $days = 'От 130 до 200 дней' ; $days2 = 'Срок до 200 дней'; break;
+        case '40000': $days = 'От 200 до 250 дней' ; $days2 = 'Срок до 250 дней'; break;
+        case '50000': $days = 'От 200 до 250 дней' ; $days2 = 'Срок до 250 дней'; break;
+        case '80000': $days = 'От 250 до 365 дней' ; $days2 = 'Срок до 365 дней'; break;
+        case '100000': $days = 'От 250 до 365 дней' ; $days2 = 'Срок до 365 дней'; break;
+    } 
+}
+elseif(!isset($_POST['period2'])) { $days = 'От 130 до 200 дней'; $days2 = 'Срок до 200 дней'; } 
+else
+{ 
+    switch($_POST['period2'])
+    {
+        case '1000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '2000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '3000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '4000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '5000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '6000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '7000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
+        case '8000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '9000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '10000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '11000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '12000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '13000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '14000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '15000': $days = 'От 100 до 130 дней' ; $days2 = 'Срок до 130 дней'; break;
+        case '20000': $days = 'От 130 до 200 дней' ; $days2 = 'Срок до 200 дней'; break;
+        case '25000': $days = 'От 130 до 200 дней' ; $days2 = 'Срок до 200 дней'; break;
+        case '30000': $days = 'От 130 до 200 дней' ; $days2 = 'Срок до 200 дней'; break;
+        case '40000': $days = 'От 200 до 250 дней' ; $days2 = 'Срок до 250 дней'; break;
+        case '50000': $days = 'От 200 до 250 дней' ; $days2 = 'Срок до 250 дней'; break;
+        case '80000': $days = 'От 250 до 365 дней' ; $days2 = 'Срок до 365 дней'; break;
+        case '100000': $days = 'От 250 до 365 дней' ; $days2 = 'Срок до 365 дней'; break;
+    } 
+}
 require 'header.php'; ?>
     <?php
 // IP
@@ -84,25 +142,25 @@ if(isset($_SERVER['HTTP_REFERER'])){
                             </li>
                         </ul>
                         <div class="col-md-6 col-md-offset-2 col-sm-6 col-xs-11 form-body">
-                            <form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
+                            <form class="form-horizontal" id="anketa" action="/lk" method="post" onsubmit="return validate();" autocomplete="off">
                                 <input type="hidden" name="display" id="display" value="0">
                                 <input type="hidden" name="referer" value="<?=$referer?>">
                                 <input type="hidden" name="id" value="">
                                 <input type="hidden" name="step" value="1">
                                 <input type="hidden" name="ad_id" value="<?=$ad_id?>">
                                 <input type="hidden" id="amount" name="amount" value="<?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>" />
-                                <input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 21 : $_POST['period']; ?>"/>
+                                <!-- <input type="hidden" id="period" name="period" value="<?php //if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 21 : $_POST['period']; ?>"/> -->
                                 <div class="tab-content">
-                                    <div id="form1" class="tab-pane fade in active">
+                                    <div id="firstStep" class="tab-pane fade in active">
                                         <?php require 'form1.php'; ?>
                                         <div class="pull-right">
-                                            <a class="btn btn-primary btn-next" id="next">Далее
+                                            <a class="btn btn-primary btn-next" id="next1">Далее
                                                 <i class="fa fa-arrow-right"></i>
                                             </a>
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
-                                    <div id="form2" class="tab-pane fade">
+                                    <div id="secondStep" class="tab-pane fade">
                                         <?php require('form2.php'); ?>
                                         <div class="clearfix">&nbsp;</div>
                                         <div class="form-group">
@@ -122,16 +180,15 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
-                                    <div id="form3" class="tab-pane fade">
+                                    <div id="thirdStep" class="tab-pane fade">
                                         <?php require('form3.php'); ?>
                                         <div class="row">
                                             <div class="col-sm-8 col-sm-offset-4 col-xs-12 text-center">
-                                                <a class="btn btn-primary btn-header" id="form-send">Оформить заявку</a>
+                                                <a class="btn btn-primary btn-header" id="getmoney">Оформить заявку</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </form>
                         </div>
                         <div class="col-md-2 hidden-sm hidden-xs icon">

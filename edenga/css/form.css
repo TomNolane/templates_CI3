@@ -231,3 +231,13 @@ color: #b94a48 !important;
 .label_true {
 color: #3c763d !important;
 }
+#phonestatus {
+    z-index: 99 !important;
+    top: -4px !important;
+}
+#work_phonestatus {
+    top: -4px !important;
+}
+.fff:hover {
+    outline: 2px solid #008ac0 !important;
+}

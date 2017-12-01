@@ -12,11 +12,11 @@ if($this->uri->segment(1) != 'form')
             <div id="yandex_rtb_R-A-243982-1"></div>
         </div>';
 	echo '<!-- Edenga -->
-    <ins class="adsbygoogle"
+    <div class="text-center"><ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-2472854344350368"
          data-ad-slot="2277140837"
-         data-ad-format="auto"></ins>
+         data-ad-format="auto"></ins></div>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
@@ -56,6 +56,9 @@ require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
 echo '</script>';
 echo '<script>';
 require 'templates/edenga/js/get_parameter.js';
+echo '</script>';
+echo '<script>';
+require 'templates/edenga/js/coockie.js';
 echo '</script>';
 echo '<script>
 jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});</script>';
@@ -253,24 +256,10 @@ function getcookie(name)
 	}); 
 var amount = 15000;
 var day = 10;
-$(document).ready(function(){
-	$('[data-toggle="popover"]').popover();
-        $('input#phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
-        $('input#feedback-phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
-        $('input#work_phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
-	//$('input#passport').mask("nnnn nnnnnn");
-        $('input#passport').mask("nnnn nnnnnn", { "placeholder": "" });
-	$('input#passport-s').mask("nnnn");
-	$('input#passport-n').mask("nnnnnn");
-	$('input#passport_code').mask("nnn-nnn");
-        $('input#birthdate').mask("nn/nn/nnnn");
-        $('input#passportdate').mask("nn/nn/nnnn");
-        $('input#work_salary').mask("nnnn?nn", { "placeholder": "" });
-        $('input#work_experience').mask("n?nn", { "placeholder": "" });
-        $('input#flat').mask("n?***", { "placeholder": "" });
-        $('input#building').mask("n?***", { "placeholder": "" });
-        $('input#work_house').mask("n?***", { "placeholder": "" });
-	
+var comm1 = 0;
+var comm2 = 0;
+var percent = 0;
+$(document).ready(function(){ 
 	$('.amount').ionRangeSlider({
                 values: [1000, 2000, 3000, 4000, 5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,20000,25000,30000,40000,50000,80000,100000],    
                 hide_min_max: true,
@@ -366,7 +355,11 @@ $(document).ready(function(){
 				color = 'red';
                                 day_comment = 'От 365 дней';
                                 day=30;
-			}
+            }
+            
+            
+
+
             $('#amount').val(range.from_value);
             $('#form_slrd').val(range.from);        
 			$('.current_amount').text(String(range.from_value).split(/(?=(?:\d{3})+$)/).join(' '));
@@ -383,7 +376,9 @@ $(document).ready(function(){
                         updateComm();
 		}
 	});
-	var slider = $('.amount').data('ionRangeSlider');
+    var slider = $('.amount').data('ionRangeSlider');
+    var slider2 = $('.amount2').data('ionRangeSlider');
+    
         <?php if ($this->uri->segment(1) == '') { ?>
             var slider_plus = true;
             var n = 10;
@@ -404,6 +399,10 @@ $(document).ready(function(){
                 slider.update({
                     from: n
                 });
+
+                slider2.update({
+                    from: n
+                }); 
 
                 if (slider.result.from_value <= 7000) {
                                 period.update({
@@ -451,7 +450,7 @@ $(document).ready(function(){
 			}
 			else {
                                 period.update({
-                                    from: 350                                 
+                                    from: 350
                                 });       
                                 $('#period2').val('30');
 				perc = 64;
@@ -459,9 +458,33 @@ $(document).ready(function(){
 				color = 'red';
                                 day_comment = 'От 365 дней';
                                 day=30;
-			} 
+            }
+            
+            if(slider.result.from_value<=30000){
+             percent = 1.3;
+			 comm1 = Math.ceil((slider.result.from_value/100)*percent)*day;
+			 comm2 = 0;
+            }
+            if(slider.result.from_value>30000){
+                            percent=0.2;
+                comm1 = 390*day;
+                comm2 = Math.ceil(((slider.result.from_value-30000)/100)*percent)*day;
+            }
+            comm = comm1 + comm2;
+            summ = slider.result.from_value + comm;
+            amount = slider.result.from_value;
 
+            $('.perc').text(percent);
+            $('.am').text(amount);
+            $('.comm').text(comm);
+            $('.sum').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
+
+            updateComm();
             }, 50);
+
+            
+
+
         <?php } ?>
 	$('#period').ionRangeSlider({
 		min: 65,
@@ -517,7 +540,7 @@ $(document).ready(function(){
 			clearInterval(slider_intl);
 		}
 		else slider.update({from:step});
-	}, 5);
+	}, 50);
 	<?php } ?>
         
         var updateComm = function () {
@@ -538,10 +561,17 @@ $(document).ready(function(){
         $('.am').text(amount);
         $('.comm').text(comm);
         $('.sum').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
-	};
-});
-</script>
-<script>
+
+        var slider3 = $('.amount').data('ionRangeSlider');
+        $('#amount').val(slider3.result.from_value);
+        $('#form_slrd').val(slider3.result.from);
+
+        $('.current-button-main.am').text(amount);
+        $('.current-button-main.current_period').text(day_comment);
+        $('.current-button-main.comm').text(comm);
+        $('.current-button-main.sum').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
+        $('.current-button-main.percent_rate').text(percent+'%');
+    };
     $('.amount2').ionRangeSlider({
         values: [1000, 2000, 3000, 4000, 5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,20000,25000,30000,40000,50000,80000,100000],
         from: <?php 
@@ -600,10 +630,12 @@ $(document).ready(function(){
 			else {
                 $('#p').val('30');
                 $('#period2').val('От 365 дней');
-			}    
+            }    
+            updateComm();
 	    }
     });
-</script>
+});
+</script> 
 <?php
 if($this->uri->segment(1) == 'reviews'){
     echo '<script>';
@@ -820,13 +852,12 @@ var google_conversion_id = 843631316;
 var google_custom_params = window.google_tag_params;
 var google_remarketing_only = true;
 /* ]]> */
-</script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-</script>
+</script> 
 <noscript>
 <div style="display:inline;">
 <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/843631316/?guid=ON&amp;script=0"/>
 </div>
 </noscript>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
 </body>
 </html>
