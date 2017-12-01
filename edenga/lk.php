@@ -1,4 +1,5 @@
 <?php
+$my_title = "Вам автоматически одобрен займ";
 require 'header.php';
 
 $this->load->model('offers/offers_model', 'offers');

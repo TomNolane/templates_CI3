@@ -74,23 +74,18 @@ switch($this->uri->segment(1))
 		break;
 	default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'Godzaim - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
 }
-
 require 'header.php'; 
-
-
 ?>
-
 <div class="clearfix">&nbsp;</div>
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
 			<?php
-                        if ($this->uri->segment(1) == 'about') {require 'internal-about.php';}
-                        elseif ($this->uri->segment(1) == 'contacts') {require 'internal-contacts.php';}
-                        elseif ($this->uri->segment(1) == 'faq') {require 'internal-faq.php';}
-                        elseif ($this->uri->segment(1) == 'info') {require 'internal-info.php';}
-                        elseif ($this->uri->segment(1) == 'reviews') {require 'internal-reviews.php';}
-
+			if ($this->uri->segment(1) == 'about') {require 'internal-about.php';}
+			elseif ($this->uri->segment(1) == 'contacts') {require 'internal-contacts.php';}
+			elseif ($this->uri->segment(1) == 'faq') {require 'internal-faq.php';}
+			elseif ($this->uri->segment(1) == 'info') {require 'internal-info.php';}
+			elseif ($this->uri->segment(1) == 'reviews') {require 'internal-reviews.php';}
       		elseif ($this->uri->segment(1) == 'zaim-card') {require 'internal-zaim-card.php';}
 			elseif ($this->uri->segment(1) == 'zaim-qiwi') {require 'internal-zaim-qiwi.php';}
 			elseif ($this->uri->segment(1) == 'zaim-yandex') {require 'internal-zaim-yandex.php';}
@@ -103,17 +98,6 @@ require 'header.php';
 		</div>
 	</div>
 </div>
-
 <div class="clearfix">&nbsp;</div>
 <div class="clearfix">&nbsp;</div>
-
-<script>
-$(document).ready(function () {
-  if (location.hash){
-  location.hash && $(location.hash + '.collapse').collapse('show');    
-  $('body').animate({scrollTop: $($(location.hash).parent()).offset().top -50 }, 1000);
-  return false;
-}});
-</script>
-
 <?php require 'footer.php'; ?>
