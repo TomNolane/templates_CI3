@@ -12,7 +12,7 @@ if ($this->uri->segment(1) != 'form') {
     <!-- Мобильная Yandex.RTB R-A-257495-2 -->
      <div class="hidden-md hidden-lg rtb text-center" id="yandex_rtb_R-A-257495-2"></div></div></center>';
      echo '<!-- Godzaim  -->
-     <div class="text-center"><ins class="adsbygoogle"
+     <div class="text-center adsbygoogle"><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-2472854344350368"
      data-ad-slot="6989206180"

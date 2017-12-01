@@ -533,3 +533,11 @@ h1, h2{font-size:30px;}
     text-align: center !important;
     min-width: 100% !important; 
   }
+  #ya-rtb {
+    text-align: center !important;
+    min-width: 100% !important; 
+  }
+  .adsbygoogle
+  {
+    background-color: #fff;
+  }

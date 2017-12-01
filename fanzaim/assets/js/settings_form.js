@@ -524,8 +524,7 @@ $(document).ready(function () {
     $('#next1').click(function () { 
         if (validate1()) { 
             $('input[name="step"]').val('1'); 
-            $('.spec_footer4').css('display','none');
-            $('.spec_footer5').css('display','none'); 
+            $('.spec_footer7').css('display','none');
             send_form(); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstStep').removeClass('in active');

@@ -1,4 +1,5 @@
 </div>
+<div class="buffer"></div> 
 <?php $from = '15';
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
 {
@@ -7,7 +8,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 
 if($this->uri->segment(1) != 'form')
 {
-    echo '<div class="buffer"></div> 
+    echo '
     <div id="ya-rtb">
     <div id="yandex_rtb_R-A-232716-8"></div>
     <div id="yandex_rtb_R-A-232716-7"></div>

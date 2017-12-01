@@ -11065,14 +11065,14 @@ button.close {
 /* line 1, ../sass/desktop/_footer.scss */
 footer.ex-main-footer {
   background-color: #1c2237;
-  padding: 40px 0 55px;
+  padding: 20px 0 5px;
 }
 /* line 4, ../sass/desktop/_footer.scss */
 footer.ex-main-footer .ex-wrapper {
   display: inline-block;
   width: 191px;
   height: 37px;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 /* line 9, ../sass/desktop/_footer.scss */
 footer.ex-main-footer .ex-wrapper img {
@@ -12433,7 +12433,7 @@ article.ex-current-article button, article.ex-about button {
 /* line 1, ../sass/desktop/_offerta.scss */
 main.ex-approved {
   background-color: #f7f7f7;
-  padding: 60px 0 80px;
+  padding: 40px 0 20px;
 }
 /* line 4, ../sass/desktop/_offerta.scss */
 main.ex-approved h2 {
@@ -12463,7 +12463,10 @@ main.ex-approved .ex-main-info .col-md-6 {
 }
 /* line 18, ../sass/desktop/_offerta.scss */
 main.ex-approved .ex-main-info .col-md-6:first-of-type {
-  height: 198px;
+  height: 170px;
+}
+.wrapper_spec:hover {
+  border: 2px solid rgb(19, 153, 225);
 }
 /* line 22, ../sass/desktop/_offerta.scss */
 main.ex-approved .ex-main-info .col-md-6 img {
@@ -12553,12 +12556,14 @@ main.ex-approved .ex-wrapper {
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
-  padding: 27px 50px 12px 0;
-  margin-bottom: 25px;
-  padding-bottom: 25px;
+  padding: 7px 20px 5px 0; 
+  margin-bottom: 25px; 
+}
+.btn_spec {
+  padding: 10px 5px !important;
 }
 main.ex-approved .ex-wrapper .ex-main-btn {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 @media (max-width: 991px) {
   /* line 91, ../sass/desktop/_offerta.scss */
@@ -12739,7 +12744,7 @@ main.ex-faq button {
 main.ex-main-form {
   background-color: #f7f7f7;
   padding-top: 60px;
-  padding-bottom: 90px;
+  padding-bottom: 10px;
 }
 /* line 6, ../sass/desktop/_form.scss */
 main.ex-main-form .tab-content h2 {
@@ -13452,4 +13457,7 @@ main.ex-receive.ex-bankingCard ul li:last-of-type {
 }
 .index_specail2 {
   width: 100% !important;
+}
+a {
+  text-decoration: none !important;
 }

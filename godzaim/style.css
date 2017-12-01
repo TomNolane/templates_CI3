@@ -1357,3 +1357,11 @@ footer .copy{
       bottom: 30px;
     }
   }
+  #ya-rtb {
+    text-align: center !important;
+    min-width: 100% !important; 
+  }
+  .adsbygoogle
+  {
+    background-color: #fff;
+  }
