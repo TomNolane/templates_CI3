@@ -1,7 +1,7 @@
 <section id="services">
     <div class="container container-services text-center">
         <div class="row">
-            <h1 class="title">Сервис</h1> 
+            <h1 class="title">О нас</h1> 
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
@@ -183,13 +183,12 @@ Moneyman (ООО «Мани Мен»)
 Деньга (ООО «УК Деньга»)
 № лицензии ‎1137847367382
 Адрес: 199178, Санкт-Петербург, 15-я линия В. О., д. 12, литер. А, комн. 24
-Годовая процентная ставка: 360%                              
-                            </div>     
+Годовая процентная ставка: 360%
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </div> 
         </div>
     </div>
 </section>

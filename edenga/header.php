@@ -189,7 +189,7 @@ if(!isset($description))
 						<a href="/form">Оформить займ</a>
 					</li>
 					<li>
-						<a href="/service">О нас</a>
+						<a href="/about">О нас</a>
 					</li>
 					<li>
 						<a href="/faq">Вопрос-ответ</a>

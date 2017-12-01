@@ -20,7 +20,7 @@
             <label class="col-sm-4 control-label label-required hidden-xs hidden-xs">Срок</label>
             <div class="col-sm-8 col-xs-12">
                 <div class="form-slider">
-                    <input type="text" class="form-control" id="period2" value="От 61 дня" readonly/>
+                    <input type="text" class="form-control" id="period2" value="<?php echo $days2; ?>" readonly/>
                 </div>
             </div>
 </div>
@@ -29,7 +29,7 @@
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="f">Фамилия*</label>
 	<div class="col-sm-8 col-xs-12">
-            <div class="shadow dadata">
+            <div class="shadow">
                 <input type="text" class="form-control ec" name="f" id="f" placeholder="Фамилия" title="Фамилия" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
                 <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
@@ -38,7 +38,7 @@
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="i">Имя*</label>
 	<div class="col-sm-8 col-xs-12">
-            <div class="shadow dadata">
+            <div class="shadow">
                 <input type="text" class="form-control ec" name="i" id="i" placeholder="Имя" title="Имя" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя" required>
                 <span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
@@ -47,7 +47,7 @@
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="o">Отчество*</label>
 	<div class="col-sm-8 col-xs-12">
-            <div class="shadow dadata">
+            <div class="shadow">
                 <input type="text" class="form-control ec" name="o" id="o" placeholder="Отчество" title="Отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество" required>
                 <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
@@ -67,7 +67,7 @@
 <div class="clearfix">&nbsp;</div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs" for="phone">Телефон*</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" id="spec_form2" for="phone">Телефон*</label>
 	<div class="col-sm-8 col-xs-12">
             <input type="tel" class="form-control ec" name="phone" id="phone" placeholder="Телефон" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Введите телефон" required>
             <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -76,7 +76,7 @@
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="email">Почта*</label>
 	<div class="col-sm-8 col-xs-12">
-            <div class="shadow dadata">
+            <div class="shadow">
                 <input type="email" class="form-control ec" name="email" id="email" placeholder="Email" title="Email" data-validation="email" data-validation-error-msg="Введите свой email" required>
                 <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
