@@ -148,7 +148,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                                         </div>
                                                         <div id="form3" class="tab-pane fade">
                                                             <?php require('form3.php'); ?>
-                                                            <div class="col-md-4 col-md-offset-3 col-xs-12">
+                                                            <div class="col-md-4 col-md-offset-3 col-xs-4 col-xs-offset-2">
                                                                 <a class="btn btn-xl btn-success btn_form_spec" id="form-send">Оформить заявку</a>
                                                             </div>
                                                         </div>

@@ -9,7 +9,7 @@ if($this->uri->segment(1) != 'form')
     </div>';
 	echo '<!-- Dengoman -->
     <div class="text-center"><ins class="adsbygoogle"
-         style="display:block"
+         style="display:none"
          data-ad-client="ca-pub-2472854344350368"
          data-ad-slot="8460649073"
          data-ad-format="auto"></ins></div>

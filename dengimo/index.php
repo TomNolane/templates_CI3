@@ -241,62 +241,62 @@
                     </div>
                     <div class="col-xs-4">
                         <div class="white offers">
-                            <a href="https://pxl.leads.su/click/864dd416696b8008a5875a0bbe82e865" target="_blank">
+                            <!-- <a href="https://pxl.leads.su/click/864dd416696b8008a5875a0bbe82e865" target="_blank"> -->
                                 <p>
                                     ООО МФО «СМСФИНАНС» № лицензии 2120177002022 Адрес: 115201, г. Москва, ул. Котляковская, д.3, стр. 13 Годовая процентная
                                     ставка: 328,5%
                                 </p>
-                            </a>
+                            <!-- </a> -->
                         </div>
                     </div>
                     <div class="col-xs-4">
                         <div class="white offers">
-                            <a href="https://pxl.leads.su/click/0b7f24ce727aa36758c9775910a0b99c" target="_blank">
+                            <!-- <a href="https://pxl.leads.su/click/0b7f24ce727aa36758c9775910a0b99c" target="_blank"> -->
                                 <p>
                                     ЗАО «4финанс» № лицензии 1127746537764 Адрес: 115201, г.Москва, ул. Котляковская, д. 3, стр. 13 Годовая процентная ставка:
                                     328,5%
                                 </p>
-                            </a>
+                            <!-- </a> -->
                         </div>
                     </div>
                     <div class="col-xs-4">
                         <div class="white offers">
-                            <a href="https://pxl.leads.su/click/0d832392bf58a621067a6e41ac602eb3" target="_blank">
+                            <!-- <a href="https://pxl.leads.su/click/0d832392bf58a621067a6e41ac602eb3" target="_blank"> -->
                                 <p>
                                     ООО «СрочноДеньги» № лицензии 2110552000304 Адрес: Нижний Новгород, ул. Тимирязева, 15/2, БЦ «КМ-Сити», 4 этаж Годовая процентная
                                     ставка: 360%
                                 </p>
-                            </a>
+                            <!-- </a> -->
                         </div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="col-xs-4">
                         <div class="white offers">
-                            <a href="https://pxl.leads.su/click/3f83cc895f66b8b7ed915fc132408f20" target="_blank">
+                            <!-- <a href="https://pxl.leads.su/click/3f83cc895f66b8b7ed915fc132408f20" target="_blank"> -->
                                 <p>
                                     ООО «Домашние деньги» № лицензии 211017700000 Адрес: 115088, г. Москва, 2-ой Южнопортовый проезд, д. 33, стр. 1 Годовая процентная
                                     ставка: 248,2%
                                 </p>
-                            </a>
+                            <!-- </a> -->
                         </div>
                     </div>
                     <div class="col-xs-4">
                         <div class="white offers">
-                            <a href="https://pxl.leads.su/click/30a6c51f9fb08e349bcbf9ee8caf0206" target="_blank">
+                            <!-- <a href="https://pxl.leads.su/click/30a6c51f9fb08e349bcbf9ee8caf0206" target="_blank"> -->
                                 <p>
                                     ООО «Займер» № лицензии 651303532004088 Адрес:г. Кемерово, пр. Советский, д. 2/7 Годовая процентная ставка: 248,2%
                                 </p>
-                            </a>
+                            <!-- </a> -->
                         </div>
                     </div>
                     <div class="col-xs-4">
                         <div class="white offers">
-                            <a href="https://pxl.leads.su/click/2f1ea83749c8f0ea58239fc19b0a9f2d" target="_blank">
+                            <!-- <a href="https://pxl.leads.su/click/2f1ea83749c8f0ea58239fc19b0a9f2d" target="_blank"> -->
                                 <p>
                                     ООО «Парса Компани Групп» № лицензии 1097746179585 Адрес: 115201, г. Москва, Старокаширское ш., д. 2, корп. 2 Годовая процентная
                                     ставка: 360%
                                 </p>
-                            </a>
+                            <!-- </a> -->
                         </div>
                     </div>
                 </div>
