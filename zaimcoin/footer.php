@@ -3,15 +3,7 @@ $from = '15';
 
 if($this->uri->segment(1) != 'form')
 { 
-	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Zaimcoin -->
-    <div class="text-center"><ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-2472854344350368"
-         data-ad-slot="7502790628"
-         data-ad-format="auto"></ins></div>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>';
+	echo '';
 }
 
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') 

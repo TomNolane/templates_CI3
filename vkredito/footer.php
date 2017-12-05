@@ -5,15 +5,7 @@ if ($this->uri->segment(1) != 'form')
     <div id="yandex_rtb_R-A-249178-1"></div>
     <div id="yandex_rtb_R-A-249178-2"></div>
     </div>';
-    echo '<!-- Vkredito -->
-    <center><div class="text-center"><ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-2472854344350368"
-            data-ad-slot="4958100911"
-            data-ad-format="auto"></ins></div></center>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>';
+    echo '';
 } 
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
 {

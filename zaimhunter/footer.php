@@ -2,15 +2,7 @@
 <?php
 if($this->uri->segment(1) != 'form')
 { 
-	echo '<!-- Zaimhunter -->
-    <div class="text-center"><ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-2472854344350368"
-         data-ad-slot="5259770669"
-         data-ad-format="auto"></ins></div>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>';
+	echo '';
 }
 ?>
 <footer class="ex-start-footer">

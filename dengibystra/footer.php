@@ -5,16 +5,7 @@ if($this->uri->segment(1) != 'form')
 	<div class="visible-xs visible-sm hidden-md hidden-lg" id="yandex_rtb_R-A-247243-1"></div>
 	<div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-247243-3"></div>
     </div>';
-	echo '<!-- Dengibystra -->
-<div class="text-center"><div class="text-center">
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2472854344350368"
-     data-ad-slot="6995647878"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>';
+	echo '';
 }
 ?>
 
