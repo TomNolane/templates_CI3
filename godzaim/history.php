@@ -25,46 +25,7 @@ body{background:#e2e7e9;}
 	<div class="clearfix">&nbsp;</div>
 	
 	<div class="row">
-		<div class="col-xs-12">
-			<!--div class="row">
-				<div class="col-xs-3">
-					<div class="stepbox stepbox-1">
-						<div class="stepbox-head">1 займ</div>
-						<div class="stepbox-body">
-							<strong>Условия получения:</strong>
-							<p>1000 руб.<br>от 5 дней</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-3">
-					<div class="stepbox stepbox-2">
-						<div class="stepbox-head">2 займ</div>
-						<div class="stepbox-body">
-							<strong>Условия получения:</strong>
-							<p>до 2000 руб.<br>от 5 дней</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-3">
-					<div class="stepbox stepbox-3">
-						<div class="stepbox-head">3 займ</div>
-						<div class="stepbox-body">
-							<strong>Условия получения:</strong>
-							<p>до 3000 руб.<br>от 5 дней</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-3">
-					<div class="stepbox stepbox-4">
-						<div class="stepbox-head">Последующие<br>займы</div>
-						<div class="stepbox-body">
-							<strong>Условия получения:</strong>
-							<p>до 30 000 руб.<br>от 5 дней</p>
-						</div>
-					</div>
-				</div>
-			</div-->
-			
+		<div class="col-xs-12"> 
 			<div class="clearfix">&nbsp;</div>
 			
 			<p>Сегодня можно воспользоваться получением небольшого микрозайма — микрофинансовая организация может предоставить заемщику в сложной ситуации сумму, достаточную для погашения очередной выплаты по кредиту. Но как исправить плохую кредитную историю, если данные о просрочке платежа уже переданы в бюро кредитных историй?</p>
