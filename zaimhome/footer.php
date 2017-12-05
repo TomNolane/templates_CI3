@@ -5,15 +5,7 @@
         <center><div id="ya-rtb" class="text-center spec_ind_foot"><div class="hidden-xs hidden-sm"><div id="yandex_rtb_R-A-257494-1"></div></div>
         <!-- Мобайл Yandex.RTB R-A-257494-3 -->
         <div class="hidden-md hidden-lg"><div id="yandex_rtb_R-A-257494-3"></div></div></div></center>';
-        echo '<!-- Zaimhome  -->
-        <div class="text-center"><ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-2472854344350368"
-        data-ad-slot="7791028252"
-        data-ad-format="auto"></ins></div>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
+        echo '';
     }
 ?>
 

@@ -11,15 +11,7 @@ if($this->uri->segment(1) != 'form')
         <div id="yandex_rtb_R-A-244327-2"></div>
         <div id="yandex_rtb_R-A-244327-1"></div>
     </div>';
-    echo '<!-- Rublimo -->
-    <div class="text-center"><ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-2472854344350368"
-         data-ad-slot="8958099258"
-         data-ad-format="auto"></ins></div>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>';
+    echo '';
 }
 ?> 
     
