@@ -15,7 +15,7 @@
                 <div class="form-group has-feedback">
                     <label class="control-label col-md-4" for="i">Имя</label>
                     <div class="col-md-8">
-                        <div class="ex-wrapper ex-success">
+                        <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize"
                                 data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя"
                                 required>
@@ -25,7 +25,7 @@
                 <div class="form-group has-feedback">
                     <label class="control-label col-md-4" for="o">Отчество</label>
                     <div class="col-md-8">
-                        <div class="ex-wrapper ex-success">
+                        <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
                                 data-validation-error-msg="Введите свое отчество" required>
@@ -36,7 +36,7 @@
                 <div class="form-group has-feedback">
                     <label class="control-label col-md-4" for="birthdate">Дата рождения</label>
                     <div class="col-md-8">
-                        <div class="ex-wrapper ex-error">
+                        <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
                                 data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
                                 required>
@@ -101,7 +101,7 @@
         </div>
     </div>
     <div class="row">
-        <a id="next1">
+        <a id="next1b">
             <div class="col-xs-12 text-center">
                 <span id="submitOneSecond" class="ex-main-btn hidden-md hidden-lg">Далее</span>
             </div>

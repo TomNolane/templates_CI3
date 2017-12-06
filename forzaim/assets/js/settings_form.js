@@ -527,6 +527,7 @@ $(document).ready(function () {
             $('.spec_footer7').css('display','none');
             send_form(); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
+            $('.ex-step-counter').addClass('ex-on-second-step');
             $('#firstStep').removeClass('in active');
             $('#secondStep').addClass('in active');
             $('html, body').animate({
@@ -542,11 +543,35 @@ $(document).ready(function () {
         $('select[name="reg_type"]').change();
     });
 
+    $('#next1b').click(function () { 
+        if (validate1()) { 
+            $('input[name="step"]').val('1'); 
+            $('.spec_footer7').css('display','none');
+            $('.ex-step-counter').addClass('ex-on-second-step');
+            send_form(); 
+            $('.ex-indicator-scope').addClass('ex-on-second-step');
+            $('#firstStep').removeClass('in active');
+            $('#secondStep').addClass('in active');
+            $('html, body').animate({
+                scrollTop: $('#to_scroll').offset().top
+            }, 1000);
+            markTarget('form-step-1');
+            oSpP.push("i", $('#i').val());
+            oSpP.push("o", $('#o').val());
+        }
+        showBzzz = false;
+        $('.reg_same').change();
+        setcookies();
+        $('select[name="reg_type"]').change();
+    });
+
+
     $('#next2').click(function () {
         if (validate2()) {
             $('input[name="step"]').val('2');        
             send_form();
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
+            $('.ex-step-counter').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondStep').removeClass('in active');
             $('#thirdStep').addClass('in active');
             $('html, body').animate({

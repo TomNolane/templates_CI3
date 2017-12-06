@@ -60,12 +60,6 @@ $(document).ready(function () {
         var dynamicFooterHeight = $('.ex-sticky-footer').outerHeight();
         $('.ex-sticky').css('padding-bottom', dynamicFooterHeight);
     });
-    $('#submitOne').on('click', function () {
-        $('.ex-step-counter').addClass('ex-on-second-step');
-    });
-    $('#submitTwo').on('click', function () {
-        $('.ex-step-counter').removeClass('ex-on-second-step').addClass('ex-on-last-step');
-    });
     $('.ex-hamburger').on('click', function(event){
         event.stopPropagation();
         $('.ex-aside-menu').addClass('ex-is-open');

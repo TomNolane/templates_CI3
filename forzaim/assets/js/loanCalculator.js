@@ -10,7 +10,8 @@ $(document).ready(function () {
             c = 20000;
         }
         gg = c;
-    };
+    }; 
+    
     var currentLoanSize =  parseInt(gg), 
         range = $("#rangeSlider"),
         commissionPercantage = 13,
@@ -27,6 +28,7 @@ $(document).ready(function () {
         time = '61',
         commission = (currentLoanSize * commissionPercantage) / 100,
         returnTotal = currentLoanSize + commission,
+        
         setDynamicProbability = function () {
             if(currentLoanSize >= 30000 && currentLoanSize < 50000){
                 probability = 85;
@@ -73,7 +75,7 @@ $(document).ready(function () {
             bet = 'от 1.27%';
             betSize.html(bet);
         }
-    };
+    }; 
     //------------------------Declaration of variables end-------------------------
     rangeUpperValue.append("<span>"+currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+"</span><i></i>");
     rangeTableValue.append("<span>"+currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" рублей</span>");
@@ -99,5 +101,5 @@ $(document).ready(function () {
         setDynamicProbability();
         setDynamicTimePeriod();
         setDynamicBet();
-    });
+    }); 
 });

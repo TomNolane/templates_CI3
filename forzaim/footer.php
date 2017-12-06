@@ -58,7 +58,16 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
 
-<?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
+<?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form' || $this->uri->segment(1) == 'about' || $this->uri->segment(1) == 'microloans-organization' || $this->uri->segment(1) == 'credits-history' || $this->uri->segment(1) == 'urgently-money'|| $this->uri->segment(1) == 'microloans-or-credit') 
+{ 
+    echo '<script>';
+    require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/forzaim/assets/js/loanCalculator.js';
+    echo '</script>';
+    
+    ?>
     <script> 
     //backtotop
     jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});
@@ -305,16 +314,23 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     });  
 </script>
     <?php
-		if ($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') 
-		{
-            echo '<script>';
-            require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
-            echo '</script>';
-            echo '<script>';
-            require 'templates/forzaim/assets/js/loanCalculator.js';
-            echo '</script>';
-        ?>
-    <script >$(document).ready(function () {
+		if ($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') { ?>
+    <script > 
+    $( ".button1" ).click(function() {
+        $( "#amount" ).val('5000');
+        $( "#period" ).val('7');
+        $( "#form_slrd" ).val('4'); 
+        $( "#anketa" ).submit();
+    });
+    $( ".button2" ).click(function() {
+        $( "#amount" ).val('15000');
+        $( "#period" ).val('14');
+        $( "#form_slrd" ).val('14'); 
+        $( "#anketa" ).submit();
+    });
+
+
+    $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 10,
@@ -437,13 +453,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 <!-- всплывающее окошко -->
 <?php 
 if ($this->uri->segment(1) == 'form') 
-{ 
-    echo '<script>';
-    require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/forzaim/assets/js/loanCalculator.js';
-    echo '</script>';
+{  
     
     require 'templates/common/js.php';
     if(isset($_GET['popup']) and $_GET['popup']==1 ){
