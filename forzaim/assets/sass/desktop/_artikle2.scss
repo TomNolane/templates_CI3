@@ -1,0 +1,35 @@
+.ex-artikle2 {
+    .ex-main-header {
+      background-color: #88e2ea;
+    }
+    min-height: 567px;
+    background-image: url(../img/art2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+   background-position: 50% bottom;
+
+}
+.ex-artikle2-content {
+  padding-bottom: 117px;
+  h1 {
+    margin-bottom: 121px;
+    color: #333333;
+    font-family: $lato;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 42px;
+    text-transform: uppercase;
+    @media (max-width: 600px) {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+  }
+  p{
+    color: #333333;
+    font-family: $lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+  }
+}
