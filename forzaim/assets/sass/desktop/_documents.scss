@@ -1,0 +1,59 @@
+main.ex-document-1{
+  h2{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 68px;
+    margin-bottom: 58px;
+  }
+  p{
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    text-indent: 30px;
+    &:first-of-type{
+      text-indent: 0;
+    }
+  }
+  ul{
+   &:first-of-type{
+     margin-top: 35px;
+     margin-bottom: 45px;
+   }
+    &:last-of-type{
+      margin-bottom: 45px;
+    }
+    padding-left: 20px;
+    li{
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+    }
+  }
+  button{
+    max-width: 560px;
+    width: 100%;
+    display: block;
+    margin: 70px auto 80px;
+  }
+}
+main.ex-document-2{
+  @extend .ex-document-1;
+  p{
+    text-indent: 0;
+  }
+  ul{
+    &:first-of-type{
+      margin-bottom: 0;
+    }
+    &:last-of-type{
+      margin: 0;
+    }
+  }
+}
+main.ex-document-3{
+  @extend .ex-document-2;
+}

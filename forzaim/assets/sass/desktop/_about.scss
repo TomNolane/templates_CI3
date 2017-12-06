@@ -1,0 +1,87 @@
+.ex-about {
+  padding-bottom: 121px;
+  position: relative;
+  min-height: 567px;
+  background-image: url(../img/abg.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: bottom;
+  .ex-calc-wraper {
+    padding-top: 192px;
+    .ex-tab-section {
+      .ex-calc-block {
+        margin-bottom: 28px;
+        border-radius: 5px;
+        border: 1px solid #33c7d5;
+        background-color: $white;
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+        li {
+          margin-left: 20px;
+          display: inline-block;
+          .ex-unique {
+            padding-top: 28px;
+            color: #33c7d5;
+            font-family: $roboto;
+            font-size: 14px;
+            font-weight: 400;
+            display: block;
+          }
+          .ex-result-style {
+            color: $main;
+            font-family: $dosis;
+            font-size: 48px;
+            font-weight: 700;
+          }
+          @media (max-width: 600px) {
+            display: block;
+            margin-left: 0;
+          }
+
+        }
+      }
+    }
+    @media (max-width: 600px) {
+      padding-top: 30px;
+    }
+  }
+  @media (max-width: 767px) {
+    padding-bottom: 20px;
+  }
+}
+.ex-about-content {
+  margin-bottom: 120px;
+  h1 {
+    margin-top: 45px;
+    margin-bottom: 76px;
+    color: $main;
+    font-family: $lato;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 42px;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 27px;
+    color: $main;
+    font-family: $lato;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.38px;
+  }
+  p {
+    color: #333333;
+    font-family: $lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+  }
+}
+.fr {
+  float: right;
+}
