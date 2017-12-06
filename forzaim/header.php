@@ -163,7 +163,7 @@ if(!isset($description))
         <!-- <button class="ex-main-btn ex-ask-question" type="button">Задать вопрос</button> -->
         <ul>
             <li class="ex-larger">Как работает сервис</li>
-            <li><a href="/about">О сервисе Zaimol</a></li>
+            <li><a href="/about">О сервисе Forzaim</a></li>
             <li><a href="/allarticles">Статьи о займах</a></li>
             <li><a href="/faq">Вопрос - Ответ</a></li>
             <li class="ex-larger">Документация</li>

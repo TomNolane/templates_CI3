@@ -1,26 +1,20 @@
 <?php require 'header.php'; ?>
-<nav class="ex-main-header">
-    <div class="container">
-        <i class="ex-hamburger"></i>
-        <a class="ex-brand" href="/">Forzaim</a>
-    </div>
-</nav>
-<section class="ex-section-1">
 <form id="anketa" action="/form" method="post">
-        <input type="hidden" id="amount" name="amount" value="20000" />
-        <input type="hidden" id="period" name="period" value="21" />
-        <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
-        <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
-        <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
+<input type="hidden" id="amount" name="amount" value="20000" />
+<input type="hidden" id="period" name="period" value="21" />
+<input type="hidden" id="form_slrd" name="form_slrd" value="15" />
+<input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
+<?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
+<section class="ex-section-1">
     <nav class="ex-main-header ex-transparent">
         <div class="container">
             <i class="ex-hamburger"></i>
-            <a class="ex-brand" href="">Forzaim</a>
+            <a class="ex-brand" href="/">Forzaim</a>
         </div>
     </nav>
     <div class="ex-main">
         <div class="container">
-            <h1 class="text-center">Forzaim – формула выгодных займов</h1>
+            <h1 class="text-center hidden-xs hidden-sm">Forzaim – формула выгодных займов</h1>
             <h2 class="text-center">Срочные деньги с любой кредитной историей</h2>
             <div class="ex-calc-wraper">
                 <div class="row">
@@ -57,12 +51,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-</form>
 </section>
-<section class="ex-section-2">
+<section class="ex-section-2 hidden-xs hidden-sm">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -104,7 +96,7 @@
         </div>
     </div>
 </section>
-<section class="ex-section-3">
+<section class="ex-section-3 hidden-xs hidden-sm">
     <h2 class="text-center">Отзывы о нас</h2>
     <div class="ex-slider-wrap">
         <div class="container text-center">
@@ -160,7 +152,7 @@
         </div>
     </div>
 </section>
-<section class="ex-section-4">
+<section class="ex-section-4 hidden-xs hidden-sm">
     <h2 class="text-center">Быстрый старт</h2>
     <div class="ex-fast-start-wrap">
         <div class="container">
@@ -181,7 +173,7 @@
                                     </tr>
                                 </table>
                                 <div class="es-fast-btn">
-                                    <button class="ex-main-btn">Получить деньги</button>
+                                    <button class="ex-main-btn button1">Получить деньги</button>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +191,7 @@
                                     </tr>
                                 </table>
                                 <div class="es-fast-btn">
-                                    <button class="ex-main-btn" type="submit">Получить деньги</button>
+                                    <button class="ex-main-btn button2" type="submit">Получить деньги</button>
                                 </div>
                             </div>
                         </div>
@@ -209,4 +201,5 @@
         </div>
     </div>
 </section>
+</form>
 <?php require 'footer.php'; ?>

@@ -169,7 +169,7 @@ body {
 
 /* line 128, ../sass/core/_global.scss */
 .ex-calc-wraper {
-  padding-top: 108px;
+  padding-top: 0px;
 }
 /* line 131, ../sass/core/_global.scss */
 .ex-calc-wraper .ex-tab-section .ex-calc-block {
@@ -208,11 +208,17 @@ body {
     display: block;
     margin-left: 0;
   }
+  main.ex-form .tab-content .ex-main-form .ex-main-btn {
+    margin-top: 0px;
+  }
+  main.ex-form {
+    padding-bottom: 0px; 
+  }
 }
 @media (max-width: 600px) {
   /* line 128, ../sass/core/_global.scss */
   .ex-calc-wraper {
-    padding-top: 50px;
+    padding-top: 0px;
   }
   /* line 166, ../sass/core/_global.scss */
   .ex-calc-wraper .col-lg-6.fr {
@@ -8436,7 +8442,7 @@ button.list-group-item-danger.active:focus {
 
 /* line 5688, ../sass/library/_bootstrap.scss */
 .panel-default > .panel-heading {
-  color: #333;
+  color: #333 !important;
   background-color: #f5f5f5;
   border-color: #ddd;
 }
@@ -11295,6 +11301,7 @@ aside.ex-aside-menu main ul li.ex-larger:hover {
   .ex-section-1 h1 {
     font-size: 20px;
     line-height: 30px;
+    margin-top: 0px;
   }
 }
 /* line 30, ../sass/desktop/_homepage.scss */
@@ -11308,6 +11315,8 @@ aside.ex-aside-menu main ul li.ex-larger:hover {
   /* line 30, ../sass/desktop/_homepage.scss */
   .ex-section-1 h2 {
     margin-bottom: 0;
+    margin-top: 0px;
+    font-size: 22px;
   }
 }
 /* line 40, ../sass/desktop/_homepage.scss */
@@ -11354,6 +11363,9 @@ aside.ex-aside-menu main ul li.ex-larger:hover {
   .ex-section-1 .ex-tab-section .ex-calc-block li {
     display: block;
     margin-left: 0;
+  }
+  .ex-section-1 .ex-tab-section .ex-calc-block li .ex-result-style {
+    font-size: 30px;
   }
 }
 @media (max-width: 767px) {
@@ -11751,7 +11763,7 @@ main.ex-money .nav-tabs li a {
 }
 /* line 32, ../sass/desktop/_money.scss */
 main.ex-money .nav-tabs li.active a {
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #33c7d5;
   border: none;
 }
@@ -11877,7 +11889,7 @@ main.ex-faq .nav-tabs li a {
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
-  color: #333333;
+  color: #333333 !important;
   padding: 12px 30px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -11893,7 +11905,7 @@ main.ex-faq .nav-tabs li a {
 }
 /* line 56, ../sass/desktop/_faq.scss */
 main.ex-faq .nav-tabs li.active a {
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #33c7d5;
   border: none;
 }

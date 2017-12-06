@@ -67,6 +67,6 @@
             ?>
     </div>
 </div>
-<!-- <div class="ex-adds"></div> -->
+<div class="ex-adds"></div>
 </main> 
 <?php require 'footer.php'; ?>
