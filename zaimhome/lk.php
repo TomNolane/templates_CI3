@@ -53,7 +53,7 @@ $pixel = $this->pixel->stat('zaimhome.ru');
                <img  '.$item['img'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'" style="width:100%; min-height: 45px; height:84px;">
                 </div>
             </div>
-            <button class="ex-main-btn"><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" style="text-decoration: none; color: white;" target="_blank">получить деньги</a></button>
+            <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" style="text-decoration: none; color: white;" target="_blank"><button class="ex-main-btn">получить деньги</button></a>
         </div></a>
 ';$ii++;}
 ?>
