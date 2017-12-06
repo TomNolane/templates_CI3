@@ -209,10 +209,32 @@ body {
     margin-left: 0;
   }
   main.ex-form .tab-content .ex-main-form .ex-main-btn {
-    margin-top: 0px;
+    margin-top: 0px !important;
   }
   main.ex-form {
-    padding-bottom: 0px; 
+    padding-bottom: 0px !important; 
+  }
+  main.ex-form .tab-content .ex-calc-wraper .ex-tab-section .ex-calc-block li .ex-result-style {
+    font-size: 30px;
+  }
+  main.ex-form .tab-content .ex-main-form {
+    padding: 10px 10px;
+  }
+  .main.ex-form {
+    padding-bottom: 0px !important;
+  }
+  main.ex-offerta {
+    padding-top: 0px !important;
+  }
+  main.ex-offerta h2 {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+  }
+  main.ex-offerta .ex-adds {
+    margin-top: 0px !important;
+    display: none;
   }
 }
 @media (max-width: 600px) {
@@ -12975,4 +12997,8 @@ main.ex-form #thirdStep .ex-main-form {
 /* line 85, ../sass/desktop/_about.scss */
 .fr {
   float: right;
+}
+main.ex-offerta .ex-adds {
+  margin-top: 0px !important;
+  visibility: hidden;
 }
