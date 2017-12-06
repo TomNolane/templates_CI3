@@ -168,7 +168,7 @@
                                         <td>Основная ставка</td><td>1.1%</td>
                                     </tr>
                                     <tr>
-                                        <td>Cрок займа</td><td>61 день</td>
+                                        <td>Cрок займа</td><td>от 61 дней</td>
                                     </tr>
                                 </table>
                                 <div class="es-fast-btn">
@@ -186,7 +186,7 @@
                                         <td>Основная ставка</td><td>1.1%</td>
                                     </tr>
                                     <tr>
-                                        <td>Cрок займа</td><td>61 день</td>
+                                        <td>Cрок займа</td><td>от 61 дней</td>
                                     </tr>
                                 </table>
                                 <div class="es-fast-btn">
