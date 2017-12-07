@@ -11906,7 +11906,7 @@ header .navbar-default {
 }
 /* line 38, sass/desktop/_start.scss */
 .ex-main-head .ex-calc-wraper {
-  margin: 90px auto;
+  margin: 180px auto;
   width: 95%;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
   -moz-border-radius: 6px;
