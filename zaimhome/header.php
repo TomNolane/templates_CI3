@@ -124,7 +124,12 @@ if(!isset($description))
         padding: 0 !important;
     }
     '; 
-    echo '</style>'; 
+    echo '</style>';
+    if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
+        echo '<style>';
+        require 'templates/zaimhome/assets/css/style_lk.css';
+        echo '</style>';
+    }
     ?> 
     <!-- javascript -->
     <?php
@@ -207,3 +212,47 @@ if(!isset($description))
     </div>
 </div>
 </nav>
+
+<!-- Modal -->
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header text-center">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+                    <h4 class="text-center">Остались вопросы?</h4>
+                    <p class="text-center">Просто заполните форму и наш специалист свяжется с Вами</p>
+				</div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                        <form action="">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="feedback-name" placeholder="Имя" title="Имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="feedback-phone" placeholder="Телефон" title="Телефон" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="feedback-email" placeholder="Email" title="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="feedback-comment" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"
+                                    required></textarea>
+                            </div>
+                            <div class="ex-actions">
+                                <button class="ex-main-btn" id="feedback-send">Отправить</button>
+                                <button class="ex-main-btn" data-dismiss="modal" aria-label="Close">Закрыть</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="loading" style="display:none;">
+                    <span>
+                        <i class="fa fa-spinner fa-spin fa-pulse"></i> Загрузка...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

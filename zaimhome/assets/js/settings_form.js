@@ -252,8 +252,39 @@ $(document).ready(function () {
             return true;
         }
     }
+    function init2($name) {
+        var self = {}; 
+        self.$name = $name;
+        var fioParts = ["NAME"];
+        $.each([$name], function (index, $el) {
+            var sgt = $el.suggestions({
+                serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
+                token: "78fc76023580df0ec78566913b31a87d909f1ec0",
+                type: "NAME",
+                triggerSelectOnSpace: false,
+                hint: "",
+                noCache: true,
+                scrollOnFocus: false,
+                minChars: 2,
+                addon: "none",
+                params: {
+                    // каждому полю --- соответствующая подсказка
+                    parts: [fioParts[index]]
+                }
+            });
+        });
+    };
     init($("#f"), $("#i"), $("#o"));
+    init2($("#feedback-name"));
     $("#email").suggestions({
+        serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
+        token: "78fc76023580df0ec78566913b31a87d909f1ec0",
+        type: "EMAIL",
+        count: 3,
+        addon: "none",
+        scrollOnFocus: false
+    });
+    $("#feedback-email").suggestions({
         serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
         token: "78fc76023580df0ec78566913b31a87d909f1ec0",
         type: "EMAIL",
@@ -332,7 +363,7 @@ $(document).ready(function () {
         });
     });
     var lang = 0;
-    $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street').on('keyup keypress', function (e) {
+    $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street, #feedback-name').on('keyup keypress', function (e) {
         if ($(this).val().match(/([a-zA-Z]+)/)) {
             lang++;
             var input = $(this),
@@ -362,6 +393,20 @@ $(document).ready(function () {
             $(this).next("span").text(' ');
         }
     });
+    $('#feedback-email').on('keyup keypress', function (e) {
+        if ($(this).val().match(/([а-яёА-ЯЁ]+)/)) {
+            lang++;
+            $(this).val('');
+            if (lang == 1) {
+                $(this).parent().addClass('ex-error');
+                $(this).after('<span class="help-block form-error">Пожалуйста, смените раскладку клавиатуры на <span class="label label-info">EN</span></span>');
+            }
+        } else {
+            lang = 0;
+            $(this).parent().removeClass('ex-error');
+            $(this).next("span").text(' ');
+        }
+    }); 
     $('#birthdate').datepicker({
         dateFormat: "dd/mm/yy",
         changeMonth: true,
@@ -414,6 +459,8 @@ $(document).ready(function () {
         if (validate1()) {
             $('input[name="step"]').val('1');
             send_form();
+            $('.spec_footer4').css('display','none');
+            $('.spec_footer5').css('display','none'); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstTabContent').removeClass('in active');
             $('#secondTabContent').addClass('in active');

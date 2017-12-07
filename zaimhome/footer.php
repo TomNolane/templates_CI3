@@ -13,89 +13,22 @@
     <div class="container" style="width: 100%">
         <div class="col-sm-3 text-center">
             <div class="ex-footer-logo">
-                <a href="/"><img src="/templates/zaimhome/assets/img/header-logo.png" alt="Missing image" style="margin-top: 30px;"></a>
+                <a href="/"><img src="/templates/zaimhome/assets/img/header-logo.png" alt="Missing image" class="special_foot22"></a>
             </div>
-            <p class="special_footer3">Сервис выгодного онлайн займа</p>
+            <p class="special_footer3 ">Сервис выгодного онлайн займа</p>
         </div>
-        <div class="col-sm-3 small">
+        <div class="col-sm-3 small spec_footer4 ">
             <p>Сервис по подбору выгодных онлайн займов
             <br>находящийся по адресу
             <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
             <br><a href="mailto:support@zaimhome.ru" target="_blank">support@zaimhome.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>    
         </div>
-        <div class="col-sm-6 hidden-xs hidden-sm" >
+        <div class="col-sm-6 hidden-xs hidden-sm spec_footer5" >
             <p style="font-size: 85%;">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499</p>
         </div> 
     </div>
 </footer>
 
-<!-- Modal -->
-<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <h4 class="text-center">Остались вопросы?</h4>
-                <p class="text-center">Просто заполните форму и наш специалист свяжется с Вами</p>
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                        <form action="">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="feedback-name" placeholder="Имя" title="Имя">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="feedback-phone" placeholder="Телефон" title="Телефон">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="feedback-email" placeholder="Email" title="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="feedback-comment" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"
-                                    required></textarea>
-                            </div>
-                            <div class="ex-actions">
-                                <button class="ex-main-btn" id="feedback-send">Подтвердить</button>
-                                <button class="ex-main-btn" data-dismiss="modal" aria-label="Close">Позже</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div id="loading" style="display:none;">
-                    <span>
-                        <i class="fa fa-spinner fa-spin fa-pulse"></i> Загрузка...</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal 2-->
-<div class="modal fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <h4 class="text-center">Уважаемый(ая),
-                    <span id="io2"></span>!</h4>
-                    <p class="text-center">Благодарим вас за регистрацию на нашем сервисе</p>
-                    <p class="text-center">На почту <span id="e2">email@email.com</span> было отправлено письмо с подтверждением</p>
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                            <form action="">
-                                <div class="ex-actions">
-                                    <button class="ex-main-btn" id="email_confirm2">Подтвердить</button>
-                                    <button class="ex-main-btn" data-dismiss="modal" aria-label="Close" id="email_later">Позже</button>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Почта">
-                                    <span>Нет письма? Отправьте новое!</span><br>
-									<p style="font-size: 12px;">Если письмо не пришло, то посмотрите его в папке спам и нажмите кнопку «не спам»</p>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 <?php 
 echo '<script>';
 require 'modules/jquery/jquery-1.11.3.min.js';
@@ -130,22 +63,15 @@ echo '</script>';
 echo '<script>';
 require 'templates/zaimhome/assets/js/settings_main.js';
 echo '</script>';
+echo '<script>';
+require 'templates/zaimhome/assets/js/modal.js';
+echo '</script>';
 
 ?> 
 <!--[if lt IE 10]>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif]-->
- <!-- всплывающее окно -->
 <?php
-if ($this->uri->segment(1) == 'thanks') 
-{ 
-    echo '<script>';
-    require 'templates/zaimhome/assets/js/j-rating.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimhome/assets/js/settings_thanks.js';
-    echo '</script>'; 
-}
 if ($this->uri->segment(1) == 'form') 
 { 
     require 'templates/common/js.php';
@@ -161,7 +87,7 @@ if ($this->uri->segment(1) == 'form')
                                 <div class="modal-body text-center">
                                         <div class="row">
                                                 <div class="col-md-12">
-                                                    <img src="/templates/common/img/popup.jpg">                                             
+                                                    <img src="/templates/common/img/popup.jpg">
                                                     <h2>'.$popup_text.'</h2>
                                                     <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
                                                 </div>
@@ -182,7 +108,7 @@ if ($this->uri->segment(1) == 'form')
 <!-- всплывающее окно -->
 <?php 
  if ($this->uri->segment(1) == '') {?>
-    <script>
+    <script async>
     function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -329,7 +255,7 @@ $(document).ready(function () {
         $('#amount').val(slider3.result.from_value);
         $('#form_slrd').val(slider3.result.from);
 
-    }, 5);
+    }, 50);
 });
 </script>
 <?php
