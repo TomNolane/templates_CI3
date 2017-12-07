@@ -13002,3 +13002,7 @@ main.ex-offerta .ex-adds {
   margin-top: 0px !important;
   visibility: hidden;
 }
+
+input#i , input#o, input#f {
+  text-transform: capitalize !important;
+} 
