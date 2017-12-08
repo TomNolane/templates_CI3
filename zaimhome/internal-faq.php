@@ -173,6 +173,9 @@
         <footer class="text-center">
             <h3>Не нашли ответ на свой вопрос?</h3>
             <a href="" data-toggle="modal" data-target="#helpModal"><p>Задайте свой вопрос через FAQ на нашем сервисе и наш специалист свяжется с вами</p></a>
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <a href="/form"><button class="ex-main-btn">получить займ</button></a>
+            </div>
         </footer>
     </div>
 </div>

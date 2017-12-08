@@ -227,7 +227,7 @@
 </fieldset>
 
 <div class="form-group">
-    <div class="col-md-6 col-md-offset-4 text-right">
+    <div class="col-md-12 text-center">
         <input type="button" class="ex-main-btn" value="Далее" id="next2">
     </div>
 </div>
