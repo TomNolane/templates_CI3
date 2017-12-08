@@ -1,6 +1,6 @@
 <div class="row" style="margin-bottom: 20px;">
     <div class="col-md-4 text-right">
-        <h3>Срок займа</h3>
+    <label class="control-label label-spec">Срок займа</label>
         <p class="ex-time">61-100 дней</p>
     </div>
     <div id="ex-main-slider-range" class="col-md-6">
@@ -67,7 +67,7 @@
     <label class="control-label col-md-4" for="email">Почта</label>
     <div class="col-md-6">
         <div class="ex-wrapper">
-             <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Пожалуйста, введите свой email адрес" placeholder="Email" title="Email" data-validation="email" required>
+             <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Пожалуйста, введите свой email адрес" placeholder="Email" title="Email" data-validation="email" data-validation-error-msg="Пожалуйста, введите email" required>
             <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <div></div>
         </div>
@@ -100,7 +100,7 @@
 </div>
 </div>
 <div class="form-group">
-    <div class="col-md-6 col-md-offset-4 text-right" id="my_btn">
+    <div class="col-md-12 col-xs-12 text-center" id="my_btn"> 
         <input type="button" class="ex-main-btn" value="Далее" id="next1"> 
     </div>
 </div> 

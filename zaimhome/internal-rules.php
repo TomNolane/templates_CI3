@@ -94,6 +94,9 @@
             и шансы в дальнейшем получить кредит на более выгодных условиях.</p>
         <p>Лицензии организаций-партнеров: №651303552003006, №651303045003951, №2110177000478</p>
     </div>
+    <div class="col-md-8 col-md-offset-2 text-center">
+        <a href="/form"><button class="ex-main-btn spec-btn">получить займ</button></a>
+    </div>
 </div>
 <?php require 'footer.php';?>
 

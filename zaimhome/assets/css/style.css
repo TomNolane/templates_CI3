@@ -8,7 +8,7 @@ body{background-color:#f9fafc !important;font-family:"Lato", sans-serif !importa
 .ex-pd-and-h1-mb h1{font-weight:700;margin-bottom:55px;}
 @media (max-width:600px){.ex-pd-and-h1-mb h1{font-size:28px;}
 }
-.ex-main-btn{width:100%;text-transform:uppercase;margin-top:40px;padding-top:15px;padding-bottom:15px;font-weight:700;color:#ffffff;background-color:#358ed7;outline:none;border:none;-moz-border-radius:3px;-webkit-border-radius:3px;-ms-border-radius:3px;border-radius:3px;}
+.ex-main-btn{width:100%;text-transform:uppercase;margin-top:40px;padding-top:15px;padding-bottom:15px;font-weight:700;color:#ffffff;background-color:#358ed7;outline:none;border:none;-moz-border-radius:3px;-webkit-border-radius:3px;-ms-border-radius:3px;border-radius:10px;}
 .ex-agreement-check label{display:block;position:relative;cursor:pointer;font-weight:700;}
 .ex-agreement-check label:hover input ~ i{background:#ccc;}
 .ex-agreement-check label:focus input ~ i{background:#ccc;}
@@ -1364,7 +1364,7 @@ select[multiple].input-lg{height:auto;}
 .has-success.checkbox label,
 .has-success.radio-inline label,
 .has-success.checkbox-inline label{color:#3c763d;}
-.has-success .form-control{border-color:#3c763d;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);}
+.has-success .form-control{border-color:#3c763d !important;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);}
 .has-success .form-control:focus{border-color:#2b542c;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;}
 .has-success .input-group-addon{color:#3c763d;background-color:#dff0d8;border-color:#3c763d;}
 .has-success .form-control-feedback{color:#3c763d;}
@@ -1425,7 +1425,7 @@ select[multiple].input-lg{height:auto;}
 .form-horizontal .form-group{margin-right:-15px;margin-left:-15px;}
 @media (min-width:768px){.form-horizontal .control-label{padding-top:7px;margin-bottom:0;text-align:right;}
 }
-.form-horizontal .has-feedback .form-control-feedback{right:15px;}
+.form-horizontal .has-feedback .form-control-feedback{right:15px;top:8px;}
 @media (min-width:768px){.form-horizontal .form-group-lg .control-label{padding-top:11px;font-size:18px;}
 }
 @media (min-width:768px){.form-horizontal .form-group-sm .control-label{padding-top:6px;font-size:12px;}
@@ -3185,7 +3185,18 @@ td.visible-print{display:table-cell !important;}
 .ex-form form .form-group{margin-bottom:20px;}
 .ex-form form .form-group label{padding-top:15px;color:#858585;font-weight:700;letter-spacing:0.76px;}
 .ex-form form .form-group .ex-wrapper{position:relative;}
-.ex-form form .form-group .ex-wrapper input{letter-spacing:0.81px;font-weight:700;height:50px;}
+.ex-form form .form-group .ex-wrapper input{height: 60px;
+  color: #262626;
+  font-size: 16px;
+  font-weight: 400;
+  box-shadow: none;
+  border: 1px solid #c8cfce;
+  background-color: #ffffff;
+  padding: 6px 28px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -ms-border-radius: 100px;
+  border-radius: 100px;}
 .ex-form .error form .form-group .ex-wrapper input::-webkit-input-placeholder{font-weight:400;}
 .ex-form .error form .form-group .ex-wrapper input:-moz-placeholder{font-weight:400;}
 .ex-form .error form .form-group .ex-wrapper input::-moz-placeholder{font-weight:400;}
@@ -3241,3 +3252,49 @@ td.visible-print{display:table-cell !important;}
   input#i , input#o, input#f, input#feedback-name {
     text-transform: capitalize !important;
   } 
+
+
+  @media (min-width:600px){
+    #next1, #next2{
+      width: 49% !important;
+      margin-top: 25px !important;
+      margin-left: 170px !important;
+      border-radius: 20px !important;
+      float: none !important;
+    }
+    .label-spec {
+      padding-top: 38px !important;
+    }
+}
+@media (max-width:600px){
+  #next1, #next2{
+    width: 100% !important;
+    margin-top: 25px !important;
+    margin-left: 0px !important;
+    border-radius: 20px !important;
+    float: none !important;
+  }
+  .ex-form .ex-indicator-scope {
+    margin-bottom: 10px;
+  }
+  .ex-form h1 {
+    margin-bottom: 15px;
+  }
+  .ex-form {
+    padding-top: 15px;
+  }
+}
+  
+  .label-spec {
+    color: #858585; 
+  }
+  .spec-btn {
+    width: 50%;
+  }
+  .label_er {
+    color: #b94a48 !important;
+  }
+  
+  .label_true {
+    color: #3c763d !important;
+  }
