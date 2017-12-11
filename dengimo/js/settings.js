@@ -195,7 +195,7 @@ $(document).ready(function () {
                     ],
                     dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
                     firstDay: 1,
-                    yearRange: "-60:-19",
+                    yearRange: "-72:-19",
                     defaultDate: "01/01/1998",
                     isRTL: false,
                     onSelect: function (date) {
