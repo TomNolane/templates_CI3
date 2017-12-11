@@ -2,11 +2,11 @@
     <label class="control-label col-md-4 label-required" for="work">Вид трудоустройства</label>
     <div class="col-md-6">
     <select class="form-control ec" id="work" name="work" required>
-        <option value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
+        <option value="ШТАТНЫЙ СОТРУДНИК" selected>Штатный сотрудник</option>
         <option value="ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ">Индивидуальный предприниматель</option>
         <option value="СТУДЕНТ">Студент</option>
         <option value="ПЕНСИОНЕР">Пенсионер</option>
-        <option value="БЕЗРАБОТНЫЙ">Безработный</option>
+        <option value="БЕЗРАБОТНЫЙ">Безработный</option> 
     </select>
     </div>
 </div>
@@ -118,6 +118,6 @@
 </div>
 <div class="form-group">
     <div class="col-md-6 col-md-offset-4">
-        <button type="submit" class="ex-main-btn" id="getmoney" style="width: 100%;text-transform: uppercase;">получить займ</button>
+        <button type="submit" class="ex-main-btn"  style="width: 100%;text-transform: uppercase;">получить займ</button>
     </div>
 </div> 

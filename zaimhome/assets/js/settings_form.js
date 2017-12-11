@@ -46,7 +46,7 @@ function validate1() {
         error('Вы не указали срок займа.');
         return false;
     } else if ($('input[name="f"]').val().length < 2 || !re_name.test($('input[name="f"]').val())) {
-        error('Необходимо указать фамилию.');
+        error('Необходимо указать фамилию.'); 
         return false;
     } else if ($('input[name="i"]').val().length < 2 || !re_name.test($('input[name="i"]').val())) {
         error('Необходимо указать имя.');
@@ -57,17 +57,20 @@ function validate1() {
     } else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
         error('Вы не указали пол.');
         return false;
+    }else if ($('#birthdate').val().length < 2) {
+        error('Укажите дату рождения.');
+        return false;
     } else if ($('input[name="phone"]').val().length != 16) {
         error('Номер телефона указан неверно.');
         return false;
-    } else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {
+    }  else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {
         error('Email указан неверно.');
         return false;
     } else if (!$('#agree').prop('checked')) {
         error('Вы не подтвердили своё согласие с условиями сервиса.');
         return false;
-    } else return true;
-    return false;
+    } else return true; 
+    return false; 
 }
 
 function validate2() {
@@ -313,13 +316,7 @@ $(document).ready(function () {
                 if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
                 {
                     $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
-                }
-               
-
-                if($(this)[0].name == 'birthdate' || $(this)[0].name == 'passportdate' || $(this)[0].name == 'passport_code' || $(this)[0].name == 'passport' || $(this)[0].name == 'passport_who' || $(this)[0].name == 'birthplace' || $(this)[0].name == 'city' || $(this)[0].name == 'street' || $(this)[0].name == 'building' || $(this)[0].name == 'work_experience' || $(this)[0].name == 'work_occupation' || $(this)[0].name == 'work_phone' || $(this)[0].name == 'work_salary' || $(this)[0].name == 'work_city' || $(this)[0].name == 'work_street' || $(this)[0].name == 'work_house')
-                {
-                    // $(this).css('margin-bottom','20px');
-                } 
+                }  
             } 
     });
     $('#phone').blur(function () {
