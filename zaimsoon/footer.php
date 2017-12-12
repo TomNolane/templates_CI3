@@ -8,11 +8,11 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     <div class="container">
         <div class="row">
             <div class="col-md-2 ex-foot-logo">
-                <a href="/"><img src="assets/img/logo-footer.png" alt="logo-footer.png"></a>
+                <a href="/"><img src="/templates/zaimsoon/assets/img/logo-footer.png" alt="logo-footer.png"></a>
             </div>
             <div class="col-md-10">
                 <p class="spec_footer7">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г.
-                    Санкт-Петербург, ул. Осипенко, 12, оф 201| <a href="mailto:support@zaimsoon.ru" target="_blank">support@zaimsoon.ru</a> | +7(495) 006 19 61 <span class="hidden-xs hidden-sm">Займы
+                    Санкт-Петербург, ул. Осипенко, 12, оф 201| <a href="mailto:support@zaimsoon.ru" class="special_footer99" target="_blank">support@zaimsoon.ru</a> | +7(495) 006 19 61 <span class="hidden-xs hidden-sm">Займы
                     предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
                     Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета
                     общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
@@ -387,6 +387,9 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 });</script>
 <?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
 { 
+    echo '<script>';
+    //require 'templates/zaimsoon/assets/js/owl.carousel.min.js';
+    echo '</script>';
     echo '<script> 
     var offers = '.json_encode($data).'
     var by_reg = null;

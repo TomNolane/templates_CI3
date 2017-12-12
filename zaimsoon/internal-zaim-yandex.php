@@ -26,7 +26,7 @@
                 15-20 минут.<br><br></p>
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
-                    <button class="ex-main-btn">Получить деньги</button>
+                    <a href="/form"><button class="ex-main-btn">Получить деньги</button></a>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
                 менеджер, и вы получите долгожданный микрозайм.</p>
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
-                    <button class="ex-main-btn">Получить деньги</button>
+                    <a href="/form"><button class="ex-main-btn">Получить деньги</button></a>
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@
             </p>
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
-                    <button class="ex-main-btn">Получить деньги</button>
+                    <a href="/form"><button class="ex-main-btn">Получить деньги</button></a>
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@
                 случаев.</p>
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
-                    <button class="ex-main-btn">Получить деньги</button>
+                    <a href="/form"><button class="ex-main-btn">Получить деньги</button></a>
                 </div>
             </div>
         </div>
@@ -112,7 +112,7 @@
                 можно отправляться в банк.</p>
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
-                    <button class="ex-main-btn">Получить деньги</button>
+                    <a href="/form"><button class="ex-main-btn">Получить деньги</button></a>
                 </div>
             </div>
         </div>
