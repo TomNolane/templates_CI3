@@ -101,7 +101,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-8 col-md-offset-4 text-right">
-                    <a id="next1"><span id="submitOne" class="ex-main-btn  " >Далее</span></a>
+                    <a id="next1"><span id="submitOne" class="ex-main-btn" >Далее</span></a>
                     </div>
                 </div>
             </div>
