@@ -27,21 +27,16 @@
         <h2 class="text-center">Вам автоматически одобрен займ<br>
             в следующих организациях:</h2>
         <div class="row">
-            <?php
+            <?php 
                 foreach($data as $item)
                 {
-                    $temp = rand(3, 5);
                     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
                     $item['link'] = str_replace("#site", $domen, $item['link']);
-
                     echo '<div class="col-md-3">
-                    <figure class="text-center">'for()'
-                        <span class="fa fa-star ex-checked-stars"></span>
-                        <span class="fa fa-star ex-checked-stars"></span>
-                        <span class="fa fa-star ex-checked-stars"></span>
-                        <span class="fa fa-star ex-checked-stars"></span>
-                        <span class="fa fa-star ex-checked-stars"></span>
-                        <div class="ex-wrapper"><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
+                    <figure class="text-center">';
+                    for($i = 0; $i < rand(2, 4); $i++)
+                    echo '<span class="fa fa-star ex-checked-stars"></span>';
+                    echo '<div class="ex-wrapper"><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
                         <img class="lk-img '.$item['img'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
                     </a></div>
                         <p>'.number_format($item['amount'],0,'',' ').'<i></i></p>
