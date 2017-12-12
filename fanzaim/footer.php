@@ -44,7 +44,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     require 'templates/fanzaim/assets/js/custom.js';
     echo '</script>'; 
     echo '<script>';
-    require 'templates/fanzaim/assets/js/settings_main.js';
+    require 'templates/fanzaim/assets/js/settings_main.js'; 
     echo '</script>'; 
     echo '<script>';
     require 'templates/fanzaim/assets/js/owl.carousel.min.js';
