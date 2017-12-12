@@ -3,7 +3,15 @@
 //-----------------------Initializing--------------------------
 $(document).ready(function () {
     //-----------------------Declaration of variables--------------------------
-    var currentLoanSize = 20000,
+    var c = getParameterByName('amount'); 
+    var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());
+    if (c != null) {
+        if (c > 100000 || c < 1000) {
+            c = 20000;
+        }
+        gg = c;
+    } 
+    var currentLoanSize = gg;
         range = $("#rangeSlider"),
         commissionPercantage = 13,
         rangeUpperValue =  $('.ex-slider-val'),
@@ -39,19 +47,19 @@ $(document).ready(function () {
         },
         setDynamicTimePeriod = function () {
             if(currentLoanSize < 20000){
-                time = 'от 100 дня';
+                time = 'от 100 дней';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize < 11000){
                 time = 'от 61 дня';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize >= 20000 && currentLoanSize < 30000){
-                time = 'от 13 дня';
+                time = 'от 130 дней';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize > 30000 && currentLoanSize < 50000){
-                time = 'от 200 дня';
+                time = 'от 200 дней';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize > 50000){
-                time = 'от 250 дня';
+                time = 'от 250 дней';
                 timeTable.html("<span>"+time+"</span>");
             }
         },

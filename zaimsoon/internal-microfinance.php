@@ -23,7 +23,7 @@
             тысячи граждан.<br><br></p>
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
-                <button class="ex-main-btn">Получить деньги</button>
+                <a href="/form"><button class="ex-main-btn">Получить деньги</button></a>
             </div>
         </div>
     </div>

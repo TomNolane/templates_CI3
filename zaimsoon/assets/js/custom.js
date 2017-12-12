@@ -89,14 +89,7 @@ $(document).ready(function () {
         }
     });
     //---------End collapse functionality-----------
-    equalheight('#ex-equal-blocks article');
-
-    $('#submitOne').on('click', function () {
-        $('.ex-step-counter').addClass('ex-on-second-step');
-    });
-    $('#submitTwo').on('click', function () {
-        $('.ex-step-counter').removeClass('ex-on-second-step').addClass('ex-on-last-step');
-    });
+    equalheight('#ex-equal-blocks article'); 
 });
 $(window).on('resize', function () {
     equalheight('#ex-equal-blocks article');

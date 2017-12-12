@@ -118,10 +118,7 @@ if(!isset($description))
          width:5px;
          height:9px;
          background:url(/templates/zaimsoon/assets/img/tip-twitter_arrows.gif) no-repeat -27px 0;
-     }
-     body {
-         padding: 0 !important;
-     }
+     } 
      '; 
      echo '</style>'; 
      if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') 
@@ -164,7 +161,7 @@ if(!isset($description))
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/" class="navbar-brand">
-                    <img src="assets/img/logo.png" alt="Image missing">
+                    <img src="/templates/zaimsoon/assets/img/logo.png" alt="Image missing">
                 </a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse">
