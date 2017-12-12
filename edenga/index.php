@@ -77,9 +77,9 @@
                                 </div>
                             </button>
                             <button type="button" class="btn current-button">
-                                <span class="current-button-title">Вероятность
-                                    <br/>одобрения</span>
-                                <span class="current-button-main percent_rate">96%</span>
+                                <span class="current-button-title">Процентная
+                                    <br/>ставка</span>
+                                <span class="current-button-main percent_rate2">96%</span>
                                 <br/>
                                 <div class="current-button-main-title">
                                     <span class="comment">Автоматическое одобрение</span>
@@ -120,8 +120,8 @@
                                         <span class="current-button-main sum">17250</span>
                                     </button>
                                     <button type="button" class="btn current-button">
-                                        <span class="current-button-title">Вероятность
-                                            <br/>одобрения</span>
+                                        <span class="current-button-title">Процентная
+                                            <br/>ставка</span>
                                         <span class="current-button-main percent_rate">96%</span>
                                     </button>
                                 </div>

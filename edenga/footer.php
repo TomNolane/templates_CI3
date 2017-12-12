@@ -355,7 +355,7 @@ $(document).ready(function(){
             $('#amount').val(range.from_value);
             $('#form_slrd').val(range.from);        
 			$('.current_amount').text(String(range.from_value).split(/(?=(?:\d{3})+$)/).join(' '));
-			$('.percent_rate').text(perc + '%');
+			// $('.percent_rate').text(perc + '%');
                         $('.comment').text(attr);
                         $('.current_period').text(day_comment);
 			//$('#credit_hint').html(attr);
@@ -561,6 +561,7 @@ $(document).ready(function(){
         $('.current-button-main.comm').text(comm);
         $('.current-button-main.sum').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
         $('.current-button-main.percent_rate').text(percent+'%');
+        $('.current-button-main.percent_rate2').text(percent+'%');
         <?php } ?>
     };
     $('.amount2').ionRangeSlider({
