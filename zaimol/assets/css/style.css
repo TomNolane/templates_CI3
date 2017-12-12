@@ -13852,3 +13852,9 @@ section.ex-spasibo .ex-hidden-div {
   height: 100%;
   object-fit: contain;
 }
+.ex-main-btn {
+  text-decoration: none !important;
+}
+a {
+  text-decoration: none !important;
+}

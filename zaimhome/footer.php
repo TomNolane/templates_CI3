@@ -138,11 +138,7 @@ if ($this->uri->segment(1) == 'form')
             $("#work_office").parent().addClass("has-success").removeClass("has-error");
             $("#work_office").parent().parent().prev().removeClass("label_er").addClass("label_true");
             $("#work_office").removeClass("er");
-            $("#"+$("#work_office").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
-
-            function getRandomInRange(min, max) {
-                return Math.floor(Math.random() * (max - min + 1)) + min;
-              } 
+            $("#"+$("#work_office").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
 
             $("#work_name").prop("disabled", true);
             if($(this).val().toLowerCase() == "пенсионер")
@@ -157,14 +153,14 @@ if ($this->uri->segment(1) == 'form')
             $("#work_phone").prop("disabled", true);
             $("#work_phone").val($("#phone").val());
 
-            $("#work_experience").prop("disabled", true);
-            $("#work_experience").val(10);
+            $("#work_experience").prop("disabled", false);
+            $("#work_experience").val(100);
 
-            $("#work_salary").prop("disabled", true);
-            $("#work_salary").val(getRandomInRange(10, 20)*1000);
+            $("#work_salary").prop("disabled", false);
+            $("#work_salary").val("");
 
             $(\'#work_region option\').eq($("#region").find(":selected").index()).prop(\'selected\', true);
-            $("#work_region").prop("disabled", true); 
+            $("#work_region").prop("disabled", false); 
 
             $("#work_city").prop("disabled", true);
             $("#work_city").val($("#city").val());
@@ -179,78 +175,68 @@ if ($this->uri->segment(1) == 'form')
             $("#work_building").val(" ");
 
             $("#work_office").prop("disabled", true);
-            $("#work_office").val(" ");
+            $("#work_office").val($("#flat").val());
         }
         else { 
 
             $("#work_name").val("");
             $("#work_name").removeClass("valid");
-            $("#work_name").parent().addClass("has-error").removeClass("has-success");
-            $("#work_name").parent().parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_name").addClass("er").addClass("error");
-            $("#"+$("#work_name").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove");
+            $("#work_name").parent().removeClass("has-success");
+            $("#work_name").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_name").id+"status").removeClass("glyphicon-ok");
 
             $("#work_occupation").val("");
             $("#work_occupation").removeClass("valid");
-            $("#work_occupation").parent().addClass("has-error").removeClass("has-success");
-            $("#work_occupation").parent().parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_occupation").addClass("er").addClass("error");
-            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove"); 
+            $("#work_occupation").parent().removeClass("has-success");
+            $("#work_occupation").parent().parent().prev().removeClass("label_true"); 
+            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-ok"); 
 
             $("#work_phone").val("");
             $("#work_phone").removeClass("valid");
-            $("#work_phone").parent().addClass("has-error").removeClass("has-success");
-            $("#work_phone").parent().parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_phone").addClass("er").addClass("error");
-            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove");
+            $("#work_phone").parent().removeClass("has-success");
+            $("#work_phone").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-ok");
 
             $("#work_experience").val("");
             $("#work_experience").removeClass("valid");
-            $("#work_experience").parent().addClass("has-error").removeClass("has-success");
-            $("#work_experience").parent().parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_experience").addClass("er").addClass("error");
-            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove");
+            $("#work_experience").parent().removeClass("has-success");
+            $("#work_experience").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-ok");
 
             $("#work_salary").val("");
             $("#work_salary").removeClass("valid");
-            $("#work_salary").parent().addClass("has-error").removeClass("has-success");
-            $("#work_salary").parent().parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_salary").addClass("er").addClass("error");
-            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove");
+            $("#work_salary").parent().removeClass("has-success");
+            $("#work_salary").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-ok");
  
             $("#work_region").removeClass("valid");
-            $("#work_region").parent().addClass("has-error").removeClass("has-success");
-            $("#work_region").parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_region").addClass("er").addClass("error");
-            $("#"+$("#work_region").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove");
+            $("#work_region").parent().removeClass("has-success");
+            $("#work_region").parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_region").id+"status").removeClass("glyphicon-ok");
 
             $("#work_city").val("");
             $("#work_city").removeClass("valid");
-            $("#work_city").parent().addClass("has-error").removeClass("has-success");
-            $("#work_city").parent().parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_city").addClass("er").addClass("error");
-            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove"); 
+            $("#work_city").parent().removeClass("has-success");
+            $("#work_city").parent().parent().prev().removeClass("label_true"); 
+            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-ok"); 
 
             $("#work_street").val("");
             $("#work_street").removeClass("valid");
-            $("#work_street").parent().addClass("has-error").removeClass("has-success");
-            $("#work_street").parent().parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_street").addClass("er").addClass("error");
-            $("#"+$("#work_street").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove"); 
+            $("#work_street").parent().removeClass("has-success");
+            $("#work_street").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_street").id+"status").removeClass("glyphicon-ok"); 
 
             $("#work_house").val("");
             $("#work_house").removeClass("valid");
-            $("#work_house").parent().addClass("has-error").removeClass("has-success");
-            $("#work_house").parent().parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_house").addClass("er").addClass("error");
-            $("#"+$("#work_house").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove");
+            $("#work_house").parent().removeClass("has-success");
+            $("#work_house").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_house").id+"status").removeClass("glyphicon-ok");
 
             $("#work_office").val("");
             $("#work_office").removeClass("valid");
-            $("#work_office").parent().addClass("has-error").removeClass("has-success");
-            $("#work_office").parent().parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_office").addClass("er").addClass("error");
-            $("#"+$("#work_office").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove");
+            $("#work_office").parent().removeClass("has-success");
+            $("#work_office").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_office").id+"status").removeClass("glyphicon-ok");
 
             $("#work_name").prop("disabled", false);
             $("#work_name").val(""); 

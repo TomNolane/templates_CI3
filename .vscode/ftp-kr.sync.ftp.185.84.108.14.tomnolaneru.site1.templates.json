@@ -90,37 +90,7 @@
             "type": "d",
             "name": "zaimhome",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "footer.php",
-                    "size": 28562
-                },
-                {
-                    "type": "d",
-                    "name": "assets",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "d",
-                            "name": "css",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "style.css",
-                                    "size": 189037
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "style.min.css",
-                                    "size": 157689
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
