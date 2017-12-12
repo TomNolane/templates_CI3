@@ -90,7 +90,18 @@
             "type": "d",
             "name": "zaimhome",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "form.php",
+                    "size": 6252
+                },
+                {
+                    "type": "-",
+                    "name": "form2.php",
+                    "size": 13898
+                }
+            ]
         },
         {
             "type": "d",

@@ -9,27 +9,26 @@
     }
 ?>
 
-<footer class="ex-main-footer">
-    <div class="container" style="width: 100%">
-        <div class="col-sm-3 text-center">
-            <div class="ex-footer-logo">
-                <a href="/"><img src="/templates/zaimhome/assets/img/header-logo.png" alt="Missing image" class="special_foot22"></a>
+    <footer class="ex-main-footer">
+        <div class="container" style="width: 100%">
+            <div class="col-sm-3 text-center">
+                <div class="ex-footer-logo">
+                    <a href="/"><img src="/templates/zaimhome/assets/img/header-logo.png" alt="Missing image" class="special_foot22"></a>
+                </div>
+                <p class="special_footer3 ">Сервис выгодного онлайн займа</p>
             </div>
-            <p class="special_footer3 ">Сервис выгодного онлайн займа</p>
+            <div class="col-sm-3 small spec_footer4 ">
+                <p>Сервис по подбору выгодных онлайн займов
+                    <br>находящийся по адресу
+                    <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
+                    <br><a href="mailto:support@zaimhome.ru" target="_blank">support@zaimhome.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
+            </div>
+            <div class="col-sm-6 hidden-xs hidden-sm spec_footer5">
+                <p style="font-size: 85%;">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499</p>
+            </div>
         </div>
-        <div class="col-sm-3 small spec_footer4 ">
-            <p>Сервис по подбору выгодных онлайн займов
-            <br>находящийся по адресу
-            <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
-            <br><a href="mailto:support@zaimhome.ru" target="_blank">support@zaimhome.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>    
-        </div>
-        <div class="col-sm-6 hidden-xs hidden-sm spec_footer5" >
-            <p style="font-size: 85%;">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499</p>
-        </div> 
-    </div>
-</footer>
-
-<?php 
+    </footer>
+    <?php 
 echo '<script>';
 require 'modules/jquery/jquery-1.11.3.min.js';
 echo '</script>';
@@ -67,13 +66,13 @@ echo '<script>';
 require 'templates/zaimhome/assets/js/modal.js';
 echo '</script>';
 echo '<script>';
-require 'templates/zaimhome/assets/js/settings_form.min.js';
+require 'templates/zaimhome/assets/js/settings_form.js';
 echo '</script>';
-?>  
-<!--[if lt IE 10]>
+?>
+    <!--[if lt IE 10]>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif]-->
-<?php
+    <?php
 if ($this->uri->segment(1) == 'form') 
 { 
     echo ' <script>
@@ -159,7 +158,7 @@ if ($this->uri->segment(1) == 'form')
             $("#work_salary").prop("disabled", false);
             $("#work_salary").val("");
 
-            $(\'#work_region option\').eq($("#region").find(":selected").index()).prop(\'selected\', true);
+            $("#work_region option").eq($("#region").find(":selected").index()).prop("selected", true);
             $("#work_region").prop("disabled", false); 
 
             $("#work_city").prop("disabled", true);
@@ -253,7 +252,7 @@ if ($this->uri->segment(1) == 'form')
             $("#work_salary").prop("disabled", false);
             $("#work_salary").val("");
 
-            $(\'#work_region option\').eq(0, true).prop(\'selected\', true);
+            $("#work_region option").eq(0, true).prop("selected\", true);
             $("#work_region").prop("disabled", false); 
 
             $("#work_city").prop("disabled", false);
@@ -305,54 +304,55 @@ if ($this->uri->segment(1) == 'form')
     }
 }
 ?>
-<!-- всплывающее окно -->
-<?php 
+        <!-- всплывающее окно -->
+        <?php 
  if ($this->uri->segment(1) == '') {?>
-    <script async>
-    function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-    function goToForm() {
-    var tt = $('#ex-slider-val').text();
-    tt = tt.split(" ").join("");
-    setcookie('sldr', tt, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
-    var slider = $("#rangeSlider").data("ionRangeSlider");
-    var from2 = slider.result.from;
-    $('#from_slrd').val(from2);
-    setcookie('sldr2', from2, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
-    var days = $('#period').val();
-    if (days === '') days = 21;
-    setcookie('per', days, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
-    var days2 = $('#period2').val();
-    setcookie('per2', days2, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
-    $('#anketa').submit();
-};
+        <script>
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
 
-function goToLk() {
-    window.location.href = window.location.origin + '/lk';
-};
+            function goToForm() {
+                var tt = $('#ex-slider-val').text();
+                tt = tt.split(" ").join("");
+                setcookie('sldr', tt, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
+                var slider = $("#rangeSlider").data("ionRangeSlider");
+                var from2 = slider.result.from;
+                $('#from_slrd').val(from2);
+                setcookie('sldr2', from2, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
+                var days = $('#period').val();
+                if (days === '') days = 21;
+                setcookie('per', days, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
+                var days2 = $('#period2').val();
+                setcookie('per2', days2, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
+                $('#anketa').submit();
+            };
 
-function goToUp() {
-    $('html, body').animate({
-        scrollTop: $('.ex-range-scope').offset().top
-    }, 1000);
-}
+            function goToLk() {
+                window.location.href = window.location.origin + '/lk';
+            };
 
-function goToReceiveMoney() {
-    window.location.href = window.location.origin + '/money';
-}
-$("#rangeSlider").ionRangeSlider({
-    hide_min_max: true,
-    hide_from_to: true,
-    keyboard: true,
-    grid: false,
-    from: <?php 
+            function goToUp() {
+                $('html, body').animate({
+                    scrollTop: $('.ex-range-scope').offset().top
+                }, 1000);
+            }
+
+            function goToReceiveMoney() {
+                window.location.href = window.location.origin + '/money';
+            }
+            $("#rangeSlider").ionRangeSlider({
+                hide_min_max: true,
+                hide_from_to: true,
+                keyboard: true,
+                grid: false,
+                from: <?php 
 
         if(isset($_GET['amount'])) 
         {  
@@ -385,105 +385,106 @@ $("#rangeSlider").ionRangeSlider({
         }
         elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
         ?>,
-    values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
-    onChange: function (range) {
-        if (range.from_value <= 10000) {
-            $('#period').val('7');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 15000) {
-            $('#period').val('14');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 20000) {
-            $('#period').val('21');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 30000) {
-            $('#period').val('21');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 50000) {
-            $('#period').val('30');
-            $('#period2').val('От 130 до 250 дней');
-        } else {
-            $('#period').val('30');
-            $('#period2').val('От 250 до 365 дней');
-        }
-        $('#amount').val(range.from_value);
-        $('#form_slrd').val(range.from);
-    }
-});
-$(document).ready(function () {
-    var slider3 = $('#rangeSlider').data('ionRangeSlider'); 
-    var slider_plus = true;
-    var n = 10;
-    var slider_init = setInterval(function () {
-        if (slider_plus) {
-            n++;
-        } else {
-            n--;
-        }
-        
-        if (n == 21 && n != <?php echo $from;?>) {
-            slider_plus = false;
-        }else if (n == <?php echo $from;?> && slider_plus == false) {
-            clearInterval(slider_init);
-        }else if (n == 21 && n == <?php echo $from;?>) {
-            clearInterval(slider_init);
-        }
- 
-        slider3.update({
-            from: n
-        }); 
+                values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
+                onChange: function(range) {
+                    if (range.from_value <= 10000) {
+                        $('#period').val('7');
+                        $('#period2').val('От 61 до 130 дней');
+                    } else if (range.from_value <= 15000) {
+                        $('#period').val('14');
+                        $('#period2').val('От 61 до 130 дней');
+                    } else if (range.from_value <= 20000) {
+                        $('#period').val('21');
+                        $('#period2').val('От 61 до 130 дней');
+                    } else if (range.from_value <= 30000) {
+                        $('#period').val('21');
+                        $('#period2').val('От 61 до 130 дней');
+                    } else if (range.from_value <= 50000) {
+                        $('#period').val('30');
+                        $('#period2').val('От 130 до 250 дней');
+                    } else {
+                        $('#period').val('30');
+                        $('#period2').val('От 250 до 365 дней');
+                    }
+                    $('#amount').val(range.from_value);
+                    $('#form_slrd').val(range.from);
+                }
+            });
+            $(document).ready(function() {
+                var slider3 = $('#rangeSlider').data('ionRangeSlider');
+                var slider_plus = true;
+                var n = 10;
+                var slider_init = setInterval(function() {
+                    if (slider_plus) {
+                        n++;
+                    } else {
+                        n--;
+                    }
 
-        if (slider3.result.from_value <= 10000) {
-            $('#period').val('7');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (slider3.result.from_value <= 15000) {
-            $('#period').val('14');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (slider3.result.from_value <= 20000) {
-            $('#period').val('21');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (slider3.result.from_value <= 30000) {
-            $('#period').val('21');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (slider3.result.from_value <= 50000) {
-            $('#period').val('30');
-            $('#period2').val('От 130 до 250 дней');
-        } else {
-            $('#period').val('30');
-            $('#period2').val('От 250 до 365 дней');
-        }
-        $('#amount').val(slider3.result.from_value);
-        $('#form_slrd').val(slider3.result.from);
+                    if (n == 21 && n != <?php echo $from;?>) {
+                        slider_plus = false;
+                    } else if (n == <?php echo $from;?> && slider_plus == false) {
+                        clearInterval(slider_init);
+                    } else if (n == 21 && n == <?php echo $from;?>) {
+                        clearInterval(slider_init);
+                    }
 
-    }, 50);
-});
-</script>
-<?php
+                    slider3.update({
+                        from: n
+                    });
+
+                    if (slider3.result.from_value <= 10000) {
+                        $('#period').val('7');
+                        $('#period2').val('От 61 до 130 дней');
+                    } else if (slider3.result.from_value <= 15000) {
+                        $('#period').val('14');
+                        $('#period2').val('От 61 до 130 дней');
+                    } else if (slider3.result.from_value <= 20000) {
+                        $('#period').val('21');
+                        $('#period2').val('От 61 до 130 дней');
+                    } else if (slider3.result.from_value <= 30000) {
+                        $('#period').val('21');
+                        $('#period2').val('От 61 до 130 дней');
+                    } else if (slider3.result.from_value <= 50000) {
+                        $('#period').val('30');
+                        $('#period2').val('От 130 до 250 дней');
+                    } else {
+                        $('#period').val('30');
+                        $('#period2').val('От 250 до 365 дней');
+                    }
+                    $('#amount').val(slider3.result.from_value);
+                    $('#form_slrd').val(slider3.result.from);
+
+                }, 50);
+            });
+
+        </script>
+        <?php
         echo '<script>';
         require 'templates/zaimhome/assets/js/loanCalculator.min.js';
         echo '</script>';
     ?>
-<?php }  elseif($this->uri->segment(1) == 'form') { ?>
-<script> 
-    function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-    } 
-    
-</script>
-<script>
-        $(document).ready(function () {
-			$("#rangeSlider").ionRangeSlider({
-			hide_min_max: true,
-			hide_from_to: true,
-			keyboard: true,
-			grid: false,
-			from: <?php 
+            <?php }  elseif($this->uri->segment(1) == 'form') { ?>
+            <script>
+                function getParameterByName(name, url) {
+                    if (!url) url = window.location.href;
+                    name = name.replace(/[\[\]]/g, "\\$&");
+                    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                        results = regex.exec(url);
+                    if (!results) return null;
+                    if (!results[2]) return '';
+                    return decodeURIComponent(results[2].replace(/\+/g, " "));
+                }
+
+            </script>
+            <script>
+                $(document).ready(function() {
+                    $("#rangeSlider").ionRangeSlider({
+                        hide_min_max: true,
+                        hide_from_to: true,
+                        keyboard: true,
+                        grid: false,
+                        from: <?php 
 
         if(isset($_GET['amount'])) 
         {  
@@ -515,57 +516,58 @@ $(document).ready(function () {
             echo $from; 
         }
         elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
-        ?>, 
-			values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000,
-				13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000
-			], 
-			onChange: function (range) {
-				$('#amount').val(range.from_value);
-				if (range.from_value <= 10000) {
-					$('#period').val('7');
-					$('#period2').val('От 61 до 130 дней');
-				} else if (range.from_value <= 15000) {
-					$('#period').val('14');
-					$('#period2').val('От 61 до 130 дней');
-				} else if (range.from_value <= 20000) {
-					$('#period').val('21');
-					$('#period2').val('От 61 до 130 дней');
-				} else if (range.from_value <= 30000) {
-					$('#period').val('21');
-					$('#period2').val('От 61 до 130 дней');
-				} else if (range.from_value <= 50000) {
-					$('#period').val('30');
-					$('#period2').val('От 130 до 250 дней');
-				} else {
-					$('#period').val('30');
-					$('#period2').val('От 250 до 365 дней');
-				}
-			}
-        });
+        ?>,
+                        values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000,
+                            13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000
+                        ],
+                        onChange: function(range) {
+                            $('#amount').val(range.from_value);
+                            if (range.from_value <= 10000) {
+                                $('#period').val('7');
+                                $('#period2').val('От 61 до 130 дней');
+                            } else if (range.from_value <= 15000) {
+                                $('#period').val('14');
+                                $('#period2').val('От 61 до 130 дней');
+                            } else if (range.from_value <= 20000) {
+                                $('#period').val('21');
+                                $('#period2').val('От 61 до 130 дней');
+                            } else if (range.from_value <= 30000) {
+                                $('#period').val('21');
+                                $('#period2').val('От 61 до 130 дней');
+                            } else if (range.from_value <= 50000) {
+                                $('#period').val('30');
+                                $('#period2').val('От 130 до 250 дней');
+                            } else {
+                                $('#period').val('30');
+                                $('#period2').val('От 250 до 365 дней');
+                            }
+                        }
+                    });
 
-        var slider4 = $('#rangeSlider').data('ionRangeSlider'); 
+                    var slider4 = $('#rangeSlider').data('ionRangeSlider');
 
-        if (slider4.result.from_value <= 10000) {
-            $('.ex-time').text('От 61 до 130 дней'); 
-        } else if (slider4.result.from_value <= 15000) {
-            $('.ex-time').text('От 61 до 130 дней'); 
-        } else if (slider4.result.from_value <= 20000) {
-            $('.ex-time').text('От 61 до 130 дней'); 
-        } else if (slider4.result.from_value <= 30000) {
-            $('.ex-time').text('От 61 до 130 дней'); 
-        } else if (slider4.result.from_value <= 50000) {
-            $('.ex-time').text('От 130 до 250 дней'); 
-        } else {
-            $('.ex-time').text('От 250 до 365 дней'); 
-        } 
-    });
-    </script>
-    <?php
+                    if (slider4.result.from_value <= 10000) {
+                        $('.ex-time').text('От 61 до 130 дней');
+                    } else if (slider4.result.from_value <= 15000) {
+                        $('.ex-time').text('От 61 до 130 дней');
+                    } else if (slider4.result.from_value <= 20000) {
+                        $('.ex-time').text('От 61 до 130 дней');
+                    } else if (slider4.result.from_value <= 30000) {
+                        $('.ex-time').text('От 61 до 130 дней');
+                    } else if (slider4.result.from_value <= 50000) {
+                        $('.ex-time').text('От 130 до 250 дней');
+                    } else {
+                        $('.ex-time').text('От 250 до 365 дней');
+                    }
+                });
+
+            </script>
+            <?php
         echo '<script>';
         require 'templates/zaimhome/assets/js/loanCalculator.min.js';
         echo '</script>';
     ?>
-<?php
+                <?php
 }
 
 if(isset($_GET['email']))
@@ -583,37 +585,36 @@ if(isset($_GET['email']))
     }
 ?>
 
-<?php
+                    <?php
     require 'yandex_metrika.php';
     require 'google_analitycs.php';
 ?>
-<script>
-function markTarget(target,param, id){
-    if (typeof yaCounter46347894 == 'undefined') return;
-	if (typeof param == 'undefined') yaCounter46347894.reachGoal(target);
-	else yaCounter46347894.reachGoal(target,param);
-        
-        $.ajax({
-            type: 'POST',
-            url: '/pixel/',
-            data: 'id='+id+'&pixel='+param,
-            success: function(data){ 
-            }
-        });
-}
-function traffic(site, page){
-    $.ajax({
-        type: 'POST',
-        url: '/traffic/',
-        data: 'site='+site+'&page='+page,
-            success: function(data){ 
-            }
-    });    
-}
-</script>
-<?php  
+                        <script>
+                            function markTarget(target, param, id) {
+                                if (typeof yaCounter46347894 == 'undefined') return;
+                                if (typeof param == 'undefined') yaCounter46347894.reachGoal(target);
+                                else yaCounter46347894.reachGoal(target, param);
+
+                                $.ajax({
+                                    type: 'POST',
+                                    url: '/pixel/',
+                                    data: 'id=' + id + '&pixel=' + param,
+                                    success: function(data) {}
+                                });
+                            }
+
+                            function traffic(site, page) {
+                                $.ajax({
+                                    type: 'POST',
+                                    url: '/traffic/',
+                                    data: 'site=' + site + '&page=' + page,
+                                    success: function(data) {}
+                                });
+                            }
+
+                        </script>
+                        <?php  
     if ($this->uri->segment(1) != 'form') {
         require 'yandex_rtb.php';
     }
 ?>
- 
