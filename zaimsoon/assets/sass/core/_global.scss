@@ -1,0 +1,120 @@
+body{
+  font-family: 'Akrobat-Regular',sans-serif!important;
+  position: relative;
+  width: 100%;
+  color: #333333!important;
+  float: left;
+  min-height: 100vh;
+  padding-right: 0!important;
+}
+.dropdown-menu{
+  padding: 15px;
+}
+.ex-money-receive-title{
+  margin: 0;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.ex-main-btn{
+  padding-top: 17px;
+  padding-bottom: 13px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #3a99d8;
+  @include prefix(border-radius, 10px);
+  outline: none;
+  border: none;
+}
+.ex-agreement-check{
+  label{
+    margin-top: 15px!important;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-weight: 700;
+    padding-top: 3px!important;
+    &:hover input ~ i{
+      background: #f8f8f8;
+    }
+    &:focus input ~ i{
+      background: #f8f8f8;
+    }
+    span{
+      display: inline-block;
+      margin-left: 15px;
+      margin-top: 2px;
+      color: #333333;
+      font-weight: 400;
+      font-size: 14px;
+    }
+    input{
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      left: 0;
+      margin-left: 0!important;
+      &:checked ~ i{
+        background: transparent;
+        &:after{
+          display: block;
+        }
+      }
+
+    }
+    i{
+      display: inline-block;
+      position: absolute;
+      top: 7px;
+      left: 0;
+      height: 24px;
+      width: 24px;
+      background: #ffffff;
+      border: 1px solid #858585;
+      @include prefix(border-radius, 5px);
+      &:after{
+        content: '';
+        position: absolute;
+        display: none;
+        left: 8px;
+        top: 4px;
+        width: 5px;
+        height: 10px;
+        border: solid #000;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        @include prefix(border-radius, 4px);
+      }
+    }
+  }
+  button{
+    margin-top: 28px;
+  }
+}
+
+.ex-adds{
+  position: relative;
+  min-height: 175px;
+  overflow: hidden;
+  height: 220px;
+  background-color: #d8d8d8;
+  div{
+    position: absolute;
+    top: 0;
+    width: 49%;
+    height: 100%;
+    padding: 8px;
+    background-color: #e8e8e8;
+    &:first-of-type{
+      left: 0;
+    }
+    &:last-of-type{
+      right: 0;
+    }
+  }
+}
+

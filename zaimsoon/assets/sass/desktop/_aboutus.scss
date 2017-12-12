@@ -1,0 +1,88 @@
+.ex-aboutus {
+  padding-top: 40px;
+  padding-bottom: 74px;
+  h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 50px;
+    padding-bottom: 22px;
+  }
+  h4 {
+    text-align: center;
+    color: #2d3e4f;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.34px;
+    margin-bottom: 21px;
+    margin-top: 21px;
+  }
+  p {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+  }
+  .ex-why-zaimsoon {
+    padding-top: 45px;
+    h2 {
+      margin: 0;
+      padding-bottom: 52px;
+    }
+    .ex-why-block {
+      margin-bottom: 32px;
+      .ex-img-place {
+        position: relative;
+        width: 160px;
+        height: 160px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        @media (max-width: 1200px) and  (min-width: 992px){
+          width: 100% ;
+        }
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      h3 {
+        margin-top: 30px;
+        margin-bottom: 22px;
+        font-size: 24px;
+        font-weight: 700;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        @media (max-width: 991px) {
+          br {
+            display: none;
+          }
+        }
+      }
+      @media (max-width: 767px) {
+        text-align: center;
+        .ex-img-place {
+          margin: 0 auto;
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      padding: 0 50px;
+    }
+  }
+
+  .ex-main-btn {
+    margin-top: 32px;
+  }
+
+}
