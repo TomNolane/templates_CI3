@@ -57,7 +57,7 @@ if($this->uri->segment(1) != 'form')
          require 'templates/rublimo/js/jquery.suggestions.min.js';
          echo '</script>';
          echo '<script>';
-         require 'templates/rublimo/js/settings.min.js';
+         require 'templates/rublimo/js/settings.js';
          echo '</script>';
          echo '<script>';
          require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
