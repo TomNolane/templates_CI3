@@ -323,7 +323,7 @@ if(!isset($description))
     require "templates/bzaim/css/new-age.min.css"; 
     echo '</style>'; 
     echo '<style>'; 
-    require "templates/bzaim/css/style.min.css"; 
+    require "templates/bzaim/css/style.css"; 
     echo '</style>'; 
 
     if ($this->uri->segment(1) == 'lk') 
@@ -517,48 +517,7 @@ if(!isset($description))
         </div>
         
 	</div>
-    </nav>
-
-
-    <!-- <nav id="mainNav" class="navbar navbar-default">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3"> 
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <a class="navbar-brand page-scroll" href="/">
-                            <img alt="logo.png" src="/templates/bzaim/img/logo.png">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-9"> 
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="/form">Получить деньги</a>
-                            </li>
-                            <li>
-                                <a href="/about">О нас</a>
-                            </li>
-                            <li>
-                                <a href="/article">О займах</a>
-                            </li>
-                            <li>
-                                <a href="/faq">Вопрос-ответ</a>
-                            </li>
-                            <li>
-                                <a href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div> 
-        </div> 
-    </nav> -->
-    <!-- Modal -->
+    </nav> 
     <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
