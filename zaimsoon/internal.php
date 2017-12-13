@@ -95,5 +95,5 @@ switch($this->uri->segment(1))
 	elseif ($this->uri->segment(1) == 'credits-history') require 'internal-credits-history.php';
 	elseif ($this->uri->segment(1) == 'lender-and-borrower') require 'internal-lender-and-borrower.php';
 	elseif ($this->uri->segment(1) == 'allarticles') require 'internal-allarticles.php';
-	elseif ($this->uri->segment(1) == 'microfinance') require 'microfinance.php';
+	elseif ($this->uri->segment(1) == 'microfinance') require 'internal-microfinance.php';
 ?>
