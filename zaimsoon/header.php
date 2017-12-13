@@ -54,10 +54,10 @@ if(!isset($description))
     <!-- CSS -->
      <?php
      echo '<style>';
-     require 'templates/zaimsoon/assets/css/style.min.css';
+     require 'templates/zaimsoon/assets/css/style.css';
      echo '</style>'; 
      echo '<style>';
-     require 'templates/zaimsoon/assets/css/style_custom.min.css';
+     require 'templates/zaimsoon/assets/css/style_custom.css';
      echo '</style>'; 
      echo '<style>';
      require 'templates/zaimsoon/assets/css/jquery-ui-1.10.4.custom.min.css';
@@ -183,14 +183,8 @@ if(!isset($description))
                             <li><a href="/rules">Правила предоставления займов</a></li>
                         </ul>
                     </li>
-                    <li class="ex-dropdown-menu dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                                                             aria-expanded="false">Способы получения займа</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/about">О сервисе Zaimcoin</a></li>
-                            <li><a href="/allarticles">Статьи о займах</a></li>
-                            <li><a href="/money">Способы получения займа</a></li>
-                            <li><a href="" data-toggle="modal" data-target="#askQuestion">Задать вопрос</a></li>
-                        </ul>
+                    <li> 
+                        <a href="" data-toggle="modal" data-target="#askQuestion">Задать вопрос</a>
                     </li>
                 </ul>
             </div>
