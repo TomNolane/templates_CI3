@@ -35,7 +35,13 @@
 <script src="/modules/html5shiv/html5shiv.js"></script>
 <![endif]-->
 <?php if ($this->uri->segment(1) != 'form') {
-    require 'templates/common/googlesyndication.php';
+    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	  (adsbygoogle = window.adsbygoogle || []).push({
+		google_ad_client: "ca-pub-4802160271558776",
+		enable_page_level_ads: true
+	  });
+	</script>';
 }?>
 <script>
 var amount = 15000;
