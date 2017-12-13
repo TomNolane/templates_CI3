@@ -66,9 +66,9 @@ $(document).ready(function () {
         drawValuesStyle = function (currentValParam) {
             var splitedLoanVal = currentValParam.split('');
             if(currentValParam.length === 6){
-                rangeUpperValue.append('<span class="noSelect">0</span>')
+                rangeUpperValue.append('<span class="noSelect"></span>')
             }else if(currentValParam.length === 5){
-                rangeUpperValue.append('<span class="noSelect">0</span><span class="noSelect">0</span>')
+                rangeUpperValue.append('<span class="noSelect"></span><span class="noSelect"></span>')
             }
             for (i = 0; i < splitedLoanVal.length; i++) {
                 rangeUpperValue.append('<span class="noSelect">'+ splitedLoanVal[i] +'</span>');

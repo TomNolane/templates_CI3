@@ -66,28 +66,30 @@
                                         </div>
                                     </div>
                                 </div>
+                                <a onClick="goToForm();">
                                 <div class="col-md-3 hidden-xs hidden-sm">
                                     <ul class="ex-payment">
                                         <li>
-                                            <a href="/zaim-card"><img src="/templates/zaimsoon/assets/img/visa.png" alt="visa.png"></a>
+                                           <img src="/templates/zaimsoon/assets/img/visa.png" alt="visa.png">
                                         </li>
                                         <li>
-                                            <a href="/zaim-card"><img src="/templates/zaimsoon/assets/img/mastercard.png" alt="mastercard.png"></a>
+                                            <img src="/templates/zaimsoon/assets/img/mastercard.png" alt="mastercard.png">
                                         </li>
                                         <li>
-                                            <a href="/zaim-yandex"><img src="/templates/zaimsoon/assets/img/yandex.png" alt="yandex.png"></a>
+                                            <img src="/templates/zaimsoon/assets/img/yandex.png" alt="yandex.png">
                                         </li>
                                         <li>
-                                        <a href="/zaim-qiwi"><img src="/templates/zaimsoon/assets/img/qiwi.png" alt="qiwi.png"></a>
+                                        <img src="/templates/zaimsoon/assets/img/qiwi.png" alt="qiwi.png">
                                         </li>
                                         <li>
-                                        <a href="/zaim-contact"><img src="/templates/zaimsoon/assets/img/contact.png" alt="contact.png"></a>
+                                        <img src="/templates/zaimsoon/assets/img/contact.png" alt="contact.png">
                                         </li>
                                         <li>
-                                        <a href="/zaim-bank"><img src="/templates/zaimsoon/assets/img/bank.png" alt="bank.png"></a>
+                                        <img src="/templates/zaimsoon/assets/img/bank.png" alt="bank.png">
                                         </li>
                                     </ul>
                                 </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -159,7 +161,7 @@
                         </div>
                     </div>
                     <div class="ex-for-button">
-                        <button class="ex-main-btn">Получить деньги</button>
+                        <button class="ex-main-btn" onClick="goToForm();">Получить деньги</button>
                     </div>
                 </div>
             </div>

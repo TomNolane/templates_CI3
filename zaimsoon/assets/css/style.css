@@ -11780,7 +11780,7 @@ button.close {
 /* line 2, ../sass/desktop/_homepage.scss */
 main .ex-main-content {
   padding-top: 98px;
-  padding-bottom: 93px;
+  padding-bottom: 120px;
   background-image: url(/templates/zaimsoon/assets/img/pic.png);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -12391,7 +12391,7 @@ main .ex-section-2 .ex-get-money .ex-steps-block i {
 }
 /* line 1, ../sass/desktop/_footer.scss */
 .ex-main-footer {
-  padding-top: 35px;
+  padding-top: 50px;
   padding-bottom: 35px;
   position: absolute;
   width: 100%;
@@ -12401,7 +12401,7 @@ main .ex-section-2 .ex-get-money .ex-steps-block i {
 }
 /* line 9, ../sass/desktop/_footer.scss */
 .ex-main-footer p {
-  color: #ffffff;
+  color: #ffffff91;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -13668,8 +13668,7 @@ input#i , input#o, input#f, input#feedback-name {
 @media (max-width: 415px) {
   /* line 438, ../sass/desktop/_form.scss */
   main .ex-main-content {
-     padding-top: 0px; 
-     padding-bottom: 0px; 
+     padding-top: 0px;  
   }
   main .ex-main-content h1 .ex-zaimsoon {
     font-size: 41px;
