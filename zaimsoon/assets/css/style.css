@@ -13665,3 +13665,16 @@ input#i , input#o, input#f, input#feedback-name {
 #feedback-comment {
   width: 100%;
 }
+@media (max-width: 415px) {
+  /* line 438, ../sass/desktop/_form.scss */
+  main .ex-main-content {
+     padding-top: 0px; 
+     padding-bottom: 0px; 
+  }
+  main .ex-main-content h1 .ex-zaimsoon {
+    font-size: 41px;
+  }
+  main .ex-main-content h1 {
+    font-size: 24px;
+  }
+}

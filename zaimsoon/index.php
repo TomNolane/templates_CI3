@@ -15,7 +15,7 @@
                             <span class="ex-line">–</span>
                             экспресс займ
                             <br> без отказа</h1>
-                        <h2>Безотказный займ
+                        <h2 class="hidden-xs hidden-sm">Безотказный займ
                             <br> в 3 клика</h2>
                     </div>
                     <div class="col-md-7 ex-rectangle">
@@ -66,7 +66,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 hidden-xs hidden-sm">
                                     <ul class="ex-payment">
                                         <li>
                                             <a href="/zaim-card"><img src="/templates/zaimsoon/assets/img/visa.png" alt="visa.png"></a>
@@ -95,7 +95,7 @@
             </div>
         </form>
     </section>
-    <section class="ex-section-2">
+    <section class="ex-section-2 hidden-xs hidden-sm">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
