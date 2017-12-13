@@ -13661,4 +13661,7 @@ main.ex-form #secondStep .ex-main-btn {
 }
 input#i , input#o, input#f, input#feedback-name {
   text-transform: capitalize !important;
-} 
+}
+#feedback-comment {
+  width: 100%;
+}

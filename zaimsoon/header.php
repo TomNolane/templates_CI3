@@ -166,9 +166,6 @@ if(!isset($description))
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/about">О нас</a>
-                    </li>
                     <li class="ex-dropdown-menu dropdown"><a href="#" class="dropdown-toggle"
                                                              data-toggle="dropdown"
                                                              aria-expanded="false">Как работает сервис</a>
@@ -192,41 +189,14 @@ if(!isset($description))
                             <li><a href="/about">О сервисе Zaimcoin</a></li>
                             <li><a href="/allarticles">Статьи о займах</a></li>
                             <li><a href="/money">Способы получения займа</a></li>
+                            <li><a href="" data-toggle="modal" data-target="#askQuestion">Задать вопрос</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-</header>
-
-
-<!-- 
-<aside class="ex-aside-menu">
-    <div>
-        <i class="ex-close-menu"></i>
-    </div>
-    <main>
-        <a href="/form"><button class="ex-main-btn" type="button">Получить деньги</button></a>
-        <button class="ex-main-btn ex-ask-question" data-toggle="modal" data-target="#askQuestion">Задать вопрос</button>
-        <ul>
-            <li class="ex-larger">Как работает сервис</li>
-            <li><a href="/about">О сервисе Zaimsoon</a></li>
-            <li><a href="/allarticles">Статьи о займах</a></li>
-            <li><a href="/faq">Вопрос - Ответ</a></li>
-            <li class="ex-larger">Документация</li>
-            <li><a href="/oferta">Публичная оферта</a></li>
-            <li><a href="/soglasie">Согласие на обработку данных</a></li>
-            <li><a href="/rules">Правила предоставления займов</a></li>
-            <li class="ex-larger">Способы получения займа</li>
-            <li><a href="/zaim-card">Банковская карта</a></li>
-            <li><a href="/zaim-yandex">Яндекс.Деньги</a></li>
-            <li><a href="/zaim-contact">Contact</a></li>
-            <li><a href="/zaim-qiwi">QIWI VISA кошелек</a></li>
-            <li><a href="/zaim-bank">Счет в банке</a></li>
-        </ul>
-    </main>
-</aside> -->
+</header> 
     <div id="askQuestion" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -251,7 +221,7 @@ if(!isset($description))
                         <input type="email" class="form-control" id="feedback-email" title="Email" placeholder="Введите ваш email" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="feedback-comment"  title="Текст вашего сообщения" placeholder="Введите текст сообщения" required></textarea>
+                        <textarea id="feedback-comment" rows="3"  title="Текст вашего сообщения" placeholder="Введите текст сообщения" required></textarea>
                     </div>
                     <button type="button" id="feedback-send" class="ex-main-btn">Отправить</button>
                 </div>
