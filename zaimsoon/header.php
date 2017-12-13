@@ -33,6 +33,7 @@ if(!isset($description))
 	<meta name="twitter:domain" content="zaimsoon.ru"/>
 
     <!-- Favicons -->
+    <link rel="shortcut icon" href="/templates/zaimsoon/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="57x57" href="/templates/zaimsoon/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/templates/zaimsoon/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/templates/zaimsoon/favicon/apple-icon-72x72.png">
