@@ -66,7 +66,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a onClick="goToForm();">
+                                <a onClick="goToForm();" id="spec_ind_a">
                                 <div class="col-md-3 hidden-xs hidden-sm">
                                     <ul class="ex-payment">
                                         <li>

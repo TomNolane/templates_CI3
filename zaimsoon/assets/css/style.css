@@ -13677,3 +13677,6 @@ input#i , input#o, input#f, input#feedback-name {
     font-size: 24px;
   }
 }
+#spec_ind_a {
+cursor: pointer;
+}
