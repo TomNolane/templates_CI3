@@ -462,16 +462,13 @@ if(!isset($description))
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <?php if ($this->uri->segment(1) != 'form') {
-        echo '
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({
+    <?php 
+    echo '<script>
+            (adsbygoogle = window.adsbygoogle || []).push({
             google_ad_client: "ca-pub-8603290384746847",
             enable_page_level_ads: true
-          });
+            });
         </script>';
-    }?>
-    <?php 
     require 'sendpuls.php';
     require 'google_tag_manager.php';
     require 'google-analytics.php';

@@ -252,7 +252,7 @@ if ($this->uri->segment(1) == 'form')
             $("#work_salary").prop("disabled", false);
             $("#work_salary").val("");
 
-            $("#work_region option").eq(0, true).prop("selected\", true);
+            $("#work_region option").eq(0, true).prop("selected", true);
             $("#work_region").prop("disabled", false); 
 
             $("#work_city").prop("disabled", false);
