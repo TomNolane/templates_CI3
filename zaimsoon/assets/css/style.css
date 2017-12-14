@@ -11041,7 +11041,7 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+/*# sourceMappingURL=/templates/zaimsoon/assets/css/bootstrap.css.map */
 /*!
  * Datepicker for Bootstrap
  *
@@ -11480,7 +11480,7 @@ button.close {
   position: absolute;
   display: block;
   cursor: default;
-  z-index: 1;
+  z-index: 3;
 }
 
 /* line 65, ../sass/library/_ionRangeSlider.scss */
@@ -13680,3 +13680,4 @@ input#i , input#o, input#f, input#feedback-name {
 #spec_ind_a {
 cursor: pointer;
 }
+.ex-main-header{position:relative; z-index: 9999}

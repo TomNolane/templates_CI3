@@ -1,8 +1,9 @@
 <?php $from = '15';
-if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
-{
-    echo '<a href="#0" class="cd-top">Наверх</a>';
-} ?>
+    if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
+    {
+        echo '<a href="#0" class="cd-top">Наверх</a>';
+    } 
+?>
 
 <footer class="ex-main-footer">
     <div class="container">
@@ -22,9 +23,9 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
             </div>
         </div>
     </div>
-</footer> 
-    
-    <?php 
+</footer>
+
+    <?php
     echo '<script>';
     require 'modules/jquery/jquery-1.11.3.min.js';
     echo '</script>';
@@ -62,12 +63,12 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     require 'templates/zaimsoon/assets/js/settings_form.js';
     echo '</script>';
     ?>
-     
+
     <!--[if lt IE 10]>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
 
-<?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form' || $this->uri->segment(1) == 'about' || $this->uri->segment(1) == 'microloans-organization' || $this->uri->segment(1) == 'credits-history' || $this->uri->segment(1) == 'urgently-money'|| $this->uri->segment(1) == 'microloans-or-credit') 
+<?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') 
 { 
     echo '<script>';
     require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
@@ -75,12 +76,14 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     echo '<script>';
     require 'templates/zaimsoon/assets/js/loanCalculator.js';
     echo '</script>';
-    
-    ?>
+?>
+
     <script> 
     //backtotop
     jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});
-    function getParameterByName(name, url) {
+
+    function getParameterByName(name, url) 
+    {
         if (!url) url = window.location.href;
         name = name.replace(/[\[\]]/g, "\\$&");
         var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
@@ -88,14 +91,16 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
         if (!results) return null;
         if (!results[2]) return '';
         return decodeURIComponent(results[2].replace(/\+/g, " "));
-    } 
+    }
 
     function goToUp() {
         $('html, body').animate({
             scrollTop: $('.toUp').offset().top
         }, 1000);
-    }  
-    $(document).ready(function () {
+    }
+
+    $(document).ready(function () 
+    {
         $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
         $('[data-toggle="popover"]').popover();
         $("#rangeSlider").ionRangeSlider({
@@ -107,7 +112,6 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
         prettify_enabled: true,
         prettify_separator: ".",
         from: <?php 
-
         if(isset($_GET['amount'])) 
         {  
             switch($_GET['amount'])
@@ -171,9 +175,8 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
             $('#amount').val(range.from_value);
             $('#form_slrd').val(range.from);
         },
-    }); 
-});   
-    
+    });
+});
 </script> 
 <?php } ?> 
 <script>
@@ -198,15 +201,16 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
                 setStr = unescape(cookie.substring(offset, end));
             }
         }
-
         return (setStr);
     }
 
-    function GetMoney() {
+    function GetMoney() 
+    {
         $('form#anketa').submit();
     }
 
-    function Loading(flag) {
+    function Loading(flag) 
+    {
         if (typeof flag == 'undefined') { 
             $('#feedback-send').prop('disabled', true);
             $('#feedback-send').html('Отправлено <i class="fa fa-spinner fa-spin fa-pulse"></i>');
@@ -215,7 +219,9 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
             $('#feedback-send').prop('disabled', false); 
         }
     }
-    function Loading2(flag) {
+
+    function Loading2(flag) 
+    {
         if (typeof flag == 'undefined') { 
             $('#feedback-send2').prop('disabled', true);
             $('#feedback-send2').html('Отправлено <i class="fa fa-spinner fa-spin fa-pulse"></i>');
@@ -224,16 +230,16 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
             $('#feedback-send2').prop('disabled', false); 
         }
     }
-    $('#feedback-send').click(function () {
-        Loading();
 
+    $('#feedback-send').click(function () 
+    {
+        Loading();
         var data = {
             name: $('#feedback-name').val(),
             phone: $('#feedback-phone').val(),
             email: $('#feedback-email').val(),
             comment: $('#feedback-comment').val()
         };
-
         if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' && data
                 .email != '') && (typeof data.comment != 'undefined' && data.comment != '')) {
             $.ajax({
@@ -264,17 +270,16 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
             Loading(0);
             alert('Пожалуйста, заполните все поля.');
         }
-    });  
+    });
+
     $('#feedback-send2').click(function () {
         Loading2();
-
         var data2 = {
             name: $('#feedback-name2').val(),
             phone: $('#feedback-phone2').val(),
             email: $('#feedback-email2').val(),
             comment: $('#feedback-comment2').val()
         };
-
         if ((typeof data2.phone != 'undefined' && data2.phone != '') && (typeof data2.email != 'undefined' && data2
                 .email != '') && (typeof data2.comment != 'undefined' && data2.comment != '')) {
             $.ajax({
@@ -303,24 +308,28 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
             Loading2(0);
             alert('Пожалуйста, заполните все поля.');
         }
-    });  
+    });
 </script>
+
     <?php
-		if ($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') { ?>
-    <script > 
+		if ($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') { 
+    ?>
+
+    <script>
+
     $( ".button1" ).click(function() {
         $( "#amount" ).val('5000');
         $( "#period" ).val('7');
         $( "#form_slrd" ).val('4'); 
         $( "#anketa" ).submit();
     });
+
     $( ".button2" ).click(function() {
         $( "#amount" ).val('15000');
         $( "#period" ).val('14');
         $( "#form_slrd" ).val('14'); 
         $( "#anketa" ).submit();
     });
-
 
     $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
@@ -333,7 +342,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
         autoplaySpeed: 1000,
         autoplayHoverPause: true
     });
-    $(".ex-fast-start").click(function(){
+    $(".ex-fast-start").click(function() {
         $(".ex-fast-start").toggleClass("ex-fast-active");
     });
     var slider3 = $('#rangeSlider').data('ionRangeSlider');
@@ -352,37 +361,36 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
         }else if (n == 21 && n == <?php echo $from;?>) {
             clearInterval(slider_init);
         }
- 
+
         slider3.update({
             from: n
-        }); 
- 
+        });
+
         if (n <= 9) {
             $('#period').val('7'); 
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
         } else if (n <= 14 && n > 9) {
-            $('#period').val('14'); 
+            $('#period').val('14');
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
         } else if (n <= 15 && n > 14) {
-            $('#period').val('21'); 
+            $('#period').val('21');
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
         } else if (n <= 17 && n > 15) {
-            $('#period').val('21'); 
+            $('#period').val('21');
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
         } else if (n <= 19 && n > 17) {
-            $('#period').val('30'); 
+            $('#period').val('30');
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
         } else if (n > 19) {
             $('#period').val('30'); 
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
-        } 
-
+        }
     }, 50);
 });</script>
 <?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
@@ -442,14 +450,12 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
         return c;
     } 
 </script>';
- 
 }
 ?>
 <!-- всплывающее окошко -->
 <?php 
 if ($this->uri->segment(1) == 'form') 
-{  
-    
+{
     require 'templates/common/js.php';
     if(isset($_GET['popup']) and $_GET['popup']==1 ){
         echo '    
@@ -496,13 +502,16 @@ if(isset($_GET['email']))
     echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
 }
 ?>
+
 <!-- всплывающее окошко --> 
 <?php
  require 'yandexmetrika.php';
  require 'googleanalytics.php';
 ?>
+
 <script>
-function markTarget(target,param, id){
+function markTarget(target,param, id) 
+{
     if (typeof yaCounter46652025 == 'undefined') return;
 	if (typeof param == 'undefined') yaCounter46652025.reachGoal(target);
 	else yaCounter46652025.reachGoal(target,param);
@@ -511,19 +520,20 @@ function markTarget(target,param, id){
             type: 'POST',
             url: '/pixel/',
             data: 'id='+id+'&pixel='+param,
-            success: function(data){
-                //console.log(data);
+            success: function(data){ 
             }
         });
 }
-function traffic(site, page){
+
+function traffic(site, page)
+{
     $.ajax({
         type: 'POST',
         url: '/traffic/',
         data: 'site='+site+'&page='+page,
             success: function(data){ 
             }
-    });    
+    });
 }
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

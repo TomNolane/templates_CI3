@@ -10,7 +10,7 @@ $(document).ready(function () {
             c = 20000;
         }
         gg = c;
-    } 
+    }
     var currentLoanSize = gg;
         range = $("#rangeSlider"),
         commissionPercantage = 13,
