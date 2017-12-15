@@ -10071,7 +10071,6 @@ button.close {
   white-space: normal;
   filter: alpha(opacity=0);
   opacity: 0;
-  line-break: auto;
 }
 
 /* line 6013, ../sass/library/_bootstrap.scss */
@@ -10227,7 +10226,6 @@ button.close {
   border-radius: 6px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  line-break: auto;
 }
 
 /* line 6138, ../sass/library/_bootstrap.scss */
@@ -11956,7 +11954,7 @@ main .ex-main-content .ex-rectangle .ex-wrapper .ex-calc-wraper .ex-tab-section 
 }
 /* line 143, ../sass/desktop/_homepage.scss */
 main .ex-main-content .ex-rectangle .ex-wrapper .ex-calc-wraper .ex-tab-section .ex-calc-block tr .es-val-style {
-  float: right;
+  /* float: right; Tom Nolane */
   display: inline-block;
   box-shadow: inset 0 1px 1px rgba(54, 54, 54, 0.14);
   -moz-border-radius: 5px;
@@ -13513,7 +13511,6 @@ main.ex-form .tab-content .ex-main-form input[type=number]::-webkit-inner-spin-b
 main.ex-form .tab-content .ex-main-form input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
   margin: 0;
 }
 /* line 322, ../sass/desktop/_form.scss */
@@ -13587,6 +13584,9 @@ main.ex-form #secondStep .media .media-left .ex-coincidence-check li label {
   z-index: 9;
   cursor: pointer;
   -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
 }
 /* line 380, ../sass/desktop/_form.scss */
 main.ex-form #secondStep .media .media-left .ex-coincidence-check li .check {
