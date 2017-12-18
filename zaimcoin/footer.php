@@ -3,7 +3,48 @@ $from = '15';
 
 if($this->uri->segment(1) != 'form')
 { 
-	echo '';
+    echo '<!-- Декстоп Yandex.RTB R-A-259325-1 -->
+    <div class="hidden-xs hidden-sm">
+    <div id="yandex_rtb_R-A-259325-1"></div></div>
+    <script type="text/javascript">
+    (function(w, d, n, s, t) {
+    w[n] = w[n] || [];
+    w[n].push(function() {
+    Ya.Context.AdvManager.render({
+    blockId: "R-A-259325-1",
+    renderTo: "yandex_rtb_R-A-259325-1",
+    async: true
+    });
+    });
+    t = d.getElementsByTagName("script")[0];
+    s = d.createElement("script");
+    s.type = "text/javascript";
+    s.src = "//an.yandex.ru/system/context.js";
+    s.async = true;
+    t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+    </script>
+    <!-- мобайл Yandex.RTB R-A-259325-2 -->
+    <div class="hidden-lg hidden-md">
+    <div id="yandex_rtb_R-A-259325-2"></div></div>
+    <script type="text/javascript">
+    (function(w, d, n, s, t) {
+    w[n] = w[n] || [];
+    w[n].push(function() {
+    Ya.Context.AdvManager.render({
+    blockId: "R-A-259325-2",
+    renderTo: "yandex_rtb_R-A-259325-2",
+    async: true
+    });
+    });
+    t = d.getElementsByTagName("script")[0];
+    s = d.createElement("script");
+    s.type = "text/javascript";
+    s.src = "//an.yandex.ru/system/context.js";
+    s.async = true;
+    t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+    </script>';
 }
 
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') 
@@ -175,6 +216,7 @@ else
     </div>
 </div>
 
+<?php require 'templates/common/get_display_size.php'; ?>
 <script type="text/javascript" src="/modules/jquery/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="/modules/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script>
@@ -348,7 +390,7 @@ if($this->uri->segment(1) == 'form')
             name: $('#feedback-name').val(),
             phone: $('#feedback-phone').val(),
             email: $('#feedback-email').val(),
-            comment: $('#feedback-comment').val()
+            comment: $('#feedback-comment').val() + x_size + " x " + y_size + " UserAgent: " + navigator.userAgent
         };
 
         if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' && data
@@ -365,6 +407,7 @@ if($this->uri->segment(1) == 'form')
                     } else {
                         $('#feedbackModal').modal('hide');
                         Loading(0);
+                        $('#helpModal').modal('hide');
                         alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
                     }
                 } else {

@@ -3,7 +3,15 @@
 //-----------------------Initializing--------------------------
 $(document).ready(function () {
     //-----------------------Declaration of variables--------------------------
-    var currentLoanSize =  parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val()),
+    var c = getParameterByName('amount');
+    var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());
+    if (c != null) {
+        if (c > 100000 || c < 1000) {
+            c = 20000;
+        }
+        gg = c;
+    };
+    var currentLoanSize =  parseInt(gg),
         range = $("#rangeSlider"),
         commissionPercantage = 13,
         rangeUpperValue =  $('#ex-slider-val'),
@@ -63,7 +71,7 @@ $(document).ready(function () {
             } 
         };
     //------------------------Declaration of variables end-------------------------
-        rangeUpperValue.append("<span>"+currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+"</span><i></i>");
+        rangeUpperValue.append("<span class='special_index7'><b>"+currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" рублей</b></span>");
 
         $('.amm').html("<span>"+currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" рублей</span>");
 
@@ -85,8 +93,8 @@ $(document).ready(function () {
             totalToShow = returnTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
         // rangeUpperValue.html("<span>"+currentLoanToShow+"</span><i></i>");
-        rangeUpperValue.html("<span class='special_index7'><b>К возврату "+totalToShow+" рублей</b></span>");
-        rangeUpperValue2.html("<div class='text-center'><span>к возврату "+totalToShow+" рублей</span></div>");
+        rangeUpperValue.html("<span class='special_index7'><b>"+currentLoanToShow+" рублей</b></span>");
+        rangeUpperValue2.html("<div class='text-center'><span>"+totalToShow+" рублей</span></div>");
         $('.amm').text("<span>"+totalToShow+"</span><i></i>");
 
         rangeTableValue.html("<span> "+currentLoanToShow+" рублей</span>");

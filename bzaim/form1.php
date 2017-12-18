@@ -10,18 +10,18 @@
         <input type="text" class="form-control" id="period2" value="От 61 дня" readonly/>
         <span id="periodstatus" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
 </div>
-<input type="hidden" class="form-control" id="p" name="period" value="7"/>
-<div class="form-group has-feedback dadata">
+<input type="hidden" class="form-control" id="p" name="period" value="<?php  echo $period; ?>"/>
+<div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Фамилия*</label>
     <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свою фамилию" autofocus required>
     <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
-<div class="form-group has-feedback dadata">
+<div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Имя*</label>
     <input type="text" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Пожалуйста, введите свое имя" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое имя" required>
     <span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
-<div class="form-group has-feedback dadata">
+<div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Отчество*</label>
     <input type="text" class="form-control ec tip" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое отчество" required>
     <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -37,9 +37,9 @@
     <input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон" title="Пожалуйста, введите свой телефон" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Пожалуйста, введите телефон" required>
     <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
-<div class="form-group has-feedback dadata">
+<div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Почта*</label>
-    <input type="email" class="form-control ec tip" name="email" id="email" placeholder="Email" title="Пожалуйста, введите свой email адрес" data-validation="email" required>
+    <input type="email" class="form-control ec tip" name="email" id="email" placeholder="Email" title="Пожалуйста, введите свой email адрес" data-validation-error-msg="Пожалуйста, введите email" data-validation="email" required>
     <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
 <div class="form-group">

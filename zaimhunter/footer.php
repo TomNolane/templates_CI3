@@ -1,5 +1,6 @@
 <br><br>
 <?php
+$from = '15';
 if($this->uri->segment(1) != 'form')
 { 
 	echo '<!--декстоп версия Yandex.RTB R-A-258704-1 -->
@@ -112,6 +113,8 @@ if($this->uri->segment(1) != 'form')
     </div>
 </div>
 
+<?php require 'templates/common/get_display_size.php'; ?>
+
 <script type="text/javascript" src="/modules/jquery/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="/modules/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script>
@@ -127,7 +130,18 @@ if($this->uri->segment(1) != 'form')
 
 <?php
 if ($this->uri->segment(1) == 'form') 
-{
+{ ?>
+     <script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }</script> 
+<?php   
     echo '<script src="/templates/zaimhunter/assets/js/loanCalculator.js?ver=1"></script>';
 }
 elseif ($this->uri->segment(1) == 'faq') 
@@ -185,60 +199,7 @@ elseif ($this->uri->segment(1) == 'money')
         }
     }); 
     </script>';
-}
-if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index')
-{ 
-echo '<script src="/templates/zaimhunter/assets/js/loanCalculator.js?ver=1"></script>';
-echo "<script>$(document).ready(function () {
-    var slider3 = $('#rangeSlider').data('ionRangeSlider');
-
-    var slider_plus = true;
-    var n = 15;
-    var slider_init = setInterval(function () {
-        if (slider_plus) {
-            n++;
-        } else {
-            n--;
-        }
-        if (n == 21) {
-            slider_plus = false;
-        } else if (n == 5) {
-            clearInterval(slider_init);
-        }
- 
-        slider3.update({
-            from: n
-        }); 
- 
-        if (n <= 9) {
-            $('#period').val('7'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 14 && n > 9) {
-            $('#period').val('14'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 15 && n > 14) {
-            $('#period').val('21'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 17 && n > 15) {
-            $('#period').val('21'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 19 && n > 17) {
-            $('#period').val('30'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n > 19) {
-            $('#period').val('30'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } 
-
-    }, 50);
-});</script>";
-}
+} 
 ?> 
 
 <script src="/templates/zaimhunter/assets/js/coockie.js"></script>
@@ -278,7 +239,39 @@ echo "<script>$(document).ready(function () {
         navigationText: ["<img src='myprevimage.png'>","<img src='mynextimage.png'>"],
         hide_min_max: true,
         keyboard: true,
-        from: <?php if(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd'];?>,
+        from: <?php 
+
+        if(isset($_GET['amount'])) 
+        {  
+            switch($_GET['amount'])
+            {
+                case '1000': $from = '0' ; break;
+                case '2000': $from = '1' ; break;
+                case '3000': $from = '2' ; break;
+                case '4000': $from = '3' ; break;
+                case '5000': $from = '4' ; break;
+                case '6000': $from = '5' ; break;
+                case '7000': $from = '6' ; break;
+                case '8000': $from = '7' ; break;
+                case '9000': $from = '8' ; break;
+                case '10000': $from = '9' ; break;
+                case '11000': $from = '10' ; break;
+                case '12000': $from = '11' ; break;
+                case '13000': $from = '12' ; break;
+                case '14000': $from = '13' ; break;
+                case '15000': $from = '14' ; break;
+                case '20000': $from = '15' ; break;
+                case '25000': $from = '16' ; break;
+                case '30000': $from = '17' ; break;
+                case '40000': $from = '18' ; break;
+                case '50000': $from = '19' ; break;
+                case '80000': $from = '20' ; break;
+                case '100000': $from = '21' ; break;
+            }
+            echo $from; 
+        }
+        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        ?>,
         values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
         onFinish: function (data) {
             return false;
@@ -392,7 +385,7 @@ echo "<script>$(document).ready(function () {
             name: $('#feedback-name').val(),
             phone: $('#feedback-phone').val(),
             email: $('#feedback-email').val(),
-            comment: $('#feedback-comment').val()
+            comment: $('#feedback-comment').val() + x_size + " x " + y_size + " UserAgent: " + navigator.userAgent
         };
 
         if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' && data
@@ -501,6 +494,70 @@ echo "<script>$(document).ready(function () {
 
     });
 </script>
+<?php
+
+if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index')
+{ 
+    echo '<script src="/templates/zaimhunter/assets/js/loanCalculator.js?ver=1"></script>';
+    ?>
+<script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }</script> 
+<?php
+
+echo "<script>$(document).ready(function () {
+    var slider3 = $('#rangeSlider').data('ionRangeSlider');
+
+    var slider_plus = true;
+    var n = 10;
+    var slider_init = setInterval(function () 
+    { 
+        if (slider_plus) {
+            n++;
+        } else {
+            n--;
+        }
+
+        if (n == 21 && n != ".$from.") {
+            slider_plus = false;
+        } else if (n == ".$from." && slider_plus == false) {
+            clearInterval(slider_init);
+        } else if (n == 21 && n == ".$from.") {
+            clearInterval(slider_init);
+        }
+ 
+        slider3.update({
+            from: n
+        }); 
+ 
+        if (n <= 9) {
+            $('#period').val('7');
+        } else if (n <= 14 && n > 9) {
+            $('#period').val('14'); 
+        } else if (n <= 15 && n > 14) {
+            $('#period').val('21');
+        } else if (n <= 17 && n > 15) {
+            $('#period').val('21');
+        } else if (n <= 19 && n > 17) {
+            $('#period').val('30');
+        } else if (n > 19) {
+            $('#period').val('30');
+        }
+
+        $('#form_slrd').val(n);
+        $('#amount').val(slider3.result.from_value);
+
+    }, 50);
+});</script>";
+}
+?>
 <script>
     var client_w = screen.width;
     if(Number(client_w) > 767)
@@ -523,7 +580,7 @@ echo "<script>$(document).ready(function () {
 </script>
 
 <?php
-if ($this->uri->segment(1) == 'lk') 
+if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') 
 { 
     require 'for_lk.php';
 }

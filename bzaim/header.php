@@ -326,7 +326,7 @@ if(!isset($description))
     require "templates/bzaim/css/style.css"; 
     echo '</style>'; 
 
-    if ($this->uri->segment(1) == 'lk') 
+    if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') 
     {
     echo '<style>';
     require "templates/bzaim/css/style_lk.css";
@@ -335,23 +335,7 @@ if(!isset($description))
 
     if ($this->uri->segment(1) == 'form') 
     {
-    echo '<style> 
-    @media only screen and (min-width: 768px)  {
-        .has-feedback label~.form-control-feedback {
-            top: 21px !important;
-        }
-    }
-    @media only screen and (max-width: 768px)  {
-        .has-feedback label~.form-control-feedback {
-            top: 0px !important;
-        }
-    } 
-    .btn_form_spec {
-        margin: 10px !important;
-    }
-    .dadata {
-    margin-bottom: 10px;
-    }
+    echo '<style>  
     #ya-rtb{display: none;}
     </style>';
     echo '<style>'; 
@@ -464,11 +448,16 @@ if(!isset($description))
     <![endif]-->
     <?php 
     echo '<script>
-            (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-8603290384746847",
-            enable_page_level_ads: true
-            });
-        </script>';
+    function goToForm() {
+        window.location.href = window.location.origin + "/form";
+    }
+    </script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8603290384746847",
+    enable_page_level_ads: true
+    });
+    </script>';
     require 'sendpuls.php';
     require 'google_tag_manager.php';
     require 'google-analytics.php';

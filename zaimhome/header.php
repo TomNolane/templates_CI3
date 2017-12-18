@@ -159,7 +159,7 @@ if(!isset($description))
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a onClick="returnToMaimPage(); return false;" href="#" class="navbar-brand">
+                <a href="/" class="navbar-brand">
                     <img src="/templates/zaimhome/assets/img/Zaimhome_logo.svg" alt="Image missing">
                 </a>
             </div>

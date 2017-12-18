@@ -138,6 +138,7 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
 </div>
 <!-- Modal -->
 <?php
+    require 'templates/common/get_display_size.php';
     echo '<script>';
     require 'modules/jquery/jquery-1.11.3.min.js';
     echo '</script>';

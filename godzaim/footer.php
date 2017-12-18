@@ -83,6 +83,7 @@ if ($this->uri->segment(1) != 'form') {
         </div>
 
         <?php
+        require 'templates/common/get_display_size.php';
 echo '<style>'; 
 require "modules/3dgallery/css/style.css"; 
 echo '</style>'; 
@@ -259,7 +260,7 @@ jQuery(document).ready(function (o) {
                             name: $('#feedback-name').val(),
                             phone: $('#feedback-phone').val(),
                             email: $('#feedback-email').val(),
-                            comment: $('#feedback-comment').val()
+                            comment: $('#feedback-comment').val() + x_size + " x " + y_size + " UserAgent: " + navigator.userAgent
                         };
 
                         if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email !=

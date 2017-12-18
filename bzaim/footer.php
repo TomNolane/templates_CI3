@@ -1,4 +1,7 @@
-<?php $from = '15'; $px = '63.974'; ?>
+<?php 
+$from = '15'; 
+?>
+
 <div class="buffer"></div>
 <div id="ya-rtb">
     <div id="yandex_rtb_R-A-243981-3"></div>
@@ -10,7 +13,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
 
-if($this->uri->segment(1) != 'form')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2')
 {
 	echo '<!-- Bzaim5.ru -->
     <ins class="adsbygoogle"
@@ -62,6 +65,7 @@ if($this->uri->segment(1) != 'form')
 
 
 <?php
+    require 'templates/common/get_display_size.php';
     echo '<script>';
     require 'templates/bzaim/vendor/jquery/jquery.min.js';
     echo '</script>';
@@ -77,11 +81,234 @@ if($this->uri->segment(1) != 'form')
     echo '<script>';
     require 'templates/bzaim/js/get_parameter.js';
     echo '</script>';
+    echo '<script>';
+    require 'templates/bzaim/js/coockie.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/bzaim/js/jquery.form-validator.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/bzaim/js/jquery.suggestions.min.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/bzaim/js/settings_form.js';
+    echo '</script>';
 ?> 
 <!--[if lt IE 10]>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
 <?php if ($this->uri->segment(1) == 'form') {
+    echo ' <script>
+    $("#work").change(function(){
+        if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
+        { 
+            $("#work_name").addClass("valid");
+            $("#work_name").parent().addClass("has-success").removeClass("has-error");
+            $("#work_name").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_name").removeClass("er");
+            $("#"+$("#work_name").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_occupation").addClass("valid");
+            $("#work_occupation").parent().addClass("has-success").removeClass("has-error");
+            $("#work_occupation").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_occupation").removeClass("er");
+            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_phone").addClass("valid");
+            $("#work_phone").parent().addClass("has-success").removeClass("has-error");
+            $("#work_phone").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_phone").removeClass("er");
+            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_experience").addClass("valid");
+            $("#work_experience").parent().addClass("has-success").removeClass("has-error");
+            $("#work_experience").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_experience").removeClass("er");
+            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_salary").addClass("valid");
+            $("#work_salary").parent().addClass("has-success").removeClass("has-error");
+            $("#work_salary").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_salary").removeClass("er"); 
+            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_region").addClass("valid");
+            $("#work_region").parent().addClass("has-success").removeClass("has-error");
+            $("#work_region").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_region").removeClass("er");
+            $("#"+$("#work_region").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_city").addClass("valid");
+            $("#work_city").parent().addClass("has-success").removeClass("has-error");
+            $("#work_city").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_city").removeClass("er");
+            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_street").addClass("valid");
+            $("#work_street").parent().addClass("has-success").removeClass("has-error");
+            $("#work_street").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_street").removeClass("er");
+            $("#"+$("#work_street").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_house").addClass("valid");
+            $("#work_house").parent().addClass("has-success").removeClass("has-error");
+            $("#work_house").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_house").removeClass("er");
+            $("#"+$("#work_house").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_office").addClass("valid");
+            $("#work_office").parent().addClass("has-success").removeClass("has-error");
+            $("#work_office").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_office").removeClass("er");
+            $("#"+$("#work_office").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+//            $("#work_name").prop("disabled", true);
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_name").val("пенсионер");
+            else  $("#work_name").val("безработный");
+
+//            $("#work_occupation").prop("disabled", true);
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_occupation").val("пенсионер");
+            else  $("#work_occupation").val("безработный"); 
+
+//            $("#work_phone").prop("disabled", true);
+            var teemp = $("#phone").val();
+            $("#work_phone").val(teemp);
+
+//            $("#work_experience").prop("disabled", false);
+            $("#work_experience").val(100);
+
+//            $("#work_salary").prop("disabled", false);
+            $("#work_salary").val("");
+
+            var teemp2 = Number($("#region").find(":selected").index());
+            $("#work_region option").eq(teemp2).prop("selected", true);
+//            $("#work_region").prop("disabled", false); 
+
+//            $("#work_city").prop("disabled", true);
+            var teemp3 = $("#city").val();
+            $("#work_city").val(teemp3);
+
+//            $("#work_street").prop("disabled", true);
+            var teemp4 = $("#street").val();
+            $("#work_street").val(teemp4);
+
+            
+            var teemp5 = $("#building").val();
+            $("#work_house").val(teemp5);
+
+//            $("#work_building").prop("disabled", true);
+            $("#work_building").val(" ");
+
+//            $("#work_office").prop("disabled", true);
+            var teemp6 = $("#flat").val();
+            $("#work_office").val(teemp6);
+        }
+        else { 
+
+            $("#work_name").val("");
+            $("#work_name").removeClass("valid");
+            $("#work_name").parent().removeClass("has-success");
+            $("#work_name").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_name").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_occupation").val("");
+            $("#work_occupation").removeClass("valid");
+            $("#work_occupation").parent().removeClass("has-success");
+            $("#work_occupation").parent().parent().prev().removeClass("label_true"); 
+            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-ok"); 
+
+            $("#work_phone").val("");
+            $("#work_phone").removeClass("valid");
+            $("#work_phone").parent().removeClass("has-success");
+            $("#work_phone").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_experience").val("");
+            $("#work_experience").removeClass("valid");
+            $("#work_experience").parent().removeClass("has-success");
+            $("#work_experience").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_salary").val("");
+            $("#work_salary").removeClass("valid");
+            $("#work_salary").parent().removeClass("has-success");
+            $("#work_salary").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-ok");
+ 
+            $("#work_region").removeClass("valid");
+            $("#work_region").parent().removeClass("has-success");
+            $("#work_region").parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_region").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_city").val("");
+            $("#work_city").removeClass("valid");
+            $("#work_city").parent().removeClass("has-success");
+            $("#work_city").parent().parent().prev().removeClass("label_true"); 
+            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-ok"); 
+
+            $("#work_street").val("");
+            $("#work_street").removeClass("valid");
+            $("#work_street").parent().removeClass("has-success");
+            $("#work_street").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_street").id+"status").removeClass("glyphicon-ok"); 
+
+            $("#work_house").val("");
+            $("#work_house").removeClass("valid");
+            $("#work_house").parent().removeClass("has-success");
+            $("#work_house").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_house").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_office").val("");
+            $("#work_office").removeClass("valid");
+            $("#work_office").parent().removeClass("has-success");
+            $("#work_office").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_office").id+"status").removeClass("glyphicon-ok");
+
+//            $("#work_name").prop("disabled", false);
+            $("#work_name").val(""); 
+ 
+//            $("#work_occupation").prop("disabled", false);
+             $("#work_occupation").val(""); 
+
+//            $("#work_phone").prop("disabled", false);
+            $("#work_phone").val("");
+
+//            $("#work_experience").prop("disabled", false);
+            $("#work_experience").val("");
+
+//            $("#work_salary").prop("disabled", false);
+            $("#work_salary").val("");
+
+            $("#work_region option").eq(0, true).prop("selected", true);
+//            $("#work_region").prop("disabled", false); 
+
+//            $("#work_city").prop("disabled", false);
+            $("#work_city").val("");
+
+//            $("#work_street").prop("disabled", false);
+            $("#work_street").val("");
+
+//            $("#work_house").prop("disabled", false);
+            $("#work_house").val("");
+
+//            $("#work_building").prop("disabled", false);
+            $("#work_building").val("");
+
+//            $("#work_office").prop("disabled", false);
+            $("#work_office").val("");
+        }
+    }); 
+
+    </script>';
+   
 require 'templates/common/js.php'; 
 if(isset($_GET['popup']) and $_GET['popup']==1 ){
     echo '    
@@ -123,37 +350,10 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
         }
         echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
     }  
-    echo '<script>';
-    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
-    echo '</script>'; 
-    echo '<script>';
-    require 'templates/bzaim/js/validate.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/bzaim/js/jquery.form-validator.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/bzaim/js/jquery.suggestions.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/bzaim/js/settings.js';
-    echo '</script>';
-        echo '
-        <script type="text/javascript">
-            $("#email").suggestions({
-                serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
-                token: "78fc76023580df0ec78566913b31a87d909f1ec0",
-                type: "EMAIL",
-                count: 3,
-                scrollOnFocus: false
-            });    
-        </script>'; 
+    
         
     }
-    elseif($this->uri->segment(1) == 'lk')
+    elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
     {
         echo '<script>
         var offers = '.json_encode($data).';
@@ -208,9 +408,9 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
                 scrollTop: 0
             }, c)
         })
-    });
+    }); 
 
-    function setcookie(name, value, expires, path, domain, secure) {
+function setcookie(name, value, expires, path, domain, secure) {
         document.cookie = name + "=" + escape(value) +
             ((expires) ? "; expires=" + (new Date(expires)) : "") +
             ((path) ? "; path=" + path : "; path=/") +
@@ -237,7 +437,7 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
         }
         return (setStr);
     }
-
+    
     $(document).ready(function () {
         function Loading(flag) {
             if (typeof flag == 'undefined') {
@@ -257,7 +457,7 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
                 name: $('#feedback-name').val(),
                 phone: $('#feedback-phone').val(),
                 email: $('#feedback-email').val(),
-                comment: $('#feedback-comment').val()
+                comment: $('#feedback-comment').val() + x_size + " x " + y_size + " UserAgent: " + navigator.userAgent
             };
 
             if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email !=
@@ -301,7 +501,7 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
             prettify_enabled: true,
             hide_from_to: false,
             from: <?php 
-        if(isset($_GET['amount'])) 
+        if(isset($_GET['amount']))
         {  
             switch($_GET['amount'])
             {
@@ -331,10 +531,31 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
             echo $from; 
         }
         elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
-        ?>, 
+        ?>,  
             onChange: function (range) {
                 amount = range.from_value;
+                if (range.from_value <= 10000) {
+                    $('#period').val('7');
+                    $('#period2').val('От 61 до 130 дней');
+                } else if (range.from_value <= 15000) {
+                    $('#period').val('14');
+                    $('#period2').val('От 61 до 130 дней');
+                } else if (range.from_value <= 20000) {
+                    $('#period').val('21');
+                    $('#period2').val('От 61 до 130 дней');
+                } else if (range.from_value <= 30000) {
+                    $('#period').val('21');
+                    $('#period2').val('От 61 до 130 дней');
+                } else if (range.from_value <= 50000) {
+                    $('#period').val('30');
+                    $('#period2').val('От 130 до 250 дней');
+                } else {
+                    $('#period').val('30');
+                    $('#period2').val('От 250 до 365 дней');
+                }
+                $('#amount').val(range.from_value);
                 $('#form_slrd').val(range.from);
+
                 updateComm();
             }
         });
@@ -381,7 +602,7 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
             prettify_enabled: true,
             hide_from_to: false,
             from: <?php 
-        if(isset($_GET['amount'])) 
+        if(isset($_GET['amount']))
         {  
             switch($_GET['amount'])
             {
@@ -493,26 +714,27 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
         elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
         ?>, 
         onChange: function (range) { 
-                if (range.from_value <= 10000) {
-                    $('#p').val('7');
-                    $('#period2').val('От 61 до 130 дней');
-                } else if (range.from_value <= 15000) {
-                    $('#p').val('14');
-                    $('#period2').val('От 61 до 130 дней');
-                } else if (range.from_value <= 20000) {
-                    $('#p').val('21');
-                    $('#period2').val('От 61 до 130 дней');
-                } else if (range.from_value <= 30000) {
-                    $('#p').val('21');
-                    $('#period2').val('От 61 до 130 дней');
-                } else if (range.from_value <= 50000) {
-                    $('#p').val('30');
-                    $('#period2').val('От 130 до 250 дней');
-                } else {
-                    $('#p').val('30');
-                    $('#period2').val('От 250 до 365 дней');
-                }
-                $('#form_slrd').val(range.from); 
+            if (range.from_value <= 10000) {
+                $('#period').val('7');
+                $('#period2').val('От 61 до 130 дней');
+            } else if (range.from_value <= 15000) {
+                $('#period').val('14');
+                $('#period2').val('От 61 до 130 дней');
+            } else if (range.from_value <= 20000) {
+                $('#period').val('21');
+                $('#period2').val('От 61 до 130 дней');
+            } else if (range.from_value <= 30000) {
+                $('#period').val('21');
+                $('#period2').val('От 61 до 130 дней');
+            } else if (range.from_value <= 50000) {
+                $('#period').val('30');
+                $('#period2').val('От 130 до 250 дней');
+            } else {
+                $('#period').val('30');
+                $('#period2').val('От 250 до 365 дней');
+            }
+            $('#amount').val(range.from_value);
+            $('#form_slrd').val(range.from); 
             }
         });
 
@@ -576,6 +798,7 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
         slider2.update({
             from: n
         });
+        $('#amount').val(slider.result.from_value);
         $('#form_slrd').val(n);
 
         if (slider.result.from_value <= 30000) {
@@ -611,47 +834,9 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
         $('.current_day').text(current_day);
         $('.current_summ').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
 
-    }, 5);
+    }, 50);
 <?php } ?>
-
-        $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
-        $('[data-toggle="popover"]').popover();
-        $('input#phone').mask("8 (9nn) nnn nnnn", {
-            "placeholder": "8 (9__) ___ ____"
-        });
-        $('input#feedback-phone').mask("8 (9nn) nnn nnnn", {
-            "placeholder": "8 (9__) ___ ____"
-        });
-        $('input#work_phone').mask("8 (9nn) nnn nnnn", {
-            "placeholder": "8 (9__) ___ ____"
-        });
-        $('input#passport').mask("nnnn nnnnnn", {
-            "placeholder": "____ ______"
-        });
-        $('input#passport_code').mask("nnn-nnn", {
-            "placeholder": "___-___"
-        });
-        $('input#birthdate').mask("nn/nn/nnnn", {
-            "placeholder": "__/__/__"
-        });
-        $('input#passportdate').mask("nn/nn/nnnn", {
-            "placeholder": "__/__/__"
-        });
-        $('input#work_salary').mask("nnnn?nn", {
-            "placeholder": ""
-        });
-        $('input#work_experience').mask("n?nn", {
-            "placeholder": ""
-        });
-        $('input#flat').mask("n?***", {
-            "placeholder": ""
-        });
-        $('input#building').mask("n?***", {
-            "placeholder": ""
-        });
-        $('input#work_house').mask("n?***", {
-            "placeholder": ""
-        });
+ 
     });
 </script>
 <!-- Rating@Mail.ru counter -->

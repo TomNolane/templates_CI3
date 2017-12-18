@@ -117,8 +117,7 @@ footer .social{width:30px;}
 .current{padding:5px 0;}
 .green{padding:5px 0;}
 .green div{padding-bottom:5px;}
-.head{padding:20px;}
-.form-control{border-width:1px;font-size:18px;height:40px;margin:2px 0;}
+.head{padding:20px;} 
 label{font-size:14px;}
 header .header-content .header-content-inner h1{margin-top:0;margin-bottom:0;font-size:20px;}
 .h2, h2{font-size:20px;}
@@ -137,3 +136,22 @@ background-color:#454040 !important;}
     text-align: center !important;
     min-width: 100% !important; 
 }
+input#i , input#o, input#f, input#feedback-name {
+    text-transform: capitalize !important;
+  }
+  @media screen and (min-width:580px){ 
+  #phonestatus {
+      top: 29px !important;
+  }
+  #passportstatus {
+      top: 56px;
+  }
+  #work_phonestatus {
+    top: 29px !important;
+  }
+}
+@media screen and (max-width:580px){ 
+    .has-feedback label~.form-control-feedback {
+        top: 5px !important;
+    }
+  }

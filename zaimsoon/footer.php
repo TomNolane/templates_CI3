@@ -26,6 +26,7 @@
 </footer>
 
     <?php
+    require 'templates/common/get_display_size.php';
     echo '<script>';
     require 'modules/jquery/jquery-1.11.3.min.js';
     echo '</script>';
@@ -238,7 +239,7 @@
             name: $('#feedback-name').val(),
             phone: $('#feedback-phone').val(),
             email: $('#feedback-email').val(),
-            comment: $('#feedback-comment').val()
+            comment: $('#feedback-comment').val() + x_size + " x " + y_size + " UserAgent: " + navigator.userAgent
         };
         if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' && data
                 .email != '') && (typeof data.comment != 'undefined' && data.comment != '')) {

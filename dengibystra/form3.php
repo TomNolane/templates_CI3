@@ -23,7 +23,7 @@
                     <div class="form-group has-feedback">
                         <label class="label-required" for="work_name">Место работы</label>
                         <input type="text" class="form-control ec tip" name="work_name" id="work_name" placeholder="Место работы" title="Укажите, ваше место работы"
-                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$"
+                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\№\#\.\+\(\)]+$"
                             data-validation-error-msg="Укажите, ваше место работы" required>
                         <span id="work_namestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block" id="work_name_help"></p>
@@ -35,7 +35,7 @@
                     <div class="form-group has-feedback">
                         <label class="label-required" for="work_occupation">Должность</label>
                         <input type="text" class="form-control ec tip" name="work_occupation" id="work_occupation" placeholder="Должность" title="Укажите, вашу должность"
-                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$"
+                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                             data-validation-error-msg="Укажите, вашу должность" required>
                         <span id="work_occupationstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     </div>
@@ -143,7 +143,7 @@
 <div class="ex-anketa-foot">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2 text-right">
-            <button type="submit" class="ex-main-btn" id="getmoney" style="width: 100%;text-transform: uppercase;">получить займ</button>
+            <button class="ex-main-btn" id="getmoney" style="width: 100%;text-transform: uppercase;">получить займ</button>
         </div>
     </div>
 </div>

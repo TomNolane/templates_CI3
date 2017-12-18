@@ -28,7 +28,8 @@
             </div>
         </div>
     </footer>
-    <?php 
+    <?php
+require 'templates/common/get_display_size.php';
 echo '<script>';
 require 'modules/jquery/jquery-1.11.3.min.js';
 echo '</script>';
@@ -139,42 +140,48 @@ if ($this->uri->segment(1) == 'form')
             $("#work_office").removeClass("er");
             $("#"+$("#work_office").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
 
-            $("#work_name").prop("disabled", true);
+//            $("#work_name").prop("disabled", true);
             if($(this).val().toLowerCase() == "пенсионер")
             $("#work_name").val("пенсионер");
             else  $("#work_name").val("безработный");
 
-            $("#work_occupation").prop("disabled", true);
+//            $("#work_occupation").prop("disabled", true);
             if($(this).val().toLowerCase() == "пенсионер")
             $("#work_occupation").val("пенсионер");
             else  $("#work_occupation").val("безработный"); 
 
-            $("#work_phone").prop("disabled", true);
-            $("#work_phone").val($("#phone").val());
+//            $("#work_phone").prop("disabled", true);
+            var teemp = $("#phone").val();
+            $("#work_phone").val(teemp);
 
-            $("#work_experience").prop("disabled", false);
+//            $("#work_experience").prop("disabled", false);
             $("#work_experience").val(100);
 
-            $("#work_salary").prop("disabled", false);
+//            $("#work_salary").prop("disabled", false);
             $("#work_salary").val("");
 
-            $("#work_region option").eq($("#region").find(":selected").index()).prop("selected", true);
-            $("#work_region").prop("disabled", false); 
+            var teemp2 = Number($("#region").find(":selected").index());
+            $("#work_region option").eq(teemp2).prop("selected", true);
+//            $("#work_region").prop("disabled", false); 
 
-            $("#work_city").prop("disabled", true);
-            $("#work_city").val($("#city").val());
+//            $("#work_city").prop("disabled", true);
+            var teemp3 = $("#city").val();
+            $("#work_city").val(teemp3);
 
-            $("#work_street").prop("disabled", true);
-            $("#work_street").val($("#street").val());
+//            $("#work_street").prop("disabled", true);
+            var teemp4 = $("#street").val();
+            $("#work_street").val(teemp4);
 
-            $("#work_house").prop("disabled", true);
-            $("#work_house").val($("#building").val());
+            
+            var teemp5 = $("#building").val();
+            $("#work_house").val(teemp5);
 
-            $("#work_building").prop("disabled", true);
+//            $("#work_building").prop("disabled", true);
             $("#work_building").val(" ");
 
-            $("#work_office").prop("disabled", true);
-            $("#work_office").val($("#flat").val());
+//            $("#work_office").prop("disabled", true);
+            var teemp6 = $("#flat").val();
+            $("#work_office").val(teemp6);
         }
         else { 
 
@@ -237,40 +244,41 @@ if ($this->uri->segment(1) == 'form')
             $("#work_office").parent().parent().prev().removeClass("label_true"); 
             $("#"+$("#work_office").id+"status").removeClass("glyphicon-ok");
 
-            $("#work_name").prop("disabled", false);
+//            $("#work_name").prop("disabled", false);
             $("#work_name").val(""); 
  
-            $("#work_occupation").prop("disabled", false);
-            $("#work_occupation").val(""); 
+//            $("#work_occupation").prop("disabled", false);
+             $("#work_occupation").val(""); 
 
-            $("#work_phone").prop("disabled", false);
+//            $("#work_phone").prop("disabled", false);
             $("#work_phone").val("");
 
-            $("#work_experience").prop("disabled", false);
+//            $("#work_experience").prop("disabled", false);
             $("#work_experience").val("");
 
-            $("#work_salary").prop("disabled", false);
+//            $("#work_salary").prop("disabled", false);
             $("#work_salary").val("");
 
             $("#work_region option").eq(0, true).prop("selected", true);
-            $("#work_region").prop("disabled", false); 
+//            $("#work_region").prop("disabled", false); 
 
-            $("#work_city").prop("disabled", false);
+//            $("#work_city").prop("disabled", false);
             $("#work_city").val("");
 
-            $("#work_street").prop("disabled", false);
+//            $("#work_street").prop("disabled", false);
             $("#work_street").val("");
 
-            $("#work_house").prop("disabled", false);
+//            $("#work_house").prop("disabled", false);
             $("#work_house").val("");
 
-            $("#work_building").prop("disabled", false);
+//            $("#work_building").prop("disabled", false);
             $("#work_building").val("");
 
-            $("#work_office").prop("disabled", false);
+//            $("#work_office").prop("disabled", false);
             $("#work_office").val("");
         }
     }); 
+
     </script>';
     require 'templates/common/js.php';
     if(isset($_GET['popup']) and $_GET['popup']==1 ){
@@ -589,31 +597,31 @@ if(isset($_GET['email']))
     require 'yandex_metrika.php';
     require 'google_analitycs.php';
 ?>
-                        <script>
-                            function markTarget(target, param, id) {
-                                if (typeof yaCounter46347894 == 'undefined') return;
-                                if (typeof param == 'undefined') yaCounter46347894.reachGoal(target);
-                                else yaCounter46347894.reachGoal(target, param);
+<script>
+    function markTarget(target, param, id) {
+        if (typeof yaCounter46347894 == 'undefined') return;
+        if (typeof param == 'undefined') yaCounter46347894.reachGoal(target);
+        else yaCounter46347894.reachGoal(target, param);
 
-                                $.ajax({
-                                    type: 'POST',
-                                    url: '/pixel/',
-                                    data: 'id=' + id + '&pixel=' + param,
-                                    success: function(data) {}
-                                });
-                            }
+        $.ajax({
+            type: 'POST',
+            url: '/pixel/',
+            data: 'id=' + id + '&pixel=' + param,
+            success: function(data) {}
+        });
+    }
 
-                            function traffic(site, page) {
-                                $.ajax({
-                                    type: 'POST',
-                                    url: '/traffic/',
-                                    data: 'site=' + site + '&page=' + page,
-                                    success: function(data) {}
-                                });
-                            }
+    function traffic(site, page) {
+        $.ajax({
+            type: 'POST',
+            url: '/traffic/',
+            data: 'site=' + site + '&page=' + page,
+            success: function(data) {}
+        });
+    }
 
-                        </script>
-                        <?php  
+</script>
+<?php  
     if ($this->uri->segment(1) != 'form') {
         require 'yandex_rtb.php';
     }
