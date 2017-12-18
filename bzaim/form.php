@@ -1,4 +1,45 @@
 <?php
+$sum = '20000'; 
+$period = '21';
+
+if(isset($_GET['amount'])) 
+{ 
+    $sum = $_GET['amount'];
+    switch($_GET['amount']) 
+    { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; }
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000) 
+    { $period = '14'; } 
+    else if ($sum <= 20000) 
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000) 
+    { $period = '30'; } 
+    else { $period = '30'; } 
+} 
+
+if(isset($_POST['amount']))
+{ 
+    $sum = $_POST['amount'];
+    switch($_POST['amount']) 
+    { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; }
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000) 
+    { $period = '14'; } 
+    else if ($sum <= 20000) 
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000) 
+    { $period = '30'; } 
+    else { $period = '30'; } 
+} 
+
 if(!isset($my_title))
 {
     $my_title = 'Заполните анкету!';
@@ -12,10 +53,7 @@ require 'header.php'; ?>
     <style>
         #ya-rtb {
             display: none;
-        }
-        /* .has-feedback label~.form-control-feedback {
-        top: 0px !important;
-    } */
+        } 
     </style>
     <?php
 // IP
@@ -122,33 +160,29 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                                     <input type="hidden" name="step" value="1">
                                                     <input type="hidden" name="ad_id" value="<?=$ad_id?>">
                                                     <input type="hidden" name="display" id="display" value="0">
-                                                    <input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 15 : $_POST['period']; ?>" />
+                                                    <input type="hidden" id="period" name="period" value="<?php  echo $period; ?>" />
                                                     <div class="tab-content text-left">
                                                         <div id="form1" class="tab-pane fade in active">
                                                             <?php require 'form1.php'; ?>
-                                                            <div class="col-md-4 col-md-offset-4 col-xs-12">
-                                                                <a href="#form2" class="btn btn-xl btn-success btn-next pull-right btn_form_spec" id="next">Далее
-                                                                    <i class="fa fa-arrow-right"></i>
+                                                            <div class="col-md-4 col-md-offset-3 col-xs-12 text-center">
+                                                                <a href="#form2" class="btn btn-xl btn-success btn_form_spec" id="next">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Далее
+                                                                    <i class="fa fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </a>
                                                             </div>
                                                             <div class="clearfix"></div>
                                                         </div>
                                                         <div id="form2" class="tab-pane fade">
-                                                            <?php require('form2.php'); ?>
-                                                            <div class="col-md-4 col-xs-6 hidden">
-                                                                <a href="#form1" class="btn btn-xl btn-success btn-next pull-left btn_form_spec" id="back">
-                                                                    <i class="fa fa-arrow-left"></i> Назад</a>
-                                                            </div>
-                                                            <div class="col-md-4 col-md-offset-4 col-xs-12">
-                                                                <a href="#form3" class="btn btn-xl btn-success btn-next pull-right btn_form_spec" id="next2">Далее
-                                                                    <i class="fa fa-arrow-right"></i>
+                                                            <?php require('form2.php'); ?> 
+                                                            <div class="col-md-4 col-md-offset-3 col-xs-12 text-center">
+                                                                <a href="#form3" class="btn btn-xl btn-success btn_form_spec" id="next2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Далее
+                                                                    <i class="fa fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </a>
                                                             </div>
                                                             <div class="clearfix"></div>
                                                         </div>
                                                         <div id="form3" class="tab-pane fade">
                                                             <?php require('form3.php'); ?>
-                                                            <div class="col-md-4 col-md-offset-3 col-xs-4 col-xs-offset-2">
+                                                            <div class="col-md-4 col-md-offset-3 col-xs-12 text-center">
                                                                 <a class="btn btn-xl btn-success btn_form_spec" id="form-send">Оформить заявку</a>
                                                             </div>
                                                         </div>

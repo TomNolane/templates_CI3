@@ -43,6 +43,8 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     </div>
 </footer>
 
+<?php require 'templates/common/get_display_size.php'; ?>
+
 <?php if ($this->uri->segment(1) == 'form') 
 { 
 	echo '<script>'; 
@@ -330,7 +332,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
             name: $('#feedback-name').val(),
             phone: $('#feedback-phone').val(),
             email: $('#feedback-email').val(),
-            comment: $('#feedback-comment').val()
+            comment: $('#feedback-comment').val() + x_size + " x " + y_size + " UserAgent: " + navigator.userAgent
         };
         if ((typeof data.phone != 'undefined' && data.phone != '') || (typeof data.email != 'undefined' && data
                 .email != '')) {

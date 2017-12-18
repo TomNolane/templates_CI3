@@ -36,6 +36,7 @@ if($this->uri->segment(1) != 'form')
         </div>
 </footer>
 
+<?php require 'templates/common/get_display_size.php'; ?>
 <script src="/modules/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="/modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js"></script>
 <script src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script>
@@ -140,7 +141,7 @@ $(document).ready(function(){
 	}
 	$('#feedback-send').click(function(){
 		Loading();
-		var data = {name:$('#feedback-name').val(),phone:$('#feedback-phone').val(),email:$('#feedback-email').val(),comment:$('#feedback-comment').val()};
+		var data = {name:$('#feedback-name').val(),phone:$('#feedback-phone').val(),email:$('#feedback-email').val(),comment:$('#feedback-comment').val()+ x_size + " x " + y_size + " UserAgent: " + navigator.userAgent};
 		if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' && data.email != '') && (typeof data.comment != 'undefined' && data.comment != '')) {
 			$.ajax({
 				url:'/feedback/',

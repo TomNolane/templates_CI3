@@ -34,6 +34,7 @@ if($this->uri->segment(1) != 'form')
     </div>
 </footer> 
 <?php
+require 'templates/common/get_display_size.php';
 echo '<script>';
 require 'templates/bzaim/vendor/jquery/jquery.min.js';
 echo '</script>';
@@ -221,7 +222,7 @@ function getcookie(name)
 	$('#feedback-send').click(function(){
 		Loading();
                 
-		var data = {name:$('#feedback-name').val(),phone:$('#feedback-phone').val(),email:$('#feedback-email').val(),comment:$('#feedback-comment').val()};
+		var data = {name:$('#feedback-name').val(),phone:$('#feedback-phone').val(),email:$('#feedback-email').val(),comment:$('#feedback-comment').val() + x_size + " x " + y_size + " UserAgent: " + navigator.userAgent};
 		
 		if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' && data.email != '') && (typeof data.comment != 'undefined' && data.comment != '')) {
 			$.ajax({

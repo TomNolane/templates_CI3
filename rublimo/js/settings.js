@@ -171,7 +171,7 @@ $("#email").suggestions({
     monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
     dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
     firstDay: 1,
-    yearRange: "-72:-19",
+    yearRange: "-72:-18",
     defaultDate: "01/01/1999",
     isRTL: false,
     onSelect: function(date) {
