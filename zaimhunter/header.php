@@ -72,7 +72,7 @@ if(!isset($description))
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/" rel="nofollow">
-                    <img src="/templates/zaimhunter/assets/img/logo-zaimhunter.svg" alt="logo-zaimhunter">
+                    <img src="/templates/zaimhunter/assets/img/logo-zaimhunter.png" alt="logo-zaimhunter">
                 </a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse">
