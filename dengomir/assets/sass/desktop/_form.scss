@@ -1,0 +1,351 @@
+.ex-form {
+  background-color: #f5f5f5;
+  padding-top: 58px;
+  padding-bottom: 71px;
+  .ex-bg-form {
+    background-image: url("../img/russia-map-3.png");
+    background-repeat: no-repeat;
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #1f1c09;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
+  .tab-content {
+    margin: 0 auto;
+    width: 680px;
+    .ex-main-form {
+      .ex-tab-steps {
+        font-size: 0;
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 0;
+        li {
+          padding-top: 6px;
+          padding-bottom: 6px;
+          display: inline-block;
+          width: 220px;
+          margin-right: 10px;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 20px;
+          text-transform: uppercase;
+          border-radius: 5px 5px 0 0;
+          background-color: #6781e7;
+          color: #ffffff;
+          text-align: center;
+          vertical-align: bottom;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        .ex-step-active-first {
+          padding-top: 11px;
+          padding-bottom: 11px;
+          background-color: #5d4889;
+        }
+        .ex-step-active {
+          background-color: #5d4889;
+        }
+      }
+      .ex-form-wrap {
+        padding: 30px 48px;
+        box-shadow: 0 2px 4px rgba(18, 51, 51, 0.17);
+        background-color: #ffffff;
+        .form-group {
+          margin-right: 0;
+          margin-left: 0;
+          margin-bottom: 0;
+        }
+        label {
+          padding-top: 30px;
+          color: #30323e;
+          font-size: 14px;
+          font-weight: 700;
+          @media (max-width: 1199px) {
+            font-size: 12px;
+          }
+          @media (max-width: 991px) {
+            margin-bottom: 5px;
+            padding-top: 10px;
+          }
+
+        }
+        .ex-wrapper {
+          position: relative;
+          &.ex-success {
+            &:after {
+              content: '';
+              position: absolute;
+              width: 10px;
+              height: 9px;
+              right: 0;
+              top: 20px;
+              background-image: url(../img/icons/icon-check.png);
+              background-repeat: no-repeat;
+            }
+            input {
+              background-color: #fff;
+              padding-right: 40px;
+              border-bottom: 1px solid #5d4889 !important;
+              @media (max-width: 414px) {
+                font-size: 14px;
+                @include placeholder {
+                  color: #c0c0c0;
+                  font-size: 12px;
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+          &.ex-error {
+            &:after {
+              content: '';
+              position: absolute;
+              width: 8px;
+              height: 9px;
+              right: 0;
+              top: 20px;
+              background-image: url(../img/icons/icon-cross.png);
+              background-repeat: no-repeat;
+            }
+            input {
+              padding-right: 40px;
+              @include placeholder {
+                color: #f85359;
+                font-size: 16px;
+                font-weight: 400;
+              }
+              @media (max-width: 1199px) {
+                font-size: 14px;
+                @include placeholder {
+                  color: #f85359;
+                  font-size: 14px;
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+          &.ex-arrow {
+            &:after {
+              content: '';
+              position: absolute;
+              width: 8px;
+              height: 9px;
+              right: 0;
+              top: 30px;
+              background-image: url(../img/icons/icon-arrow.png);
+              background-repeat: no-repeat;
+            }
+          }
+
+          input {
+            height: 50px;
+            border: none;
+            border-radius: 0;
+            color: #262626;
+            font-size: 16px;
+            font-weight: 400;
+            box-shadow: none;
+            border-bottom: 1px solid #30323e;
+            padding: 6px 9px;
+            &:focus {
+              border-bottom: 1px solid #6781e7;
+              background-color: #ffffff;
+            }
+            @include placeholder {
+              color: #c0c0c0;
+              font-size: 14px;
+              font-weight: 400;
+            }
+            @media (max-width: 414px) {
+              height: 35px;
+              font-size: 14px;
+              @include placeholder {
+                color: #c0c0c0;
+                font-size: 14px;
+                font-weight: 400;
+              }
+            }
+          }
+          select {
+            font-weight: 400;
+            box-shadow: none;
+            border: none;
+            height: 60px;
+            border-bottom: 1px solid #30323e;
+            color: #c0c0c0;
+            font-size: 16px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+            padding: 6px 9px;
+
+            border-radius: 0;
+            option {
+              color: #262626;
+              font-size: 16px;
+              font-weight: 400;
+            }
+            @media (max-width: 414px) {
+              font-size: 12px;
+            }
+          }
+        }
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          margin: 0;
+        }
+        @media (max-width: 991px) {
+          padding: 30px 15px;
+        }
+      }
+    }
+  }
+  #firstStep {
+    padding-top: 57px;
+  }
+  #secondStep {
+    padding-top: 45px;
+    .ex-step-info {
+      margin-bottom: 40px;
+    }
+    .media {
+      margin-top: 20px;
+      .media-left {
+        vertical-align: middle;
+        padding-right: 0;
+        .ex-coincidence-check {
+          margin: 0;
+          min-width: 163px;
+          list-style: none;
+          padding-left: 0;
+          display: inline-block;
+          li {
+            color: #AAAAAA;
+            display: block;
+            position: relative;
+            float: left;
+            input[type=radio] {
+              position: absolute;
+              visibility: hidden;
+            }
+            input[type=radio]:checked ~ .check {
+              border: 1px solid #333333;
+            }
+
+            input[type=radio]:checked ~ .check::before {
+              background: #333333;
+            }
+            label {
+              display: block;
+              position: relative;
+              color: #333333;
+              font-size: 14px;
+              font-weight: 700;
+              padding: 3px 25px 0 35px;
+              z-index: 9;
+              cursor: pointer;
+              -webkit-transition: all 0.25s linear;
+            }
+            .check {
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 5;
+              width: 24px;
+              height: 24px;
+              background-color: #fff;
+              border: 1px solid #c8cfce;
+              transition: border .25s linear;
+              -webkit-transition: border .25s linear;
+              @include prefix(border-radius, 50%);
+              &:before {
+                display: block;
+                position: absolute;
+                content: '';
+                top: 5px;
+                left: 5px;
+                width: 12px;
+                height: 12px;
+                margin: auto;
+                transition: background 0.25s linear;
+                -webkit-transition: background 0.25s linear;
+                @include prefix(border-radius, 50%);
+              }
+            }
+          }
+        }
+        @media (max-width: 414px) {
+          display: block;
+          ul {
+            li {
+              label {
+                font-size: 12px !important;
+              }
+            }
+          }
+        }
+      }
+      .media-body {
+        padding-bottom: 5px;
+        font-size: 14px;
+        font-weight: 700;
+        vertical-align: middle;
+        @media (max-width: 414px) {
+          display: block;
+          width: 100%;
+          font-size: 12px;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .ex-main-btn {
+      margin-top: 32px;
+    }
+  }
+  #thirdStep {
+    padding-top: 45px;
+    .ex-main-btn {
+      margin-top: 32px;
+    }
+  }
+  .ex-main-btn {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #5d4889;
+    margin-top: 46px;
+    i {
+      position: relative;
+      top: 2px;
+      margin-left: 16px;
+      display: inline-block;
+      width: 20px;
+      height: 15px;
+      background-image: url("../img/icon-cross.png");
+      background-repeat: no-repeat;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .tab-content {
+    width: 100% !important;
+    .ex-tab-steps {
+      display: none;
+    }
+  }
+}
