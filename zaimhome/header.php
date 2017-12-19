@@ -160,7 +160,7 @@ if(!isset($description))
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/" class="navbar-brand">
-                    <img src="/templates/zaimhome/assets/img/Zaimhome_logo.svg" alt="Image missing">
+                    <img src="/templates/zaimhome/assets/img/zaimhome_logo.png" alt="Image missing">
                 </a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse">
