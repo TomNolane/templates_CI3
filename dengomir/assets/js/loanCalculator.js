@@ -14,15 +14,17 @@ $(document).ready(function () {
     var currentLoanSize = gg,
         range = $("#rangeSlider"),
         commissionPercantage = 13,
+        bet = 'от 1.27%',
         rangeUpperValue =  $('.ex-slider-val'),
         rangeTableValue = $('.ex-current-val'),
         timeTable = $('.ex-time'),
+        betSize = $('.ex-bet'),
         commissionTableSize = $('.ex-Commission'),
         returnTable = $('.ex-total'),
         probabilityTable = $('.irs-single'),
         probabilityTable2 = $('.ex-prob'),
         probability = 95,
-        time = 'от 61 дня',
+        time = '61 дня',
         commission = (currentLoanSize * commissionPercantage) / 100,
         returnTotal = currentLoanSize + commission,
         setDynamicProbability = function () {
@@ -47,50 +49,42 @@ $(document).ready(function () {
         },
         setDynamicTimePeriod = function () {
             if(currentLoanSize < 20000){
-                time = 'от 100 дней';
+                time = '61 дня';
                 timeTable.html("<span>"+time+"</span>");
-            }if(currentLoanSize < 11000){
-                time = 'от 61 дня';
+            }if(currentLoanSize < 8000){
+                time = '61 дня';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize >= 20000 && currentLoanSize < 30000){
-                time = 'от 130 дней';
+                time = '130 дня';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize > 30000 && currentLoanSize < 50000){
-                time = 'от 200 дней';
+                time = '200 дня';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize > 50000){
-                time = 'от 250 дней';
+                time = '250 дня';
                 timeTable.html("<span>"+time+"</span>");
             }
-        },
-        drawValuesStyle = function (currentValParam) {
-            var splitedLoanVal = currentValParam.split('');
-            if(currentValParam.length === 6){
-                rangeUpperValue.append('<span class="noSelect"></span>')
-            }else if(currentValParam.length === 5){
-                rangeUpperValue.append('<span class="noSelect"></span><span class="noSelect"></span>')
-            }
-            for (i = 0; i < splitedLoanVal.length; i++) {
-                rangeUpperValue.append('<span class="noSelect">'+ splitedLoanVal[i] +'</span>');
-            }
-            rangeUpperValue.find('span').each(function(){
-                var CurrentEl = $(this).text();
-                if (!CurrentEl.replace(/\s/g, '').length) {// string only contained whitespace (ie. spaces, tabs or line breaks)
-                    $(this).addClass('ex-empty');
-                }
-            });
         };
+    setDynamicBet = function () {
+        if(currentLoanSize > 30000){
+            bet = 'от 0,2%';
+            betSize.html(bet);
+        }else{
+            bet = 'от 1.27%';
+            betSize.html(bet);
+        }
+    };
     //------------------------Declaration of variables end-------------------------
-    drawValuesStyle(currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+    rangeUpperValue.append("<span>"+currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+"</span><span> рублей</span>");
     rangeTableValue.append("<span>"+currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" рублей</span>");
     timeTable.append("<span>"+time+"</span>");
+    betSize.html(bet);
     commissionTableSize.append("<span>"+commission.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" рублей</span>");
     returnTable.append("<span>"+returnTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" рублей</span>");
     probabilityTable.text('').append("<span>вероятность "+ probability+"%</span>");
     probabilityTable2.text('').append("<span>"+ probability+"%</span>");
     //-------------------Use this function to get and set range slider current value----------------------//
     range.on("change", function () {
-        rangeUpperValue.html('');
         probabilityTable.css('margin-left', '0');
         currentLoanSize = parseInt($(this).prop("value"));
         commission = (currentLoanSize * commissionPercantage) / 100;
@@ -98,11 +92,12 @@ $(document).ready(function () {
         var currentLoanToShow = currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "),
             commissionToShow = commission.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "),
             totalToShow = returnTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        rangeUpperValue.html("<span>"+currentLoanToShow+"</span><span> рублей</span>");
         rangeTableValue.html("<span>"+currentLoanToShow+" рублей</span>");
         commissionTableSize.html("<span>"+commissionToShow+" рублей</span>");
         returnTable.html("<span>"+totalToShow+" рублей</span>");
         setDynamicProbability();
         setDynamicTimePeriod();
-        drawValuesStyle(currentLoanToShow);
+        setDynamicBet();
     });
 });

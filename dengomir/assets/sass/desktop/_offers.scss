@@ -1,0 +1,305 @@
+.ex-offers {
+  padding-bottom: 59px;
+  padding-top: 58px;
+  h1 {
+    text-align: center;
+    color: #1f1c09;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-top: 0;
+    margin-bottom: 39px;
+  }
+  .ex-offers-block {
+    padding-left: 24px;
+    padding-right: 24px;
+    &:hover {
+      cursor: pointer;
+      table {
+        margin: 0 auto;
+        tr {
+          height: 120px;
+          td {
+            border-bottom: 1px solid transparent;
+            &:first-child {
+              width: 300px;
+              p {
+                .fa-star {
+                  font-size: 11px;
+                  color: #f8e71c;
+                }
+                .fa-star-o {
+                  font-size: 11px;
+                  color: #979797;
+                }
+              }
+              .ex-offers-img1 {
+                -webkit-filter: initial;
+                filter: initial;
+              }
+              .ex-offers-img2 {
+                -webkit-filter: initial;
+                filter: initial;
+              }
+              .ex-offers-img3 {
+                -webkit-filter: initial;
+                filter: initial;
+              }
+              .ex-offers-img4 {
+                -webkit-filter: initial;
+                filter: initial;
+              }
+            }
+          }
+          .ex-main-btn {
+            background-color: #5d4889;
+          }
+        }
+      }
+    }
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      width: 100%;
+      table-layout: fixed;
+      margin: 0 auto;
+      background-color: #f5f5f5;
+      border-bottom: 1px solid lighten(#000000, 90%);
+      tr {
+        height: 120px;
+        td {
+          text-align: center;
+          color: #333333;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 24px;
+          div {
+            position: relative;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 14px;
+            letter-spacing: 0.26px;
+            z-index: 45;
+            p {
+              font-size: 18px;
+              font-weight: 700;
+              letter-spacing: 0.34px;
+              margin-bottom: 0;
+              padding-top: 10px;
+            }
+          }
+          &:first-child {
+            width: 300px;
+            background-color: #5d4889;
+            padding-left: 45px;
+            padding-right: 45px;
+            p {
+              .fa-star {
+                font-size: 11px;
+                color: #FFFFFF;
+              }
+              .fa-star-o {
+                font-size: 11px;
+                color: #979797;
+              }
+            }
+            .ex-offers-img1 {
+              width: 234px;
+              height: 55px;
+              background-image: url("../img/kredito24-300x70.png");
+              background-repeat: no-repeat;
+              -webkit-background-size: contain;
+              background-size: contain;
+              -moz-transition:all .3s linear;
+              -ms-transition:all .3s linear;
+              -webkit-transition:all .3s linear;
+              transition:all .3s linear;
+              @media (max-width: 480px) {
+                width: 100%;
+              }
+              @media (min-width: 992px) {
+                -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                filter: grayscale(100%);
+              }
+            }
+            .ex-offers-img2 {
+              width: 209px;
+              height: 55px;
+              background-image: url("../img/Turbozaim.png");
+              background-repeat: no-repeat;
+              -webkit-background-size: contain;
+              background-size: contain;
+              -moz-transition:all .3s linear;
+              -ms-transition:all .3s linear;
+              -webkit-transition:all .3s linear;
+              transition:all .3s linear;
+              @media (max-width: 480px) {
+                width: 100%;
+              }
+              @media (min-width: 992px) {
+                -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                filter: grayscale(100%);
+              }
+            }
+            .ex-offers-img3 {
+              width: 223px;
+              height: 52px;
+              background-image: url("../img/Moneyman.png");
+              background-repeat: no-repeat;
+              -webkit-background-size: contain;
+              background-size: contain;
+              -moz-transition:all .3s linear;
+              -ms-transition:all .3s linear;
+              -webkit-transition:all .3s linear;
+              transition:all .3s linear;
+              @media (max-width: 480px) {
+                width: 100%;
+              }
+              @media (min-width: 992px) {
+                -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                filter: grayscale(100%);
+              }
+            }
+            .ex-offers-img4 {
+              width: 218px;
+              height: 51px;
+              background-image: url("../img/Zaimer.png");
+              background-repeat: no-repeat;
+              -webkit-background-size: contain;
+              background-size: contain;
+              -moz-transition:all .3s linear;
+              -ms-transition:all .3s linear;
+              -webkit-transition:all .3s linear;
+              transition:all .3s linear;
+              @media (max-width: 480px) {
+                width: 100%;
+              }
+              @media (min-width: 992px) {
+                -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                filter: grayscale(100%);
+              }
+            }
+            @media (max-width: 991px) {
+              background: none;
+            }
+          }
+          &:last-child {
+            padding-right: 10px;
+            padding-left: 10px;
+          }
+          .ex-main-btn {
+            margin-top: 0;
+            margin-bottom: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 16px;
+            -moz-transition:all .3s linear;
+            -ms-transition:all .3s linear;
+            -webkit-transition:all .3s linear;
+            transition:all .3s linear;
+            @media (max-width: 1199px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  tr {
+    td {
+      div {
+        p {
+          font-size: 14px !important;
+        }
+      }
+      &:last-child {
+        padding-left: 5px;
+        padding-right: 5px;
+
+      }
+      &:first-child {
+        width: 260px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        figure {
+          margin-top: 10px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .ex-offers-block {
+    margin-bottom: 50px;
+  }
+  table {
+    height: 470px;
+    border: 0;
+    td {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      &:first-child {
+        width: auto !important;
+        figure {
+          margin: 10px auto;
+        }
+        div {
+          p {
+            padding-top: 0 !important;
+          }
+        }
+      }
+    }
+  }
+  table tr {
+    height: auto;
+    display: block;
+  }
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 16px !important;
+    text-align: right;
+  }
+  table td:last-child {
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom: 0;
+    .ex-main-btn{
+      width: 70%;
+    }
+  }
+}
+#default{
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 5px;
+}
+#kayan_arka{
+  top: -40%;
+  width: 100%;
+  height: 127px;
+  -moz-transition:all .3s linear;
+  -ms-transition:all .3s linear;
+  -webkit-transition:all .3s linear;
+  transition:all .3s linear;
+  background:none repeat scroll 0 0 #FFDC00;
+  display:inline-block;
+  margin-top:-3px;
+  padding:0;
+  position:absolute;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  background-color: #f5f5f5;
+  z-index: 45;
+  @media (max-width: 991px) {
+    display: none;
+  }
+}

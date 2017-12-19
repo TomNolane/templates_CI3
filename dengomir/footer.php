@@ -5,25 +5,52 @@
     } 
 ?>
 
-<footer class="ex-main-footer">
+<footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-2 ex-foot-logo">
-                <a href="/"><img src="/templates/zaimsoon/assets/img/logo-footer.png" alt="logo-footer.png"></a>
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-3 ex-foot-logo">
+                        <a href="/"><img src="/templates/dengomir/assets/img/icons/logo-footer.png" alt="logo-footer.png"></a>
+                    </div>
+                    <div class="col-md-9">
+                        <p class="spec_footer7">Сервис по подбору выгодных онлайн займов Dengomir, находящийся по адресу
+                            Россия, Ленинградская обл., г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
+                            <a href="mailto:support@dengomir.ru" class="special_footer99" target="_blank">| support@dengomir.ru</a></span> | +7(495) 006 19 61<br>
+                            <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365
+                            дней.
+                            Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
+                            Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель
+                            под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200
+                            рублей.
+                            Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения
+                            ИП «Бабакова К.К.»ОГРНИП 316222500122426 ИНН 222511216499</span></p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-10">
-                <p class="spec_footer7">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г.
-                    Санкт-Петербург, ул. Осипенко, 12, оф 201| <a href="mailto:support@zaimsoon.ru" class="special_footer99" target="_blank">support@zaimsoon.ru</a> | +7(495) 006 19 61 <span class="hidden-xs hidden-sm">Займы
-                    предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
-                    Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета
-                    общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
-                    за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей
-                    выдается по ставке 0% в случае своевременного погашения
-                    | ИП «Бабакова К.К.»ОГРНИП 316222500122426 ИНН 222511216499</span></p>
+            <div class="col-md-5">
+                <div class="col-md-6">
+                    <p class="ex-list-title">Документы</p>
+                    <ul>
+                        <li><a href="/oferta">Публичная оферта</a></li>
+                        <li><a href="/soglasie">Согласие на обработку данных</a></li>
+                        <li><a href="/rules">Правила предоставления займов</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <p class="ex-list-title">Получение денег</p>
+                    <ul>
+                        <li><a href="/zaim-card">Займ на банковскую карту</a></li>
+                        <li><a href="/zaim-qiwi">Займ на QIWI кошелёк</a></li>
+                        <li><a href="/zaim-contact">Займ через Contact</a></li>
+                        <li><a href="/zaim-yandex">Займ на Яндекс.Деньги</a></li>
+                        <li><a href="/zaim-bank">Займ на банковский счёт</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-</footer>
+</footer> 
 
     <?php
     require 'templates/common/get_display_size.php';
@@ -43,25 +70,25 @@
     require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimsoon/assets/js/jquery.form-validator.js';
+    require 'templates/dengomir/assets/js/jquery.form-validator.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimsoon/assets/js/jquery.suggestions.min.js';
+    require 'templates/dengomir/assets/js/jquery.suggestions.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimsoon/assets/js/coockie.js';
+    require 'templates/dengomir/assets/js/coockie.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimsoon/assets/js/custom.js';
+    require 'templates/dengomir/assets/js/custom.js';
     echo '</script>'; 
     echo '<script>';
-    require 'templates/zaimsoon/assets/js/settings_main.js';
+    require 'templates/dengomir/assets/js/settings_main.js';
     echo '</script>'; 
     echo '<script>';
-    require 'templates/zaimsoon/assets/js/owl.carousel.min.js';
+    require 'templates/dengomir/assets/js/owl.carousel.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimsoon/assets/js/settings_form.js';
+    require 'templates/dengomir/assets/js/settings_form.js';
     echo '</script>';
     ?>
 
@@ -75,7 +102,7 @@
     require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimsoon/assets/js/loanCalculator.js';
+    require 'templates/dengomir/assets/js/loanCalculator.js';
     echo '</script>';
 ?>
 
@@ -109,8 +136,6 @@
         hide_from_to: true,
         keyboard: true,
         grid: false,
-        prettify_enabled: true,
-        prettify_separator: ".",
         from: <?php 
         if(isset($_GET['amount'])) 
         {  
@@ -218,18 +243,7 @@
             $('#feedback-send').html('Отправить');
             $('#feedback-send').prop('disabled', false); 
         }
-    }
-
-    function Loading2(flag) 
-    {
-        if (typeof flag == 'undefined') { 
-            $('#feedback-send2').prop('disabled', true);
-            $('#feedback-send2').html('Отправлено <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        } else if (!flag) {
-            $('#feedback-send2').html('Отправить');
-            $('#feedback-send2').prop('disabled', false); 
-        }
-    }
+    } 
 
     $('#feedback-send').click(function () 
     {
@@ -271,76 +285,32 @@
             alert('Пожалуйста, заполните все поля.');
         }
     });
-
-    $('#feedback-send2').click(function () {
-        Loading2();
-        var data2 = {
-            name: $('#feedback-name2').val(),
-            phone: $('#feedback-phone2').val(),
-            email: $('#feedback-email2').val(),
-            comment: $('#feedback-comment2').val()
-        };
-        if ((typeof data2.phone != 'undefined' && data2.phone != '') && (typeof data2.email != 'undefined' && data2
-                .email != '') && (typeof data2.comment != 'undefined' && data2.comment != '')) {
-            $.ajax({
-                url: '/feedback/',
-                type: 'POST',
-                dataType: 'json',
-                data: data2
-            }).done(function (response) {
-                if (response != null) {
-                    if (typeof response.error != 'undefined') {
-                        alert('Ошибка. ' + response.error);
-                    } else { 
-                        Loading(0); 
-                        alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
-                        $('#feedback-send2').prop("disabled", true);
-                    }
-                } else {
-                    alert('Не получилось отправить. Попробуйте ещё раз.'); 
-                }
-            }).fail(function (jqxhr, textStatus, error) {
-                alert('Не получилось отправить. Попробуйте ещё раз.');
-            }).always(function () {
-                Loading(0);
-            });
-        } else {
-            Loading2(0);
-            alert('Пожалуйста, заполните все поля.');
-        }
-    });
+ 
 </script>
 
     <?php
 		if ($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') { 
     ?>
 
-    <script>
-
-    $( ".button1" ).click(function() {
-        $( "#amount" ).val('5000');
-        $( "#period" ).val('7');
-        $( "#form_slrd" ).val('4'); 
-        $( "#anketa" ).submit();
-    });
-
-    $( ".button2" ).click(function() {
-        $( "#amount" ).val('15000');
-        $( "#period" ).val('14');
-        $( "#form_slrd" ).val('14'); 
-        $( "#anketa" ).submit();
-    });
-
+    <script> 
     $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
-        margin: 10,
+        margin: 40,
         nav: false,
-        items: 1,
+        items: 2,
         autoplay: true,
         autoplayTimeout: 5000,
         autoplaySpeed: 1000,
-        autoplayHoverPause: true
+        autoplayHoverPause: true,
+        responsive: {
+            1200: {
+                items: 2
+            },
+            320: {
+                items: 1
+            }
+        }
     });
     $(".ex-fast-start").click(function() {
         $(".ex-fast-start").toggleClass("ex-fast-active");
@@ -396,8 +366,17 @@
 <?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
 { 
     echo '<script>';
-    //require 'templates/zaimsoon/assets/js/owl.carousel.min.js';
+    require 'templates/dengomir/assets/js/owl.carousel.min.js';
     echo '</script>';
+    echo '<script>
+    jQuery(".ex-offers-block").hover(function(){
+        var yukseklik  = 120;
+        var sira 	   = $(this).index();
+        var konum 	   = yukseklik * (sira-1);
+        $("#kayan_arka").css({top:konum});
+
+    }, function(){});
+</script>';
     echo '<script> 
     var offers = '.json_encode($data).'
     var by_reg = null;
@@ -456,6 +435,210 @@
 <?php 
 if ($this->uri->segment(1) == 'form') 
 {
+    echo ' <script>
+    $("#work").change(function(){
+        if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
+        { 
+            $("#work_name").addClass("valid");
+            $("#work_name").parent().addClass("has-success").removeClass("has-error");
+            $("#work_name").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_name").removeClass("er");
+            $("#"+$("#work_name").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_occupation").addClass("valid");
+            $("#work_occupation").parent().addClass("has-success").removeClass("has-error");
+            $("#work_occupation").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_occupation").removeClass("er");
+            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_phone").addClass("valid");
+            $("#work_phone").parent().addClass("has-success").removeClass("has-error");
+            $("#work_phone").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_phone").removeClass("er");
+            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_experience").addClass("valid");
+            $("#work_experience").parent().addClass("has-success").removeClass("has-error");
+            $("#work_experience").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_experience").removeClass("er");
+            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_salary").addClass("valid");
+            $("#work_salary").parent().addClass("has-success").removeClass("has-error");
+            $("#work_salary").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_salary").removeClass("er"); 
+            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_region").addClass("valid");
+            $("#work_region").parent().addClass("has-success").removeClass("has-error");
+            $("#work_region").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_region").removeClass("er");
+            $("#"+$("#work_region").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_city").addClass("valid");
+            $("#work_city").parent().addClass("has-success").removeClass("has-error");
+            $("#work_city").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_city").removeClass("er");
+            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_street").addClass("valid");
+            $("#work_street").parent().addClass("has-success").removeClass("has-error");
+            $("#work_street").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_street").removeClass("er");
+            $("#"+$("#work_street").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_house").addClass("valid");
+            $("#work_house").parent().addClass("has-success").removeClass("has-error");
+            $("#work_house").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_house").removeClass("er");
+            $("#"+$("#work_house").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_office").addClass("valid");
+            $("#work_office").parent().addClass("has-success").removeClass("has-error");
+            $("#work_office").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_office").removeClass("er");
+            $("#"+$("#work_office").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+//            $("#work_name").prop("disabled", true);
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_name").val("пенсионер");
+            else  $("#work_name").val("безработный");
+
+//            $("#work_occupation").prop("disabled", true);
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_occupation").val("пенсионер");
+            else  $("#work_occupation").val("безработный"); 
+
+//            $("#work_phone").prop("disabled", true);
+            var teemp = $("#phone").val();
+            $("#work_phone").val(teemp);
+
+//            $("#work_experience").prop("disabled", false);
+            $("#work_experience").val(100);
+
+//            $("#work_salary").prop("disabled", false);
+            $("#work_salary").val("");
+
+            var teemp2 = Number($("#region").find(":selected").index());
+            $("#work_region option").eq(teemp2).prop("selected", true);
+//            $("#work_region").prop("disabled", false); 
+
+//            $("#work_city").prop("disabled", true);
+            var teemp3 = $("#city").val();
+            $("#work_city").val(teemp3);
+
+//            $("#work_street").prop("disabled", true);
+            var teemp4 = $("#street").val();
+            $("#work_street").val(teemp4);
+
+            
+            var teemp5 = $("#building").val();
+            $("#work_house").val(teemp5);
+
+//            $("#work_building").prop("disabled", true);
+            $("#work_building").val(" ");
+
+//            $("#work_office").prop("disabled", true);
+            var teemp6 = $("#flat").val();
+            $("#work_office").val(teemp6);
+        }
+        else { 
+
+            $("#work_name").val("");
+            $("#work_name").removeClass("valid");
+            $("#work_name").parent().removeClass("has-success");
+            $("#work_name").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_name").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_occupation").val("");
+            $("#work_occupation").removeClass("valid");
+            $("#work_occupation").parent().removeClass("has-success");
+            $("#work_occupation").parent().parent().prev().removeClass("label_true"); 
+            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-ok"); 
+
+            $("#work_phone").val("");
+            $("#work_phone").removeClass("valid");
+            $("#work_phone").parent().removeClass("has-success");
+            $("#work_phone").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_experience").val("");
+            $("#work_experience").removeClass("valid");
+            $("#work_experience").parent().removeClass("has-success");
+            $("#work_experience").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_salary").val("");
+            $("#work_salary").removeClass("valid");
+            $("#work_salary").parent().removeClass("has-success");
+            $("#work_salary").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-ok");
+ 
+            $("#work_region").removeClass("valid");
+            $("#work_region").parent().removeClass("has-success");
+            $("#work_region").parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_region").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_city").val("");
+            $("#work_city").removeClass("valid");
+            $("#work_city").parent().removeClass("has-success");
+            $("#work_city").parent().parent().prev().removeClass("label_true"); 
+            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-ok"); 
+
+            $("#work_street").val("");
+            $("#work_street").removeClass("valid");
+            $("#work_street").parent().removeClass("has-success");
+            $("#work_street").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_street").id+"status").removeClass("glyphicon-ok"); 
+
+            $("#work_house").val("");
+            $("#work_house").removeClass("valid");
+            $("#work_house").parent().removeClass("has-success");
+            $("#work_house").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_house").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_office").val("");
+            $("#work_office").removeClass("valid");
+            $("#work_office").parent().removeClass("has-success");
+            $("#work_office").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_office").id+"status").removeClass("glyphicon-ok");
+
+//            $("#work_name").prop("disabled", false);
+            $("#work_name").val(""); 
+ 
+//            $("#work_occupation").prop("disabled", false);
+             $("#work_occupation").val(""); 
+
+//            $("#work_phone").prop("disabled", false);
+            $("#work_phone").val("");
+
+//            $("#work_experience").prop("disabled", false);
+            $("#work_experience").val("");
+
+//            $("#work_salary").prop("disabled", false);
+            $("#work_salary").val("");
+
+            $("#work_region option").eq(0, true).prop("selected", true);
+//            $("#work_region").prop("disabled", false); 
+
+//            $("#work_city").prop("disabled", false);
+            $("#work_city").val("");
+
+//            $("#work_street").prop("disabled", false);
+            $("#work_street").val("");
+
+//            $("#work_house").prop("disabled", false);
+            $("#work_house").val("");
+
+//            $("#work_building").prop("disabled", false);
+            $("#work_building").val("");
+
+//            $("#work_office").prop("disabled", false);
+            $("#work_office").val("");
+        }
+    }); 
+
+    </script>';
     require 'templates/common/js.php';
     if(isset($_GET['popup']) and $_GET['popup']==1 ){
         echo '    
