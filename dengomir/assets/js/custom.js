@@ -96,4 +96,12 @@ $(document).ready(function () {
             .removeClass('ex-arrow-hide')
             .addClass('ex-arrow-show');
     });
+    $( ".ex-pin-block" ).hover(
+        function() {
+            if($( ".ex-pin-block").hasClass("ex-pin-active")) {
+                $( ".ex-pin-block").removeClass( "ex-pin-active");
+            }
+            $(this).addClass( "ex-pin-active");
+        }
+    );
 });

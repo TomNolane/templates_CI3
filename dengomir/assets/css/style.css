@@ -190,23 +190,25 @@ body {
   color: #333333 !important;
 }
 
-/* line 144, ../sass/core/_global.scss */
-.ex-fl {
-  float: right;
+@media (min-width: 1200px) {
+  /* line 144, ../sass/core/_global.scss */
+  .ex-fl {
+    float: right;
+  }
 }
 
-/* line 150, ../sass/core/_global.scss */
+/* line 152, ../sass/core/_global.scss */
 .ex-range-slider-block .ex-slider-val span {
   margin-bottom: 0;
   color: #754fa0;
   font-weight: 700;
   font-size: 54px;
 }
-/* line 155, ../sass/core/_global.scss */
+/* line 157, ../sass/core/_global.scss */
 .ex-range-slider-block .ex-slider-val span:last-child {
   font-size: 36px;
 }
-/* line 160, ../sass/core/_global.scss */
+/* line 162, ../sass/core/_global.scss */
 .ex-range-slider-block .ex-calc-wraper {
   padding: 32px 0 33px 38px;
   margin-bottom: 15px;
@@ -214,12 +216,12 @@ body {
   border-radius: 0 0 10px 10px;
   background-color: #ffffff;
 }
-/* line 167, ../sass/core/_global.scss */
+/* line 169, ../sass/core/_global.scss */
 .ex-range-slider-block .ex-calc-wraper .ex-tab-section .ex-calc-block {
   background-color: #ffffff;
   padding: 0;
 }
-/* line 170, ../sass/core/_global.scss */
+/* line 172, ../sass/core/_global.scss */
 .ex-range-slider-block .ex-calc-wraper .ex-tab-section .ex-calc-block .ex-icon-bg {
   margin: 0 auto;
   position: relative;
@@ -228,14 +230,14 @@ body {
   border-radius: 100px;
   background-image: linear-gradient(180deg, #754fa0 0%, #6781e7 100%);
 }
-/* line 177, ../sass/core/_global.scss */
+/* line 179, ../sass/core/_global.scss */
 .ex-range-slider-block .ex-calc-wraper .ex-tab-section .ex-calc-block .ex-icon-bg img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 184, ../sass/core/_global.scss */
+/* line 186, ../sass/core/_global.scss */
 .ex-range-slider-block .ex-calc-wraper .ex-tab-section .ex-calc-block .ex-unique {
   margin-top: 4px;
   margin-bottom: 5px;
@@ -244,7 +246,7 @@ body {
   font-weight: 300;
   display: block;
 }
-/* line 193, ../sass/core/_global.scss */
+/* line 195, ../sass/core/_global.scss */
 .ex-range-slider-block .ex-calc-wraper .ex-tab-section .ex-calc-block .ex-result-style span {
   color: #30323e;
   font-weight: 300;
@@ -253,15 +255,15 @@ body {
 }
 
 @media (max-width: 991px) {
-  /* line 209, ../sass/core/_global.scss */
+  /* line 211, ../sass/core/_global.scss */
   .ex-range-slider-block .ex-mb {
     margin-bottom: 20px;
   }
-  /* line 212, ../sass/core/_global.scss */
+  /* line 214, ../sass/core/_global.scss */
   .ex-range-slider-block .ex-center {
     text-align: center;
   }
-  /* line 215, ../sass/core/_global.scss */
+  /* line 217, ../sass/core/_global.scss */
   .ex-range-slider-block .ex-calc-wraper {
     padding: 33px;
     margin-bottom: 15px;
@@ -12656,7 +12658,7 @@ footer.ex-main-footer {
   background: #30323e;
 }
 /* line 5, ../sass/desktop/_footer.scss */
-footer.ex-main-footer p { 
+footer.ex-main-footer p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 10px;
   font-weight: 400;
@@ -12664,22 +12666,22 @@ footer.ex-main-footer p {
   border-right: 1px solid #ffffff;
   margin-bottom: 0;
 }
-/* line 13, ../sass/desktop/_footer.scss */
+/* line 14, ../sass/desktop/_footer.scss */
 footer.ex-main-footer .ex-list-title {
   font-size: 12px;
   line-height: 22px;
   text-transform: uppercase;
   border-right: none;
 }
-/* line 19, ../sass/desktop/_footer.scss */
+/* line 20, ../sass/desktop/_footer.scss */
 footer.ex-main-footer ul {
   padding: 0;
 }
-/* line 21, ../sass/desktop/_footer.scss */
+/* line 22, ../sass/desktop/_footer.scss */
 footer.ex-main-footer ul li {
   list-style-type: none;
 }
-/* line 23, ../sass/desktop/_footer.scss */
+/* line 24, ../sass/desktop/_footer.scss */
 footer.ex-main-footer ul li a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 12px;
@@ -12687,24 +12689,25 @@ footer.ex-main-footer ul li a {
   line-height: 12px;
   text-decoration: none;
 }
-/* line 29, ../sass/desktop/_footer.scss */
+/* line 30, ../sass/desktop/_footer.scss */
 footer.ex-main-footer ul li a:hover {
   color: #fff;
 }
 
 @media (max-width: 991px) {
-  /* line 37, ../sass/desktop/_footer.scss */
+  /* line 38, ../sass/desktop/_footer.scss */
   footer.ex-main-footer {
     text-align: center;
   }
-  /* line 39, ../sass/desktop/_footer.scss */
+  /* line 40, ../sass/desktop/_footer.scss */
   footer.ex-main-footer p {
     border-right: none;
+    padding-right: 0;
     padding-bottom: 20px;
-    border-bottom: 1px solid #ffffff;
     padding-top: 20px;
+    border-bottom: 1px solid #ffffff;
   }
-  /* line 45, ../sass/desktop/_footer.scss */
+  /* line 47, ../sass/desktop/_footer.scss */
   footer.ex-main-footer .ex-list-title {
     border: none;
     padding-bottom: 0;
@@ -13542,12 +13545,12 @@ footer.ex-main-footer ul li a:hover {
   background-position: center center;
 }
 
-/* line 138, ../sass/desktop/_homepage.scss */
+/* line 137, ../sass/desktop/_homepage.scss */
 .ex-section-3 {
   padding-top: 92px;
   padding-bottom: 67px;
 }
-/* line 141, ../sass/desktop/_homepage.scss */
+/* line 140, ../sass/desktop/_homepage.scss */
 .ex-section-3 .ex-rus-map {
   position: relative;
   background-image: url("/templates/dengomir/assets/img/map.png");
@@ -13555,7 +13558,7 @@ footer.ex-main-footer ul li a:hover {
   background-position: 8px 132px;
   min-height: 739px;
 }
-/* line 147, ../sass/desktop/_homepage.scss */
+/* line 146, ../sass/desktop/_homepage.scss */
 .ex-section-3 .ex-rus-map h2 {
   margin-top: 0;
   margin-bottom: 30px;
@@ -13564,12 +13567,7 @@ footer.ex-main-footer ul li a:hover {
   font-weight: 700;
   line-height: 50px;
 }
-/* line 155, ../sass/desktop/_homepage.scss */
-.ex-section-3 .ex-rus-map .ex-why-work {
-  padding-left: 20px;
-  padding-right: 40px;
-}
-/* line 159, ../sass/desktop/_homepage.scss */
+/* line 156, ../sass/desktop/_homepage.scss */
 .ex-section-3 .ex-rus-map .ex-why-work .ex-steps h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -13578,14 +13576,14 @@ footer.ex-main-footer ul li a:hover {
   text-transform: uppercase;
   font-weight: 700;
 }
-/* line 167, ../sass/desktop/_homepage.scss */
+/* line 164, ../sass/desktop/_homepage.scss */
 .ex-section-3 .ex-rus-map .ex-why-work .ex-steps p {
   color: #1f1c09;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 24px;
 }
-/* line 173, ../sass/desktop/_homepage.scss */
+/* line 170, ../sass/desktop/_homepage.scss */
 .ex-section-3 .ex-rus-map .ex-why-work .ex-steps .ex-work-block {
   width: 300px;
   padding: 14px 13px 19px 13px;
@@ -13595,18 +13593,18 @@ footer.ex-main-footer ul li a:hover {
   border-radius: 5px;
   background-color: #5d4889;
 }
-/* line 178, ../sass/desktop/_homepage.scss */
+/* line 175, ../sass/desktop/_homepage.scss */
 .ex-section-3 .ex-rus-map .ex-why-work .ex-steps .ex-work-block .ex-number-img {
   vertical-align: top;
   min-height: 87px;
   display: inline-block;
 }
-/* line 182, ../sass/desktop/_homepage.scss */
+/* line 179, ../sass/desktop/_homepage.scss */
 .ex-section-3 .ex-rus-map .ex-why-work .ex-steps .ex-work-block .ex-number-img img {
   width: 100%;
   object-fit: cover;
 }
-/* line 187, ../sass/desktop/_homepage.scss */
+/* line 184, ../sass/desktop/_homepage.scss */
 .ex-section-3 .ex-rus-map .ex-why-work .ex-steps .ex-work-block p {
   padding-left: 13px;
   display: inline-block;
@@ -13616,16 +13614,115 @@ footer.ex-main-footer ul li a:hover {
   line-height: 20px;
   margin-bottom: 0;
 }
-/* line 198, ../sass/desktop/_homepage.scss */
+@media (max-width: 1199px) {
+  /* line 170, ../sass/desktop/_homepage.scss */
+  .ex-section-3 .ex-rus-map .ex-why-work .ex-steps .ex-work-block {
+    width: 100%;
+  }
+  /* line 195, ../sass/desktop/_homepage.scss */
+  .ex-section-3 .ex-rus-map .ex-why-work .ex-steps .ex-work-block p {
+    font-size: 12px;
+  }
+}
+/* line 201, ../sass/desktop/_homepage.scss */
 .ex-section-3 .ex-rus-map .ex-why-work .ex-for-button {
   margin-top: 432px;
 }
+@media (min-width: 1200px) {
+  /* line 154, ../sass/desktop/_homepage.scss */
+  .ex-section-3 .ex-rus-map .ex-why-work {
+    padding-left: 20px;
+    padding-right: 40px;
+  }
+}
+/* line 209, ../sass/desktop/_homepage.scss */
+.ex-section-3 .ex-rus-map .ex-pin-block.ex-pin-active {
+  position: absolute;
+}
+/* line 211, ../sass/desktop/_homepage.scss */
+.ex-section-3 .ex-rus-map .ex-pin-block.ex-pin-active .ex-wr {
+  width: 140px;
+  height: 40px;
+  padding-right: 12px;
+  padding-left: 12px;
+  border-radius: 3px;
+  background-color: #6781e7;
+  display: inline-block;
+}
+/* line 219, ../sass/desktop/_homepage.scss */
+.ex-section-3 .ex-rus-map .ex-pin-block.ex-pin-active .ex-wr span {
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 300;
+}
+/* line 224, ../sass/desktop/_homepage.scss */
+.ex-section-3 .ex-rus-map .ex-pin-block.ex-pin-active .ex-wr p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+/* line 231, ../sass/desktop/_homepage.scss */
+.ex-section-3 .ex-rus-map .ex-pin-block.ex-pin-active img {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+}
+/* line 237, ../sass/desktop/_homepage.scss */
+.ex-section-3 .ex-rus-map .ex-pin-block {
+  position: absolute;
+}
+/* line 239, ../sass/desktop/_homepage.scss */
+.ex-section-3 .ex-rus-map .ex-pin-block .ex-wr {
+  width: 140px;
+  height: 40px;
+  padding-right: 12px;
+  padding-left: 12px;
+  border-radius: 3px;
+  background-color: rgba(103, 129, 231, 0.47);
+  display: inline-block;
+}
+/* line 247, ../sass/desktop/_homepage.scss */
+.ex-section-3 .ex-rus-map .ex-pin-block .ex-wr span {
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 300;
+}
+/* line 252, ../sass/desktop/_homepage.scss */
+.ex-section-3 .ex-rus-map .ex-pin-block .ex-wr p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+/* line 259, ../sass/desktop/_homepage.scss */
+.ex-section-3 .ex-rus-map .ex-pin-block img {
+  width: 40px;
+  height: 40px;
+  opacity: .47;
+}
+@media (max-width: 991px) {
+  /* line 237, ../sass/desktop/_homepage.scss */
+  .ex-section-3 .ex-rus-map .ex-pin-block {
+    display: none;
+  }
+}
+/* line 268, ../sass/desktop/_homepage.scss */
+.ex-section-3 .ex-rus-map .ex-pin-block.ex-first {
+  bottom: 200px;
+  left: 130px;
+}
+/* line 272, ../sass/desktop/_homepage.scss */
+.ex-section-3 .ex-rus-map .ex-pin-block.ex-second {
+  bottom: 162px;
+  left: 432px;
+}
 
-/* line 204, ../sass/desktop/_homepage.scss */
+/* line 278, ../sass/desktop/_homepage.scss */
 .ex-section-4 {
   padding-bottom: 59px;
 }
-/* line 206, ../sass/desktop/_homepage.scss */
+/* line 280, ../sass/desktop/_homepage.scss */
 .ex-section-4 h2 {
   color: #1f1c09;
   font-size: 30px;
@@ -13634,7 +13731,7 @@ footer.ex-main-footer ul li a:hover {
   margin-top: 0;
   margin-bottom: 57px;
 }
-/* line 214, ../sass/desktop/_homepage.scss */
+/* line 288, ../sass/desktop/_homepage.scss */
 .ex-section-4 .item {
   height: 185px;
   padding: 27px 30px;
@@ -13644,7 +13741,7 @@ footer.ex-main-footer ul li a:hover {
   border-radius: 5px;
   background-color: #f5f5f5;
 }
-/* line 219, ../sass/desktop/_homepage.scss */
+/* line 293, ../sass/desktop/_homepage.scss */
 .ex-section-4 .item figcaption {
   color: #1f1c09;
   font-size: 12px;
@@ -13652,7 +13749,7 @@ footer.ex-main-footer ul li a:hover {
   line-height: 20px;
   margin-bottom: 14px;
 }
-/* line 226, ../sass/desktop/_homepage.scss */
+/* line 300, ../sass/desktop/_homepage.scss */
 .ex-section-4 .item h3 {
   color: #1f1c09;
   font-size: 12px;
@@ -13660,87 +13757,87 @@ footer.ex-main-footer ul li a:hover {
   margin-bottom: 0;
   margin-top: 0;
 }
-/* line 234, ../sass/desktop/_homepage.scss */
+/* line 308, ../sass/desktop/_homepage.scss */
 .ex-section-4 .owl-dots {
   margin-top: 29px !important;
 }
-/* line 238, ../sass/desktop/_homepage.scss */
+/* line 312, ../sass/desktop/_homepage.scss */
 .ex-section-4 .owl-dot span {
   background: #ffffff;
   border: 1px solid #8b8b8b;
 }
 
 @media (max-width: 767px) {
-  /* line 248, ../sass/desktop/_homepage.scss */
+  /* line 322, ../sass/desktop/_homepage.scss */
   .ex-section-1 .ex-range-slider-block {
     margin-bottom: 50px;
   }
 
-  /* line 254, ../sass/desktop/_homepage.scss */
+  /* line 328, ../sass/desktop/_homepage.scss */
   .ex-section-4 .item {
     height: auto;
   }
 }
 @media (max-width: 991px) {
-  /* line 263, ../sass/desktop/_homepage.scss */
+  /* line 337, ../sass/desktop/_homepage.scss */
   .ex-section-2 {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  /* line 266, ../sass/desktop/_homepage.scss */
+  /* line 340, ../sass/desktop/_homepage.scss */
   .ex-section-2 h2 {
     font-size: 26px;
   }
-  /* line 269, ../sass/desktop/_homepage.scss */
+  /* line 343, ../sass/desktop/_homepage.scss */
   .ex-section-2 p {
     font-size: 16px;
   }
-  /* line 272, ../sass/desktop/_homepage.scss */
+  /* line 346, ../sass/desktop/_homepage.scss */
   .ex-section-2 .ex-main-btn {
     margin-bottom: 40px;
   }
 
-  /* line 277, ../sass/desktop/_homepage.scss */
+  /* line 351, ../sass/desktop/_homepage.scss */
   .ex-section-3 .ex-rus-map {
     background-image: none;
   }
-  /* line 279, ../sass/desktop/_homepage.scss */
+  /* line 353, ../sass/desktop/_homepage.scss */
   .ex-section-3 .ex-rus-map .ex-why-work {
     padding-left: 0;
     padding-right: 0;
   }
-  /* line 282, ../sass/desktop/_homepage.scss */
+  /* line 356, ../sass/desktop/_homepage.scss */
   .ex-section-3 .ex-rus-map .ex-why-work .ex-fl {
     float: none;
   }
-  /* line 285, ../sass/desktop/_homepage.scss */
+  /* line 359, ../sass/desktop/_homepage.scss */
   .ex-section-3 .ex-rus-map .ex-why-work .ex-steps {
     margin-bottom: 40px;
     text-align: center;
   }
-  /* line 288, ../sass/desktop/_homepage.scss */
+  /* line 362, ../sass/desktop/_homepage.scss */
   .ex-section-3 .ex-rus-map .ex-why-work .ex-steps .ex-work-block {
     width: 100%;
   }
-  /* line 290, ../sass/desktop/_homepage.scss */
+  /* line 364, ../sass/desktop/_homepage.scss */
   .ex-section-3 .ex-rus-map .ex-why-work .ex-steps .ex-work-block .ex-number-img {
     display: block;
     text-align: center;
     margin-bottom: 20px;
   }
-  /* line 294, ../sass/desktop/_homepage.scss */
+  /* line 368, ../sass/desktop/_homepage.scss */
   .ex-section-3 .ex-rus-map .ex-why-work .ex-steps .ex-work-block .ex-number-img img {
     width: auto;
   }
-  /* line 298, ../sass/desktop/_homepage.scss */
+  /* line 372, ../sass/desktop/_homepage.scss */
   .ex-section-3 .ex-rus-map .ex-why-work .ex-steps .ex-work-block p {
     display: block;
   }
-  /* line 300, ../sass/desktop/_homepage.scss */
+  /* line 374, ../sass/desktop/_homepage.scss */
   .ex-section-3 .ex-rus-map .ex-why-work .ex-steps .ex-work-block p br {
     display: none;
   }
-  /* line 306, ../sass/desktop/_homepage.scss */
+  /* line 380, ../sass/desktop/_homepage.scss */
   .ex-section-3 .ex-rus-map .ex-why-work .ex-for-button {
     margin-top: 40px;
   }
@@ -14234,6 +14331,8 @@ footer.ex-main-footer ul li a:hover {
 .ex-offers .ex-offers-block table tr td:first-child .ex-offers-img1 {
   width: 234px;
   height: 55px;
+  background-image: url("/templates/dengomir/assets/img/kredito24-300x70.png");
+  background-repeat: no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
   -moz-transition: all .3s linear;
