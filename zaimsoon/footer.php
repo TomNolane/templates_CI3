@@ -8,7 +8,7 @@
     {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Займсун -->
-        <ins class="adsbygoogle"
+        <ins class="adsbygoogle text-center"
         style="display:block"
         data-ad-client="ca-pub-4970738258373085"
         data-ad-slot="1985418218"

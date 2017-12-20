@@ -48,7 +48,7 @@ if($this->uri->segment(1) != 'form')
 
     echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Займкоин -->
-    <ins class="adsbygoogle"
+    <ins class="adsbygoogle text-center"
     style="display:block"
     data-ad-client="ca-pub-4970738258373085"
     data-ad-slot="1410703146"

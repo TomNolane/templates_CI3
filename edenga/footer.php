@@ -13,7 +13,7 @@ if($this->uri->segment(1) != 'form')
         </div>';
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Еденьга -->
-    <ins class="adsbygoogle"
+    <ins class="adsbygoogle text-center"
     style="display:block"
     data-ad-client="ca-pub-4970738258373085"
     data-ad-slot="7951350323"
