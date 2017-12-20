@@ -15,7 +15,7 @@ if($this->uri->segment(1) != 'form')
     </div>';
     echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Деньгимо -->
-    <ins class="adsbygoogle"
+    <ins class="adsbygoogle text-center"
     style="display:block"
     data-ad-client="ca-pub-4970738258373085"
     data-ad-slot="1211392596"
@@ -75,6 +75,12 @@ echo '</script>';
 echo '<script>';
 require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
 echo '</script>';
+echo '<script>';
+require 'templates/dengimo/js/jquery.suggestions.min.js';
+echo '</script>';
+echo '<script>';
+require 'templates/dengimo/js/settings.js';
+echo '</script>';
 
 echo '<!--[if lt IE 10]>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
@@ -90,12 +96,211 @@ $(document).ready(function () {
 });
 </script>';
 }elseif ($this->uri->segment(1) == 'form') {
-    echo '<script>';
-    require 'templates/dengimo/js/jquery.suggestions.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/dengimo/js/settings.js';
-    echo '</script>';
+    echo ' <script>
+    $("#work").change(function(){
+        if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
+        { 
+            $("#work_name").addClass("valid");
+            $("#work_name").parent().addClass("has-success").removeClass("has-error");
+            $("#work_name").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_name").removeClass("er");
+            $("#"+$("#work_name").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_occupation").addClass("valid");
+            $("#work_occupation").parent().addClass("has-success").removeClass("has-error");
+            $("#work_occupation").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_occupation").removeClass("er");
+            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_phone").addClass("valid");
+            $("#work_phone").parent().addClass("has-success").removeClass("has-error");
+            $("#work_phone").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_phone").removeClass("er");
+            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_experience").addClass("valid");
+            $("#work_experience").parent().addClass("has-success").removeClass("has-error");
+            $("#work_experience").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_experience").removeClass("er");
+            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_salary").addClass("valid");
+            $("#work_salary").parent().addClass("has-success").removeClass("has-error");
+            $("#work_salary").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_salary").removeClass("er"); 
+            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_region").addClass("valid");
+            $("#work_region").parent().addClass("has-success").removeClass("has-error");
+            $("#work_region").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_region").removeClass("er");
+            $("#"+$("#work_region").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_city").addClass("valid");
+            $("#work_city").parent().addClass("has-success").removeClass("has-error");
+            $("#work_city").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_city").removeClass("er");
+            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_street").addClass("valid");
+            $("#work_street").parent().addClass("has-success").removeClass("has-error");
+            $("#work_street").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_street").removeClass("er");
+            $("#"+$("#work_street").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_house").addClass("valid");
+            $("#work_house").parent().addClass("has-success").removeClass("has-error");
+            $("#work_house").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_house").removeClass("er");
+            $("#"+$("#work_house").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_office").addClass("valid");
+            $("#work_office").parent().addClass("has-success").removeClass("has-error");
+            $("#work_office").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_office").removeClass("er");
+            $("#"+$("#work_office").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+//            $("#work_name").prop("disabled", true);
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_name").val("пенсионер");
+            else  $("#work_name").val("безработный");
+
+//            $("#work_occupation").prop("disabled", true);
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_occupation").val("пенсионер");
+            else  $("#work_occupation").val("безработный"); 
+
+//            $("#work_phone").prop("disabled", true);
+            var teemp = $("#phone").val();
+            $("#work_phone").val(teemp);
+
+//            $("#work_experience").prop("disabled", false);
+            $("#work_experience").val(100);
+
+//            $("#work_salary").prop("disabled", false);
+            $("#work_salary").val("");
+
+            var teemp2 = Number($("#region").find(":selected").index());
+            $("#work_region option").eq(teemp2).prop("selected", true);
+//            $("#work_region").prop("disabled", false); 
+
+//            $("#work_city").prop("disabled", true);
+            var teemp3 = $("#city").val();
+            $("#work_city").val(teemp3);
+
+//            $("#work_street").prop("disabled", true);
+            var teemp4 = $("#street").val();
+            $("#work_street").val(teemp4);
+
+            
+            var teemp5 = $("#building").val();
+            $("#work_house").val(teemp5);
+
+//            $("#work_building").prop("disabled", true);
+            $("#work_building").val(" ");
+
+//            $("#work_office").prop("disabled", true);
+            var teemp6 = $("#flat").val();
+            $("#work_office").val(teemp6);
+        }
+        else { 
+
+            $("#work_name").val("");
+            $("#work_name").removeClass("valid");
+            $("#work_name").parent().removeClass("has-success");
+            $("#work_name").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_name").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_occupation").val("");
+            $("#work_occupation").removeClass("valid");
+            $("#work_occupation").parent().removeClass("has-success");
+            $("#work_occupation").parent().parent().prev().removeClass("label_true"); 
+            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-ok"); 
+
+            $("#work_phone").val("");
+            $("#work_phone").removeClass("valid");
+            $("#work_phone").parent().removeClass("has-success");
+            $("#work_phone").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_experience").val("");
+            $("#work_experience").removeClass("valid");
+            $("#work_experience").parent().removeClass("has-success");
+            $("#work_experience").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_salary").val("");
+            $("#work_salary").removeClass("valid");
+            $("#work_salary").parent().removeClass("has-success");
+            $("#work_salary").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-ok");
+ 
+            $("#work_region").removeClass("valid");
+            $("#work_region").parent().removeClass("has-success");
+            $("#work_region").parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_region").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_city").val("");
+            $("#work_city").removeClass("valid");
+            $("#work_city").parent().removeClass("has-success");
+            $("#work_city").parent().parent().prev().removeClass("label_true"); 
+            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-ok"); 
+
+            $("#work_street").val("");
+            $("#work_street").removeClass("valid");
+            $("#work_street").parent().removeClass("has-success");
+            $("#work_street").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_street").id+"status").removeClass("glyphicon-ok"); 
+
+            $("#work_house").val("");
+            $("#work_house").removeClass("valid");
+            $("#work_house").parent().removeClass("has-success");
+            $("#work_house").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_house").id+"status").removeClass("glyphicon-ok");
+
+            $("#work_office").val("");
+            $("#work_office").removeClass("valid");
+            $("#work_office").parent().removeClass("has-success");
+            $("#work_office").parent().parent().prev().removeClass("label_true"); 
+            $("#"+$("#work_office").id+"status").removeClass("glyphicon-ok");
+
+//            $("#work_name").prop("disabled", false);
+            $("#work_name").val(""); 
+ 
+//            $("#work_occupation").prop("disabled", false);
+             $("#work_occupation").val(""); 
+
+//            $("#work_phone").prop("disabled", false);
+            $("#work_phone").val("");
+
+//            $("#work_experience").prop("disabled", false);
+            $("#work_experience").val("");
+
+//            $("#work_salary").prop("disabled", false);
+            $("#work_salary").val("");
+
+            $("#work_region option").eq(0, true).prop("selected", true);
+//            $("#work_region").prop("disabled", false); 
+
+//            $("#work_city").prop("disabled", false);
+            $("#work_city").val("");
+
+//            $("#work_street").prop("disabled", false);
+            $("#work_street").val("");
+
+//            $("#work_house").prop("disabled", false);
+            $("#work_house").val("");
+
+//            $("#work_building").prop("disabled", false);
+            $("#work_building").val("");
+
+//            $("#work_office").prop("disabled", false);
+            $("#work_office").val("");
+        }
+    }); 
+
+    </script>';
+    
 
     require 'templates/common/js.php';
     if(isset($_GET['email'])){
@@ -148,10 +353,10 @@ $(document).ready(function () {
 function setcookie(name, value, expires, path, domain, secure)
 {
     document.cookie =    name + "=" + escape(value) +
-                        ((expires) ? "; expires=" + (new Date(expires)) : "") +
-                        ((path) ? "; path=" + path : "; path=/") +
-                        ((domain) ? "; domain=" + domain : "") +
-                        ((secure) ? "; secure" : "");
+        ((expires) ? "; expires=" + (new Date(expires)) : "") +
+        ((path) ? "; path=" + path : "; path=/") +
+        ((domain) ? "; domain=" + domain : "") +
+        ((secure) ? "; secure" : "");
 }
 
 function getcookie(name)
@@ -208,7 +413,7 @@ if (getcookie('pixel')){
 	$('#feedback-send').click(function(){
 		Loading();
                 
-		var data = {name:$('#feedback-name').val(),phone:$('#feedback-phone').val(),email:$('#feedback-email').val(),comment:$('#feedback-comment').val()+ x_size + " x " + y_size + " UserAgent: " + navigator.userAgent};
+		var data = {name:$('#feedback-name').val(),phone:$('#feedback-phone').val(),email:$('#feedback-email').val(),comment:$('#feedback-comment').val() + " " + x_size + " x " + y_size + " UserAgent: " + navigator.userAgent};
 		
 		if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' && data.email != '') && (typeof data.comment != 'undefined' && data.comment != '')) {
 			$.ajax({
@@ -223,8 +428,8 @@ if (getcookie('pixel')){
 					}
 					else {
 						$('#feedbackModal').modal('hide');
-						Loading(0);
-						alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
+                        Loading(0);
+                        alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
 					}
 				}
 				else{alert('Не получилось отправить. Попробуйте ещё раз.');}
@@ -307,10 +512,10 @@ $(document).ready(function(){
 		postfix: ' сут.',
 		onChange:function(range){
 			$('#current_period').text(range.from);
-                        day = range.from;
+            day = range.from;
             $("#amount").val(range.from_value);
             $("#period2").val(range.from_value);
-                        updateComm();                        
+            updateComm();
 		}
 	});
     $('.amount2').ionRangeSlider({
@@ -426,47 +631,47 @@ $(document).ready(function(){
             amount = slider.result.from_value;
 
             updateComm();
-        }, 5);
+        }, 50);
 
 	<?php } ?>
         var updateComm = function () {
 		if (amount <= 7000) {
 			per = 97;
-                        $('#period').val('7');
+            $('#period').val('7');
 			//attr = 'Автоматическое <br>одобрение';
 			color = 'green';
-                        d = 'От 61 до 100 <br class="hidden-xs"/> дней';
-                        percent = 1.3;
+            d = 'От 61 до 100 <br class="hidden-xs"/> дней';
+            percent = 1.3;
 			comm1 = Math.ceil((amount/100)*percent)*day;
 			comm2 = 0;                        
 		}
 		else if (amount <= 15000) {
 			per = 94;
-                        $('#period').val('14');
+            $('#period').val('14');
 			//attr = 'Может понадобиться <br>паспорт';
 			color = 'green';
-                        d = 'От 100 до 130 <br class="hidden-xs"/> дней';
-                        percent = 1.3;
+            d = 'От 100 до 130 <br class="hidden-xs"/> дней';
+            percent = 1.3;
 			comm1 = Math.ceil((amount/100)*percent)*day;
 			comm2 = 0;                        
 		}
 		else if (amount <= 30000) {
-                        per = 84;
-                        $('#period').val('14');
+            per = 84;
+            $('#period').val('14');
 			//attr = 'Нужен только <br>паспорт';
 			color = 'green';
-                        d = 'От 130 до 200 <br class="hidden-xs"/> дней';
-                        percent = 1.3;
+            d = 'От 130 до 200 <br class="hidden-xs"/> дней';
+            percent = 1.3;
 			comm1 = Math.ceil((amount/100)*percent)*day;
 			comm2 = 0;
 		}
 		else if (amount <= 50000) {
 			per = 72;
-                        $('#period').val('30');
+            $('#period').val('30');
 			//attr = 'Может понадобиться подтверждение места работы';
 			color = 'orange';
-                        d = 'От 200 до 250 <br class="hidden-xs"/> дней';
-                        percent=0.2;
+            d = 'От 200 до 250 <br class="hidden-xs"/> дней';
+            percent=0.2;
 			comm1 = 390*day;
 			comm2 = Math.ceil(((amount-30000)/100)*percent)*day;
 		}
@@ -475,17 +680,17 @@ $(document).ready(function(){
                         $('#period').val('30');
 			//attr = 'Может понадобиться справка о доходах (или под залог)';
 			color = 'red';
-                        d = 'От 250 до 365 <br class="hidden-xs"/> дней';
-                        percent=0.2;
+            d = 'От 250 до 365 <br class="hidden-xs"/> дней';
+            percent=0.2;
 			comm1 = 390*day;
 			comm2 = Math.ceil(((amount-30000)/100)*percent)*day;                       
 		}
 		comm = comm1 + comm2;
 		summ = amount + comm;
-                $('.comm').html(comm+'<i class="fa fa-rub" aria-hidden="true"></i>');
+        $('.comm').html(comm+'<i class="fa fa-rub" aria-hidden="true"></i>');
 		$('.perc').html(percent+'<i class="fa fa-percent" aria-hidden="true"></i>');
-                $('.sum').html(String(summ).split(/(?=(?:\d{3})+$)/).join(' ')+'<i class="fa fa-rub" aria-hidden="true"></i>');                
-                $('.d').html(d);
+        $('.sum').html(String(summ).split(/(?=(?:\d{3})+$)/).join(' ')+'<i class="fa fa-rub" aria-hidden="true"></i>');                
+        $('.d').html(d);
 		$('.current_amount').text(String(amount).split(/(?=(?:\d{3})+$)/).join(' '));
 		$('.percent_rate').text(per + '%');
 	};
@@ -503,7 +708,7 @@ $(document).ready(function(){
 			if ($(element).data('amount') < val) $(element).hide();
 			else $(element).show();
 		});
-		amount = val;               
+		amount = val;
 	}
 	$('#amount').change(function(){amountfn();}).change();
 	$('#amount').keyup(function(){amountfn();});
@@ -707,34 +912,6 @@ var google_remarketing_only = true;
 <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/854183902/?guid=ON&amp;script=0"/>
 </div>
 </noscript>
-<!-- Общий счетчик Yandex.Metrika ЛидМафия->
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter45336951 = new Ya.Metrika({
-                    id:45336951,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true
-                });
-            } catch(e) { }
-        });
-
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/45336951" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter --> 
+<!-- Общий счетчик Yandex.Metrika ЛидМафия --> 
 </body>
 </html>

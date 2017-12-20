@@ -52,8 +52,7 @@ function isGenderKnown($el) {
     return true;
   }
 }
-init($("#f"), $("#i"), $("#o")); 
-traffic('rublimo.ru', '1');
+init($("#f"), $("#i"), $("#o"));
 $("#email").suggestions({
         serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
         token: "78fc76023580df0ec78566913b31a87d909f1ec0",
@@ -223,10 +222,7 @@ $("#email").suggestions({
 			$('#form-steps a[href="#form2"]').tab('show');
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			markTarget('form-step-1');
-                        traffic('rublimo.ru', '2');
-                        $('#htitle').text('Заполните паспортные данные');
-                        oSpP.push("i", $('#i').val());
-                        oSpP.push("o", $('#o').val());                        
+            $('#htitle').text('Заполните паспортные данные'); 
 		}
 		showBzzz = false;
 		$('.reg_same').change();
@@ -245,7 +241,6 @@ $("#email").suggestions({
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
                         $('#htitle').text('Заполните данные о работе');
 			markTarget('form-step-2');
-                        traffic('rublimo.ru', '3');
 		}
 		showBzzz = false;
 		setcookies();
@@ -257,7 +252,6 @@ $("#email").suggestions({
 			$('#form-modal').show();
 			send_form(true, '/lk');
 			markTarget('form-step-3');
-                        traffic('rublimo.ru', '4');
                         window.location = '/lk';
 		}
 		showBzzz = false;

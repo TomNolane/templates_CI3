@@ -362,7 +362,6 @@ elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
             var i = getcookie("i");
             $("#i").text(i);
         }
-        traffic("dengibystra.ru", "4");
     });
 
     function clone(o) {
