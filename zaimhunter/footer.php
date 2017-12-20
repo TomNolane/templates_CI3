@@ -43,6 +43,16 @@ if($this->uri->segment(1) != 'form')
             t.parentNode.insertBefore(s, t);
         })(this, this.document, "yandexContextAsyncCallbacks");
     </script>';
+    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Займхантер -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="4330124923"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
 }
 ?>
 <footer class="ex-start-footer">

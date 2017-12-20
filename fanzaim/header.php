@@ -124,7 +124,7 @@ if(!isset($description))
      }
      '; 
      echo '</style>'; 
-     if ($this->uri->segment(1) == 'lk') 
+     if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') 
      {
          echo '<style>';
          require "templates/fanzaim/assets/css/style_lk.css";

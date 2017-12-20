@@ -7,7 +7,16 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 <?php
 if($this->uri->segment(1) != 'form')
 { 
-	echo '';
+	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Займол -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="8790499713"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
 }
 ?>
 <footer class="ex-main-footer">
@@ -69,7 +78,7 @@ if($this->uri->segment(1) != 'form')
         require 'templates/zaimol/assets/js/swap.js';
         echo "</script>";
         
-        if($this->uri->segment(1) == 'lk')
+        if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
         {
             echo '<script>
             var offers = '.json_encode($data).';

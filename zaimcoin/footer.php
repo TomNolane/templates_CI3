@@ -45,7 +45,18 @@ if($this->uri->segment(1) != 'form')
     t.parentNode.insertBefore(s, t);
     })(this, this.document, "yandexContextAsyncCallbacks");
     </script>';
-}
+
+    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Займкоин -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="1410703146"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
+} 
 
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') 
 {
@@ -524,7 +535,7 @@ echo "<script async>$(document).ready(function () {
     }, 50);
 });</script>";
 }
-elseif($this->uri->segment(1) == 'lk')
+elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
 { 
     echo '<script>
     var client_w = screen.width; 
@@ -677,6 +688,5 @@ function traffic(site, page){
     });    
 }
 </script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>
 </html>

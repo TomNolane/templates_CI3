@@ -11,7 +11,16 @@ if($this->uri->segment(1) != 'form')
         <div id="yandex_rtb_R-A-244327-2"></div>
         <div id="yandex_rtb_R-A-244327-1"></div>
     </div>';
-    echo '';
+    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Рублимо -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="5040571366"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
 }
 ?> 
     
@@ -136,7 +145,7 @@ if($this->uri->segment(1) != 'form')
             });
             </script>";
         }
-        elseif($this->uri->segment(1) == 'lk')
+        elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
         {
             echo '<script>
             var offers = '.json_encode($data).';
@@ -659,39 +668,6 @@ echo '<script>
                 });
             }
         </script>
-        <!-- Rating@Mail.ru counter -->
-        <script type="text/javascript">
-            var _tmr = window._tmr || (window._tmr = []);
-            _tmr.push({
-                id: "2868805",
-                type: "pageView",
-                start: (new Date()).getTime()
-            });
-            (function (d, w, id) {
-                if (d.getElementById(id)) return;
-                var ts = d.createElement("script");
-                ts.type = "text/javascript";
-                ts.async = true;
-                ts.id = id;
-                ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-                var f = function () {
-                    var s = d.getElementsByTagName("script")[0];
-                    s.parentNode.insertBefore(ts, s);
-                };
-                if (w.opera == "[object Opera]") {
-                    d.addEventListener("DOMContentLoaded", f, false);
-                } else {
-                    f();
-                }
-            })(document, window, "topmailru-code");
-        </script>
-        <noscript>
-            <div>
-                <img src="//top-fwz1.mail.ru/counter?id=2868805;js=na" style="border:0;position:absolute;left:-9999px;" alt="top-fwz1.mail.ru/counter"
-                />
-            </div>
-        </noscript>
-        <!-- //Rating@Mail.ru counter -->
         <script type="text/javascript">
             (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
                 '//vk.com/rtrg?r=UzhaCPx8CdujAr5T6aQ/0Bm3ERynfPznf2dnE8LQ2Z8ux3b6Hx7uaeYYT0htNFbnPyzRR/AwkpL1S*co2CawMJzshhbBYJn43IAV00/rM8iULK5bmmSbvYIvGFpZ1oLAlD5bxFxTF/eWSCa*lTsoXNN4vJkpMOzY4oIS50dEoqM-&pixel_id=1000099081';
@@ -738,41 +714,7 @@ echo '<script>
                 <img src="https://mc.yandex.ru/watch/45336951" style="position:absolute; left:-9999px;" alt="mc.yandex.ru/watch" />
             </div>
         </noscript>
-        <!-- /Yandex.Metrika counter -->
-        <!-- Общий счетчик Mail.ru ЛидМафия->
-<!-- Rating@Mail.ru counter -->
-        <script type="text/javascript">
-            var _tmr = window._tmr || (window._tmr = []);
-            _tmr.push({
-                id: "2916281",
-                type: "pageView",
-                start: (new Date()).getTime()
-            });
-            (function (d, w, id) {
-                if (d.getElementById(id)) return;
-                var ts = d.createElement("script");
-                ts.type = "text/javascript";
-                ts.async = true;
-                ts.id = id;
-                ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-                var f = function () {
-                    var s = d.getElementsByTagName("script")[0];
-                    s.parentNode.insertBefore(ts, s);
-                };
-                if (w.opera == "[object Opera]") {
-                    d.addEventListener("DOMContentLoaded", f, false);
-                } else {
-                    f();
-                }
-            })(document, window, "topmailru-code");
-        </script>
-        <noscript>
-            <div>
-                <img src="//top-fwz1.mail.ru/counter?id=2916281;js=na" style="border:0;position:absolute;left:-9999px;" alt="top-fwz1.mail.ru"
-                />
-            </div>
-        </noscript>
-        <!-- //Rating@Mail.ru counter -->
+        <!-- /Yandex.Metrika counter --> 
         <script>
             (function (i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;
@@ -833,8 +775,7 @@ echo '<script>
                     t.parentNode.insertBefore(s, t);
                 })(this, this.document, "yandexContextAsyncCallbacks");
             }
-        </script>
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+        </script> 
         <!-- Код тега ремаркетинга Google -->
         <!--------------------------------------------------
 С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.

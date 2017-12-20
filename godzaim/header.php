@@ -130,7 +130,7 @@ if(!isset($description))
 		'; 
 		echo '</style>'; 
 
-		if ($this->uri->segment(1) == 'lk') {
+		if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') {
 			echo '<style>'; 
 			require "templates/godzaim/css/style_lk.css"; 
 			echo '</style>'; 
