@@ -19,7 +19,6 @@ if($this->uri->segment(1) != 'form')
 }
 ?> 
 
-?>
 <footer class="ex-main-footer">
         <div class="container text-center">
             <div class="ex-wrapper"><a href="/"><img src="/templates/fanzaim/assets/img/icons/Fanzaim-logo-footer.png"  alt="Image"></a></div>
