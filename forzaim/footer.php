@@ -2,7 +2,23 @@
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
 {
     echo '<a href="#0" class="cd-top">Наверх</a>';
-} ?>
+} 
+
+if($this->uri->segment(1) != 'form')
+{
+    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Форзайм -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="8629883462"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
+}
+
+?>
 <footer class="ex-main-footer">
     <div class="container">
         <a href="/"><h2>Forzaim</h2></a>
@@ -531,7 +547,6 @@ function traffic(site, page){
             }
     });    
 }
-</script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</script> 
 </body>
 </html>

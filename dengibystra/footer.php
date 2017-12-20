@@ -5,7 +5,16 @@ if($this->uri->segment(1) != 'form')
 	<div class="visible-xs visible-sm hidden-md hidden-lg" id="yandex_rtb_R-A-247243-1"></div>
 	<div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-247243-3"></div>
     </div>';
-	echo '';
+	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Деньгибыстра -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="6190001501"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
 }
 ?>
 
@@ -77,7 +86,7 @@ echo '<footer class="ex-start-footer">
     </div>
 </footer>';
 }
-else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'spasibo' )
+else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'spasibo' || $this->uri->segment(1) == 'lk2')
 {
     echo '<footer class="ex-footer">
         <div class="container">
@@ -319,7 +328,7 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
         </script>
 <?php
 } 
-elseif($this->uri->segment(1) == 'lk')
+elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
 {
     echo '<script>
     var offers = '.json_encode($data).'

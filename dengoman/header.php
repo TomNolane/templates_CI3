@@ -21,7 +21,7 @@
 
 <link href="/templates/dengoman/style.css?ver=2" rel="stylesheet" media="screen">
 	<?php
-		if ($this->uri->segment(1) == 'lk') 
+		if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') 
 		{
 			echo '<style>';
 			require "templates/dengoman/css/style_lk.css";
@@ -104,7 +104,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<li><a href="#" data-toggle="modal" data-target="#feedbackModal">Задать вопрос</a></li>
                                 <li class="visible-xs-block">
                                     <?php if ($this->input->cookie('lk')) { ?>
-                                    <a href="/lk" class="navbar-btn hidden-xs">
+                                    <a href="/form" class="navbar-btn hidden-xs">
 										<span class="visible-sm visible-md">Получить займ</span>
 										<span class="hidden-sm hidden-md"><span class="f ec"></span> <span class="i ec"></span> <span class="o ec"></span></span>
                                     </a>
@@ -115,7 +115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</ul>
 			<ul class="nav navbar-nav navbar-right hidden-xs">
                             <li>
-                                <a href="/<?php echo $this->input->cookie('lk')? 'lk' : 'form'; ?>" class="navbar-btn">Получить займ</a>
+                                <a href="/form" class="navbar-btn">Получить займ</a>
                             </li>
 			</ul>
 		</div>

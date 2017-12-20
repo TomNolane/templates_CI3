@@ -5,7 +5,16 @@
         <center><div id="ya-rtb" class="text-center spec_ind_foot"><div class="hidden-xs hidden-sm"><div id="yandex_rtb_R-A-257494-1"></div></div>
         <!-- Мобайл Yandex.RTB R-A-257494-3 -->
         <div class="hidden-md hidden-lg"><div id="yandex_rtb_R-A-257494-3"></div></div></div></center>';
-        echo '';
+        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Займхоум -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="4797028786"
+        data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     }
 ?>
 

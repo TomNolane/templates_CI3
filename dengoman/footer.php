@@ -7,7 +7,16 @@ if($this->uri->segment(1) != 'form')
     <div id="yandex_rtb_R-A-243980-1"></div>
     <div id="yandex_rtb_R-A-243980-3"></div>
     </div>';
-	echo '';
+	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Деньгомэн -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="9017730427"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
 }
 ?>
 
@@ -201,21 +210,6 @@ function traffic(site, page){
     });    
 }
 </script>
-<!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
-var _tmr = window._tmr || (window._tmr = []);
-_tmr.push({id: "2868961", type: "pageView", start: (new Date()).getTime()});
-(function (d, w, id) {
-if (d.getElementById(id)) return;
-var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-})(document, window, "topmailru-code");
-</script><noscript><div>
-<img src="//top-fwz1.mail.ru/counter?id=2868961;js=na" style="border:0;position:absolute;left:-9999px;" alt=".mail.ru/counter" />
-</div></noscript>
-<!-- //Rating@Mail.ru counter -->
 <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=LXOGS14Mckvak8y6PqTJ1ipVo6GUndpL/0lz*Oxtc1ZXl02xRuQQBvu7tS0ixHqq3*JJ057ri6tjG/uuPhxq9hKtAY1B1YvnkiO5c9I8l6XTurE6HL/oJbRFm2wQ6bjIbJLMdySh47BmhISTMfq4HLVAUlTEgaF*iO2zVH5vRB0-&pixel_id=1000099084';</script>
 <!--Константин Гутлид-->
 <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=asexo0CXnxyfrTPKupW5cBn6KvfsIwG2vdxtQdwRID76tIB*nDP5C0Lq8SQT21MLOL1JoDW5MPgq74pPrE6I7ePJf1zd2Qj5dLLmpgN6s0Ha0G6b4*vCId6rbRQWzlYKDuYUpc9VZYY1O*bHch7iOKeDUWNZm*fopqPHiPQEWJQ-&pixel_id=1000099723';</script>
@@ -247,23 +241,7 @@ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, fal
     })(document, window, "yandex_metrika_callbacks");
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/45336951" style="position:absolute; left:-9999px;" alt="mc.yandex.ru" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<!-- Общий счетчик Mail.ru ЛидМафия-->
-<!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
-var _tmr = window._tmr || (window._tmr = []);
-_tmr.push({id: "2916281", type: "pageView", start: (new Date()).getTime()});
-(function (d, w, id) {
-  if (d.getElementById(id)) return;
-  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-})(document, window, "topmailru-code");
-</script><noscript><div>
-<img src="//top-fwz1.mail.ru/counter?id=2916281;js=na" style="border:0;position:absolute;left:-9999px;" alt="top-fwz1.mail.ru" />
-</div></noscript>
-<!-- //Rating@Mail.ru counter -->   
+<!-- /Yandex.Metrika counter --> 
 <script type="text/javascript">
     
     var isMobile = false; //initiate as false

@@ -13,7 +13,16 @@ if($this->uri->segment(1) != 'form')
     <div id="yandex_rtb_R-A-232716-8"></div>
     <div id="yandex_rtb_R-A-232716-7"></div>
     </div>';
-    echo '';
+    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Деньгимо -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="1211392596"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
 }
 ?> 
 <footer>
@@ -482,7 +491,7 @@ $(document).ready(function(){
 	};
 });
 </script>
-<?php if ($this->uri->segment(1) == 'lk') { ?>
+<?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { ?>
 
 <script>
 var offers = <?php echo json_encode($data); ?>;
@@ -599,21 +608,6 @@ function traffic(site, page){
     });    
 }
 </script>
-<!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
-var _tmr = window._tmr || (window._tmr = []);
-_tmr.push({id: "2868966", type: "pageView", start: (new Date()).getTime()});
-(function (d, w, id) {
-  if (d.getElementById(id)) return;
-  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-})(document, window, "topmailru-code");
-</script><noscript><div>
-<img src="//top-fwz1.mail.ru/counter?id=2868966;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
-</div></noscript>
-<!-- //Rating@Mail.ru counter -->
 <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=rVpGPTSLprQmO8sgq5rzujYj085R/MNyDfSe6D7FiBVU/ce1AAU5tZ6fkTV5*R7c4K1TjnXVIoIjAo/sNmJ9wJ5mWNyUGhHsu54iZzlmwqrXb2nDFU*EwxOtZIY8tdCiIK6hwF9SwXK8N9vCiCVr3O9R8FdFX6G0PvTUlhfc7dk-&pixel_id=1000099085';</script>
 <!--Константин Гутлид-->
 <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=ISE1RYyD*mRdoi0TCOSmzLd9lPOPOw8OsUQwzOCRHERjILwv5UHUu9nI1bIsjZLVnb7WP3y/uZsgbMd5yAvEXF*8WRIuzuYKBSMc3E8dsKAFZl7wLVRO5yHTL286msqSou5CpAUqWP8RM4Wd8o/dXK7r9mRHpAPfNtsKH35gIMs-&pixel_id=1000099726';</script>
@@ -694,15 +688,17 @@ src="https://www.facebook.com/tr?id=122176371687010&ev=PageView
         }
 </script>
 <!-- Код тега ремаркетинга Google -->
-<!--------------------------------------------------
+<!-- ------------------------------------------------
 С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
---------------------------------------------------->
+------------------------------------------------- -->
 <script type="text/javascript">
+
 /* <![CDATA[ */
 var google_conversion_id = 854183902;
 var google_custom_params = window.google_tag_params;
 var google_remarketing_only = true;
 /* ]]> */
+
 </script>
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
 </script>
@@ -739,22 +735,6 @@ var google_remarketing_only = true;
     })(document, window, "yandex_metrika_callbacks");
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/45336951" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<!-- Общий счетчик Mail.ru ЛидМафия->
-<!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
-var _tmr = window._tmr || (window._tmr = []);
-_tmr.push({id: "2916281", type: "pageView", start: (new Date()).getTime()});
-(function (d, w, id) {
-  if (d.getElementById(id)) return;
-  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-})(document, window, "topmailru-code");
-</script><noscript><div>
-<img src="//top-fwz1.mail.ru/counter?id=2916281;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
-</div></noscript>
-<!-- //Rating@Mail.ru counter -->   
+<!-- /Yandex.Metrika counter --> 
 </body>
 </html>

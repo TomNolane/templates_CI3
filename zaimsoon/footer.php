@@ -3,6 +3,20 @@
     {
         echo '<a href="#0" class="cd-top">Наверх</a>';
     } 
+
+    if($this->uri->segment(1) != 'form')
+    {
+        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Займсун -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="1985418218"
+        data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
+    }
 ?>
 
 <footer class="ex-main-footer">
@@ -536,6 +550,5 @@ function traffic(site, page)
     });
 }
 </script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>
 </html>

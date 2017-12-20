@@ -15,12 +15,13 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 
 if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2')
 {
-	echo '<!-- Bzaim5.ru -->
+	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Бзайм -->
     <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-4802160271558776"
-         data-ad-slot="4685446203"
-         data-ad-format="auto"></ins>
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="6411748383"
+    data-ad-format="auto"></ins>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
@@ -990,8 +991,7 @@ function setcookie(name, value, expires, path, domain, secure) {
             t.parentNode.insertBefore(s, t);
         })(this, this.document, "yandexContextAsyncCallbacks");
     }
-</script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</script> 
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
