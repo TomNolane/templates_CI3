@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 hidden-xs hidden-sm">
                 <div class="col-md-6">
                     <p class="ex-list-title">Документы</p>
                     <ul>

@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h1 class="text-center">Dengomir – мир выгодных займов</h1>
-                    <p>Бесплатный подбор займов: без залога, проверок,<br>
+                    <p class="hidden-xs hidden-sm">Бесплатный подбор займов: без залога, проверок,<br>
                         справок и поручителей</p>
                     <div class="ex-range-slider-block">
                         <div class="ex-range-scope">
@@ -89,7 +89,7 @@
             </div>
         </div>
     </section>
-    <section class="ex-section-2">
+    <section class="ex-section-2 hidden-xs hidden-sm">
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
@@ -117,7 +117,7 @@
             </div>
         </div>
     </section>
-    <section class="ex-section-3">
+    <section class="ex-section-3 hidden-xs hidden-sm">
         <div class=" container-fluid ">
             <div class="ex-rus-map">
                 <div class="container">
@@ -183,7 +183,7 @@
             </div>
         </div>
     </section>
-    <section class="ex-section-4">
+    <section class="ex-section-4 hidden-xs hidden-sm">
         <div class="container">
             <h2>О нас говорят</h2>
             <div class="owl-carousel owl-theme">

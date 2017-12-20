@@ -130,13 +130,6 @@ if(!isset($description))
      }
      ?>
 
-     <!-- javascript -->
-     <?php
-        echo '<script>';
-        //require 'templates/dengomir/assets/js/oSpP.js';
-        echo '</script>';
-     ?>
-
      <!--[if lte IE 9]>
      <script src="/modules/html5shiv/html5shiv.js"></script>
      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -176,6 +169,7 @@ if(!isset($description))
                     <a class="dropdown-toggle ex-menu-item" data-toggle="dropdown" href="#">получение денег
                         <i class="ex-dropdown-arrow"></i></a>
                     <ul class="dropdown-menu">
+                        <li><a href="/form">Получить деньги</a></li>
                         <li><a href="/zaim-card">Займ на банковскую карту</a></li>
                         <li><a href="/zaim-qiwi">Займ на QIWI кошелёк</a></li>
                         <li><a href="/zaim-contact">Займ через Contact</a></li>
@@ -197,49 +191,7 @@ if(!isset($description))
             </ul>
         </div>
     </div>
-</nav>
-<!-- 
-<header>
-    <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="/" class="navbar-brand">
-                    <img src="/templates/dengomir/assets/img/logo.png" alt="Image missing">
-                </a>
-            </div>
-            <div id="navbarCollapse" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="ex-dropdown-menu dropdown"><a href="#" class="dropdown-toggle"
-                                                             data-toggle="dropdown"
-                                                             aria-expanded="false">Как работает сервис</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/about">О сервисе dengomir</a></li>
-                            <li><a href="/allarticles">Статьи о займах</a></li>
-                            <li><a href="/faq">FAQ</a></li>
-                        </ul>
-                    </li>
-                    <li class="ex-dropdown-menu dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                                                             aria-expanded="false">Документы</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/oferta">Публичная оферта</a></li>
-                            <li><a href="/soglasie">Согласие на обработку данных</a></li>
-                            <li><a href="/rules">Правила предоставления займов</a></li>
-                        </ul>
-                    </li>
-                    <li> 
-                        <a href="" data-toggle="modal" data-target="#askQuestion">Задать вопрос</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>  -->
+</nav> 
     <div id="askQuestion" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">

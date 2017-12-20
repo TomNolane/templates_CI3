@@ -55,13 +55,13 @@ $(document).ready(function () {
                 time = '61 дня';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize >= 20000 && currentLoanSize < 30000){
-                time = '130 дня';
+                time = '130 дней';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize > 30000 && currentLoanSize < 50000){
-                time = '200 дня';
+                time = '200 дней';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize > 50000){
-                time = '250 дня';
+                time = '250 дней';
                 timeTable.html("<span>"+time+"</span>");
             }
         };
