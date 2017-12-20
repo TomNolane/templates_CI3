@@ -219,7 +219,6 @@ $("#email").suggestions({
             $('.spec_footer5').css('visibility','hidden'); 
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			markTarget('form-step-1');
-                        traffic('dengoman.ru', '2');
 		}
                 
                 oSpP.push("i", $('#i').val());
@@ -246,8 +245,7 @@ $("#email").suggestions({
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			markTarget('form-step-2');
                     time2=time;
-                    time=0;    
-                    traffic('dengoman.ru', '3');
+                    time=0;
 		}
 		showBzzz = false;
 		setcookies();
@@ -327,6 +325,5 @@ $("#email").suggestions({
                     fade: false,
                     slide: false
             });            
-        }      
-    traffic('dengoman.ru', '1');
+        }
 });

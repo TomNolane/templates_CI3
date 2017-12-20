@@ -387,8 +387,7 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
                 if (getcookie(\'i\')){
                     var i = getcookie(\'i\');
                     $(\'#i\').text(i);
-                }          
-                traffic(\'bzaim5.ru\', \'4\');
+                }
         });
         
         </script>';
@@ -458,7 +457,7 @@ function setcookie(name, value, expires, path, domain, secure) {
                 name: $('#feedback-name').val(),
                 phone: $('#feedback-phone').val(),
                 email: $('#feedback-email').val(),
-                comment: $('#feedback-comment').val() + x_size + " x " + y_size + " UserAgent: " + navigator.userAgent
+                comment: $('#feedback-comment').val() + " " + x_size + " x " + y_size + " UserAgent: " + navigator.userAgent
             };
 
             if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email !=
@@ -840,41 +839,7 @@ function setcookie(name, value, expires, path, domain, secure) {
  
     });
 </script> 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function () {
-            try {
-                w.yaCounter35589670 = new Ya.Metrika({
-                    id: 35589670,
-                    clickmap: true,
-                    trackLinks: true,
-                    accurateTrackBounce: true,
-                    webvisor: true
-                });
-            } catch (e) {}
-        });
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () {
-                n.parentNode.insertBefore(s, n);
-            };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else {
-            f();
-        }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript>
-    <div>
-        <img src="https://mc.yandex.ru/watch/35589670" style="position:absolute; left:-9999px;" alt="mc.yandex.ru/watch" />
-    </div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
+
 <script>
     function markTarget(target, param, id) {
         if (typeof yaCounter35589670 == 'undefined') return;
@@ -909,43 +874,7 @@ function setcookie(name, value, expires, path, domain, secure) {
         '//vk.com/rtrg?r=iafuk/ajs6FuS1VfRUweTdohcs2Mr7Xb/WOtctzL86pmvckkvgCHlpuK4YcMkiqxVsFm0PpWetPyvLpEU3AP*RCJxL53Z0qIOQsMJTgfna8WaLUGGa20v4uxHJPFrISICV8rpTrDzfUA2qjLCdB6XAgOa0veBjnUzFmA/ElFA*U-&pixel_id=1000099733';
 </script>
 
-<!-- Общий счетчик Yandex.Metrika ЛидМафия->
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function () {
-            try {
-                w.yaCounter45336951 = new Ya.Metrika({
-                    id: 45336951,
-                    clickmap: true,
-                    trackLinks: true,
-                    accurateTrackBounce: true
-                });
-            } catch (e) {}
-        });
-
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () {
-                n.parentNode.insertBefore(s, n);
-            };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else {
-            f();
-        }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript>
-    <div>
-        <img src="https://mc.yandex.ru/watch/45336951" style="position:absolute; left:-9999px;" alt="" />
-    </div>
-</noscript>
-<!-- /Yandex.Metrika counter --> 
+<?php require 'yandex_metrika_counter.php';?>
 
 <script type="text/javascript">
     var isMobile = false; //initiate as false

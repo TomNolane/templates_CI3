@@ -59,7 +59,7 @@ if(!isset($description))
 		require "templates/dengimo/css/suggestions.min.css"; 
 		echo '</style>'; 
 		echo '<style>';
-		require "templates/dengimo/style.min.css";
+		require "templates/dengimo/css/style.css";
 		echo '</style>';
  
 		if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') 
@@ -132,33 +132,18 @@ if(!isset($description))
 		} 
 	?>
 	<!--[if lte IE 9]>
-<script src="/modules/html5shiv/html5shiv.js"></script>
-<![endif]-->
+	<script src="/modules/html5shiv/html5shiv.js"></script>
+	<![endif]-->
 
-<?php   if ($this->uri->segment(1) != 'form') {
-			require 'templates/common/googlesyndication.php';
-		}
-		echo '<!-- Сендпульс Sendpulse -->';
-		require 'sendpuls.php';
+<?php   
+	if ($this->uri->segment(1) != 'form') 
+	{
+		require 'templates/common/googlesyndication.php';
+	} 
+	require 'sendpuls.php';
+	require 'google_tag_manager.php';
 ?>
-	<!-- Google Tag Manager -->
-	<script>
-		(function (w, d, s, l, i) {
-			w[l] = w[l] || [];
-			w[l].push({
-				'gtm.start': new Date().getTime(),
-				event: 'gtm.js'
-			});
-			var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s),
-				dl = l != 'dataLayer' ? '&l=' + l : '';
-			j.async = true;
-			j.src =
-				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-			f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-FVT9Z22');
-	</script>
-	<!-- End Google Tag Manager --> 
+	
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->

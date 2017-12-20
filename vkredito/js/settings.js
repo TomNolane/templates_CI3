@@ -246,11 +246,8 @@ $("#email").suggestions({
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			markTarget('form-step-1');
                         time1=time;
-                        time=0;
-                        traffic('vkredito.ru', '2');
-		}
-                        oSpP.push("i", $('#i').val());
-                        oSpP.push("o", $('#o').val());
+                        time=0; 
+		} 
 		showBzzz = false;
 		$('.reg_same').change();
 		setcookies();
@@ -274,7 +271,6 @@ $("#email").suggestions({
 			markTarget('form-step-2');
                         time2=time;
                         time=0;
-                        traffic('vkredito.ru', '3');
 		}
 		showBzzz = false;
 		setcookies();
@@ -287,7 +283,6 @@ $("#email").suggestions({
 			send_form(true, '/lk');
 			markTarget('form-step-3');
                         time3=time;
-                        traffic('vkredito.ru', '4');
                         $.ajax({
                             type: 'POST',
                             url: '/time/',
