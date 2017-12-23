@@ -12044,7 +12044,7 @@ main.ex-offerta .col-md-3 figure .ex-wrapper img {
 }
 /* line 48, ../sass/desktop/_offerta.scss */
 main.ex-offerta .col-md-3 figure p {
-  margin-top: 15px;
+  margin-top: 0px;
   font-family: "Dosis", sans-serif;
   font-size: 48px;
   font-weight: 700;

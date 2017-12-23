@@ -3,10 +3,11 @@
 <?php 
 if($this->uri->segment(1) != 'form')
 {
-    echo '<div class="text-center" id="ya-rtb">
-    <div id="yandex_rtb_R-A-243980-1"></div>
-    <div id="yandex_rtb_R-A-243980-3"></div>
-    </div>';
+    echo '<!-- Декстоп --><div class="text-center" id="ya-rtb"><div id="yandex_rtb_R-A-243980-1"></div>';
+    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
+        echo '<!-- Мобайл --><div id="yandex_rtb_R-A-243980-3"></div>';
+    }
+    echo '</div>';
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Деньгомэн -->
     <ins class="adsbygoogle text-center"

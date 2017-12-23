@@ -31,6 +31,15 @@ $pixel = $this->pixel->stat('dengoman.ru');
             <div class="col-md-12">
                 <div class="text-center hidden-xs">
                         <?php
+                            function plural_type($n) { 
+                                return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
+                            } 
+                            
+                            $_plural_years = array('год', 'года', 'лет');
+                            $_plural_months = array('месяц', 'месяца', 'месяцев');
+                            $_plural_days = array('день', 'дня', 'дней');
+                            $_plural_times = array('раз', 'раза', 'раз');
+                            
                             foreach($data as $item){
                                     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
                                     $item['link'] = str_replace("#site", $domen, $item['link']);                                
@@ -39,14 +48,11 @@ $pixel = $this->pixel->stat('dengoman.ru');
                                             <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
                                                 <img src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
                                             </a>
-                                            <!--
-                                            <br/>
-                                            <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
-                                                <p class="">Процентная ставка '.$item["percent"].' %</p>
-                                                <p class="">Максимальная сумма '.$item["amount"].' Р </p>
-                                                <p class="">Максимальный срок '.$item["period"].' дней</p>                                          
-                                            </a>
-                                            -->
+                                            <div class="text-center">
+                                                <div>Максимальная сумма: <b>'.$item["amount"].' рублей</b></div>
+                                                <div>Максимальный срок: <b>'.$item["period"].' '.$_plural_days[plural_type($item['period'])].'</b></div>
+                                                <div>Прооцентная ставка: <b>от '.$item["percent"].'%</b></div>
+                                            </div>
                                             <br/>
                                             
                                             <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" class="btn" target="_blank">Получить деньги</a>                               

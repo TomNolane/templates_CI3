@@ -1,10 +1,13 @@
 <?php $from = '15'; 
 if($this->uri->segment(1) != 'form')
 {
-    echo '<div class="text-center" id="ya-rtb">
-	<div class="visible-xs visible-sm hidden-md hidden-lg" id="yandex_rtb_R-A-247243-1"></div>
-	<div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-247243-3"></div>
-    </div>';
+    echo '<!-- Декстоп --><div class="text-center" id="ya-rtb"><div class="visible-xs visible-sm hidden-md hidden-lg" id="yandex_rtb_R-A-247243-1"></div>';
+        
+        if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
+        echo '<!-- мобайл --><div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-247243-3"></div>';
+        }
+        
+    echo '</div>';
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Деньгибыстра -->
     <ins class="adsbygoogle text-center"

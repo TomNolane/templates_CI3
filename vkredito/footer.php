@@ -1,10 +1,11 @@
 <?php 
 if ($this->uri->segment(1) != 'form')
 {
-    echo '<div id="ya-rtb">
-    <div id="yandex_rtb_R-A-249178-1"></div>
-    <div id="yandex_rtb_R-A-249178-2"></div>
-    </div>';
+    echo '<!-- Декстоп --><div id="ya-rtb"><div id="yandex_rtb_R-A-249178-2"></div>';
+    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') {
+        echo '<!-- Мобайл --><div id="yandex_rtb_R-A-249178-1"></div>';
+    }
+    echo '</div>';
     echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Вкредито -->
     <ins class="adsbygoogle text-center"
@@ -26,7 +27,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
         <div class="row">
             <div class="col-md-2 col-sm-4 col-xs-12">
                 <a href="/">
-                    <img src="/templates/vkredito/img/logo.png" class="logo">
+                    <img src="/templates/vkredito/img/logo.png" class="logo" alt="logo.png">
                 </a>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12">

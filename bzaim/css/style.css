@@ -51,8 +51,10 @@ footer .menu a{font-size:10px;font-family:'Myriad Pro';font-weight:400;}
 .panel-body{}
 .panel{border:0px solid transparent;}
 .panel-title a, .panel-title a:hover, .panel-title a:focus{line-height:29px;color:#fff;}
-.offer-lk{background-color:#fff;margin:10px 0px;padding:20px 30px;border:1px double rgb(192, 192, 192);border-radius:10px;line-height:55px;}
+.offer-lk{background-color:#fff;margin:10px 0px;padding:20px 30px;border:1px double rgb(192, 192, 192);border-radius:10px;line-height:25px;}
 .offer-lk:hover{border:1px double #00da00;box-shadow:1px 1px 10px #00da00;}
+.spec_lk{font-size: 28px;}
+.spec_lk2{font-size: 12px;}
 .btn-lk:hover{box-shadow:2px 5px 5px rgb(192, 192, 192);}
 .offer-lk big{font-size:26px;font-weight:600;}
 .title.lk{font-size:40px;}

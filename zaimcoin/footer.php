@@ -5,46 +5,13 @@ if($this->uri->segment(1) != 'form')
 { 
     echo '<!-- Декстоп Yandex.RTB R-A-259325-1 -->
     <div class="hidden-xs hidden-sm">
-    <div id="yandex_rtb_R-A-259325-1"></div></div>
-    <script type="text/javascript">
-    (function(w, d, n, s, t) {
-    w[n] = w[n] || [];
-    w[n].push(function() {
-    Ya.Context.AdvManager.render({
-    blockId: "R-A-259325-1",
-    renderTo: "yandex_rtb_R-A-259325-1",
-    async: true
-    });
-    });
-    t = d.getElementsByTagName("script")[0];
-    s = d.createElement("script");
-    s.type = "text/javascript";
-    s.src = "//an.yandex.ru/system/context.js";
-    s.async = true;
-    t.parentNode.insertBefore(s, t);
-    })(this, this.document, "yandexContextAsyncCallbacks");
-    </script>
-    <!-- мобайл Yandex.RTB R-A-259325-2 -->
-    <div class="hidden-lg hidden-md">
-    <div id="yandex_rtb_R-A-259325-2"></div></div>
-    <script type="text/javascript">
-    (function(w, d, n, s, t) {
-    w[n] = w[n] || [];
-    w[n].push(function() {
-    Ya.Context.AdvManager.render({
-    blockId: "R-A-259325-2",
-    renderTo: "yandex_rtb_R-A-259325-2",
-    async: true
-    });
-    });
-    t = d.getElementsByTagName("script")[0];
-    s = d.createElement("script");
-    s.type = "text/javascript";
-    s.src = "//an.yandex.ru/system/context.js";
-    s.async = true;
-    t.parentNode.insertBefore(s, t);
-    })(this, this.document, "yandexContextAsyncCallbacks");
-    </script>';
+    <div id="yandex_rtb_R-A-259325-1"></div></div>';
+
+    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
+    echo '<!-- мобайл Yandex.RTB R-A-259325-2 -->
+        <div class="hidden-lg hidden-md">
+        <div id="yandex_rtb_R-A-259325-2"></div></div>';
+    }
 
     echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Займкоин -->

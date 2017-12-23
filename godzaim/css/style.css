@@ -204,7 +204,7 @@ label.green{color:#7e975a;}
 .contacts-other{color:#444444;font-size:14px;}
 .contacts hr{border-top:4px dotted #90cea1;margin:10px auto;max-width:440px;}
 .media-heading{font-weight:bold;}
-.offers-img{height:85px;width:240px;}
+.offers-img{width: 100%;margin: 10px;}
 .docs-sidebar .btn-menu{color:#093b3f;background-color:#fff;border:3px solid #093b3f;border-radius:20px;font-size:12px;font-weight:bold;padding:10px 17px;text-align:left;}
 .docs-sidebar .btn-menu.active{color:#fff;background:#093b3f;}
 .history{background:url(templates/godzaim/img/history/bg.png) center top no-repeat;}
