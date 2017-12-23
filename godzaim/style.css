@@ -922,8 +922,10 @@ label.green{
     font-weight:bold;
 }
 .offers-img{
-    height: 85px;
-    width: 240px;
+    /* height: 85px;
+    width: 240px; */
+    width: 100%;
+    margin: 10px;
 }
 
 .docs-sidebar .btn-menu{

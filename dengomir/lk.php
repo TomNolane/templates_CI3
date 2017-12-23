@@ -32,10 +32,10 @@
                     return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
                 } 
                 
-                $_plural_years = array('год', 'года', 'лет'); 
-                $_plural_months = array('месяц', 'месяца', 'месяцев'); 
-                $_plural_days = array('день', 'дня', 'дней'); 
-                $_plural_times = array('раз', 'раза', 'раз'); 
+                $_plural_years = array('год', 'года', 'лет');
+                $_plural_months = array('месяц', 'месяца', 'месяцев');
+                $_plural_days = array('день', 'дня', 'дней');
+                $_plural_times = array('раз', 'раза', 'раз');
 
                 foreach($data as $item)
                 {
@@ -57,7 +57,7 @@
                             <span class="fa fa-star"></span>
                         </p>
                         <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
-                            <img class="lk-img ex-offers-img1 '.$item['img'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
+                            <img class="lk-img '.$item['img'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
                         </a> 
                     </div>
                 </td>
@@ -65,7 +65,7 @@
                     <div>Сумма займа<p>до '.number_format($item['amount'],0,'',' ').' рублей</p></div>
                 </td>
                 <td data-label="">
-                    <div>Cрок займа <p>'.$item['period'].' '.$_plural_days[plural_type($item['period'])].'</p></div>
+                    <div>Cрок займа <p>до '.$item['period'].' '.$_plural_days[plural_type($item['period'])].'</p></div>
                 </td>
                 <td data-label="">
                     <div>Основная ставка <p>'.$item['percent'].'%</p></div>

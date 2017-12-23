@@ -4,8 +4,12 @@ $from = '15';
 
 <div class="buffer"></div>
 <div id="ya-rtb">
+    <!-- декстоп YANDEX RTB -->
     <div id="yandex_rtb_R-A-243981-3"></div>
+    <?php if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { ?>
+    <!-- мобайл YANDEX RTB -->
     <div id="yandex_rtb_R-A-243981-1"></div>
+    <?php } ?>
 </div>
 <?php
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')

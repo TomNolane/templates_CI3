@@ -33,7 +33,7 @@ if(!isset($description))
 	<meta name="twitter:domain" content="dengomir.ru"/>
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="/templates/dengomir/favicon/favicon.ico">
+    <link rel="shortcut icon" href="/templates/dengomir/favicon/favicon-16x16.png" type="image/png">
     <link rel="apple-touch-icon" sizes="57x57" href="/templates/dengomir/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/templates/dengomir/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/templates/dengomir/favicon/apple-icon-72x72.png">

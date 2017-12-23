@@ -67,8 +67,8 @@ if (isMobile) {
         w[n] = w[n] || [];
         w[n].push(function () {
             Ya.Context.AdvManager.render({
-                blockId: "R-A-244327-1",
-                renderTo: "yandex_rtb_R-A-244327-1",
+                blockId: "R-A-247243-1",
+                renderTo: "yandex_rtb_R-A-247243-1",
                 async: true
             });
         });
@@ -84,8 +84,8 @@ if (isMobile) {
         w[n] = w[n] || [];
         w[n].push(function () {
             Ya.Context.AdvManager.render({
-                blockId: "R-A-244327-2",
-                renderTo: "yandex_rtb_R-A-244327-2",
+                blockId: "R-A-247243-3",
+                renderTo: "yandex_rtb_R-A-247243-3",
                 async: true
             });
         });

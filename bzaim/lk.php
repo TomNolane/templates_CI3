@@ -36,32 +36,40 @@ $pixel = $this->pixel->stat('bzaim5.ru');
                         echo'<h1 class="title" style="color: #000; text-shadow: #fff 0 0 6px;">Вам автоматически одобрен займ в следующих организациях:</h1>';
                     }
                 ?>
-                            <?php
+                    <?php
 
-                                foreach($data as $item){
-                                    $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-                                    $item['link'] = str_replace("#site", $domen, $item['link']);                                    
-                                    echo '
-                                    <div class="col-md-12 offer-lk">
-                                            <div class="col-md-3 spec_lk1">
-                                                <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
-                                                    <img src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'" class="offers-img">
-                                                </a>                        
-                                            </div>    
-                                            <div class="col-md-3">
-                                                <big>'.number_format($item['amount'],0,'',' ').' Р</big>
-                                            </div>
-                                            <div class="col-md-3 hidden-sm hidden-xs">
-                                                '.$item['percent'].'% / '.$item['period'].' дней
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" class="btn btn-success btn-lk" target="_blank">Получить деньги</a>
-                                            </div>
-                                    </div>
-                                        
-                                    ';
-                                }
-                            ?>
+                    function plural_type($n) { 
+                        return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
+                    } 
+                    
+                    $_plural_years = array('год', 'года', 'лет');
+                    $_plural_months = array('месяц', 'месяца', 'месяцев');
+                    $_plural_days = array('день', 'дня', 'дней');
+                    $_plural_times = array('раз', 'раза', 'раз');
+
+                        foreach($data as $item){
+                            $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
+                            $item['link'] = str_replace("#site", $domen, $item['link']);
+                            echo '
+                            <div class="col-md-12 offer-lk">
+                                <div class="col-md-3 spec_lk1">
+                                    <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
+                                        <img src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'" class="offers-img">
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                максимальная сумма:<br><b class="spec_lk">'.number_format($item['amount'],0,'',' ').' руб.</b>
+                                </div>
+                                <div class="col-md-3 hidden-sm hidden-xs">
+                                <b class="spec_lk2">Прооцентная ставка: '.$item['percent'].'% <br> Максимальный срок: '.$item['period'].' '.$_plural_days[plural_type($item['period'])].'</b>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" class="btn btn-success btn-lk" target="_blank">Получить деньги</a>
+                                </div>
+                            </div>
+                            ';
+                        }
+                    ?>
                 </div>
             </div>
         </section>

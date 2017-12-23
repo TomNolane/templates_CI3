@@ -28,46 +28,55 @@
             в следующих организациях:</h2>
         <div class="row"> 
         <?php 
-                foreach($data as $item)
-                {
-                    $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-                    $item['link'] = str_replace("#site", $domen, $item['link']);
-                    echo '<div class="col-md-3">
-                    <figure class="text-center">
-                        <div class="ex-wrapper text-center">
-                            <p class="text-right">
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star ex-checked-stars"></span>
-                                <span class="fa fa-star ex-checked-stars"></span>
-                            </p>
-                            <div class="ex-img-offerta">
-                            <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
-                            <img class="lk-img '.$item['img'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
-                        </a>
-                            </div>
+        function plural_type($n) { 
+            return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
+        } 
+        
+        $_plural_years = array('год', 'года', 'лет');
+        $_plural_months = array('месяц', 'месяца', 'месяцев');
+        $_plural_days = array('дня', 'дня', 'дней');
+        $_plural_times = array('раз', 'раза', 'раз');
+
+            foreach($data as $item)
+            {
+                $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
+                $item['link'] = str_replace("#site", $domen, $item['link']);
+                echo '<div class="col-md-3">
+                <figure class="text-center">
+                    <div class="ex-wrapper text-center">
+                        <p class="text-right">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star ex-checked-stars"></span>
+                            <span class="fa fa-star ex-checked-stars"></span>
+                        </p>
+                        <div class="ex-img-offerta">
+                        <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
+                        <img class="lk-img '.$item['img'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
+                    </a>
                         </div>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td>Максимальная сумма</td>
-                                <td>'.number_format($item['amount'],0,'',' ').' рублей</td>
-                            </tr>
-                            <tr>
-                                <td>Срок займа</td>
-                                <td>'.$item['period'].' дней</td>
-                            </tr>
-                            <tr>
-                                <td>Основная ставка</td>
-                                <td>'.$item['percent'].'%</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn">Получить деньги</button></a> 
-                    </figure>
-                </div> '; 
-                }
+                    </div>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>Максимальная сумма:</td>
+                            <td>до '.number_format($item['amount'],0,'',' ').' рублей</td>
+                        </tr>
+                        <tr>
+                            <td>Срок займа:</td>
+                            <td>до '.$item['period'].' '.$_plural_days[plural_type($item['period'])].'</td>
+                        </tr>
+                        <tr>
+                            <td>Основная ставка:</td>
+                            <td>от '.$item['percent'].'%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn">Получить деньги</button></a> 
+                </figure>
+            </div> '; 
+            }
             ?>  
         </div>
     </div>

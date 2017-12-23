@@ -35,6 +35,15 @@ $pixel = $this->pixel->stat('godzaim.ru');
 			</div>
 			<div class="row">
 				<?php
+				function plural_type($n) { 
+					return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
+				} 
+				
+				$_plural_years = array('год', 'года', 'лет');
+				$_plural_months = array('месяц', 'месяца', 'месяцев');
+				$_plural_days = array('дня', 'дня', 'дней');
+				$_plural_times = array('раз', 'раза', 'раз');
+				
         foreach($data as $item){
             $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
             $item['link'] = str_replace("#site", $domen, $item['link']); 
@@ -43,13 +52,20 @@ $pixel = $this->pixel->stat('godzaim.ru');
 				<div class="offer-item">
 					<div class="offer-image border rounded">
 						<a href="https://pxl.leads.su/click/'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
-							<img src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'" class="offers-img">
+							<img src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'" class="offers-img3">
 						</a>
 					</div>
 					<div class="offer-panel border shadow">
 						<div class="offer-data border rounded">
-							<div class="pull-left offer-amount">'.number_format($item['amount'],0,'',' ').' Р</div>
-							<div class="pull-right offer-percent">'.$item['percent'].'% / '.$item['period'].' дней</div>
+						<div>
+							<a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><img src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'" class="offers-img"></a>
+						</div>
+						<div>
+							<p><span class="hidden-md">До</span> '.$item['period'].' '.$_plural_days[plural_type($item['period'])].' по ставке '.$item['percent'].'%</p>
+						</div>
+						<div>
+							<p>Максимальная сумма:<br>до '.number_format($item['amount'],0,'',' ').' рублей</p>
+						</div> 
 							<div class="clearfix"></div>
 						</div>
 					</div>

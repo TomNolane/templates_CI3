@@ -32,6 +32,14 @@ $pixel = $this->pixel->stat('zaimol.ru');
             <div class="row">
 
             <?php
+                function plural_type($n) { 
+                    return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
+                } 
+                
+                $_plural_years = array('год', 'года', 'лет');
+                $_plural_months = array('месяц', 'месяца', 'месяцев');
+                $_plural_days = array('дня', 'дня', 'дней');
+                $_plural_times = array('раз', 'раза', 'раз');
                 foreach($data as $item)
                 {
                     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
@@ -53,7 +61,7 @@ $pixel = $this->pixel->stat('zaimol.ru');
                                     </tr>
                                     <tr>
                                         <td>Максимальный срок</td>
-                                        <td>'.$item['period'].' дней</td>
+                                        <td>до '.$item['period'].' '.$_plural_days[plural_type($item['period'])].'</td>
                                     </tr>
                                 </table>
                                 <table>

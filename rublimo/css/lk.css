@@ -28,9 +28,9 @@ table{
 }
 .table > tbody > tr > td{
 	color:#fff;
-	font-size:17px;
+	font-size:16px;
 	vertical-align:middle;
-        border-top: 0px dotted #ddd;
+	border-top: 0px dotted #ddd;
 }
 .results tr:first-child td img{
     width: 200px;
@@ -115,8 +115,18 @@ input[type="radio"], input[type="checkbox"] {
     margin: 0 -23px;
 }
 .btn-green{
-    background-color: #65a751;
-    padding: 15px 25px;
+    background-color: #fff300;
+	padding: 15px 25px;
+	color: #000;
+	-webkit-transition: .6s ease-in-out all;
+       -o-transition: .6s ease-in-out all;
+          transition: .6s ease-in-out all; 
+}
+.btn-green:hover{
+	background-color: #ff5100; 
+	-webkit-transition: .6s ease-in-out all;
+       -o-transition: .6s ease-in-out all;
+          transition: .6s ease-in-out all; 
 }
 .for_img{
 	margin-top: 22px;

@@ -31,7 +31,17 @@ $pixel = $this->pixel->stat('dengimo.ru');
             ';
         ?>
             
-            <?php if(isset($data)){ ?>
+            <?php if(isset($data))
+            { 
+                function plural_type($n) { 
+                    return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
+                } 
+                
+                $_plural_years = array('год', 'года', 'лет');
+                $_plural_months = array('месяц', 'месяца', 'месяцев');
+                $_plural_days = array('день', 'дня', 'дней');
+                $_plural_times = array('раз', 'раза', 'раз');
+            ?>
                 <?php foreach($data as $item){ ?>
                     <?php 
                         $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
@@ -44,6 +54,11 @@ $pixel = $this->pixel->stat('dengimo.ru');
                                         <img src="/templates/common/img/offers/'.$item['img']. '.png" alt="'. $item['title'].'">
                                     </a>
                                     <div class="percent hidden-sm hidden-xs">'.$item["prob"].'% </div>
+                                </div>
+                                <div class="text-center">
+                                    <div>Максимальная сумма: <b>'.$item["amount"].' рублей</b></div>
+                                    <div>Максимальный срок: <b>'.$item["period"].' '.$_plural_days[plural_type($item['period'])].'</b></div>
+                                    <div>Прооцентная ставка: <b>от '.$item["percent"].'%</b></div>
                                 </div>
                                 <div class="take_money">
                                     <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">Забрать деньги</a>

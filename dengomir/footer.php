@@ -3,6 +3,20 @@
     {
         echo '<a href="#0" class="cd-top">Наверх</a>';
     } 
+
+    if($this->uri->segment(1) != 'form')
+    {
+        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Деньгомир -->
+        <ins class="adsbygoogle text-center"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="6725914479"
+        data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
+    }
 ?>
 
 <footer class="ex-main-footer ex-sticky-footer">
@@ -23,8 +37,8 @@
                             Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель
                             под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200
                             рублей.
-                            Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения
-                            ИП «Бабакова К.К.»ОГРНИП 316222500122426 ИНН 222511216499</span></p>
+                            Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>
+                            ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001 </span></p>
                     </div>
                 </div>
             </div>

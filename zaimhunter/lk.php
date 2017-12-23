@@ -31,6 +31,14 @@ $pixel = $this->pixel->stat('zaimhunter.ru');
 <?php
 $arr = array(259,500,230,300,456,321);
 $i = 0;
+function plural_type($n) { 
+    return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
+} 
+
+$_plural_years = array('год', 'года', 'лет');
+$_plural_months = array('месяц', 'месяца', 'месяцев');
+$_plural_days = array('дня', 'дня', 'дней');
+$_plural_times = array('раз', 'раза', 'раз');
 foreach($data as $item)
 {
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
@@ -49,16 +57,16 @@ echo '<div class="col-md-3">
                         </th></tr></thead>
                         <tbody>
                         <tr>
-                            <td>Процентная ставка</td>
+                            <td>Процентная ставка:</td>
                             <td>от '.$item['percent'].'%</td>
                         </tr>
                         <tr>
-                            <td>Максимальная сумма</td>
+                            <td>Максимальная сумма:</td>
                             <td>'.number_format($item['amount'],0,'',' ').' рублей</td>
                         </tr>
                         <tr>
-                            <td>Максимальный срок</td>
-                            <td>'.$item['period'].' дней</td>
+                            <td>Максимальный срок:</td>
+                            <td>до '.$item['period'].' '.$_plural_days[plural_type($item['period'])].'</td>
                         </tr>
                         </tbody>
                     </table>

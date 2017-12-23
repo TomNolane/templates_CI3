@@ -36,6 +36,16 @@ $pixel = $this->pixel->stat('rublimo.ru');
 <div class="container">
     <div class="row">
             <?php
+            
+            function plural_type($n) { 
+                return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
+            } 
+            
+            $_plural_years = array('год', 'года', 'лет');
+            $_plural_months = array('месяц', 'месяца', 'месяцев');
+            $_plural_days = array('дня', 'дня', 'дней');
+            $_plural_times = array('раз', 'раза', 'раз');
+
                 foreach($data as $item){
                                     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
                                     $item['link'] = str_replace("#site", $domen, $item['link']);                    
@@ -44,23 +54,21 @@ $pixel = $this->pixel->stat('rublimo.ru');
                             <div class="panel panel-default panel-blue">
                                 <div class="panel-body">
                                     <table class="results table">
-                                        <tbody>
-                                        <!--
+                                        <tbody> 
                                             <tr>
                                                 <td class="text-left">Процентная ставка</td><td class="text-right">'.$item['percent'].'%</td>
                                             </tr>
                                             <tr>
-                                                <td class="text-left">Максимальная сумма</td><td class="text-right">'.number_format($item['amount'],0,'',' ').' рублей</td>
+                                                <td class="text-left">Максимальная сумма</td><td class="text-right">до '.number_format($item['amount'],0,'',' ').' рублей</td>
                                             </tr>
                                             <tr>
-                                                <td class="text-left">Максимальный срок</td><td class="text-right">'.$item['period'].' дней</td>
-                                            </tr>
-                                        -->    
+                                                <td class="text-left">Максимальный срок</td><td class="text-right">до '.$item['period'].' '.$_plural_days[plural_type($item['period'])].'</td>
+                                            </tr> 
                                             <tr class="text-center hidden-xs hidden-md">
                                                 <td colspan="2">
                                                     <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
                                                         <img class="lk-img '.$item['img'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
-                                                    </a>                                    
+                                                    </a>
                                                 </td>
                                             </tr>
                                             <tr class="text-center hidden-xs hidden-md">
@@ -72,14 +80,14 @@ $pixel = $this->pixel->stat('rublimo.ru');
                                                 <td colspan="2">
                                                     <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
                                                         <img class="lk-img '.$item['title'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
-                                                    </a>                                    
+                                                    </a>
                                                 </td>
                                             </tr>    
-                                            <tr class="text-center visible-xs visible-md">    
+                                            <tr class="text-center visible-xs visible-md">
                                                 <td colspan="2">
                                                     <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" class="btn btn-green" target="_blank">Получить деньги</a>
                                                 </td>
-                                            </tr>                                            
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
