@@ -237,9 +237,6 @@ $(document).ready(function(){
 			$('.form-steps-green-line').addClass('step2');
 			$('.form-steps-line').show();
 			$('#form-steps a[href="#form2"]').tab('show');
-                                            
-                        oSpP.push("i", $('#i').val());
-                        oSpP.push("o", $('#o').val());
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			//markTarget('form-step-1');
                         setcookie('i', $('#i').val());

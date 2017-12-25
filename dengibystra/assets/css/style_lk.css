@@ -3,7 +3,10 @@
 }
 .spec_footer5 { 
     visibility: hidden;
-} 
+}
+.spec_footer6 { 
+    visibility: hidden;
+}
 .table_text {
     color: #000000 !important;
     font-family: Roboto;

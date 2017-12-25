@@ -1,4 +1,45 @@
 <?php 
+$sum = '20000'; 
+$period = '21';
+
+if(isset($_GET['amount'])) 
+{ 
+    $sum = $_GET['amount'];
+    switch($_GET['amount']) 
+    { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; }
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000) 
+    { $period = '14'; } 
+    else if ($sum <= 20000) 
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000) 
+    { $period = '30'; } 
+    else { $period = '30'; } 
+} 
+
+if(isset($_POST['amount']))
+{ 
+    $sum = $_POST['amount'];
+    switch($_POST['amount']) 
+    { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; }
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000) 
+    { $period = '14'; } 
+    else if ($sum <= 20000) 
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000) 
+    { $period = '30'; } 
+    else { $period = '30'; } 
+} 
+
 if(!isset($my_title))
 {
     $my_title = 'Заполните анкету!';
@@ -37,13 +78,9 @@ elseif(isset($_POST['percent']) && !empty($_POST['percent']))
  
 if(!isset($my_title))
 {
-    $my_title = 'Заполните анкету!';
-}
-
-if(!isset($description))
-{
-    $description = 'описание анкеты!';
-}
+    $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Dengibystra';
+    $description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
+}  
 
 // IP
 $this->load->helper('ip');
@@ -56,16 +93,16 @@ if ($geo)
         if (isset($geo['region'])){
             $region_name = $geo['region'];
         }else{
-            $region_name = 'Казань';
+            $region_name = 'Москва';
         }
         if (isset($geo['city'])){
             $city_name = $geo['city'];
         }else{
-            $city_name = 'Казань';
+            $city_name = 'Москва';
         }
     }else{
-        $region_name = 'Казань';
-        $city_name = 'Казань';
+        $region_name = 'Москва';
+        $city_name = 'Москва';
 	}
 // Список регионов
 $this->load->model('geo/geo_model', 'geo');
@@ -109,25 +146,26 @@ include "header.php";
 <div class="ex-bounds"></div>
 <div class="container ex-form">
     <h1 class="text-center" id="to_scroll">Заполните анкету</h1>  
-        <form class="tab-content" id="anketa" action="/lk" method="post" onsubmit="return validate();" autocomplete="off" novalidate>
-            <input type="hidden" name="referer" value="<?=$referer?>">
-            <input type="hidden" name="id" value="">
-            <input type="hidden" name="step" value="1">
-            <input type="hidden" name="ad_id" value="<?=$ad_id?>"> 
-            <input type="hidden" name="display" id="display" value="0">
-            <input type="hidden" id="amount" name="amount" value="<?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>" />
-            <input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 21 : $_POST['period']; ?>" />
-            <div role="tabpanel" class="ex-anketa1-block tab-pane fade in active col-xs-12" id="firstTabContent">
-                <?php require 'form1.php'; ?>
-            </div>
-            <div role="tabpanel" class="ex-anketa2-block tab-pane col-xs-12" id="secondTabContent">
-                <?php require 'form2.php'; ?>
-            </div>
-            <div role="tabpanel" class="ex-anketa3-block tab-pane col-xs-12" id="lastTabContent">
+    <form class="tab-content" id="anketa" action="/lk" method="post" onsubmit="return validate();" autocomplete="off" novalidate>
+        <input type="hidden" name="referer" value="<?=$referer?>">
+        <input type="hidden" name="id" value="">
+        <input type="hidden" name="step" value="1">
+        <input type="hidden" name="ad_id" value="<?=$ad_id?>"> 
+        <input type="hidden" name="display" id="display" value="0">
+        <input type="hidden" id="amount" name="amount" value="<?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>" />
+        <input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 21 : $_POST['period']; ?>" />
+        <div role="tabpanel" class="ex-anketa1-block tab-pane fade in active col-xs-12" id="firstTabContent">
+            <?php require 'form1.php'; ?>
+        </div>
+        <div role="tabpanel" class="ex-anketa2-block tab-pane col-xs-12" id="secondTabContent">
+            <?php require 'form2.php'; ?>
+        </div>
+        <div role="tabpanel" class="ex-anketa3-block tab-pane col-xs-12" id="lastTabContent">
             <?php require 'form3.php'; ?>
-            </div>
-        </form>
+        </div>
+    </form>
 </div>
+
 <!-- FOOTER -->
 <footer class="ex-footer">
     <div class="container">
@@ -142,49 +180,6 @@ include "header.php";
         </div>
     </div>
 </footer> 
-<!-- Modal -->
-<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title text-center">Просто заполните форму и наш специалист свяжется с Вами</h4>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                        <form action="">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="feedback-name" placeholder="Имя" title="Имя">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="feedback-phone" placeholder="Телефон" title="Телефон">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="feedback-email" placeholder="Email" title="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="feedback-comment" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"
-                                    required></textarea>
-                            </div>
-                            <div class="modal-footer">
-                                <div class="ex-actions">
-                                    <button class="ex-main-btn" id="feedback-send" style="margin-top: 0px;">Отправить</button>
-                                </div>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-                <div id="loading" style="display:none;">
-                    <span>
-                        <i class="fa fa-spinner fa-spin fa-pulse"></i> Загрузка...</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal -->
 
 <?php
     require 'templates/common/get_display_size.php';
@@ -227,6 +222,167 @@ include "header.php";
     echo '<script>';
     require 'templates/dengibystra/assets/js/settings_form.js';
     echo '</script>';
+    echo ' <script>
+    $("#work").change(function(){
+        if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
+        { 
+            $("#work_name").addClass("valid");
+            $("#work_name").parent().addClass("has-success").removeClass("has-error");
+            $("#work_name").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_name").removeClass("er");
+            $("#work_namestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_occupation").addClass("valid");
+            $("#work_occupation").parent().addClass("has-success").removeClass("has-error");
+            $("#work_occupation").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_occupation").removeClass("er");
+            $("#work_occupationstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_phone").addClass("valid");
+            $("#work_phone").parent().addClass("has-success").removeClass("has-error");
+            $("#work_phone").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_phone").removeClass("er");
+            $("#work_phonestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_experience").addClass("valid");
+            $("#work_experience").parent().addClass("has-success").removeClass("has-error");
+            $("#work_experience").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_experience").removeClass("er");
+            $("#work_experiencestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_salary").addClass("valid");
+            $("#work_salary").parent().addClass("has-success").removeClass("has-error");
+            $("#work_salary").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_salary").removeClass("er");
+            $("#work_salary").focus();
+            $("#work_salarystatus").removeClass("glyphicon-remove");
+
+            $("#work_region").addClass("valid");
+            $("#work_region").parent().addClass("has-success").removeClass("has-error");
+            $("#work_region").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_region").removeClass("er");
+
+            $("#work_city").addClass("valid");
+            $("#work_city").parent().addClass("has-success").removeClass("has-error");
+            $("#work_city").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_city").removeClass("er");
+            $("#work_citystatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_street").addClass("valid");
+            $("#work_street").parent().addClass("has-success").removeClass("has-error");
+            $("#work_street").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_street").removeClass("er");
+            $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_house").addClass("valid");
+            $("#work_house").parent().addClass("has-success").removeClass("has-error");
+            $("#work_house").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_house").removeClass("er");
+            $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_office").addClass("valid");
+            $("#work_office").parent().addClass("has-success").removeClass("has-error");
+            $("#work_office").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_office").removeClass("er");
+            $("#work_officestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+            
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_name").val("пенсионер");
+            else  $("#work_name").val("безработный");
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_occupation").val("пенсионер");
+            else  $("#work_occupation").val("безработный");
+            var teemp = $("#phone").val();
+            $("#work_phone").val(teemp);
+            $("#work_experience").val(100);
+            $("#work_salary").val("");
+
+            var teemp2 = Number($("#region").find(":selected").index());
+            $("#work_region option").eq(teemp2).prop("selected", true);
+            var teemp3 = $("#city").val();
+            $("#work_city").val(teemp3);
+            var teemp4 = $("#street").val();
+            $("#work_street").val(teemp4);
+            var teemp5 = $("#building").val();
+            $("#work_house").val(teemp5);
+            $("#work_building").val(" ");
+            var teemp6 = $("#flat").val();
+            $("#work_office").val(teemp6);
+        }
+        else { 
+
+            $("#work_name").val("");
+            $("#work_name").removeClass("valid");
+            $("#work_name").parent().removeClass("has-success");
+            $("#work_name").parent().prev().removeClass("label_true"); 
+            $("#work_namestatus").removeClass("glyphicon-ok");
+
+            $("#work_occupation").val("");
+            $("#work_occupation").removeClass("valid");
+            $("#work_occupation").parent().removeClass("has-success");
+            $("#work_occupation").parent().prev().removeClass("label_true"); 
+            $("#work_occupationstatus").removeClass("glyphicon-ok"); 
+
+            $("#work_phone").val("");
+            $("#work_phone").removeClass("valid");
+            $("#work_phone").parent().removeClass("has-success");
+            $("#work_phone").parent().prev().removeClass("label_true"); 
+            $("#work_phonestatus").removeClass("glyphicon-ok");
+
+            $("#work_experience").val("");
+            $("#work_experience").removeClass("valid");
+            $("#work_experience").parent().removeClass("has-success");
+            $("#work_experience").parent().prev().removeClass("label_true"); 
+            $("#work_experiencestatus").removeClass("glyphicon-ok");
+
+            $("#work_salary").val("");
+            $("#work_salary").removeClass("valid");
+            $("#work_salary").parent().removeClass("has-success");
+            $("#work_salary").parent().prev().removeClass("label_true"); 
+            $("#work_salarystatus").removeClass("glyphicon-ok");
+ 
+            $("#work_region").removeClass("valid");
+            $("#work_region").parent().removeClass("has-success");
+            $("#work_region").parent().prev().removeClass("label_true");
+
+            $("#work_city").val("");
+            $("#work_city").removeClass("valid");
+            $("#work_city").parent().removeClass("has-success");
+            $("#work_city").parent().prev().removeClass("label_true"); 
+            $("#work_citystatus").removeClass("glyphicon-ok"); 
+
+            $("#work_street").val("");
+            $("#work_street").removeClass("valid");
+            $("#work_street").parent().removeClass("has-success");
+            $("#work_street").parent().prev().removeClass("label_true"); 
+            $("#work_streetstatus").removeClass("glyphicon-ok"); 
+
+            $("#work_house").val("");
+            $("#work_house").removeClass("valid");
+            $("#work_house").parent().removeClass("has-success");
+            $("#work_house").parent().prev().removeClass("label_true"); 
+            $("#work_housestatus").removeClass("glyphicon-ok");
+
+            $("#work_office").val("");
+            $("#work_office").removeClass("valid");
+            $("#work_office").parent().removeClass("has-success");
+            $("#work_office").parent().prev().removeClass("label_true"); 
+            $("#work_officestatus").removeClass("glyphicon-ok");
+            $("#work_name").val(""); 
+             $("#work_occupation").val(""); 
+            $("#work_phone").val("");
+            $("#work_experience").val(""); 
+            $("#work_salary").val("");
+            $("#work_region option").eq(0, true).prop("selected", true);
+            $("#work_city").val("");
+            $("#work_street").val("");
+            $("#work_house").val("");
+            $("#work_building").val("");
+            $("#work_office").val("");
+        }
+    }); 
+
+    </script>';
     echo '<!-- backtotop -->
     <script>
     jQuery(document).ready(function (o) {
@@ -322,6 +478,15 @@ include "header.php";
                // $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
             }
         }); 
+        // var c = getParameterByName('amount');
+        // var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());
+        // if (c != null) {
+        //     if (c > 100000 || c < 1000) {
+        //         c = 20000;
+        //     }
+        //     gg = c;
+        // }  
+    $(document).ready(function () { 
         var c = getParameterByName('amount');
         var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());
         if (c != null) {
@@ -329,9 +494,8 @@ include "header.php";
                 c = 20000;
             }
             gg = c;
-        }  
-    $(document).ready(function () { 
-        var currentLoanSize = gg,
+        };
+        var currentLoanSize =  parseInt(gg),
         range = $("#rangeSlider"),
         commissionPercantage = 13,
         rangeUpperValue =  $('#ex-slider-val'),
@@ -415,22 +579,22 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
     echo '    
 <!-- Modal Popup-->
 <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                            <div class="modal-header text-center">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                            </div>
-                            <div class="modal-body text-center">
-                                    <div class="row">
-                                            <div class="col-md-12">
-                                                <img src="/templates/common/img/popup.jpg">                                             
-                                                <h2>'.$popup_text.'</h2>
-                                                <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                                            </div>
+    <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                    <div class="modal-header text-center">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
+                    </div>
+                    <div class="modal-body text-center">
+                            <div class="row">
+                                    <div class="col-md-12">
+                                        <img src="/templates/common/img/popup.jpg">
+                                        <h2>'.$popup_text.'</h2>
+                                        <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
                                     </div>
                             </div>
                     </div>
             </div>
+    </div>
 </div>
 
         <script type= " text/javascript">

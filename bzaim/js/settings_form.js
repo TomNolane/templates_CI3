@@ -50,7 +50,6 @@ function validate1(){
 	else if ($('input[name="f"]').val().length < 2 || !re_name.test($('input[name="f"]').val())) {error('Необходимо указать фамилию.'); return false;}
 	else if ($('input[name="i"]').val().length < 2 || !re_name.test($('input[name="i"]').val())) {error('Необходимо указать имя.'); return false;}
 	else if ($('input[name="o"]').val().length < 2 || !re_name.test($('input[name="o"]').val())) {error('Необходимо указать отчество.'); return false;}
-
 	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {error('Вы не указали пол.'); return false;}
 	else if ($('input[name="phone"]').val().length != 16) {error('Номер телефона указан неверно.'); return false;}
 	else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {error('Email указан неверно.'); return false;}
@@ -65,21 +64,18 @@ function validate2(){
 	else if ($('input[name="passport_who"]').val().length < 3) {error('Необходимо указать, кем выдан паспорт.'); return false;}
 	else if ($('input[name="passport_code"]').val().length < 7) {error('Необходимо указать, код подразделения, выдавшего паспорт.'); return false;}
 	else if ($('input[name="birthplace"]').val().length < 3) {error('Необходимо указать место рождения.'); return false;}
-	
 	else if ($('#region').val().length < 2 || !re_rc.test($('#region').val())) {error('Необходимо указать регион проживания.'); return false;}
 	else if ($('input[name="city"]').val().length < 2 || !re_rc.test($('input[name="city"]').val())) {error('<p>Ошибка в указании населённого пункта места жительства.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>'); return false;}
 	else if ($('input[name="street"]').val().length < 2) {error('Необходимо указать улицу места жительства.'); return false;}
 	else if (!$('input[name="building"]').val().length || !re.test($('input[name="building"]').val())) {error('Ошибочно указан номер дома места жительства. Указывайте только номер дома и литеру, если она есть.'); return false;}
 	else if ($('input[name="housing"]').val().length && !re.test($('input[name="housing"]').val())) {error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.'); return false;}
 	else if ($('input[name="flat"]').val().length    && !re.test($('input[name="flat"]').val())) {error('Ошибочно указан номер квартиры места жительства. Указывайте только номер дома и литеру, если она есть.'); return false;}
-	
 	else if ($('.reg_same:checked').val() == '0' && ($('#reg_region').val().length < 2 || !re_rc.test($('#reg_region').val()))) {error('Вы не указали регион регистрации.'); return false;}
 	else if ($('.reg_same:checked').val() == '0' && ($('input[name="reg_city"]').val().length < 2 || !re_rc.test($('input[name="reg_city"]').val()))) {error('<p>Ошибка в указании населённого пункта места регистрации.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>'); return false;}
 	else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_street"]').val().length < 2) {error('Необходимо указать улицу регистрации.'); return false;}
 	else if ($('.reg_same:checked').val() == '0' && !re.test($('input[name="reg_building"]').val())) {error('Ошибочно указан номер дома регистрации. Указывайте только номер дома и литеру, если она есть.'); return false;}
 	else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_housing"]').val().length && !re.test($('input[name="reg_housing"]').val())) {error('Ошибочно указан номер строения регистрации. Указывайте только номер дома и литеру, если она есть.'); return false;}
 	else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_flat"]').val().length    && !re.test($('input[name="reg_flat"]').val())) {error('Ошибочно указан номер квартиры регистрации. Указывайте только номер дома и литеру, если она есть.'); return false;}
-	
 	else return true;
 	return false;
 }
@@ -436,9 +432,6 @@ $(document).ready(function () {
 			$('.form-steps-green-line').addClass('step2');
 			$('.form-steps-line').show();
 			$('#form-steps a[href="#form2"]').tab('show');
-                                            
-            oSpP.push("i", $('#i').val());
-            oSpP.push("o", $('#o').val());
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			markTarget('form-step-1');
             setcookie('i', $('#i').val());
@@ -462,17 +455,17 @@ $(document).ready(function () {
 		showBzzz = false;
 	}); 
 	$('#form-send').click(function(){
-            $('#form-send').html('Обработка заявки <span class="glyphicon glyphicon-refresh glyphicon-spin"></span>');
-            if (validate()) {
-                $('input[name="step"]').val('3');
-                $('#form-modal').show();
-                send_form(true, '/lk/');
-                markTarget('form-step-3');
-                window.location = '/lk';
-            }
-            showBzzz = false;
-            setcookies(); });
-            
+        $('#form-send').html('Обработка заявки <span class="glyphicon glyphicon-refresh glyphicon-spin"></span>');
+        if (validate()) {
+            $('input[name="step"]').val('3');
+            $('#form-modal').show();
+            send_form(true, '/lk/');
+            markTarget('form-step-3');
+            window.location = '/lk';
+        }
+        showBzzz = false;
+        setcookies(); 
+    }); 
     $('select[name="reg_type"]').change(function () {
         if ($(this).val() == '0') {
             $('.reg_same[value="1"]').prop('checked', true);

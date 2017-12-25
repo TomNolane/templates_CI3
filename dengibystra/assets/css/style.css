@@ -11079,7 +11079,7 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+/*# sourceMappingURL=/templates/dengibystra/assets/css/bootstrap.css.map */
 /*!
  * Datepicker for Bootstrap
  *
@@ -13499,4 +13499,13 @@ header .navbar-default {
   #ya-rtb {
     text-align: center !important;
     min-width: 100% !important; 
+  }
+  input#i , input#o, input#f, input#feedback-name {
+    text-transform: capitalize !important;
+  }
+  #next2 {
+    width: 100%;
+  }
+  #getmoney {
+    width: 100%; text-decoration: none; cursor: pointer;
   }

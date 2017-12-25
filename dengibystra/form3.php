@@ -8,7 +8,7 @@
         <div class="col-sm-8 col-sm-offset-2">
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="form-group has-feedback">
+                    <div class="form-group ex-arrow-on has-feedback">
                         <label class="label-required" for="work">Вид трудоустройства</label>
                         <select class="form-control ec" id="work" name="work" required>
                             <option value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
@@ -72,7 +72,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="form-group has-feedback">
+                    <div class="form-group ex-arrow-on has-feedback">
                         <label class="label-required" for="work_region">Регион</label>
                         <select class="form-control ec tip" name="work_region" id="work_region" autocomplete="off" required>
                             <option value="0">-- Выберите регион --</option>
@@ -143,7 +143,9 @@
 <div class="ex-anketa-foot">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2 text-right">
-            <button class="ex-main-btn" id="getmoney" style="width: 100%;text-transform: uppercase;">получить займ</button>
+            <a id="getmoney" class="ex-main-btn text-center"> 
+                Получить займ
+            </a>
         </div>
     </div>
 </div>

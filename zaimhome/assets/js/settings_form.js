@@ -12,7 +12,7 @@ function error(msg) {
         if ($('#message').length) $('#message').remove();
         $('body').append('<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' + '<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">OK</button></div></div></div></div>');
         $('#message').modal('show');
-    }  
+    }
 }
 
 function send_form(send, href) {

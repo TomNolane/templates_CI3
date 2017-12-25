@@ -118,6 +118,9 @@
 </div>
 <div class="form-group">
     <div class="col-md-6 col-md-offset-4">
-      <button id="getmoney" class="ex-main-btn"  style="width: 100%;text-transform: uppercase;">получить займ</button>
+    <a id="getmoney" class="ex-main-btn text-center" style="width: 100%;text-transform: uppercase; text-decoration: none;"> 
+        получить займ
+    </a>
+      <!-- <button id="getmoney" class="ex-main-btn"  style="width: 100%;text-transform: uppercase;">получить займ</button> -->
     </div>
 </div> 
