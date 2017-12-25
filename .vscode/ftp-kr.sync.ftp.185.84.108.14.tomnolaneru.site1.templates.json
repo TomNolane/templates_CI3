@@ -12,13 +12,7 @@
             "type": "d",
             "name": ".vscode",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "ftp-kr.json",
-                    "size": 746
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
@@ -30,7 +24,13 @@
             "type": "d",
             "name": "common",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "get_display_size.php",
+                    "size": 319
+                }
+            ]
         },
         {
             "type": "d",
@@ -54,18 +54,7 @@
             "type": "d",
             "name": "edenga",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "index.php",
-                    "size": 22359
-                },
-                {
-                    "type": "-",
-                    "name": "footer.php",
-                    "size": 37605
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
@@ -107,28 +96,7 @@
             "type": "d",
             "name": "zaimhome",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "footer.php",
-                    "size": 30428
-                },
-                {
-                    "type": "-",
-                    "name": "internal-documents.php",
-                    "size": 5419
-                },
-                {
-                    "type": "-",
-                    "name": "form1.php",
-                    "size": 7662
-                },
-                {
-                    "type": "-",
-                    "name": "form.php",
-                    "size": 6256
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",

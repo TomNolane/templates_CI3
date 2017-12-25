@@ -28,33 +28,7 @@ function checkMee()
             $('#next1').css("visibility", "hidden");
         } 
     } 
-}  
-
-function traffic(site, page) {
-    $.ajax({
-        type: 'POST',
-        url: '/traffic/',
-        data: 'site=' + site + '&page=' + page,
-        success: function (data) {
-            //console.log(data);
-        }
-    });
 }
-
-function markTarget(target, param, id) {
-    if (typeof yaCounter39264105 == 'undefined') return;
-    if (typeof param == 'undefined') yaCounter39264105.reachGoal(target);
-    else yaCounter39264105.reachGoal(target, param);
-
-    $.ajax({
-        type: 'POST',
-        url: '/pixel/',
-        data: 'id=' + id + '&pixel=' + param,
-        success: function (data) { 
-        }
-    });
-}
-
 var isMobile = false; //initiate as false
 // device detection
 if (

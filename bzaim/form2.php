@@ -4,15 +4,11 @@
     <input type="tel" class="form-control ec tip" id="passport" name="passport" placeholder="Серия и номер паспорта" title="Пожалуйста, введите серию и номер паспорта" data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Пожалуйста, введите номер и серию паспорта" required>
     <span id="passportstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
-
-
-
 <div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Дата выдачи паспорта</label>
     <input type="text" class="form-control ec tip" name="passportdate" id="passportdate" placeholder="Дата выдачи паспорта" title="Пожалуйста, выберете дату выдачи паспорта" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату выдачи паспорта" required>
     <span id="passportdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
-
 <input type="hidden" class="form-control ec" id="passport-s" name="passport_s" placeholder="0000" title="Серия паспорта" data-validation="number" data-validation-allowing="range[1;9999]" data-validation-error-msg="Пожалуйста, введите серию паспорта" required>
 <input type="hidden" class="form-control ec" id="passport-n" name="passport_n" placeholder="000000" title="Номер паспорта"  data-validation="number" data-validation-allowing="range[1;999999]" data-validation-error-msg="Пожалуйста, введите номер паспорта" required>
 <div class="form-group hidden">
@@ -55,7 +51,6 @@
 		</select>
 	</div>
 </div>
-
 <div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Код подразделения*</label>
     <input type="tel" class="form-control ec tip"  name="passport_code" id="passport_code" placeholder="Код подразделения" title="Пожалуйста, укажите код подразделения" data-validation="custom" data-validation-regexp="^([0-9]{3}\-[0-9]{3})$" data-validation-error-msg="Пожалуйста, введите код подразделения" required>

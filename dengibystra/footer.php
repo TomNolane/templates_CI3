@@ -48,7 +48,7 @@ echo '<footer class="ex-start-footer">
                 </p>
             </div>
             <div class="col-sm-1"></div>
-            <div class="col-sm-3 hidden-xs hidden-sm spec_footer4">
+            <div class="col-sm-3 hidden-xs hidden-sm spec_footer5">
                 <p class="ex-list-title">Документы</p>
                 <ul>
                     <li>
@@ -106,49 +106,7 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
     </footer>';
 } 
 ?>
-<!-- Modal -->
-<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title text-center">Просто заполните форму и наш специалист свяжется с Вами</h4>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                        <form action="">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="feedback-name" placeholder="Имя" title="Имя">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="feedback-phone" placeholder="Телефон" title="Телефон">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="feedback-email" placeholder="Email" title="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="feedback-comment" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"
-                                    required></textarea>
-                            </div>
-                            <div class="modal-footer">
-                                <div class="ex-actions">
-                                    <button class="ex-main-btn" id="feedback-send" style="margin-top: 0px;">Отправить</button>
-                                </div>
-                            </div>
 
-                        </form>
-                    </div>
-                </div>
-                <div id="loading" style="display:none;">
-                    <span>
-                        <i class="fa fa-spinner fa-spin fa-pulse"></i> Загрузка...</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal -->
 <?php
     require 'templates/common/get_display_size.php';
     echo '<script>';
@@ -186,6 +144,9 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
     echo '</script>';
     echo '<script>';
     require 'templates/dengibystra/assets/js/settings_main.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengibystra/assets/js/settings_form.js';
     echo '</script>';
     echo '<!-- backtotop -->
     <script>
@@ -388,82 +349,9 @@ elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
 }
 
 include "googleadservices_all.php"; 
-
-if ($this->uri->segment(1) == 'confirm') {
-echo ' <script>
-$(document).ready(function () {
-    if (getcookie("i")) {
-        var i = getcookie("i");
-        var o = getcookie("o");
-        var e = getcookie("email");
-        $("#io").text(i + " " + o);
-        $("#io2").text(i + " " + o);
-        $("#e").text(e);
-        $("#e2").text(e);
-        var ee = e.split("@");
-        if (isMobile) {
-            switch (ee[1]) {
-                case "yandex.ru":
-                    eename = "https://mail.yandex.ru/touch-node/";
-                    break;
-                case "mail.ru":
-                    eename = "https://touch.mail.ru/messages/#msglist";
-                    break;
-                case "list.ru":
-                    eename = "https://touch.mail.ru/messages/#msglist";
-                    break;
-                case "inbox.ru":
-                    eename = "https://touch.mail.ru/messages/#msglist";
-                    break;
-                case "bk.ru":
-                    eename = "https://touch.mail.ru/messages/#msglist";
-                    break;
-                case "gmail.com":
-                    eename = "https://mail.google.com";
-                    break;
-                default:
-                    eename = "https://" + ee[1];
-            }
-        } else {
-            switch (ee[1]) {
-                case "yandex.ru":
-                    eename = "https://mail.yandex.ru";
-                    break;
-                case "mail.ru":
-                    eename = "https://e.mail.ru/messages/inbox/";
-                    break;
-                case "list.ru":
-                    eename = "https://e.mail.ru/messages/inbox/";
-                    break;
-                case "inbox.ru":
-                    eename = "https://e.mail.ru/messages/inbox/";
-                    break;
-                case "bk.ru":
-                    eename = "https://e.mail.ru/messages/inbox/";
-                    break;
-                case "gmail.com":
-                    eename = "https://mail.google.com";
-                    break;
-                default:
-                    eename = "https://" + ee[1];
-            }
-        }
-        $("#email_confirm").attr("href", eename);
-        $("#email_confirm2").attr("href", eename);
-    }
-}); 
-$("#btn1").click(function () {
-    window.location.href = "/lk";
-}); 
-$("#btn2").click(function () {
-    window.open($("#email_confirm2").attr("href"));
-}); 
-</script>';
-    }
 include "yandexmetrika.php"; 
-if ($this->uri->segment(1) != 'form') { 
-    include "Yandex.php";
-}
+include "yandex_rtb.php";
+
 ?>
 </body>
 </html>

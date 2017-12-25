@@ -10,7 +10,7 @@
         <input type="text" class="form-control" id="period2" value="От 61 дня" readonly/>
         <span id="periodstatus" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
 </div>
-<input type="hidden" class="form-control" id="p" name="period" value="<?php  echo $period; ?>"/>
+<input type="hidden" class="form-control" id="p" name="period" value="<?php echo $period; ?>"/>
 <div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Фамилия*</label>
     <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свою фамилию" autofocus required>

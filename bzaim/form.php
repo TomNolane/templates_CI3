@@ -66,16 +66,16 @@ if ($geo){
         if (isset($geo['region'])){
             $region_name = $geo['region'];
         }else{
-            $region_name = 'Ульяновск';
+            $region_name = 'Москва';
         }
         if (isset($geo['city'])){
             $city_name = $geo['city'];
         }else{
-            $city_name = 'Ульяновск';
+            $city_name = 'Москва';
         }
     }else{
-        $region_name = 'Ульяновск';
-        $city_name = 'Ульяновск';
+        $region_name = 'Москва';
+        $city_name = 'Москва';
     }
 // Список регионов
 $this->load->model('geo/geo_model', 'geo');
