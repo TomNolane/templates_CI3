@@ -315,27 +315,27 @@
                     <div class="row">
                         <p class="col-md-5">Подпишись на рассылку*</p>
                         <form action="">
-                        <div class="col-md-5">
-                        
-                        <div class="hidden">
-                            <input type="text" id="feedback-name2" placeholder="Имя" title="Имя" value="хочу подписаться" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control index_specail2" id="feedback-email2" title="Email" placeholder="Введите ваш email" required> 
-                        </div></div> 
-                        <div class="col-md-2">
-                        <div class="form-group">
-                            <button class="ex-main-btn" id="feedback-send2" >подписаться</button>
-                        </div> 
-                        <!-- Hidde this block -->
-                        <div class="hidden">
-                            <input type="text" class="form-control" id="feedback-phone2" placeholder="Телефон" title="Телефон" value="+7777777777" required>
-                        </div>
-                        <div class="hidden">
-                            <textarea class="form-control" id="feedback-comment2" placeholder="Текст вашего сообщения" title="Текст вашего сообщения" required>Хочу подписаться на рассылку</textarea>
-                        </div>
-                        <!-- Hidde this block --> 
-                        </div>  
+                            <div class="col-md-5">
+                            
+                            <div class="hidden">
+                                <input type="text" id="feedback-name2" placeholder="Имя" title="Имя" value="хочу подписаться" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control index_specail2" id="feedback-email2" title="Email" placeholder="Введите ваш email" required> 
+                            </div></div> 
+                            <div class="col-md-2">
+                            <div class="form-group">
+                                <input class="ex-main-btn text-center" id="feedback-send2" value="подписаться"/>
+                            </div> 
+                            <!-- Hidde this block -->
+                            <div class="hidden">
+                                <input type="text" class="form-control" id="feedback-phone2" placeholder="Телефон" title="Телефон" value="+7777777777" required>
+                            </div>
+                            <div class="hidden">
+                                <textarea class="form-control" id="feedback-comment2" placeholder="Текст вашего сообщения" title="Текст вашего сообщения" required>Хочу подписаться на рассылку</textarea>
+                            </div>
+                            <!-- Hidde this block --> 
+                            </div>  
                     </form>
                 </div>
                 <footer>

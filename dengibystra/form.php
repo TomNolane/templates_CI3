@@ -380,8 +380,7 @@ include "header.php";
             $("#work_building").val("");
             $("#work_office").val("");
         }
-    }); 
-
+    });
     </script>';
     echo '<!-- backtotop -->
     <script>

@@ -24,13 +24,7 @@
             "type": "d",
             "name": "common",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "get_display_size.php",
-                    "size": 319
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
@@ -107,6 +101,12 @@
         {
             "type": "d",
             "name": "zaimol",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "zaimrubli",
             "size": 4096,
             "files": []
         }

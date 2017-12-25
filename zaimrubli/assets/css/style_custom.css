@@ -1,0 +1,204 @@
+.cd-container {
+  width: 90%;
+  max-width: 768px;
+  margin: 2em auto;
+}
+
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.cd-top {
+  z-index: 16;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  border-radius: 9px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url(/templates/zaimrubli/assets/img/cd-top-arrow.png) center 50% no-repeat #171d44;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+.cd-top.cd-is-visible,
+.cd-top.cd-fade-out,
+.no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
+.er:-moz-placeholder {
+  color: #ff0000 !important;
+  font-size: 0.8em;
+}
+
+.er::-moz-placeholder {
+  color: #ff0000 !important;
+  font-size: 0.8em;
+}
+
+.er::placeholder {
+  color: #ff0000 !important;
+  font-size: 0.8em;
+}
+
+.er:-ms-input-placeholder {
+  color: #ff0000 !important;
+  font-size: 0.8em;
+}
+
+.er::-webkit-input-placeholder {
+  color: #ff0000 !important;
+  font-size: 0.8em;
+}
+
+input:-moz-placeholder {
+  /* color: #000000   !important;
+  opacity: .8; */
+}
+
+input::-moz-placeholder {
+  /* color: #000000   !important; */
+  /* opacity: .8; */
+}
+
+input::placeholder {
+  /* color: #000000   !important;
+   opacity: .8; */
+}
+
+input:-ms-input-placeholder {
+  /* color: #000000   !important;
+   opacity: .8; */
+}
+
+input:-webkit-input-placeholder {
+  /* color: #000000   !important;
+   opacity: .8; */
+}
+
+.label_er {
+  color: #b94a48 !important;
+}
+
+.label_true {
+  color: #3c763d !important;
+}
+
+.special_form99 {
+  color: #000000 !important;
+}
+.special_footer99 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+a { 
+  text-decoration: none !important;
+}
+
+#phonestatus {
+  padding-top: 4px;
+  padding-left: 25px;
+}
+.spec-about{
+  margin-bottom: 30px;
+}
+.spec_foot {
+  color: #e3e3e3;
+  text-decoration: none;
+}
+.spec_footer5 { 
+  display: none;
+}
+#askQuestion_ {
+  padding: 0px !important;
+}
+#feedback-comment {
+  width: 100%;
+}
+input#i , input#o, input#f, input#feedback-name {
+  text-transform: capitalize !important;
+}
+.ex-main-header .navbar-nav li .ex-feedback {
+  text-align: center;
+  padding: 13px 5px 11px;
+  display: inline-block;
+  border: 1px solid #5d4889;
+  color: #5d4889;
+  font-size: 14px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+.ex-main-header .navbar-nav li .ex-feedback:hover { 
+  border: 1px solid #e90303;
+  color: #e90303; 
+}
+@media (max-width: 767px) {
+  .ex-main-header .navbar-nav li .ex-feedback {
+    min-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .ex-main-header .navbar-nav li .ex-feedback {
+    min-width: 135px;
+    text-align: center;
+    padding: 13px 5px 11px;
+    display: inline-block;
+    border: 1px solid #5d4889;
+    color: #5d4889;
+    font-size: 14px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+  }
+}
