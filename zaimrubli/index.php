@@ -149,8 +149,7 @@
                     <div class="row"> 
                         <div class="col-md-4">
                             <label for="email">Подпишись на рассылку*</label>
-                        </div> 
-                        <form action="">
+                        </div>  
                             <div class="col-md-6"> 
                                 <div class="hidden">
                                     <input type="text" id="feedback-name2" placeholder="Имя" title="Имя" value="хочу подписаться" required>
@@ -160,28 +159,17 @@
                                 </div></div> 
                                 <div class="col-md-2">
                                 <div class="form-group">
-                                    <input class="ex-main-btn text-center" id="feedback-send2" value="подписаться"/>
-                                </div> 
-                                <!-- Hidde this block -->
-                                <div class="hidden">
+                                 <!-- Hidde this block -->
+                                 <div class="hidden">
                                     <input type="text" class="form-control" id="feedback-phone2" placeholder="Телефон" title="Телефон" value="+7777777777" required>
                                 </div>
                                 <div class="hidden">
-                                    <textarea class="form-control" id="feedback-comment2" placeholder="Текст вашего сообщения" title="Текст вашего сообщения" required>Хочу подписаться на рассылку</textarea>
+                                    <textarea class="form-control" id="feedback-comment2"  placeholder="Текст вашего сообщения" title="Текст вашего сообщения" required>Хочу подписаться на рассылку</textarea>
                                 </div>
                                 <!-- Hidde this block --> 
-                            </div>  
-                        </form>
-                        <!-- <div class="col-md-6">
-                            <div class="ex-email-place">
-                                <input type="email" id="email" placeholder="email@gmail.com">
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="ex-for-button  ex-mb">
-                                <button class="ex-main-btn">Отправить</button>
-                            </div>
-                        </div> --> 
+                                    <button type="button" id="feedback-send2" class="ex-main-btn">Отправить</button>
+                                </div>
+                            </div> 
                     </div>
                 </div>
                 <p class="ex-int">*На указанную электронную почту вам будут приходить оповещения с лучшими условиями кредитования.

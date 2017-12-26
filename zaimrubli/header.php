@@ -201,7 +201,7 @@ if(!isset($description))
                     <input type="email" class="form-control" id="feedback-email" title="Email" placeholder="Введите ваш email" required>
                 </div>
                 <div class="form-group">
-                    <textarea id="feedback-comment" rows="3"  title="Текст вашего сообщения" placeholder="Введите текст сообщения" required></textarea>
+                    <textarea id="feedback-comment" rows="3" class="form-control" title="Текст вашего сообщения" placeholder="Введите текст сообщения" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Введите текст сообщения" required></textarea>
                 </div>
                 <button type="button" id="feedback-send" class="ex-main-btn">Отправить</button>
             </div>

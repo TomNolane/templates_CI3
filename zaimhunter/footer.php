@@ -20,16 +20,22 @@ if($this->uri->segment(1) != 'form')
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
 }
+
+if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
+{
+    echo '<a href="#0" class="cd-top">Наверх</a>';
+} 
+ 
 ?>
 <footer class="ex-start-footer">
     <div class="container">
         <div class="row ex-main-footer">
             <div class="col-md-2">
                 <div class="ex-footer-logo">
-                    <a rel="nofollow" href="/"> <img src="/templates/zaimhunter/assets/img/footer-logo-zaimhunter.svg" alt="logo-zaimhunter"></a>
+                    <a rel="nofollow" href="/"> <img src="/templates/zaimhunter/assets/img/footer-logo-zaimhunter.png" alt="logo-zaimhunter"></a>
                 </div>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-10 spec_footer4">
                 <p>Сервис по подбору выгодных онлайн займов
                     находящийся по адресу Россия, Ленинградская обл.
                     г. Санкт-Петербург, ул. Осипенко, 12, оф 201
@@ -46,67 +52,204 @@ if($this->uri->segment(1) != 'form')
     </div> 
 </footer> 
 
-<!-- Modal -->
-<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <!-- Заголовок модального окна -->
-            <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title text-center">Остались вопросы?</h4>
-            </div>
-            <div class="modal-body">
-                <!-- <h4 class="text-center">Остались вопросы?</h4> -->
-                <p class="text-center">Просто заполните форму и наш специалист свяжется с Вами</p>
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                        <form action="">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="feedback-name" placeholder="Имя" title="Имя" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="feedback-phone" placeholder="Телефон" title="Телефон" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="feedback-email" placeholder="Email" title="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="feedback-comment" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"
-                                    required></textarea>
-                            </div>
-                            <div class="ex-actions">
-                                <button class="ex-main-btn" id="feedback-send">Отправить</button> 
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div id="loading" style="display:none;">
-                    <span>
-                        <i class="fa fa-spinner fa-spin fa-pulse"></i> Загрузка...</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<?php require 'templates/common/get_display_size.php'; ?>
-
-<script type="text/javascript" src="/modules/jquery/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="/modules/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"></script>
-<script type="text/javascript" src="/modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js"></script>
-<script type="text/javascript" src="/modules/poshytip-1.2/src/jquery.poshytip.min.js"></script>
-<script type="text/javascript" src="/modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js"></script>
+<?php require 'templates/common/get_display_size.php';
+echo '<script>';
+require 'modules/jquery/jquery-1.11.3.min.js';
+echo '</script>';
+echo '<script>';
+require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
+echo '</script>';
+echo '<script>';
+require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
+echo '</script>';
+echo '<script>';
+require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
+echo '</script>';
+echo '<script>';
+require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
+echo '</script>';
+echo '<script>';
+require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+echo '</script>';
+?> 
 <!--[if lt IE 10]>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-<![endif]-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-<script type="text/javascript" src="/templates/zaimhunter/assets/js/jquery.suggestions.min.js"></script>
-<script src="/templates/zaimhunter/assets/js/owl.carousel.min.js"></script>
-
+<![endif]--> 
 <?php
+echo '<script>';
+require 'templates/zaimhunter/assets/js/jquery.suggestions.min.js';
+echo '</script>';
+echo '<script>';
+require 'templates/zaimhunter/assets/js/owl.carousel.min.js';
+echo '</script>';
+echo '<script>';
+require 'templates/zaimrubli/assets/js/jquery.form-validator.js';
+echo '</script>';
+
 if ($this->uri->segment(1) == 'form') 
-{ ?>
+{ 
+    echo ' <script>
+    $("#work").change(function(){
+        if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
+        { 
+            $("#work_name").addClass("valid");
+            $("#work_name").parent().addClass("has-success").removeClass("has-error");
+            $("#work_name").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_name").removeClass("er");
+            $("#work_namestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_occupation").addClass("valid");
+            $("#work_occupation").parent().addClass("has-success").removeClass("has-error");
+            $("#work_occupation").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_occupation").removeClass("er");
+            $("#work_occupationstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_phone").addClass("valid");
+            $("#work_phone").parent().addClass("has-success").removeClass("has-error");
+            $("#work_phone").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_phone").removeClass("er");
+            $("#work_phonestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_experience").addClass("valid");
+            $("#work_experience").parent().addClass("has-success").removeClass("has-error");
+            $("#work_experience").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_experience").removeClass("er");
+            $("#work_experiencestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_salary").removeClass("valid");
+            $("#work_salary").parent().addClass("has-error").removeClass("has-success");
+            $("#work_salary").parent().parent().prev().removeClass("label_true").addClass("label_er");
+            $("#work_salary").addClass("er");
+            $("#work_salary").focus();
+            $("#work_salarystatus").addClass("glyphicon-remove");
+
+            $("#work_region").addClass("valid");
+            $("#work_region").parent().addClass("has-success").removeClass("has-error");
+            $("#work_region").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_region").removeClass("er");
+
+            $("#work_city").addClass("valid");
+            $("#work_city").parent().addClass("has-success").removeClass("has-error");
+            $("#work_city").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_city").removeClass("er");
+            $("#work_citystatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_street").addClass("valid");
+            $("#work_street").parent().addClass("has-success").removeClass("has-error");
+            $("#work_street").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_street").removeClass("er");
+            $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_house").addClass("valid");
+            $("#work_house").parent().addClass("has-success").removeClass("has-error");
+            $("#work_house").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_house").removeClass("er");
+            $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_office").addClass("valid");
+            $("#work_office").parent().addClass("has-success").removeClass("has-error");
+            $("#work_office").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_office").removeClass("er");
+            $("#work_officestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+            
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_name").val("пенсионер");
+            else  $("#work_name").val("безработный");
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_occupation").val("пенсионер");
+            else  $("#work_occupation").val("безработный");
+            var teemp = $("#phone").val();
+            $("#work_phone").val(teemp);
+            $("#work_experience").val(100);
+            $("#work_salary").val("");
+
+            var teemp2 = Number($("#region").find(":selected").index());
+            $("#work_region option").eq(teemp2).prop("selected", true);
+            var teemp3 = $("#city").val();
+            $("#work_city").val(teemp3);
+            var teemp4 = $("#street").val();
+            $("#work_street").val(teemp4);
+            var teemp5 = $("#building").val();
+            $("#work_house").val(teemp5);
+            $("#work_building").val(" ");
+            var teemp6 = $("#flat").val();
+            $("#work_office").val(teemp6);
+        }
+        else { 
+
+            $("#work_name").val("");
+            $("#work_name").removeClass("valid");
+            $("#work_name").parent().removeClass("has-success");
+            $("#work_name").parent().parent().prev().removeClass("label_true"); 
+            $("#work_namestatus").removeClass("glyphicon-ok");
+
+            $("#work_occupation").val("");
+            $("#work_occupation").removeClass("valid");
+            $("#work_occupation").parent().removeClass("has-success");
+            $("#work_occupation").parent().parent().prev().removeClass("label_true"); 
+            $("#work_occupationstatus").removeClass("glyphicon-ok"); 
+
+            $("#work_phone").val("");
+            $("#work_phone").removeClass("valid");
+            $("#work_phone").parent().removeClass("has-success");
+            $("#work_phone").parent().parent().prev().removeClass("label_true"); 
+            $("#work_phonestatus").removeClass("glyphicon-ok");
+
+            $("#work_experience").val("");
+            $("#work_experience").removeClass("valid");
+            $("#work_experience").parent().removeClass("has-success");
+            $("#work_experience").parent().parent().prev().removeClass("label_true"); 
+            $("#work_experiencestatus").removeClass("glyphicon-ok");
+
+            $("#work_salary").val("");
+            $("#work_salary").removeClass("valid");
+            $("#work_salary").parent().removeClass("has-success");
+            $("#work_salary").parent().parent().prev().removeClass("label_true"); 
+            $("#work_salarystatus").removeClass("glyphicon-ok");
+ 
+            $("#work_region").removeClass("valid");
+            $("#work_region").parent().removeClass("has-success");
+            $("#work_region").parent().parent().prev().removeClass("label_true");
+
+            $("#work_city").val("");
+            $("#work_city").removeClass("valid");
+            $("#work_city").parent().removeClass("has-success");
+            $("#work_city").parent().parent().prev().removeClass("label_true"); 
+            $("#work_citystatus").removeClass("glyphicon-ok"); 
+
+            $("#work_street").val("");
+            $("#work_street").removeClass("valid");
+            $("#work_street").parent().removeClass("has-success");
+            $("#work_street").parent().parent().prev().removeClass("label_true"); 
+            $("#work_streetstatus").removeClass("glyphicon-ok"); 
+
+            $("#work_house").val("");
+            $("#work_house").removeClass("valid");
+            $("#work_house").parent().removeClass("has-success");
+            $("#work_house").parent().parent().prev().removeClass("label_true"); 
+            $("#work_housestatus").removeClass("glyphicon-ok");
+
+            $("#work_office").val("");
+            $("#work_office").removeClass("valid");
+            $("#work_office").parent().removeClass("has-success");
+            $("#work_office").parent().parent().prev().removeClass("label_true"); 
+            $("#work_officestatus").removeClass("glyphicon-ok");
+            $("#work_name").val(""); 
+             $("#work_occupation").val(""); 
+            $("#work_phone").val("");
+            $("#work_experience").val(""); 
+            $("#work_salary").val("");
+            $("#work_region option").eq(0, true).prop("selected", true);
+            $("#work_city").val("");
+            $("#work_street").val("");
+            $("#work_house").val("");
+            $("#work_building").val("");
+            $("#work_office").val("");
+        }
+    }); 
+    </script>';
+    
+    ?>
      <script>
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
@@ -117,8 +260,10 @@ if ($this->uri->segment(1) == 'form')
         if (!results[2]) return '';
         return decodeURIComponent(results[2].replace(/\+/g, " "));
     }</script> 
-<?php   
-    echo '<script src="/templates/zaimhunter/assets/js/loanCalculator.js?ver=1"></script>';
+<?php
+    echo '<script>';
+    require 'templates/zaimhunter/assets/js/loanCalculator.js';
+    echo '</script>';
 }
 elseif ($this->uri->segment(1) == 'faq') 
 {
@@ -176,14 +321,26 @@ elseif ($this->uri->segment(1) == 'money')
     }); 
     </script>';
 } 
+?>
+
+<?php
+echo '<script>';
+require 'templates/zaimhunter/assets/js/coockie.js';
+echo '</script>';
+echo '<script>';
+require 'templates/zaimhunter/assets/js/settings_main.js';
+echo '</script>';
+echo '<script>';
+require 'templates/zaimhunter/assets/js/custom.js';
+echo '</script>';
+echo '<script>';
+require 'templates/zaimhunter/assets/js/ion.rangeSlider.js';
+echo '</script>';
 ?> 
-
-<script src="/templates/zaimhunter/assets/js/coockie.js"></script>
-<script src="/templates/zaimhunter/assets/js/settings_main.js?ver=1"></script>
-<script src="/templates/zaimhunter/assets/js/custom.js?ver=1"></script>
-<script src="/templates/zaimhunter/assets/js/ion.rangeSlider.js"></script>
-
 <script> 
+    //backtotop
+    jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});
+
     function goToForm() {
         var tt = $('#ex-slider-val').text();
         tt = tt.split(" ").join("");
@@ -197,8 +354,7 @@ elseif ($this->uri->segment(1) == 'money')
         setcookie('per', days, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
         var days2 = $('#period2').val();
         setcookie('per2', days2, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/'); 
-        $('#anketa').submit();
-    // window.location.href = window.location.origin + '/form';
+        $('#anketa').submit(); 
     };
 
     function goToLk() { 
@@ -301,18 +457,7 @@ elseif ($this->uri->segment(1) == 'money')
             ((path) ? "; path=" + path : "; path=/") +
             ((domain) ? "; domain=" + domain : "") +
             ((secure) ? "; secure" : "");
-    }
-
-    function traffic(site, page) {
-        $.ajax({
-            type: 'POST',
-            url: '/traffic/',
-            data: 'site=' + site + '&page=' + page,
-            success: function (data) {
-                //console.log(data);
-            }
-        });
-    }
+    } 
 
     function getcookie(name) {
         var cookie = " " + document.cookie;
@@ -341,100 +486,10 @@ elseif ($this->uri->segment(1) == 'money')
 
     function GetMoney() {
         $('form#anketa').submit();
-    }
-
-    function Loading(flag) {
-        if (typeof flag == 'undefined') {
-            document.getElementById('loading').style.display = 'block';
-            $('#feedback-send').prop('disabled', true);
-            $('#feedback-send').html('Отправка <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        } else if (!flag) {
-            $('#feedback-send').html('Отправить');
-            $('#feedback-send').prop('disabled', false);
-            document.getElementById('loading').style.display = 'none';
-        }
-    }
-    $('#feedback-send').click(function () {
-        Loading();
-
-        var data = {
-            name: $('#feedback-name').val(),
-            phone: $('#feedback-phone').val(),
-            email: $('#feedback-email').val(),
-            comment: $('#feedback-comment').val() + x_size + " x " + y_size + " UserAgent: " + navigator.userAgent
-        };
-
-        if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' && data
-                .email != '') && (typeof data.comment != 'undefined' && data.comment != '')) {
-            $.ajax({
-                url: '/feedback/',
-                type: 'POST',
-                dataType: 'json',
-                data: data
-            }).done(function (response) {
-                if (response != null) {
-                    if (typeof response.error != 'undefined') {
-                        alert('Ошибка. ' + response.error);
-                    } else {
-                        $('#feedbackModal').modal('hide');
-                        Loading(0);
-                        alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
-                    }
-                } else {
-                    alert('Не получилось отправить. Попробуйте ещё раз.');
-                }
-            }).fail(function (jqxhr, textStatus, error) {
-                alert('Не получилось отправить. Попробуйте ещё раз.');
-            }).always(function () {
-                Loading(0);
-            });
-        } else {
-            Loading(0);
-            alert('Пожалуйста, заполните все поля.');
-        }
-    }); 
+    } 
     
-    $(document).ready(function () {
-        $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
-        $('[data-toggle="popover"]').popover();
-        $('input#phone').mask("8 (9nn) nnn nnnn", {
-            "placeholder": "8 (9__) ___ ____"
-        });
-        $('input#feedback-phone').mask("8 (9nn) nnn nnnn", {
-            "placeholder": "8 (9__) ___ ____"
-        });
-        $('input#work_phone').mask("8 (9nn) nnn nnnn", {
-            "placeholder": "8 (9__) ___ ____"
-        });
-        $('input#passport').mask("nnnn nnnnnn", {
-            "placeholder": "____ ______"
-        });
-        $('#passport_code').mask("nnn-nnn", {
-            "placeholder": "___-___"
-        });
-        $('input#birthdate').mask("nn/nn/nnnn", {
-            "placeholder": "__/__/__"
-        });
-        $('input#passportdate').mask("nn/nn/nnnn", {
-            "placeholder": "__/__/__"
-        });
-        $('input#work_salary').mask("nnnn?n", {
-            "placeholder": ""
-        });
-        $('input#work_experience').mask("n?nn", {
-            "placeholder": ""
-        });
-        $('input#flat').mask("n?***", {
-            "placeholder": ""
-        });
-        $('input#building').mask("n?***", {
-            "placeholder": ""
-        });
-        $('input#work_house').mask("n?***", {
-            "placeholder": ""
-        });  
-        var amount = 10000;
-
+    $(document).ready(function () { 
+        var amount = 20000;
         $("#special").on({
             mouseenter: function () {
                 $(this).addClass("ex-active");
@@ -474,7 +529,9 @@ elseif ($this->uri->segment(1) == 'money')
 
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index')
 { 
-    echo '<script src="/templates/zaimhunter/assets/js/loanCalculator.js?ver=1"></script>';
+    echo '<script>';
+    require 'templates/zaimhunter/assets/js/loanCalculator.js';
+    echo '</script>'; 
     ?>
 <script>
     function getParameterByName(name, url) {
@@ -533,37 +590,20 @@ echo "<script>$(document).ready(function () {
     }, 50);
 });</script>";
 }
-?>
-<script>
-    var client_w = screen.width;
-    if(Number(client_w) > 767)
-    {
-        document.getElementById( 'special_footer' ).style.display = 'block';
-    }
-    else
-    {
-        var pathname = window.location.pathname,  substring = "lk";
-        
-        if(pathname.indexOf(substring) !== -1)
-        {
-            document.getElementById( 'special_footer' ).style.display = 'none';
-        }
-        else
-        {
-            document.getElementById( 'special_footer' ).style.display = 'block';
-        }
-    }
-</script>
+?> 
 
-<?php
-if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') 
-{ 
-    require 'for_lk.php';
-}
+    <?php
+    if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') 
+    { 
+        require 'for_lk.php';
+    }
+
+    echo '<script>';
+    require 'templates/zaimhunter/assets/js/settings_form.js';
+    echo '</script>'; 
 
 if ($this->uri->segment(1) == 'form') 
-{
-    echo '<script src="/templates/zaimhunter/assets/js/settings_form.js?ver=1"></script>';
+{ 
     require 'templates/common/js.php';
     if(isset($_GET['popup']) and $_GET['popup']==1 ){
         echo '    
@@ -641,6 +681,9 @@ function traffic(site, page){
 <?php 
 require 'yandex_metrika.php';
 require 'google_analytics.php';
+echo '<script>';
+require 'templates/zaimrubli/assets/js/modal.js';
+echo '</script>';
 ?>
 </body>
 </html>

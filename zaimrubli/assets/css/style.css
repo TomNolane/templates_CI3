@@ -1,11 +1,5 @@
 @charset "UTF-8";
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/*@@@@@@ Helper files import here @@@@@@*/
-/*@@@@@@ Core files import here @@@@@@*/
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+/* @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700"); */
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url("/templates/zaimrubli/assets/fonts/glyphicons-halflings-regular.eot");
@@ -14329,6 +14323,6 @@ main.ex-offers .ex-offers-content .ex-off-block .ex-offers-foot .ex-main-btn {
   background-color: transparent !important;
 }
 /* line 91, ../sass/desktop/_faq.scss */
-.ex-faq .ex-bg-head a div{
+.ex-faq .ex-bg-head a div {
   color: #333333 !important;
 }

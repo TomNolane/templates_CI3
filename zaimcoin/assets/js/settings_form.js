@@ -403,8 +403,8 @@ $(document).ready(function () {
         monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
         dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
         firstDay: 1,
-        yearRange: "-72:-19",
-        defaultDate: "01/01/1998",
+        yearRange: "-72:-18",
+        defaultDate: "01/01/1999",
         isRTL: false,
         onSelect: function (date) {
             $('#birthdate').focus();
@@ -473,8 +473,6 @@ $(document).ready(function () {
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
             markTarget('form-step-1');
-            oSpP.push("i", $('#i').val());
-            oSpP.push("o", $('#o').val());
         }
         showBzzz = false;
         $('.reg_same').change();

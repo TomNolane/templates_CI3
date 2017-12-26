@@ -251,8 +251,8 @@ $(document).ready(function () {
                     ],
                     dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
                     firstDay: 1,
-                    yearRange: "-72:-19",
-                    defaultDate: "01/01/1998",
+                    yearRange: "-72:-18",
+                    defaultDate: "01/01/1999",
                     isRTL: false,
                     onSelect: function (date) {
                         $('#passportdate').focus();
@@ -312,9 +312,7 @@ $(document).ready(function () {
                         $('html, body').animate({
                             scrollTop: $('#form-steps').offset().top
                         }, 1000);
-                        markTarget('form-step-1');
-                        //var date = new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000);
-                        //setcookie('pixel', '1', date.toUTCString());
+                        markTarget('form-step-1'); 
                         time1 = time;
                         time = 0;
                     }
@@ -348,8 +346,7 @@ $(document).ready(function () {
                 $('#form-send').click(function () {
                     $('#form-send').html(
                         'Обработка заявки <span class="glyphicon glyphicon-refresh glyphicon-spin"></span>'
-                    );
-                    //$('#form-send').addClass('disabled');
+                    ); 
                     if (validate()) {
                         $('input[name="step"]').val('3');
                         $('#form-modal').show();
@@ -367,8 +364,7 @@ $(document).ready(function () {
                             }
                         });
                     } else {
-                        $('#form-send').html('Отправить заявку');
-                        //$('#form-send').removeClass('disabled');
+                        $('#form-send').html('Отправить заявку'); 
                     }
                     showBzzz = false;
                     setcookies();

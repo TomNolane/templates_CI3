@@ -416,8 +416,8 @@ $(document).ready(function () {
         monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
         dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
         firstDay: 1,
-        yearRange: "-72:-19",
-        defaultDate: "01/01/1998",
+        yearRange: "-72:-18",
+        defaultDate: "01/01/1999",
         isRTL: false,
         onSelect: function (date) {
             $('#birthdate').focus();
@@ -457,28 +457,10 @@ $(document).ready(function () {
             $("select#passport_yyyy").val(birth[2]);
         }
     });
-
     $('#next1').click(function () { 
         if (validate1()) { 
             $('input[name="step"]').val('1'); 
-            $('.spec_footer4').css('display','none');
-
-            var client_w2 = screen.width; 
-            var pathname2 = window.location.pathname,  substring3 = "form";
-                
-            if(pathname2.indexOf(substring3) !== -1)
-            {
-                if(Number(client_w2) > 767)
-                {
-                    //document.getElementById( "sp_footer1" ).style.display = "none"; 
-                    //document.getElementById( "sp_footer2" ).style.display = "inline";  
-                }
-                else
-                {
-                    //document.getElementById( "sp_footer1" ).style.display = "none"; 
-                    //document.getElementById( "sp_footer2" ).style.display = "none";  
-                }
-            }   
+            $('.spec_footer4').css('display','none');   
             send_form(); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstStep').removeClass('in active');
@@ -487,15 +469,12 @@ $(document).ready(function () {
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
             markTarget('form-step-1');
-            oSpP.push("i", $('#i').val());
-            oSpP.push("o", $('#o').val());
         }
         showBzzz = false;
         $('.reg_same').change();
         setcookies();
         $('select[name="reg_type"]').change();
     });
-
     $('#next2').click(function () {
         if (validate2()) {
             $('input[name="step"]').val('2');        
@@ -511,11 +490,9 @@ $(document).ready(function () {
         showBzzz = false;
         setcookies();
     });
-
     $('#getmoney').click(function () {
         if (validate()) { 
-            $('input[name="step"]').val('3');                       
-            //$('#form-modal').show();
+            $('input[name="step"]').val('3');
             send_form(true, '/lk');
             markTarget('form-step-3');
             $('#anketa').submit();

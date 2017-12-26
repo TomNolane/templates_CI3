@@ -16,16 +16,16 @@ if ($geo)
         if (isset($geo['region'])){
             $region_name = $geo['region'];
         }else{
-            $region_name = 'Екатеринбург';
+            $region_name = 'Владимир';
         }
         if (isset($geo['city'])){
             $city_name = $geo['city'];
         }else{
-            $city_name = 'Екатеринбург';
+            $city_name = 'Владимир';
         }
     }else{
-        $region_name = 'Екатеринбург';
-        $city_name = 'Екатеринбург';
+        $region_name = 'Владимир';
+        $city_name = 'Владимир';
     }
 // Список регионов
 $this->load->model('geo/geo_model', 'geo');

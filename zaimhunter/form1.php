@@ -9,52 +9,38 @@
     <div class="col-sm-6 col-xs-12">
         <div class="ex-anketa-main"> 
             <div class="form-group has-feedback">
-                <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию"
-			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свою фамилию"
+                <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
+			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
 			    required>
 			    <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
 
             <div class="form-group has-feedback">
-                <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Пожалуйста, введите свое имя" data-sanitize="capitalize"
-                data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое имя"
+                <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize"
+                data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя"
                 required>
                 <span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество"
-			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое отчество"
+                <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
+			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
 			    required>
 			    <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-            </div> 
-
-            <!-- <div class="form-group has-feedback text-left" style="display: none;">
-                <label class="col-sm-4 control-label label-required hidden-xs">Пол</label>
-                <div class="col-sm-8 col-xs-12">
-                    <div class="radio radio-info radio-inline">
-                        <input type="radio" id="gender1" value="1" name="gender" checked="checked" required>
-                        <label for="gender1"> Мужской </label>
-                    </div>
-                    <div class="radio radio-info radio-inline">
-                        <input type="radio" id="gender0" value="0" name="gender" required>
-                        <label for="gender0"> Женский </label>
-                    </div>
-                </div>
-            </div> -->
+            </div>
             <input type="hidden" id="gender" value="1" name="gender" required> 
             <div class="form-group has-feedback ex-arrow-on">
-                <input type="text" class="form-control ec tip special_form" name="birthdate" id="birthdate" placeholder="День рождения" title="Пожалуйста, выберете свою дату рождения"
-			    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения"
+                <input type="text" class="form-control ec tip special_form" name="birthdate" id="birthdate" placeholder="День рождения" title="Выберете свою дату рождения"
+			    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
 			    required>
 			    <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> 
             </div>
             <div class="form-group has-feedback">
-                <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Телефон" title="Пожалуйста, введите свой телефон"
-		        data-validation-error-msg="Пожалуйста, выберите номер телефона"   required>
+                <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Телефон" title="Введите свой телефон"
+		        data-validation-error-msg="Выберите номер телефона"   required>
 		        <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Пожалуйста, введите свой email адрес" placeholder="Email"
+                <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Введите свой email адрес" placeholder="Email"
 			    title="Email" data-validation="email" required>
 		        <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> 
             </div>
@@ -81,14 +67,10 @@
             </div>
             <div class="form-group">
                 <div class="row">
-                    <div class="col-sm-6"></div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-12">
                         <div class="row">
-                            <div class="col-md-offset-3 col-md-6">
+                            <div class="col-sm-12">
                                 <a class="btn special_index5 special_form3 text-center" id="next1">Далее <i class="fa fa-caret-right"></i></a>
-                                <!-- <button id="submitOne" type="submit" class="ex-main-btn" data-target="#secondTabContent" aria-controls="secondTabContent"
-                                    data-toggle="tab">Далее
-                                </button> -->
                             </div>
                         </div>
                     </div>
@@ -112,7 +94,7 @@
                 </div>
             </div> 
         </div>
-            <p>Пожалуйста, вводите только корректные и актуальные данные.
+            <p>Вводите только корректные и актуальные данные.
             <br> Заполнение анкеты не обязывает вас взять займ. Но неверно указанные
             <br>данные приведут к последующей блокировке в системе. </p>
     </div>
