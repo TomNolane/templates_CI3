@@ -108,7 +108,37 @@
             "type": "d",
             "name": "zaimrubli",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "form.php",
+                    "size": 5200
+                },
+                {
+                    "type": "-",
+                    "name": "index.php",
+                    "size": 12885
+                },
+                {
+                    "type": "d",
+                    "name": "assets",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "css",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "style.css",
+                                    "size": 336060
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

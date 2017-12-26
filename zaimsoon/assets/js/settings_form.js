@@ -480,8 +480,8 @@ $(document).ready(function () {
         monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
         dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
         firstDay: 1,
-        yearRange: "-72:-19",
-        defaultDate: "01/01/1998",
+        yearRange: "-72:-18",
+        defaultDate: "01/01/1999",
         isRTL: false,
         onSelect: function (date) {
             $('#birthdate').focus();
@@ -535,8 +535,6 @@ $(document).ready(function () {
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
             markTarget('form-step-1');
-            oSpP.push("i", $('#i').val());
-            oSpP.push("o", $('#o').val());
         }
         showBzzz = false;
         $('.reg_same').change();
@@ -557,19 +555,15 @@ $(document).ready(function () {
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
             markTarget('form-step-1');
-            oSpP.push("i", $('#i').val());
-            oSpP.push("o", $('#o').val());
         }
         showBzzz = false;
         $('.reg_same').change();
         setcookies();
         $('select[name="reg_type"]').change();
     });
-
-
     $('#next2').click(function () {
         if (validate2()) {
-            $('input[name="step"]').val('2');        
+            $('input[name="step"]').val('2');
             send_form();
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('.ex-step-counter').removeClass('ex-on-second-step').addClass('ex-on-last-step');
@@ -583,15 +577,12 @@ $(document).ready(function () {
         showBzzz = false;
         setcookies();
     });
-
     $('#getmoney').click(function () {
         if (validate()) { 
-            $('input[name="step"]').val('3');                       
-            //$('#form-modal').show();
+            $('input[name="step"]').val('3');
             send_form(true, '/lk');
             markTarget('form-step-3');
             $('#anketa').submit();
-            //window.location = '/thanks';
         }
         showBzzz = false;
         setcookies();
@@ -622,8 +613,7 @@ $(document).ready(function () {
     });
     $('#work').change(function () {
         if ($('#work').val() == 'ПЕНСИОНЕР') {
-            //console.log('ПЕНСИОНЕР');
-            $('#work_name_help').html('укажите последнее место работы');
+            $('#work_name_help').html('');
         } else {
             $('#work_name_help').html('');
         }

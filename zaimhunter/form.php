@@ -42,8 +42,9 @@ if(isset($_POST['amount']))
 
 if(!isset($my_title))
 {
-    $my_title = 'Заполните анкету!';
-}  
+	$my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Zaimhunter';
+	$description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
+} 
 require 'header.php';  
 // IP
 $this->load->helper('ip');
@@ -56,16 +57,16 @@ if ($geo)
         if (isset($geo['region'])){
             $region_name = $geo['region'];
         }else{
-            $region_name = 'Казань';
+            $region_name = 'Владимир';
         }
         if (isset($geo['city'])){
             $city_name = $geo['city'];
         }else{
-            $city_name = 'Казань';
+            $city_name = 'Владимир';
         }
     }else{
-        $region_name = 'Казань';
-        $city_name = 'Казань';
+        $region_name = 'Владимир';
+        $city_name = 'Владимир';
     }
 // Список регионов
 $this->load->model('geo/geo_model', 'geo');

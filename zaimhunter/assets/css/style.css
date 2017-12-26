@@ -1,15 +1,9 @@
 @charset "UTF-8";
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/*@@@@@@ Helper files import here @@@@@@*/
-/*@@@@@@ Core files import here @@@@@@*/
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,400,700&subset=cyrillic");
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:100,400,700&subset=cyrillic"); */
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/glyphicons-halflings-regular.eot");
-  src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format("svg");
+  src: url("/templates/zaimhunter/assets/fonts/glyphicons-halflings-regular.eot");
+  src: url("/templates/zaimhunter/assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/templates/zaimhunter/assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/templates/zaimhunter/assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/templates/zaimhunter/assets/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format("svg");
 }
 /* line 1, ../sass/core/_global.scss */
 body {
@@ -1938,8 +1932,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../../fonts/glyphicons-halflings-regular.eot");
-  src: url("../../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("/templates/zaimhunter/assets/fonts/glyphicons-halflings-regular.eot");
+  src: url("/templates/zaimhunter/assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/templates/zaimhunter/assets/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/templates/zaimhunter/assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/templates/zaimhunter/assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/templates/zaimhunter/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 /* line 269, ../sass/library/_bootstrap.scss */
 .glyphicon {
@@ -11109,7 +11103,7 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+/*# sourceMappingURL=/templates/zaimhunter/assets/css/bootstrap.css.map */
 /*!
  * Datepicker for Bootstrap
  *
@@ -11818,7 +11812,7 @@ button.close {
   top: 18px;
   width: 32px;
   height: 32px;
-  background: url(../img/imgpsh_fullsize.png) no-repeat;
+  background: url(/templates/zaimhunter/assets/img/imgpsh_fullsize.png) no-repeat; 
   background-size: 100%;
   cursor: pointer;
 }
@@ -12241,7 +12235,7 @@ header {
 /* line 23, ../sass/desktop/_header.scss */
 #ex-homepage-header .navbar-right li a, .ex-main-header .navbar-right li a {
   text-decoration: none;
-  padding: 5px 20px; /* Tom Nolane 5px 25px */
+  padding: 5px 20px !important; /* Tom Nolane 5px 25px */
   outline: none;
   color: #ffffff;
   font-size: 18px;
@@ -12336,7 +12330,7 @@ header .navbar-default {
 }
 /* line 18, ../sass/desktop/_start.scss */
 #ex-homepage-header .navbar-right li a:hover, .ex-main-header .navbar-right li a:hover {
-  color: #1589ee;
+  color: #496ef0;
 }
 @media screen and (max-width: 991px) and (min-width: 768px) {
   /* line 14, ../sass/desktop/_start.scss */
@@ -12384,7 +12378,7 @@ header .navbar-default {
   content: "";
   display: block;
   position: absolute;
-  right: 8px; /* Tom Nolane 12px */
+  right: 5px; /* Tom Nolane 12px */
   top: 11px;
   width: 0;
   height: 0;
@@ -12442,7 +12436,7 @@ header .navbar-default {
   right: 0;
   width: 633px;
   height: 506px;
-  background-image: url("../img/title-pic.png");
+  background-image: url("/templates/zaimhunter/assets/img/title-pic.png");
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -12482,7 +12476,7 @@ header .navbar-default {
   width: 117px;
   height: 36px;
   display: inline-block;
-  background: url(../img/rub.png) no-repeat;
+  background: url(/templates/zaimhunter/assets/img/rub.png) no-repeat;
   -webkit-background-size: contain;
 }
 @media screen and (max-width: 991px) and (min-width: 768px) {
@@ -12898,7 +12892,7 @@ header .navbar-default {
 }
 /* line 44, ../sass/desktop/_form.scss */
 .ex-form .ex-anketa-main .form-group input {
-  padding: 10px 13px;
+  padding: 21px 13px !important;
   width: 100%;
   height: 36px;
   border-radius: 10px;
@@ -12985,7 +12979,7 @@ header .navbar-default {
   right: 15px;
   width: 7px;
   height: 13px;
-  background: url(../img/question-icon.png) no-repeat;
+  background: url(/templates/zaimhunter/assets/img/question-icon.png) no-repeat;
 }
 /* line 98, ../sass/desktop/_form.scss */
 .ex-form .ex-anketa-main .form-group.ex-error p {
@@ -13017,7 +13011,7 @@ header .navbar-default {
   width: 117px;
   height: 36px;
   display: inline-block;
-  background: url(../img/rub.png) no-repeat;
+  background: url(/templates/zaimhunter/assets/img/rub.png) no-repeat;
   -webkit-background-size: contain;
 }
 /* line 128, ../sass/desktop/_form.scss */
@@ -13060,7 +13054,7 @@ header .navbar-default {
   width: 513px;
   height: 358px;
   opacity: 0.91;
-  background-image: url("../img/creditcard-pic.png");
+  background-image: url("/templates/zaimhunter/assets/img/creditcard-pic.png");
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -14054,7 +14048,7 @@ header .navbar-default {
   position: absolute;
   top: 20px;
   right: 55px;
-  background-image: url(../img/yandex.png);
+  background-image: url(/templates/zaimhunter/assets/img/yandex.png);
 }
 /* line 34, ../sass/desktop/_faq.scss */
 .ex-faq .ex-select-block span {
@@ -14152,7 +14146,7 @@ header .navbar-default {
   padding-left: 30px;
 }
 .special_index5 {
-  width: 78%;
+  width: 100%; 
   outline: none;
   border: 1px solid #4163d7;
   background: #1991eb;
@@ -14189,7 +14183,4 @@ header .navbar-default {
 .special_box {
   height: 130px;
   visibility: hidden; 
-}
-#special_footer {
-  display: none;
 }

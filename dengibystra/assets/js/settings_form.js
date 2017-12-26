@@ -322,7 +322,6 @@ $(document).ready(function () {
             $('#' + this.id + 'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
             $(this).parent().addClass('ex-error');
             $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
-            // console.log(evt.currentTarget.dataset.validationErrorMsg);
             if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
             {
                 $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
@@ -443,8 +442,8 @@ $(document).ready(function () {
         monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
         dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
         firstDay: 1,
-        yearRange: "-72:-19",
-        defaultDate: "01/01/1998",
+        yearRange: "-72:-18",
+        defaultDate: "01/01/1999",
         isRTL: false,
         onSelect: function (date) {
             $('#birthdate').focus();

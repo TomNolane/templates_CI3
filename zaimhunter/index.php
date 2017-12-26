@@ -71,10 +71,9 @@
             </div>
         </div>
     </section>
-    <section class="ex-service">
+    <section class="ex-service hidden-xs hidden-sm">
         <div class="container">
-            <h2 class="hidden-xs hidden-sm visible-md visible-lg">Преимущества нашего сервиса</h2>
-            <h2 class="hidden-lg hidden-md visible-sm visible-xs" style="margin-top: 10px !important; margin-bottom: 10px !important;">Преимущества нашего сервиса</h2>
+            <h2>Преимущества нашего сервиса</h2>
             <div class="row">
                 <div class="col-sm-6">
                     <div class="row">
@@ -204,28 +203,24 @@
                 <div class="col-sm-1 col-xs-0"></div> 
                 <div class="col-sm-5 col-xs-6">
                     <p>На указанную электронную почту вам будут приходить оповещения с лучшими условиями кредитования.
-                        Вы не пропустите интересные и выгодные предложения!</p>
-                    <form action="">
+                        Вы не пропустите интересные и выгодные предложения!</p> 
                         <div class="form-group">
-                            <input type="text" id="feedback-name" placeholder="Имя" title="Имя" required>
+                            <input type="text" id="feedback-name2" placeholder="Имя" title="Имя" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="feedback-email" placeholder="Email" title="Email" required>
+                            <input type="email" id="feedback-email2" placeholder="Email" title="Email" required>
                         </div> 
+                        <!-- Hidde this block -->
+                        <div class="form-group hidden">
+                            <input type="text" class="form-control" id="feedback-phone2" placeholder="Телефон" title="Телефон" value="+7777777777" required>
+                        </div>
+                        <div class="form-group hidden">
+                            <textarea class="form-control" id="feedback-comment2" placeholder="Текст вашего сообщения" title="Текст вашего сообщения" required>Хочу подписаться на рассылку</textarea>
+                        </div>
+                        <!-- Hidde this block -->
                         <div class="ex-actions text-center">
-                            <button class="ex-main-btn" id="feedback-send" style="margin-top: 0px; padding: 10px; width: 50%; background-color:#1991eb;">подписаться</button> 
+                            <button class="ex-main-btn" id="feedback-send2" style="margin-top: 0px; padding: 10px; width: 50%; background-color:#1991eb;">подписаться</button> 
                         </div>
-
-                        <!-- Hidde this block -->
-                        <div class="form-group hidden">
-                            <input type="text" class="form-control" id="feedback-phone" placeholder="Телефон" title="Телефон" value="+7777777777" required>
-                        </div>
-                        <div class="form-group hidden">
-                            <textarea class="form-control" id="feedback-comment" placeholder="Текст вашего сообщения" title="Текст вашего сообщения" required>Хочу подписаться на рассылку</textarea>
-                        </div>
-                        <!-- Hidde this block -->
-
-                    </form>
                 </div>
                 <div class="col-sm-1"></div>
 

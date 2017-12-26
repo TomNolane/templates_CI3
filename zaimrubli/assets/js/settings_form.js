@@ -23,8 +23,7 @@ function send_form(send, href) {
 				$('form#anketa input[name="id"]').val(data.id);
 			if (typeof data.redirect != 'undefined' && data.redirect) {
 				if (typeof window.obUnloader != 'undefined')
-					window.obUnloader.resetUnload();
-				//window.location.href = (typeof href == 'undefined')? '/lk' : href;
+					window.obUnloader.resetUnload(); 
 			}
 		}
 	});
@@ -39,8 +38,7 @@ function validate(){
 	if(typeof window.obUnloader != 'undefined')
     {
         window.obUnloader.resetUnload();
-    }
-	//$('#form-modal').show();
+    } 
 	return true;
 }
 
@@ -61,12 +59,7 @@ function validate1() {
 	} else if ($('input[name="o"]').val().length < 2 || !re_name.test($('input[name="o"]').val())) {
 		error('Необходимо указать отчество.');
 		return false;
-	}
-	/*
-	        else if ($('select[name="birth_dd"]').val().length != 2) {error('Вы не указали день рождения.'); return false;}
-		else if ($('select[name="birth_mm"]').val().length != 2) {error('Вы не указали месяц рождения.'); return false;}
-		else if ($('select[name="birth_yyyy"]').val().length != 4) {error('Вы не указали год рождения.'); return false;}
-	*/
+	} 
 	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
 		error('Вы не указали пол.');
 		return false;
@@ -80,7 +73,6 @@ function validate1() {
 		error('Вы не подтвердили своё согласие с условиями сервиса.');
 		return false;
 	}
-	/* else if (!$('#marketing').prop('checked')) {error('Вы не подтвердили своё согласие на получение рассылки.'); return false;} */
 	else return true;
 	return false;
 }
@@ -90,12 +82,7 @@ function validate2() {
 	if ($('input[name="passport"]').val().length < 11) {
 		error('Вы не указали номер и серию паспорта.');
 		return false;
-	}
-	/*
-	else if ($('select[name="passport_dd"]').val().length != 2) {error('Вы не указали день выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_mm"]').val().length != 2) {error('Вы не указали месяц выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_yyyy"]').val().length != 4) {error('Вы не указали год выдачи паспорта.'); return false;}
-	*/
+    }
 	else if ($('input[name="passport_who"]').val().length < 3) {
 		error('Необходимо указать, кем выдан паспорт.');
 		return false;
@@ -174,10 +161,7 @@ function validate3() {
 	} else return true;
 	return false;
 } 
-$(document).ready(function () { 
-    // $("#ex-slider-val").text(getcookie("sldr"));
-    // $("#amount").val(getcookie("sldr")); 
-    // $("#period").val(getcookie("per"));
+$(document).ready(function () {
     $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
     $('[data-toggle="popover"]').popover();
     $('input#phone').mask("8 (9nn) nnn nnnn", {
@@ -330,11 +314,7 @@ $(document).ready(function () {
         modules: 'date,sanitize'
     });
     $('input').on('validation', function (evt, valid) {
-        if(valid){ 
-            if($(this)[0].name == 'birthdate' || $(this)[0].name == 'passportdate' || $(this)[0].name == 'passport_code' || $(this)[0].name == 'passport' || $(this)[0].name == 'passport_who' || $(this)[0].name == 'birthplace' || $(this)[0].name == 'city' || $(this)[0].name == 'street' || $(this)[0].name == 'building' || $(this)[0].name == 'work_experience' || $(this)[0].name == 'work_occupation' || $(this)[0].name == 'work_phone' || $(this)[0].name == 'work_salary' || $(this)[0].name == 'work_city' || $(this)[0].name == 'work_street' || $(this)[0].name == 'work_house')
-                {
-                    // $(this).css('margin-bottom','0px');
-                } 
+        if(valid){  
                 $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
                 $(this).removeClass('er');
                 $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
@@ -424,7 +404,7 @@ $(document).ready(function () {
         });
     });
     var lang = 0;
-    $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street, #feedback-name').on('keyup keypress', function (e) {
+    $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street, #feedback-name, #feedback-comment').on('keyup keypress', function (e) {
         if ($(this).val().match(/([a-zA-Z]+)/)) {
             lang++;
             var input = $(this),
@@ -491,8 +471,8 @@ $(document).ready(function () {
         monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
         dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
         firstDay: 1,
-        yearRange: "-72:-19",
-        defaultDate: "01/01/1998",
+        yearRange: "-72:-18",
+        defaultDate: "01/01/1999",
         isRTL: false,
         onSelect: function (date) {
             $('#birthdate').focus();
