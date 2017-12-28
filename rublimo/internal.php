@@ -72,6 +72,14 @@ switch($this->uri->segment(1))
 		2-3 минут, тогда как на банковскую карточку или другую электронную систему - часто сутки и более. Если вы не хотите тратить
 		ни секунды личного времени, такой вид займа для вас.';
 		break;
+		case 'news3': 
+		$my_title = 'Мгновенные займы – доступная и удобная услуга'; 
+		$description = 'В условиях затянувшегося кризиса сложно отыскать человека, который ни разу не одалживал деньги у знакомых или не пользовался услугами кредитования.';
+		break;
+	case 'news4': 
+		$my_title = 'Можно ли самостоятельно улучшить или очистить (исправить) кредитную историю'; 
+		$description = 'Выражение – кредитная история слышали многие люди, обратившиеся к банковским структурам, у которых возникли финансовые затруднения.';
+		break;
 	default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'Rublimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
 }
 
@@ -147,6 +155,18 @@ require 'header.php';
 	{
 		require 'sidebar_start2.php';
 		require 'internal-news2.php'; 
+		require 'sidebar_end.php';
+	}
+	elseif ($this->uri->segment(1) == 'news3')
+	{
+		require 'sidebar_start2.php';
+		require 'internal-news3.php'; 
+		require 'sidebar_end.php';
+	}
+	elseif ($this->uri->segment(1) == 'news4')
+	{
+		require 'sidebar_start2.php';
+		require 'internal-news4.php'; 
 		require 'sidebar_end.php';
 	}
 	elseif ($this->uri->segment(1) == 'zaim-card') { require 'sidebar_start.php'; require 'internal-zaim-card.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}

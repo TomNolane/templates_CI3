@@ -1,12 +1,10 @@
 function Loading(flag) {
-    if (typeof flag == 'undefined') {
-        document.getElementById('loading').style.display = 'block';
+    if (typeof flag == 'undefined') { 
         $('#feedback-send').prop('disabled', true);
         $('#feedback-send').html('Отправка <i class="fa fa-spinner fa-spin fa-pulse"></i>');
     } else if (!flag) {
         $('#feedback-send').html('Отправить');
-        $('#feedback-send').prop('disabled', false);
-        document.getElementById('loading').style.display = 'none';
+        $('#feedback-send').prop('disabled', false); 
     }
 }
 $('#feedback-send').click(function () {

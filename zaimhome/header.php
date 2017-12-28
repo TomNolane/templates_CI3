@@ -247,11 +247,7 @@ if(!isset($description))
                             </div>
                         </form>
                     </div>
-                </div>
-                <div id="loading" style="display:none;">
-                    <span>
-                        <i class="fa fa-spinner fa-spin fa-pulse"></i> Загрузка...</span>
-                </div>
+                </div> 
             </div>
         </div>
     </div>

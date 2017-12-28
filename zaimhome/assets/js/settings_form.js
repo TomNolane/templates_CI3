@@ -510,6 +510,7 @@ $(document).ready(function () {
             setcookies();
             send_form(true, '/lk');
             markTarget('form-step-3');
+            $('#anketa').submit();
         }
         showBzzz = false;
         setcookies();

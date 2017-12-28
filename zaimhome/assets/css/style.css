@@ -3298,3 +3298,6 @@ td.visible-print{display:table-cell !important;}
   .label_true {
     color: #3c763d !important;
   }
+  #getmoney {
+      cursor:pointer
+  }

@@ -127,8 +127,19 @@ footer{
     margin-left: 16.66666667% !important;
 }
 @media screen and (max-width:468px) {
-	h1{
-		font-size:40px;
+	.page h1{
+		font-size:23px;
+		color: #000000;
+		margin: 5px !important; 
 	}
 	.col-xxs-6{width:50%;}
+}
+.white:hover {
+	outline : 4px solid #42d79e;
+	-moz-outline-radius: 10px;
+}
+#for_lk {
+	font-size:40px;
+	color: #ffffff;
+	margin: 40px 0 !important;  
 }

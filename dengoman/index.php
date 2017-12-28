@@ -1,21 +1,28 @@
 <?php require 'header.php'; ?>
 <section class="calc" id="calc">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-7 col-sm-12">
-				<h1>Срочные деньги<br class="visible-lg"> онлайн</h1>
+	<form action="/form" method="post">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-12">
+					<h1>Срочные деньги
+						<br class="visible-lg"> онлайн</h1>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6 col-sm-7 text-center hidden-xs">
-				<div class="form">
-					<h2>Оформите займ <span>и получите деньги в <span>15:00</span></span></h2>
-					<form id="anketa" action="/form" method="post">
+			<div class="row">
+				<div class="col-md-6 col-sm-7 text-center ">
+					<div class="form">
+						<h2>Оформите займ
+							<span>и получите деньги в
+								<span>15:00</span>
+							</span>
+						</h2>
+						<input type="hidden" id="amount" name="amount" value="20000" />
+						<input type="hidden" id="period" name="period" value="21" />
+						<input type="hidden" id="form_slrd" name="form_slrd" value="15" />
 						<input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
 						<?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
-						<input type="hidden" id="period" name="period" value="10" />
 						<div class="form-slider green">
-							<input type="text" class="amount" name="amount" value="30000" />
+							<input type="text" id="rangeSlider" value="20000" />
 						</div>
 						<div class="col-md-12 info">
 							<div class="col-md-6">
@@ -41,60 +48,23 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-12">
+						<div class="col-md-12 hidden-xs hidden-sm">
 							<img id="ps" src="/templates/dengoman/img/index/ps.png" alt="ps.png">
 						</div>
 						<button type="submit" class="btn">Получить деньги</button>
-					</form>
+					</div>
 				</div>
-			</div>
-			<div class="col-md-6 col-sm-5 hidden-xs">
-				<img src="/templates/dengoman/img/index/man.png" alt="man.png">
-			</div>
-			<div class="col-xs-12 text-center visible-xs">
-				<div class="form">
-					<form id="anketa" action="/form" method="post">
-						<input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
-						<?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
-						<input type="hidden" id="period" name="period" value="10" />
-						<div class="form-slider green">
-							<input type="text" class="amount" name="amount" value="30000" />
-						</div>
-						<div class="col-md-12 info">
-							<div class="col-md-6">
-								<div class="btn form-info">
-									<span class="form-info-title">К возврату</span>
-									<span class="form-info-data sum">33900Р</span>
-								</div>
-								<div class="btn form-info">
-									<span class="form-info-title">Комиссия</span>
-									<span class="form-info-data comm">3900Р</span>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="btn form-info">
-									<span class="form-info-title">Процентная ставка</span>
-									<span class="form-info-data perc">1.3
-										<span>%</span>
-									</span>
-								</div>
-								<div class="btn form-info">
-									<span class="form-info-title">Срок</span>
-									<span class="form-info-data d">От 3 до 4 недель</span>
-								</div>
-							</div>
-						</div>
-						<button type="submit" class="btn">Получить деньги</button>
-					</form>
-				</div>
+				<div class="col-md-6 col-sm-5 hidden-xs">
+					<img src="/templates/dengoman/img/index/man.png" alt="man.png">
+				</div> 
 			</div>
 		</div>
-	</div>
+	</form>
 </section>
 
-<section class="features">
+<section class="features hidden-xs hidden-sm">
 	<h1>Преимущества нашего сервиса</h1>
-	<div class="features-cover hidden-xs">
+	<div class="features-cover">
 		<div class="container">
 			<div id="carousel-features" class="carousel slide" data-ride="carousel">
 				<!-- Indicators -->
@@ -160,75 +130,10 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="container visible-xs">
-		<div class="row">
-			<div class="col-sm-12 text-center">
-				<div id="carousel-mobile-features" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#carousel-mobile-features" data-slide-to="0" class="active"></li>
-						<li data-target="#carousel-mobile-features" data-slide-to="1"></li>
-						<li data-target="#carousel-mobile-features" data-slide-to="2"></li>
-						<li data-target="#carousel-mobile-features" data-slide-to="3"></li>
-						<li data-target="#carousel-mobile-features" data-slide-to="4"></li>
-						<li data-target="#carousel-mobile-features" data-slide-to="5"></li>
-					</ol>
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">
-						<div class="item text-center active" id="slide-0">
-							<img src="/templates/dengoman/img/index/1.png" alt="1.png">
-							<p>Сайт доступен с любого
-								<br>устройства</p>
-							<p>Получите деньги со смартфона,
-								<br>планшета или компьютера</p>
-						</div>
-						<div class="item text-center" id="slide-1">
-							<img src="/templates/dengoman/img/index/2.png" alt="2.png">
-							<p>Круглосуточная работа
-								<br>&nbsp;</p>
-							<p>Сервис работает 24x7, включая
-								<br>праздники и выходные</p>
-						</div>
-						<div class="item text-center" id="slide-2">
-							<img src="/templates/dengoman/img/index/3.png" alt="3.png">
-							<p>Безопасность и
-								<br>конфиденциальность</p>
-							<p>Все ваши личные данные хранятся в
-								<br>зашифрованном виде</p>
-						</div>
-						<div class="item text-center" id="slide-3">
-							<img src="/templates/dengoman/img/index/4.png" alt="4.png">
-							<p>Перечисление на любой
-								<br>счёт</p>
-							<p>VISA, MASTER CARD, QIWI,
-								<br>Яндекс.деньги, банковский счёт,
-								<br>CONTACT</p>
-						</div>
-						<div class="item text-center" id="slide-4">
-							<img src="/templates/dengoman/img/index/5.png" alt="5.png">
-							<p>Доверие к нашим
-								<br>клиентам</p>
-							<p>Для постоянных клиентов
-								<br>максимальная сумма займа
-								<br>увеличивается</p>
-						</div>
-						<div class="item text-center" id="slide-5">
-							<img src="/templates/dengoman/img/index/6.png" alt="6.png">
-							<p>Займы доступны по всей
-								<br>России</p>
-							<p>Вы можете получить займ в любой
-								<br>точке РФ. Все что Вам нужно - это
-								<br>доступ к интернету</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	</div> 
 </section>
 
-<section class="reviews hidden-xs">
+<section class="reviews hidden-xs hidden-sm">
 	<div class="container">
 		<h1>Отзывы клиентов</h1>
 		<div id="carousel-reviews" class="carousel slide" data-ride="carousel">
@@ -246,7 +151,8 @@
 									<p>Красноярск</p>
 									<p>
 										<em>Добрый вечер! С благодарностью к компании. Огромное спасибо за понимание и участие!!! Всего самого хорошего и доброго
-											Вам.</em>
+											Вам.
+										</em>
 									</p>
 									<a class="btn carousel-button" href="/form">Получить деньги</a>
 								</div>
@@ -338,8 +244,7 @@
 						</a>
 					</div>
 				</div>
-			</div>
-			<!-- Indicators -->
+			</div> 
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2 text-center">
 					<div class="row carousel-indicators">
@@ -367,11 +272,11 @@
 		</div>
 	</div>
 </section>
-<section class="where hidden-xs">
+<section class="where hidden-xs hidden-sm">
 	<div class="container">
 		<h1>Займ до зарплаты</h1>
 		<div class="row">
-			<div class="col-sm-5 hidden-sm hidden-xs">
+			<div class="col-sm-5">
 				<img src="/templates/dengoman/img/index/where.png" class="visible-lg" alt="where.png">
 			</div>
 			<div class="col-md-7 col-xs-12">
@@ -396,7 +301,7 @@
 	</div>
 </section>
 
-<div class="doc hidden-xs" style="color: #333">
+<div class="doc hidden-xs hidden-sm" style="color: #333">
 	<div class="great-support-container section-container section-container-gray-bg">
 		<div class="container">
 			<div class="row">
@@ -418,11 +323,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<!-- More services -->
-
-	<div class="more-services-container section-container">
+	</div> 
+	<div class="more-services-container section-container hidden-xs hidden-sm">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
@@ -462,11 +364,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<!-- Call to action -->
-
-	<div class="call-to-action-container section-container section-container-image-bg">
+	</div> 
+	<div class="call-to-action-container section-container section-container-image-bg hidden-xs hidden-sm">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
@@ -493,9 +392,8 @@
 				</div>
 			</div>
 		</div>
-	</div> 
-
-	<div class="portfolio-container section-container section-container-gray-bg">
+	</div>
+	<div class="portfolio-container section-container section-container-gray-bg hidden-xs hidden-sm">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
@@ -533,7 +431,7 @@
 		</div>
 	</div>
 
-	<div class="blog-container section-container partner-container">
+	<div class="blog-container section-container partner-container hidden-xs hidden-sm">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 blog section-description wow fadeIn">
@@ -546,41 +444,35 @@
 			<div class="row">
 				<div class="col-sm-3 blog-box wow fadeInLeft">
 					<div class="row">
-						<!-- <a href="https://pxl.leads.su/click/864dd416696b8008a5875a0bbe82e865" target="_blank"> -->
-							<div class="col-sm-12">
-								<h3>ООО МФО «СМСФИНАНС»</h3>
-								<p>№ лицензии 2120177002022 </p>
-								<p>Адрес: 115201, г. Москва,</p>
-								<p>ул. Котляковская, д.3, стр. 13</p>
-								<p>Годовая процентная ставка: 328,5%</p>
-							</div>
-						<!-- </a> -->
+						<div class="col-sm-12">
+							<h3>ООО МФО «СМСФИНАНС»</h3>
+							<p>№ лицензии 2120177002022 </p>
+							<p>Адрес: 115201, г. Москва,</p>
+							<p>ул. Котляковская, д.3, стр. 13</p>
+							<p>Годовая процентная ставка: 328,5%</p>
+						</div>
 					</div>
 				</div>
 				<div class="col-sm-3 col-sm-offset-2 blog-box wow fadeInLeft">
 					<div class="row">
-						<!-- <a href="https://pxl.leads.su/click/0b7f24ce727aa36758c9775910a0b99c" target="_blank"> -->
-							<div class="col-sm-12">
-								<h3>ЗАО «4финанс»</h3>
-								<p>№ лицензии 1127746537764 </p>
-								<p>Адрес: 115201, г.Москва, </p>
-								<p>ул. Котляковская, д.3, стр. 13</p>
-								<p>Годовая процентная ставка: 328,5%</p>
-							</div>
-						<!-- </a> -->
+						<div class="col-sm-12">
+							<h3>ЗАО «4финанс»</h3>
+							<p>№ лицензии 1127746537764 </p>
+							<p>Адрес: 115201, г.Москва, </p>
+							<p>ул. Котляковская, д.3, стр. 13</p>
+							<p>Годовая процентная ставка: 328,5%</p>
+						</div>
 					</div>
 				</div>
 				<div class="col-sm-3 col-sm-offset-1 blog-box wow fadeInLeft">
 					<div class="row">
-						<!-- <a href="https://pxl.leads.su/click/0d832392bf58a621067a6e41ac602eb3" target="_blank"> -->
-							<div class="col-sm-12">
-								<h3>ООО «СрочноДеньги»</h3>
-								<p>№ лицензии 2110552000304 </p>
-								<p>Адрес: Нижний Новгород,</p>
-								<p>ул. Тимирязева, 15/2, БЦ «КМ-Сити», 4 этаж</p>
-								<p>Годовая процентная ставка: 360%</p>
-							</div>
-						<!-- </a> -->
+						<div class="col-sm-12">
+							<h3>ООО «СрочноДеньги»</h3>
+							<p>№ лицензии 2110552000304 </p>
+							<p>Адрес: Нижний Новгород,</p>
+							<p>ул. Тимирязева, 15/2, БЦ «КМ-Сити», 4 этаж</p>
+							<p>Годовая процентная ставка: 360%</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -588,143 +480,39 @@
 			<div class="row">
 				<div class="col-sm-3 blog-box wow fadeInLeft">
 					<div class="row">
-						<!-- <a href="https://pxl.leads.su/click/3f83cc895f66b8b7ed915fc132408f20" target="_blank"> -->
-							<div class="col-sm-12">
-								<h3>ООО «Домашние деньги»</h3>
-								<p>№ лицензии 211017700000 </p>
-								<p>Адрес: 115088, г. Москва,</p>
-								<p>2-ой Южнопортовый проезд, д. 33, стр. 1</p>
-								<p>Годовая процентная ставка: 248,2%/p>
-							</div>
-						<!-- </a> -->
+						<div class="col-sm-12">
+							<h3>ООО «Домашние деньги»</h3>
+							<p>№ лицензии 211017700000 </p>
+							<p>Адрес: 115088, г. Москва,</p>
+							<p>2-ой Южнопортовый проезд, д. 33, стр. 1</p>
+							<p>Годовая процентная ставка: 248,2%/p>
+						</div>
 					</div>
 				</div>
 				<div class="col-sm-3 col-sm-offset-2 blog-box wow fadeInLeft">
 					<div class="row">
-						<!-- <a href="https://pxl.leads.su/click/30a6c51f9fb08e349bcbf9ee8caf0206" target="_blank"> -->
-							<div class="col-sm-12">
-								<h3>ООО «Займер»</h3>
-								<p>№ лицензии 651303532004088 </p>
-								<p>Адрес: Нижний Новгород,</p>
-								<p>Адрес:г. Кемерово, пр. Советский, д. 2/7</p>
-								<p>Годовая процентная ставка: 248,2%</p>
-							</div>
-						<!-- </a> -->
+						<div class="col-sm-12">
+							<h3>ООО «Займер»</h3>
+							<p>№ лицензии 651303532004088 </p>
+							<p>Адрес: Нижний Новгород,</p>
+							<p>Адрес:г. Кемерово, пр. Советский, д. 2/7</p>
+							<p>Годовая процентная ставка: 248,2%</p>
+						</div>
 					</div>
 				</div>
 				<div class="col-sm-3  col-sm-offset-1 blog-box wow fadeInLeft">
 					<div class="row">
-						<!-- <a href="https://pxl.leads.su/click/2f1ea83749c8f0ea58239fc19b0a9f2d" target="_blank"> -->
-							<div class="col-sm-12">
-								<h3>ООО «Парса Компани Групп»</h3>
-								<p>№ лицензии 1097746179585 </p>
-								<p>Адрес: 115201, г. Москва,</p>
-								<p>Старокаширское ш., д. 2, корп. 2</p>
-								<p>Годовая процентная ставка: 360%/p>
-							</div>
-						<!-- </a> -->
+						<div class="col-sm-12">
+							<h3>ООО «Парса Компани Групп»</h3>
+							<p>№ лицензии 1097746179585 </p>
+							<p>Адрес: 115201, г. Москва,</p>
+							<p>Старокаширское ш., д. 2, корп. 2</p>
+							<p>Годовая процентная ставка: 360%/p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<script>
-	function zero(value) {
-		return value < 10 ? '0' + value : value;
-	}
-
-	$(document).ready(function () {
-		var d = new Date();
-		var amount = 15000;
-		var day = 10;
-		d.setMinutes(d.getMinutes() + 15);
-		$('.form h2 span span').text(zero(d.getHours()) + ':' + zero(d.getMinutes()))
-
-		$('.amount').ionRangeSlider({
-			values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000,
-				25000, 30000, 40000, 50000, 80000, 100000
-			],
-			prettify_enabled: true,
-			grid: false,
-			grid_num: 1,
-			hide_min_max: false,
-			prettify: function (range) {
-				var n = range.toString();
-				return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
-
-			},
-			onChange: function (range) {
-				if (range.from_value <= 10000) {
-					d = 'От 61 до 130 дней';
-					$('#period').val(10);
-				} else if (range.from_value <= 15000) {
-					d = 'От 61 до 130 дней';
-					$('#period').val(10);
-				} else if (range.from_value <= 20000) {
-					d = 'От 61 до 130 дней';
-					$('#period').val(10);
-				} else if (range.from_value <= 30000) {
-					d = 'От 61 до 130 дней';
-					$('#period').val(10);
-				} else if (range.from_value <= 50000) {
-					d = 'От 130 до 250 дней';
-					$('#period').val(15);
-				} else {
-					d = 'От 250 до 365 дней';
-					$('#period').val(30);
-				}
-				$('.d').text(d);
-				$('.results tr').each(function (indx, element) {
-					if ($(element).data('amount') < range.from) $(element).hide();
-					else $(element).show();
-				});
-
-				amount = range.from_value;
-				updateComm();
-			}
-		});
-		var slider = $('.amount').data('ionRangeSlider');
-
-		var slider_plus = true;
-		var n = 6;
-		var slider_init = setInterval(function () {
-			if (slider_plus) {
-				n++;
-			} else {
-				n--;
-			}
-			if (n == 21) {
-				slider_plus = false;
-			} else if (n == 5) {
-				clearInterval(slider_init);
-			}
-
-			slider.update({
-				from: n
-			});
-
-		}, 50);
-		var updateComm = function () {
-
-			if (amount <= 30000) {
-				percent = 1.3;
-				comm1 = Math.ceil((amount / 100) * percent) * day;
-				comm2 = 0;
-			}
-			if (amount > 30000) {
-				percent = 0.2;
-				comm1 = 390 * day;
-				comm2 = Math.ceil(((amount - 30000) / 100) * percent) * day;
-			}
-			comm = comm1 + comm2;
-			summ = amount + comm;
-			$('.perc').text(percent + '%');
-			$('.comm').text(comm + 'P');
-			$('.sum').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' ') + 'P');
-		};
-		traffic('dengoman.ru', '0');
-	});
-</script>
-
+</div> 
 <?php require 'footer.php'; ?>

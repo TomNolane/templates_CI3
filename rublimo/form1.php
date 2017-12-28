@@ -35,7 +35,6 @@
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свою фамилию"
 			    required>
 			<span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-	 
 	</div>
 </div>
 <div class="form-group has-feedback">
@@ -59,6 +58,49 @@
 	</div>
 </div> 
 <input type="hidden" id="gender" value="1" name="gender" required>
+<!-- Скрываем старую форму даты рождения -->
+<div class="form-group hidden">
+	<label class="col-sm-4 control-label label-required hidden-xs">Дата рождения*</label>
+	<div class="col-sm-2">
+		<div class="shadow">
+			<select class="form-control ec" id="birth_dd" name="birth_dd" required>
+				<option value="0">День</option>
+				<?php for($i=1;$i<=31;$i++) echo '<option value="'.(($i<10)? '0' : '').$i.'">'.$i.'</option>'; ?>
+			</select>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="shadow">
+			<select class="form-control ec" id="birth_mm" name="birth_mm" required>
+				<option value="0">Месяц</option>
+				<option value="01">Январь</option>
+				<option value="02">Февраль</option>
+				<option value="03">Март</option>
+				<option value="04">Апрель</option>
+				<option value="05">Май</option>
+				<option value="06">Июнь</option>
+				<option value="07">Июль</option>
+				<option value="08">Август</option>
+				<option value="09">Сентябрь</option>
+				<option value="10">Октябрь</option>
+				<option value="11">Ноябрь</option>
+				<option value="12">Декабрь</option>
+			</select>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="shadow">
+			<select class="form-control ec" id="birth_yyyy" name="birth_yyyy" required>
+				<option value="0">Год</option>
+				<?php
+				for($i=date('Y', strtotime('-80 years', time()));$i<=date('Y', strtotime('-18 years', time()));$i++)
+				echo '<option value="'.$i.'">'.$i.'</option>';
+				?>
+			</select>
+		</div>
+	</div>
+</div>
+<!-- Скрываем старую форму даты рождения -->
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Дата рождения</label>
 	<div class="col-sm-8 col-xs-12"> 
@@ -76,7 +118,6 @@
 		<span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 	</div>
 </div>
-
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Почта</label>
 	<div class="col-sm-8 col-xs-12"> 
@@ -85,7 +126,6 @@
 		<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> 
 	</div>
 </div>
-
 <div class="form-group">
 	<label class="col-sm-4 control-label label-required hidden-xs">Кредитная история</label>
 	<div class="col-sm-8 col-xs-12">
@@ -116,7 +156,8 @@
 	</label>
 
 </div>
-
 <div class="clearfix"></div>
-
-<a class="btn btn-next" id="next">Далее <i class="fa fa-caret-right"></i></a>
+<div class="col-sm-5 col-sm-offset-4 col-xs-12">
+<div class="shadow">
+<a class="btn btn-next" id="next">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Далее <i class="fa fa-caret-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+</div></div>

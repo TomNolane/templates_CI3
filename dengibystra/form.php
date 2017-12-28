@@ -250,12 +250,12 @@ include "header.php";
             $("#work_experience").removeClass("er");
             $("#work_experiencestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
 
-            $("#work_salary").addClass("valid");
-            $("#work_salary").parent().addClass("has-success").removeClass("has-error");
-            $("#work_salary").parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_salary").removeClass("er");
+            $("#work_salary").removeClass("valid");
+            $("#work_salary").parent().removeClass("has-success").addClass("has-error");
+            $("#work_salary").parent().prev().addClass("label_er").removeClass("label_true");
+            $("#work_salary").addClass("er");
             $("#work_salary").focus();
-            $("#work_salarystatus").removeClass("glyphicon-remove");
+            $("#work_salarystatus").addClass("glyphicon-remove");
 
             $("#work_region").addClass("valid");
             $("#work_region").parent().addClass("has-success").removeClass("has-error");

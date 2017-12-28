@@ -348,6 +348,6 @@ $("#email").suggestions({
                     allowTipHover: false,
                     fade: false,
                     slide: false
-            });             
+            });
         }
 });

@@ -77,13 +77,9 @@ if(!isset($description))
 <![endif]-->
 
 <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=AB08QuA*AHqYGgS1qSBS6k8osS6uuM0vwS7*GJOxHTjgB6b3yrRzsaxRA1KdhNf2pLUkYjuXeJvfaRnExxKnHxYFNvF2NIeOXGQG6ID7zAK1LjO2*5JwKmrAYlejenz3cv*G0tu9UfpsE3Bj9StLFGJC4Xc7FnTUd7KiOjzBcJY-&pixel_id=1000081266';</script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WQ8TJJ9');</script>
-<!-- End Google Tag Manager --> 
+<?php require 'google_tag_manager.php'; ?>
+<!-- Sendpuls -->
+<?php require 'sendpuls.php'; ?>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->

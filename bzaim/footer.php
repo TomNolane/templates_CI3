@@ -59,7 +59,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                             </div>
                         </div> 
                     <div class="footer_spec99">
-                        ИП «Бабакова К.К.»ОГРНИП 316222500122426 ИНН 222511216499.
+                        ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001
                     </div>
                 </div>
             </div>
@@ -137,11 +137,12 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
             $("#work_experience").removeClass("er");
             $("#"+$("#work_experience").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
 
-            $("#work_salary").addClass("valid");
-            $("#work_salary").parent().addClass("has-success").removeClass("has-error");
-            $("#work_salary").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_salary").removeClass("er"); 
-            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+            $("#work_salary").removeClass("valid");
+            $("#work_salary").parent().addClass("has-error").removeClass("has-success");
+            $("#work_salary").parent().parent().prev().removeClass("label_true").addClass("label_er");
+            $("#work_salary").addClass("er"); 
+            $("#work_salary").focus();
+            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove");
 
             $("#work_region").addClass("valid");
             $("#work_region").parent().addClass("has-success").removeClass("has-error");
@@ -942,9 +943,9 @@ function setcookie(name, value, expires, path, domain, secure) {
     ga('send', 'pageview');
 </script>
 <!-- Код тега ремаркетинга Google -->
-<!--------------------------------------------------
+<!-- ------------------------------------------------
 С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
---------------------------------------------------->
+------------------------------------------------ -->
 <script type="text/javascript">
     /* <![CDATA[ */
     var google_conversion_id = 841045099;
@@ -961,5 +962,4 @@ function setcookie(name, value, expires, path, domain, secure) {
     </div>
 </noscript>
 </body>
-
 </html>

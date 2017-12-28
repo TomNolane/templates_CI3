@@ -532,6 +532,7 @@ if ($this->uri->segment(1) == 'form')
 
 //            $("#work_salary").prop("disabled", false);
             $("#work_salary").val("");
+            $("#work_salary").focus();
 
             var teemp2 = Number($("#region").find(":selected").index());
             $("#work_region option").eq(teemp2).prop("selected", true);
@@ -585,8 +586,8 @@ if ($this->uri->segment(1) == 'form')
             $("#work_salary").val("");
             $("#work_salary").removeClass("valid");
             $("#work_salary").parent().removeClass("has-success");
-            $("#work_salary").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-ok");
+            $("#work_salary").parent().parent().prev().removeClass("label_true");
+            $("#work_salarystatus").removeClass("glyphicon-ok");
  
             $("#work_region").removeClass("valid");
             $("#work_region").parent().removeClass("has-success");
@@ -709,9 +710,9 @@ if(isset($_GET['email']))
 <script>
 function markTarget(target,param, id) 
 {
-    if (typeof yaCounter46652025 == 'undefined') return;
-	if (typeof param == 'undefined') yaCounter46652025.reachGoal(target);
-	else yaCounter46652025.reachGoal(target,param);
+    if (typeof yaCounter47082354 == 'undefined') return;
+	if (typeof param == 'undefined') yaCounter47082354.reachGoal(target);
+	else yaCounter47082354.reachGoal(target,param);
         
         $.ajax({
             type: 'POST',

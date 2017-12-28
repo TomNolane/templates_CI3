@@ -9,8 +9,8 @@ function error(msg) {
 	var title = 'Ошибка';
 	if ($('#message').length) $('#message').remove();
 	$('body').append('<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-		'<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' +
-		'<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">OK</button></div></div></div></div>');
+    '<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' +
+    '<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">OK</button></div></div></div></div>');
 	$('#message').modal('show');
 }
 
@@ -23,8 +23,7 @@ function send_form(send, href) {
 				$('form#anketa input[name="id"]').val(data.id);
 			if (typeof data.redirect != 'undefined' && data.redirect) {
 				if (typeof window.obUnloader != 'undefined')
-					window.obUnloader.resetUnload();
-				//window.location.href = (typeof href == 'undefined')? '/lk' : href;
+					window.obUnloader.resetUnload(); 
 			}
 		}
 	});
@@ -39,8 +38,7 @@ function validate(){
 	if(typeof window.obUnloader != 'undefined')
     {
         window.obUnloader.resetUnload();
-    }
-	//$('#form-modal').show();
+    } 
 	return true;
 }
 
@@ -62,11 +60,6 @@ function validate1() {
 		error('Необходимо указать отчество.');
 		return false;
 	}
-	/*
-	        else if ($('select[name="birth_dd"]').val().length != 2) {error('Вы не указали день рождения.'); return false;}
-		else if ($('select[name="birth_mm"]').val().length != 2) {error('Вы не указали месяц рождения.'); return false;}
-		else if ($('select[name="birth_yyyy"]').val().length != 4) {error('Вы не указали год рождения.'); return false;}
-	*/
 	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
 		error('Вы не указали пол.');
 		return false;
@@ -80,7 +73,6 @@ function validate1() {
 		error('Вы не подтвердили своё согласие с условиями сервиса.');
 		return false;
 	}
-	/* else if (!$('#marketing').prop('checked')) {error('Вы не подтвердили своё согласие на получение рассылки.'); return false;} */
 	else return true;
 	return false;
 }
@@ -90,12 +82,7 @@ function validate2() {
 	if ($('input[name="passport"]').val().length < 11) {
 		error('Вы не указали номер и серию паспорта.');
 		return false;
-	}
-	/*
-	else if ($('select[name="passport_dd"]').val().length != 2) {error('Вы не указали день выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_mm"]').val().length != 2) {error('Вы не указали месяц выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_yyyy"]').val().length != 4) {error('Вы не указали год выдачи паспорта.'); return false;}
-	*/
+    } 
 	else if ($('input[name="passport_who"]').val().length < 3) {
 		error('Необходимо указать, кем выдан паспорт.');
 		return false;
@@ -528,7 +515,7 @@ $(document).ready(function () {
     $('#work').change(function () {
         if ($('#work').val() == 'ПЕНСИОНЕР') {
             //console.log('ПЕНСИОНЕР');
-            $('#work_name_help').html('укажите последнее место работы');
+            $('#work_name_help').html('');
         } else {
             $('#work_name_help').html('');
         }

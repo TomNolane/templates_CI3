@@ -1,5 +1,5 @@
 body{
-	background-image:url(../img/bg-small.png);
+	background-image:url(/templates/dengoman/img/bg-small.png);
     color:#80909c;
 }
 
@@ -121,4 +121,10 @@ input[type="radio"], input[type="checkbox"] {
     .secure span {
         font-size:14px;
     }
+}
+.label_er {
+color: #b94a48 !important;
+}
+.label_true {
+color: #3c763d !important;
 }

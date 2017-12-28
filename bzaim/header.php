@@ -469,14 +469,11 @@ if(!isset($description))
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFB33N7" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
-
     <nav class="navbar">
 	<div class="container">
    
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/"><img alt="logo.png" src="/templates/bzaim/img/logo.png"></a>
-			
 			<button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
 				<span class="sr-only">Раскрыть меню</span>
 				<i class="glyphicon glyphicon-menu-hamburger"></i>
@@ -501,7 +498,6 @@ if(!isset($description))
                 </li>
             </ul>
         </div>
-        
 	</div>
     </nav> 
     <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">

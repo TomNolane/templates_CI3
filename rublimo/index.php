@@ -18,9 +18,7 @@
 					<input type="hidden" id="form_slrd" name="form_slrd" value="15" />
 					<input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
 					<?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
-						<div class="form-slider green">
-							<!-- <div class="form-label-1 pull-left">Сумма:</div> -->
-							<!-- <div class="form-label-2 pull-right"><span class="current_amount">15 000</span> <i class="fa fa-rub"></i></div>-->
+						<div class="form-slider green"> 
 							<div class="clearfix"></div>
 							<input type="text" class="amount" name="amount" value="30000" />
 							<div class="form-label-3 pull-left">1 000</div>
@@ -206,7 +204,6 @@
 			</div>
 		</div>
 	</section>
-
 	<section class="reviews hidden-md hidden-sm hidden-xs">
 		<div class="pattern">
 			<div class="container">
@@ -285,10 +282,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<!-- More services -->
-
+		</div> 
 		<div class="more-services-container section-container">
 			<div class="container">
 				<div class="row">
@@ -319,10 +313,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<!-- Call to action -->
-
+		</div> 
 		<div class="call-to-action-container section-container section-container-image-bg">
 			<div class="container">
 				<div class="row">
@@ -354,7 +345,6 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="portfolio-container hidden-xs section-container section-container-gray-bg">
 		<div class="container">
 			<div class="row">
@@ -378,7 +368,6 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="portfolio-container hidden-xs section-container section-container-gray-bg">
 		<div class="container">
 			<div class="row">
@@ -416,83 +405,71 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-4 blog-box wow fadeInLeft">
-					<div class="row">
-						<!-- <a href="https://pxl.leads.su/click/864dd416696b8008a5875a0bbe82e865" target="_blank"> -->
+					<div class="row"> 
 							<div class="col-sm-9">
 								<h3>ООО МФО «СМСФИНАНС»</h3>
 								<p>№ лицензии 2120177002022 </p>
 								<p>Адрес: 115201, г. Москва,</p>
 								<p>ул. Котляковская, д.3, стр. 13</p>
 								<p>Годовая процентная ставка: 328,5%</p>
-							</div>
-						<!-- </a> -->
+							</div> 
 					</div>
 				</div>
 				<div class="col-sm-4 blog-box wow fadeInLeft">
-					<div class="row">
-						<!-- <a href="https://pxl.leads.su/click/0b7f24ce727aa36758c9775910a0b99c" target="_blank"> -->
+					<div class="row"> 
 							<div class="col-sm-9">
 								<h3>ЗАО «4финанс»</h3>
 								<p>№ лицензии 1127746537764 </p>
 								<p>Адрес: 115201, г.Москва, </p>
 								<p>ул. Котляковская, д.3, стр. 13</p>
 								<p>Годовая процентная ставка: 328,5%</p>
-							</div>
-						<!-- </a> -->
+							</div> 
 					</div>
 				</div>
 				<div class="col-sm-4 blog-box wow fadeInLeft">
-					<div class="row">
-						<!-- <a href="https://pxl.leads.su/click/0d832392bf58a621067a6e41ac602eb3" target="_blank"> -->
+					<div class="row"> 
 							<div class="col-sm-9">
 								<h3>ООО «СрочноДеньги»</h3>
 								<p>№ лицензии 2110552000304 </p>
 								<p>Адрес: Нижний Новгород,</p>
 								<p>ул. Тимирязева, 15/2, БЦ «КМ-Сити», 4 этаж</p>
 								<p>Годовая процентная ставка: 360%</p>
-							</div>
-						<!-- </a> -->
+							</div> 
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-4 blog-box wow fadeInLeft">
-					<div class="row">
-						<!-- <a href="https://pxl.leads.su/click/3f83cc895f66b8b7ed915fc132408f20" target="_blank"> -->
+					<div class="row"> 
 							<div class="col-sm-9">
 								<h3>ООО «Домашние деньги»</h3>
 								<p>№ лицензии 211017700000 </p>
 								<p>Адрес: 115088, г. Москва,</p>
 								<p>2-ой Южнопортовый проезд, д. 33, стр. 1</p>
 								<p>Годовая процентная ставка: 248,2%</p>
-							</div>
-						<!-- </a> -->
+							</div> 
 					</div>
 				</div>
 				<div class="col-sm-4 blog-box wow fadeInLeft">
-					<div class="row">
-						<!-- <a href="https://pxl.leads.su/click/30a6c51f9fb08e349bcbf9ee8caf0206" target="_blank"> -->
+					<div class="row"> 
 							<div class="col-sm-9">
 								<h3>ООО «Займер»</h3>
 								<p>№ лицензии 651303532004088 </p>
 								<p>Адрес: Нижний Новгород,</p>
 								<p>Адрес:г. Кемерово, пр. Советский, д. 2/7</p>
 								<p>Годовая процентная ставка: 248,2%</p>
-							</div>
-						<!-- </a> -->
+							</div> 
 					</div>
 				</div>
 				<div class="col-sm-4 blog-box wow fadeInLeft">
-					<div class="row">
-						<!-- <a href="https://pxl.leads.su/click/2f1ea83749c8f0ea58239fc19b0a9f2d" target="_blank"> -->
+					<div class="row"> 
 							<div class="col-sm-9">
 								<h3>ООО «Парса Компани Групп»</h3>
 								<p>№ лицензии 1097746179585 </p>
 								<p>Адрес: 115201, г. Москва,</p>
 								<p>Старокаширское ш., д. 2, корп. 2</p>
 								<p>Годовая процентная ставка: 360%</p>
-							</div>
-						<!-- </a> -->
+							</div> 
 					</div>
 				</div>
 			</div>
@@ -500,5 +477,4 @@
 	</div>
 </div>
 <link href="/modules/3dgallery/css/style.css" rel="stylesheet" media="screen">
-
 <?php require 'footer.php'; ?>

@@ -36,7 +36,7 @@
                     <br><a href="mailto:support@zaimhome.ru" target="_blank">support@zaimhome.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
             </div>
             <div class="col-sm-6 hidden-xs hidden-sm spec_footer5">
-                <p style="font-size: 85%;">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499</p>
+                <p style="font-size: 85%;">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</p>
             </div>
         </div>
     </footer>
@@ -116,11 +116,12 @@ if ($this->uri->segment(1) == 'form')
             $("#work_experience").removeClass("er");
             $("#"+$("#work_experience").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
 
-            $("#work_salary").addClass("valid");
-            $("#work_salary").parent().addClass("has-success").removeClass("has-error");
-            $("#work_salary").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_salary").removeClass("er"); 
-            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+            $("#work_salary").removeClass("valid");
+            $("#work_salary").parent().addClass("has-error").removeClass("has-success");
+            $("#work_salary").parent().parent().prev().removeClass("label_true").addClass("label_er");
+            $("#work_salary").addClass("er");
+            $("#work_salary").focus();
+            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove");
 
             $("#work_region").addClass("valid");
             $("#work_region").parent().addClass("has-success").removeClass("has-error");
