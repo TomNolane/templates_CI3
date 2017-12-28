@@ -7,6 +7,7 @@ function Loading(flag) {
         $('#feedback-send').prop('disabled', false);
     }
 }
+
 $('#feedback-send').click(function () {
     Loading();
     var data = {
