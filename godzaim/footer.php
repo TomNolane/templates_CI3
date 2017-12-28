@@ -48,7 +48,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
                             ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости
                             займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период
                             составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по
-                            ставке 0% в случае своевременного погашения. ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499
+                            ставке 0% в случае своевременного погашения. <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001
                         </p>
                     </div>
                 </div>
@@ -762,10 +762,7 @@ if(isset($_GET['email'])){
 ?>
                         <?php } ?>
                         <?php 
-        require 'yandex_metrika.php'; 
-        if ($this->uri->segment(1) != 'form') {
-            require 'yandex_rtb.php';
-        }
+        require 'yandex_metrika.php';
     ?>
                         <script>
                             function markTarget(target, param, id) {
@@ -790,60 +787,7 @@ if(isset($_GET['email'])){
                             (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
                                 '//vk.com/rtrg?r=Z7pk5C4xjqokU5G*QALWNq2pkJhzPOom99yo3Qxf9oIeFlECprDRQgjZP9SEA86kYiMHFgew1rs3AF6e*l8tUryFp/Fl495P7rPnkWnSEnGPEQiabdvpee/7*npmHm33ovO1TSw3ulRHBDU7ITWvhsLgKc4jAIpbdw4C7HeMV/s-&pixel_id=1000099730';
                         </script>
-
-                        <!-- Общий счетчик Yandex.Metrika ЛидМафия->
-<!-- Yandex.Metrika counter -->
-                        <script type="text/javascript">
-                            (function (d, w, c) {
-                                (w[c] = w[c] || []).push(function () {
-                                    try {
-                                        w.yaCounter45336951 = new Ya.Metrika({
-                                            id: 45336951,
-                                            clickmap: true,
-                                            trackLinks: true,
-                                            accurateTrackBounce: true
-                                        });
-                                    } catch (e) {}
-                                });
-
-                                var n = d.getElementsByTagName("script")[0],
-                                    s = d.createElement("script"),
-                                    f = function () {
-                                        n.parentNode.insertBefore(s, n);
-                                    };
-                                s.type = "text/javascript";
-                                s.async = true;
-                                s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-                                if (w.opera == "[object Opera]") {
-                                    d.addEventListener("DOMContentLoaded", f, false);
-                                } else {
-                                    f();
-                                }
-                            })(document, window, "yandex_metrika_callbacks");
-                        </script>
-                        <noscript>
-                            <div>
-                                <img src="https://mc.yandex.ru/watch/45336951" style="position:absolute; left:-9999px;" alt="" />
-                            </div>
-                        </noscript>
-                        <!-- /Yandex.Metrika counter -->
-                        <script>
-                            (function (i, s, o, g, r, a, m) {
-                                i['GoogleAnalyticsObject'] = r;
-                                i[r] = i[r] || function () {
-                                    (i[r].q = i[r].q || []).push(arguments)
-                                }, i[r].l = 1 * new Date();
-                                a = s.createElement(o),
-                                    m = s.getElementsByTagName(o)[0];
-                                a.async = 1;
-                                a.src = g;
-                                m.parentNode.insertBefore(a, m)
-                            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-                            ga('create', 'UA-104440793-1', 'auto');
-                            ga('send', 'pageview');
-                        </script>
+ 
                         <script type="text/javascript">
                             var isMobile = false; //initiate as false
                             // device detection
@@ -892,9 +836,9 @@ if(isset($_GET['email'])){
                             }
                         </script>
                         <!-- Код тега ремаркетинга Google -->
-                        <!--------------------------------------------------
+                        <!-- ------------------------------------------------
 С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
---------------------------------------------------->
+------------------------------------------------- -->
                         <script type="text/javascript">
                             /* <![CDATA[ */
                             var google_conversion_id = 844462441;
@@ -910,18 +854,6 @@ if(isset($_GET['email'])){
                                 />
                             </div>
                         </noscript>
-                        <!-- Global site tag (gtag.js) - Google Analytics -->
-                        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108410422-1"></script>
-                        <script>
-                            window.dataLayer = window.dataLayer || [];
-
-                            function gtag() {
-                                dataLayer.push(arguments);
-                            }
-                            gtag('js', new Date());
-
-                            gtag('config', 'UA-108410422-1');
-                        </script>
-                        </body>
-
+                        <?php require 'google_analytics.php'; ?>
+                        </body> 
                         </html>

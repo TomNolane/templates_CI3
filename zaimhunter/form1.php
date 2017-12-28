@@ -28,6 +28,49 @@
 			    <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
             <input type="hidden" id="gender" value="1" name="gender" required> 
+            <!-- Скрываем старую форму даты рождения -->
+<div class="form-group hidden">
+	<label class="col-sm-4 control-label label-required hidden-xs">Дата рождения*</label>
+	<div class="col-sm-2">
+		<div class="shadow">
+			<select class="form-control ec" id="birth_dd" name="birth_dd" required>
+				<option value="0">День</option>
+				<?php for($i=1;$i<=31;$i++) echo '<option value="'.(($i<10)? '0' : '').$i.'">'.$i.'</option>'; ?>
+			</select>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="shadow">
+			<select class="form-control ec" id="birth_mm" name="birth_mm" required>
+				<option value="0">Месяц</option>
+				<option value="01">Январь</option>
+				<option value="02">Февраль</option>
+				<option value="03">Март</option>
+				<option value="04">Апрель</option>
+				<option value="05">Май</option>
+				<option value="06">Июнь</option>
+				<option value="07">Июль</option>
+				<option value="08">Август</option>
+				<option value="09">Сентябрь</option>
+				<option value="10">Октябрь</option>
+				<option value="11">Ноябрь</option>
+				<option value="12">Декабрь</option>
+			</select>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<div class="shadow">
+			<select class="form-control ec" id="birth_yyyy" name="birth_yyyy" required>
+				<option value="0">Год</option>
+				<?php
+				for($i=date('Y', strtotime('-80 years', time()));$i<=date('Y', strtotime('-18 years', time()));$i++)
+				echo '<option value="'.$i.'">'.$i.'</option>';
+				?>
+			</select>
+		</div>
+	</div>
+</div>
+<!-- Скрываем старую форму даты рождения -->
             <div class="form-group has-feedback ex-arrow-on">
                 <input type="text" class="form-control ec tip special_form" name="birthdate" id="birthdate" placeholder="День рождения" title="Выберете свою дату рождения"
 			    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
@@ -60,7 +103,7 @@
                     <input type="checkbox" onClick="checkMe();" id="agree" value="1" checked>
                     <i></i>
                 </label>
-                <label id="display-none">
+                <label class="hidden">
                     <input type="checkbox" id="marketing" value="1" checked>
                     <b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
                 </label>

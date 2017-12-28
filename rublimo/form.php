@@ -50,7 +50,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     break;    
                 case 'google_cms':
                     $utm = '5';
-                    break;                
+                    break;
                 default:
                     $utm = '0';
             }
@@ -94,7 +94,11 @@ if(isset($_SERVER['HTTP_REFERER'])){
 		<section>
 			<div class="row">
 				<div class="col-sm-12 col-xs-12">
-					<center><h3 class="htitle"><b>Заполните свои личные данные</b></h3></center>
+					<center>
+						<h3 id="htitle">
+							<b>Заполните свои личные данные</b>
+						</h3>
+					</center>
 					<h3 class="hidden">Заполните свои паспортные данные</h3>
 					<h3 class="hidden">Заполните свои личные данные</h3>
 				</div>
@@ -125,11 +129,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
 			<div class="row">
 				<div class="col-md-10 col-xs-12">
 					<form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
-					<input type="hidden" name="referer" value="<?=$referer?>">
-					<input type="hidden" name="id" value="">
-					<input type="hidden" name="step" value="1">
-					<input type="hidden" name="ad_id" value="<?=$ad_id?>"> 
-					<!-- <input type="hidden" id="amount" name="amount" value="<?php //if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>" />  -->
+						<input type="hidden" name="referer" value="<?=$referer?>">
+						<input type="hidden" name="id" value="">
+						<input type="hidden" name="step" value="1">
+						<input type="hidden" name="ad_id" value="<?=$ad_id?>">
 						<input type="hidden" name="display" value="1" class="visible-xs">
 						<div class="tab-content">
 							<div role="tabpanel" class="tab-pane active" id="form1">
@@ -139,10 +142,12 @@ if(isset($_SERVER['HTTP_REFERER'])){
 							<div role="tabpanel" class="tab-pane" id="form2">
 								<?php require('form2.php'); ?>
 								<div class="clearfix">&nbsp;</div>
-								<div class="shadow pull-right">
-									<a class="btn btn-next" id="next2">Далее
-										<i class="fa fa-caret-right"></i>
-									</a>
+								<div class="col-sm-6 col-sm-offset-6 col-xs-12">
+									<div class="shadow">
+										<a class="btn btn-next" id="next2">Далее
+											<i class="fa fa-caret-right"></i>
+										</a>
+									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
@@ -181,49 +186,49 @@ if(isset($_SERVER['HTTP_REFERER'])){
 				</div>
 			</div>
 		</section>
-</div>
-		<div class="clearfix">&nbsp;</div>
-		<!-- Modal -->
-		<div class="modal fade" id="tosModal" tabindex="-1" role="dialog" aria-labelledby="tosModalLabel">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header text-center">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						<h1 class="modal-title hidden-xs" id="tosModalLabel">Политика конфиденциальности</h1>
-						<h3 class="modal-title visible-xs-block" id="tosModalLabel">Политика конфиденциальности</h3>
-						<p>Заполняя заявку на кредит Вы соглашаетесь с нашими правилами использования данных</p>
+	</div>
+	<div class="clearfix">&nbsp;</div>
+	<!-- Modal -->
+	<div class="modal fade" id="tosModal" tabindex="-1" role="dialog" aria-labelledby="tosModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h1 class="modal-title hidden-xs" id="tosModalLabel">Политика конфиденциальности</h1>
+					<h3 class="modal-title visible-xs-block" id="tosModalLabel">Политика конфиденциальности</h3>
+					<p>Заполняя заявку на кредит Вы соглашаетесь с нашими правилами использования данных</p>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<ol>
+							<li>Я даю свое согласие на регистрацию в проекте rublimo.ru и получение новостей проекта. Я уведомлен(а) о том, что информация,
+								переданная мною по сети Интернет, может стать доступной третьим лицам, и я освобождаю администрацию rublimo.ru от
+								ответственности, в случае, если указанные мною сведения станут доступными третьим лицам.</li>
+							<li>В целях принятия одним из МФО-партнеров rublimo.ru решения о заключении договора займа я даю им свое согласие на:
+								<ul>
+									<li>обработку в полном объеме моих персональных данных, изложенных в заявке на займ, а именно на сбор и проверку достоверности
+										представленной информации путем обращения к третьим лицам. Я даю свое согласие на обработку моих персональных данных
+										в целях продвижения услуг rublimo.ru на рынке с помощью средств связи, равно как продвижение услуг rublimo.ru и/или
+										услуг (товаров, работ) третьих лиц-партнеров rublimo.ru.</li>
+									<li>получение информации о моей кредитной истории на основании Федерального закона от 30.12.2004 г. № 218-ФЗ "О кредитных
+										историях" от любых организаций, осуществляющих в соответствии с действующим законодательством формирование, обработку
+										и хранение такой информации. Полученная информация предназначена для внутреннего использования МФО-партнеров rublimo.ru.
+										Настоящие согласия даны мной на неопределенный срок.</li>
+								</ul>
+								<li>Я подтверждаю, что сведения, содержащиеся в заявке, являются верными и точными на указанную дату и обязуюсь незамедлительно
+									уведомить rublimo.ru в случае изменения указанных мной сведений, а также о любых обстоятельствах, способных повлиять
+									на выполнение мной или МФО-партнеров rublimo.ru обязательств по займу, который может быть предоставлен на основании
+									заявки.
+								</li>
+						</ol>
 					</div>
-					<div class="modal-body">
-						<div class="row">
-							<ol>
-								<li>Я даю свое согласие на регистрацию в проекте rublimo.ru и получение новостей проекта. Я уведомлен(а) о том, что информация,
-									переданная мною по сети Интернет, может стать доступной третьим лицам, и я освобождаю администрацию rublimo.ru от
-									ответственности, в случае, если указанные мною сведения станут доступными третьим лицам.</li>
-								<li>В целях принятия одним из МФО-партнеров rublimo.ru решения о заключении договора займа я даю им свое согласие на:
-									<ul>
-										<li>обработку в полном объеме моих персональных данных, изложенных в заявке на займ, а именно на сбор и проверку достоверности
-											представленной информации путем обращения к третьим лицам. Я даю свое согласие на обработку моих персональных
-											данных в целях продвижения услуг rublimo.ru на рынке с помощью средств связи, равно как продвижение услуг rublimo.ru
-											и/или услуг (товаров, работ) третьих лиц-партнеров rublimo.ru.</li>
-										<li>получение информации о моей кредитной истории на основании Федерального закона от 30.12.2004 г. № 218-ФЗ "О кредитных
-											историях" от любых организаций, осуществляющих в соответствии с действующим законодательством формирование, обработку
-											и хранение такой информации. Полученная информация предназначена для внутреннего использования МФО-партнеров rublimo.ru.
-											Настоящие согласия даны мной на неопределенный срок.</li>
-									</ul>
-									<li>Я подтверждаю, что сведения, содержащиеся в заявке, являются верными и точными на указанную дату и обязуюсь незамедлительно
-										уведомить rublimo.ru в случае изменения указанных мной сведений, а также о любых обстоятельствах, способных повлиять
-										на выполнение мной или МФО-партнеров rublimo.ru обязательств по займу, который может быть предоставлен на основании
-										заявки.
-									</li>
-							</ol>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" data-dismiss="modal"> Закрыть </button>
-					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal"> Закрыть </button>
 				</div>
 			</div>
 		</div>
-<?php require 'footer.php'; ?>
+	</div>
+	<?php require 'footer.php'; ?>

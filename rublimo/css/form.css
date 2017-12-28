@@ -25,9 +25,11 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .form-control{
-    border-color:#636363;
-    font-size:20px;
-    height:44px;
+    border-color: #636363;
+    font-size: 21px;
+    height: 50px;
+    border-radius: 16px;
+    border: 2px solid #ccc;
 }
 .input-group-addon{
     background-color:#dadada;
@@ -119,7 +121,7 @@ input[type="radio"], input[type="checkbox"] {
 .btn-next, .btn-ok{
     font-size:23px;
     text-decoration:none;
-    width:180px;
+    width:200px;
 }
 .btn-ok{
     margin:0 auto;
@@ -178,27 +180,27 @@ input[type="radio"], input[type="checkbox"] {
 
 .er:-moz-placeholder {
     color: #ff0000;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .er::-moz-placeholder {
     color: #ff0000;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .er::placeholder {
     color: #ff0000;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .er:-ms-input-placeholder {
     color: #ff0000;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .er::-webkit-input-placeholder {
     color: #ff0000;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .label_er {

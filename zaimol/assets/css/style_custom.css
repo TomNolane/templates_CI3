@@ -127,3 +127,6 @@ color: #3c763d !important;
 .special_form99 {
   color: #000000 !important;
 }
+input#i , input#o, input#f, input#feedback-name {
+  text-transform: capitalize !important;
+} 

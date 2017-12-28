@@ -17,7 +17,7 @@
 	</div>
 </div>
 <!-- Скрываем старую форму даты выдачи -->
-<div class="form-group" style="display: none;">
+<div class="form-group hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs">Дата выдачи*</label>
 	<div class="col-sm-2">
 			<select class="form-control ec" id="passport_dd" name="passport_dd" required>

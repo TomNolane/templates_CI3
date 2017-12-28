@@ -14,7 +14,7 @@
         data-ad-slot="1985418218"
         data-ad-format="auto"></ins>
         <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+            (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
     }
 ?>
@@ -33,65 +33,65 @@
                     общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
                     за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей
                     выдается по ставке 0% в случае своевременного погашения
-                    | ИП «Бабакова К.К.»ОГРНИП 316222500122426 ИНН 222511216499</span></p>
+                    <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span></p>
             </div>
         </div>
     </div>
 </footer>
 
     <?php
-    require 'templates/common/get_display_size.php';
-    echo '<script>';
-    require 'modules/jquery/jquery-1.11.3.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimsoon/assets/js/jquery.form-validator.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimsoon/assets/js/jquery.suggestions.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimsoon/assets/js/coockie.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimsoon/assets/js/custom.js';
-    echo '</script>'; 
-    echo '<script>';
-    require 'templates/zaimsoon/assets/js/settings_main.js';
-    echo '</script>'; 
-    echo '<script>';
-    require 'templates/zaimsoon/assets/js/owl.carousel.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimsoon/assets/js/settings_form.js';
-    echo '</script>';
+        require 'templates/common/get_display_size.php';
+        echo '<script>';
+        require 'modules/jquery/jquery-1.11.3.min.js';
+        echo '</script>';
+        echo '<script>';
+        require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
+        echo '</script>';
+        echo '<script>';
+        require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
+        echo '</script>';
+        echo '<script>';
+        require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
+        echo '</script>';
+        echo '<script>';
+        require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+        echo '</script>';
+        echo '<script>';
+        require 'templates/zaimsoon/assets/js/jquery.form-validator.js';
+        echo '</script>';
+        echo '<script>';
+        require 'templates/zaimsoon/assets/js/jquery.suggestions.min.js';
+        echo '</script>';
+        echo '<script>';
+        require 'templates/zaimsoon/assets/js/coockie.js';
+        echo '</script>';
+        echo '<script>';
+        require 'templates/zaimsoon/assets/js/custom.js';
+        echo '</script>'; 
+        echo '<script>';
+        require 'templates/zaimsoon/assets/js/settings_main.js';
+        echo '</script>'; 
+        echo '<script>';
+        require 'templates/zaimsoon/assets/js/owl.carousel.min.js';
+        echo '</script>';
+        echo '<script>';
+        require 'templates/zaimsoon/assets/js/settings_form.js';
+        echo '</script>';
     ?>
 
     <!--[if lt IE 10]>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
 
-<?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') 
-{ 
-    echo '<script>';
-    require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimsoon/assets/js/loanCalculator.js';
-    echo '</script>';
-?>
+    <?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') 
+    { 
+        echo '<script>';
+        require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
+        echo '</script>';
+        echo '<script>';
+        require 'templates/zaimsoon/assets/js/loanCalculator.js';
+        echo '</script>';
+    ?>
 
     <script> 
     //backtotop
@@ -191,8 +191,8 @@
         },
     });
 });
-</script> 
-<?php } ?> 
+</script>
+<?php } ?>
 <script>
     function getcookie(name) {
         var cookie = " " + document.cookie;
@@ -211,7 +211,6 @@
                 if (end == -1) {
                     end = cookie.length;
                 }
-
                 setStr = unescape(cookie.substring(offset, end));
             }
         }
@@ -409,9 +408,6 @@
 });</script>
 <?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
 { 
-    echo '<script>';
-    //require 'templates/zaimsoon/assets/js/owl.carousel.min.js';
-    echo '</script>';
     echo '<script> 
     var offers = '.json_encode($data).'
     var by_reg = null;
@@ -472,33 +468,31 @@ if ($this->uri->segment(1) == 'form')
 {
     require 'templates/common/js.php';
     if(isset($_GET['popup']) and $_GET['popup']==1 ){
-        echo '    
-    <!-- Modal Popup-->
-    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-                <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                                <div class="modal-header text-center">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                                </div>
-                                <div class="modal-body text-center">
-                                        <div class="row">
-                                                <div class="col-md-12">
-                                                    <img src="templates/common/img/popup.jpg" alt="popup.jpg">                                             
-                                                    <h2>'.$popup_text.'</h2>
-                                                    <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                                                </div>
-                                        </div>
-                                </div>
+        echo '
+        <!-- Modal Popup-->
+        <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="templates/common/img/popup.jpg" alt="popup.jpg">
+                                <h2>'.$popup_text.'</h2>
+                                <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                            </div>
                         </div>
+                    </div>
                 </div>
-    </div>
-
-            <script type= " text/javascript">
-                $(window).load(function(){
-                    $("#popup").modal("show");
-                });
-               
-            </script>';
+            </div>
+        </div>
+        <script type= " text/javascript">
+            $(window).load(function(){
+                $("#popup").modal("show");
+            });
+        </script>';
     }
 }
 
@@ -526,17 +520,16 @@ if(isset($_GET['email']))
 <script>
 function markTarget(target,param, id) 
 {
-    if (typeof yaCounter46652025 == 'undefined') return;
-	if (typeof param == 'undefined') yaCounter46652025.reachGoal(target);
-	else yaCounter46652025.reachGoal(target,param);
-        
-        $.ajax({
-            type: 'POST',
-            url: '/pixel/',
-            data: 'id='+id+'&pixel='+param,
-            success: function(data){ 
-            }
-        });
+    if (typeof yaCounter46990209 == 'undefined') return;
+	if (typeof param == 'undefined') yaCounter46990209.reachGoal(target);
+	else yaCounter46990209.reachGoal(target,param);
+    $.ajax({
+        type: 'POST',
+        url: '/pixel/',
+        data: 'id='+id+'&pixel='+param,
+        success: function(data){ 
+        }
+    });
 }
 
 function traffic(site, page)

@@ -121,7 +121,6 @@
                 <span id="streetstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
         </div>
 </div>
-
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Номер дома</label>
 	<div class="col-sm-8 col-xs-12">
@@ -130,7 +129,6 @@
                 <p class="help-block">Например: 9а</p>
 	</div>
 </div>
-
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label hidden-xs">Строение (корпус)</label>
 	<div class="col-sm-8 col-xs-12">
@@ -138,7 +136,6 @@
                 <span id="housingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
         </div>
 </div>
-
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label hidden-xs">Квартира</label>
 	<div class="col-sm-8 col-xs-12">
@@ -146,11 +143,9 @@
                 <span id="flatstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
         </div>
 </div>
-
 <div class="clearfix">&nbsp;</div>
 <div class="form-group"><label class="col-sm-8 col-sm-offset-4">Регистрация (прописка)</label></div>
 <div class="clearfix">&nbsp;</div>
-
 <div class="form-group">
 	<label class="col-sm-4 control-label label-required hidden-xs">Тип регистрации</label>
 	<div class="col-sm-8 col-xs-12">
@@ -161,7 +156,6 @@
 		</select>
 	</div>
 </div>
-
 <fieldset id="reg_same" class="hidden">
 <div class="form-group">
 	<label class="col-sm-9 control-label label-required"><b>Регистрация совпадает с местом жительства</b></label>

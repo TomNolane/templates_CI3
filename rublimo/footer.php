@@ -23,7 +23,6 @@ if($this->uri->segment(1) != 'form')
     </script>';
 }
 ?> 
-    
     <footer>
         <div class="container">
             <div class="row">
@@ -32,7 +31,7 @@ if($this->uri->segment(1) != 'form')
                         <img src="/templates/rublimo/img/logo-footer.png" alt="logo" class="logo">
                     </a>
                 </div>
-                <div class="col-md-4 col-xs-12">
+                <div class="col-md-4 col-xs-12 spec_footer4">
                     <p class="gut" id="font10">
                         «RUBLIMO» - сервис по подбору выгодных онлайн займов находящийся по адресу: Россия, Ленинградская обл. г. Санкт-Петербург,
                         ул. Осипенко, 12, оф 201 email:
@@ -40,12 +39,12 @@ if($this->uri->segment(1) != 'form')
                         <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
                     </p>
                 </div>
-                <div class="col-md-6 hidden-xs hidden-sm">
+                <div class="col-md-6 hidden-xs hidden-sm spec_footer5">
                     <p class="gut" id="font10">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная
                         процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости
                         займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят
                         11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае
-                        своевременного погашения. ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499</p>
+                        своевременного погашения. <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</p>
                 </div>
             </div>
         </div>
@@ -89,9 +88,176 @@ if($this->uri->segment(1) != 'form')
          echo '</script>';
 
         if($this->uri->segment(1) == 'form'){
-            echo '<script>';
-            require 'templates/rublimo/js/validate.min.js';
-            echo '</script>';
+            echo ' <script>
+            $("#work").change(function(){
+                if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
+                { 
+                    $("#work").addClass("valid");
+                    $("#work").parent().addClass("has-success").removeClass("has-error");
+                    $("#work").parent().parent().prev().removeClass("label_er").addClass("label_true");
+                    $("#work").removeClass("er").removeClass("error");
+
+                    $("#work_name").addClass("valid");
+                    $("#work_name").parent().addClass("has-success").removeClass("has-error");
+                    $("#work_name").parent().prev().removeClass("label_er").addClass("label_true");
+                    $("#work_name").removeClass("er").removeClass("error");
+                    $("#work_namestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+                    $("#work_occupation").addClass("valid");
+                    $("#work_occupation").parent().addClass("has-success").removeClass("has-error");
+                    $("#work_occupation").parent().prev().removeClass("label_er").addClass("label_true");
+                    $("#work_occupation").removeClass("er").removeClass("error");
+                    $("#work_occupationstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+                    $("#work_phone").addClass("valid");
+                    $("#work_phone").parent().addClass("has-success").removeClass("has-error");
+                    $("#work_phone").parent().prev().removeClass("label_er").addClass("label_true");
+                    $("#work_phone").removeClass("er").removeClass("error");
+                    $("#work_phonestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+                    $("#work_experience").addClass("valid");
+                    $("#work_experience").parent().addClass("has-success").removeClass("has-error");
+                    $("#work_experience").parent().prev().removeClass("label_er").addClass("label_true");
+                    $("#work_experience").removeClass("er").removeClass("error");
+                    $("#work_experiencestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+                    $("#work_salary").removeClass("valid");
+                    $("#work_salary").parent().addClass("has-error").removeClass("has-success");
+                    $("#work_salary").parent().prev().removeClass("label_true").addClass("label_er");
+                    $("#work_salary").addClass("er");
+                    $("#work_salary").focus();
+                    $("#work_salarystatus").addClass("glyphicon-remove");
+                    
+                    $("#work_region").addClass("valid");
+                    $("#work_region").parent().addClass("has-success").removeClass("has-error");
+                    $("#work_region").parent().parent().prev().removeClass("label_er").addClass("label_true");
+                    $("#work_region").removeClass("er").removeClass("error"); 
+
+                    $("#work_city").addClass("valid");
+                    $("#work_city").parent().addClass("has-success").removeClass("has-error");
+                    $("#work_city").parent().prev().removeClass("label_er").addClass("label_true");
+                    $("#work_city").removeClass("er").removeClass("error");
+                    $("#work_citystatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+                    $("#work_street").addClass("valid");
+                    $("#work_street").parent().addClass("has-success").removeClass("has-error");
+                    $("#work_street").parent().prev().removeClass("label_er").addClass("label_true");
+                    $("#work_street").removeClass("er").removeClass("error");
+                    $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+                    $("#work_house").addClass("valid");
+                    $("#work_house").parent().addClass("has-success").removeClass("has-error");
+                    $("#work_house").parent().prev().removeClass("label_er").addClass("label_true");
+                    $("#work_house").removeClass("er").removeClass("error");
+                    $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+                    $("#work_office").addClass("valid");
+                    $("#work_office").parent().addClass("has-success").removeClass("has-error");
+                    $("#work_office").parent().prev().removeClass("label_er").addClass("label_true");
+                    $("#work_office").removeClass("er").removeClass("error");
+                    $("#work_officestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+                    
+                    if($(this).val().toLowerCase() == "пенсионер")
+                    $("#work_name").val("пенсионер");
+                    else  $("#work_name").val("безработный");
+                    if($(this).val().toLowerCase() == "пенсионер")
+                    $("#work_occupation").val("пенсионер");
+                    else  $("#work_occupation").val("безработный");
+                    var teemp = $("#phone").val();
+                    $("#work_phone").val(teemp);
+                    $("#work_experience").val(100);
+                    $("#work_salary").val("");
+
+                    var teemp2 = Number($("#region").find(":selected").index());
+                    $("#work_region option").eq(teemp2).prop("selected", true);
+                    var teemp3 = $("#city").val();
+                    $("#work_city").val(teemp3);
+                    var teemp4 = $("#street").val();
+                    $("#work_street").val(teemp4);
+                    var teemp5 = $("#building").val();
+                    $("#work_house").val(teemp5);
+                    $("#work_building").val(" ");
+                    var teemp6 = $("#flat").val();
+                    $("#work_office").val(teemp6);
+                }
+                else {
+ 
+                    $("#work").removeClass("valid");
+                    $("#work").parent().parent().removeClass("has-success");
+                    $("#work").parent().parent().prev().removeClass("label_true");
+
+                    $("#work_name").val("");
+                    $("#work_name").focus();
+                    $("#work_name").removeClass("valid");
+                    $("#work_name").parent().removeClass("has-success");
+                    $("#work_name").parent().prev().removeClass("label_true"); 
+                    $("#work_namestatus").removeClass("glyphicon-ok");
+
+                    $("#work_occupation").val("");
+                    $("#work_occupation").removeClass("valid");
+                    $("#work_occupation").parent().removeClass("has-success");
+                    $("#work_occupation").parent().prev().removeClass("label_true"); 
+                    $("#work_occupationstatus").removeClass("glyphicon-ok"); 
+
+                    $("#work_phone").val("");
+                    $("#work_phone").removeClass("valid");
+                    $("#work_phone").parent().removeClass("has-success");
+                    $("#work_phone").parent().prev().removeClass("label_true"); 
+                    $("#work_phonestatus").removeClass("glyphicon-ok");
+
+                    $("#work_experience").val("");
+                    $("#work_experience").removeClass("valid");
+                    $("#work_experience").parent().removeClass("has-success");
+                    $("#work_experience").parent().prev().removeClass("label_true"); 
+                    $("#work_experiencestatus").removeClass("glyphicon-ok");
+
+                    $("#work_salary").val("");
+                    $("#work_salary").removeClass("valid");
+                    $("#work_salary").parent().removeClass("has-success");
+                    $("#work_salary").parent().prev().removeClass("label_true"); 
+                    $("#work_salarystatus").removeClass("glyphicon-ok");
+        
+                    $("#work_region").removeClass("valid");
+                    $("#work_region").parent().parent().removeClass("has-success");
+                    $("#work_region").parent().parent().prev().removeClass("label_true"); 
+
+                    $("#work_city").val("");
+                    $("#work_city").removeClass("valid");
+                    $("#work_city").parent().removeClass("has-success");
+                    $("#work_city").parent().prev().removeClass("label_true"); 
+                    $("#work_citystatus").removeClass("glyphicon-ok"); 
+
+                    $("#work_street").val("");
+                    $("#work_street").removeClass("valid");
+                    $("#work_street").parent().removeClass("has-success");
+                    $("#work_street").parent().prev().removeClass("label_true"); 
+                    $("#work_streetstatus").removeClass("glyphicon-ok"); 
+
+                    $("#work_house").val("");
+                    $("#work_house").removeClass("valid");
+                    $("#work_house").parent().removeClass("has-success");
+                    $("#work_house").parent().prev().removeClass("label_true"); 
+                    $("#work_housestatus").removeClass("glyphicon-ok");
+
+                    $("#work_office").val("");
+                    $("#work_office").removeClass("valid");
+                    $("#work_office").parent().removeClass("has-success");
+                    $("#work_office").parent().prev().removeClass("label_true"); 
+                    $("#work_officestatus").removeClass("glyphicon-ok");
+                    $("#work_name").val(""); 
+                    $("#work_occupation").val(""); 
+                    $("#work_phone").val("");
+                    $("#work_experience").val(""); 
+                    $("#work_salary").val("");
+                    $("#work_region option").eq(0, true).prop("selected", true);
+                    $("#work_city").val("");
+                    $("#work_street").val("");
+                    $("#work_house").val("");
+                    $("#work_building").val("");
+                    $("#work_office").val("");
+                }
+            }); 
+            </script>'; 
             
             require 'templates/common/js.php';
             if(isset($_GET['popup']) and $_GET['popup']==1 ){
@@ -140,7 +306,7 @@ if($this->uri->segment(1) != 'form')
             $(document).ready(function(){
               $('.panel-title a').click(function(){
                 $('.panel-heading').removeClass('green');
-                if ($(this).hasClass('collapsed')) $(this).parent().parent().addClass('green');
+                if ($(this).hasClass('collapsed')) $(this).parent().addClass('green');
               });
             });
             </script>";
@@ -363,28 +529,23 @@ echo '<script>
 
             function Loading(flag) {
                 if (typeof flag == 'undefined') {
-                    document.getElementById('loading').style.display = 'block';
                     $('#feedback-send').prop('disabled', true);
-                    $('#feedback-send').html('Отправка <i class="fa fa-spinner fa-spin fa-pulse"></i>');
+                    $('#feedback-send').html('Отправлено');
                 } else if (!flag) {
-                    $('#feedback-send').html('Отправить');
+                    $('#feedback-send').html('Отправляется');
                     $('#feedback-send').prop('disabled', false);
-                    document.getElementById('loading').style.display = 'none';
                 }
             }
+            
             $('#feedback-send').click(function () {
                 Loading();
-
                 var data = {
                     name: $('#feedback-name').val(),
                     phone: $('#feedback-phone').val(),
                     email: $('#feedback-email').val(),
-                    comment: $('#feedback-comment').val() + x_size + " x " + y_size + " UserAgent: " + navigator.userAgent
+                    comment: $('#feedback-comment').val() + " " + x_size + " x " + y_size + " UserAgent: " + navigator.userAgent
                 };
-
-                if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' &&
-                        data
-                        .email != '') && (typeof data.comment != 'undefined' && data.comment != '')) {
+                if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' && data.email != '') && (typeof data.comment != 'undefined' && data.comment != '')) {
                     $.ajax({
                         url: '/feedback/',
                         type: 'POST',
@@ -395,12 +556,14 @@ echo '<script>
                             if (typeof response.error != 'undefined') {
                                 alert('Ошибка. ' + response.error);
                             } else {
-                                $('#feedbackModal').modal('hide');
+                                $('#askQuestion').modal('hide');
                                 Loading(0);
                                 alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
+                                $('#feedback-send').prop("disabled", true);
                             }
                         } else {
                             alert('Не получилось отправить. Попробуйте ещё раз.');
+                            $('#askQuestion').modal('hide');
                         }
                     }).fail(function (jqxhr, textStatus, error) {
                         alert('Не получилось отправить. Попробуйте ещё раз.');
@@ -415,46 +578,7 @@ echo '<script>
             var amount = 15000;
             var day = 10;
 
-            $(document).ready(function () {
-                $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
-                $('[data-toggle="popover"]').popover();
-                $('input#phone').mask("8 (9nn) nnn nnnn", {
-                    "placeholder": "8 (9__) ___ ____"
-                });
-                $('input#feedback-phone').mask("8 (9nn) nnn nnnn", {
-                    "placeholder": "8 (9__) ___ ____"
-                });
-                $('input#work_phone').mask("8 (9nn) nnn nnnn", {
-                    "placeholder": "8 (9__) ___ ____"
-                });
-                $('input#passport').mask("nnnn nnnnnn", {
-                    "placeholder": "____ ______"
-                });
-                $('#passport_code').mask("nnn-nnn", {
-                    "placeholder": "___-___"
-                });
-                $('input#birthdate').mask("nn/nn/nnnn", {
-                    "placeholder": "__/__/__"
-                });
-                $('input#passportdate').mask("nn/nn/nnnn", {
-                    "placeholder": "__/__/__"
-                });
-                $('input#work_salary').mask("nnnn?nn", {
-                    "placeholder": ""
-                });
-                $('input#work_experience').mask("n?nn", {
-                    "placeholder": ""
-                });
-                $('input#flat').mask("n?***", {
-                    "placeholder": ""
-                });
-                $('input#building').mask("n?***", {
-                    "placeholder": ""
-                });
-                $('input#work_house').mask("n?***", {
-                    "placeholder": ""
-                });
-
+            $(document).ready(function () { 
                 var amount = 15000;
                 var day = 10;
 
@@ -617,42 +741,7 @@ echo '<script>
             });
         </script>
 
-        <!-- Yandex.Metrika counter -->
-        <script type="text/javascript">
-            (function (d, w, c) {
-                (w[c] = w[c] || []).push(function () {
-                    try {
-                        w.yaCounter39264105 = new Ya.Metrika({
-                            id: 39264105,
-                            clickmap: true,
-                            trackLinks: true,
-                            accurateTrackBounce: true,
-                            webvisor: true
-                        });
-                    } catch (e) {}
-                });
-                var n = d.getElementsByTagName("script")[0],
-                    s = d.createElement("script"),
-                    f = function () {
-                        n.parentNode.insertBefore(s, n);
-                    };
-                s.type = "text/javascript";
-                s.async = true;
-                s.src = "https://mc.yandex.ru/metrika/watch.js";
-                if (w.opera == "[object Opera]") {
-                    d.addEventListener("DOMContentLoaded", f, false);
-                } else {
-                    f();
-                }
-            })(document, window, "yandex_metrika_callbacks");
-        </script>
-        <noscript>
-            <div>
-                <img src="https://mc.yandex.ru/watch/39264105" style="position:absolute; left:-9999px;" alt="https://mc.yandex.ru/watch"
-                />
-            </div>
-        </noscript>
-        <!-- /Yandex.Metrika counter -->
+        <?php require 'yandex-metrika.php'; ?>
 
         <script>
             function markTarget(target, param, id) {
@@ -677,44 +766,6 @@ echo '<script>
             (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
                 '//vk.com/rtrg?r=NOf/xn/SOZZu1z5zSTnJwkDlXpuyNIuW73Up0x84SEhs8D7Ji1kcZl7xrzCtd3T4c3wWr89FtkTlWDHt0039QoieLbBJEzvITZLZpZ2tLq7N6OxU0n8/1z2dHACFGd22hi7UhhWpkpB83L4j1xzZm/ZHZg2e09SoMlbOaLb00rE-&pixel_id=1000099731';
         </script>
-
-        <!-- Общий счетчик Yandex.Metrika ЛидМафия->
-<!-- Yandex.Metrika counter -->
-        <script type="text/javascript">
-            (function (d, w, c) {
-                (w[c] = w[c] || []).push(function () {
-                    try {
-                        w.yaCounter45336951 = new Ya.Metrika({
-                            id: 45336951,
-                            clickmap: true,
-                            trackLinks: true,
-                            accurateTrackBounce: true
-                        });
-                    } catch (e) {}
-                });
-
-                var n = d.getElementsByTagName("script")[0],
-                    s = d.createElement("script"),
-                    f = function () {
-                        n.parentNode.insertBefore(s, n);
-                    };
-                s.type = "text/javascript";
-                s.async = true;
-                s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-                if (w.opera == "[object Opera]") {
-                    d.addEventListener("DOMContentLoaded", f, false);
-                } else {
-                    f();
-                }
-            })(document, window, "yandex_metrika_callbacks");
-        </script>
-        <noscript>
-            <div>
-                <img src="https://mc.yandex.ru/watch/45336951" style="position:absolute; left:-9999px;" alt="mc.yandex.ru/watch" />
-            </div>
-        </noscript>
-        <!-- /Yandex.Metrika counter --> 
         <script>
             (function (i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;
@@ -777,9 +828,7 @@ echo '<script>
             }
         </script> 
         <!-- Код тега ремаркетинга Google -->
-        <!--------------------------------------------------
-С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
---------------------------------------------------->
+        <!-- С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup. -->
         <script type="text/javascript">
             /* <![CDATA[ */
             var google_conversion_id = 841045015;
@@ -795,7 +844,5 @@ echo '<script>
                 />
             </div>
         </noscript>
-
         </body>
-
         </html>

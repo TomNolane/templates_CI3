@@ -1,4 +1,5 @@
 <?php
+$my_title = "Вам автоматически одобрен займ";
 require 'header.php';
 
 $this->load->model('offers/offers_model', 'offers');
@@ -21,10 +22,7 @@ $regions = $this->geo->regions();
 $this->load->model('pixel/pixel_model', 'pixel');
 $pixel = $this->pixel->stat('dengoman.ru');
 ?>
-<link rel="stylesheet" href="/modules/owl/owl.carousel.css">
-<link rel="stylesheet" href="/modules/owl/owl.theme.css">
-<link href="/templates/dengoman/css/lk.css" rel="stylesheet" media="screen">
-    
+
 <div class="container lk">
 	<h1>Вам автоматически одобрен займ в следующих организациях:</h1>
 	<div class="row">
@@ -42,7 +40,7 @@ $pixel = $this->pixel->stat('dengoman.ru');
                             
                             foreach($data as $item){
                                     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-                                    $item['link'] = str_replace("#site", $domen, $item['link']);                                
+                                    $item['link'] = str_replace("#site", $domen, $item['link']);
                                 echo '<div class="col-sm-6 col-md-6 white tab"> 
                                         <div class="item text-center">
                                             <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
@@ -66,7 +64,7 @@ $pixel = $this->pixel->stat('dengoman.ru');
                     <?php
 			foreach($data as $item){
                                     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-                                    $item['link'] = str_replace("#site", $domen, $item['link']);                            
+                                    $item['link'] = str_replace("#site", $domen, $item['link']);
                             echo '<hr>
 				<div class="row" style="background: #ffffff4d;padding: 10px 0px;">
                                     <div class="col-sm-4 text-center tab">
@@ -84,120 +82,29 @@ $pixel = $this->pixel->stat('dengoman.ru');
     </div>
     <div class="row hidden-xs">
         <div class="q text-left hidden-xs">
-            <div class="col-md-6 col-sm-6">       
-                <img src="/templates/dengoman/img/lk/1.png">
+            <div class="col-md-6 col-sm-6">
+                <img src="/templates/dengoman/img/lk/1.png" alt="1.png">
                 <h3>Первый заём</h3>
                 <p>до 10 000 рублей выдается по ставке 0% в случае своевременного погашения</p>
-            </div>                    
+            </div>
             <div class="col-md-6 col-sm-6">  
-                <img src="/templates/dengoman/img/lk/3.png">
+                <img src="/templates/dengoman/img/lk/3.png" alt="3.png">
                 <h3>Процентная ставка за день</h3>
                 <p>Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%</p>
             </div>
-            <div class="col-md-6 col-sm-6">                      
-                <img src="/templates/dengoman/img/lk/2.png">
+            <div class="col-md-6 col-sm-6">
+                <img src="/templates/dengoman/img/lk/2.png" alt="2.png">
                 <h3>На территории всей России</h3>
                 <p>Займ можно оформить, находясь в любой точке России</p>
-            </div>            
-            <div class="col-md-6 col-sm-6">              
-                <img src="/templates/dengoman/img/lk/4.png">
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <img src="/templates/dengoman/img/lk/4.png" alt="4.png">
                 <h3>Различные варианты получения займов</h3>
                 <p>На карту VISA, MAESTRO, QIWI кошелёк, Яндекс.Деньги, через систему CONTACT, банковский счёт</p>
-            </div>                
-        </div>            
+            </div>
+        </div>
     </div>
-     
-<script src="/modules/owl/owl.carousel.js"></script>
-<script>
-var offers = <?php echo json_encode($data); ?>;
-var by_reg = null;
-$(document).ready(function(){
-	$('.amount').ionRangeSlider({
-		min: 1000,
-		max: 100000,
-		step: 1000,
-		from: <?php echo empty($_POST['amount'])? 15000 : $_POST['amount']; ?>,
-		prettify_enabled:true,
-		postfix:' Р',
-		onChange:function(range){
-			amount = range.from;
-			$('.results tr').each(function(indx, element){
-				if ($(element).data('amount') < range.from) $(element).hide();
-				else $(element).show();
-			});
-		}
-	});
-	
-	$('.offer-type').change(function(){
-		update_offers();
-	});
-	
-	function update_offers() {
-		var str = '.results tbody tr';
-		//var curr = clone(by_reg.length? by_reg : offers);
-		var ot_card = $('.offer-type[data-id="card"]').prop('checked');
-		var ot_qiwi = $('.offer-type[data-id="qiwi"]').prop('checked');
-		var ot_yandex = $('.offer-type[data-id="yandex"]').prop('checked');
-		var ot_contact = $('.offer-type[data-id="contact"]').prop('checked');
-		// Прячем всё
-		$(str).hide();
-		// Пробегаемся по списку офферов
-		((by_reg !== null)? by_reg : offers).forEach(function(offer, i){
-			var $tr = $(str + '[data-id="' + offer.id + '"]');
-			if ($tr.data('amount') >= amount){
-				if (ot_card && !!$tr.data('card') == ot_card) $tr.show();
-				else if (ot_qiwi && !!$tr.data('qiwi') == ot_qiwi) $tr.show();
-				else if (ot_yandex && !!$tr.data('yandex') == ot_yandex) $tr.show();
-				else if (ot_contact && !!$tr.data('contact') == ot_contact) $tr.show();
-			}
-		});
-	}
-    if (getcookie('i')){
-        var i = getcookie('i');
-        $('#i').text(i);
-    }    
-    traffic('dengoman.ru', '4');    
-});
-
-function clone(o) {
-	if(!o || 'object' !== typeof o) return o;
-	
-	var c = 'function' === typeof o.pop ? [] : {};
-	var p, v;
-	for(p in o) {
-		if(o.hasOwnProperty(p)) {
-			v = o[p];
-			if(v && 'object' === typeof v) {
-				c[p] = clone(v);
-			}
-			else {
-				c[p] = v;
-			}
-		}
-	}
-	return c;
-}
-$('.owl').owlCarousel({
-    loop:true,
-    margin:0,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:3
-        },
-        1600:{
-            items:3
-        }        
-    }
-});
-</script>
-<!-- Google Code for  
+    <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
 Page -->
 <script type="text/javascript">

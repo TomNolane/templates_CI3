@@ -6,7 +6,16 @@
 
     if($this->uri->segment(1) != 'form')
     {
-        echo '';
+        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Zaimrubli -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="4313892605"
+        data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     }
 ?>
 
@@ -26,8 +35,7 @@
                     Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день;
                     проценты за весь период составят
                     11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в
-                    случае своевременного погашения<br>
-                    ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span></p>
+                    случае своевременного погашения<br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span></p>
             </div>
         </div>
     </div>
@@ -524,7 +532,7 @@ if ($this->uri->segment(1) == 'form')
                                 <div class="modal-body text-center">
                                         <div class="row">
                                                 <div class="col-md-12">
-                                                    <img src="templates/common/img/popup.jpg" alt="popup.jpg">                                             
+                                                    <img src="templates/common/img/popup.jpg" alt="popup.jpg">
                                                     <h2>'.$popup_text.'</h2>
                                                     <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
                                                 </div>
@@ -573,14 +581,13 @@ function markTarget(target,param, id)
     if (typeof yaCounter47142942 == 'undefined') return;
 	if (typeof param == 'undefined') yaCounter47142942.reachGoal(target);
 	else yaCounter47142942.reachGoal(target,param);
-        
-        $.ajax({
-            type: 'POST',
-            url: '/pixel/',
-            data: 'id='+id+'&pixel='+param,
-            success: function(data){ 
-            }
-        });
+    $.ajax({
+        type: 'POST',
+        url: '/pixel/',
+        data: 'id='+id+'&pixel='+param,
+        success: function(data){ 
+        }
+    });
 }
 
 function traffic(site, page)

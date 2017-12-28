@@ -9,17 +9,48 @@
         </div>
     </div>
 </div>
-<div class="form-group hidden" >
-    <label class="col-sm-4 control-label label-required hidden-xs">Серия и номер паспорта</label>
-    <div class="col-sm-4">
-        <input type="tel" class="form-control ec" id="passport-s" name="passport_s" placeholder="0000" title="Серия паспорта" data-validation="number"
-            data-validation-allowing="range[1;9999]" data-validation-error-msg="Пожалуйста, введите серию паспорта" required>
-    </div>
-    <div class="col-sm-4">
-        <input type="tel" class="form-control ec" id="passport-n" name="passport_n" placeholder="000000" title="Номер паспорта" data-validation="number"
-            data-validation-allowing="range[1;999999]" data-validation-error-msg="Пожалуйста, введите номер паспорта" required>
-    </div>
-</div> 
+<input type="hidden" class="form-control ec" id="passport-s" name="passport_s" placeholder="0000" title="Серия паспорта" data-validation="number" data-validation-allowing="range[1;9999]" data-validation-error-msg="Пожалуйста, введите серию паспорта" required>
+<input type="hidden" class="form-control ec" id="passport-n" name="passport_n" placeholder="000000" title="Номер паспорта"  data-validation="number" data-validation-allowing="range[1;999999]" data-validation-error-msg="Пожалуйста, введите номер паспорта" required>
+<div class="form-group hidden">
+	<label class="col-sm-4 control-label label-required hidden-xs hidden-sm">Дата выдачи*</label>
+	<div class="col-sm-2">
+			<select class="form-control ec" id="passport_dd" name="passport_dd" required>
+				<option value="0">День</option>
+				<option selected value="04"></option>
+				<?php
+				for($i=1;$i<=31;$i++)
+				echo '<option value="'.(($i<10)? '0' : '').$i.'">'.$i.'</option>';
+				?>
+			</select>
+	</div>
+	<div class="col-sm-3">
+		<select class="form-control ec" id="passport_mm" name="passport_mm" required>
+			<option value="0">Месяц</option>
+			<option value="01">Январь</option>
+			<option value="02">Февраль</option>
+			<option value="03">Март</option>
+			<option value="04">Апрель</option>
+			<option value="05">Май</option>
+			<option selected value="06">Июнь</option>
+			<option value="07">Июль</option>
+			<option value="08">Август</option>
+			<option value="09">Сентябрь</option>
+			<option value="10">Октябрь</option>
+			<option value="11">Ноябрь</option>
+			<option value="12">Декабрь</option>
+		</select>
+	</div>
+	<div class="col-sm-3">
+		<select class="form-control ec" id="passport_yyyy" name="passport_yyyy" required>
+			<option value="0">Год</option>
+                        <option selected value="2000"></option>
+			<?php
+			for($i=1980;$i<=date('Y');$i++)
+			echo '<option value="'.$i.'">'.$i.'</option>';
+			?>
+		</select>
+	</div>
+</div>
 <div class="form-group has-feedback">
     <label class="control-label col-md-4 label-required" for="passportdate">Дата выдачи</label>
     <div class="col-md-6">

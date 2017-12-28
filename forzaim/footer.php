@@ -26,7 +26,7 @@ if($this->uri->segment(1) != 'form')
             Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <a href="mailto:support@forzaim.ru" target="_blank">support@forzaim.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
             <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
             Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.</span>
-            Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения | ИП «Бабакова К.К.»ОГРНИП 316222500122426 ИНН 222511216499
+            Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001
         </p>
     </div>
 </footer> 
@@ -525,9 +525,9 @@ if(isset($_GET['email']))
 ?>
 <script>
 function markTarget(target,param, id){
-    if (typeof yaCounter46652025 == 'undefined') return;
-	if (typeof param == 'undefined') yaCounter46652025.reachGoal(target);
-	else yaCounter46652025.reachGoal(target,param);
+    if (typeof yaCounter46915302 == 'undefined') return;
+	if (typeof param == 'undefined') yaCounter46915302.reachGoal(target);
+	else yaCounter46915302.reachGoal(target,param);
         
         $.ajax({
             type: 'POST',

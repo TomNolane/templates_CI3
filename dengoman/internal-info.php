@@ -83,21 +83,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<script>
-$(document).ready(function () {
-	if(location.hash != null && location.hash != ""){
-		$('.collapse').removeClass('in').parent().find('a[role="button"]').addClass('collapsed');
-		$(location.hash + '-panel' + '.collapse').collapse('show');
-	}
-	$('.dropdown-menu a').click(function(){
-		var url = $(this).attr('href');
-		if (url.match('#')) {
-			var $panel = $('#' + url.split('#')[1] + '-panel.collapse');
-			$('.collapse').removeClass('in').parent().find('a[role="button"]').addClass('collapsed');
-			$panel.collapse('show');
-		}
-	});
-});
-</script>
+</div> 

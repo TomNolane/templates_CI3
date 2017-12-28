@@ -43,7 +43,7 @@ if($this->uri->segment(1) != 'form')
             </div>
             <div class="gut col-md-5 col-sm-5 col-xs-12  hidden-xs hidden-sm spec_footer5">
                 <p style="font-size: 9px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
-                <br>ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН 222511216499.</p>
+                <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001.</p>
             </div>
         </div>
     </div>
@@ -179,6 +179,7 @@ $(document).ready(function () {
 
 //            $("#work_salary").prop("disabled", false);
             $("#work_salary").val("");
+            $("#work_salary").focus();
 
             var teemp2 = Number($("#region").find(":selected").index());
             $("#work_region option").eq(teemp2).prop("selected", true);
@@ -911,7 +912,6 @@ var google_remarketing_only = true;
 <div style="display:inline;">
 <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/854183902/?guid=ON&amp;script=0"/>
 </div>
-</noscript>
-<!-- Общий счетчик Yandex.Metrika ЛидМафия --> 
+</noscript> 
 </body>
 </html>
