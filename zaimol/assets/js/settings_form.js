@@ -161,10 +161,7 @@ function validate3() {
 	} else return true;
 	return false;
 } 
-$(document).ready(function () { 
-    // $("#ex-slider-val").text(getcookie("sldr"));
-    // $("#amount").val(getcookie("sldr")); 
-    // $("#period").val(getcookie("per"));
+$(document).ready(function () {
     $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
     $('[data-toggle="popover"]').popover();
     $('input#phone').mask("8 (9nn) nnn nnnn", {
@@ -250,6 +247,28 @@ $(document).ready(function () {
             });
         });
     };
+    function init2($name) {
+        var self = {}; 
+        self.$name = $name;
+        var fioParts = ["NAME"];
+        $.each([$name], function (index, $el) {
+            var sgt = $el.suggestions({
+                serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
+                token: "78fc76023580df0ec78566913b31a87d909f1ec0",
+                type: "NAME",
+                triggerSelectOnSpace: false,
+                hint: "",
+                noCache: true,
+                scrollOnFocus: false,
+                minChars: 2,
+                addon: "none",
+                params: {
+                    // каждому полю --- соответствующая подсказка
+                    parts: [fioParts[index]]
+                }
+            });
+        });
+    };
     // Проверяет, известен ли пол на данный момент
     function isGenderKnown($el) {
         var self = this;
@@ -265,8 +284,16 @@ $(document).ready(function () {
         }
     }
     init($("#f"), $("#i"), $("#o"));
-
+    init2($("#feedback-name"));
     $("#email").suggestions({
+        serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
+        token: "78fc76023580df0ec78566913b31a87d909f1ec0",
+        type: "EMAIL",
+        count: 3,
+        addon: "none",
+        scrollOnFocus: false
+    });
+    $("#feedback-email").suggestions({
         serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
         token: "78fc76023580df0ec78566913b31a87d909f1ec0",
         type: "EMAIL",
@@ -279,11 +306,7 @@ $(document).ready(function () {
         modules: 'date,sanitize'
     });
     $('input').on('validation', function (evt, valid) {
-        if(valid){ 
-            if($(this)[0].name == 'birthdate' || $(this)[0].name == 'passportdate' || $(this)[0].name == 'passport_code' || $(this)[0].name == 'passport' || $(this)[0].name == 'passport_who' || $(this)[0].name == 'birthplace' || $(this)[0].name == 'city' || $(this)[0].name == 'street' || $(this)[0].name == 'building' || $(this)[0].name == 'work_experience' || $(this)[0].name == 'work_occupation' || $(this)[0].name == 'work_phone' || $(this)[0].name == 'work_salary' || $(this)[0].name == 'work_city' || $(this)[0].name == 'work_street' || $(this)[0].name == 'work_house')
-                {
-                    // $(this).css('margin-bottom','0px');
-                } 
+        if(valid){
                 $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
                 $(this).removeClass('er');
                 $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
@@ -291,10 +314,15 @@ $(document).ready(function () {
                 $(this).parent().parent().prev().addClass('label_er').removeClass('label_true');
                 $('#'+this.id+'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
                 $(this).addClass('er');
-                $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
-                if($(this)[0].name == 'birthdate' || $(this)[0].name == 'passportdate' || $(this)[0].name == 'passport_code' || $(this)[0].name == 'passport' || $(this)[0].name == 'passport_who' || $(this)[0].name == 'birthplace' || $(this)[0].name == 'city' || $(this)[0].name == 'street' || $(this)[0].name == 'building' || $(this)[0].name == 'work_experience' || $(this)[0].name == 'work_occupation' || $(this)[0].name == 'work_phone' || $(this)[0].name == 'work_salary' || $(this)[0].name == 'work_city' || $(this)[0].name == 'work_street' || $(this)[0].name == 'work_house')
+
+                if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
                 {
-                    // $(this).css('margin-bottom','20px');   
+                    $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
+                }
+
+                if(this.name == 'phone')
+                {
+                    ('#spec_form2').removeClass('label_true').addClass('label_er');
                 } 
             } 
     });
@@ -306,18 +334,15 @@ $(document).ready(function () {
             success: function (data) {
                 validator = JSON.parse(data);
                 if (validator.status) { 
-                    $('#spec_form2').removeClass('label_er').addClass('label_true');
-                    // $('#phonestatus').removeClass('glyphicon-remove').removeClass('glyphicon-ok');
+                    $('#spec_form2').removeClass('label_er').addClass('label_true'); 
                     $('#phonestatus').html('<img src="/templates/common/img/mobile/' + validator.operator + '.png" width="24px" />');
                     $('#phone').parent().removeClass('ex-error').addClass('ex-success');
                     if (validator.operator == 'undefined') {
-                        $('#phonestatus').html('');
-                        // $('#phonestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok');
+                        $('#phonestatus').html(''); 
                     }
                 } else { 
                     $('#phonestatus').html('');
-                    $('#spec_form2').addClass('label_er').removeClass('label_true');
-                    // $('#phonestatus').removeClass('glyphicon-ok').addClass('glyphicon-remove');
+                    $('#spec_form2').addClass('label_er').removeClass('label_true'); 
                     $('#phone').parent().removeClass('ex-success').addClass('ex-error');
                 } 
             }
@@ -351,8 +376,7 @@ $(document).ready(function () {
             type: 'POST',
             url: '/validate/passport_code/',
             data: 'passport_code=' + $('#passport_code').val(),
-            success: function (data) {
-                //console.log(data);    
+            success: function (data) { 
                 validator = JSON.parse(data);
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
@@ -361,15 +385,11 @@ $(document).ready(function () {
         });
     });
     var lang = 0;
-
-
-
-    $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street').on('keyup keypress', function (e) {
-        if ($(this).val().match(/([a-zA-Z]+)/)) {
+    $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street, #feedback-name, #feedback-comment').on('keyup keypress', function (e) {
+        if ($(this).val().match(/([a-zA-Z]+)/)) { 
             lang++;
             var input = $(this),
                 text = input.val().replace(/[^а-яёА-ЯЁ0-9-_\s]/g, "");
-            //text = '';
             input.val(text);
             if (lang == 1) {
                 $(this).parent().addClass('ex-error');
@@ -381,8 +401,21 @@ $(document).ready(function () {
             $(this).next("span").text(' ');
         } 
     });
-
     $('#email').on('keyup keypress', function (e) {
+        if ($(this).val().match(/([а-яёА-ЯЁ]+)/)) {
+            lang++;
+            $(this).val('');
+            if (lang == 1) {
+                $(this).parent().addClass('ex-error');
+                $(this).after('<span class="help-block form-error">Пожалуйста, смените раскладку клавиатуры на <span class="label label-info">EN</span></span>');
+            }
+        } else {
+            lang = 0;
+            $(this).parent().removeClass('ex-error');
+            $(this).next("span").text(' ');
+        }
+    });
+    $('#feedback-email').on('keyup keypress', function (e) {
         if ($(this).val().match(/([а-яёА-ЯЁ]+)/)) {
             lang++;
             $(this).val('');
@@ -482,8 +515,7 @@ $(document).ready(function () {
             $('input[name="step"]').val('3');
             send_form(true, '/lk');
             markTarget('form-step-3');
-            $('#anketa').submit();
-            //window.location = '/thanks';
+            $('#anketa').submit(); 
         }
         showBzzz = false;
         setcookies();
@@ -514,7 +546,6 @@ $(document).ready(function () {
     });
     $('#work').change(function () {
         if ($('#work').val() == 'ПЕНСИОНЕР') {
-            //console.log('ПЕНСИОНЕР');
             $('#work_name_help').html('');
         } else {
             $('#work_name_help').html('');
