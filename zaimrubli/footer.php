@@ -69,7 +69,8 @@
     echo '</script>';
     echo '<script>';
     require 'templates/zaimrubli/assets/js/custom.js';
-    echo '</script>'; 
+    echo '</script>';
+    require 'templates/common/detect.min.php';
     echo '<script>';
     require 'templates/zaimrubli/assets/js/settings_main.js';
     echo '</script>'; 

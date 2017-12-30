@@ -85,6 +85,7 @@ echo '</script>';
 echo '<script>';
 require 'templates/zaimrubli/assets/js/jquery.form-validator.js';
 echo '</script>';
+require 'templates/common/detect.min.php';
 
 if ($this->uri->segment(1) == 'form') 
 { 
