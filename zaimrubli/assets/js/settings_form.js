@@ -525,7 +525,7 @@ $(document).ready(function () {
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
-            markTarget('form-step-1'); 
+            markTarget('form-step-1');
         }
         showBzzz = false;
         $('.reg_same').change();

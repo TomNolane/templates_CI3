@@ -165,7 +165,7 @@
                 <div class="col-md-4 col-md-offset-8 ">
                     <a id="next1">
                         <div class="col-md-12">
-                            <span id="submitOne" class="ex-main-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Далее&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="ex-main-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Далее&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <i></i>
                             </span>
                         </div>

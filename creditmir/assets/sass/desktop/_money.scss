@@ -1,0 +1,124 @@
+main.ex-main-content{
+  margin-bottom: 60px;
+  .nav-tabs{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  li{
+      width: 19.5%;
+      border: 1px solid rgba(151, 151, 151, 0.24);
+      background-color: #ffffff;
+      @include prefix(border-radius, 5px);
+      &.active{
+        a{
+          border: 1px solid rgba(151, 151, 151, 0.24)!important;
+          background-color: #007aff!important;
+          color: #fff;
+          border-radius: 5px;
+        }
+      }
+      a{
+        color: #333333;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        padding: 10px 8px;
+        text-align: center;
+        margin: 0;
+        @media (max-width: 1199px) {
+          font-size: 12px;
+        }
+        @media (max-width: 991px) {
+          min-height: 56px;
+        }
+        @media (max-width: 640px) {
+          min-height: initial;
+        }
+      }
+    }
+    @media (max-width: 640px) {
+      display: block;
+      li{
+        width: 100%;
+      }
+    }
+  }
+  .tab-content{
+    .ex-wrapper{
+      background-color: #f7f7f7;
+      padding: 60px 80px 35px;
+      @include prefix(border-radius,10px);
+      &.ex-not-standard{
+        ul{
+          margin-top: 0;
+        }
+        p{
+          &:first-of-type{
+            margin-bottom: 30px;
+          }
+        }
+      }
+      i{
+        display: block;
+        margin: 0 auto 55px;
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        &.ex-visa{
+          width: 120px;
+          height: 40px;
+          background-image: url(../img/visa-dark.png);
+        }
+        &.ex-yandex{
+          width: 180px;
+          height: 40px;
+          background-image: url(../img/yandex-dark.png);
+        }
+        &.ex-qiwi{
+          width: 111px;
+          height: 40px;
+          background-image: url(../img/qiwi-dark.png);
+        }
+        &.ex-bank{
+          width: 40px;
+          height: 40px;
+          background-image: url(../img/bank-building-dark.png);
+        }
+        &.ex-contact{
+          width: 82px;
+          height: 50px;
+          background-image: url(../img/contact-dark.png);
+        }
+      }
+      p{
+        color: #30323e;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-bottom: 0;
+      }
+      ul{
+        padding-left: 20px;
+        margin: 20px 0;
+      }
+      .ex-btn-blue{
+        margin-top: 35px;
+        max-width: 295px;
+      }
+      @media (max-width: 640px) {
+        padding: 60px 15px 35px;
+        p{
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

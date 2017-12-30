@@ -278,7 +278,9 @@
         }
     }, 50);
 });</script>
-<?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
+<?php }
+
+if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
 {  
     echo '<script>
     $( ".ex-off-block").find(\'button\').css("display" , "none");
@@ -549,20 +551,20 @@ if ($this->uri->segment(1) == 'form')
                
             </script>';
     }
-}
 
-if(isset($_GET['email']))
-{
-    //данные пользователя
-    $this->load->model('user/user_model', 'user');
-    $user_data = $this->user->get_user($_GET['email']);
-    $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
-    $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
-    foreach ($user_data as $name => $item)
+    if(isset($_GET['email']))
     {
-        echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
+        //данные пользователя
+        $this->load->model('user/user_model', 'user');
+        $user_data = $this->user->get_user($_GET['email']);
+        $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
+        $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
+        foreach ($user_data as $name => $item)
+        {
+            echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
+        }
+        echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
     }
-    echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
 }
 ?>
 
@@ -576,19 +578,19 @@ echo '</script>';
 ?>
 
 <script>
-function markTarget(target,param, id) 
-{
-    if (typeof yaCounter47142942 == 'undefined') return;
-	if (typeof param == 'undefined') yaCounter47142942.reachGoal(target);
-	else yaCounter47142942.reachGoal(target,param);
-    $.ajax({
-        type: 'POST',
-        url: '/pixel/',
-        data: 'id='+id+'&pixel='+param,
-        success: function(data){ 
-        }
-    });
-}
+    function markTarget(target, param, id) {
+        if (typeof yaCounter47142942 == 'undefined') return;
+        if (typeof param == 'undefined') yaCounter47142942.reachGoal(target);
+        else yaCounter47142942.reachGoal(target, param);
+
+        $.ajax({
+            type: 'POST',
+            url: '/pixel/',
+            data: 'id=' + id + '&pixel=' + param,
+            success: function (data) { 
+            }
+        });
+    }
 
 function traffic(site, page)
 {
