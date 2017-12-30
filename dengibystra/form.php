@@ -222,6 +222,7 @@ include "header.php";
     echo '<script>';
     require 'templates/dengibystra/assets/js/settings_form.js';
     echo '</script>';
+    require 'templates/common/detect.min.php';
     echo ' <script>
     $("#work").change(function(){
         if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")

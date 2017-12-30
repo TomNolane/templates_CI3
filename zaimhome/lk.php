@@ -75,7 +75,6 @@ $pixel = $this->pixel->stat('zaimhome.ru');
 
  
 <?php require 'footer.php';?>
-
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
 Page -->

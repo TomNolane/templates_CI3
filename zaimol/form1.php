@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-4" id="spec_form2" for="phone">Телефон</label>
+                    <label class="control-label col-md-4" id="spec_form2" for="phone" id="spec_form2">Телефон</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
                             <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Введите свой номер телефона"

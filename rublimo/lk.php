@@ -48,7 +48,7 @@ $pixel = $this->pixel->stat('rublimo.ru');
 
                 foreach($data as $item){
                                     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-                                    $item['link'] = str_replace("#site", $domen, $item['link']);                    
+                                    $item['link'] = str_replace("#site", $domen, $item['link']);
                     echo ' 
                         <div class="col-md-6 tab">
                             <div class="panel panel-default panel-blue">
