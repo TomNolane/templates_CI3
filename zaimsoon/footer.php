@@ -65,6 +65,7 @@
         echo '<script>';
         require 'templates/zaimsoon/assets/js/coockie.js';
         echo '</script>';
+        require 'templates/common/detect.min.php';
         echo '<script>';
         require 'templates/zaimsoon/assets/js/custom.js';
         echo '</script>'; 

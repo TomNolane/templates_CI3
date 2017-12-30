@@ -75,12 +75,14 @@ echo '</script>';
 echo '<script>';
 require 'templates/zaimhome/assets/js/settings_main.js';
 echo '</script>';
+require 'templates/common/detect.min.php';
 echo '<script>';
 require 'templates/zaimhome/assets/js/modal.js';
 echo '</script>';
 echo '<script>';
 require 'templates/zaimhome/assets/js/settings_form.js';
 echo '</script>';
+
 ?>
     <!--[if lt IE 10]>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
