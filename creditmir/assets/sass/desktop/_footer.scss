@@ -1,0 +1,29 @@
+footer.ex-main-footer {
+  padding-top: 28px;
+  padding-bottom: 27px;
+  background: #202020;
+  .ex-foot-logo {
+    padding-top: 15px;
+  }
+  p {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+@media (max-width: 991px) {
+  footer.ex-main-footer {
+    text-align: center;
+    p {
+      border-right: none;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      br{
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

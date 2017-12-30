@@ -1,0 +1,127 @@
+{
+    "type": "d",
+    "name": "",
+    "size": 4096,
+    "files": [
+        {
+            "type": "d",
+            "name": "bzaim",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "common",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "creditmir",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "dengibystra",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "dengimo",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "dengoman",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "dengomir",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "edenga",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "fanzaim",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "forzaim",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "godzaim",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "mikrodengi",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "rublimo",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "vkredito",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "zaimcoin",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "zaimhome",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "zaimhunter",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "zaimol",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "zaimrubli",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "zaimsoon",
+            "size": 4096,
+            "files": []
+        }
+    ]
+}

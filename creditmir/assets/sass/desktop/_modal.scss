@@ -1,0 +1,111 @@
+.modal{
+  padding-right: 0!important;
+  .modal-content{
+    padding: 15px;
+
+  }
+  &.in{
+      .modal-dialog {
+        -webkit-transform: translate(0, 20%);
+        -ms-transform: translate(0, 20%);
+        -o-transform: translate(0, 20%);
+        transform: translate(0, 20%);
+      }
+  }
+}
+
+#helpModal{
+  .modal-content{
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    background-color: #f6f6f6;
+    padding: 50px;
+    .modal-body{
+      .form-group{
+        margin-bottom: 10px;
+        &.ex-success{
+          .ex-wrapper{
+            position: relative;
+            &:after{
+              content: '';
+              position: absolute;
+              width: 10px;
+              height: 9px;
+              right: 35px;
+              top: 15px;
+              background-image: url(../img/icons/icon-check.png);
+              background-repeat: no-repeat;
+              @media (max-width: 767px) {
+                display: none;
+              }
+            }
+            input{
+              border: 1px solid #39b54a;
+              background-color: #ffffff;
+            }
+          }
+        }
+        label {
+          padding-top: 15px;
+          color: #333333;
+          font-size: 12px;
+          font-weight: 400;
+        }
+        .ex-text-button {
+          height: 160px;
+          padding-top: 150px;
+
+        }
+        input {
+          outline: none;
+          box-shadow: none;
+          height: 40px;
+          padding: 13px 15px 13px 10px;
+          color: #333333;
+          font-size: 16px;
+          font-weight: 400;
+          border: 1px solid #c8cfce;
+          background-color: #f4f4f4;
+          @include prefix(border-radius, 4px);
+          @include placeholder {
+            color: #c0c0c0;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+      textarea {
+        margin-top: 10px;
+        padding: 13px 10px;
+        width: 100%;
+        border-radius: 5px;
+        color: #333333;
+        font-size: 14px;
+        font-weight: 400;
+        resize: none;
+        min-height: 121px;
+        border: 1px solid #c8cfce;
+        background-color: #f6f6f6;
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+        @include placeholder {
+          color: #c0c0c0;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+      .ex-btn-blue{
+        margin-top: 25px;
+        max-width: 295px;
+      }
+    }
+    @media (max-width: 767px) {
+      padding: 30px 25px 25px;
+    }
+  }
+}
+
+

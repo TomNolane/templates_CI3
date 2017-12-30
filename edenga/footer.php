@@ -411,7 +411,7 @@ $(document).ready(function(){
                                 period.update({
                                     from: 15
                                 });
-                                $('#period2').val('7'); 
+                                $('#period2').val('7');
 				perc = 97;
 				attr = 'Автоматическое одобрение';
 				color = 'green';

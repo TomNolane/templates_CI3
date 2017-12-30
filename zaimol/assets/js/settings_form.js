@@ -480,7 +480,7 @@ $(document).ready(function () {
     $('#next1').click(function () { 
         if (validate1()) { 
             $('input[name="step"]').val('1'); 
-            $('.spec_footer4').css('display','none');   
+            $('.spec_footer4').css('display','none');
             send_form(); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstStep').removeClass('in active');
@@ -497,7 +497,7 @@ $(document).ready(function () {
     });
     $('#next2').click(function () {
         if (validate2()) {
-            $('input[name="step"]').val('2');        
+            $('input[name="step"]').val('2');
             send_form();
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondStep').removeClass('in active');

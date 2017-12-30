@@ -711,10 +711,6 @@ if(isset($_GET['email']))
 <?php
  require 'yandexmetrika.php';
  require 'googleanalytics.php';
-?>
-
-<script>
-console.log(_info);
-</script>
+?> 
 </body>
 </html>

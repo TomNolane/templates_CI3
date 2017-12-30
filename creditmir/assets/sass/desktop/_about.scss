@@ -1,0 +1,16 @@
+main.ex-about{
+  @extend .ex-main-article;
+  .ex-wrapper{
+    h4{
+      color: #30323e;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+    }
+    p{
+      strong{
+        font-style: italic;
+      }
+    }
+  }
+}

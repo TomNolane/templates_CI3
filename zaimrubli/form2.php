@@ -224,7 +224,7 @@
             <div class="row">
                 <div class="col-md-4 col-md-offset-8 ">
                     <a id="next2">
-                        <span id="submitTwo" class="ex-main-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Далее&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="ex-main-btn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Далее&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <i></i>
                         </span>
                     </a>
