@@ -177,8 +177,8 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback">
-                <div class="col-md-9 col-md-offset-3">
+            <div class="form-group hidden">
+                <div class="col-md-6 col-md-offset-4">
                     <div class="media">
                         <div class="media-left">
                             <ul class="ex-coincidence-check">

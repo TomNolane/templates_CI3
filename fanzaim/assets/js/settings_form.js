@@ -533,8 +533,6 @@ $(document).ready(function () {
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
             markTarget('form-step-1');
-            oSpP.push("i", $('#i').val());
-            oSpP.push("o", $('#o').val());
         }
         showBzzz = false;
         $('.reg_same').change();
@@ -544,7 +542,7 @@ $(document).ready(function () {
 
     $('#next2').click(function () {
         if (validate2()) {
-            $('input[name="step"]').val('2');        
+            $('input[name="step"]').val('2');
             send_form();
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondStep').removeClass('in active');
@@ -560,12 +558,11 @@ $(document).ready(function () {
 
     $('#getmoney').click(function () {
         if (validate()) { 
-            $('input[name="step"]').val('3');                       
+            $('input[name="step"]').val('3');
             //$('#form-modal').show();
             send_form(true, '/lk');
             markTarget('form-step-3');
             $('#anketa').submit();
-            //window.location = '/thanks';
         }
         showBzzz = false;
         setcookies();
