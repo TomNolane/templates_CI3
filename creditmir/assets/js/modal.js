@@ -87,6 +87,7 @@ $('#feedback-send').click(function () {
             comment: 'Обращение: ' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size
         };
     } 
+    
     if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' && data.email != '') && (typeof data.comment != 'undefined' && data.comment != '')) {
         $.ajax({
             url: '/feedback/',

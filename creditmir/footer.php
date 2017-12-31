@@ -129,21 +129,42 @@
         hide_from_to: true,
         keyboard: true,
         grid: false,
-        from: 10,
+        from: 9,
         values: [150000, 200000, 300000, 400000, 500000, 600000, 700000,
             800000, 900000, 1000000, 1100000, 1200000, 1300000,
-            1400000, 1500000, 1600000, 1700000, 1800000, 1900000, 2000000]
-    });
+            1400000, 1500000, 1600000, 1700000, 1800000, 1900000, 2000000],
+        onChange: function (range) { 
+                $('#amount').val(range.from_value);
+            }
+        }); 
 
     $("#rangeSlider4").ionRangeSlider({
         hide_min_max: true,
         hide_from_to: true,
         keyboard: true,
-        from_fixed: true,
         grid: false,
         from: 4,
-        values: [15, 30, 40, 45, 52, 62, 72, 80]
+        values: [15, 30, 40, 45, 52, 62, 72, 80],
+        onChange: function (range) { 
+            $('#period').val(range.from_value);
+        }
     });
+
+        $('#_menu1').click(function () {
+            var slider6 = $('#rangeSlider3').data('ionRangeSlider');
+            var slider7 = $('#rangeSlider4').data('ionRangeSlider');
+            if(slider6.result.from_value !== null)
+            {
+                $('#amount').val(slider6.result.from_value);
+                $('#period').val(slider7.result.from_value);
+            }
+            else
+            {
+                $('#amount').val('1000000');
+                $('#period').val('52');
+            }
+            
+        });
 
         $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
         $('[data-toggle="popover"]').popover();
@@ -653,9 +674,9 @@ echo '</script>';
 <script>
 function markTarget(target,param, id) 
 {
-    if (typeof yaCounter47142942 == 'undefined') return;
-	if (typeof param == 'undefined') yaCounter47142942.reachGoal(target);
-	else yaCounter47142942.reachGoal(target,param);
+    if (typeof yaCounter47189811 == 'undefined') return;
+	if (typeof param == 'undefined') yaCounter47189811.reachGoal(target);
+	else yaCounter47189811.reachGoal(target,param);
     $.ajax({
         type: 'POST',
         url: '/pixel/',

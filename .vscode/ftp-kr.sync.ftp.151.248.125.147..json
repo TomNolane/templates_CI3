@@ -7,7 +7,20 @@
             "type": "d",
             "name": "bzaim",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "d",
+                    "name": "js",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "-",
+                            "name": "settings_form.js",
+                            "size": 28049
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "d",
@@ -19,7 +32,69 @@
             "type": "d",
             "name": "creditmir",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "d",
+                    "name": "assets",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "js",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "loanCalculator.js",
+                                    "size": 2318
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "settings_form.js",
+                                    "size": 30962
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "settings_main.js",
+                                    "size": 3932
+                                }
+                            ]
+                        },
+                        {
+                            "type": "d",
+                            "name": "css",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "style_custom.css",
+                                    "size": 4099
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 27813
+                },
+                {
+                    "type": "-",
+                    "name": "form1.php",
+                    "size": 10023
+                },
+                {
+                    "type": "-",
+                    "name": "form.php",
+                    "size": 4923
+                },
+                {
+                    "type": "-",
+                    "name": "index.php",
+                    "size": 14072
+                }
+            ]
         },
         {
             "type": "d",
@@ -91,37 +166,210 @@
             "type": "d",
             "name": "zaimcoin",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 36603
+                }
+            ]
         },
         {
             "type": "d",
             "name": "zaimhome",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 30669
+                },
+                {
+                    "type": "d",
+                    "name": "assets",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "js",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "modal.js",
+                                    "size": 7702
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "d",
             "name": "zaimhunter",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 28761
+                },
+                {
+                    "type": "d",
+                    "name": "assets",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "js",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "modal.js",
+                                    "size": 9821
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "d",
             "name": "zaimol",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 30966
+                },
+                {
+                    "type": "d",
+                    "name": "assets",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "js",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "settings_main.js",
+                                    "size": 3741
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "settings_form.js",
+                                    "size": 28533
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "-",
+                    "name": "lk.php",
+                    "size": 4636
+                }
+            ]
         },
         {
             "type": "d",
             "name": "zaimrubli",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "form1.php",
+                    "size": 10668
+                },
+                {
+                    "type": "-",
+                    "name": "form2.php",
+                    "size": 17785
+                },
+                {
+                    "type": "d",
+                    "name": "assets",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "js",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "settings_form.js",
+                                    "size": 30373
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "modal.js",
+                                    "size": 9820
+                                }
+                            ]
+                        },
+                        {
+                            "type": "d",
+                            "name": "css",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "font-awesome.min.css",
+                                    "size": 29174
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 27209
+                }
+            ]
         },
         {
             "type": "d",
             "name": "zaimsoon",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 21746
+                },
+                {
+                    "type": "d",
+                    "name": "assets",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "js",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "modal.min.js",
+                                    "size": 5562
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "modal.js",
+                                    "size": 7710
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

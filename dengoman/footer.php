@@ -72,6 +72,7 @@ if($this->uri->segment(1) != 'form')
     echo '<script>';
     require 'templates/dengoman/js/coockie.js';
     echo '</script>';
+    require 'templates/common/detect.min.php';
     echo '<script>';
     require 'templates/dengoman/js/modal.js';
     echo '</script>';

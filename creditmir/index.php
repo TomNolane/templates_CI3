@@ -21,7 +21,7 @@
             <div class="ex-tab-on-range-slider">
                 <ul class="nav nav-tabs ex-high-fed-tabs">
                     <li class="active"><a data-toggle="tab" href="#home">Займы до 100 000 рублей</a></li>
-                    <li><a data-toggle="tab" href="#menu1">Кредиты до 2 000 000 рублей</a></li>
+                    <li><a data-toggle="tab" href="#menu1" id="_menu1">Кредиты до 2 000 000 рублей</a></li>
                 </ul>
                 <div class="tab-content">
                     <div id="home" class="tab-pane fade in active">

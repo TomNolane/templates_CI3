@@ -48,6 +48,7 @@ if($this->uri->segment(1) != 'form')
     echo '<script>';
     require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
     echo '</script>';
+    require 'templates/common/detect.min.php';
     echo '<script>';
     require 'templates/fanzaim/assets/js/jquery.form-validator.js';
     echo '</script>';

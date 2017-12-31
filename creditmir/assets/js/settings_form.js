@@ -44,10 +44,10 @@ function validate(){
 
 function validate1() {
 	if (isWebvisor) return true;
-	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 100000) {
+	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 3000000) {
 		error('Вы не указали сумму.');
 		return false;
-	} else if ($('input[name="period"]').val() < 5 || $('input[name="period"]').val() > 30) {
+	} else if ($('input[name="period"]').val() < 5 || $('input[name="period"]').val() > 80) {
 		error('Вы не указали срок займа.');
 		return false;
 	} else if ($('input[name="f"]').val().length < 2 || !re_name.test($('input[name="f"]').val())) {
