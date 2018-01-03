@@ -6,7 +6,16 @@
 
     if($this->uri->segment(1) != 'form')
     {
-        echo '';
+        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Кредитмир -->
+        <div class="text-center"><ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="9324725873"
+        data-ad-format="auto"></ins></div>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     }
 ?>
 

@@ -497,9 +497,9 @@ $(document).ready(function () {
         yearRange: "-100:+0",
         isRTL: false,
         onSelect: function (date) {
-            $('#passportdate').focus();
-            $('#passportdate').blur();
-            $('#passportdate').datepicker("hide");
+            // $('#passportdate').focus();
+            // $('#passportdate').blur();
+            // $('#passportdate').datepicker("hide");
             birth = date.split('/');
             $('select#passport_dd').append($("<option></option>").attr("value", birth[0]).text(birth[0]));
             $("select#passport_dd").val(birth[0]);

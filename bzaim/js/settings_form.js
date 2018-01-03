@@ -409,7 +409,7 @@ $(document).ready(function () {
         onSelect: function (date) {
             // $('#passportdate').focus();
             // $('#passportdate').blur();
-            $('#passportdate').datepicker("hide");
+            // $('#passportdate').datepicker("hide");
             birth = date.split('/');
             $('select#passport_dd').append($("<option></option>").attr("value", birth[0]).text(birth[0]));
             $("select#passport_dd").val(birth[0]);
