@@ -13,7 +13,7 @@
 <div class="form-group has-feedback">
     <label class="control-label label-required hidden-xs hidden-sm">Место работы*</label>
     <input type="text" class="form-control ec tip" placeholder="Место работы" name="work_name" id="work_name" required title="Пожалуйста, укажите, ваше место работы"
-        data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\№\#\.\+\(\)]+$" data-validation-error-msg="Пожалуйста, укажите, ваше место работы">
+        data-validation="custom" data-validation-regexp='^[А-Яа-яЁё\d\s\-\,\№\#\.\+\(\)"]+$' data-validation-error-msg="Пожалуйста, укажите, ваше место работы">
     <span id="work_namestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 </div>
 <div class="form-group has-feedback">

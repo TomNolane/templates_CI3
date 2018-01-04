@@ -14,7 +14,7 @@
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="work_name">Место работы</label>
 	<div class="col-sm-8 col-sm-12"><div class="shadow">
-                <input type="text" class="form-control ec tip" name="work_name" id="work_name" placeholder="Место работы" title="Укажите, ваше место работы" data-sanitize="capitalize"  data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\№\#\.\+\(\)]+$" data-validation-error-msg="Укажите, ваше место работы" required>
+                <input type="text" class="form-control ec tip" name="work_name" id="work_name" placeholder="Место работы" title="Укажите, ваше место работы" data-sanitize="capitalize"  data-validation="custom" data-validation-regexp='^[А-Яа-яЁё\d\s\-\,\№\#\.\+\(\)"]+$' data-validation-error-msg="Укажите, ваше место работы" required>
                 <span id="work_namestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div></div>
 </div>
