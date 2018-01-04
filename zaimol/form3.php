@@ -20,7 +20,7 @@
             <div class="col-md-6">
                 <div class="ex-wrapper">
                 <input type="text" class="form-control ec tip" name="work_name" id="work_name" placeholder="Место работы" title="Пожалуйста, укажите, ваше место работы"
-                data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\№\#\.\+\(\)]+$" data-validation-error-msg="Пожалуйста, укажите, ваше место работы"
+                data-sanitize="capitalize" data-validation="custom" data-validation-regexp='^[А-Яа-яЁё\d\s\-\,\№\#\.\+\(\)"]+$' data-validation-error-msg="Пожалуйста, укажите, ваше место работы"
                 required>
                 </div>
             </div>
