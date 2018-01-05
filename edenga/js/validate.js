@@ -9,8 +9,8 @@ function error(msg){
 	var title = 'Ошибка';
 	if ($('#message').length) $('#message').remove();
 	$('body').append('<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-						'<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' +
-						'<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal">OK</button></div></div></div></div>');
+	'<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' +
+	'<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal">OK</button></div></div></div></div>');
 	$('#message').modal('show');
 }
 
@@ -38,16 +38,10 @@ function validate1(){
 	else if ($('input[name="i"]').val().length < 2 || !re_name.test($('input[name="i"]').val())) {error('Необходимо указать имя.'); return false;}
 	else if ($('input[name="o"]').val().length < 2 || !re_name.test($('input[name="o"]').val())) {error('Необходимо указать отчество.'); return false;}
 //        else if ($('input[name="birthdate"]').val().length != 10) {error('Вы не указали день рождения.'); return false;}
-/*        
-	else if ($('select[name="birth_dd"]').val().length != 2) {error('Вы не указали день рождения.'); return false;}
-	else if ($('select[name="birth_mm"]').val().length != 2) {error('Вы не указали месяц рождения.'); return false;}
-	else if ($('select[name="birth_yyyy"]').val().length != 4) {error('Вы не указали год рождения.'); return false;}
-*/
 	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {error('Вы не указали пол.'); return false;}
 	else if ($('input[name="phone"]').val().length != 16) {error('Номер телефона указан неверно.'); return false;}
 	else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {error('Email указан неверно.'); return false;}
 	else if (!$('#agree').prop('checked')) {error('Вы не подтвердили своё согласие с условиями сервиса.'); return false;}
-	/* else if (!$('#marketing').prop('checked')) {error('Вы не подтвердили своё согласие на получение рассылки.'); return false;} */
 	else return true;
 	return false;
 }
@@ -60,29 +54,21 @@ function validate2(){
 	else if ($('input[name="passport_n"]').val().length < 6 || !re_int.test($('input[name="passport_n"]').val())) {
 		error('Вы не указали номер паспорта.'); return false;
 	}
-/*
-	else if ($('select[name="passport_dd"]').val().length != 2) {error('Вы не указали день выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_mm"]').val().length != 2) {error('Вы не указали месяц выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_yyyy"]').val().length != 4) {error('Вы не указали год выдачи паспорта.'); return false;}
-*/        
 	else if ($('input[name="passport_who"]').val().length < 3) {error('Необходимо указать, кем выдан паспорт.'); return false;}
 	else if ($('input[name="passport_code"]').val().length < 7) {error('Необходимо указать, код подразделения, выдавшего паспорт.'); return false;}
 	else if ($('input[name="birthplace"]').val().length < 3) {error('Необходимо указать место рождения.'); return false;}
-	
 	else if ($('#region').val().length < 2 || !re_rc.test($('#region').val())) {error('Необходимо указать регион проживания.'); return false;}
 	else if ($('input[name="city"]').val().length < 2 || !re_rc.test($('input[name="city"]').val())) {error('<p>Ошибка в указании населённого пункта места жительства.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>'); return false;}
 	else if ($('input[name="street"]').val().length < 2) {error('Необходимо указать улицу места жительства.'); return false;}
 	else if (!$('input[name="building"]').val().length || !re.test($('input[name="building"]').val())) {error('Ошибочно указан номер дома места жительства. Указывайте только номер дома и литеру, если она есть.'); return false;}
 	else if ($('input[name="housing"]').val().length && !re.test($('input[name="housing"]').val())) {error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.'); return false;}
 	else if ($('input[name="flat"]').val().length    && !re.test($('input[name="flat"]').val())) {error('Ошибочно указан номер квартиры места жительства. Указывайте только номер дома и литеру, если она есть.'); return false;}
-	
 	else if ($('.reg_same:checked').val() == '0' && ($('#reg_region').val().length < 2 || !re_rc.test($('#reg_region').val()))) {error('Вы не указали регион регистрации.'); return false;}
 	else if ($('.reg_same:checked').val() == '0' && ($('input[name="reg_city"]').val().length < 2 || !re_rc.test($('input[name="reg_city"]').val()))) {error('<p>Ошибка в указании населённого пункта места регистрации.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>'); return false;}
 	else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_street"]').val().length < 2) {error('Необходимо указать улицу регистрации.'); return false;}
 	else if ($('.reg_same:checked').val() == '0' && !re.test($('input[name="reg_building"]').val())) {error('Ошибочно указан номер дома регистрации. Указывайте только номер дома и литеру, если она есть.'); return false;}
 	else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_housing"]').val().length && !re.test($('input[name="reg_housing"]').val())) {error('Ошибочно указан номер строения регистрации. Указывайте только номер дома и литеру, если она есть.'); return false;}
 	else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_flat"]').val().length    && !re.test($('input[name="reg_flat"]').val())) {error('Ошибочно указан номер квартиры регистрации. Указывайте только номер дома и литеру, если она есть.'); return false;}
-	
 	else return true;
 	return false;
 }

@@ -55,7 +55,7 @@ if(!isset($description))
 		require "templates/edenga/css/suggestions.min.css"; 
 		echo '</style>'; 
 		echo '<style>';
-		require "templates/edenga/css/style.min.css";
+		require "templates/edenga/css/style.css";
 		echo '</style>'; 
 		if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') 
 		{
@@ -139,17 +139,22 @@ if(!isset($description))
 				height:9px;
 				background:url(/templates/edenga/img/tip-twitter_arrows.gif) no-repeat -27px 0;
 			}</style>';
+			echo '<style>';
+			require 'templates/edenga/css/form.css';
+			echo '</style>';
 			echo '<style>
 			#ya-rtb{display: none;}
 			.buffer{height: 0px;}
 			</style>';
-		} 
+		}
+		
+		echo '<style>a {text-decoration: none !important; cursor: pointer;}</style>';
 	?>
 		<!--[if lte IE 9]>
 		<script src="/modules/html5shiv/html5shiv.js"></script>
 		<![endif]-->
 
-		<?php   if ($this->uri->segment(1) != 'form') {
+		<?php if ($this->uri->segment(1) != 'form') {
 			echo '<script>
 			 
 		  </script>';
@@ -213,32 +218,30 @@ if(!isset($description))
 					<h1 class="modal-title" id="feedbackModalLabel">Остались вопросы?</h1>
 					<p>Просто заполните форму и наш специалист свяжется с Вами</p>
 				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="col-md-10 col-md-offset-1 col-sm-12 modal-body-form">
-							<div class="form-group">
-								<input type="text" class="form-control input-lg" id="feedback-name" placeholder="Имя" title="Имя">
-							</div>
-							<div class="form-group">
-								<input type="tel" class="form-control input-lg" id="feedback-phone" placeholder="Телефон" title="Телефон">
-							</div>
-							<div class="form-group">
-								<input type="email" class="form-control input-lg" id="feedback-email" placeholder="Email" title="Email" required>
-							</div>
-							<div class="form-group">
-								<textarea class="form-control input-lg" id="feedback-comment" rows="3" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"
-								    required></textarea>
-							</div>
-							<div class="form-group">
-								<button type="button" class="btn btn-primary btn-lg btn-block" id="feedback-send">Отправить</button>
+				<form action="">
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1 col-sm-12 modal-body-form">
+								<div class="form-group">
+									<input type="text" class="form-control input-lg" id="feedback-name" placeholder="Имя" title="Имя">
+								</div>
+								<div class="form-group">
+									<input type="tel" class="form-control input-lg" id="feedback-phone" placeholder="Телефон" title="Телефон">
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control input-lg" id="feedback-email" placeholder="Email" title="Email" required>
+								</div>
+								<div class="form-group">
+									<textarea class="form-control input-lg" id="feedback-comment" rows="3" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"
+										required></textarea>
+								</div>
+								<div class="form-group">
+									<button class="btn btn-primary btn-lg btn-block" id="feedback-send">Отправить</button>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</form>
 			</div>
 		</div>
-	</div>
-	<div id="loading" style="display:none;">
-		<span>
-			<i class="fa fa-spinner fa-spin fa-pulse"></i> Загрузка...</span>
 	</div>

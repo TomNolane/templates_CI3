@@ -9,6 +9,12 @@
 </section>
 <section class="calc img-responsive" id="calc">
     <form id="anketa" action="/form" method="post">
+    <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
+        <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
+        <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
+        <input type="hidden" id="p" name="period" value="7" />
+        <input type="hidden" id="period2" name="period2" value="7" />
+        <input type="hidden" id="amount" name="amount" value="20000" />
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 hidden-sm hidden-xs text-center">
@@ -16,14 +22,10 @@
                         <div class="form text-center">
                             <div class="panel panel-head">
                                 <div class="panel-heading">Выберите сумму и срок</div>
-                                <div class="panel-body"> 
-                                    <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
-                                    <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
-                                    <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
-                                    <input type="hidden" id="period2" name="period2" value="7" />
+                                <div class="panel-body">
                                     <div class="form-slider white">
                                         <div class="clearfix"></div>
-                                        <input type="text" class="amount" name="amount" value="20000" />
+                                        <input type="text" class="amount" id="spec_ind" value="20000" />
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="form-slider white">
@@ -34,7 +36,7 @@
                                             <i class="fa fa-calendar"></i>
                                         </div>
                                         <div class="clearfix"></div>
-                                        <input type="text" id="period" name="period" value="10" />
+                                        <input type="text" id="period" value="21" />
                                         <div class="clearfix"></div>
                                     </div>
                                     <img src="/templates/edenga/img/ps.png" alt="ps.png">
@@ -96,7 +98,7 @@
                             <div class="panel-heading">
                                 <h1>Выберите сумму</h1>
                                 <div class="form-slider white">
-                                    <input type="text" class="amount amount2" name="amount" value="20000" />
+                                    <input type="text" class="amount amount2" id="spec_ind2" value="20000" />
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
@@ -244,64 +246,51 @@
         <div class="row conditions">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="conditions-header text-center">Информация о кредиторах с которыми мы сотрудничаем:</div>
-
                 <div class="col-xs-4">
                     <div class="white offers">
-                        <!-- <a href="https://pxl.leads.su/click/864dd416696b8008a5875a0bbe82e865" target="_blank"> -->
-                            <p>
-                                ООО МФО «СМСФИНАНС» № лицензии 2120177002022 Адрес: 115201, г. Москва, ул. Котляковская, д.3, стр. 13 Годовая процентная
-                                ставка: 328,5%
-                            </p>
-                        <!-- </a> -->
+                        <p>
+                            ООО МФО «СМСФИНАНС» № лицензии 2120177002022 Адрес: 115201, г. Москва, ул. Котляковская, д.3, стр. 13 Годовая процентная
+                            ставка: 328,5%
+                        </p>
                     </div>
                 </div>
                 <div class="col-xs-4">
                     <div class="white offers">
-                        <!-- <a href="https://pxl.leads.su/click/0b7f24ce727aa36758c9775910a0b99c" target="_blank"> -->
-                            <p>
-                                ЗАО «4финанс» № лицензии 1127746537764 Адрес: 115201, г.Москва, ул. Котляковская, д. 3, стр. 13 Годовая процентная ставка:
-                                328,5%
-                            </p>
-                        <!-- </a> -->
+                        <p>
+                            ЗАО «4финанс» № лицензии 1127746537764 Адрес: 115201, г.Москва, ул. Котляковская, д. 3, стр. 13 Годовая процентная ставка:
+                            328,5%
+                        </p>
                     </div>
                 </div>
                 <div class="col-xs-4">
                     <div class="white offers">
-                        <!-- <a href="https://pxl.leads.su/click/0d832392bf58a621067a6e41ac602eb3" target="_blank"> -->
-                            <p>
-                                ООО «СрочноДеньги» № лицензии 2110552000304 Адрес: Нижний Новгород, ул. Тимирязева, 15/2, БЦ «КМ-Сити», 4 этаж Годовая процентная
-                                ставка: 360%
-                            </p>
-                        <!-- </a> -->
+                        <p>
+                            ООО «СрочноДеньги» № лицензии 2110552000304 Адрес: Нижний Новгород, ул. Тимирязева, 15/2, БЦ «КМ-Сити», 4 этаж Годовая процентная
+                            ставка: 360%
+                        </p> 
                     </div>
                 </div>
                 <div class="col-xs-4">
                     <div class="white offers">
-                        <!-- <a href="https://pxl.leads.su/click/3f83cc895f66b8b7ed915fc132408f20" target="_blank"> -->
-                            <p>
-                                ООО «Домашние деньги» № лицензии 211017700000 Адрес: 115088, г. Москва, 2-ой Южнопортовый проезд, д. 33, стр. 1 Годовая процентная
-                                ставка: 248,2%
-                            </p>
-                        <!-- </a> -->
+                        <p>
+                            ООО «Домашние деньги» № лицензии 211017700000 Адрес: 115088, г. Москва, 2-ой Южнопортовый проезд, д. 33, стр. 1 Годовая процентная
+                            ставка: 248,2%
+                        </p> 
                     </div>
                 </div>
                 <div class="col-xs-4">
                     <div class="white offers">
-                        <!-- <a href="https://pxl.leads.su/click/30a6c51f9fb08e349bcbf9ee8caf0206" target="_blank"> -->
-                            <p>
-                                ООО «Займер» № лицензии 651303532004088 Адрес:г. Кемерово, пр. Советский, д. 2/7 Годовая процентная ставка: 248,2%
-                            </p>
-                        <!-- </a> -->
+                        <p>
+                            ООО «Займер» № лицензии 651303532004088 Адрес:г. Кемерово, пр. Советский, д. 2/7 Годовая процентная ставка: 248,2%
+                        </p> 
                     </div>
                 </div>
                 <div class="col-xs-4">
                     <div class="white offers">
-                        <!-- <a href="https://pxl.leads.su/click/2f1ea83749c8f0ea58239fc19b0a9f2d" target="_blank"> -->
-                            <p>
-                                ООО «Парса Компани Групп» № лицензии 1097746179585 Адрес: 115201, г. Москва, Старокаширское ш., д. 2, корп. 2 Годовая процентная
-                                ставка: 360%
-                            </p>
-                        <!-- </a> -->
+                        <p>
+                            ООО «Парса Компани Групп» № лицензии 1097746179585 Адрес: 115201, г. Москва, Старокаширское ш., д. 2, корп. 2 Годовая процентная
+                            ставка: 360%
+                        </p> 
                     </div>
                 </div>
             </div>

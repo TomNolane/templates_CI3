@@ -109,7 +109,18 @@
             "type": "d",
             "name": "zaimol",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "footer.php",
+                    "size": 30966
+                },
+                {
+                    "type": "-",
+                    "name": "googleanalytics.php",
+                    "size": 315
+                }
+            ]
         },
         {
             "type": "d",

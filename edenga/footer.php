@@ -24,7 +24,6 @@ if($this->uri->segment(1) != 'form')
     </script>';
 }
 ?>
-
 <footer class="">
     <div class="container">
         <div class="row">
@@ -33,7 +32,7 @@ if($this->uri->segment(1) != 'form')
             </div>
             <div class="col-md-3 col-xs-12 spec_footer4">
                 Cервис по подбору выгодных онлайн займов находящийся по адресу Россия, Новосибирская область г. Новосибирск, ул. Маршала Покрышкина, 12, оф 201
-                Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 <a href="mailto:support@edenga.ru" target="_blank">mailto:support@edenga.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+                Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 <a href="mailto:support@edenga.ru" target="_blank">support@edenga.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
             </div>
             <div class="col-md-7 hidden-xs hidden-sm spec_footer5">
                 Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
@@ -65,6 +64,25 @@ require 'templates/edenga/js/coockie.js';
 echo '</script>';
 echo '<script>
 jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});</script>';
+echo '<script>';
+require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+echo '</script>'; 
+echo '<script>';
+require 'templates/edenga/js/validate.js';
+echo '</script>';
+echo '<script>';
+require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
+echo '</script>';
+echo '<script>';
+require 'templates/edenga/js/jquery.form-validator.js';
+echo '</script>';
+echo '<script>';
+require 'templates/edenga/js/jquery.suggestions.min.js';
+echo '</script>';
+require 'templates/common/detect.min.php';
+echo '<script>';
+require 'templates/edenga/js/settings.js';
+echo '</script>';
 
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index') 
 {
@@ -80,34 +98,194 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri-
     });
     </script> ';
 }elseif ($this->uri->segment(1) == 'form') {
+    echo ' <script>
+    $("#work").change(function(){
+        if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
+        { 
+            $("#work_name").addClass("valid");
+            $("#work_name").parent().addClass("has-success").removeClass("has-error");
+            $("#work_name").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_name").removeClass("er");
+            $("#work_namestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_occupation").addClass("valid");
+            $("#work_occupation").parent().addClass("has-success").removeClass("has-error");
+            $("#work_occupation").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_occupation").removeClass("er");
+            $("#work_occupationstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_phone").addClass("valid");
+            $("#work_phone").parent().addClass("has-success").removeClass("has-error");
+            $("#work_phone").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_phone").removeClass("er");
+            $("#work_phonestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_experience").addClass("valid");
+            $("#work_experience").parent().addClass("has-success").removeClass("has-error");
+            $("#work_experience").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_experience").removeClass("er");
+            $("#work_experiencestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+
+            $("#work_salary").removeClass("valid");
+            $("#work_salary").parent().addClass("has-error").removeClass("has-success");
+            $("#work_salary").parent().parent().prev().removeClass("label_true").addClass("label_er");
+            $("#work_salary").addClass("er");
+            $("#work_salary").focus();
+            $("#work_salarystatus").addClass("glyphicon-remove");
+
+            $("#work_region").addClass("valid");
+            $("#work_region").parent().addClass("has-success").removeClass("has-error");
+            $("#work_region").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_region").removeClass("er");
+
+            $("#work_city").addClass("valid");
+            $("#work_city").parent().addClass("has-success").removeClass("has-error");
+            $("#work_city").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_city").removeClass("er");
+            $("#work_citystatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_street").addClass("valid");
+            $("#work_street").parent().addClass("has-success").removeClass("has-error");
+            $("#work_street").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_street").removeClass("er");
+            $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_house").addClass("valid");
+            $("#work_house").parent().addClass("has-success").removeClass("has-error");
+            $("#work_house").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_house").removeClass("er");
+            $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+
+            $("#work_office").addClass("valid");
+            $("#work_office").parent().addClass("has-success").removeClass("has-error");
+            $("#work_office").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_office").removeClass("er");
+            $("#work_officestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+            
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_name").val("пенсионер");
+            else  $("#work_name").val("безработный");
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_occupation").val("пенсионер");
+            else  $("#work_occupation").val("безработный");
+            var teemp = $("#phone").val();
+            $("#work_phone").val(teemp);
+            $("#work_experience").val(100);
+            $("#work_salary").val("");
+
+            var teemp2 = Number($("#region").find(":selected").index());
+            $("#work_region option").eq(teemp2).prop("selected", true);
+            var teemp3 = $("#city").val();
+            $("#work_city").val(teemp3);
+            var teemp4 = $("#street").val();
+            $("#work_street").val(teemp4);
+            var teemp5 = $("#building").val();
+            $("#work_house").val(teemp5);
+            $("#work_building").val(" ");
+            var teemp6 = $("#flat").val();
+            $("#work_office").val(teemp6);
+        }
+        else { 
+
+            $("#work_name").val("");
+            $("#work_name").removeClass("valid");
+            $("#work_name").parent().removeClass("has-success");
+            $("#work_name").parent().parent().prev().removeClass("label_true"); 
+            $("#work_namestatus").removeClass("glyphicon-ok");
+
+            $("#work_occupation").val("");
+            $("#work_occupation").removeClass("valid");
+            $("#work_occupation").parent().removeClass("has-success");
+            $("#work_occupation").parent().parent().prev().removeClass("label_true"); 
+            $("#work_occupationstatus").removeClass("glyphicon-ok"); 
+
+            $("#work_phone").val("");
+            $("#work_phone").removeClass("valid");
+            $("#work_phone").parent().removeClass("has-success");
+            $("#work_phone").parent().parent().prev().removeClass("label_true"); 
+            $("#work_phonestatus").removeClass("glyphicon-ok");
+
+            $("#work_experience").val("");
+            $("#work_experience").removeClass("valid");
+            $("#work_experience").parent().removeClass("has-success");
+            $("#work_experience").parent().parent().prev().removeClass("label_true"); 
+            $("#work_experiencestatus").removeClass("glyphicon-ok");
+
+            $("#work_salary").val("");
+            $("#work_salary").removeClass("valid");
+            $("#work_salary").parent().removeClass("has-success");
+            $("#work_salary").parent().parent().prev().removeClass("label_true"); 
+            $("#work_salarystatus").removeClass("glyphicon-ok");
+ 
+            $("#work_region").removeClass("valid");
+            $("#work_region").parent().removeClass("has-success");
+            $("#work_region").parent().parent().prev().removeClass("label_true");
+
+            $("#work_city").val("");
+            $("#work_city").removeClass("valid");
+            $("#work_city").parent().removeClass("has-success");
+            $("#work_city").parent().parent().prev().removeClass("label_true"); 
+            $("#work_citystatus").removeClass("glyphicon-ok"); 
+
+            $("#work_street").val("");
+            $("#work_street").removeClass("valid");
+            $("#work_street").parent().removeClass("has-success");
+            $("#work_street").parent().parent().prev().removeClass("label_true"); 
+            $("#work_streetstatus").removeClass("glyphicon-ok"); 
+
+            $("#work_house").val("");
+            $("#work_house").removeClass("valid");
+            $("#work_house").parent().removeClass("has-success");
+            $("#work_house").parent().parent().prev().removeClass("label_true"); 
+            $("#work_housestatus").removeClass("glyphicon-ok");
+
+            $("#work_office").val("");
+            $("#work_office").removeClass("valid");
+            $("#work_office").parent().removeClass("has-success");
+            $("#work_office").parent().parent().prev().removeClass("label_true"); 
+            $("#work_officestatus").removeClass("glyphicon-ok");
+            $("#work_name").val(""); 
+             $("#work_occupation").val(""); 
+            $("#work_phone").val("");
+            $("#work_experience").val(""); 
+            $("#work_salary").val("");
+            $("#work_region option").eq(0, true).prop("selected", true);
+            $("#work_city").val("");
+            $("#work_street").val("");
+            $("#work_house").val("");
+            $("#work_building").val("");
+            $("#work_office").val("");
+        }
+    }); 
+    </script>';
     require 'templates/common/js.php'; 
     if(isset($_GET['popup']) and $_GET['popup']==1 ){
-        echo '    
+        echo '
     <!-- Modal Popup-->
     <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-                <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                                <div class="modal-header text-center">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                                </div>
-                                <div class="modal-body text-center">
-                                        <div class="row">
-                                                <div class="col-md-12">
-                                                    <img src="/templates/common/img/popup.jpg">                                             
-                                                    <h2>'.$popup_text.'</h2>
-                                                    <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
                 </div>
+                <div class="modal-body text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="/templates/common/img/popup.jpg">
+                            <h2>'.$popup_text.'</h2>
+                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
-            <script type= " text/javascript">
-                $(window).load(function(){
-                    $("#popup").modal("show");
-                });
-            </script>';
+    <script type= " text/javascript">
+        $(window).load(function(){
+            $("#popup").modal("show");
+        });
+    </script>';
     } 
      
         if(isset($_GET['email'])){
@@ -121,25 +299,7 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri-
             }
             echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
         }  
-        echo '<script>';
-        require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
-        echo '</script>'; 
-        echo '<script>';
-        require 'templates/edenga/js/validate.js';
-        echo '</script>';
-        echo '<script>';
-        require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
-        echo '</script>';
-        echo '<script>';
-        require 'templates/edenga/js/jquery.form-validator.js';
-        echo '</script>';
-        echo '<script>';
-        require 'templates/edenga/js/jquery.suggestions.min.js';
-        echo '</script>';
-        require 'templates/common/detect.min.php';
-        echo '<script>';
-        require 'templates/edenga/js/settings.js';
-        echo '</script>';
+        
         echo '
             <script type="text/javascript">
                 $("#email").suggestions({
@@ -149,18 +309,17 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri-
                     count: 3,
                     scrollOnFocus: false
                 });
-                $("#feedback-email").suggestions({
-                    serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
-                    token: "78fc76023580df0ec78566913b31a87d909f1ec0",
-                    type: "EMAIL",
-                    count: 3,
-                    scrollOnFocus: false
-                });
-            </script>'; 
-            
+            </script>';
         }
 ?>  
 <script>
+    $("#feedback-email").suggestions({
+        serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
+        token: "78fc76023580df0ec78566913b31a87d909f1ec0",
+        type: "EMAIL",
+        count: 3,
+        scrollOnFocus: false
+    });
   $(document).ready(function () {
     if (location.hash) {
       location.hash && $(location.hash + '.collapse').collapse('show');
@@ -170,26 +329,24 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri-
       return false;
     }
   });
-</script>
-<script>
 function setcookie(name, value, expires, path, domain, secure)
 {
-    document.cookie =    name + "=" + escape(value) +
-                        ((expires) ? "; expires=" + (new Date(expires)) : "") +
-                        ((path) ? "; path=" + path : "; path=/") +
-                        ((domain) ? "; domain=" + domain : "") +
-                        ((secure) ? "; secure" : "");
+    document.cookie =
+    name + "=" + escape(value) +
+    ((expires) ? "; expires=" + (new Date(expires)) : "") +
+    ((path) ? "; path=" + path : "; path=/") +
+    ((domain) ? "; domain=" + domain : "") +
+    ((secure) ? "; secure" : "");
 }
-        function traffic(site, page){
-            $.ajax({
-                type: 'POST',
-                url: '/traffic/',
-                data: 'site='+site+'&page='+page,
-                    success: function(data){
-                        //console.log(data);
-                    }
-            });    
-        }        
+function traffic(site, page){
+    $.ajax({
+        type: 'POST',
+        url: '/traffic/',
+        data: 'site='+site+'&page='+page,
+            success: function(data){
+            }
+    });
+}
 function getcookie(name)
 {
     var cookie = " " + document.cookie;
@@ -219,16 +376,14 @@ function getcookie(name)
     return(setStr);
 }
     function Loading(flag){
-		if (typeof flag == 'undefined'){
-                    document.getElementById('loading').style.display = 'block';
-                    $('#feedback-send').prop('disabled', true);
-                    $('#feedback-send').html('Отправка <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-                }
-		else if (!flag){
-                    $('#feedback-send').html('Отправить');
-                    $('#feedback-send').prop('disabled', false);
-                    document.getElementById('loading').style.display = 'none';  
-                } 
+        if (typeof flag == 'undefined'){
+            $('#feedback-send').prop('disabled', true);
+            $('#feedback-send').html('Отправка <i class="fa fa-spinner fa-spin fa-pulse"></i>');
+        }
+        else if (!flag){
+            $('#feedback-send').html('Отправить');
+            $('#feedback-send').prop('disabled', false); 
+        } 
     }
     
 	$('#feedback-send').click(function(){
@@ -334,18 +489,19 @@ function getcookie(name)
 				alert('Не получилось отправить. Попробуйте ещё раз.');
 			}).always(function(){Loading(0);});
 		} else {Loading(0);alert('Пожалуйста, заполните все поля.');}
-	}); 
-var amount = 15000;
-var day = 10;
-var comm1 = 0;
-var comm2 = 0;
-var percent = 0;
+	});
+
+    var amount = 15000;
+    var day = 10;
+    var comm1 = 0;
+    var comm2 = 0;
+    var percent = 0;
+
 $(document).ready(function(){ 
 	$('.amount').ionRangeSlider({
-                values: [1000, 2000, 3000, 4000, 5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,20000,25000,30000,40000,50000,80000,100000],    
-                hide_min_max: true,
-                from: <?php 
-
+        values: [1000, 2000, 3000, 4000, 5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,20000,25000,30000,40000,50000,80000,100000],    
+        hide_min_max: true,
+        from: <?php 
         if(isset($_GET['amount'])) 
         {  
             switch($_GET['amount'])
@@ -381,86 +537,120 @@ $(document).ready(function(){
 			var percent = 0;
 			var attr = '';
 			var color = '';
-                        
+            <?php if ($this->uri->segment(1) == 'form') { ?>
+            if (range.from_value <= 10000) {
+                $('#p').val('7');
+                $('#period2').val('От 61 дня');
+			}
+			else if (range.from_value <= 15000) {
+                $('#p').val('14');
+                $('#period2').val('От 61 дня');
+			}
+			else if (range.from_value <= 20000) {
+                $('#p').val('21');
+                $('#period2').val('От 130 дней');
+			}
+			else if (range.from_value <= 30000) {
+                $('#p').val('30');
+                $('#period2').val('От 130 дней');
+			}
+			else if (range.from_value <= 50000) {
+                $('#p').val('30');
+                $('#period2').val('От 260 дней');
+			}
+			else {
+                $('#p').val('30');
+                $('#period2').val('До 365 дней');
+            }
+            $('#amount').val(range.from_value);
+            <?php } ?>
+            <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') { ?>
 			if (range.from_value <= 7000) {
-                                period.update({
-                                    from: 15
-                                });
-                                $('#period2').val('7'); 
+            
+                period.update({
+                    from: 15
+                }); 
+                $('#p').val('7');
+                $('#period2').val('7'); 
 				perc = 97;
 				attr = 'Автоматическое одобрение';
 				color = 'green';
-                                day_comment = 'От 61 дня';
-                                day=1;
+                day_comment = 'От 61 дня';
+                day=1;
 			}
-			else if (range.from_value <= 15000) {
-                                period.update({
-                                    from: 30
-                                });
-                                $('#period2').val('14');
+			else if (range.from_value <= 15000) { 
+                period.update({
+                    from: 30
+                }); 
+                $('#p').val('14');
+                $('#period2').val('14');
 				perc = 94;
 				attr = 'Может понадобиться паспорт';
 				color = 'green';
-                                day_comment = 'От 130 дней';
-                                day=15;
+                day_comment = 'От 130 дней';
+                day=15;
 			}
-			else if (range.from_value <= 30000) {
-                                period.update({
-                                    from: 120
-                                });
-                                $('#period2').val('21');
+			else if (range.from_value <= 30000) { 
+                period.update({
+                    from: 120
+                }); 
+                $('#p').val('21');
+                $('#period2').val('21');
 				perc = 84;
 				attr = 'Нужен только паспорт';
 				color = 'orange';
-                                day_comment = 'От 130 дней';
-                                day=15;
+                day_comment = 'От 130 дней';
+                day=15;
 			}
-			else if (range.from_value <= 50000) {
-                                period.update({
-                                    from: 240
-                                });          
-                                $('#period2').val('30');
+			else if (range.from_value <= 50000) { 
+                period.update({
+                    from: 240
+                }); 
+                $('#p').val('30');
+                $('#period2').val('30');
 				perc = 72;
 				attr = 'Нужна справка о доходах';
 				color = 'orange';
-                                day_comment = 'От 230 дней';
-                                day=15;
+                day_comment = 'От 230 дней';
+                day=15;
 			}
-			else {
-                                period.update({
-                                    from: 365
-                                });       
-                                $('#period2').val('30');
+			else { 
+                period.update({
+                    from: 365
+                }); 
+                $('#p').val('30');
+                $('#period2').val('30');
 				perc = 64;
 				attr = 'Нужна справка о доходах';
 				color = 'red';
-                                day_comment = 'От 365 дней';
-                                day=30;
+                day_comment = 'До 365 дней';
+                day=30;
             }
-            
-            
+            amount = range.from_value;
+            $('#spec_ind2').val(range.from_value);
+            $('#spec_ind').val(range.from_value);
+            $('#form_slrd').val(range.from);
+            $('#amount').val(range.from_value); 
 
-
-            $('#amount').val(range.from_value);
-            $('#form_slrd').val(range.from);        
 			$('.current_amount').text(String(range.from_value).split(/(?=(?:\d{3})+$)/).join(' '));
 			// $('.percent_rate').text(perc + '%');
-                        $('.comment').text(attr);
-                        $('.current_period').text(day_comment);
+            $('.comment').text(attr);
+            $('.current_period').text(day_comment);
 			//$('#credit_hint').html(attr);
 			//$('#ranges-label').hide();
 			$('.results tr').each(function(indx, element){
 				if ($(element).data('amount') < range.from_value) $(element).hide();
 				else $(element).show();
 			});
-			amount = range.from_value;
-                        updateComm();
+            <?php } ?>
+			
+            updateComm();
 		}
 	});
     var slider = $('.amount').data('ionRangeSlider');
-    var slider2 = $('.amount2').data('ionRangeSlider');
+    var slider2 = $('#spec_ind2').data('ionRangeSlider');
     
-        <?php if ($this->uri->segment(1) == '') { ?>
+        <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') { ?>
             var slider_plus = true;
             var n = 10;
             var slider_init = setInterval(function () {
@@ -485,60 +675,66 @@ $(document).ready(function(){
                     from: n
                 }); 
 
-                if (slider.result.from_value <= 7000) {
-                                period.update({
-                                    from: 15
-                                });
-                                $('#period2').val('7');
+            if (slider.result.from_value <= 7000) {
+                period.update({
+                    from: 15
+                });
+
+                $('#p').val('7');
+                $('#period2').val('7');
 				perc = 97;
 				attr = 'Автоматическое одобрение';
 				color = 'green';
-                                day_comment = 'От 61 дня';
-                                day=1;
+                day_comment = 'От 61 дня';
+                day=1;
 			}
 			else if (slider.result.from_value <= 15000) {
-                                period.update({
-                                    from: 30
-                                });
-                                $('#period2').val('14');
+                period.update({
+                    from: 30
+                });
+                $('#p').val('14');
+                $('#period2').val('14');
 				perc = 94;
 				attr = 'Может понадобиться паспорт';
 				color = 'green';
-                                day_comment = 'От 130 дней';
-                                day=15;
+                day_comment = 'От 130 дней';
+                day=15;
 			}
 			else if (slider.result.from_value <= 30000) {
-                                period.update({
-                                    from: 120
-                                });
-                                $('#period2').val('21');
+                period.update({
+                    from: 120
+                });
+                $('#p').val('21');
+                $('#period2').val('21');
 				perc = 84;
 				attr = 'Нужен только паспорт';
 				color = 'orange';
-                                day_comment = 'От 130 дней';
-                                day=15;
+                day_comment = 'От 130 дней';
+                day=15;
 			}
 			else if (slider.result.from_value <= 50000) {
-                                period.update({
-                                    from: 240
-                                });          
-                                $('#period2').val('30');
+                period.update({
+                    from: 240
+                });
+                $('#p').val('30');
+                $('#period2').val('30');
 				perc = 72;
 				attr = 'Нужна справка о доходах';
 				color = 'orange';
-                                day_comment = 'От 230 дней';
-                                day=15;
+                day_comment = 'От 230 дней';
+                day=15;
 			}
 			else {
-                                period.update({
-                                    from: 365
-                                });       
-                                $('#period2').val('30');
+                period.update({
+                    from: 365
+                });
+                $('#p').val('30');
+                $('#period2').val('30');
 				perc = 64;
 				attr = 'Нужна справка о доходах';
 				color = 'red';
-                                day_comment = 'От 365 дней';
-                                day=30;
+                day_comment = 'До 365 дней';
+                day=30;
             }
             
             if(slider.result.from_value<=30000){
@@ -554,6 +750,10 @@ $(document).ready(function(){
             comm = comm1 + comm2;
             summ = slider.result.from_value + comm;
             amount = slider.result.from_value;
+
+            $('#amount').val(slider.result.from_value);
+            $('#amount').val(slider2.result.from_value);
+            $('#form_slrd').val(slider.result.from);
 
             $('.perc').text(percent);
             $('.am').text(amount);
@@ -576,7 +776,7 @@ $(document).ready(function(){
 	});
     var period = $("#period").data("ionRangeSlider");
 	<?php if ($this->uri->segment(1) == '') { ?>
-	var slider = $('.amount').data('ionRangeSlider');//console.log(slider);
+	var slider = $('.amount').data('ionRangeSlider');
 	var slider_plus = true;
 	var slider_intl = setInterval(function(){
 		var step = slider_plus? slider.options.from+slider.options.step : slider.options.from-slider.options.step;
@@ -617,6 +817,7 @@ $(document).ready(function(){
 			clearInterval(slider_intl);
 		}
 		else slider.update({from:step});
+        updateComm();
 	}, 50);
 	<?php } ?>
         
@@ -639,11 +840,11 @@ $(document).ready(function(){
         $('.comm').text(comm);
         $('.sum').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
 
-        <?php if ($this->uri->segment(1) == '') {  ?>
+        <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') {  ?>
         var slider3 = $('.amount').data('ionRangeSlider');
-        $('#amount').val(slider3.result.from_value);
+        $('#spec_ind2').val(slider3.result.from_value);
+        $('#spec_ind').val(slider3.result.from_value); 
         $('#form_slrd').val(slider3.result.from);
-        
 
         $('.current-button-main.am').text(amount);
         $('.current-button-main.current_period').text(day_comment);
@@ -653,7 +854,7 @@ $(document).ready(function(){
         $('.current-button-main.percent_rate2').text(percent+'%');
         <?php } ?>
     };
-    $('.amount2').ionRangeSlider({
+    $('#spec_ind2').ionRangeSlider({
         values: [1000, 2000, 3000, 4000, 5000,6000,7000,8000,9000,10000,11000,12000,13000,14000,15000,20000,25000,30000,40000,50000,80000,100000],
         from: <?php 
         if(isset($_GET['amount'])) 
@@ -687,31 +888,36 @@ $(document).ready(function(){
         }
         elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
         ?>,
-        onChange:function(range){
-            if (range.from_value <= 10000) {
+        onChange: function(range2){
+            if (range2.from_value <= 10000) {
                 $('#p').val('7');
                 $('#period2').val('От 61 дня');
 			}
-			else if (range.from_value <= 15000) {
+			else if (range2.from_value <= 15000) {
                 $('#p').val('14');
                 $('#period2').val('От 61 дня');
 			}
-			else if (range.from_value <= 20000) {
+			else if (range2.from_value <= 20000) {
                 $('#p').val('21');
                 $('#period2').val('От 130 дней');
 			}
-			else if (range.from_value <= 30000) {
+			else if (range2.from_value <= 30000) {
                 $('#p').val('30');
                 $('#period2').val('От 130 дней');
 			}
-			else if (range.from_value <= 50000) {
+			else if (range2.from_value <= 50000) {
                 $('#p').val('30');
                 $('#period2').val('От 260 дней');
 			}
 			else {
                 $('#p').val('30');
-                $('#period2').val('От 365 дней');
-            }    
+                $('#period2').val('До 365 дней');
+            }
+
+            $('#spec_ind2').val(range2.from_value);
+            $('#spec_ind').val(range2.from_value);
+            $('#form_slrd').val(range2.from);
+            $('#amount').val(range2.from_value);
             updateComm();
 	    }
     });
@@ -724,17 +930,13 @@ if($this->uri->segment(1) == 'reviews'){
     echo '</script>';
     echo "<script>
     $(document).ready(function() {
-     
       $('#owl-demo').owlCarousel({
-     
           autoPlay: 5000, //Set AutoPlay to 3 seconds
-     
           items : 2,
           itemsDesktop : [1199,3],
           itemsDesktopSmall : [979,3],
           navigation : false
       });
-     
     });
     </script>";
 }elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2'){?>
@@ -773,7 +975,6 @@ $(document).ready(function(){
 
 function clone(o) {
 	if(!o || 'object' !== typeof o) return o;
-	
 	var c = 'function' === typeof o.pop ? [] : {};
 	var p, v;
 	for(p in o) {
