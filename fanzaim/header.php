@@ -130,13 +130,7 @@ if(!isset($description))
          require "templates/fanzaim/assets/css/style_lk.css";
          echo '</style>';
      }
-     ?> 
-     <!-- javascript -->
-     <?php
-     echo '<script>';
-     require 'templates/fanzaim/assets/js/oSpP.js';
-     echo '</script>';
-     ?> 
+     ?>
      <!--[if lte IE 9]>
      <script src="/modules/html5shiv/html5shiv.js"></script>
      <![endif]-->
@@ -150,13 +144,12 @@ if(!isset($description))
             enable_page_level_ads: true
             });
             </script>';
-		} 
-	?> 
+		}
+	?>
 	<?php
 		require 'sendpuls.php';
 		require 'google_tag_manager.php';
-    ?> 
-    
+    ?>
 </head>
 <body>
     <nav id="exMainHeader" class="navbar navbar-default">

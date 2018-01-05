@@ -198,8 +198,7 @@ if($this->uri->segment(1) != 'form')
             $('#form_slrd').val(range.from);
         },
     }); 
-});   
-    
+});
 </script> 
 <?php } ?> 
 <script>
@@ -417,8 +416,6 @@ if($this->uri->segment(1) != 'form')
         $( "#form_slrd" ).val('14'); 
         $( "#anketa" ).submit();
     });
-
-
     $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
@@ -617,7 +614,7 @@ function traffic(site, page){
         data: 'site='+site+'&page='+page,
             success: function(data){ 
             }
-    });    
+    });
 }
 </script> 
 </body>

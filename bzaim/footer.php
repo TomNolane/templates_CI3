@@ -1,7 +1,6 @@
 <?php 
 $from = '15'; 
 ?>
-
 <div class="buffer"></div>
 <div id="ya-rtb">
     <!-- декстоп YANDEX RTB -->

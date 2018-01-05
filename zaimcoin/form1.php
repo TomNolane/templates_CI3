@@ -112,7 +112,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="phone">Телефон</label>
+            <label class="control-label col-md-2" id="spec_form2" for="phone">Телефон</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Введите свой номер телефона" title="Пожалуйста, введите свой номер телефона"
@@ -160,7 +160,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-right"> 
                 <a id="next1">
-                    <button class="ex-blue-btn special_forms"> Далее </button>
+                    <button type="button" class="ex-blue-btn special_forms"> Далее </button>
                 </a> 
             </div>
         </div>

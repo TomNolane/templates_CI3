@@ -185,8 +185,9 @@ $("#email").suggestions({
         defaultDate: "01/01/1999",
     isRTL: false,
     onSelect: function(date) {
-            $('#passportdate').focus();
-            $('#passportdate').blur();
+        $('#birthdate').focus();
+        $('#birthdate').blur();
+        $('#birthdate').datepicker("hide");
         }
   });
   $('#passportdate').datepicker({

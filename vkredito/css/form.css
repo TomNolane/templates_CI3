@@ -1,7 +1,6 @@
 body{
     color:#444444;
 }
-
 h1{
     color:#444444;
     font-size:34px;
@@ -38,7 +37,6 @@ input[type="radio"], input[type="checkbox"] {
     font-size:20px;
     margin:2px 0;
 }
-
 
 .form-steps-line, .form-steps-green-line{
     position:relative;

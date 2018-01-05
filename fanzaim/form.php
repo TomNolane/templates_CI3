@@ -50,7 +50,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     break;    
                 case 'google_cms':
                     $utm = '5';
-                    break;                
+                    break;
                 default:
                     $utm = '0';
             }

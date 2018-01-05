@@ -474,6 +474,9 @@ $(document).ready(function () {
         defaultDate: "01/01/1999",
         isRTL: false,
         onSelect: function (date) { 
+            $('#birthdate').focus();
+            $('#birthdate').blur();
+            $('#birthdate').datepicker("hide");
             if ($(this).val().indexOf("_") == -1) {
                 $('#_birthdate').removeClass('lbl');
                 $('#_birthdate').addClass('lbl2');

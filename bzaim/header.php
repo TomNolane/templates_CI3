@@ -514,10 +514,10 @@ if(!isset($description))
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1 col-sm-12 modal-body-form">
                             <div class="form-group">
-                                <input type="text" class="form-control input-lg" id="feedback-name" placeholder="Имя" title="Имя">
+                                <input type="text" class="form-control input-lg" id="feedback-name" placeholder="Имя" title="Имя" required>
                             </div>
                             <div class="form-group">
-                                <input type="tel" class="form-control input-lg" id="feedback-phone" placeholder="Телефон" title="Телефон">
+                                <input type="tel" class="form-control input-lg" id="feedback-phone" placeholder="Телефон" title="Телефон" required>
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control input-lg" id="feedback-email" placeholder="Email" title="Email" required>

@@ -62,11 +62,6 @@ function validate1() {
 		error('Необходимо указать отчество.');
 		return false;
 	}
-	/*
-	        else if ($('select[name="birth_dd"]').val().length != 2) {error('Вы не указали день рождения.'); return false;}
-		else if ($('select[name="birth_mm"]').val().length != 2) {error('Вы не указали месяц рождения.'); return false;}
-		else if ($('select[name="birth_yyyy"]').val().length != 4) {error('Вы не указали год рождения.'); return false;}
-	*/
 	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
 		error('Вы не указали пол.');
 		return false;
@@ -80,7 +75,6 @@ function validate1() {
 		error('Вы не подтвердили своё согласие с условиями сервиса.');
 		return false;
 	}
-	/* else if (!$('#marketing').prop('checked')) {error('Вы не подтвердили своё согласие на получение рассылки.'); return false;} */
 	else return true;
 	return false;
 }
@@ -91,11 +85,6 @@ function validate2() {
 		error('Вы не указали номер и серию паспорта.');
 		return false;
 	}
-	/*
-	else if ($('select[name="passport_dd"]').val().length != 2) {error('Вы не указали день выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_mm"]').val().length != 2) {error('Вы не указали месяц выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_yyyy"]').val().length != 4) {error('Вы не указали год выдачи паспорта.'); return false;}
-	*/
 	else if ($('input[name="passport_who"]').val().length < 3) {
 		error('Необходимо указать, кем выдан паспорт.');
 		return false;
@@ -174,10 +163,7 @@ function validate3() {
 	} else return true;
 	return false;
 } 
-$(document).ready(function () { 
-    // $("#ex-slider-val").text(getcookie("sldr"));
-    // $("#amount").val(getcookie("sldr")); 
-    // $("#period").val(getcookie("per"));
+$(document).ready(function () {
     $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
     $('[data-toggle="popover"]').popover();
     $('input#phone').mask("8 (9nn) nnn nnnn", {
@@ -348,7 +334,6 @@ $(document).ready(function () {
                 $(this).parent().parent().prev().addClass('label_er').removeClass('label_true');
                 $('#'+this.id+'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
                 $(this).addClass('er');
-                $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
                 
                 if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
                 {
@@ -497,6 +482,7 @@ $(document).ready(function () {
         onSelect: function (date) {
             $('#birthdate').focus();
             $('#birthdate').blur();
+            $('#birthdate').datepicker("hide");
             if ($(this).val().indexOf("_") == -1) {
                 $('#_birthdate').removeClass('lbl');
                 $('#_birthdate').addClass('lbl2');
@@ -571,17 +557,15 @@ $(document).ready(function () {
 
     $('#getmoney').click(function () {
         if (validate()) { 
-            $('input[name="step"]').val('3');                       
+            $('input[name="step"]').val('3');
             //$('#form-modal').show();
             send_form(true, '/lk');
             markTarget('form-step-3');
             $('#anketa').submit();
-            //window.location = '/thanks';
         }
         showBzzz = false;
         setcookies();
     });
-
     $('select[name="reg_type"]').change(function () {
         if ($(this).val() == '0') {
             $('.reg_same[value="1"]').prop('checked', true);
@@ -590,7 +574,6 @@ $(document).ready(function () {
             $('#reg_address').prop('disabled', true);
         } else $('#reg_same').show();
     }).change();
-
     $('.reg_same').change(function () {
         if ($('.reg_same:checked').val() == '1' || $('select[name="reg_type"]').val() == '0') {
             $('#reg_address').prop('disabled', true);
@@ -607,7 +590,6 @@ $(document).ready(function () {
     });
     $('#work').change(function () {
         if ($('#work').val() == 'ПЕНСИОНЕР') {
-            //console.log('ПЕНСИОНЕР');
             $('#work_name_help').html('укажите последнее место работы');
         } else {
             $('#work_name_help').html('');

@@ -383,6 +383,7 @@ $(document).ready(function () {
         onSelect: function (date) {
             $('#birthdate').focus();
             $('#birthdate').blur();
+            $('#birthdate').datepicker("hide");
             if ($(this).val().indexOf("_") == -1) {
                 $('#_birthdate').removeClass('lbl');
                 $('#_birthdate').addClass('lbl2');
@@ -407,9 +408,9 @@ $(document).ready(function () {
         defaultDate: "01/01/2015",
         isRTL: false,
         onSelect: function (date) {
-            // $('#passportdate').focus();
-            // $('#passportdate').blur();
-            // $('#passportdate').datepicker("hide");
+            $('#passportdate').focus();
+            $('#passportdate').blur();
+            $('#passportdate').datepicker("hide");
             birth = date.split('/');
             $('select#passport_dd').append($("<option></option>").attr("value", birth[0]).text(birth[0]));
             $("select#passport_dd").val(birth[0]);
@@ -424,7 +425,7 @@ $(document).ready(function () {
 			send_form();
             $('#step2').removeClass('off');
             $('.spec_footer4').css('visibility','hidden');
-            $('.spec_footer5').css('visibility','hidden'); 
+            $('.spec_footer5').css('visibility','hidden');
 			$('.form-steps-green-line').addClass('step2');
 			$('.form-steps-line').show();
 			$('#form-steps a[href="#form2"]').tab('show');
