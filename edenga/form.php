@@ -1,10 +1,51 @@
 <?php
+$sum = '20000'; 
+$period = '21';
+
+if(isset($_GET['amount'])) 
+{ 
+    $sum = $_GET['amount'];
+    switch($_GET['amount']) 
+    { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; }
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000) 
+    { $period = '14'; } 
+    else if ($sum <= 20000) 
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000) 
+    { $period = '30'; } 
+    else { $period = '30'; } 
+} 
+
+if(isset($_POST['amount']))
+{ 
+    $sum = $_POST['amount'];
+    switch($_POST['amount']) 
+    { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; }
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000) 
+    { $period = '14'; } 
+    else if ($sum <= 20000) 
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000) 
+    { $period = '30'; } 
+    else { $period = '30'; } 
+} 
+
 if(!isset($my_title))
 {
 	$my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Fanzaim';
 	$description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }
-$days = 'От 130 до 200 дней'; $days2 = 'Срок до 200 дней';
+$days = 'От 130 до 200 дней'; $days2 = 'Срок до 365 дней';
 if(isset($_GET['amount'])) 
 {  
     switch($_GET['amount'])
@@ -33,7 +74,8 @@ if(isset($_GET['amount']))
         case '100000': $days = 'От 250 до 365 дней' ; $days2 = 'Срок до 365 дней'; break;
     } 
 }
-elseif(!isset($_POST['period2'])) { $days = 'От 130 до 200 дней'; $days2 = 'Срок до 200 дней'; } 
+
+if(!isset($_POST['period2'])) { $days = 'От 130 до 200 дней'; $days2 = 'Срок до 365 дней'; } 
 else
 { 
     switch($_POST['period2'])
@@ -133,8 +175,8 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                 </a>
                             </li>
                             <li role="presentation" class="disabled">
-                                <a href="#form2" id="step2">Паспорт
-                                    <span class="hidden-sm hidden-xs">ные данные</span>
+                                <a href="#form2" id="step2">Паспортные
+                                    <span class="hidden-sm hidden-xs"> данные</span>
                                 </a>
                             </li>
                             <li role="presentation" class="disabled">
@@ -148,12 +190,11 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                 <input type="hidden" name="id" value="">
                                 <input type="hidden" name="step" value="1">
                                 <input type="hidden" name="ad_id" value="<?=$ad_id?>">
-                                <input type="hidden" id="amount" name="amount" value="<?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>" />
-                                <!-- <input type="hidden" id="period" name="period" value="<?php //if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 21 : $_POST['period']; ?>"/> -->
+                                <input type="hidden" id="amount" name="amount" value="<?php echo $sum; ?>" />
                                 <div class="tab-content">
                                     <div id="firstStep" class="tab-pane fade in active">
                                         <?php require 'form1.php'; ?>
-                                        <div class="pull-right">
+                                        <div class="text-center">
                                             <a class="btn btn-primary btn-next" id="next1">Далее
                                                 <i class="fa fa-arrow-right"></i>
                                             </a>
@@ -163,15 +204,11 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                     <div id="secondStep" class="tab-pane fade">
                                         <?php require('form2.php'); ?>
                                         <div class="clearfix">&nbsp;</div>
-                                        <div class="form-group">
-                                            <div class="col-md-4 col-md-offset-4 hidden-xs">
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="pull-right">
-                                                    <a class="btn btn-primary btn-next" id="next2">Далее
-                                                        <i class="fa fa-arrow-right"></i>
-                                                    </a>
-                                                </div>
+                                        <div class="form-group"> 
+                                            <div class="text-center">
+                                                <a class="btn btn-primary btn-next" id="next2">Далее
+                                                    <i class="fa fa-arrow-right"></i>
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="clearfix"></div>
@@ -179,8 +216,8 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                     <div id="thirdStep" class="tab-pane fade">
                                         <?php require('form3.php'); ?>
                                         <div class="row">
-                                            <div class="col-sm-8 col-sm-offset-4 col-xs-12 text-center">
-                                                <a class="btn btn-primary btn-header" id="getmoney">Оформить заявку</a>
+                                            <div class="text-center">
+                                                <a class="btn btn-primary btn-next" id="getmoney">Оформить заявку</a>
                                             </div>
                                         </div>
                                     </div>

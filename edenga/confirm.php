@@ -27,7 +27,7 @@
         </div>
      </div>
     <div class="container new_style hidden-md visible-sm visible-xs" style="width: 100%; margin-top: 20px; margin-bottom: -10px;  min-height: 100%;">
-        <div class="row">            
+        <div class="row">
             <div class="col-md-12 text-center arrow-down" style="color: #000; font-weight:bold;">
                 <h3 style="font-size: 30px;"><b>Уважаемый <span id="io2">Валентин Сергеевич</span>!</b></h3>
                 <p style="font-size: 16px; color: #ccc">Благодарим Вас за регистрацию на нашем сервисе.<p>

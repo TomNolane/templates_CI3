@@ -97,10 +97,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     break;
                 case 'google':
                     $utm = '4';
-                    break;       
+                    break;
                 case 'google_cms':
                     $utm = '5';
-                    break;                
+                    break;
                 default:
                     $utm = '0';
             }

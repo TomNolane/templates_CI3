@@ -19,7 +19,7 @@
 Чтобы подать новую заявку на займ выберите желаемую сумму и срок. Затем заполните анкету и получите деньги.
                         </div>
                         <div class="panel-footer clearfix">
-                            <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
+                            <a href="/form"><button class="btn btn-primary pull-right">Получить деньги</button></a>
                         </div>                        
                     </div>
                 </div>
@@ -39,7 +39,7 @@
 Ваша заявка обрабатывается полностью автоматизированной системой, учитывающей большой спектр данных. К сожалению, мы не можем ответить на вопрос, по какой именно причине система вынесла отрицательное решение. Тем не менее, если Вы уже брали займ в Edenga ранее у Вас есть возможность подать заявку снова через 3 дня, а новых клиентов мы ждем через 7 дней.                            
                         </div>
                         <div class="panel-footer clearfix">
-                            <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
+                            <a href="/form"><button class="btn btn-primary pull-right">Получить деньги</button></a>
                         </div>                        
                     </div>
                 </div>
@@ -58,7 +58,7 @@
 Для того, чтобы получить заем, Вам необходимо заполнить анкету на сайте и дождаться звонка менеджера, после чего получить деньги любым удобным вам способом.
                         </div>
                         <div class="panel-footer clearfix">
-                            <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
+                            <a href="/form"><button class="btn btn-primary pull-right">Получить деньги</button></a>
                         </div>                        
                     </div>
                 </div>
@@ -75,11 +75,11 @@
                     </div>
                     <div id="collapse4" class="panel-collapse collapse">
                         <div class="panel-body text-left">
-Чтобы подать новую заявку на займ, пройдите в ваш Личный кабинет, выберите желаемую сумму и оформите заявку.                            
+Чтобы подать новую заявку на займ, нажмите кнопку "получить деньги", выберите желаемую сумму и оформите заявку.
                         </div>
                         <div class="panel-footer clearfix">
-                            <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
-                        </div>                        
+                            <a href="/form"><button class="btn btn-primary pull-right">Получить деньги</button></a>
+                        </div>
                     </div>
                 </div>
 
@@ -98,7 +98,7 @@
 Минимальная сумма займа 1000 рублей, максимальная сумма 100000 рублей. Минимальный срок займа 61 день, максимальный срок 365 дней.                            
                         </div>
                         <div class="panel-footer clearfix">
-                            <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
+                            <a href="/form"><button class="btn btn-primary pull-right">Получить деньги</button></a>
                         </div>                        
                     </div>
                 </div>
@@ -118,7 +118,7 @@
 Компания, предоставляющая займ производит выплату средств в течение 15 минут после принятия решения по займу на Вашу банковскую карту или счет. Однако, все банки обрабатывают переводы с различной скоростью. В зависимости от специфики Вашего банка зачисление средств может занять до 2-3х дней. Особенно это касается того случая, когда Вы оформляете заявку на получение займа на выходных.                            
                         </div>
                         <div class="panel-footer clearfix">
-                            <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
+                            <a href="/form"><button class="btn btn-primary pull-right">Получить деньги</button></a>
                         </div>                        
                     </div>
                 </div>
@@ -138,7 +138,7 @@
 Никаких дополнительных документов, подтверждающих наличие/отсутствие дохода, не требуется.
                         </div>
                         <div class="panel-footer clearfix">
-                            <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
+                            <a href="/form"><button class="btn btn-primary pull-right">Получить деньги</button></a>
                         </div>                        
                     </div>
                 </div>
@@ -158,7 +158,7 @@
 Максимальная сумма займа для новых клиентов составляет 10000 рублей при 4,5% в месяц. Для ответственных клиентов, пользующихся нашими услугами более одного раза, сумма возрастает: во второй раз - до 20000 руб, с третьего раза - до 100000 руб.                            
                         </div>
                         <div class="panel-footer clearfix">
-                            <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
+                            <a href="/form"><button class="btn btn-primary pull-right">Получить деньги</button></a>
                         </div>                        
                     </div>
                 </div>
@@ -175,11 +175,11 @@
                     </div>
                     <div id="collapse9" class="panel-collapse collapse">
                         <div class="panel-body text-left">
-Да, Вы имете возможность подать заявку в нашей компании.
+Да, Вы имеете возможность подать заявку в нашей компании.
                         </div>
                         <div class="panel-footer clearfix">
-                            <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
-                        </div>                        
+                            <a href="/form"><button class="btn btn-primary pull-right">Получить деньги</button></a>
+                        </div>
                     </div>
                 </div>
 
@@ -198,7 +198,7 @@
 После вынесения решения по Вашей заявке Вам будет осуществлен звонок или выслано соответствующее письмо на Вашу электронную почту.                            
                         </div>
                         <div class="panel-footer clearfix">
-                            <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
+                            <a href="/form"><button class="btn btn-primary pull-right">Получить деньги</button></a>
                         </div>                        
                     </div>
                 </div>
@@ -218,7 +218,7 @@
 Чтобы подать заявку еще на один займ, Вы должны погасить предыдущий. Данное условие необходимо для проверки статуса Вашей платежеспособности.                            
                         </div>
                         <div class="panel-footer clearfix">
-                            <a href="/form/"><button class="btn btn-primary pull-right">Получить деньги</button></a>
+                            <a href="/form"><button class="btn btn-primary pull-right">Получить деньги</button></a>
                         </div>                       
                     </div>
                 </div>

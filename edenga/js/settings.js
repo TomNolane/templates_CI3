@@ -35,7 +35,6 @@ function send_form(send, href) {
 			if (typeof data.redirect != 'undefined' && data.redirect) {
 				if (typeof window.obUnloader != 'undefined')
 					window.obUnloader.resetUnload();
-				//window.location.href = (typeof href == 'undefined')? '/lk' : href;
 			}
 		}
 	});
@@ -51,7 +50,6 @@ function validate(){
     {
         window.obUnloader.resetUnload();
     }
-	//$('#form-modal').show();
 	return true;
 }
 
@@ -73,11 +71,6 @@ function validate1() {
 		error('Необходимо указать отчество.');
 		return false;
 	}
-	/*
-	        else if ($('select[name="birth_dd"]').val().length != 2) {error('Вы не указали день рождения.'); return false;}
-		else if ($('select[name="birth_mm"]').val().length != 2) {error('Вы не указали месяц рождения.'); return false;}
-		else if ($('select[name="birth_yyyy"]').val().length != 4) {error('Вы не указали год рождения.'); return false;}
-	*/
 	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
 		error('Вы не указали пол.');
 		return false;
@@ -91,7 +84,6 @@ function validate1() {
 		error('Вы не подтвердили своё согласие с условиями сервиса.');
 		return false;
 	}
-	/* else if (!$('#marketing').prop('checked')) {error('Вы не подтвердили своё согласие на получение рассылки.'); return false;} */
 	else return true;
 	return false;
 }
@@ -102,11 +94,6 @@ function validate2() {
 		error('Вы не указали номер и серию паспорта.');
 		return false;
 	}
-	/*
-	else if ($('select[name="passport_dd"]').val().length != 2) {error('Вы не указали день выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_mm"]').val().length != 2) {error('Вы не указали месяц выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_yyyy"]').val().length != 4) {error('Вы не указали год выдачи паспорта.'); return false;}
-	*/
 	else if ($('input[name="passport_who"]').val().length < 3) {
 		error('Необходимо указать, кем выдан паспорт.');
 		return false;
@@ -414,7 +401,6 @@ $(document).ready(function () {
             url: '/validate/passport_code/',
             data: 'passport_code=' + $('#passport_code').val(),
             success: function (data) {
-                //console.log(data);    
                 validator = JSON.parse(data);
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
@@ -428,7 +414,6 @@ $(document).ready(function () {
             lang++;
             var input = $(this),
                 text = input.val().replace(/[^а-яёА-ЯЁ0-9-_\s]/g, "");
-            //text = '';
             input.val(text);
             if (lang == 1) {
                 $(this).parent().addClass('ex-error');
@@ -496,6 +481,7 @@ $(document).ready(function () {
         onSelect: function (date) {
             $('#birthdate').focus();
             $('#birthdate').blur();
+            $('#birthdate').datepicker("hide");
             if ($(this).val().indexOf("_") == -1) {
                 $('#_birthdate').removeClass('lbl');
                 $('#_birthdate').addClass('lbl2');
@@ -558,7 +544,7 @@ $(document).ready(function () {
 
     $('#next2').click(function () {
         if (validate2()) {
-            $('input[name="step"]').val('2');        
+            $('input[name="step"]').val('2');
             send_form();
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondStep').removeClass('in active');
@@ -579,12 +565,10 @@ $(document).ready(function () {
 
     $('#getmoney').click(function () {
         if (validate()) { 
-            $('input[name="step"]').val('3');                       
-            //$('#form-modal').show();
+            $('input[name="step"]').val('3');
             send_form(true, '/lk');
             markTarget('form-step-3');
             $('#anketa').submit();
-            //window.location = '/thanks';
         }
         showBzzz = false;
         setcookies();
@@ -615,8 +599,7 @@ $(document).ready(function () {
     });
     $('#work').change(function () {
         if ($('#work').val() == 'ПЕНСИОНЕР') {
-            //console.log('ПЕНСИОНЕР');
-            $('#work_name_help').html('укажите последнее место работы');
+            $('#work_name_help').html('');
         } else {
             $('#work_name_help').html('');
         }
@@ -642,4 +625,4 @@ $(document).ready(function () {
             slide: false
         });
     } 
-});
+}); 
