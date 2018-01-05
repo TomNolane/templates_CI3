@@ -448,6 +448,7 @@ $(document).ready(function () {
         onSelect: function (date) {
             $('#birthdate').focus();
             $('#birthdate').blur();
+            $('#birthdate').datepicker("hide");
             if ($(this).val().indexOf("_") == -1) {
                 $('#_birthdate').removeClass('lbl');
                 $('#_birthdate').addClass('lbl2');

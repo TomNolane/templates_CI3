@@ -137,15 +137,4 @@ require 'header.php'; ?>
 		</div>
 	</div>
 </div>
-
-<div class="clearfix">&nbsp;</div>
-<div class="clearfix">&nbsp;</div>
-<script>
-$(document).ready(function () {
-  if (location.hash){
-  location.hash && $(location.hash + '.collapse').collapse('show');    
-  $('html, body').animate({scrollTop: $($(location.hash)).offset().top - 100 }, 1000);
-  return false;
-}});
-</script>
 <?php require 'footer.php'; ?>

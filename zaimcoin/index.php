@@ -145,4 +145,4 @@
         </div>
     </section>
 </main>
-<?php include 'footer.php';?>
+<?php require 'footer.php'; ?>

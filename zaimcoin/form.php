@@ -1,7 +1,8 @@
 <?php
 if(!isset($my_title))
 {
-    $my_title = 'Заполните анкету!';
+	$my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Zaimcoin';
+	$description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }  
 require 'header.php';
 // IP
@@ -48,7 +49,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     break;    
                 case 'google_cms':
                     $utm = '5';
-                    break;                
+                    break;
                 default:
                     $utm = '0';
             }

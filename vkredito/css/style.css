@@ -2,7 +2,7 @@ html, body{height:100%;margin:0;padding:0;}
 body{background-color:#f3f8fd;color:#80909c;font-size:18px;font-family:'Myriad Pro';font-weight:400;}
 .amm{}
 .am{border:2px double #ccc;padding:5px;color:#333;border-radius:5px;background:#fff;left:15px;width:62.8%;}
-.page{margin-bottom:-90px;min-height:100%;}
+.page{margin-bottom:0px;min-height:100%;}
 .buffer{height:65px;}
 h1, h2{color:#3c434d;font-family:'Myriad Pro';font-weight:800;text-align:center;}
 h5{color:#414042;text-transform:uppercase;padding:15px;}
@@ -22,7 +22,7 @@ p.text-indent{text-align:justify;text-indent:35px;}
 .middle-cover{display:table;}
 .middle{display:table-cell;vertical-align:middle;}
 .blog-box-image img{max-width:140px;padding:20px 0;}
-.btn, .btn:active, .btn.focus, .btn:focus, .btn:hover{font-family:'Myriad Pro';font-weight:600;background-color:#7acaf6;border-color:#7acaf6;border-width:2px;color:#ffffff;font-size:20px;width:200px;height:60px;padding:14px;margin:10px;text-decoration:none;}
+.btn, .btn:active, .btn.focus, .btn:focus, .btn:hover{font-family:'Myriad Pro';font-weight:600;background-color:#7acaf6;border-color:#7acaf6;border-width:2px;color:#ffffff;font-size:20px;width:100%;border-radius: 20px;height:60px;padding:14px;margin:10px;text-decoration:none;}
 .blue{background:#629fd1;color:#ffffff;}
 .blue h1, .blue h2{color:#ffffff;}
 .blue .btn, .blue .btn:active, .blue .btn.focus, .blue .btn:focus, .blue .btn:hover{background-color:#629fd1;border-color:#ffffff;border-width:2px;}
@@ -156,7 +156,7 @@ footer .menu a{font-size:14px;font-family:'Myriad Pro';font-weight:400;line-heig
 .close-ribbon:before{content:"";font-size:0.5em;position:absolute;border-style:solid;border-color:transparent transparent #3F9E80 transparent;top:-1em;right:19px;border-width:0 0 1em 0.7em;z-index:-1;}
 .ribbon-prob{font-size:18px;position:inherit;right:-30px;}
 .lk-trigger{background-color:#fff;border-radius:10px;margin:20px 0;padding:10px 5px;}
-.btn-default{color: #сссccc !important; background-color: #ffffff !important;border-color: #ccc !important;}
+.btn-default{color: #cccccc !important; background-color: #ffffff !important;border-color: #ccc !important;}
 .arrow-down p{color:#8e8e8e;}
 @media screen and (max-width:1200px){.contacts-item{height:450px;}
 .howto #video{max-width:402px;}
@@ -230,7 +230,7 @@ footer .social{width:30px;}
     overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
-    background: url(/templates/rublimo/img/cd-top-arrow.png) center 50% no-repeat #7acaf6;
+    background: url(/templates/vkredito/img/cd-top-arrow.png) center 50% no-repeat #7acaf6;
     visibility: hidden;
     opacity: 0;
     -webkit-transition: opacity .3s 0s, visibility 0s .3s;
@@ -303,4 +303,7 @@ color: #3c763d !important;
 #ya-rtb {
   text-align: center !important;
   min-width: 100% !important; 
+}
+input#i , input#o, input#f, input#feedback-name {
+  text-transform: capitalize !important;
 }

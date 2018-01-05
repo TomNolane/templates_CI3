@@ -26,7 +26,7 @@
                     required>
             </div>
         </div>
-        <div class="form-group has-feedback ex-error">
+        <div class="form-group has-feedback">
             <label class="control-label col-md-2" for="dateOf">Дата выдачи</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">

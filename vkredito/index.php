@@ -1,5 +1,4 @@
 <?php require 'header.php'; ?>
-
 <section class="calc" id="calc">
     <div class="container">
         <div class="row">
@@ -10,19 +9,22 @@
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                 <div class="form">
                     <form id="anketa" action="/form" method="post">
+                        <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
                         <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
-
                         <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
+                        <input type="hidden" id="period2" name="period2" value="7" />
+                        <input type="hidden" id="amount" name="amount" value="20000" />
+                        <input type="hidden" id="period" name="period" value="21" />
                         <div class="sliders">
                             <div class="form-slider green">
                                 <div class="col-md-12">
-                                    <input type="text" class="amount" id="amount" name="amount" value="6000" />
+                                    <input type="text" class="amount" value="20000" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="form-slider green" style="display: none;">
                                 <div class="col-md-12">
-                                    <input type="text" class="period" id="period" name="period" value="10" />
+                                    <input type="text" class="period" value="7" />
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -57,7 +59,6 @@
         </div>
     </div>
 </section>
-
 <section class="howto white text-center hidden-xs">
     <div class="container">
         <h2>Как получить деньги?</h2>
@@ -123,7 +124,6 @@
         </div>
     </div>
 </section>
-
 <section class="advantage white hidden-xs hidden-sm">
     <div class="container">
         <div class="row">
@@ -182,7 +182,7 @@
         </div>
     </div>
 </section>
-<section class="review white hidden-xs">
+<section class="review white hidden-xs hidden-sm">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-center">
@@ -220,7 +220,7 @@
         </div>
     </div>
 </section>
-<div class="doc hidden-xs">
+<div class="doc hidden-xs hidden-sm">
     <div class="great-support-container section-container section-container-gray-bg">
         <div class="container">
             <div class="row">
@@ -236,9 +236,6 @@
             </div>
         </div>
     </div>
-
-    <!-- More services -->
-
     <div class="more-services-container section-container">
         <div class="container">
             <div class="row">
@@ -263,9 +260,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Call to action -->
-
     <div class="call-to-action-container section-container section-container-image-bg">
         <div class="container">
             <div class="row">
@@ -327,8 +321,7 @@
             </div>
         </div>
     </div>
-
-    <section class="conditions hidden-xs">
+    <section class="conditions hidden-xs hidden-sm">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
@@ -337,221 +330,54 @@
                 </div>
                 <div class="col-xs-4">
                     <div class="white offers">
-                        <!-- <a href="https://pxl.leads.su/click/864dd416696b8008a5875a0bbe82e865" target="_blank"> -->
-                            <p>
-                                ООО МФО «СМСФИНАНС» № лицензии 2120177002022 Адрес: 115201, г. Москва, ул. Котляковская, д.3, стр. 13 Годовая процентная
-                                ставка: 328,5%
-                            </p>
-                        <!-- </a> -->
+                        <p>
+                            ООО МФО «СМСФИНАНС» № лицензии 2120177002022 Адрес: 115201, г. Москва, ул. Котляковская, д.3, стр. 13 Годовая процентная
+                            ставка: 328,5%
+                        </p>
                     </div>
                 </div>
                 <div class="col-xs-4">
                     <div class="white offers">
-                        <!-- <a href="https://pxl.leads.su/click/0b7f24ce727aa36758c9775910a0b99c" target="_blank"> -->
-                            <p>
-                                ЗАО «4финанс» № лицензии 1127746537764 Адрес: 115201, г.Москва, ул. Котляковская, д. 3, стр. 13 Годовая процентная ставка:
-                                328,5%
-                            </p>
-                        <!-- </a> -->
+                        <p>
+                            ЗАО «4финанс» № лицензии 1127746537764 Адрес: 115201, г.Москва, ул. Котляковская, д. 3, стр. 13 Годовая процентная ставка:
+                            328,5%
+                        </p>
                     </div>
                 </div>
                 <div class="col-xs-4">
                     <div class="white offers">
-                        <!-- <a href="https://pxl.leads.su/click/0d832392bf58a621067a6e41ac602eb3" target="_blank"> -->
-                            <p>
-                                ООО «СрочноДеньги» № лицензии 2110552000304 Адрес: Нижний Новгород, ул. Тимирязева, 15/2, БЦ «КМ-Сити», 4 этаж Годовая процентная
-                                ставка: 360%
-                            </p>
-                        <!-- </a> -->
+                        <p>
+                            ООО «СрочноДеньги» № лицензии 2110552000304 Адрес: Нижний Новгород, ул. Тимирязева, 15/2, БЦ «КМ-Сити», 4 этаж Годовая процентная
+                            ставка: 360%
+                        </p>
                     </div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="col-xs-4">
                     <div class="white offers">
-                        <!-- <a href="https://pxl.leads.su/click/3f83cc895f66b8b7ed915fc132408f20" target="_blank"> -->
-                            <p>
-                                ООО «Домашние деньги» № лицензии 211017700000 Адрес: 115088, г. Москва, 2-ой Южнопортовый проезд, д. 33, стр. 1 Годовая процентная
-                                ставка: 248,2%
-                            </p>
-                        <!-- </a> -->
+                        <p>
+                            ООО «Домашние деньги» № лицензии 211017700000 Адрес: 115088, г. Москва, 2-ой Южнопортовый проезд, д. 33, стр. 1 Годовая процентная
+                            ставка: 248,2%
+                        </p>
                     </div>
                 </div>
                 <div class="col-xs-4">
                     <div class="white offers">
-                        <!-- <a href="https://pxl.leads.su/click/30a6c51f9fb08e349bcbf9ee8caf0206" target="_blank"> -->
-                            <p>
-                                ООО «Займер» № лицензии 651303532004088 Адрес:г. Кемерово, пр. Советский, д. 2/7 Годовая процентная ставка: 248,2%
-                            </p>
-                        <!-- </a> -->
+                        <p>
+                            ООО «Займер» № лицензии 651303532004088 Адрес:г. Кемерово, пр. Советский, д. 2/7 Годовая процентная ставка: 248,2%
+                        </p> 
                     </div>
                 </div>
                 <div class="col-xs-4">
                     <div class="white offers">
-                        <!-- <a href="https://pxl.leads.su/click/2f1ea83749c8f0ea58239fc19b0a9f2d" target="_blank"> -->
-                            <p>
-                                ООО «Парса Компани Групп» № лицензии 1097746179585 Адрес: 115201, г. Москва, Старокаширское ш., д. 2, корп. 2 Годовая процентная
-                                ставка: 360%
-                            </p>
-                        <!-- </a> -->
+                        <p>
+                            ООО «Парса Компани Групп» № лицензии 1097746179585 Адрес: 115201, г. Москва, Старокаширское ш., д. 2, корп. 2 Годовая процентная
+                            ставка: 360%
+                        </p> 
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h3 class="modal-title" id="feedbackModalLabel">Заполните личные данные и оставьте отзыв</h3>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 modal-body-form">
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control input-lg" id="feedback-name" placeholder="Имя" title="Имя">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="tel" class="form-control input-lg" id="feedback-phone" placeholder="Телефон" title="Телефон">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="email" class="form-control input-lg" id="feedback-email" placeholder="Email" title="Email" required>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <div class="form-group">
-                                <textarea class="form-control" id="feedback-comment" rows="3" placeholder="Ваш отзыв" title="Ваш отзыв" required></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-6 col-md-offset-3">
-                            <button type="button" class="btn btn-primary btn-lg btn-block" id="feedback-send">Отправить</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="loading" style="display:none;">
-    <span>
-        <i class="fa fa-spinner fa-spin fa-pulse"></i> Загрузка...</span>
-</div>
-<?php
-    echo '<script>'; 
-	require "modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js"; 
-    echo '</script>'; 
-?>
-    <script type="text/javascript">
-        var amount = 15000;
-        var day = 10;
-        $('.amount').ionRangeSlider({
-            values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000,
-                15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000
-            ],
-            from: <?php echo empty($_POST['amount'])? 15000 : $_POST['amount']; ?>,
-            postfix: ' Р',
-            prettify_enabled: true,
-            hide_from_to: false,
-            onChange: function (range) {
-                if (range.from_value <= 10000) {
-                    d = 'до 130 дней';
-                    $('#period').val(10);
-                } else if (range.from_value <= 15000) {
-                    d = 'до 130 дней';
-                    $('#period').val(10);
-                } else if (range.from_value <= 20000) {
-                    d = 'до 130 дней';
-                    $('#period').val(10);
-                } else if (range.from_value <= 30000) {
-                    d = 'до 130 дней';
-                    $('#period').val(10);
-                } else if (range.from_value <= 50000) {
-                    d = 'до 250 дней';
-                    $('#period').val(15);
-                } else {
-                    d = 'до 365 дней';
-                    $('#period').val(30);
-                }
-                $('.srok').text(d);
-                amount = range.from_value;
-                updateComm();
-            }
-        });
-        $('.period').ionRangeSlider({
-            min: 1,
-            max: 30,
-            from: <?php echo empty($_POST['period'])? 10 : $_POST['period']; ?>,
-            postfix: ' дней',
-            onChange: function (range) {
-                day = range.from;
-                updateComm();
-            }
-        });
-        var slider = $('.amount').data('ionRangeSlider');
-        <?php if ($this->uri->segment(1) == '') { ?>
-        var slider_plus = true;
-        var n = 6;
-        var slider_init = setInterval(function () {
-            if (slider_plus) {
-                n++;
-            } else {
-                n--;
-            }
-            if (n == 21) {
-                slider_plus = false;
-            } else if (n == 5) {
-                clearInterval(slider_init);
-            }
-
-            slider.update({
-                from: n
-            });
-            amount = slider.result.from_value;
-            if (amount <= 10000) {
-                d = 'до 130 дней';
-                $('#period').val(10);
-            } else if (amount <= 15000) {
-                d = 'до 130 дней';
-                $('#period').val(10);
-            } else if (amount <= 20000) {
-                d = 'до 130 дней';
-                $('#period').val(10);
-            } else if (amount <= 30000) {
-                d = 'до 130 дней';
-                $('#period').val(10);
-            } else if (amount <= 50000) {
-                d = 'до 250 дней';
-                $('#period').val(15);
-            } else {
-                d = 'до 365 дней';
-                $('#period').val(30);
-            }
-            $('.srok').text(d);
-            updateComm();
-
-        }, 50);
-        <?php } ?>
-
-        var updateComm = function () {
-            if (amount <= 30000) {
-                percent = 1.3;
-                comm1 = Math.ceil((amount / 100) * percent) * day;
-                comm2 = 0;
-            }
-            if (amount > 30000) {
-                percent = 0.2;
-                comm1 = 390 * day;
-                comm2 = Math.ceil(((amount - 30000) / 100) * percent) * day;
-            }
-            comm = comm1 + comm2;
-            summ = amount + comm;
-            $('.current_amount').text(String(amount).split(/(?=(?:\d{3})+$)/).join(' '));
-            $('.current_percent').text(percent);
-            $('.current_summ').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
-            //console.log(comm1 +' '+comm2);
-        };
-    </script>
-    <?php require 'footer.php'; ?>
+<?php require 'footer.php'; ?>

@@ -24,7 +24,6 @@ function send_form(send, href) {
 			if (typeof data.redirect != 'undefined' && data.redirect) {
 				if (typeof window.obUnloader != 'undefined')
 					window.obUnloader.resetUnload();
-				//window.location.href = (typeof href == 'undefined')? '/lk' : href;
 			}
 		}
 	});
@@ -40,7 +39,6 @@ function validate(){
     {
         window.obUnloader.resetUnload();
     }
-	//$('#form-modal').show();
 	return true;
 }
 
@@ -62,11 +60,6 @@ function validate1() {
 		error('Необходимо указать отчество.');
 		return false;
 	}
-	/*
-	        else if ($('select[name="birth_dd"]').val().length != 2) {error('Вы не указали день рождения.'); return false;}
-		else if ($('select[name="birth_mm"]').val().length != 2) {error('Вы не указали месяц рождения.'); return false;}
-		else if ($('select[name="birth_yyyy"]').val().length != 4) {error('Вы не указали год рождения.'); return false;}
-	*/
 	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
 		error('Вы не указали пол.');
 		return false;
@@ -80,7 +73,6 @@ function validate1() {
 		error('Вы не подтвердили своё согласие с условиями сервиса.');
 		return false;
 	}
-	/* else if (!$('#marketing').prop('checked')) {error('Вы не подтвердили своё согласие на получение рассылки.'); return false;} */
 	else return true;
 	return false;
 }
@@ -91,11 +83,6 @@ function validate2() {
 		error('Вы не указали номер и серию паспорта.');
 		return false;
 	}
-	/*
-	else if ($('select[name="passport_dd"]').val().length != 2) {error('Вы не указали день выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_mm"]').val().length != 2) {error('Вы не указали месяц выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_yyyy"]').val().length != 4) {error('Вы не указали год выдачи паспорта.'); return false;}
-	*/
 	else if ($('input[name="passport_who"]').val().length < 3) {
 		error('Необходимо указать, кем выдан паспорт.');
 		return false;
@@ -263,6 +250,28 @@ $(document).ready(function () {
             });
         });
     };
+    function init2($name) {
+        var self = {}; 
+        self.$name = $name;
+        var fioParts = ["NAME"];
+        $.each([$name], function (index, $el) {
+            var sgt = $el.suggestions({
+                serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
+                token: "78fc76023580df0ec78566913b31a87d909f1ec0",
+                type: "NAME",
+                triggerSelectOnSpace: false,
+                hint: "",
+                noCache: true,
+                scrollOnFocus: false,
+                minChars: 2,
+                addon: "none",
+                params: {
+                    // каждому полю --- соответствующая подсказка
+                    parts: [fioParts[index]]
+                }
+            });
+        });
+    };
     // Проверяет, известен ли пол на данный момент
     function isGenderKnown($el) {
         var self = this;
@@ -278,8 +287,16 @@ $(document).ready(function () {
         }
     }
     init($("#f"), $("#i"), $("#o"));
-
+    init2($("#feedback-name"));
     $("#email").suggestions({
+        serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
+        token: "78fc76023580df0ec78566913b31a87d909f1ec0",
+        type: "EMAIL",
+        count: 3,
+        addon: "none",
+        scrollOnFocus: false
+    });
+    $("#feedback-email").suggestions({
         serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
         token: "78fc76023580df0ec78566913b31a87d909f1ec0",
         type: "EMAIL",
@@ -291,14 +308,32 @@ $(document).ready(function () {
         lang: 'ru',
         modules: 'date,sanitize'
     });
-    $('input').on('validation', function (evt, valid) {
-        if (valid) {
-            $('#' + this.id + 'status').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
+    $('input').on('validation', function (evt, valid) 
+    {
+        if(valid){ 
+            $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
+            $(this).removeClass('er');
+            $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
 
-        } else {
-           $('#' + this.id + 'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
-           $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
-        }
+            if(this.name == 'phone')
+            {
+                ('#spec_form2').removeClass('label_er').addClass('label_true');
+            }
+        } else { 
+            $(this).parent().parent().prev().addClass('label_er').removeClass('label_true');
+            $('#'+this.id+'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
+            $(this).addClass('er');
+            
+            if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
+            {
+                $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
+            } 
+
+            if(this.name == 'phone')
+            {
+                ('#spec_form2').removeClass('label_true').addClass('label_er');
+            } 
+        } 
     });
     $('#phone').blur(function () { 
         $.ajax({
@@ -310,7 +345,7 @@ $(document).ready(function () {
                 if (validator.status) { 
                     $('#phonestatus').removeClass('glyphicon-remove').removeClass('glyphicon-ok');
                     $('#phonestatus').html('<img src="/templates/common/img/mobile/' + validator.operator + '.png" width="24px" />');
-                    $('#phone').parent().parent().parent().removeClass('has-error').addClass('has-success');
+                    $('#phone').parent().parent().parent().removeClass('ex-error').addClass('ex-success');
                     if (validator.operator == 'undefined') {
                         $('#phonestatus').html('');
                         $('#phonestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok');
@@ -318,7 +353,7 @@ $(document).ready(function () {
                 } else { 
                     $('#phonestatus').html('');
                     $('#phonestatus').removeClass('glyphicon-ok').addClass('glyphicon-remove');
-                    $('#phone').parent().parent().parent().removeClass('has-success').addClass('has-error');
+                    $('#phone').parent().parent().parent().removeClass('ex-success').addClass('ex-error');
                 } 
             }
         });
@@ -333,7 +368,7 @@ $(document).ready(function () {
                 if (validator.status) { 
                     $('#work_phonestatus').removeClass('glyphicon-remove').removeClass('glyphicon-ok');
                     $('#work_phonestatus').html('<img src="/templates/common/img/mobile/' + validator.operator + '.png" width="24px" />');
-                    $('#work_phonestatus').parent().removeClass('has-error').addClass('has-success');
+                    $('#work_phonestatus').parent().removeClass('ex-error').addClass('ex-success');
                     if (validator.operator == 'undefined') {
                         $('#work_phonestatus').html('');
                         $('#work_phonestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok');
@@ -341,7 +376,7 @@ $(document).ready(function () {
                 } else { 
                     $('#work_phonestatus').html('');
                     $('#work_phonestatus').removeClass('glyphicon-ok').addClass('glyphicon-remove');
-                    $('#work_phone').parent().removeClass('has-success').addClass('has-error');
+                    $('#work_phone').parent().removeClass('ex-success').addClass('ex-error');
                 } 
             }
         });
@@ -361,10 +396,7 @@ $(document).ready(function () {
         });
     });
     var lang = 0;
-
-
-
-    $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street').on('keyup keypress', function (e) {
+    $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street, #feedback-name, #feedback-comment').on('keyup keypress', function (e) {
         if ($(this).val().match(/([a-zA-Z]+)/)) {
             lang++;
             var input = $(this),
@@ -372,27 +404,40 @@ $(document).ready(function () {
             //text = '';
             input.val(text);
             if (lang == 1) {
-                $(this).parent().addClass('has-error');
+                $(this).parent().addClass('ex-error');
                 $(this).after('<span class="help-block form-error">Пожалуйста, смените раскладку клавиатуры на <span class="label label-info">RU</span></span>');
             }
         } else {
             lang = 0;
-            $(this).parent().removeClass('has-error');
+            $(this).parent().removeClass('ex-error');
             $(this).next("span").text(' ');
         } 
     });
-
     $('#email').on('keyup keypress', function (e) {
         if ($(this).val().match(/([а-яёА-ЯЁ]+)/)) {
             lang++;
             $(this).val('');
             if (lang == 1) {
-                $(this).parent().addClass('has-error');
+                $(this).parent().addClass('ex-error');
                 $(this).after('<span class="help-block form-error">Пожалуйста, смените раскладку клавиатуры на <span class="label label-info">EN</span></span>');
             }
         } else {
             lang = 0;
-            $(this).parent().removeClass('has-error');
+            $(this).parent().removeClass('ex-error');
+            $(this).next("span").text(' ');
+        }
+    });
+    $('#feedback-email').on('keyup keypress', function (e) {
+        if ($(this).val().match(/([а-яёА-ЯЁ]+)/)) {
+            lang++;
+            $(this).val('');
+            if (lang == 1) {
+                $(this).parent().addClass('ex-error');
+                $(this).after('<span class="help-block form-error">Пожалуйста, смените раскладку клавиатуры на <span class="label label-info">EN</span></span>');
+            }
+        } else {
+            lang = 0;
+            $(this).parent().removeClass('ex-error');
             $(this).next("span").text(' ');
         }
     });
@@ -409,6 +454,7 @@ $(document).ready(function () {
         onSelect: function (date) {
             $('#birthdate').focus();
             $('#birthdate').blur();
+            $('#birthdate').datepicker("hide");
             if ($(this).val().indexOf("_") == -1) {
                 $('#_birthdate').removeClass('lbl');
                 $('#_birthdate').addClass('lbl2');
@@ -444,27 +490,11 @@ $(document).ready(function () {
             $("select#passport_yyyy").val(birth[2]);
         }
     });
-
     $('#next1').click(function () { 
         if (validate1()) { 
             $('input[name="step"]').val('1'); 
-
-            var client_w2 = screen.width; 
-            var pathname2 = window.location.pathname,  substring3 = "form";
-                
-            if(pathname2.indexOf(substring3) !== -1)
-            {
-                if(Number(client_w2) > 767)
-                {
-                    //document.getElementById( "sp_footer1" ).style.display = "none"; 
-                    document.getElementById( "sp_footer2" ).style.display = "inline";  
-                }
-                else
-                {
-                    //document.getElementById( "sp_footer1" ).style.display = "none"; 
-                    document.getElementById( "sp_footer2" ).style.display = "none";  
-                }
-            }   
+            $('.spec_footer4').css('display','none');
+            $('.spec_footer5').css('display','none');
             send_form(); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstTabContent').removeClass('in active');
@@ -479,10 +509,9 @@ $(document).ready(function () {
         setcookies();
         $('select[name="reg_type"]').change();
     });
-
     $('#next2').click(function () {
         if (validate2()) {
-            $('input[name="step"]').val('2');        
+            $('input[name="step"]').val('2');
             send_form();
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondTabContent').removeClass('in active');
@@ -495,15 +524,12 @@ $(document).ready(function () {
         showBzzz = false;
         setcookies();
     });
-
     $('#getmoney').click(function () {
         if (validate()) { 
-            $('input[name="step"]').val('3');                       
-            //$('#form-modal').show();
+            $('input[name="step"]').val('3');
             send_form(true, '/lk');
             markTarget('form-step-3');
             $('#anketa').submit();
-            //window.location = '/thanks';
         }
         showBzzz = false;
         setcookies();
@@ -534,8 +560,7 @@ $(document).ready(function () {
     });
     $('#work').change(function () {
         if ($('#work').val() == 'ПЕНСИОНЕР') {
-            //console.log('ПЕНСИОНЕР');
-            $('#work_name_help').html('укажите последнее место работы');
+            $('#work_name_help').html('');
         } else {
             $('#work_name_help').html('');
         }

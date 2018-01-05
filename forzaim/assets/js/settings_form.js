@@ -485,6 +485,7 @@ $(document).ready(function () {
         onSelect: function (date) {
             $('#birthdate').focus();
             $('#birthdate').blur();
+            $('#birthdate').datepicker("hide");
             if ($(this).val().indexOf("_") == -1) {
                 $('#_birthdate').removeClass('lbl');
                 $('#_birthdate').addClass('lbl2');
@@ -564,7 +565,7 @@ $(document).ready(function () {
 
     $('#next2').click(function () {
         if (validate2()) {
-            $('input[name="step"]').val('2');        
+            $('input[name="step"]').val('2');
             send_form();
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('.ex-step-counter').removeClass('ex-on-second-step').addClass('ex-on-last-step');

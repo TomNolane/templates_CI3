@@ -390,8 +390,7 @@ elseif ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')  {
     
     if($this->uri->segment(1) == 'form')
     {
-        echo ' <script>
-    $("#work").change(function(){
+    echo ' <script>$("#work").change(function(){
         if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
         { 
             $("#work_name").addClass("valid");

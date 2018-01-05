@@ -23,77 +23,74 @@ $this->load->model('pixel/pixel_model', 'pixel');
 $pixel = $this->pixel->stat('zaimcoin.ru');
 ?>
 <div class="container ex-spasibo">
-            <h1>Вам автоматически одобрен займ 
-                в следующих организациях:</h1>
-            <table class="hidden-xs hidden-sm">
-                <thead><tr>
-                <th scope="col">МФО</th>
-                <th scope="col">Процентная ставка</th>
-                <th scope="col">Максимальный срок</th>
-                <th scope="col">Максимальная сумма</th>
-                <th scope="col"></th>
-                </tr>
-                </thead>
-                <tbody>
+    <h1>Вам автоматически одобрен займ 
+        в следующих организациях:</h1>
+    <table class="hidden-xs hidden-sm">
+        <thead><tr>
+        <th scope="col">МФО</th>
+        <th scope="col">Процентная ставка</th>
+        <th scope="col">Максимальный срок</th>
+        <th scope="col">Максимальная сумма</th>
+        <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php 
+            function plural_type($n) { 
+                return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
+            } 
 
-                <?php 
+            $_plural_years = array('год', 'года', 'лет');
+            $_plural_months = array('месяц', 'месяца', 'месяцев');
+            $_plural_days = array('дня', 'дня', 'дней');
+            $_plural_times = array('раз', 'раза', 'раз');
 
-                    function plural_type($n) { 
-                        return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
-                    } 
+            foreach($data as $item)
+            {
+                $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
+                $item['link'] = str_replace("#site", $domen, $item['link']);
 
-                    $_plural_years = array('год', 'года', 'лет');
-                    $_plural_months = array('месяц', 'месяца', 'месяцев');
-                    $_plural_days = array('дня', 'дня', 'дней');
-                    $_plural_times = array('раз', 'раза', 'раз');
+            echo '<tr>
+                        <td data-label="МФО"><div><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><img class="img-responsive  lk-img '.$item['title'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'""></a></div></td>
+                        <td data-label="Процентная ставка"><div>от '.$item['percent'].'%</div></td>
+                        <td data-label="Максимальный срок"><div> до '.$item['period'].' '.$_plural_days[plural_type($item['period'])].' </div></td>
+                        <td data-label="Максимальная сумма"><div>'.number_format($item['amount'],0,'',' ').' рублей</div></td>
+                        <td data-label=""><div>
+                        <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" class="ex-orange-btn" target="_blank">Получить деньги</a>
+                        </div></td>
+                    </tr>';  
+            }
+        ?>
+        </tbody>
+    </table>
+    <table class="hidden-md hidden-lg"> 
+        <tbody>
 
-                    foreach($data as $item)
-                    {
-                        $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-                        $item['link'] = str_replace("#site", $domen, $item['link']);
+        <?php 
+            foreach($data as $item)
+            {
+                $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
+                $item['link'] = str_replace("#site", $domen, $item['link']);
 
-                    echo '<tr>
-                                <td data-label="МФО"><div><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><img class="img-responsive  lk-img '.$item['title'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'""></a></div></td>
-                                <td data-label="Процентная ставка"><div>от '.$item['percent'].'%</div></td>
-                                <td data-label="Максимальный срок"><div> до '.$item['period'].' '.$_plural_days[plural_type($item['period'])].' </div></td>
-                                <td data-label="Максимальная сумма"><div>'.number_format($item['amount'],0,'',' ').' рублей</div></td>
-                                <td data-label=""><div>
-                                <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" class="ex-orange-btn" target="_blank">Получить деньги</a>
-                                </div></td>
-                            </tr>';  
-                    }
-                ?>
-                </tbody>
-            </table>
-            <table class="hidden-md hidden-lg"> 
-                <tbody>
-
-                <?php 
-                    foreach($data as $item)
-                    {
-                        $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-                        $item['link'] = str_replace("#site", $domen, $item['link']);
-
-            echo '
-                            <tr> 
-                                <td><center> <a   href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
-                                <img src="/templates/common/img/offers/'.$item['img'].'.png" class="'.$item['img'].'" alt="'.$item['title'].'">
-                            </a></center></td>
-                                     
-                                </tr>  
-                                <tr>
-                                    <td>  
-                                            <div> Прооцентная ставка от '.$item["percent"].'% </div>
-                                            <div> Максимальная сумма '.$item["amount"].' рублей </div>
-                                            <div> Максимальный срок  '.$item["period"].' дней </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                <td><a style="color: #000000" href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')"   target="_blank"><button class="ex-orange-btn">Получить деньги</button></a></td>
-                                </tr>';}
-                ?>
-                </tbody>
-            </table>
+            echo '<tr> 
+                        <td><center> <a   href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
+                        <img src="/templates/common/img/offers/'.$item['img'].'.png" class="'.$item['img'].'" alt="'.$item['title'].'">
+                    </a></center></td>
+                                
+                        </tr>  
+                        <tr>
+                            <td>  
+                                    <div> Прооцентная ставка от '.$item["percent"].'% </div>
+                                    <div> Максимальная сумма '.$item["amount"].' рублей </div>
+                                    <div> Максимальный срок  '.$item["period"].' '.$_plural_days[plural_type($item['period'])].' </div>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td><a style="color: #000000" href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')"   target="_blank"><button class="ex-orange-btn">Получить деньги</button></a></td>
+                        </tr>';}
+        ?>
+        </tbody>
+    </table>
 </div>
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
