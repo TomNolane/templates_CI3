@@ -101,7 +101,6 @@ $pixel = $this->pixel->stat('rublimo.ru');
 <div class="container-fluid for_img hidden-xs">
     <div class="img_footer"></div>
 </div>
-
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080;  
 (&#1073;&#1077;&#1079; &#1044;&#1086;&#1080;) Conversion Page -->
@@ -119,28 +118,6 @@ src="//www.googleadservices.com/pagead/conversion.js">
 <div style="display:inline;">
 <img height="1" width="1" style="border-style:none;" alt=""  
 src="//www.googleadservices.com/pagead/conversion/832752826/?label=rzldCPv3u3gQupmLjQM&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
-<!-- Google Code for  
-&#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
-Page -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 841045015;
-var google_conversion_language = "en";
-var google_conversion_format = "3";
-var google_conversion_color = "ffffff";
-var google_conversion_label = "eJmwCJan2HMQl6iFkQM";
-var google_remarketing_only = false;
-/* ]]> */
-</script>
-<script type="text/javascript"  
-src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt=""  
-src="//www.googleadservices.com/pagead/conversion/841045015/?label=eJmwCJan2HMQl6iFkQM&amp;guid=ON&amp;script=0"/>
 </div>
 </noscript>
 <?php require 'footer.php'; ?>

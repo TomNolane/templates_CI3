@@ -104,28 +104,6 @@ $pixel = $this->pixel->stat('dengoman.ru');
             </div>
         </div>
     </div>
-    <!-- Google Code for  
-&#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
-Page 
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 841044814;
-var google_conversion_language = "en";
-var google_conversion_format = "3";
-var google_conversion_color = "ffffff";
-var google_conversion_label = "NCuSCOvs6nMQzqaFkQM";
-var google_remarketing_only = false;
-/* ]]> */
-</script>
-<script type="text/javascript"  
-src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt=""  
-src="//www.googleadservices.com/pagead/conversion/841044814/?label=NCuSCOvs6nMQzqaFkQM&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript> -->
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080;  
 (&#1041;&#1077;&#1079; &#1044;&#1054;&#1048;) Conversion Page -->
