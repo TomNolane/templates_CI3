@@ -46,6 +46,10 @@ switch($this->uri->segment(1))
 		$my_title = 'Соглашение на Обработку Данных для Получения Займа'; 
 		$description = 'Условия получения мгновенных займов и кредитов с помощью лучшего онлайн сервиса  Forzaim с самой низкой процентной ставкой';
 		break;
+	case 'money':
+		$my_title = 'Способы получения денег'; 
+		$description = 'Способы получения денег на банковскую карту, яндекс деньги, qiwi - кошелек, через банковский перевод или через систему Contact';
+		break;
 	case 'rules': 
 		$my_title = 'Основные Правила для Предоставления Срочных Займов'; 
 		$description = 'Онлайн сервис  Forzaim предоставления срочных займов и кредитов с самой низкой процентной ставкой предоставляет условия для получения займов';
@@ -82,6 +86,7 @@ switch($this->uri->segment(1))
 	elseif ($this->uri->segment(1) == 'zaim-yandex') require 'internal-zaim-yandex.php';
 	elseif ($this->uri->segment(1) == 'zaim-contact') require 'internal-zaim-contact.php';
 	elseif ($this->uri->segment(1) == 'zaim-card') require 'internal-zaim-card.php';
+	elseif ($this->uri->segment(1) == 'money') require 'internal-money.php';
 	elseif ($this->uri->segment(1) == 'microloans-organization') require 'internal-microloans-organization.php';
 	elseif ($this->uri->segment(1) == 'credits-history') require 'internal-credits-history.php';
 	elseif ($this->uri->segment(1) == 'urgently-money') require 'internal-urgently-money.php';

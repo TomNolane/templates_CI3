@@ -10,9 +10,13 @@ switch($this->uri->segment(1))
 		$my_title = 'Часто задаваемые вопросы, возникающие при получении займов'; 
 		$description = 'В данном разделе Вы найдете ответы на самые часто задаваемые вопросы об условиях получения срочных займах и особенностях предоставления данных';
 		break;
-	case 'oferta': 
+	case 'oferta':
 		$my_title = 'Публичная Оферта Онлайн Сервиса по Предоставлению Займов'; 
 		$description = 'Сайт имеет право изменить условия настоящего Соглашения разместив на сайте новою редакцию Соглашения. Изменения вступают в силу через 5 (пять) рабочих дней';
+		break;
+	case 'money':
+		$my_title = 'Способы получения денег'; 
+		$description = 'Способы получения денег на банковскую карту, яндекс деньги, qiwi - кошелек, через банковский перевод или через систему Contact';
 		break;
 	case 'zaim-card': 
 		$my_title = 'Мгновенные Займы на Банковскую Карту Онлайн без Отказа'; 
@@ -91,6 +95,7 @@ switch($this->uri->segment(1))
 	elseif ($this->uri->segment(1) == 'zaim-contact') require 'internal-zaim-contact.php';
 	elseif ($this->uri->segment(1) == 'zaim-card') require 'internal-zaim-card.php';
 	elseif ($this->uri->segment(1) == 'microloans') require 'internal-microloans.php';
+	elseif ($this->uri->segment(1) == 'money') require 'internal-money.php';
 	elseif ($this->uri->segment(1) == 'credits-history') require 'internal-credits-history.php';
 	elseif ($this->uri->segment(1) == 'lender-and-borrower') require 'internal-lender-and-borrower.php';
 	elseif ($this->uri->segment(1) == 'allarticles') require 'internal-allarticles.php';
