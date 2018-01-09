@@ -79,39 +79,8 @@ $pixel = $this->pixel->stat('dengimo.ru');
                     <li class="col-md-2 col-sm-6 for_soc"><a href="#"> </a></li>
                 </ul>
             </div>
-        </div>         
+        </div>
      </div>
-    <!-- Modal -->
-    <div class="modal fade" id="ki" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                            <div class="modal-header text-center">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h1 class="modal-title" id="feedbackModalLabel"></h1>
-                                    <p>Узнайте свой кредитный рейтинг, чтобы подобрать персональное кредитное предложение</p>
-                            </div>
-                            <div class="modal-body text-center">
-                                    <div class="row">
-                                            <div class="col-md-12">
-                                                <img src="/templates/dengimo/img/lk/ki.jpg" alt="ki.jpg">                                             
-                                                    <div class="col-md-6 text-right">
-                                                        <button class="btn btn-default btn-sm btn-ki" data-dismiss="modal">Позже</button>
-                                                    </div>
-                                                    <div class="col-md-6 text-left">
-                                                        <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/quickpay/button-widget?account=41001645246811&quickpay=small&any-card-payment-type=on&button-text=02&button-size=l&button-color=white&targets=%D0%9A%D1%80%D0%B5%D0%B4%D0%B8%D1%82%D0%BD%D0%B0%D1%8F+%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F&default-sum=299&successURL=https%3A%2F%2Fdengimo.ru%2Fki%2Fpay%2F<?=$_COOKIE['id']?>&label=<?=$_COOKIE['id']?>" width="300" height="72"></iframe>                                                    
-                                                    </div>
-                                                    <div class="text-ki text-left">
-                                                        <p style="color: green;">Внимание!</p>
-                                                        <p>Стоимость услуги 299 рублей (199 руб. если вы нас порекомендовали) Передача полученных конфеденциальных данных держателя карты (реквизиты, регистрационные данные, и т.д.) осуществляется по закрытым сетям данных, сертифицированным международными стандартами банковской безопасности PCI DSS 1 уровня.</p>
-                                                        <p>Безопасность платежей осуществляется с помощью банка экваера функционирующего на основе современных протоколов и технологий, разработанных международными платежными системами VISA International и Mastercard International (3D Secure USAF) Безопасность передаваемой информации обеспечивается с помощью современных протоколов безопасности в Интернет (SSL/TLS)</p>  
-                                                    </div>
-                                                <img src="/templates/dengimo/img/zaim/1.png" alt="1.png">   
-                                            </div>
-                                    </div>
-                            </div>
-                    </div>
-            </div>
-    </div>
 <?php 
 ?>  
 <!-- Google Code for  

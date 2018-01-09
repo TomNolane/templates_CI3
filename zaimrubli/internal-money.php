@@ -69,15 +69,15 @@
             </div>
             <div class="ex-money-tab">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#home"><img src="assets/img/visa.png" alt=""></a></li>
-                    <li><a data-toggle="tab" href="#menu1"><img src="assets/img/yandex.png" alt=""></a></li>
-                    <li><a data-toggle="tab" href="#menu2"><img src="assets/img/qiwi.png" alt=""></a></li>
-                    <li><a data-toggle="tab" href="#menu3"><img src="assets/img/contact.png" alt=""></a></li>
-                    <li><a data-toggle="tab" href="#menu4"><img src="assets/img/bank-building.png" alt=""></a></li>
+                    <li class="active"><a data-toggle="tab" href="#home"><img src="/templates/zaimrubli/assets/img/visa.png" alt="visa.png"></a></li>
+                    <li><a data-toggle="tab" href="#menu1"><img src="/templates/zaimrubli/assets/img/yandex.png" alt="yandex.png"></a></li>
+                    <li><a data-toggle="tab" href="#menu2"><img src="/templates/zaimrubli/assets/img/qiwi.png" alt="qiwi.png"></a></li>
+                    <li><a data-toggle="tab" href="#menu3"><img src="/templates/zaimrubli/assets/img/contact.png" alt="contact.png"></a></li>
+                    <li><a data-toggle="tab" href="#menu4"><img src="/templates/zaimrubli/assets/img/bank-building.png" alt="bank-building.png"></a></li>
                 </ul>
                 <div class="tab-content">
                     <div id="home" class="tab-pane fade in active">
-                        <h2>На банковскую карту</h2>
+                        <h2 class="text-center">На банковскую карту</h2>
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
                                 <p>Данный способ займа по праву является самым признанным и распространённым. Его
@@ -110,7 +110,7 @@
                         </div>
                     </div>
                     <div id="menu1" class="tab-pane fade">
-                        <h2>На Яндекс.Деньги</h2>
+                        <h2 class="text-center">На Яндекс.Деньги</h2>
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
                                 <p>Для получения займа на Яндекс-кошелёк от вас не требуется ничего сложного.
@@ -152,7 +152,7 @@
                         </div>
                     </div>
                     <div id="menu2" class="tab-pane fade">
-                        <h2>На Qiwi кошелёк</h2>
+                        <h2 class="text-center">На Qiwi кошелёк</h2>
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
                                 <p>
@@ -181,7 +181,7 @@
                         </div>
                     </div>
                     <div id="menu3" class="tab-pane fade">
-                        <h2>Через систему Contact</h2>
+                        <h2 class="text-center">Через систему Contact</h2>
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
                                 <p>
@@ -212,7 +212,7 @@
                         </div>
                     </div>
                     <div id="menu4" class="tab-pane fade">
-                        <h2>На банковский счёт</h2>
+                        <h2 class="text-center">На банковский счёт</h2>
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
                                 <p>
@@ -287,21 +287,31 @@
             </div>
             <div class="ex-email">
                 <div class="ex-email-wraper">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label for="email">Подпишись на рассылку*</label>
+                <div class="row"> 
+                <div class="col-md-4">
+                    <label for="email">Подпишись на рассылку*</label>
+                </div>  
+                    <div class="col-md-6"> 
+                        <div class="hidden">
+                            <input type="text" id="feedback-name2" placeholder="Имя" title="Имя" value="хочу подписаться" required>
                         </div>
-                        <div class="col-md-6">
-                            <div class="ex-email-place">
-                                <input type="email" id="email" placeholder="email@gmail.com">
-                            </div>
-                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control index_specail2" id="feedback-email2" title="Email" placeholder="Введите ваш email" required> 
+                        </div></div> 
                         <div class="col-md-2">
-                            <div class="ex-for-button  ex-mb">
-                                <button class="ex-main-btn">Отправить</button>
-                            </div>
+                        <div class="form-group">
+                         <!-- Hidde this block -->
+                         <div class="hidden">
+                            <input type="text" class="form-control" id="feedback-phone2" placeholder="Телефон" title="Телефон" value="+7777777777" required>
                         </div>
-                    </div>
+                        <div class="hidden">
+                            <textarea class="form-control" id="feedback-comment2"  placeholder="Текст вашего сообщения" title="Текст вашего сообщения" required>Хочу подписаться на рассылку</textarea>
+                        </div>
+                        <!-- Hidde this block --> 
+                            <button type="button" id="feedback-send2" class="ex-main-btn">Отправить</button>
+                        </div>
+                    </div> 
+                </div>
                 </div>
                <p class="ex-int">*На указанную электронную почту вам будут приходить оповещения с лучшими условиями кредитования.
                     Вы не пропустите интересные и выгодные предложения!</p></div>

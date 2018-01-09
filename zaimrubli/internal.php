@@ -58,8 +58,10 @@ switch($this->uri->segment(1))
 		$my_title = 'Статьи о займах'; 
 		$description = 'Актуальные статьи о займах и кредитах. О том как правильно взять займ, погасить его, как  оформить заявку на кредит с плохой кредитной историей и многое другое.';
 		break;
-
-
+	case 'money':
+		$my_title = 'Способы получения денег'; 
+		$description = 'Способы получения денег на банковскую карту, яндекс деньги, qiwi - кошелек, через банковский перевод или через систему Contact';
+		break;
 	case 'fault':
 		$my_title = 'Самые частые ошибки заёмщиков'; 
 		$description = 'Чтобы избежать непредвиденных расходов, заёмщикам необходимо оградить себя от следующих частых ошибок.';
@@ -95,6 +97,7 @@ switch($this->uri->segment(1))
 	elseif ($this->uri->segment(1) == 'zaim-contact') require 'internal-zaim-contact.php';
 	elseif ($this->uri->segment(1) == 'zaim-card') require 'internal-zaim-card.php';
 	elseif ($this->uri->segment(1) == 'fault') require 'internal-fault.php';
+	elseif ($this->uri->segment(1) == 'money') require 'internal-money.php';
 	elseif ($this->uri->segment(1) == 'main-ways') require 'internal-main-ways.php';
 	elseif ($this->uri->segment(1) == 'term-loans') require 'internal-term-loans.php';
 	elseif ($this->uri->segment(1) == 'allarticles') require 'internal-allarticles.php';
