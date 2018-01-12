@@ -119,10 +119,6 @@ $("#feedback-email").suggestions({
 });
 $('input').on('validation', function (evt, valid) {
     if(valid){ 
-        if($(this)[0].name == 'birthdate' || $(this)[0].name == 'passportdate' || $(this)[0].name == 'passport_code' || $(this)[0].name == 'passport' || $(this)[0].name == 'passport_who' || $(this)[0].name == 'birthplace' || $(this)[0].name == 'city' || $(this)[0].name == 'street' || $(this)[0].name == 'building' || $(this)[0].name == 'work_experience' || $(this)[0].name == 'work_occupation' || $(this)[0].name == 'work_phone' || $(this)[0].name == 'work_salary' || $(this)[0].name == 'work_city' || $(this)[0].name == 'work_street' || $(this)[0].name == 'work_house')
-            {
-                // $(this).css('margin-bottom','0px');
-            } 
             $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
             $(this).removeClass('er');
             $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
@@ -130,7 +126,7 @@ $('input').on('validation', function (evt, valid) {
             $(this).parent().parent().prev().addClass('label_er').removeClass('label_true');
             $('#'+this.id+'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
             $(this).addClass('er');
-            $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
+            
             if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
             {
                 $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);

@@ -131,13 +131,7 @@ if(!isset($description))
          require "templates/forzaim/assets/css/style_lk.css";
          echo '</style>';
      }
-     ?> 
-     <!-- javascript -->
-     <?php
-     echo '<script>';
-     require 'templates/forzaim/assets/js/oSpP.js';
-     echo '</script>';
-     ?> 
+     ?>
      <!--[if lte IE 9]>
      <script src="/modules/html5shiv/html5shiv.js"></script>
      <![endif]-->

@@ -6,6 +6,48 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 
 if($this->uri->segment(1) != 'form')
 {
+    echo '<!-- mobile Yandex.RTB R-A-260582-2 -->
+    <div class="hidden-lg hidden-md">
+    <div id="yandex_rtb_R-A-260582-2"></div></div>
+    <script type="text/javascript">
+    (function(w, d, n, s, t) {
+    w[n] = w[n] || [];
+    w[n].push(function() {
+    Ya.Context.AdvManager.render({
+    blockId: "R-A-260582-2",
+    renderTo: "yandex_rtb_R-A-260582-2",
+    async: true
+    });
+    });
+    t = d.getElementsByTagName("script")[0];
+    s = d.createElement("script");
+    s.type = "text/javascript";
+    s.src = "//an.yandex.ru/system/context.js";
+    s.async = true;
+    t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+    </script>
+    <!-- Desktop Yandex.RTB R-A-260582-1 -->
+    <div class="hidden-xs hidden-sm">
+    <div id="yandex_rtb_R-A-260582-1"></div></div>
+    <script type="text/javascript">
+    (function(w, d, n, s, t) {
+    w[n] = w[n] || [];
+    w[n].push(function() {
+    Ya.Context.AdvManager.render({
+    blockId: "R-A-260582-1",
+    renderTo: "yandex_rtb_R-A-260582-1",
+    async: true
+    });
+    });
+    t = d.getElementsByTagName("script")[0];
+    s = d.createElement("script");
+    s.type = "text/javascript";
+    s.src = "//an.yandex.ru/system/context.js";
+    s.async = true;
+    t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+    </script>';
     echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Форзайм -->
     <ins class="adsbygoogle text-center"
@@ -546,30 +588,29 @@ if ($this->uri->segment(1) == 'form')
         echo '    
     <!-- Modal Popup-->
     <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-                <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                                <div class="modal-header text-center">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                                </div>
-                                <div class="modal-body text-center">
-                                        <div class="row">
-                                                <div class="col-md-12">
-                                                    <img src="templates/common/img/popup.jpg" alt="popup.jpg">                                             
-                                                    <h2>'.$popup_text.'</h2>
-                                                    <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
                 </div>
+                <div class="modal-body text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="templates/common/img/popup.jpg" alt="popup.jpg">                                             
+                            <h2>'.$popup_text.'</h2>
+                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-            <script type= " text/javascript">
-                $(window).load(function(){
-                    $("#popup").modal("show");
-                });
-               
-            </script>';
+    <script type= " text/javascript">
+        $(window).load(function(){
+            $("#popup").modal("show");
+        });
+    </script>';
     }
 }
 

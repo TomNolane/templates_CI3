@@ -40,7 +40,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="col-md-4">
                             <div class="row">
@@ -63,7 +62,6 @@
             </div>
         </div>
     </div>
-
     <ul class="ex-tab-steps">
         <li class="ex-step-active-first ">Личные данные</li>
         <li>шаг 2</li>
@@ -186,4 +184,5 @@
                 </div>
             </a>
         </div>
+    </div>
 </section>
