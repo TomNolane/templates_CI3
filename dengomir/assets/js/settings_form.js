@@ -316,31 +316,32 @@ $(document).ready(function () {
         modules: 'date,sanitize'
     });
     $('input').on('validation', function (evt, valid) {
-        if(valid){ 
-                $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
-                $(this).removeClass('er');
-                $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
+        if(valid)
+        { 
+            $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
+            $(this).removeClass('er');
+            $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
 
-                if(this.name == 'phone')
-                {
-                    ('#spec_form2').removeClass('label_er').addClass('label_true');
-                } 
+            if(this.name == 'phone')
+            {
+                ('#spec_form2').removeClass('label_er').addClass('label_true');
+            }
 
-            } else { 
-                $(this).parent().parent().prev().addClass('label_er').removeClass('label_true');
-                $('#'+this.id+'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
-                $(this).addClass('er');
-                
-                if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
-                {
-                    $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
-                } 
+        } else { 
+            $(this).parent().parent().prev().addClass('label_er').removeClass('label_true');
+            $('#'+this.id+'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
+            $(this).addClass('er');
+            
+            if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
+            {
+                $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
+            }
 
-                if(this.name == 'phone')
-                {
-                    ('#spec_form2').removeClass('label_true').addClass('label_er');
-                } 
-            } 
+            if(this.name == 'phone')
+            {
+                ('#spec_form2').removeClass('label_true').addClass('label_er');
+            }
+        }
     });
     $('#phone').blur(function () { 
         $.ajax({
@@ -396,7 +397,6 @@ $(document).ready(function () {
             url: '/validate/passport_code/',
             data: 'passport_code=' + $('#passport_code').val(),
             success: function (data) {
-                //console.log(data);    
                 validator = JSON.parse(data);
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
@@ -410,7 +410,6 @@ $(document).ready(function () {
             lang++;
             var input = $(this),
                 text = input.val().replace(/[^а-яёА-ЯЁ0-9-_\s]/g, "");
-            //text = '';
             input.val(text);
             if (lang == 1) {
                 $(this).parent().addClass('ex-error');
@@ -422,7 +421,6 @@ $(document).ready(function () {
             $(this).next("span").text(' ');
         } 
     });
-
     $('#email').on('keyup keypress', function (e) {
         if ($(this).val().match(/([а-яёА-ЯЁ]+)/)) {
             lang++;
@@ -514,7 +512,6 @@ $(document).ready(function () {
             $("select#passport_yyyy").val(birth[2]);
         }
     });
-
     $('#next1').click(function () { 
         if (validate1()) { 
             $('input[name="step"]').val('1'); 
@@ -536,7 +533,7 @@ $(document).ready(function () {
     }); 
     $('#next2').click(function () {
         if (validate2()) {
-            $('input[name="step"]').val('2');        
+            $('input[name="step"]').val('2');
             send_form();
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('.ex-step-counter').removeClass('ex-on-second-step').addClass('ex-on-last-step');
@@ -550,7 +547,6 @@ $(document).ready(function () {
         showBzzz = false;
         setcookies();
     });
-
     $('#getmoney').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');

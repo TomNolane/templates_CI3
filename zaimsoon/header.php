@@ -132,14 +132,6 @@ if(!isset($description))
          echo '</style>';
      }
      ?>
-
-     <!-- javascript -->
-     <?php
-        echo '<script>';
-        //require 'templates/zaimsoon/assets/js/oSpP.js';
-        echo '</script>';
-     ?>
-
      <!--[if lte IE 9]>
      <script src="/modules/html5shiv/html5shiv.js"></script>
      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

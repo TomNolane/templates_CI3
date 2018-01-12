@@ -130,13 +130,7 @@ if(!isset($description))
         require 'templates/zaimhome/assets/css/style_lk.css';
         echo '</style>';
     }
-    ?> 
-    <!-- javascript -->
-    <?php
-    echo '<script>';
-    require 'templates/zaimhome/assets/js/oSpP.js';
-    echo '</script>';
-    ?> 
+    ?>
     <!--[if lte IE 9]>
     <script src="/modules/html5shiv/html5shiv.js"></script>
     <![endif]-->

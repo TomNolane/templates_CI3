@@ -7,13 +7,7 @@
             "type": "d",
             "name": "bzaim",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "lk.php",
-                    "size": 4803
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
@@ -43,13 +37,7 @@
             "type": "d",
             "name": "dengoman",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "lk.php",
-                    "size": 7188
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
@@ -61,25 +49,13 @@
             "type": "d",
             "name": "edenga",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "lk.php",
-                    "size": 7598
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
             "name": "fanzaim",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "lk.php",
-                    "size": 4492
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
@@ -103,13 +79,7 @@
             "type": "d",
             "name": "rublimo",
             "size": 4096,
-            "files": [
-                {
-                    "type": "-",
-                    "name": "lk.php",
-                    "size": 6383
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",

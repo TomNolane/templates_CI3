@@ -1,0 +1,133 @@
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 3em;
+  padding: 16px 8px;
+  border: 0;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.97);
+  color: #212121;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-label fieldset {
+  position: relative;
+}
+.form-label fieldset:first-child input {
+  border-radius: 4px 4px 0 0;
+}
+.form-label fieldset:last-child input {
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+}
+.form-label fieldset + fieldset {
+  border-top: 1px solid #ddd;
+}
+.form-label label {
+  position: absolute;
+  top: 15px;
+  left: 8px;
+  color: #909090;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-css-label input[data-empty="false"], .form-css-label input:valid, .form-css-label input:focus {
+  padding: 22px 8px 10px;
+}
+.form-css-label input:focus {
+  outline: 0;
+  background: white;
+}
+.form-css-label input[data-empty="false"] + label, .form-css-label input:valid + label, .form-css-label input:focus + label {
+  color: #5856D6;
+  font-weight: 700;
+  font-size: 12px;
+  -webkit-transform: translate3d(0, -10px, 0);
+          transform: translate3d(0, -10px, 0);
+}
+
+.form-js-label input[data-empty="false"], .form-js-label input:focus {
+  padding: 22px 8px 10px;
+}
+.form-js-label input:focus {
+  outline: 0;
+  background: white;
+}
+.form-js-label input[data-empty="false"] + label, .form-js-label input:focus + label {
+  color: #5856D6;
+  font-weight: 700;
+  font-size: 12px;
+  -webkit-transform: translate3d(0, -10px, 0);
+          transform: translate3d(0, -10px, 0);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  background: url("http://7b1g76.com1.z0.glb.clouddn.com/label-bg.jpg") 50% 50%;
+  background-size: cover;
+  color: #212121;
+}
+
+a {
+  color: #adff2f;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  width: 80%;
+  min-width: 320px;
+  margin: 100px auto;
+  text-align: center;
+  text-shadow: -1px -1px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  background: #000;
+}
+.section h2 {
+  margin: 0 0 .5em;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.section p {
+  margin: 0 0 1em;
+}
+.section form {
+  max-width: 320px;
+  margin: 0 auto 20px;
+}
+@media screen and (max-width:770px) {
+    .docs{
+        display: none;
+    }
+}
