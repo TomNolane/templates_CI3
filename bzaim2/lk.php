@@ -22,10 +22,10 @@ $this->load->model('pixel/pixel_model', 'pixel');
 $pixel = $this->pixel->stat('bzaim5.ru');
 
 ?>
-<header>
-<div>
-    <div class="container">
-        <section class="form">
+<div class="container">
+<section class="background">
+        <div class="content-wrapper wrapper2">
+            <div style="visibility: hidden; margin-top: 25vh;" class="special hidden-sx hidden-sm"></div>
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
                 <?php
@@ -73,9 +73,46 @@ $pixel = $this->pixel->stat('bzaim5.ru');
                 </div>
             </div>
         </section>
-    </div>
-</div>
-</header>
+        </div>
+        <?php require 'menu3.php'; ?>
+        <footer>
+            <div class="col-md-12 col-xs-12">
+                <div class="row">
+                    <div class="col-md-2 col-xs-12">
+                        <div>
+                            <a href="/">
+                                <img src="/templates/bzaim2/assets/img/logo-f.png" align="" alt="logo" class="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12 spec_footer4 hidden-xs hidden-sm">
+                        <p>Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург,
+                            ул. Осипенко, 12, оф 201
+                            <a href="mailto:support@bzaim5.ru" target="_blank">
+                                | support@bzaim5.ru</a>
+                            <span class="hidden-xs hidden-sm"> | +7(495) 006 19 61</span>
+                        </p>
+                    </div>
+                    <div class="col-md-6 hidden-xs hidden-sm spec_footer5">
+                        <div class="row">
+                            <div class="col-sm-12 great-support-box wow fadeInLeft">
+                                <div class="great-support-box-text great-support-box-text-left">
+                                    <p class="footer_spec99">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61
+                                        до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная
+                                        0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10
+                                        недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате
+                                        31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного
+                                        погашения.
+                                        <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+</div> 
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103;  
 (&#1073;&#1077;&#1079; &#1076;&#1086;&#1080;) Conversion Page -->

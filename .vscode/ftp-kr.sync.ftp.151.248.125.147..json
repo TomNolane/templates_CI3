@@ -7,7 +7,13 @@
             "type": "d",
             "name": "bzaim",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "internal-docs.php",
+                    "size": 33673
+                }
+            ]
         },
         {
             "type": "d",
@@ -25,13 +31,35 @@
             "type": "d",
             "name": "dengibystra",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "internal-agreement.php",
+                    "size": 9005
+                },
+                {
+                    "type": "-",
+                    "name": "internal-contract.php",
+                    "size": 9293
+                }
+            ]
         },
         {
             "type": "d",
             "name": "dengimo",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "internal-agree.php",
+                    "size": 8493
+                },
+                {
+                    "type": "-",
+                    "name": "internal-docs.php",
+                    "size": 29344
+                }
+            ]
         },
         {
             "type": "d",
@@ -49,7 +77,13 @@
             "type": "d",
             "name": "edenga",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "internal-docs.php",
+                    "size": 39392
+                }
+            ]
         },
         {
             "type": "d",
@@ -67,7 +101,13 @@
             "type": "d",
             "name": "godzaim",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "internal-docs.php",
+                    "size": 32044
+                }
+            ]
         },
         {
             "type": "d",
@@ -79,19 +119,37 @@
             "type": "d",
             "name": "rublimo",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "internal-docs.php",
+                    "size": 18262
+                }
+            ]
         },
         {
             "type": "d",
             "name": "vkredito",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "internal-docs.php",
+                    "size": 30275
+                }
+            ]
         },
         {
             "type": "d",
             "name": "zaimcoin",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "internal-agree.php",
+                    "size": 10719
+                }
+            ]
         },
         {
             "type": "d",
@@ -103,13 +161,30 @@
             "type": "d",
             "name": "zaimhunter",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "internal-agree.php",
+                    "size": 9953
+                },
+                {
+                    "type": "-",
+                    "name": "internal-soglasie.php",
+                    "size": 9796
+                }
+            ]
         },
         {
             "type": "d",
             "name": "zaimol",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "-",
+                    "name": "internal-denial.php",
+                    "size": 8524
+                }
+            ]
         },
         {
             "type": "d",
