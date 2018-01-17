@@ -113,32 +113,19 @@ case 'errors':
     $my_title = '5 типичных ошибок заемщиков'; 
     $description = 'Как бы срочно не хотелось получить микрозайм, потратьте немного времени на изучение договора перед его оформлением. Это избавит вас от неожиданных переплат, а также поможет сохранить хорошую кредитную историю.';
     break;
-case 'articles': 
+case 'allarticles': 
     $my_title = 'Статьи о займах'; 
     $description = 'Актуальные статьи о займах и кредитах. О том как правильно взять займ, погасить его, как  оформить заявку на кредит с плохой кредитной историей и многое другое.';
     break;
 default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'BZAIM5 - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
 }
- require 'header.php'; ?>
 
-<header>
-    <div class="p">
-        <div class="clearfix">&nbsp;</div>
-            <div class="container">
-                    <div class="row">
-                            <div class="col-md-12 col-sm-12 internal">
-                                    <?php
-                                    if ($this->uri->segment(1) == 'about') require 'internal-about.php';
-                                    elseif ($this->uri->segment(1) == 'docs') require 'internal-docs.php';
-                                    elseif ($this->uri->segment(1) == 'contacts') require 'internal-contacts.php';
-                                    elseif ($this->uri->segment(1) == 'faq') require 'internal-faq.php';
-                                    elseif ($this->uri->segment(1) == 'article') require 'internal-article.php';
-                                    ?>
-                            </div>
-                    </div>
-            </div>
-        <div class="clearfix">&nbsp;</div>
-        <div class="clearfix">&nbsp;</div>
-    </div>
-</header> 
-<?php require 'footer.php'; ?>
+require 'header.php'; 
+
+if ($this->uri->segment(1) == 'about') require 'internal-about.php';
+elseif ($this->uri->segment(1) == 'docs') require 'internal-docs.php';
+elseif ($this->uri->segment(1) == 'contacts') require 'internal-contacts.php';
+elseif ($this->uri->segment(1) == 'faq') require 'internal-faq.php';
+elseif ($this->uri->segment(1) == 'allarticles') require 'internal-allarticles.php';
+
+require 'footer.php'; ?>
