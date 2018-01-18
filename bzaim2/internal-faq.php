@@ -25,8 +25,7 @@
             <p class="content2 text-left"><span class="h3">Я пенсионер/студент, могу ли я оформить у Вас заявку?</span><br>
                 <span>Да, Вы имеете возможность подать заявку в нашей компании.</span><br>
                 </p>
-        </div>
-        <?php require 'menu2.php'; ?>
+        </div> 
     </section>
     <section class="background">
         <div class="content-wrapper wrapper2">
@@ -46,8 +45,7 @@
             <p class="content2 text-left"><span class="h3">Могу ли я подать заявку на еще один займ, если предыдущий займ не погашен?</span><br>
                 <span>Чтобы подать заявку еще на один займ, Вы должны погасить предыдущий. Данное условие необходимо для проверки статуса Вашей платежеспособности.</span><br>
             </p>
-        </div>
-        <?php require 'menu3.php'; ?>
+        </div> 
         <footer>
             <div class="col-md-12 col-xs-12">
                 <div class="row">
