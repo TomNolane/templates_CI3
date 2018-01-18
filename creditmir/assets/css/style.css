@@ -13908,6 +13908,7 @@ main.ex-offers .ex-offers-content {
 main.ex-offers .ex-off-block p .fa {
   font-size: 20px;
   margin: 0 3px;
+  color: darkorange;
 }
 /* line 19, ../sass/desktop/offers.scss */
 main.ex-offers .ex-off-block figure {

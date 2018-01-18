@@ -66,6 +66,9 @@ if(!isset($description))
      echo '<style>';
      require 'templates/zaimrubli/assets/css/suggestions.min.css';
      echo '</style>'; 
+     echo '<style>';
+     require 'templates/zaimrubli/assets/css/font-awesome.min.css';
+     echo '</style>'; 
      echo '<style>'; 
      echo '.tip-twitter {
          opacity:0.8;

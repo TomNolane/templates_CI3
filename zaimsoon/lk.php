@@ -45,9 +45,9 @@
                 <figure class="text-center">
                     <div class="ex-wrapper text-center">
                         <p class="text-right">
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star ex-checked-stars"></span>
+                            <span class="fa fa-star ex-checked-stars"></span>
+                            <span class="fa fa-star ex-checked-stars"></span>
                             <span class="fa fa-star ex-checked-stars"></span>
                             <span class="fa fa-star ex-checked-stars"></span>
                         </p>

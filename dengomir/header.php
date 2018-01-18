@@ -65,8 +65,11 @@ if(!isset($description))
      echo '</style>';
      echo '<style>';
      require 'templates/dengomir/assets/css/suggestions.min.css';
-     echo '</style>'; 
-     echo '<style>'; 
+     echo '</style>';
+     echo '<style>';
+     require 'templates/dengomir/assets/css/font-awesome.min.css';
+     echo '</style>';
+     echo '<style>';
      echo '.tip-twitter {
          opacity:0.8;
          z-index:1000;

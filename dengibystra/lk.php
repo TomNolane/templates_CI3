@@ -43,7 +43,7 @@ $_plural_times = array('раз', 'раза', 'раз');
  foreach($data as $item){
      if($y >= 2) $y1 = $y2;
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-    $item['link'] = str_replace("#site", $domen, $item['link']);        
+    $item['link'] = str_replace("#site", $domen, $item['link']);
 echo ' <tr> 
                 <td><center>
                 <a   href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><img  src="/templates/common/img/offers/'.$item['img'].'.png" class="'.$item['img'].'" alt="'.$item['title'].'"></a>

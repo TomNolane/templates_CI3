@@ -65,7 +65,10 @@ if(!isset($description))
      echo '</style>';
      echo '<style>';
      require 'templates/creditmir/assets/css/suggestions.min.css';
-     echo '</style>'; 
+     echo '</style>';
+     echo '<style>';
+     require 'templates/creditmir/assets/css/font-awesome.min.css';
+     echo '</style>';
      echo '<style>'; 
      echo '.tip-twitter {
          opacity:0.8;

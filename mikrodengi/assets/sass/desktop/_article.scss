@@ -1,0 +1,39 @@
+.ex-article {
+  padding-top: 5px;
+  padding-bottom: 60px;
+  .ex-article-bg {
+    padding: 40px 100px 60px;
+    margin-bottom: 60px;
+    border-radius: 5px;
+    background-color: #fcfcfc;
+    @media (max-width: 1199px) {
+      padding: 20px 10px 30px;
+    }
+    h1 {
+      margin-top: 0;
+      margin-bottom: 40px;
+      color: #4a4a4a;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .image-cover {
+      margin-bottom: 39px;
+      height: 260px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    p {
+      font-size: 14px;
+      color: #333333;
+      font-weight: 400;
+      line-height: 20px;
+      margin-bottom: 30px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

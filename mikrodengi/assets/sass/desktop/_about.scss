@@ -1,0 +1,46 @@
+.ex-about {
+  padding-top: 5px;
+  padding-bottom: 20px;
+  .ex-about-content {
+    margin-bottom: 60px;
+    padding: 40px 100px 60px;
+    @include prefix(border-radius, 5px);
+    background-color: #fcfcfc;
+    h1 {
+      margin: 0;
+      color: #4a4a4a;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    p {
+      margin-bottom: 0;
+      padding-top: 40px;
+      color: #333333;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px
+    }
+    @media (max-width: 1199px) {
+      padding: 20px 10px;
+    }
+  }
+  .ex-info {
+    margin-top: 60px;
+    border-top: 1px solid #9b9b9b;
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 43px;
+      color: #30323e;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 20px;
+    }
+    p {
+      margin-bottom: 40px;
+      color: #30323e;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+}

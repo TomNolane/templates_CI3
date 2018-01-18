@@ -315,7 +315,7 @@ $("#email").suggestions({
         $('#work').change(function(){
             if($('#work').val() == 'ПЕНСИОНЕР' ){
                 //console.log('ПЕНСИОНЕР');
-                $('#work_name_help').html('укажите последнее место работы');
+                $('#work_name_help').html('');
             } else {
                 $('#work_name_help').html('');
             }
