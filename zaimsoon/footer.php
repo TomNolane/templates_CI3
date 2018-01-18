@@ -6,6 +6,10 @@
 
     if($this->uri->segment(1) != 'form')
     {
+        echo '<!--декстоп версия Yandex.RTB R-A-261295-1 -->
+        <div class="hidden-sm hidden-xs text-center"><div id="yandex_rtb_R-A-261295-1"></div></div>';
+        echo'<!-- мобильная версия Yandex.RTB R-A-261295-2 -->
+        <div class="hidden-md hidden-lg text-center"><div id="yandex_rtb_R-A-261295-2"></div></div>';
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Займсун -->
         <ins class="adsbygoogle text-center"
@@ -467,6 +471,7 @@
 <?php 
 if ($this->uri->segment(1) == 'form') 
 {
+    require 'templates/common/switch_form.php';
     require 'templates/common/js.php';
     if(isset($_GET['popup']) and $_GET['popup']==1 ){
         echo '

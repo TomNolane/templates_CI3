@@ -3301,3 +3301,8 @@ td.visible-print{display:table-cell !important;}
   #getmoney {
       cursor:pointer
   }
+  .ex-how-many{
+    color: #000 !important;
+    font-weight: 900 !important;
+    z-index: 7 !important;
+  }

@@ -474,18 +474,8 @@ include "header.php";
                 $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
             },
             onFinish: function() {
-               // $('.irs-single').attr('style', $('.irs-single').attr('style') + ';' + 'margin-left: 0px !important');
-               // $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
             }
-        }); 
-        // var c = getParameterByName('amount');
-        // var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());
-        // if (c != null) {
-        //     if (c > 100000 || c < 1000) {
-        //         c = 20000;
-        //     }
-        //     gg = c;
-        // }  
+        });
     $(document).ready(function () { 
         var c = getParameterByName('amount');
         var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());

@@ -517,7 +517,7 @@ if ($this->uri->segment(1) == 'form')
     echo '<script>';
     require 'templates/fanzaim/assets/js/loanCalculator.js';
     echo '</script>';
-    
+    require 'templates/common/switch_form.php';
     require 'templates/common/js.php';
     if(isset($_GET['popup']) and $_GET['popup']==1 ){
         echo '    
@@ -526,14 +526,14 @@ if ($this->uri->segment(1) == 'form')
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body text-center">
                     <div class="row">
                         <div class="col-md-12">
-                            <img src="templates/common/img/popup.jpg" alt="popup.jpg">                                             
+                            <img src="templates/common/img/popup.jpg" alt="popup.jpg">
                             <h2>'.$popup_text.'</h2>
-                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>
                         </div>
                     </div>
                 </div>

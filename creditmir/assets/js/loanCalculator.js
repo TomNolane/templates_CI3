@@ -15,7 +15,7 @@
         var current1 = gg,
         current2 = 130,
         current3 = 1000000,
-        current4 = 52,
+        current4 = 24,
         range1 = $("#rangeSlider1"),
         rangeUpperValue1 =  $('.ex-slider-val-1'),
         range2 = $("#rangeSlider2"),

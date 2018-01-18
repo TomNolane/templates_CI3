@@ -20,7 +20,7 @@
     
     //pixel stat
     $this->load->model('pixel/pixel_model', 'pixel');
-    $pixel = $this->pixel->stat('microdengi.com');
+    $pixel = $this->pixel->stat('mikrodengi.com');
 ?>
 <div class="ex-offerta">
     <div class="container">

@@ -165,7 +165,7 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
         })
     });</script>'; 
     echo '<script>';
-        require 'templates/dengibystra/assets/js/get_parameter.js';
+    require 'templates/dengibystra/assets/js/get_parameter.js';
     echo '</script>';
     require 'templates/common/detect.min.php';
 ?> 
@@ -348,11 +348,9 @@ elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
     } 
 </script>';
 }
-
 include "googleadservices_all.php"; 
 include "yandexmetrika.php"; 
 include "yandex_rtb.php";
-
 ?>
 </body>
 </html>
