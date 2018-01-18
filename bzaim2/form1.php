@@ -1,7 +1,4 @@
-<p class="content-title2 hidden-xs hidden-sm sign__word">Выбранная сумма
-	<?php echo $sum; ?> рублей (<a class="spec_a" href="/">изменить</a>)</p>
-<p class="content-title3 hidden-md hidden-lg sign__word">Выбранная сумма
-	<?php echo $sum; ?> рублей (<a class="spec_a" href="/">изменить</a>)</p>
+
 <p class="text-left form-group has-feedback upper"> 
 	<label class="h5 sign__word__red control-label label-required">Фамилия</label>
 	<span>

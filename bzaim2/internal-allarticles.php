@@ -193,7 +193,6 @@
                 <div class="col-xs-1"></div>
             </div>
         </div>
-        <?php require 'menu3.php'; ?>
         <footer>
             <div class="col-md-12 col-xs-12">
                 <div class="row">

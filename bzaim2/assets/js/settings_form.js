@@ -1,5 +1,5 @@
 var agreee = 1;
-$('#cdx2').click(function(){
+$('#agree').click(function(){
     switch(agreee)
     {
         case 1: agreee = 0; break;
@@ -298,19 +298,20 @@ $(document).ready(function () {
             }
         });
     });
-    $('#passport_code').blur(function () {
+    $('#passport_code').blur(function(){
         $.ajax({
-            type: 'POST',
-            url: '/validate/passport_code/',
-            data: 'passport_code=' + $('#passport_code').val(),
-            success: function (data) {
+        type: 'POST',
+        url: '/validate/passport_code/',
+        data: 'passport_code='+$('#passport_code').val(),
+        success: function(data){ 
                 validator = JSON.parse(data);
-                if (validator.status) {
+                if(validator.status){
                     $('#passport_who').val(validator.who);
-                } else {}
+                }else{
+                }
             }
         });
-    });
+      });
     var lang = 0;
     $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street, #feedback-name').on('keyup keypress', function (e) {
         if ($(this).val().match(/([a-zA-Z]+)/)) {
@@ -452,47 +453,49 @@ $(document).ready(function () {
     });
     $('#next').click(function(){
 		if (validate1()) {
-            send_form();
-            breaking = 1;
-            currentSlideNumber++;
-            $('#step2').removeClass('off');
-            markTarget('form-step-1');
-            nextItem();
-            slideDurationTimeout(slideDurationSetting);
-            breaking = 0;
-            $('#passport').focus();
+			send_form();
+			$('#step2').removeClass('off');
+            $('#pageh').text('Заполните паспортные данные');
+			$('.form-steps-green-line').addClass('step2');
+			$('.form-steps-line').show();
+            $('#form-steps a[href="#form2"]').tab('show');
+            $('.spec_footer4').css('visibility','hidden');
+            $('.spec_footer5').css('visibility','hidden'); 
+			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
+			markTarget('form-step-1');
 		}
 		showBzzz = false;
 		$('.reg_same').change();
-		$('select[name="reg_type"]').change();
-	});   
+		setcookies();
+        setcookie('i', $('#i').val());
+		$('select[name="reg_type"]').change(); 
+	});
 	$('#next2').click(function(){
 		if (validate2()) {
-            breaking = 1;
-            currentSlideNumber++;
             $('input[name="step"]').val('2');
 			send_form();
-            $('#step3').removeClass('off');
-            markTarget('form-step-2');
-            nextItem();
-            slideDurationTimeout(slideDurationSetting);
-            breaking = 0;
-            $('#work_name').focus();
+			$('#step3').removeClass('off');
+			$('.form-steps-green-line').addClass('step3');
+            $('#pageh').text('Заполните данные о работе');
+			$('.form-steps-line').show();
+			$('#form-steps a[href="#form3"]').tab('show');
+			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
+			markTarget('form-step-2'); 
 		}
 		showBzzz = false;
-	}); 
+		setcookies();
+	});
 	$('#form-send').click(function(){
-        $('#form-send').html('Обработка заявки <span class="glyphicon glyphicon-refresh glyphicon-spin"></span>');
-        if (validate()) {
+		if (validate()) {
             $('input[name="step"]').val('3');
-            $('#form-modal').show();
-            send_form(true, '/lk/');
-            markTarget('form-step-3');
-            window.location = '/lk';
-        }
-        showBzzz = false;
-        setcookies(); 
-    }); 
+			$('#form-modal').show();
+			send_form(true, '/lk');
+			markTarget('form-step-3');
+		}
+		showBzzz = false;
+        setcookies();
+        window.location = '/lk';
+    });
     $('select[name="reg_type"]').change(function () {
         if ($(this).val() == '0') {
             $('.reg_same[value="1"]').prop('checked', true);

@@ -9,8 +9,6 @@
                 обработки данных нашим клиентом может стать любой гражданин России. Даже если вы пенсионер, студент или у
                 вас плохая кредитная история, не бойтесь обратиться за помощью. Мы оперативно решим ваши финансовые проблемы.
                 Вы получите займ мгновенно - буквально через 15 минут - и сможете распоряжаться им по собственному усмотрению.</p>
-
-
             <p class="content-title3 sign__word__white">Что собой представляет сервис Bzaim5?</p>
             <p class="content2 text-left">
                 <b>Bzaim5</b> - это не финансовая организация, которая занимается кредитованием, а посредник между клиентом
@@ -27,7 +25,6 @@
             <p class="content-title3 sign__word__white">Хотите получить займ?</p>
             <p class="content2 text-left">
                 <a href="/form">Заполните анкету</a> и получите деньги в тот же день. С нами выгодно сотрудничать!</p>
-
             <p class="content-title3 sign__word__white hidden-xs hidden-sm">
                 <i class="fa fa-exclamation-circle" aria-hidden="true"></i> Преимущества сервиса Bzaim5:</p>
             <p class="content2 text-left hidden-xs hidden-sm">
@@ -65,7 +62,6 @@
                 </span>
             </p>
         </div>
-        <?php require 'menu2.php'; ?>
     </section>
     <section class="background">
         <div class="content-wrapper content-wrapper3">
