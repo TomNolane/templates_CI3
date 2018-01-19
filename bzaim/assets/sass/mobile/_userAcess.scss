@@ -1,0 +1,32 @@
+.ex-mob-user {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: #eef2f7;
+  border-radius: 4px;
+  h1 {
+    margin: 0;
+    color: #1589ee;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    padding: 20px 15px;
+    @media (min-width: 500px) {
+      br {
+        display: none;
+      }
+    }
+  }
+  p {
+    padding: 0 16px 16px 16px;
+    margin-bottom: 23px;
+    color: #242424;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0.21px;
+  }
+
+}

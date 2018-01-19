@@ -1,25 +1,13 @@
-<?php 
-$from = '15'; 
-?>
-<div class="buffer"></div>
-<div id="ya-rtb">
-    <!-- декстоп YANDEX RTB -->
-    <div id="yandex_rtb_R-A-243981-3"></div>
-    <?php if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { ?>
-    <!-- мобайл YANDEX RTB -->
-    <div id="yandex_rtb_R-A-243981-1"></div>
-    <?php } ?>
-</div>
-<?php
-if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
+<?php $from = '15'; 
+if($this->uri->segment(1) != 'form')
 {
-    echo '<a href="#0" class="cd-top">Наверх</a>';
-}
-
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2')
-{
+    echo '<!-- Декстоп --><div class="text-center" id="ya-rtb"><div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-243981-3"></div>';
+    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
+    echo '<!-- мобайл --><div class="visible-xs visible-sm hidden-md hidden-lg" id="yandex_rtb_R-A-243981-1"></div>';
+    } 
+    echo '</div>';
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Бзайм -->
+    <!-- Бзайм5 -->
     <ins class="adsbygoogle text-center"
     style="display:block"
     data-ad-client="ca-pub-4970738258373085"
@@ -29,377 +17,137 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
 }
-?> 
-<footer>
+?>
+
+<?php
+if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
+{
+    echo '<a href="#0" class="cd-top">Наверх</a>';
+}
+?>
+<?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2') {
+echo '<footer class="ex-start-footer">
     <div class="container">
-        <div class="col-md-12 col-xs-12">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="ex-footer-logo">
+                    <a href="/">
+                        <img src="templates/bzaim/assets/img/logo-foot.png" alt="logo-foot.png">
+                    </a>
+                </div>
+                <p class="ex-text spec_footer4">
+                    <span class="hidden">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная
+                    ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём
+                    20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб.
+                    Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного
+                    погашения. ООО МК "Берлин" ОГРН 5167746335961, ИНН 9705080932, КПП 770501001 лицензия ЦБ №1703045008133</span>
+                    Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: support@bzaim5.ru  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+                    <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001
+                </p>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3 hidden-xs hidden-sm spec_footer5">
+                <p class="ex-list-title">Документы</p>
+                <ul>
+                    <li>
+                        <a href="/documents">Правовые документы</a>
+                    </li>
+                    <li>
+                        <a href="/oferta">Публичная оферта</a>
+                    </li>
+                    <li>
+                        <a href="/contract">Пользовательское соглашение</a>
+                    </li>
+                    <li>
+                        <a href="/agreement">Согласие на обработку данных</a>
+                    </li>
+                    <li>
+                        <a href="/rules">Правила предоставления займов</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3 hidden-xs hidden-sm spec_footer6">
+                <p class="ex-list-title">Получение денег</p>
+                <ul>
+                    <li>
+                        <a href="/money">Займ на банковскую карту</a>
+                    </li>
+                    <li>
+                        <a href="/money">Займ на QIWI кошелёк</a>
+                    </li>
+                    <li>
+                        <a href="/money">Займ через Contact</a>
+                    </li>
+                    <li>
+                        <a href="/money">Займ на Яндекс.Деньги</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>';
+}
+else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'spasibo' || $this->uri->segment(1) == 'lk2')
+{
+    echo '<footer class="ex-footer">
+        <div class="container">
             <div class="row">
-                <div class="col-md-2 col-xs-12">
-                    <div>
-                        <img src="/templates/bzaim/img/logo-f.png" align="" alt="logo" class="logo">
-                    </div>
-                </div>
-                <div class="col-md-4 col-xs-12 spec_footer4">
-                    <p>Сервис по подбору выгодных онлайн займов</p>
-                    <p>находящийся по адресу</p>
-                    <p>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201  <a href="mailto:support@bzaim5.ru" target="_blank"> | support@bzaim5.ru</a><span class="hidden-xs hidden-sm"> | +7(495) 006 19 61</span></p>
-                </div>
-                <div class="col-md-6 hidden-xs hidden-sm spec_footer5">
-                        <div class="row">
-                            <div class="col-sm-12 great-support-box wow fadeInLeft">
-                                <div class="great-support-box-text great-support-box-text-left">
-                                    <p class="footer_spec99">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61
-                                        до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная
-                                        0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10
-                                        недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате
-                                        31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного
-                                        погашения.</p>
-                                </div>
-                            </div>
-                        </div> 
-                    <div class="footer_spec99">
-                        ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001
+                <div class="col-xs-12">
+                    <div class="text-center">
+                        <a href="/"><img src="templates/bzaim/assets/img/logo-2.png" alt="logo-2"></a>
+                        <p class="spec_footer4">Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
+                           support@bzaim5.ru <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-</div>
-
+    </footer>';
+} 
+?>
 
 <?php
     require 'templates/common/get_display_size.php';
     echo '<script>';
-    require 'templates/bzaim/vendor/jquery/jquery.min.js';
+    require 'modules/jquery/jquery-1.11.3.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/bzaim/vendor/bootstrap/js/bootstrap.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
+    require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
     echo '</script>';
     echo '<script>';
     require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/bzaim/js/get_parameter.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/bzaim/js/coockie.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+    require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
     echo '</script>';
     echo '<script>';
     require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/bzaim/js/jquery.form-validator.js';
+    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/bzaim/js/jquery.suggestions.min.js';
+    require 'templates/bzaim/assets/js/jquery.form-validator.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/bzaim/js/settings_form.js';
+    require 'templates/bzaim/assets/js/jquery.suggestions.min.js';
     echo '</script>';
-    require 'templates/common/detect.min.php';
-?> 
-<!--[if lt IE 10]>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-    <![endif]-->
-<?php if ($this->uri->segment(1) == 'form') {
-    echo ' <script>
-    $("#work").change(function(){
-        if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
-        { 
-            $("#work_name").addClass("valid");
-            $("#work_name").parent().addClass("has-success").removeClass("has-error");
-            $("#work_name").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_name").removeClass("er");
-            $("#"+$("#work_name").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_occupation").addClass("valid");
-            $("#work_occupation").parent().addClass("has-success").removeClass("has-error");
-            $("#work_occupation").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_occupation").removeClass("er");
-            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_phone").addClass("valid");
-            $("#work_phone").parent().addClass("has-success").removeClass("has-error");
-            $("#work_phone").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_phone").removeClass("er");
-            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
-
-            $("#work_experience").addClass("valid");
-            $("#work_experience").parent().addClass("has-success").removeClass("has-error");
-            $("#work_experience").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_experience").removeClass("er");
-            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
-
-            $("#work_salary").removeClass("valid");
-            $("#work_salary").parent().addClass("has-error").removeClass("has-success");
-            $("#work_salary").parent().parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_salary").addClass("er"); 
-            $("#work_salary").focus();
-            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove");
-
-            $("#work_region").addClass("valid");
-            $("#work_region").parent().addClass("has-success").removeClass("has-error");
-            $("#work_region").parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_region").removeClass("er");
-            $("#"+$("#work_region").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_city").addClass("valid");
-            $("#work_city").parent().addClass("has-success").removeClass("has-error");
-            $("#work_city").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_city").removeClass("er");
-            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_street").addClass("valid");
-            $("#work_street").parent().addClass("has-success").removeClass("has-error");
-            $("#work_street").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_street").removeClass("er");
-            $("#"+$("#work_street").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_house").addClass("valid");
-            $("#work_house").parent().addClass("has-success").removeClass("has-error");
-            $("#work_house").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_house").removeClass("er");
-            $("#"+$("#work_house").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_office").addClass("valid");
-            $("#work_office").parent().addClass("has-success").removeClass("has-error");
-            $("#work_office").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_office").removeClass("er");
-            $("#"+$("#work_office").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-//            $("#work_name").prop("disabled", true);
-            if($(this).val().toLowerCase() == "пенсионер")
-            $("#work_name").val("пенсионер");
-            else  $("#work_name").val("безработный");
-
-//            $("#work_occupation").prop("disabled", true);
-            if($(this).val().toLowerCase() == "пенсионер")
-            $("#work_occupation").val("пенсионер");
-            else  $("#work_occupation").val("безработный"); 
-
-//            $("#work_phone").prop("disabled", true);
-            var teemp = $("#phone").val();
-            $("#work_phone").val(teemp);
-
-//            $("#work_experience").prop("disabled", false);
-            $("#work_experience").val(100);
-
-//            $("#work_salary").prop("disabled", false);
-            $("#work_salary").val("");
-
-            var teemp2 = Number($("#region").find(":selected").index());
-            $("#work_region option").eq(teemp2).prop("selected", true);
-//            $("#work_region").prop("disabled", false); 
-
-//            $("#work_city").prop("disabled", true);
-            var teemp3 = $("#city").val();
-            $("#work_city").val(teemp3);
-
-//            $("#work_street").prop("disabled", true);
-            var teemp4 = $("#street").val();
-            $("#work_street").val(teemp4);
-
-            
-            var teemp5 = $("#building").val();
-            $("#work_house").val(teemp5);
-
-//            $("#work_building").prop("disabled", true);
-            $("#work_building").val(" ");
-
-//            $("#work_office").prop("disabled", true);
-            var teemp6 = $("#flat").val();
-            $("#work_office").val(teemp6);
-        }
-        else { 
-
-            $("#work_name").val("");
-            $("#work_name").removeClass("valid");
-            $("#work_name").parent().removeClass("has-success");
-            $("#work_name").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_name").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_occupation").val("");
-            $("#work_occupation").removeClass("valid");
-            $("#work_occupation").parent().removeClass("has-success");
-            $("#work_occupation").parent().parent().prev().removeClass("label_true"); 
-            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-ok"); 
-
-            $("#work_phone").val("");
-            $("#work_phone").removeClass("valid");
-            $("#work_phone").parent().removeClass("has-success");
-            $("#work_phone").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_experience").val("");
-            $("#work_experience").removeClass("valid");
-            $("#work_experience").parent().removeClass("has-success");
-            $("#work_experience").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_salary").val("");
-            $("#work_salary").removeClass("valid");
-            $("#work_salary").parent().removeClass("has-success");
-            $("#work_salary").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-ok");
- 
-            $("#work_region").removeClass("valid");
-            $("#work_region").parent().removeClass("has-success");
-            $("#work_region").parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_region").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_city").val("");
-            $("#work_city").removeClass("valid");
-            $("#work_city").parent().removeClass("has-success");
-            $("#work_city").parent().parent().prev().removeClass("label_true"); 
-            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-ok"); 
-
-            $("#work_street").val("");
-            $("#work_street").removeClass("valid");
-            $("#work_street").parent().removeClass("has-success");
-            $("#work_street").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_street").id+"status").removeClass("glyphicon-ok"); 
-
-            $("#work_house").val("");
-            $("#work_house").removeClass("valid");
-            $("#work_house").parent().removeClass("has-success");
-            $("#work_house").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_house").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_office").val("");
-            $("#work_office").removeClass("valid");
-            $("#work_office").parent().removeClass("has-success");
-            $("#work_office").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_office").id+"status").removeClass("glyphicon-ok");
-
-//            $("#work_name").prop("disabled", false);
-            $("#work_name").val(""); 
- 
-//            $("#work_occupation").prop("disabled", false);
-             $("#work_occupation").val(""); 
-
-//            $("#work_phone").prop("disabled", false);
-            $("#work_phone").val("");
-
-//            $("#work_experience").prop("disabled", false);
-            $("#work_experience").val("");
-
-//            $("#work_salary").prop("disabled", false);
-            $("#work_salary").val("");
-
-            $("#work_region option").eq(0, true).prop("selected", true);
-//            $("#work_region").prop("disabled", false); 
-
-//            $("#work_city").prop("disabled", false);
-            $("#work_city").val("");
-
-//            $("#work_street").prop("disabled", false);
-            $("#work_street").val("");
-
-//            $("#work_house").prop("disabled", false);
-            $("#work_house").val("");
-
-//            $("#work_building").prop("disabled", false);
-            $("#work_building").val("");
-
-//            $("#work_office").prop("disabled", false);
-            $("#work_office").val("");
-        }
-    }); 
-
-    </script>';
-   
-require 'templates/common/js.php'; 
-if(isset($_GET['popup']) and $_GET['popup']==1 ){
-    echo '    
-<!-- Modal Popup-->
-<div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                            <div class="modal-header text-center">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                            </div>
-                            <div class="modal-body text-center">
-                                    <div class="row">
-                                            <div class="col-md-12">
-                                                <img src="/templates/common/img/popup.jpg">                                             
-                                                <h2>'.$popup_text.'</h2>
-                                                <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                                            </div>
-                                    </div>
-                            </div>
-                    </div>
-            </div>
-</div>
-
-        <script type= " text/javascript">
-            $(window).load(function(){
-                $("#popup").modal("show");
-            });
-        </script>';
-} 
- 
-    if(isset($_GET['email'])){
-        //данные пользователя
-        $this->load->model('user/user_model', 'user');
-        $user_data = $this->user->get_user($_GET['email']);
-        $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
-        $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
-        foreach ($user_data as $name => $item){
-            echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
-        }
-        echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
-    }  
-    
-        
-    }
-    elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
-    {
-        echo '<script>
-        var offers = '.json_encode($data).';
-        var by_reg = null;
-        $(document).ready(function(){
-            $(\'.offer-type\').change(function(){
-                update_offers();
-            });
-            
-            function update_offers() {
-                var str = \'.results tbody tr\';
-                //var curr = clone(by_reg.length? by_reg : offers);
-                var ot_card = $(\'.offer-type[data-id="card"]\').prop(\'checked\');
-                var ot_qiwi = $(\'.offer-type[data-id="qiwi"]\').prop(\'checked\');
-                var ot_yandex = $(\'.offer-type[data-id="yandex"]\').prop(\'checked\');
-                var ot_contact = $(\'.offer-type[data-id="contact"]\').prop(\'checked\');
-                // Прячем всё
-                $(str).hide();
-                // Пробегаемся по списку офферов
-                ((by_reg !== null)? by_reg : offers).forEach(function(offer, i){
-                    var $tr = $(str + \'[data-id="\' + offer.id + \'"]\');
-                    if ($tr.data(\'amount\') >= amount){
-                        if (ot_card && !!$tr.data(\'card\') == ot_card) $tr.show();
-                        else if (ot_qiwi && !!$tr.data(\'qiwi\') == ot_qiwi) $tr.show();
-                        else if (ot_yandex && !!$tr.data(\'yandex\') == ot_yandex) $tr.show();
-                        else if (ot_contact && !!$tr.data(\'contact\') == ot_contact) $tr.show();
-                    }
-                });
-            }  
-                if (getcookie(\'i\')){
-                    var i = getcookie(\'i\');
-                    $(\'#i\').text(i);
-                }
-        });
-        
-        </script>';
-    }
-    ?>
-<script type="text/javascript">
-    //backtotop
+    echo '<script>';
+    require 'templates/bzaim/assets/js/coockie.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/bzaim/assets/js/modal.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/bzaim/assets/js/custom.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/bzaim/assets/js/settings_main.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/bzaim/assets/js/settings_form.js';
+    echo '</script>';
+    echo '<!-- backtotop -->
+    <script>
     jQuery(document).ready(function (o) {
         var l = 300,
             s = 1200,
@@ -413,351 +161,21 @@ if(isset($_GET['popup']) and $_GET['popup']==1 ){
                 scrollTop: 0
             }, c)
         })
-    }); 
-
-function setcookie(name, value, expires, path, domain, secure) {
-        document.cookie = name + "=" + escape(value) +
-            ((expires) ? "; expires=" + (new Date(expires)) : "") +
-            ((path) ? "; path=" + path : "; path=/") +
-            ((domain) ? "; domain=" + domain : "") +
-            ((secure) ? "; secure" : "");
-    }
-
-    function getcookie(name) {
-        var cookie = " " + document.cookie;
-        var search = " " + name + "=";
-        var setStr = null;
-        var offset = 0;
-        var end = 0;
-        if (cookie.length > 0) {
-            offset = cookie.indexOf(search);
-            if (offset != -1) {
-                offset += search.length;
-                end = cookie.indexOf(";", offset)
-                if (end == -1) {
-                    end = cookie.length;
-                }
-                setStr = unescape(cookie.substring(offset, end));
-            }
-        }
-        return (setStr);
-    }
-    
-    $(document).ready(function () {
-        function Loading(flag) {
-            if (typeof flag == 'undefined') {
-                document.getElementById('loading').style.display = 'block';
-                $('#feedback-send').prop('disabled', true);
-                $('#feedback-send').html('Отправка <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-            } else if (!flag) {
-                $('#feedback-send').html('Отправить');
-                $('#feedback-send').prop('disabled', false);
-                document.getElementById('loading').style.display = 'none';
-            }
-        }
-        $('#feedback-send').click(function () {
-            Loading();
-
-            var data;
-            if(window.location.pathname == '/form')
-            {
-                var _input = $('#anketa').serialize();
-                _input = decodeURIComponent(_input);
-                _input = _input.replace(new RegExp("&step",'g'),"&Шаг");
-                _input = _input.replace(new RegExp("&period",'g'),"&Срок");
-                _input = _input.replace(new RegExp("display=0",'g'),"Декстоп версия");
-                _input = _input.replace(new RegExp("display=1",'g'),"Мобайл версия");
-                _input = _input.replace(new RegExp("referer",'g'),"Откуда пришли");
-                _input = _input.replace(new RegExp("&f=",'g'),"&Фамилия=");
-                _input = _input.replace(new RegExp("&i=",'g'),"&Имя=");
-                _input = _input.replace(new RegExp("&o=",'g'),"&Отчество=");
-                _input = _input.replace(new RegExp("gender=0",'g'),"Пол женский");
-                _input = _input.replace(new RegExp("gender=1",'g'),"Пол мужской");
-                _input = _input.replace(new RegExp("&birth_dd=0&birth_mm=0&birth_yyyy=0",'g'),"");
-                _input = _input.replace(new RegExp("birthdate",'g'),"Дата рождения");
-                _input = _input.replace(new RegExp("&phone=",'g'),"&Телефон=");
-                _input = _input.replace(new RegExp("&email",'g'),"&Емаил");
-                _input = _input.replace(new RegExp("&delays_type=never",'g'),"&Никогда не брал(а) кредитов");
-                _input = _input.replace(new RegExp("&delays_type=credit_closed_no_delay",'g'),"&Кредиты закрыты, просрочек не было");
-                _input = _input.replace(new RegExp("&delays_type=credit_open_no_delay",'g'),"&Кредиты есть, просрочек нет");
-                _input = _input.replace(new RegExp("&delays_type=credit_closed_had_delay",'g'),"&Кредиты закрыты, просрочки были");
-                _input = _input.replace(new RegExp("&delays_type=had_delay",'g'),"&Просрочки были, сейчас нет");
-                _input = _input.replace(new RegExp("&delays_type=had_delay",'g'),"&Просрочки сейчас есть");
-                _input = _input.replace(new RegExp("rangeSlider",'g'),"Сумма");
-                _input = _input.replace(new RegExp("ammount",'g'),"Сумма");
-                _input = _input.replace(new RegExp("amount",'g'),"Сумма");
-                _input = _input.replace(new RegExp("&passport=",'g'),"&Серия и номер паспорта=");
-                _input = _input.replace(new RegExp("passport_s",'g'),"Серия паспорта");
-                _input = _input.replace(new RegExp("passport_n",'g'),"Номер паспорта");
-                _input = _input.replace(new RegExp("passport_dd",'g'),"День выдачи");
-                _input = _input.replace(new RegExp("passport_mm",'g'),"Месяц выдачи");
-                _input = _input.replace(new RegExp("passport_yyyy",'g'),"Год выдачи");
-                _input = _input.replace(new RegExp("passportdate",'g'),"Дата выдачи");
-                _input = _input.replace(new RegExp("passport_code",'g'),"Код подразделения");
-                _input = _input.replace(new RegExp("passport_who",'g'),"Кем выдан");
-                _input = _input.replace(new RegExp("birthplace",'g'),"Место рождения");
-                _input = _input.replace(new RegExp("&region=",'g'),"&Регион=");
-                _input = _input.replace(new RegExp("&city=",'g'),"&Населённый пункт=");
-                _input = _input.replace(new RegExp("&street=",'g'),"&Улица проживания=");
-                _input = _input.replace(new RegExp("&building=",'g'),"&Дом=");
-                _input = _input.replace(new RegExp("&housing=",'g'),"&Корпус=");
-                _input = _input.replace(new RegExp("flat=",'g'),"Квартира=");
-                _input = _input.replace(new RegExp("reg_type=1",'g'),"Постоянная регистрация");
-                _input = _input.replace(new RegExp("reg_type=0",'g'),"Без регистрации");
-                _input = _input.replace(new RegExp("reg_type=2",'g'),"Временная регистрация");
-                _input = _input.replace(new RegExp("&reg_same=1",'g'),"");
-                _input = _input.replace(new RegExp("&work=",'g'),"&Вид трудоустройства=");
-                _input = _input.replace(new RegExp("work_name",'g'),"Место работы"); 
-                _input = _input.replace(new RegExp("work_occupation",'g'),"Должность");
-                _input = _input.replace(new RegExp("work_phone",'g'),"Рабочий телефон");
-                _input = _input.replace(new RegExp("work_experience",'g'),"Стаж");
-                _input = _input.replace(new RegExp("work_salary",'g'),"Зарплата");
-                _input = _input.replace(new RegExp("work_region",'g'),"Регион работы");
-                _input = _input.replace(new RegExp("work_city",'g'),"Город работы");
-                _input = _input.replace(new RegExp("work_street",'g'),"Улица работы");
-                _input = _input.replace(new RegExp("work_house",'g'),"Номер дома работы");
-                _input = _input.replace(new RegExp("work_office",'g'),"Офис работы");
-
-                _info = _info.replace(new RegExp("undefined",'g'),"неопределено");
-                data = {
-                    name: $('#feedback-name').val(),
-                    phone: $('#feedback-phone').val(),
-                    email: $('#feedback-email').val(),
-                    comment: 'Обращение: ' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size + "\n | Данные:" + _input
-                };
-            }
-            else
-            {
-                data = {
-                    name: $('#feedback-name').val(),
-                    phone: $('#feedback-phone').val(),
-                    email: $('#feedback-email').val(),
-                    comment: 'Обращение: ' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size
-                };
-            }  
-
-            if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email !=
-                    'undefined' && data.email != '') && (typeof data.comment != 'undefined' && data.comment !=
-                    '')) {
-                $.ajax({
-                    url: '/feedback/',
-                    type: 'POST',
-                    dataType: 'json',
-                    data: data
-                }).done(function (response) {
-                    if (response != null) {
-                        if (typeof response.error != 'undefined') {
-                            alert('Ошибка. ' + response.error);
-                        } else {
-                            $('#feedbackModal').modal('hide');
-                            Loading(0);
-                            alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
-                        }
-                    } else {
-                        alert('Не получилось отправить. Попробуйте ещё раз.');
-                    }
-                }).fail(function (jqxhr, textStatus, error) {
-                    alert('Не получилось отправить. Попробуйте ещё раз.');
-                }).always(function () {
-                    Loading(0);
-                });
-            } else {
-                Loading(0);
-                alert('Пожалуйста, заполните все поля.');
-            }
-        });
-
-        var amount = 20000;
-        var day = 15;
-        $('.amount').ionRangeSlider({
-            values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000,
-                14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000
-            ],
-            postfix: ' Р',
-            prettify_enabled: true,
-            hide_from_to: false,
-            from: <?php 
-        if(isset($_GET['amount']))
-        {  
-            switch($_GET['amount'])
-            {
-                case '1000': $from = '0' ; break;
-                case '2000': $from = '1' ; break;
-                case '3000': $from = '2' ; break;
-                case '4000': $from = '3' ; break;
-                case '5000': $from = '4' ; break;
-                case '6000': $from = '5' ; break;
-                case '7000': $from = '6' ; break;
-                case '8000': $from = '7' ; break;
-                case '9000': $from = '8' ; break;
-                case '10000': $from = '9' ; break;
-                case '11000': $from = '10' ; break;
-                case '12000': $from = '11' ; break;
-                case '13000': $from = '12' ; break;
-                case '14000': $from = '13' ; break;
-                case '15000': $from = '14' ; break;
-                case '20000': $from = '15' ; break;
-                case '25000': $from = '16' ; break;
-                case '30000': $from = '17' ; break;
-                case '40000': $from = '18' ; break;
-                case '50000': $from = '19' ; break;
-                case '80000': $from = '20' ; break;
-                case '100000': $from = '21' ; break;
-            }
-            echo $from; 
-        }
-        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
-        ?>,  
-            onChange: function (range) {
-                amount = range.from_value;
-                if (range.from_value <= 10000) {
-                    $('#period').val('7');
-                    $('#period2').val('От 61 до 130 дней');
-                } else if (range.from_value <= 15000) {
-                    $('#period').val('14');
-                    $('#period2').val('От 61 до 130 дней');
-                } else if (range.from_value <= 20000) {
-                    $('#period').val('21');
-                    $('#period2').val('От 61 до 130 дней');
-                } else if (range.from_value <= 30000) {
-                    $('#period').val('21');
-                    $('#period2').val('От 61 до 130 дней');
-                } else if (range.from_value <= 50000) {
-                    $('#period').val('30');
-                    $('#period2').val('От 130 до 250 дней');
-                } else {
-                    $('#period').val('30');
-                    $('#period2').val('От 250 до 365 дней');
-                }
-                $('#amount').val(range.from_value);
-                $('#form_slrd').val(range.from);
-
-                updateComm();
-            }
-        });
-
-        var updateComm = function () {
-            if (amount <= 30000) {
-                percent = 1.3;
-                comm1 = Math.ceil((amount / 100) * percent) * day;
-                comm2 = 0;
-            }
-            if (amount > 30000) {
-                percent = 0.2;
-                comm1 = 390 * day;
-                comm2 = Math.ceil(((amount - 30000) / 100) * percent) * day;
-            }
-            if (amount < 30000) {
-                prob = 97;
-                current_day = 'от 61 дня';
-            } else if (amount < 50000) {
-                prob = 97;
-                current_day = 'от 130 дней';
-            } else if (amount >= 50000 && amount <= 70000) {
-                prob = 72;
-                current_day = 'от 180 дней';
-            } else {
-                prob = 64;
-                current_day = 'до 365 дней';
-            } 
-            comm = comm1 + comm2;
-            summ = amount + comm;
-            $('.current_amount').text(String(amount).split(/(?=(?:\d{3})+$)/).join(' '));
-            $('.current_comm').text(comm);
-            //$('.current_percent').text(percent);
-            $('.current_prob').text(prob);
-            $('.current_day').text(current_day);
-            $('.current_summ').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
-            //console.log(comm1 +' '+comm2);
-        };
-        $('.amount2').ionRangeSlider({
-            values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000,
-                14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000
-            ],
-            postfix: ' Р',
-            prettify_enabled: true,
-            hide_from_to: false,
-            from: <?php 
-        if(isset($_GET['amount']))
-        {  
-            switch($_GET['amount'])
-            {
-                case '1000': $from = '0' ; break;
-                case '2000': $from = '1' ; break;
-                case '3000': $from = '2' ; break;
-                case '4000': $from = '3' ; break;
-                case '5000': $from = '4' ; break;
-                case '6000': $from = '5' ; break;
-                case '7000': $from = '6' ; break;
-                case '8000': $from = '7' ; break;
-                case '9000': $from = '8' ; break;
-                case '10000': $from = '9' ; break;
-                case '11000': $from = '10' ; break;
-                case '12000': $from = '11' ; break;
-                case '13000': $from = '12' ; break;
-                case '14000': $from = '13' ; break;
-                case '15000': $from = '14' ; break;
-                case '20000': $from = '15' ; break;
-                case '25000': $from = '16' ; break;
-                case '30000': $from = '17' ; break;
-                case '40000': $from = '18' ; break;
-                case '50000': $from = '19' ; break;
-                case '80000': $from = '20' ; break;
-                case '100000': $from = '21' ; break;
-            }
-            echo $from; 
-        }
-        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
-        ?>, 
-            onChange: function (range) {
-                amount = range.from_value;
-                $('#form_slrd').val(range.from);
-                updateComm();
-            }
-        });
-
-        var updateComm = function () {
-            if (amount <= 30000) {
-                percent = 1.3;
-                comm1 = Math.ceil((amount / 100) * percent) * day;
-                comm2 = 0;
-            }
-            if (amount > 30000) {
-                percent = 0.2;
-                comm1 = 390 * day;
-                comm2 = Math.ceil(((amount - 30000) / 100) * percent) * day;
-            }
-            if (amount < 30000) {
-                prob = 97;
-                current_day = 'от 61 дня';
-            } else if (amount < 50000) {
-                prob = 97;
-                current_day = 'от 130 дней';
-            } else if (amount >= 50000 && amount <= 70000) {
-                prob = 72;
-                current_day = 'от 180 дней';
-            } else {
-                prob = 64;
-                current_day = 'до 365 дней';
-            } 
-            comm = comm1 + comm2;
-            summ = amount + comm;
-            $('.current_amount').text(String(amount).split(/(?=(?:\d{3})+$)/).join(' '));
-            $('.current_comm').text(comm);
-            //$('.current_percent').text(percent);
-            $('.current_prob').text(prob);
-            $('.current_day').text(current_day);
-            $('.current_summ').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
-            //console.log(comm1 +' '+comm2);
-        };
-        $('.amount3').ionRangeSlider({
-            values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000,
-                14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000
-            ],
-            postfix: ' Р',
-            prettify_enabled: true,
-            hide_from_to: false,
-            from: <?php 
+    });</script>'; 
+    echo '<script>';
+    require 'templates/bzaim/assets/js/get_parameter.js';
+    echo '</script>';
+    require 'templates/common/detect.min.php';
+?> 
+<!--[if lt IE 10]>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+<![endif]--> 
+<?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') { ?>
+        <script async type="text/javascript">
+        $("#rangeSlider").ionRangeSlider({
+        hide_min_max: false, 
+        keyboard: true, 
+        from: <?php 
         if(isset($_GET['amount'])) 
         {  
             switch($_GET['amount'])
@@ -788,249 +206,150 @@ function setcookie(name, value, expires, path, domain, secure) {
             echo $from; 
         }
         elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
-        ?>, 
-        onChange: function (range) { 
-            if (range.from_value <= 10000) {
-                $('#period').val('7');
-                $('#period2').val('От 61 до 130 дней');
-            } else if (range.from_value <= 15000) {
-                $('#period').val('14');
-                $('#period2').val('От 61 до 130 дней');
-            } else if (range.from_value <= 20000) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-            } else if (range.from_value <= 30000) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-            } else if (range.from_value <= 50000) {
-                $('#period').val('30');
-                $('#period2').val('От 130 до 250 дней');
-            } else {
-                $('#period').val('30');
-                $('#period2').val('От 250 до 365 дней');
-            }
-            $('#amount').val(range.from_value);
-            $('#form_slrd').val(range.from); 
+        ?>,
+        values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
+        onChange: function (range3) {
+                if (range3.from_value <= 10000) {
+                    $("#period").val("7");
+                    $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
+                } else if (range3.from_value <= 15000) {
+                    $("#period").val("14");
+                    $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
+                } else if (range3.from_value <= 20000) {
+                    $("#period").val("21");
+                    $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
+                } else if (range3.from_value <= 30000) {
+                    $("#period").val("21");
+                    $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('85');
+                } else if (range3.from_value <= 50000) {
+                    $("#period").val("30");
+                    $("#period2").val("От 130 до 250 дней");
+                    $('#percent').val('77');
+                } else {
+                    $("#period").val("30");
+                    $("#period2").val("От 250 до 365 дней");
+                    $('#percent').val('65');
+                }
+
+                $("#amount").val(range3.from_value);
+                $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
+            },
+            onFinish: function (range3) {
+                $('.irs-single').text('').append("<span>&nbsp;&nbsp;"+ range3.from_value+"&nbsp;&nbsp;рублей&nbsp;&nbsp;</span>");
             }
         });
-
-        var updateComm = function () {
-            if (amount <= 30000) {
-                percent = 1.3;
-                comm1 = Math.ceil((amount / 100) * percent) * day;
-                comm2 = 0;
-            }
-            if (amount > 30000) {
-                percent = 0.2;
-                comm1 = 390 * day;
-                comm2 = Math.ceil(((amount - 30000) / 100) * percent) * day;
-            }
-            if (amount < 30000) {
-                prob = 97;
-                current_day = 'от 61 дня';
-            } else if (amount < 50000) {
-                prob = 97;
-                current_day = 'от 130 дней';
-            } else if (amount >= 50000 && amount <= 70000) {
-                prob = 72;
-                current_day = 'от 180 дней';
-            } else {
-                prob = 64;
-                current_day = 'до 365 дней';
-            } 
-            comm = comm1 + comm2;
-            summ = amount + comm;
-            $('.current_amount').text(String(amount).split(/(?=(?:\d{3})+$)/).join(' '));
-            $('.current_comm').text(comm);
-            //$('.current_percent').text(percent);
-            $('.current_prob').text(prob);
-            $('.current_day').text(current_day);
-            $('.current_summ').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
-            //console.log(comm1 +' '+comm2);
-        }; 
-        
-        <?php if ($this->uri->segment(1) == '') { ?>
-        var slider = $('.amount').data('ionRangeSlider');
-        var slider2 = $('.amount2').data('ionRangeSlider');
+<?php require 'templates/bzaim/assets/js/loanCalculator.js';?>
+        var slider = $('#rangeSlider').data('ionRangeSlider');
         var slider_plus = true;
         var n = 10;
         var slider_init = setInterval(function () {
-        if (slider_plus) {
-            n++;
-        } else {
-            n--;
-        }
-        if (n == 21 && n != <?php echo $from; ?>) {
-            slider_plus = false;
-        }else if (n == <?php echo $from; ?> && slider_plus == false) {
-            clearInterval(slider_init);
-        }else if (n == 21 && n == <?php echo $from; ?>) {
-            clearInterval(slider_init);
-        }
+            if (slider_plus) {
+                n++;
+            } else {
+                n--;
+            }
+            if (n == 21 && n != <?php echo $from; ?>) {
+                slider_plus = false;
+            }else if (n == <?php echo $from; ?> && slider_plus == false) {
+                clearInterval(slider_init);
+            }else if (n == 21 && n == <?php echo $from; ?>) {
+                clearInterval(slider_init);
+            }
 
-        slider.update({
-            from: n
-        });
-        slider2.update({
-            from: n
-        });
-        $('#amount').val(slider.result.from_value);
-        $('#form_slrd').val(n);
+            slider.update({
+                from: n
+            });
 
-        if (slider.result.from_value <= 30000) {
-            percent = 1.3;
-            comm1 = Math.ceil((slider.result.from_value / 100) * percent) * day;
-            comm2 = 0;
-        }
-        if (slider.result.from_value > 30000) {
-            percent = 0.2;
-            comm1 = 390 * day;
-            comm2 = Math.ceil(((slider.result.from_value - 30000) / 100) * percent) * day;
-        }
-        if (slider.result.from_value < 30000) {
-            prob = 97;
-            current_day = 'от 61 дня';
-        } else if (slider.result.from_value < 50000) {
-            prob = 97;
-            current_day = 'от 130 дней';
-        } else if (slider.result.from_value >= 50000 && slider.result.from_value <= 70000) {
-            prob = 72;
-            current_day = 'от 180 дней';
-        } else {
-            prob = 64;
-            current_day = 'до 365 дней';
-        }
-        comm = comm1 + comm2;
-        summ = slider.result.from_value + comm;
-        $('.current_amount').text(String(slider.result.from_value).split(/(?=(?:\d{3})+$)/).join(
-            ' '));
-        $('.current_comm').text(comm);
-        //$('.current_percent').text(percent);
-        $('.current_prob').text(prob);
-        $('.current_day').text(current_day);
-        $('.current_summ').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
-
-    }, 50);
-<?php } ?>
- 
+            if (n <= 9) {
+            $('#period').val('7');
+            $('#period2').val('От 61 до 130 дней');
+            $('#percent').val('95');
+            } else if (n <= 14 && n > 9) {
+                $('#period').val('14');
+                $('#period2').val('От 61 до 130 дней');
+                $('#percent').val('95');
+            } else if (n <= 15 && n > 14) {
+                $('#period').val('21');
+                $('#period2').val('От 61 до 130 дней');
+                $('#percent').val('95');
+            } else if (n <= 17 && n > 15) {
+                $('#period').val('21');
+                $('#period2').val('От 61 до 130 дней');
+                $('#percent').val('85');
+            } else if (n <= 19 && n > 17) {
+                $('#period').val('30');
+                $('#period2').val('От 130 до 250 дней');
+                $('#percent').val('77');
+            } else if (n > 19) {
+                $('#period').val('30');
+                $('#period2').val('От 250 до 365 дней');
+                $('#percent').val('65');
+            }
+            $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
+        }, 50);
+        </script>
+<?php
+} 
+elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
+{
+echo '<script>
+var offers = '.json_encode($data).'
+ var by_reg = null;
+$(document).ready(function () {
+    $(".offer-type").change(function () {
+        update_offers();
     });
-</script> 
-
-<script>
-    function markTarget(target, param, id) {
-        if (typeof yaCounter35589670 == 'undefined') return;
-        if (typeof param == 'undefined') yaCounter35589670.reachGoal(target);
-        else yaCounter35589670.reachGoal(target, param);
-        $.ajax({
-            type: 'POST',
-            url: '/pixel/',
-            data: 'id=' + id + '&pixel=' + param,
-            success: function (data) {
+    function update_offers() {
+        var str = ".results tbody tr";
+        //var curr = clone(by_reg.length? by_reg : offers);
+        var ot_card = $(".offer-type[data-id=\'card\']").prop("checked");
+        var ot_qiwi = $(".offer-type[data-id=\'qiwi\']").prop("checked");
+        var ot_yandex = $(".offer-type[data-id=\'yandex\']").prop("checked");
+        var ot_contact = $(".offer-type[data-id=\'contact\']").prop("checked");
+        // Прячем всё
+        $(str).hide();
+        // Пробегаемся по списку офферов
+        ((by_reg !== null) ? by_reg : offers).forEach(function (offer, i) {
+            var $tr = $(str + "[data-id=\'" + offer.id + "\']");
+            if ($tr.data("amount") >= amount) {
+                if (ot_card && !!$tr.data(\'card\') == ot_card) $tr.show();
+                else if (ot_qiwi && !!$tr.data(\'qiwi\') == ot_qiwi) $tr.show();
+                else if (ot_yandex && !!$tr.data(\'yandex\') == ot_yandex) $tr.show();
+                else if (ot_contact && !!$tr.data(\'contact\') == ot_contact) $tr.show();
             }
         });
     }
-    function traffic(site, page) {
-        $.ajax({
-            type: 'POST',
-            url: '/traffic/',
-            data: 'site=' + site + '&page=' + page,
-            success: function (data) {
-                //console.log(data);
+    if (getcookie("i")) {
+        var i = getcookie("i");
+        $("#i").text(i);
+    }
+});
+function clone(o) {
+    if (!o || "object" !== typeof o) return o;
+
+    var c = "function" === typeof o.pop ? [] : {};
+    var p, v;
+    for (p in o) {
+        if (o.hasOwnProperty(p)) {
+            v = o[p];
+            if (v && "object" === typeof v) {
+                c[p] = clone(v);
+            } else {
+                c[p] = v;
             }
-        });
+        }
     }
-</script>
-<script type="text/javascript">
-    (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
-        '//vk.com/rtrg?r=odoKSFSBcE5PHaDnsudZo9gF0m0eXBwPYfg*kztNuXeCJj3sA*5x3PQeQaPudSCBmnc4YA7Rqn22IyQvXDLy3mtd6byvjyzR9M7pPk5odLe*WJb52SVSuRlUxbqTQ/PykKXKEZvubU6hD176XSFl07fT0xyhObhKZzHa*wWQux8-&pixel_id=1000099080';
-</script>
-<!--Константин Гутлид-->
-<script type="text/javascript">
-    (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
-        '//vk.com/rtrg?r=iafuk/ajs6FuS1VfRUweTdohcs2Mr7Xb/WOtctzL86pmvckkvgCHlpuK4YcMkiqxVsFm0PpWetPyvLpEU3AP*RCJxL53Z0qIOQsMJTgfna8WaLUGGa20v4uxHJPFrISICV8rpTrDzfUA2qjLCdB6XAgOa0veBjnUzFmA/ElFA*U-&pixel_id=1000099733';
-</script>
-
-<?php require 'yandex_metrika_counter.php';?>
-
-<script type="text/javascript">
-    var isMobile = false; //initiate as false
-    // device detection
-    if (
-        /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i
-        .test(navigator.userAgent) ||
-        /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i
-        .test(navigator.userAgent.substr(0, 4))) isMobile = true;
-    if (isMobile) {
-        (function (w, d, n, s, t) {
-            w[n] = w[n] || [];
-            w[n].push(function () {
-                Ya.Context.AdvManager.render({
-                    blockId: "R-A-243981-1",
-                    renderTo: "yandex_rtb_R-A-243981-1",
-                    async: true
-                });
-            });
-            t = d.getElementsByTagName("script")[0];
-            s = d.createElement("script");
-            s.type = "text/javascript";
-            s.src = "//an.yandex.ru/system/context.js";
-            s.async = true;
-            t.parentNode.insertBefore(s, t);
-        })(this, this.document, "yandexContextAsyncCallbacks");
-        $('#display').val(1);
-    } else {
-        (function (w, d, n, s, t) {
-            w[n] = w[n] || [];
-            w[n].push(function () {
-                Ya.Context.AdvManager.render({
-                    blockId: "R-A-243981-3",
-                    renderTo: "yandex_rtb_R-A-243981-3",
-                    async: true
-                });
-            });
-            t = d.getElementsByTagName("script")[0];
-            s = d.createElement("script");
-            s.type = "text/javascript";
-            s.src = "//an.yandex.ru/system/context.js";
-            s.async = true;
-            t.parentNode.insertBefore(s, t);
-        })(this, this.document, "yandexContextAsyncCallbacks");
-    }
-</script> 
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-104386531-1', 'auto');
-    ga('send', 'pageview');
-</script>
-<!-- Код тега ремаркетинга Google -->
-<!-- ------------------------------------------------
-С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
------------------------------------------------- -->
-<script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 841045099;
-    var google_custom_params = window.google_tag_params;
-    var google_remarketing_only = true;
-    /* ]]> */
-</script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-    <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/841045099/?guid=ON&amp;script=0"
-        />
-    </div>
-</noscript>
+    return c;
+} 
+</script>';
+}
+include "googleadservices_all.php"; 
+include "yandexmetrika.php"; 
+include "yandex_rtb.php";
+?>
 </body>
 </html>

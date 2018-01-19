@@ -1,9 +1,10 @@
-<?php $my_title = ''; $description = '';
+<?php
+$my_title = ''; $description = '';
 switch($this->uri->segment(1))
 {
 	case 'about': 
     $my_title = 'Лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
-    $description = 'BZAIM5 осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
+    $description = 'bzaim осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
     break;
 case 'contacts': 
     $my_title = 'Где Лучше Взять Срочный Займ без Отказа'; 
@@ -47,11 +48,11 @@ case 'agree':
     break;
 case 'soglasie': 
     $my_title = 'Соглашение на Обработку Данных для Получения Займа'; 
-    $description = 'Условия получения мгновенных займов и кредитов с помощью лучшего онлайн сервиса  BZAIM5 с самой низкой процентной ставкой';
+    $description = 'Условия получения мгновенных займов и кредитов с помощью лучшего онлайн сервиса  Bzaim5 с самой низкой процентной ставкой';
     break;
 case 'rules': 
     $my_title = 'Основные Правила для Предоставления Срочных Займов'; 
-    $description = 'Онлайн сервис  BZAIM5 предоставления срочных займов и кредитов с самой низкой процентной ставкой предоставляет условия для получения займов';
+    $description = 'Онлайн сервис  Bzaim5 предоставления срочных займов и кредитов с самой низкой процентной ставкой предоставляет условия для получения займов';
     break;
 case 'credits': 
     $my_title = 'Непосильные кредиты: как не попасть в долговую яму'; 
@@ -71,10 +72,10 @@ case 'insolvency':
     break;
 case 'docs': 
     $my_title = 'Основные Правила для Предоставления Срочных Займов'; 
-    $description = 'Онлайн сервис  BZAIM5 предоставления срочных займов и кредитов с самой низкой процентной ставкой предоставляет условия для получения займов';
+    $description = 'Онлайн сервис  Bzaim5 предоставления срочных займов и кредитов с самой низкой процентной ставкой предоставляет условия для получения займов';
     break;
 case 'money': 
-    $my_title = 'Получение денег BZAIM5'; 
+    $my_title = 'Получение денег bzaim'; 
     $description = 'Их можно будет обналичить или потратить в Интернете.проверок кредитной истории и не выходя из дома.';
     break;
 case 'borrow': 
@@ -117,28 +118,19 @@ case 'articles':
     $my_title = 'Статьи о займах'; 
     $description = 'Актуальные статьи о займах и кредитах. О том как правильно взять займ, погасить его, как  оформить заявку на кредит с плохой кредитной историей и многое другое.';
     break;
-default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'BZAIM5 - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
+default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'bzaim - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
 }
- require 'header.php'; ?>
 
-<header>
-    <div class="p">
-        <div class="clearfix">&nbsp;</div>
-            <div class="container">
-                    <div class="row">
-                            <div class="col-md-12 col-sm-12 internal">
-                                    <?php
-                                    if ($this->uri->segment(1) == 'about') require 'internal-about.php';
-                                    elseif ($this->uri->segment(1) == 'docs') require 'internal-docs.php';
-                                    elseif ($this->uri->segment(1) == 'contacts') require 'internal-contacts.php';
-                                    elseif ($this->uri->segment(1) == 'faq') require 'internal-faq.php';
-                                    elseif ($this->uri->segment(1) == 'article') require 'internal-article.php';
-                                    ?>
-                            </div>
-                    </div>
-            </div>
-        <div class="clearfix">&nbsp;</div>
-        <div class="clearfix">&nbsp;</div>
-    </div>
-</header> 
-<?php require 'footer.php'; ?>
+    if ($this->uri->segment(1) == 'about') {  require 'internal-about.php';} 
+    elseif ($this->uri->segment(1) == 'form') { require 'form.php';}
+    elseif ($this->uri->segment(1) == 'agreement') { require 'internal-agreement.php';}
+    elseif ($this->uri->segment(1) == 'faq') { require 'internal-faq.php';}
+    elseif ($this->uri->segment(1) == 'documents') { require 'internal-documents.php';}
+    elseif ($this->uri->segment(1) == 'contract'){ require 'internal-contract.php'; }
+    elseif ($this->uri->segment(1) == 'oferta') { require 'internal-oferta.php';}
+    elseif ($this->uri->segment(1) == 'money'){ require 'internal-money.php';}
+    elseif ($this->uri->segment(1) == 'thanks'){ require 'internal-thanks.php';}
+    elseif ($this->uri->segment(1) == 'rules') {require 'internal-rules.php';}
+    elseif ($this->uri->segment(1) == 'lk') { $my_title = "Правила предоставления займов"; require 'lk.php';} 
+?> 
+   
