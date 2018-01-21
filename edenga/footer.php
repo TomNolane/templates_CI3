@@ -45,8 +45,8 @@ if($this->uri->segment(1) != 'form')
 <?php
 require 'templates/common/get_display_size.php';
 echo '<script>';
-require 'templates/bzaim/vendor/jquery/jquery.min.js';
-echo '</script>';
+require 'modules/jquery/jquery-1.11.3.min.js';
+echo '</script>'; 
 echo '<script>';
 require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
 echo '</script>';
