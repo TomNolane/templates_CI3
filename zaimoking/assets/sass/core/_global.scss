@@ -1,0 +1,132 @@
+body {
+  font-family: $acrobat !important;
+  font-weight: 400 !important;
+  position: relative;
+  width: 100%;
+  color: #30323e!important;
+  float: left;
+  min-height: 100vh;
+  padding-right: 0 !important;
+}
+
+.ex-main-btn {
+  width: 100%;
+  padding: 20px 5px;
+  border: none;
+  outline: none;
+  background-color: #f9a45a;
+  color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.47px;
+  @include prefix(border-radius, 5px);
+}
+
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ex-adds {
+  height: 220px;
+  background-color: #edeeef;
+}
+
+.ex-sticky {
+  position: relative;
+  width: 100%;
+  float: left;
+  padding-bottom: 250px;
+  min-height: 100vh;
+  .ex-sticky-footer {
+    position: absolute;
+    width: 100%;
+    min-height: 133px;
+    bottom: 0;
+    left: 0;
+  }
+}
+.ex-agreement-check {
+  label {
+    margin-top: 14px !important;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding-top: 3px !important;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+    &:hover input ~ i {
+      background: #f8f8f8;
+    }
+    &:focus input ~ i {
+      background: #f8f8f8;
+    }
+    span {
+      display: inline-block;
+      margin-left: 15px;
+      color: #333333;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      left: 0;
+      margin-left: 0 !important;
+      &:checked ~ i {
+        background: transparent;
+        &:after {
+          display: block;
+        }
+      }
+
+    }
+    i {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 24px;
+      width: 24px;
+      border: 1px solid #c8cfce;
+      background-color: #ffffff;
+      @include prefix(border-radius, 5px);
+      &:after {
+        content: '';
+        position: absolute;
+        display: none;
+        left: 8px;
+        top: 4px;
+        width: 5px;
+        height: 10px;
+        border: solid #c8cfce;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        @include prefix(border-radius, 4px);
+      }
+    }
+  }
+}
+.ex-transparent {
+  background-color: transparent !important;
+}
+
+
+#div2, #div3, #div4, #div5 ,#div6, #div7, #div8, #div9, #div10, #div11, #div12, #div13{
+  display: none;
+}
+
+
+
