@@ -172,17 +172,7 @@ if(!isset($description))
                             </li>
                             <li>
                                 <a href="/money" class="hov">Виды займов</a>
-                            </li> 
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/form">Получить деньги</a> 
-                    </li> 
-                    <li class="dropdown">
-                        <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">Информация
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
+                            </li>
                             <li>
                                 <a href="/oferta" class="hov">Публичная оферта</a>
                             </li> 
@@ -197,6 +187,35 @@ if(!isset($description))
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="/form">Получить деньги</a> 
+                    </li>
+                    <li class="dropdown">
+                            <a  href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Новости
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a  href="/news1" class="hov" id="text-decoration">Где взять займ на карту Сбербанка?</a>
+                                </li>
+                                <li>
+                                    <a  href="/news2" class="hov" id="text-decoration">Как получить кредит на Яндекс.Деньги?</a>
+                                </li> 
+                                <li>
+                                    <a  href="/news3" class="hov" id="text-decoration">Мгновенные займы – доступная и удобная услуга</a>
+                                </li>
+                                <li>
+                                    <a  href="/news4" class="hov" id="text-decoration">Очистить кредитную историю</a>
+                                </li>
+                                <li>
+                                    <a  href="/news5" class="hov" id="text-decoration">Как получить займ на QIWI кошелек</a>
+                                </li>
+                                <li>
+                                    <a  href="/news6" class="hov" id="text-decoration">Как получить займ через систему Contact без отказа</a>
+                                </li>
+                            </ul>
+                        </li>
                     <li>
                         <a href="/faq">FAQ</a>
                     </li>

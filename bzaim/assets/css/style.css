@@ -13507,4 +13507,10 @@ header .navbar-default {
     color: green;
     font-size: 1.4em !important;
     font-weight: 900;
-  } 
+  }
+  .special_news {
+    margin:30px;
+}
+.special_news2 {
+    height: 50vh;
+}

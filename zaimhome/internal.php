@@ -76,6 +76,22 @@ switch($this->uri->segment(1))
 		2-3 минут, тогда как на банковскую карточку или другую электронную систему - часто сутки и более. Если вы не хотите тратить
 		ни секунды личного времени, такой вид займа для вас.';
 		break;
+		case 'news3': 
+		$my_title = 'Мгновенные займы – доступная и удобная услуга'; 
+		$description = 'В условиях затянувшегося кризиса сложно отыскать человека, который ни разу не одалживал деньги у знакомых или не пользовался услугами кредитования.';
+		break;
+	case 'news4': 
+		$my_title = 'Можно ли самостоятельно улучшить или очистить (исправить) кредитную историю'; 
+		$description = 'Выражение – кредитная история слышали многие люди, обратившиеся к банковским структурам, у которых возникли финансовые затруднения.';
+		break;
+	case 'news5': 
+		$my_title = 'Как получить займ на QIWI кошелек?'; 
+		$description = 'Ситуация, когда срочно нужны деньги, знакома каждому из нас. Для некоторых подобный форс-мажор наступает перед самой зарплатой, в особенности, когда ее задерживают на денек другой, для других появляется неожиданная возможность сделать выгодное приобретение.';
+		break;
+	case 'news6': 
+		$my_title = 'Как получить займ через систему Contact без отказа?'; 
+		$description = 'Жизнь сегодня течет куда быстрее, чем 100, 50 и даже 10 лет назад. Человечество постоянно куда-то очень торопится и почему-то всегда опаздывает. Темп, задаваемый миром, требует все более быстрого принятия решений в любой ситуации.';
+		break;
 	default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'zaimhome - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
 }
 
@@ -87,7 +103,13 @@ switch($this->uri->segment(1))
     elseif ($this->uri->segment(1) == 'contract'){ require 'internal-contract.php'; }
     elseif ($this->uri->segment(1) == 'oferta') { require 'internal-oferta.php';}
     elseif ($this->uri->segment(1) == 'money'){ require 'internal-money.php';}
-    elseif ($this->uri->segment(1) == 'lk'){ $my_title = "Спасибо от Zaimhome.ru";  require 'lk.php';}
-    elseif ($this->uri->segment(1) == 'rules') { require 'internal-rules.php';}
+    elseif ($this->uri->segment(1) == 'lk'){ $my_title = "Вам автоматически одобрен займ";  require 'lk.php';}
+	elseif ($this->uri->segment(1) == 'rules') { require 'internal-rules.php';}
+	elseif ($this->uri->segment(1) == 'news1') { require 'internal-news1.php'; }
+	elseif ($this->uri->segment(1) == 'news2') { require 'internal-news2.php';  }
+	elseif ($this->uri->segment(1) == 'news3')  { require 'internal-news3.php'; }
+    elseif ($this->uri->segment(1) == 'news4') { require 'internal-news4.php'; }
+	elseif ($this->uri->segment(1) == 'news5') { require 'internal-news5.php'; }
+	elseif ($this->uri->segment(1) == 'news6') { require 'internal-news6.php'; }
 ?> 
    

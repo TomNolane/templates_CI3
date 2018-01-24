@@ -3306,3 +3306,9 @@ td.visible-print{display:table-cell !important;}
     font-weight: 900 !important;
     z-index: 7 !important;
   }
+   .special_news {
+    margin:30px;
+}
+.special_news2 {
+    height: 50vh;
+}
