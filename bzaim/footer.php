@@ -20,7 +20,7 @@ if($this->uri->segment(1) != 'form')
 ?>
 
 <?php
-if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
+if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles' || $this->uri->segment(1) == 'faq')
 {
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }

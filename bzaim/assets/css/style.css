@@ -11890,6 +11890,7 @@ header .navbar-default {
   /* background-color: #b019b8; */
   background-image: url(templates/bzaim/assets/img/bg.jpg);
   background-size: cover;
+  border: 1px solid #666;
 }
 /* line 38, sass/desktop/_start.scss */
 .ex-main-head .ex-calc-wraper {
