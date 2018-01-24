@@ -169,88 +169,94 @@ if(!isset($description))
 			<nav class="navbar">
 				<div class="col-md-12">
 					<div class="navbar-header">
-						<a rel="nofollow" class="navbar-brand" href="/">
+						<a  class="navbar-brand" href="/">
 							<img alt="Rublimo.ru" class="img-responsive" src="/templates/rublimo/img/logo.png">
 						</a>
 					</div>
 					<div class="navbar-collapsem hidden-xs" id="navbar-collapse-1">
 						<ul class="nav navbar-nav menu">
 							<li class="dropdown">
-								<a rel="nofollow" href="#" class="dropdown-toggle" data-toggle="dropdown" id="text-decoration">
+								<a  href="#" class="dropdown-toggle" data-toggle="dropdown" id="text-decoration">
 									О сервисе
 									<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu">
 									<li>
-										<a rel="nofollow" href="/about" id="text-decoration">О нас</a>
+										<a  href="/about" id="text-decoration">О нас</a>
 									</li>
 									<li>
-										<a rel="nofollow" href="/contacts" id="text-decoration">Контакты</a>
+										<a  href="/contacts" id="text-decoration">Контакты</a>
 									</li>
 									<li>
-										<a rel="nofollow" href="/info" id="text-decoration">Статьи о займах</a>
+										<a  href="/info" id="text-decoration">Статьи о займах</a>
 									</li>
 									<li class="divider"></li>
 									<li>
-										<a rel="nofollow" href="/zaim-card" id="text-decoration">Займ на банковскую карту</a>
+										<a  href="/zaim-card" id="text-decoration">Займ на банковскую карту</a>
 									</li>
 									<li>
-										<a rel="nofollow" href="/zaim-qiwi" id="text-decoration">Займ на QIWI-кошелек</a>
+										<a  href="/zaim-qiwi" id="text-decoration">Займ на QIWI-кошелек</a>
 									</li>
 									<li>
-										<a rel="nofollow" href="/zaim-yandex" id="text-decoration">Займ на Яндекс.Деньги</a>
+										<a  href="/zaim-yandex" id="text-decoration">Займ на Яндекс.Деньги</a>
 									</li>
 									<li>
-										<a rel="nofollow" href="/zaim-contact" id="text-decoration">Займ через Contact</a>
+										<a  href="/zaim-contact" id="text-decoration">Займ через Contact</a>
 									</li>
 									<li>
-										<a rel="nofollow" href="/zaim-bank" id="text-decoration">Займ на банковский счет</a>
+										<a  href="/zaim-bank" id="text-decoration">Займ на банковский счет</a>
 									</li>
 								</ul>
 							</li>
 							<li>
-								<a rel="nofollow" id="text-decoration" href="/form">Получить деньги</a>
+								<a  id="text-decoration" href="/form">Получить деньги</a>
 							</li>
 							<li class="dropdown">
-								<a rel="nofollow" href="#" class="dropdown-toggle" data-toggle="dropdown" id="text-decoration">
+								<a  href="#" class="dropdown-toggle" data-toggle="dropdown" id="text-decoration">
 									Новости
 									<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu">
 									<li>
-										<a rel="nofollow" href="/news1" id="text-decoration">Где взять займ на карту Сбербанка?</a>
+										<a  href="/news1" id="text-decoration">Где взять займ на карту Сбербанка?</a>
 									</li>
 									<li>
-										<a rel="nofollow" href="/news2" id="text-decoration">Как получить кредит на Яндекс.Деньги?</a>
+										<a  href="/news2" id="text-decoration">Как получить кредит на Яндекс.Деньги?</a>
 									</li> 
 									<li>
-										<a rel="nofollow" href="/news3" id="text-decoration">Мгновенные займы – доступная и удобная услуга</a>
+										<a  href="/news3" id="text-decoration">Мгновенные займы – доступная и удобная услуга</a>
 									</li>
 									<li>
-										<a rel="nofollow" href="/news4" id="text-decoration">Очистить кредитную историю</a>
-									</li> 
+										<a  href="/news4" id="text-decoration">Очистить кредитную историю</a>
+									</li>
+									<li>
+										<a  href="/news5" id="text-decoration">Как получить займ на QIWI кошелек</a>
+									</li>
+									<li>
+										<a  href="/news6" id="text-decoration">Как получить займ через систему Contact без отказа</a>
+									</li>
 								</ul>
 							</li>
 							<li>
-								<a rel="nofollow" id="text-decoration" href="/faq">Вопросы-ответы</a>
+								<a  id="text-decoration" href="/faq">Вопросы-ответы</a>
 							</li>
 							<li>
-							<a rel="nofollow" href="" data-toggle="modal" id="askQuestion_" data-target="#askQuestion">Обратная связь</a>
+							<a  href="" data-toggle="modal" id="askQuestion_" data-target="#askQuestion">Обратная связь</a>
 							</li>
 							<li class="dropdown">
-								<a rel="nofollow" href="#" class="dropdown-toggle" data-toggle="dropdown" id="text-decoration">
+								<a  href="#" class="dropdown-toggle" data-toggle="dropdown" id="text-decoration">
 									Документы
 									<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu">
 									<li>
-										<a rel="nofollow" href="/oferta" id="text-decoration">Публичная оферта</a>
+										<a  href="/oferta" id="text-decoration">Публичная оферта</a>
 									</li>
 									<li>
-										<a rel="nofollow" href="/soglasie" id="text-decoration">Обработка данных</a>
+										<a  href="/soglasie" id="text-decoration">Обработка данных</a>
 									</li>
 									<li>
-										<a rel="nofollow" href="/rules" id="text-decoration">Правила предоставления займов</a>
+										<a  href="/rules" id="text-decoration">Правила предоставления займов</a>
 									</li>
 								</ul>
 							</li>

@@ -1013,6 +1013,9 @@ footer .copy{
 .special_news {
     margin:30px;
 }
+.special_news2 {
+    height: 50vh;
+}
 .lk-img {
     background-color: #ffffff;
     border-radius: 15px;

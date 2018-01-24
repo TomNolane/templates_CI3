@@ -80,6 +80,14 @@ switch($this->uri->segment(1))
 		$my_title = 'Можно ли самостоятельно улучшить или очистить (исправить) кредитную историю'; 
 		$description = 'Выражение – кредитная история слышали многие люди, обратившиеся к банковским структурам, у которых возникли финансовые затруднения.';
 		break;
+	case 'news5': 
+		$my_title = 'Как получить займ на QIWI кошелек?'; 
+		$description = 'Ситуация, когда срочно нужны деньги, знакома каждому из нас. Для некоторых подобный форс-мажор наступает перед самой зарплатой, в особенности, когда ее задерживают на денек другой, для других появляется неожиданная возможность сделать выгодное приобретение.';
+		break;
+	case 'news6': 
+		$my_title = 'Как получить займ через систему Contact без отказа?'; 
+		$description = 'Жизнь сегодня течет куда быстрее, чем 100, 50 и даже 10 лет назад. Человечество постоянно куда-то очень торопится и почему-то всегда опаздывает. Темп, задаваемый миром, требует все более быстрого принятия решений в любой ситуации.';
+		break;
 	default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'Rublimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
 }
 
@@ -167,6 +175,18 @@ require 'header.php';
 	{
 		require 'sidebar_start2.php';
 		require 'internal-news4.php'; 
+		require 'sidebar_end.php';
+	}
+	elseif ($this->uri->segment(1) == 'news5')
+	{
+		require 'sidebar_start2.php';
+		require 'internal-news5.php'; 
+		require 'sidebar_end.php';
+	}
+	elseif ($this->uri->segment(1) == 'news6')
+	{
+		require 'sidebar_start2.php';
+		require 'internal-news6.php'; 
 		require 'sidebar_end.php';
 	}
 	elseif ($this->uri->segment(1) == 'zaim-card') { require 'sidebar_start.php'; require 'internal-zaim-card.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}
