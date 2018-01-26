@@ -673,10 +673,10 @@ function traffic(site, page){
         url: '/traffic/',
         data: 'site='+site+'&page='+page,
             success: function(data){
-                //console.log(data);
             }
-    });    
+    });
 }
+traffic(window.location.hostname,window.location.pathname);
 </script>
 
 <?php 

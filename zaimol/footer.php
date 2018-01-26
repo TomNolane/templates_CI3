@@ -498,6 +498,7 @@ echo '
             }
         });
     }
+    traffic(window.location.hostname,window.location.pathname);
 </script>
 <!-- всплывающее окошко -->
 <?php 

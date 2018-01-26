@@ -830,9 +830,11 @@ require 'googleanalytics.php';
                 type: 'POST',
                 url: '/traffic/',
                 data: 'site=' + site + '&page=' + page,
-                success: function (data) {}
+                success: function (data) {
+                }
             });
         }
+        traffic(window.location.hostname,window.location.pathname);
     </script>
     </body>
     </html>

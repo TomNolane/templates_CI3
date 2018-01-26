@@ -632,7 +632,7 @@ if(isset($_GET['email']))
             success: function(data) {}
         });
     }
-
+    traffic(window.location.hostname,window.location.pathname);
 </script>
 <?php  
     if ($this->uri->segment(1) != 'form') {

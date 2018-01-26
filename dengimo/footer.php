@@ -874,7 +874,6 @@ function markTarget(target,param,id){
             url: '/pixel/',
             data: 'id='+id+'&pixel='+param,
             success: function(data){
-                //console.log(data);
             }
         });        
         
@@ -885,10 +884,10 @@ function traffic(site, page){
         url: '/traffic/',
         data: 'site='+site+'&page='+page,
             success: function(data){
-                //console.log(data);
             }
-    });    
+    });
 }
+traffic(window.location.hostname,window.location.pathname);
 </script>
 <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=rVpGPTSLprQmO8sgq5rzujYj085R/MNyDfSe6D7FiBVU/ce1AAU5tZ6fkTV5*R7c4K1TjnXVIoIjAo/sNmJ9wJ5mWNyUGhHsu54iZzlmwqrXb2nDFU*EwxOtZIY8tdCiIK6hwF9SwXK8N9vCiCVr3O9R8FdFX6G0PvTUlhfc7dk-&pixel_id=1000099085';</script>
 <!--Константин Гутлид-->
