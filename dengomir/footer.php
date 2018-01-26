@@ -13,8 +13,7 @@
         <!-- мобайл Yandex.RTB R-A-261797-2 -->
         <div class="hiddenx-md hidden-lg">
             <div id="yandex_rtb_R-A-261797-2"></div>
-        </div>
-        ';
+        </div>';
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Деньгомир -->
         <ins class="adsbygoogle text-center"
