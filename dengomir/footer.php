@@ -524,6 +524,7 @@
         }
         return c;
     } 
+    traffic("dengomir.ru", "4");
 </script>';
 }
 ?>

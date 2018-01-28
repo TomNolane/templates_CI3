@@ -80,6 +80,32 @@ function validate1() {
 	return false;
 }
 
+function validate1a() {
+	if (isWebvisor) return true;
+	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 100000) { 
+		return false;
+	} else if ($('input[name="period"]').val() < 5 || $('input[name="period"]').val() > 30) { 
+		return false;
+	} else if ($('input[name="f"]').val().length < 2 || !re_name.test($('input[name="f"]').val())) { 
+		return false;
+	} else if ($('input[name="i"]').val().length < 2 || !re_name.test($('input[name="i"]').val())) { 
+		return false;
+	} else if ($('input[name="o"]').val().length < 2 || !re_name.test($('input[name="o"]').val())) { 
+		return false;
+	}
+	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') { 
+		return false;
+	} else if ($('input[name="phone"]').val().length != 16) { 
+		return false;
+	} else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) { 
+		return false;
+	} else if (!$('#agree').prop('checked')) { 
+		return false;
+	}
+	else return true;
+	return false;
+}
+
 function validate2() {
 	if (isWebvisor) return true;
 	if ($('input[name="passport"]').val().length < 11) {
@@ -310,24 +336,24 @@ $(document).ready(function () {
         lang: 'ru',
         modules: 'date,sanitize'
     });
-    $('input').on('validation', function (evt, valid) {
-        if($('input').name == 'rangeSlider')
-            return;
+    // $('input').on('validation', function (evt, valid) {
+    //     if($('input').name == 'rangeSlider')
+    //         return;
 
-        if (valid) {
-            $('#' + this.id + 'status').removeClass('glyphicon-remove').addClass('glyphicon-ok');
-            $(this).parent().removeClass('ex-error');
+    //     if (valid) {
+    //         $('#' + this.id + 'status').removeClass('glyphicon-remove').addClass('glyphicon-ok');
+    //         $(this).parent().removeClass('ex-error');
 
-        } else {
-            $('#' + this.id + 'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
-            $(this).parent().addClass('ex-error');
+    //     } else {
+    //         $('#' + this.id + 'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
+    //         $(this).parent().addClass('ex-error');
             
-            if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
-            {
-                $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
-            } 
-        }
-    });
+    //         if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
+    //         {
+    //             $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
+    //         } 
+    //     }
+    // });
     $('#phone').blur(function () { 
         $.ajax({
             type: 'POST',
@@ -446,12 +472,13 @@ $(document).ready(function () {
         defaultDate: "01/01/1999",
         isRTL: false,
         onSelect: function (date) {
-            $('#birthdate').focus();
+            $('#birthdate').focus(); 
             $('#birthdate').blur();
             $('#birthdate').datepicker("hide");
             if ($(this).val().indexOf("_") == -1) {
                 $('#_birthdate').removeClass('lbl');
                 $('#_birthdate').addClass('lbl2');
+                $('#email').focus();
             } else {
                 $(this).attr("placeholder", "Пожалуйста, выберите дату рождения");
                 $(this).addClass('your-class');
@@ -492,6 +519,7 @@ $(document).ready(function () {
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstTabContent').removeClass('in active');
             $('#secondTabContent').addClass('in active');
+            traffic(window.location.hostname,1);
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
@@ -509,6 +537,7 @@ $(document).ready(function () {
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondTabContent').removeClass('in active');
             $('#lastTabContent').addClass('in active');
+            traffic(window.location.hostname,2);
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
@@ -520,6 +549,7 @@ $(document).ready(function () {
     $('#getmoney').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
+            traffic(window.location.hostname,3);
             send_form(true, '/lk');
             markTarget('form-step-3');
             window.location = '/lk';

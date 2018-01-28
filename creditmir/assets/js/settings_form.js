@@ -526,6 +526,7 @@ $(document).ready(function () {
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
             markTarget('form-step-1'); 
+            traffic(window.location.hostname,1);
         }
         showBzzz = false;
         $('.reg_same').change();
@@ -545,6 +546,7 @@ $(document).ready(function () {
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
             markTarget('form-step-1'); 
+            traffic(window.location.hostname,1);
         }
         showBzzz = false;
         $('.reg_same').change();
@@ -563,6 +565,7 @@ $(document).ready(function () {
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
             markTarget('form-step-2');
+            traffic(window.location.hostname,2);
         }
         showBzzz = false;
         setcookies();
@@ -573,6 +576,7 @@ $(document).ready(function () {
             $('input[name="step"]').val('3');
             send_form(true, '/lk');
             markTarget('form-step-3');
+            traffic(window.location.hostname,3);
             $('#anketa').submit();
         }
         showBzzz = false;

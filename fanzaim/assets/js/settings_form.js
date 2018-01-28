@@ -530,6 +530,7 @@ $(document).ready(function () {
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstStep').removeClass('in active');
             $('#secondStep').addClass('in active');
+            traffic(window.location.hostname,1);
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
@@ -548,6 +549,7 @@ $(document).ready(function () {
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondStep').removeClass('in active');
             $('#thirdStep').addClass('in active');
+            traffic(window.location.hostname,2);
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
@@ -560,6 +562,7 @@ $(document).ready(function () {
     $('#getmoney').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
+            traffic(window.location.hostname,3);
             //$('#form-modal').show();
             send_form(true, '/lk');
             markTarget('form-step-3');

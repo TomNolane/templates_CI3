@@ -310,6 +310,7 @@ $(document).ready(function () {
                             scrollTop: $('#form-steps').offset().top
                         }, 1000);
                         markTarget('form-step-1'); 
+                        traffic(window.location.hostname,1);
                         time1 = time;
                         time = 0;
                     }
@@ -329,6 +330,7 @@ $(document).ready(function () {
                         $('.form-steps-green-line').addClass('step3');
                         $('.form-steps-line').show();
                         $('#form-steps a[href="#form3"]').tab('show');
+                        traffic(window.location.hostname,2);
                         $('html, body').animate({
                             scrollTop: $('#form-steps').offset().top
                         }, 1000);
@@ -347,6 +349,7 @@ $(document).ready(function () {
                     if (validate()) {
                         $('input[name="step"]').val('3');
                         $('#form-modal').show();
+                        traffic(window.location.hostname,3);
                         send_form(true, '/lk');
                         markTarget('form-step-3');
                         time3 = time;

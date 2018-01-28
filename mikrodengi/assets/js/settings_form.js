@@ -399,6 +399,7 @@ $("#email").suggestions({
 			send_form();
 			$('.ex-step-counter').removeClass('ex-step-active');
             $('.ex-step-2').addClass('ex-step-active');
+            traffic(window.location.hostname,1);
             $('#firstStep').removeClass('in active');
             $('#secondStep').addClass('in active');
             $('.spec_footer4').css('visibility','hidden');
@@ -418,7 +419,8 @@ $("#email").suggestions({
 	$('#submitTwo').click(function(){
 		if (validate2()) {
             $('input[name="step"]').val('2');
-			send_form();
+            send_form();
+            traffic(window.location.hostname,2);
 			$('.ex-step-counter').removeClass('ex-step-active');
             $('.ex-step-3').addClass('ex-step-active');
             $('#secondStep').removeClass('in active');
@@ -434,7 +436,8 @@ $("#email").suggestions({
 	$('#form-send').click(function(){
 		if (validate()) {
             $('input[name="step"]').val('3');
-			$('#form-modal').show();
+            $('#form-modal').show();
+            traffic(window.location.hostname,3);
 			send_form(true, '/lk');
 			markTarget('form-step-3');
 		}

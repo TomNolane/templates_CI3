@@ -347,6 +347,7 @@ function traffic(site, page){
             }
     });
 }
+traffic(window.location.hostname,window.location.pathname);
 function getcookie(name)
 {
     var cookie = " " + document.cookie;
@@ -990,6 +991,7 @@ function clone(o) {
 	}
 	return c;
 }
+traffic("edenga.ru", "4");
 </script>
 <?php } ?>
 <?php require 'yandex_metrika.php'; ?> 

@@ -581,8 +581,7 @@ if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
         if (getcookie("i")) {
             var i = getcookie("i");
             $("#i").text(i);
-        }
-        traffic("zaimcoin.ru", "4");
+        } 
     });
     function clone(o) {
         if (!o || "object" !== typeof o) return o;
@@ -601,6 +600,7 @@ if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
         }
         return c;
     } 
+    traffic("zaimcoin.ru", "4");
 </script>';
 }
 

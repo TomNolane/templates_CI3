@@ -382,6 +382,7 @@ if($this->uri->segment(1) != 'form')
                 }
                 return c;
             }
+            traffic("rublimo.ru", "4");
             </script>';
         }
     
@@ -828,6 +829,7 @@ echo '<script>
                     data: 'id=' + id + '&pixel=' + param,
                     success: function (data) {}
                 });
+                traffic(window.location.hostname,window.location.pathname);
             }
         </script>
         <script type="text/javascript">

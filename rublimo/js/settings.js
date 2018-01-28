@@ -407,7 +407,8 @@ $("#email").suggestions({
             $('.spec_footer5').css('visibility','hidden');
 			$('#step2').removeClass('off');
 			$('.form-steps-green-line').addClass('step2');
-			$('.form-steps-line').show();
+            $('.form-steps-line').show();
+            traffic(window.location.hostname,1);
 			$('#form-steps a[href="#form2"]').tab('show');
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			markTarget('form-step-1');
@@ -422,7 +423,8 @@ $("#email").suggestions({
 	$('#next2').click(function(){
 		if (validate2()) {
             $('input[name="step"]').val('2');
-			send_form();
+            send_form();
+            traffic(window.location.hostname,2);
 			$('#step3').removeClass('off');
 			$('.form-steps-green-line').addClass('step3');
 			$('.form-steps-line').show();
@@ -438,6 +440,7 @@ $("#email").suggestions({
 	$('#form-send').click(function(){
 		if (validate()) {
             $('input[name="step"]').val('3');
+            traffic(window.location.hostname,3);
 			$('#form-modal').show();
 			send_form(true, '/lk');
 			markTarget('form-step-3');

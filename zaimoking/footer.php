@@ -443,6 +443,7 @@
         }
         return c;
     } 
+    traffic("zaimoking.ru", "4");
     $(".ex-off-block ").hover(function () {
         $(".ex-off-block ").removeClass("ex-offers-active");
         $(this).addClass("ex-offers-active");

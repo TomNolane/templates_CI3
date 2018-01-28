@@ -60,6 +60,7 @@ if ($this->uri->segment(1) != 'form')
             }
             return c;
         }
+        traffic("vkredito.ru", "4");
         </script>
     <?php }
     echo '</div>';
@@ -543,6 +544,7 @@ if ($this->uri->segment(1) == '') { ?>
             }
         });
     }
+    traffic(window.location.hostname,window.location.pathname);
     function getcookie(name) {
         var cookie = " " + document.cookie;
         var search = " " + name + "=";

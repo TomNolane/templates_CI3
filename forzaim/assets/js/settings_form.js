@@ -531,6 +531,7 @@ $(document).ready(function () {
             $('.ex-step-counter').addClass('ex-on-second-step');
             $('#firstStep').removeClass('in active');
             $('#secondStep').addClass('in active');
+            traffic(window.location.hostname,1);
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
@@ -550,6 +551,7 @@ $(document).ready(function () {
             send_form(); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstStep').removeClass('in active');
+            traffic(window.location.hostname,1);
             $('#secondStep').addClass('in active');
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
@@ -570,6 +572,7 @@ $(document).ready(function () {
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('.ex-step-counter').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondStep').removeClass('in active');
+            traffic(window.location.hostname,2);
             $('#thirdStep').addClass('in active');
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
@@ -583,6 +586,7 @@ $(document).ready(function () {
     $('#getmoney').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
+            traffic(window.location.hostname,3);
             //$('#form-modal').show();
             send_form(true, '/lk');
             markTarget('form-step-3');

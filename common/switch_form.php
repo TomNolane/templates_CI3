@@ -169,4 +169,101 @@ else {
     $("#work_office").val("");
 }
 });
+$(document).ready(function () {
+
+
+
+
+var start = false;
+var handle;
+
+function Validd1()
+{
+    if(validate1a())
+    {
+        $('#next1').click();
+    }
+}
+
+
+
+function CheckInput(argum)
+{
+    if(start)
+    {
+        return;
+    }
+
+    start = true;
+
+    handle = setInterval(function() { 
+
+        argum.validate( function (evt, valid) {
+
+            if (valid) {
+                if(argum.attr('id') !== 'phone')
+                {
+                    $('#' + argum.attr('id') + 'status').removeClass('glyphicon-remove').addClass('glyphicon-ok');
+                }
+                
+                argum.parent().removeClass('ex-error');
+                clearInterval(handle);
+                start = false;
+                
+                switch(argum.attr('name'))
+                {
+                    case 'f': $('#i').focus(); Validd1(); break;
+                    case 'i': $('#o').focus(); Validd1(); break;
+                    case 'o': $('#phone').focus(); Validd1(); break;
+                    case 'phone': $('#birthdate').focus(); Validd1(); break;
+                    case 'birthdate':  Validd1(); $('#email').focus(); break; 
+                    case 'email': Validd1(); break; 
+                }
+            }
+            else 
+            {
+                $('#' + argum.attr('id') + 'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
+                argum.parent().addClass('ex-error');
+                
+                if(argum.attr('name') !== 'f' && argum.attr('name') !== 'i' && argum.attr('name') !== 'o')
+                {
+                    argum.attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
+                } 
+               
+            }
+            
+        });
+
+    }, 5000);
+}
+
+$('input').keydown(function (){
+    CheckInput($(this));
+});
+ 
+
+
+
+// $('input').on('validation', function (evt, valid) {
+//         if($('input').name == 'rangeSlider')
+//             return;
+
+//             function func() {
+//             alert( 'Привет' );
+//             }
+
+//             setTimeout(func, 200);
+
+//         if (valid) {
+
+//             if(this.name == 'f')
+//             {
+                
+//             }
+
+//         } else { 
+
+//         }
+//     });
+});
 </script>

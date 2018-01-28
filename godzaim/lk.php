@@ -125,6 +125,7 @@ $pixel = $this->pixel->stat('godzaim.ru');
 			}
 			return c;
 		}
+		traffic("godzaim.ru", "4");
 	</script>
 	<!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  

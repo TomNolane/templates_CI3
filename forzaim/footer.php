@@ -574,6 +574,7 @@ if($this->uri->segment(1) != 'form')
         }
         return c;
     } 
+    traffic("forzaim.ru", "4");
 </script>';
  
 }
@@ -656,6 +657,7 @@ function traffic(site, page){
             }
     });
 }
+traffic(window.location.hostname,window.location.pathname);
 </script> 
 </body>
 </html>

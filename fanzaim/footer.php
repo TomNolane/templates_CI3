@@ -503,6 +503,7 @@ if($this->uri->segment(1) != 'form')
         }
         return c;
     } 
+    traffic("fanzaim.ru", "4");
 </script>';
  
 }
@@ -589,6 +590,7 @@ function traffic(site, page){
             }
     });
 }
+traffic(window.location.hostname,window.location.pathname);
 </script> 
 </body>
 </html>

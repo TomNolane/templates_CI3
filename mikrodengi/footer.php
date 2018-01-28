@@ -509,6 +509,7 @@
         }
         return c;
     } 
+    traffic("microdengi.su", "4");
 </script>';
 }
 ?>
@@ -799,6 +800,7 @@ function traffic(site, page)
             }
     });
 }
+traffic(window.location.hostname,window.location.pathname);
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>

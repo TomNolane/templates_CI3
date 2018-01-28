@@ -8,15 +8,15 @@ if(isset($_GET['amount']))
     
     if ($sum <= 10000) 
     { $period = '7'; } 
-    else if ($sum <= 15000) 
+    else if ($sum <= 15000)
     { $period = '14'; } 
-    else if ($sum <= 20000) 
+    else if ($sum <= 20000)
     { $period = '21'; } 
     else if ($sum <= 30000)
     { $period = '21'; } 
-    else if ($sum <= 50000) 
+    else if ($sum <= 50000)
     { $period = '30'; } 
-    else { $period = '30'; } 
+    else { $period = '30'; }
 } 
 if(isset($_POST['amount']))
 { 
@@ -26,15 +26,15 @@ if(isset($_POST['amount']))
     
     if ($sum <= 10000) 
     { $period = '7'; } 
-    else if ($sum <= 15000) 
+    else if ($sum <= 15000)
     { $period = '14'; } 
-    else if ($sum <= 20000) 
+    else if ($sum <= 20000)
     { $period = '21'; } 
     else if ($sum <= 30000)
     { $period = '21'; } 
-    else if ($sum <= 50000) 
+    else if ($sum <= 50000)
     { $period = '30'; } 
-    else { $period = '30'; } 
+    else { $period = '30'; }
 } 
 if(!isset($my_title))
 {
@@ -233,7 +233,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 ?> 
 <!--[if lt IE 10]>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-<![endif]-->  
+<![endif]-->
 <script>  
      $("#rangeSlider").ionRangeSlider({
             hide_min_max: true, 
@@ -397,14 +397,14 @@ echo '<!-- Modal Popup-->
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body text-center">
                 <div class="row">
                     <div class="col-md-12">
                         <img src="/templates/common/img/popup.jpg">
                         <h2>'.$popup_text.'</h2>
-                        <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                        <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>
                     </div>
                 </div>
             </div>
@@ -431,6 +431,6 @@ if(isset($_GET['email']))
     }
     echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
 }
- include "yandexmetrika.php"; ?>
+include "yandexmetrika.php"; ?>
 </body>
 </html>

