@@ -600,7 +600,7 @@ if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
         }
         return c;
     } 
-    traffic("zaimcoin.ru", "4");
+    //traffic("zaimcoin.ru", "4");
 </script>';
 }
 

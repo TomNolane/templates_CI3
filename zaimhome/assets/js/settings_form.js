@@ -479,7 +479,7 @@ $(document).ready(function () {
             $('.spec_footer5').css('display','none'); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstTabContent').removeClass('in active');
-            //traffic(window.location.hostname,1);
+            //traffic(window.location.hostname,1); 
             $('#secondTabContent').addClass('in active');
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top

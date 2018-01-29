@@ -149,7 +149,7 @@ else {
     $("#work_office").parent().removeClass("ex-success");
     $("#work_office").parent().prev().removeClass("label_true");
     $("#work_office_label").removeClass("label_true");
-    $("#work_officestatus").removeClass("glyphicon-ok");
+    $("#work_officestatus").removeClass("glyphicon-ok"); 
     $("#work_building").val("");
     $("#work_building").removeClass("valid");
     $("#work_building").parent().removeClass("ex-success");

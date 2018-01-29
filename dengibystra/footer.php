@@ -332,7 +332,7 @@ elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
     function clone(o) {
         if (!o || "object" !== typeof o) return o;
 
-        var c = "function" === typeof o.pop ? [] : {};
+        var c = "function" === typeof o.pop ? [] : {}; 
         var p, v;
         for (p in o) {
             if (o.hasOwnProperty(p)) {

@@ -556,7 +556,7 @@ $(document).ready(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
             send_form(true, '/lk');
-            //traffic(window.location.hostname,3);
+            //traffic(window.location.hostname,3); 
             markTarget('form-step-3');
             $('#anketa').submit();
         }

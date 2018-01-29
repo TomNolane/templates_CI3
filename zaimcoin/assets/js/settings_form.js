@@ -529,7 +529,7 @@ $(document).ready(function () {
     $('#getmoney').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
-            //traffic(window.location.hostname,3);
+            //traffic(window.location.hostname,3); 
             send_form(true, '/lk');
             markTarget('form-step-3');
             $('#anketa').submit();

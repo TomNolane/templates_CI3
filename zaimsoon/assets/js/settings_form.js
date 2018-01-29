@@ -552,7 +552,7 @@ $(document).ready(function () {
             send_form(); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstStep').removeClass('in active');
-            //traffic(window.location.hostname,1);
+            //traffic(window.location.hostname,1); 
             $('#secondStep').addClass('in active');
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top

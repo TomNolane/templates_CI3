@@ -574,7 +574,7 @@ if($this->uri->segment(1) != 'form')
         }
         return c;
     } 
-    traffic("forzaim.ru", "4");
+   // traffic("forzaim.ru", "4");
 </script>';
  
 }

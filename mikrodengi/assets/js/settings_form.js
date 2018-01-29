@@ -399,7 +399,7 @@ $("#email").suggestions({
 			send_form();
 			$('.ex-step-counter').removeClass('ex-step-active');
             $('.ex-step-2').addClass('ex-step-active');
-            //traffic(window.location.hostname,1);
+            //traffic(window.location.hostname,1); 
             $('#firstStep').removeClass('in active');
             $('#secondStep').addClass('in active');
             $('.spec_footer4').css('visibility','hidden');

@@ -503,7 +503,7 @@ if($this->uri->segment(1) != 'form')
         }
         return c;
     } 
-    traffic("fanzaim.ru", "4");
+    //traffic("fanzaim.ru", "4"); 
 </script>';
  
 }

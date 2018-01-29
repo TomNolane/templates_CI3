@@ -336,24 +336,24 @@ $(document).ready(function () {
         lang: 'ru',
         modules: 'date,sanitize'
     });
-    // $('input').on('validation', function (evt, valid) {
-    //     if($('input').name == 'rangeSlider')
-    //         return;
+    $('input').on('validation', function (evt, valid) {
+        if($('input').name == 'rangeSlider')
+            return;
 
-    //     if (valid) {
-    //         $('#' + this.id + 'status').removeClass('glyphicon-remove').addClass('glyphicon-ok');
-    //         $(this).parent().removeClass('ex-error');
+        if (valid) {
+            $('#' + this.id + 'status').removeClass('glyphicon-remove').addClass('glyphicon-ok');
+            $(this).parent().removeClass('ex-error');
 
-    //     } else {
-    //         $('#' + this.id + 'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
-    //         $(this).parent().addClass('ex-error');
+        } else {
+            $('#' + this.id + 'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
+            $(this).parent().addClass('ex-error');
             
-    //         if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
-    //         {
-    //             $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
-    //         } 
-    //     }
-    // });
+            if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
+            {
+                $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
+            } 
+        }
+    });
     $('#phone').blur(function () { 
         $.ajax({
             type: 'POST',

@@ -382,7 +382,7 @@ if($this->uri->segment(1) != 'form')
                 }
                 return c;
             }
-            traffic("rublimo.ru", "4");
+            //traffic("rublimo.ru", "4");
             </script>';
         }
     

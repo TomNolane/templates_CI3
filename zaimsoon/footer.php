@@ -464,7 +464,7 @@
         }
         return c;
     } 
-    traffic("zaimsoon.ru", "4");
+   // traffic("zaimsoon.ru", "4");
 </script>';
 }
 ?>

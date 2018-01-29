@@ -60,7 +60,7 @@ if ($this->uri->segment(1) != 'form')
             }
             return c;
         }
-        traffic("vkredito.ru", "4");
+        //traffic("vkredito.ru", "4");
         </script>
     <?php }
     echo '</div>';

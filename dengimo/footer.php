@@ -858,7 +858,7 @@ function clone(o) {
 	}
 	return c;
 }
-//traffic("dengimo.ru", "4");
+//traffic("dengimo.ru", "4");  
 </script>
 <?php } 
 

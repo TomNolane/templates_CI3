@@ -355,7 +355,7 @@ $(document).ready(function () {
                         time3 = time;
                         $.ajax({
                             type: 'POST',
-                            url: '/time/',
+                            url: '/time/', 
                             data: 'site=dengimo.ru&time1=' + time1 + '&time2=' + time2 + '&time3=' +
                                 time3,
                             success: function (data) {

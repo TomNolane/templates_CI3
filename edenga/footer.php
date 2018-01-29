@@ -991,7 +991,7 @@ function clone(o) {
 	}
 	return c;
 }
-traffic("edenga.ru", "4");
+//traffic("edenga.ru", "4");
 </script>
 <?php } ?>
 <?php require 'yandex_metrika.php'; ?> 

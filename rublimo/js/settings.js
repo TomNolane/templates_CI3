@@ -408,7 +408,7 @@ $("#email").suggestions({
 			$('#step2').removeClass('off');
 			$('.form-steps-green-line').addClass('step2');
             $('.form-steps-line').show();
-            //traffic(window.location.hostname,1);
+            //traffic(window.location.hostname,1); 
 			$('#form-steps a[href="#form2"]').tab('show');
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			markTarget('form-step-1');

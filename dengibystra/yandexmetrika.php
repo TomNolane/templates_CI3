@@ -22,6 +22,6 @@ function traffic(site, page){
             success: function(data){
             }
     });
-}
+} 
 //traffic(window.location.hostname,window.location.pathname);
 </script>
