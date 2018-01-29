@@ -237,33 +237,8 @@ function CheckInput(argum)
     }, 5000);
 }
 
-$('input').keydown(function (){
-    CheckInput($(this));
-});
- 
-
-
-
-// $('input').on('validation', function (evt, valid) {
-//         if($('input').name == 'rangeSlider')
-//             return;
-
-//             function func() {
-//             alert( 'Привет' );
-//             }
-
-//             setTimeout(func, 200);
-
-//         if (valid) {
-
-//             if(this.name == 'f')
-//             {
-                
-//             }
-
-//         } else { 
-
-//         }
-//     });
+    $('input').keydown(function (){
+        //CheckInput($(this));
+    }); 
 });
 </script>

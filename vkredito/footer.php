@@ -544,7 +544,7 @@ if ($this->uri->segment(1) == '') { ?>
             }
         });
     }
-    traffic(window.location.hostname,window.location.pathname);
+    //traffic(window.location.hostname,window.location.pathname);
     function getcookie(name) {
         var cookie = " " + document.cookie;
         var search = " " + name + "=";

@@ -346,7 +346,7 @@ elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
         }
         return c;
     } 
-    traffic("dengibystra.ru", "4");
+   // traffic("dengibystra.ru", "4");
 </script>';
 }
 include "googleadservices_all.php"; 

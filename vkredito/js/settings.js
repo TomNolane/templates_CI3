@@ -318,7 +318,7 @@ $('#next').click(function(){
         $('.form-steps-line').show();
         $('.spec_footer4').css('visibility','hidden');
         $('.spec_footer5').css('visibility','hidden');
-        traffic(window.location.hostname,1);
+        //traffic(window.location.hostname,1);
         $('#form-steps a[href="#form2"]').tab('show');
         $('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
         markTarget('form-step-1');
@@ -335,7 +335,7 @@ $('#next2').click(function(){
         $('input[name="step"]').val('2');
         send_form();
         $('#step3').removeClass('off');
-        traffic(window.location.hostname,2);
+        //traffic(window.location.hostname,2);
         $('.form-steps-green-line').addClass('step3');
         $('.form-steps-line').show();
         $('#form-steps a[href="#form3"]').tab('show');
@@ -351,7 +351,7 @@ $('#form-send').click(function(){
     if (validate()) {
         $('input[name="step"]').val('3');
         $('#form-modal').show();
-        traffic(window.location.hostname,3);
+        //traffic(window.location.hostname,3);
         send_form(true, '/lk');
         markTarget('form-step-3');
         time3=time;

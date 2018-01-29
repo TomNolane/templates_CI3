@@ -523,7 +523,7 @@ $(document).ready(function () {
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstStep').removeClass('in active');
             $('#secondStep').addClass('in active');
-            traffic(window.location.hostname,1);
+            //traffic(window.location.hostname,1);
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
@@ -538,7 +538,7 @@ $(document).ready(function () {
         if (validate2()) {
             $('input[name="step"]').val('2');
             send_form();
-            traffic(window.location.hostname,2);
+            //traffic(window.location.hostname,2);
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('.ex-step-counter').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondStep').removeClass('in active');
@@ -556,7 +556,7 @@ $(document).ready(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
             send_form(true, '/lk');
-            traffic(window.location.hostname,3);
+            //traffic(window.location.hostname,3);
             markTarget('form-step-3');
             $('#anketa').submit();
         }
