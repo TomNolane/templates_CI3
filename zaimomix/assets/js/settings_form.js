@@ -22,8 +22,8 @@ var isWebvisor = new RegExp('^https?:\/\/([^/]+metrika.yandex\.(ru|ua|com|com\.t
 function error(msg){
 	var title = 'Ошибка';
 	if ($('#message').length) $('#message').remove();
-	$('body').append('<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-    '<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' +
+	$('body').append('<div class="modal fade show" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header">' +
+    '<h4 class="modal-title" id="messageLabel">' + title + '</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>' +
     '<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">OK</button></div></div></div></div>');
 	$('#message').modal('show');
 }
@@ -387,58 +387,7 @@ $("#email").suggestions({
                 $("select#passport_yyyy").val(birth[2]);
              }
         })
-    );
-   
-    // $('#birthdate').datepicker({
-    //     dateFormat: "dd/mm/yy",
-    //     changeMonth: true,
-    //     changeYear: true,
-    //     monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-    //     dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-    //     firstDay: 1,
-    //     yearRange: "-72:-18",
-    //     defaultDate: "01/01/1999",
-    //     isRTL: false,
-    //     onSelect: function (date) {
-    //         $('#birthdate').focus();
-    //         $('#birthdate').blur();
-    //         $('#birthdate').datepicker("hide");
-    //         if ($(this).val().indexOf("_") == -1) {
-    //             $('#_birthdate').removeClass('lbl');
-    //             $('#_birthdate').addClass('lbl2');
-    //         } else {
-    //             $(this).attr("placeholder", "Выберите дату рождения");
-    //             $(this).addClass('your-class');
-    //             $(this).removeClass('your-class2');
-    //             $(this).addClass('your-class3');
-    //             $('#_birthdate').removeClass('lbl2');
-    //             $('#_birthdate').addClass('lbl');
-    //         }
-    //     }
-    // });
-    // $('#passportdate').datepicker({
-    //     dateFormat: "dd/mm/yy",
-    //     changeMonth: true,
-    //     changeYear: true,
-    //     monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-    //     dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-    //     firstDay: 1,
-    //     yearRange: "-100:+0",
-    //     defaultDate: "01/01/2015",
-    //     isRTL: false,
-    //     onSelect: function (date) {
-    //         $('#passportdate').focus();
-    //         $('#passportdate').blur();
-    //         $('#passportdate').datepicker("hide");
-    //         birth = date.split('/');
-    //         $('select#passport_dd').append($("<option></option>").attr("value", birth[0]).text(birth[0]));
-    //         $("select#passport_dd").val(birth[0]);
-    //         $('select#passport_mm').append($("<option></option>").attr("value", birth[1]).text(birth[1]));
-    //         $("select#passport_mm").val(birth[1]);
-    //         $('select#passport_yyyy').append($("<option></option>").attr("value", birth[2]).text(birth[2]));
-    //         $("select#passport_yyyy").val(birth[2]);
-    //     }
-    // });
+    ); 
 	$('#submitOne').click(function(){
 		if (validate1()) {
 			send_form();

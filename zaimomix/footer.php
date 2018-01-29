@@ -552,9 +552,9 @@ if(isset($_GET['email']))
 <script>
 function markTarget(target,param, id) 
 {
-    if (typeof yaCounter47410882 == 'undefined') return;
-	if (typeof param == 'undefined') yaCounter47410882.reachGoal(target);
-	else yaCounter47410882.reachGoal(target,param);
+    if (typeof yaCounter47483542 == 'undefined') return;
+	if (typeof param == 'undefined') yaCounter47483542.reachGoal(target);
+	else yaCounter47483542.reachGoal(target,param);
         
         $.ajax({
             type: 'POST',
@@ -564,8 +564,6 @@ function markTarget(target,param, id)
             }
         });
 }
-
-
 //traffic(window.location.hostname,window.location.pathname);
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
