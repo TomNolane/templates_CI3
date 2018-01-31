@@ -80,32 +80,6 @@ function validate1() {
 	return false;
 }
 
-function validate1a() {
-	if (isWebvisor) return true;
-	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 100000) { 
-		return false;
-	} else if ($('input[name="period"]').val() < 5 || $('input[name="period"]').val() > 30) { 
-		return false;
-	} else if ($('input[name="f"]').val().length < 2 || !re_name.test($('input[name="f"]').val())) { 
-		return false;
-	} else if ($('input[name="i"]').val().length < 2 || !re_name.test($('input[name="i"]').val())) { 
-		return false;
-	} else if ($('input[name="o"]').val().length < 2 || !re_name.test($('input[name="o"]').val())) { 
-		return false;
-	}
-	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') { 
-		return false;
-	} else if ($('input[name="phone"]').val().length != 16) { 
-		return false;
-	} else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) { 
-		return false;
-	} else if (!$('#agree').prop('checked')) { 
-		return false;
-	}
-	else return true;
-	return false;
-}
-
 function validate2() {
 	if (isWebvisor) return true;
 	if ($('input[name="passport"]').val().length < 11) {
@@ -192,6 +166,7 @@ function validate3() {
 } 
 
 $(document).ready(function () {
+	
     checkMe(); 
     $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
     $('[data-toggle="popover"]').popover();
@@ -274,6 +249,7 @@ $(document).ready(function () {
                         $gender = 0;
                     }
                     $('#gender').val($gender);
+                    $(this).blur();
                 }
             });
         });
@@ -311,6 +287,9 @@ $(document).ready(function () {
                 params: {
                     // каждому полю --- соответствующая подсказка
                     parts: [fioParts[index]]
+                },
+                onSelect: function (suggestion) {
+                    $(this).blur();
                 }
             });
         });
@@ -335,6 +314,11 @@ $(document).ready(function () {
     $.validate({
         lang: 'ru',
         modules: 'date,sanitize'
+    });
+    $('input').click(function () {
+        $('html, body').animate({
+            scrollTop: $(this).offset().top - 100
+        }, 1000);
     });
     $('input').on('validation', function (evt, valid) {
         if($('input').name == 'rangeSlider')
@@ -410,6 +394,7 @@ $(document).ready(function () {
                 validator = JSON.parse(data);
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
+					$('#passportdate').focus();
                 } else {}
             }
         });
@@ -471,9 +456,9 @@ $(document).ready(function () {
         yearRange: "-72:-18",
         defaultDate: "01/01/1999",
         isRTL: false,
-        onSelect: function (date) {
-            $('#birthdate').focus(); 
-            $('#birthdate').blur();
+        onSelect: function (date) { 
+            $('#birthdate').focus();
+            $('#birthdate').blur(); 
             $('#birthdate').datepicker("hide");
             if ($(this).val().indexOf("_") == -1) {
                 $('#_birthdate').removeClass('lbl');
@@ -509,6 +494,9 @@ $(document).ready(function () {
             $("select#passport_mm").val(birth[1]);
             $('select#passport_yyyy').append($("<option></option>").attr("value", birth[2]).text(birth[2]));
             $("select#passport_yyyy").val(birth[2]);
+			
+			if ($(this).val().indexOf("_") == -1) 
+                $('#birthplace').focus();
         }
     }); 
     $('#next1').click(function () { 

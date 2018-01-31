@@ -1367,3 +1367,6 @@ footer .copy{
   {
     background-color: #fff;
   }
+  input#i , input#o, input#f {
+    text-transform: capitalize !important;
+  } 

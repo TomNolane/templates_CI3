@@ -215,33 +215,38 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
         ?>,
         values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
         onChange: function (range3) {
-                if (range3.from_value <= 10000) {
-                    $("#period").val("7");
-                    $("#period2").val("От 61 до 130 дней");
-                    $('#percent').val('95');
-                } else if (range3.from_value <= 15000) {
-                    $("#period").val("14");
-                    $("#period2").val("От 61 до 130 дней");
-                    $('#percent').val('95');
-                } else if (range3.from_value <= 20000) {
-                    $("#period").val("21");
-                    $("#period2").val("От 61 до 130 дней");
-                    $('#percent').val('95');
-                } else if (range3.from_value <= 30000) {
-                    $("#period").val("21");
-                    $("#period2").val("От 61 до 130 дней");
-                    $('#percent').val('85');
-                } else if (range3.from_value <= 50000) {
-                    $("#period").val("30");
-                    $("#period2").val("От 130 до 250 дней");
-                    $('#percent').val('77');
-                } else {
-                    $("#period").val("30");
-                    $("#period2").val("От 250 до 365 дней");
-                    $('#percent').val('65');
-                }
-                $("#amount").val(range3.from_value);
+            if (range3.from_value <= 10000) {
+                $("#period").val("7");
+                $("#period2").val("От 61 до 130 дней");
+                $('#percent').val('95');
+            } else if (range3.from_value <= 15000) {
+                $("#period").val("14");
+                $("#period2").val("От 61 до 130 дней");
+                $('#percent').val('95');
+            } else if (range3.from_value <= 20000) {
+                $("#period").val("21");
+                $("#period2").val("От 61 до 130 дней");
+                $('#percent').val('95');
+            } else if (range3.from_value <= 30000) {
+                $("#period").val("21");
+                $("#period2").val("От 61 до 130 дней");
+                $('#percent').val('85');
+            } else if (range3.from_value <= 50000) {
+                $("#period").val("30");
+                $("#period2").val("От 130 до 250 дней");
+                $('#percent').val('77');
+            } else {
+                $("#period").val("30");
+                $("#period2").val("От 250 до 365 дней");
+                $('#percent').val('65');
             }
+
+            $("#amount").val(range3.from_value);
+            $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
+        },
+        onFinish: function (range3) {
+            $('.irs-single').text('').append("<span>&nbsp;&nbsp;"+ range3.from_value+"&nbsp;&nbsp;рублей&nbsp;&nbsp;</span>");
+        }
 });
         var slider = $('#rangeSlider').data('ionRangeSlider'); 
         var slider_plus = true;
@@ -265,31 +270,32 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
             }); 
 
             if (n <= 9) {
-            $('#period').val('7');
-            $('#period2').val('От 61 до 130 дней');
-            $('#percent').val('95');
-            } else if (n <= 14 && n > 9) {
-                $('#period').val('14');
+                $('#period').val('7');
                 $('#period2').val('От 61 до 130 дней');
                 $('#percent').val('95');
-            } else if (n <= 15 && n > 14) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('95');
-            } else if (n <= 17 && n > 15) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('85');
-            } else if (n <= 19 && n > 17) {
-                $('#period').val('30');
-                $('#period2').val('От 130 до 250 дней');
-                $('#percent').val('77');
-            } else if (n > 19) {
-                $('#period').val('30');
-                $('#period2').val('От 250 до 365 дней');
-                $('#percent').val('65');
-            }
-        }, 5);
+                } else if (n <= 14 && n > 9) {
+                    $('#period').val('14');
+                    $('#period2').val('От 61 до 130 дней');
+                    $('#percent').val('95');
+                } else if (n <= 15 && n > 14) {
+                    $('#period').val('21');
+                    $('#period2').val('От 61 до 130 дней');
+                    $('#percent').val('95');
+                } else if (n <= 17 && n > 15) {
+                    $('#period').val('21');
+                    $('#period2').val('От 61 до 130 дней');
+                    $('#percent').val('85');
+                } else if (n <= 19 && n > 17) {
+                    $('#period').val('30');
+                    $('#period2').val('От 130 до 250 дней');
+                    $('#percent').val('77');
+                } else if (n > 19) {
+                    $('#period').val('30');
+                    $('#period2').val('От 250 до 365 дней');
+                    $('#percent').val('65');
+                }
+                $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
+        }, 50);
         </script>
 <?php
 } 

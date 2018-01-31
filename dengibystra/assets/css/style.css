@@ -5776,19 +5776,19 @@ select[multiple].input-lg {
 .has-success.checkbox label,
 .has-success.radio-inline label,
 .has-success.checkbox-inline label {
-  color: #3c763d;
+  color: #3c763d !important;
 }
 
 /* line 2827, sass/library/_bootstrap.scss */
 .has-success .form-control {
-  border-color: #3c763d;
+  border-color: #3c763d !important;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 /* line 2832, sass/library/_bootstrap.scss */
 .has-success .form-control:focus {
-  border-color: #2b542c;
+  border-color: #2b542c !important;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
 }
@@ -5797,12 +5797,12 @@ select[multiple].input-lg {
 .has-success .input-group-addon {
   color: #3c763d;
   background-color: #dff0d8;
-  border-color: #3c763d;
+  border-color: #3c763d !important;
 }
 
 /* line 2842, sass/library/_bootstrap.scss */
 .has-success .form-control-feedback {
-  color: #3c763d;
+  color: #3c763d !important;
 }
 
 /* line 2845, sass/library/_bootstrap.scss */
@@ -5856,33 +5856,33 @@ select[multiple].input-lg {
 .has-error.checkbox label,
 .has-error.radio-inline label,
 .has-error.checkbox-inline label {
-  color: #a94442;
+  color: #a94442 !important;
 }
 
 /* line 2887, sass/library/_bootstrap.scss */
 .has-error .form-control {
-  border-color: #a94442;
+  border-color: #a94442 !important;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 /* line 2892, sass/library/_bootstrap.scss */
 .has-error .form-control:focus {
-  border-color: #843534;
+  border-color: #843534 !important;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
 }
 
 /* line 2897, sass/library/_bootstrap.scss */
 .has-error .input-group-addon {
-  color: #a94442;
+  color: #a94442 !important;
   background-color: #f2dede;
-  border-color: #a94442;
+  border-color: #a94442 !important
 }
 
 /* line 2902, sass/library/_bootstrap.scss */
 .has-error .form-control-feedback {
-  color: #a94442;
+  color: #a94442 !important
 }
 
 /* line 2905, sass/library/_bootstrap.scss */
@@ -11611,7 +11611,7 @@ button.close {
   border-color: #f54b5f transparent transparent transparent;
 }
 /* line 101, sass/library/_ionRangeSlider.scss */
-.irs-single:after {
+.irs-single:after { 
   content: '';
   position: absolute;
   left: 50%;
@@ -13285,7 +13285,6 @@ header .navbar-default {
   border-radius: 4px;
   background-color: #eef2f7;
   outline: none;
-  border: none;
   padding: 15px 5px 15px 35px;
   color: #000000;
   font-family: "Roboto", sans-serif;

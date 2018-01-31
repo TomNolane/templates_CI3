@@ -21,28 +21,28 @@ $(document).ready(function () {
         returnTable = $('.ex-total'),
         probabilityTable = $('.irs-single'),
         probabilityTable2 = $('.ex-prob'),
-        probability = 95,
+        probability = $('#percent').val(),
         time = '130-200 дней',
         commission = (currentLoanSize * commissionPercantage) / 100,
         returnTotal = currentLoanSize + commission,
         setDynamicProbability = function () {
-            if(currentLoanSize >= 30000 && currentLoanSize < 50000){
+            if(currentLoanSize >= 30000 && currentLoanSize <= 50000){
                 probability = 85;
                 probabilityTable.text("вероятность " + probability).append('%');
-                probabilityTable2.html("<span>"+probability +"%</span>");
-            }else if(currentLoanSize >= 50000 && currentLoanSize < 80000){
+                probabilityTable2.html("<span style='margin-left: 0px !important;'>"+probability +"%</span>");
+            }else if(currentLoanSize > 50000 && currentLoanSize < 80000){
                 probability = 77;
                 probabilityTable.text("вероятность " + probability).append('%');;
-                probabilityTable2.html("<span>"+probability +"%</span>");
+                probabilityTable2.html("<span style='margin-left: 0px !important;'>"+probability +"%</span>");
             }else if(currentLoanSize >= 80000){
                 probability = 65;
                 probabilityTable.text("вероятность " + probability).append('%');
-                probabilityTable2.html("<span>"+probability +"%</span>");
+                probabilityTable2.html("<span style='margin-left: 0px !important;'>"+probability +"%</span>");
             }
             else if(currentLoanSize <= 25000){
                 probability = 95;
                 probabilityTable.text("вероятность " + probability).append('%');
-                probabilityTable2.html("<span>"+probability +"%</span>");
+                probabilityTable2.html("<span style='margin-left: 0px !important;'>"+probability +"%</span>");
             }
         },
         setDynamicTimePeriod = function () {
@@ -80,7 +80,7 @@ $(document).ready(function () {
         probabilityTable2.text('').append("<span>"+ probability+"%</span>");
     //-------------------Use this function to get and set range slider current value----------------------//
     range.on("change", function () {
-        probabilityTable.css('margin-left', '0');
+        probabilityTable.attr('style', probabilityTable.attr('style') + ';' + 'margin-left: -37px !important');
         currentLoanSize = parseInt($(this).prop("value"));
         commission = (currentLoanSize * commissionPercantage) / 100;
         returnTotal = currentLoanSize + commission;

@@ -90,13 +90,8 @@ function validate2() {
 	if ($('input[name="passport"]').val().length < 11) {
 		error('Вы не указали номер и серию паспорта.');
 		return false;
-	}
-	/*
-	else if ($('select[name="passport_dd"]').val().length != 2) {error('Вы не указали день выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_mm"]').val().length != 2) {error('Вы не указали месяц выдачи паспорта.'); return false;}
-	else if ($('select[name="passport_yyyy"]').val().length != 4) {error('Вы не указали год выдачи паспорта.'); return false;}
-	*/
-	else if ($('input[name="passport_who"]').val().length < 3) {
+    }
+    else if ($('input[name="passport_who"]').val().length < 3) {
 		error('Необходимо указать, кем выдан паспорт.');
 		return false;
 	} else if ($('input[name="passport_code"]').val().length < 7) {
@@ -117,10 +112,12 @@ function validate2() {
 	} else if (!$('input[name="building"]').val().length || !re.test($('input[name="building"]').val())) {
 		error('Ошибочно указан номер дома места жительства. Указывайте только номер дома и литеру, если она есть.');
 		return false;
-	} else if ($('input[name="housing"]').val().length && !re.test($('input[name="housing"]').val())) {
-		error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.');
-		return false;
-	} else if ($('input[name="flat"]').val().length && !re.test($('input[name="flat"]').val())) {
+    } 
+    // else if ($('input[name="housing"]').val().length && !re.test($('input[name="housing"]').val())) {
+	// 	error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.');
+	// 	return false;
+    // } 
+    else if ($('input[name="flat"]').val().length && !re.test($('input[name="flat"]').val())) {
 		error('Ошибочно указан номер квартиры места жительства. Указывайте только номер дома и литеру, если она есть.');
 		return false;
 	} else if ($('.reg_same:checked').val() == '0' && ($('#reg_region').val().length < 2 || !re_rc.test($('#reg_region').val()))) {
@@ -329,25 +326,32 @@ $(document).ready(function () {
         lang: 'ru',
         modules: 'date,sanitize'
     });
+    $('input').click(function () {
+        $('html, body').animate({
+            scrollTop: $(this).offset().top - 100
+        }, 1000);
+    });
     $('input').on('validation', function (evt, valid) {
-        if(valid){ 
-            if($(this)[0].name == 'birthdate' || $(this)[0].name == 'passportdate' || $(this)[0].name == 'passport_code' || $(this)[0].name == 'passport' || $(this)[0].name == 'passport_who' || $(this)[0].name == 'birthplace' || $(this)[0].name == 'city' || $(this)[0].name == 'street' || $(this)[0].name == 'building' || $(this)[0].name == 'work_experience' || $(this)[0].name == 'work_occupation' || $(this)[0].name == 'work_phone' || $(this)[0].name == 'work_salary' || $(this)[0].name == 'work_city' || $(this)[0].name == 'work_street' || $(this)[0].name == 'work_house')
-                {
-                    // $(this).css('margin-bottom','0px');
-                } 
-                $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
-                $(this).removeClass('er');
-                $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
-            } else { 
-                $(this).parent().parent().prev().addClass('label_er').removeClass('label_true');
-                $('#'+this.id+'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
-                $(this).addClass('er');
+        if(valid)
+        {  
+            $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
+            $(this).removeClass('er');
+            $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
+        } else { 
+            $(this).parent().parent().prev().addClass('label_er').removeClass('label_true');
+            $('#'+this.id+'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
+            $(this).addClass('er');
+
+            if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
+            {
                 $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
-                if($(this)[0].name == 'birthdate' || $(this)[0].name == 'passportdate' || $(this)[0].name == 'passport_code' || $(this)[0].name == 'passport' || $(this)[0].name == 'passport_who' || $(this)[0].name == 'birthplace' || $(this)[0].name == 'city' || $(this)[0].name == 'street' || $(this)[0].name == 'building' || $(this)[0].name == 'work_experience' || $(this)[0].name == 'work_occupation' || $(this)[0].name == 'work_phone' || $(this)[0].name == 'work_salary' || $(this)[0].name == 'work_city' || $(this)[0].name == 'work_street' || $(this)[0].name == 'work_house')
-                {
-                    // $(this).css('margin-bottom','20px');
-                } 
-            } 
+            }
+
+            if(this.name == 'phone')
+            {
+                ('#spec_form2').removeClass('label_true').addClass('label_er');
+            }
+        } 
     });
     $('#phone').blur(function () { 
         $.ajax({
@@ -407,6 +411,7 @@ $(document).ready(function () {
                 validator = JSON.parse(data);
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
+                    $('#birthplace').focus();
                 } else {}
             }
         });
@@ -489,6 +494,7 @@ $(document).ready(function () {
             if ($(this).val().indexOf("_") == -1) {
                 $('#_birthdate').removeClass('lbl');
                 $('#_birthdate').addClass('lbl2');
+                $('#phone').focus();
             } else {
                 $(this).attr("placeholder", "Пожалуйста, выберите дату рождения");
                 $(this).addClass('your-class');
@@ -519,6 +525,9 @@ $(document).ready(function () {
             $("select#passport_mm").val(birth[1]);
             $('select#passport_yyyy').append($("<option></option>").attr("value", birth[2]).text(birth[2]));
             $("select#passport_yyyy").val(birth[2]);
+
+            if ($(this).val().indexOf("_") == -1) 
+                $('#passport_code').focus();
         }
     });
 

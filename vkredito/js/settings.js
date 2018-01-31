@@ -137,9 +137,13 @@ $("#email").suggestions({
   $.validate({
     lang : 'ru',
     modules : 'date,sanitize'
+  }); 
+  $('input').click(function () {
+    $('html, body').animate({
+        scrollTop: $(this).offset().top - 100
+    }, 1000);
   });
   $('input').on('validation', function(evt, valid) {
-
     if(valid){ 
         if($(this)[0].name == 'birthdate' || $(this)[0].name == 'passportdate' || $(this)[0].name == 'passport_code' || $(this)[0].name == 'passport' || $(this)[0].name == 'passport_who' || $(this)[0].name == 'birthplace' || $(this)[0].name == 'city' || $(this)[0].name == 'street' || $(this)[0].name == 'building' || $(this)[0].name == 'work_experience' || $(this)[0].name == 'work_occupation' || $(this)[0].name == 'work_phone' || $(this)[0].name == 'work_salary' || $(this)[0].name == 'work_city' || $(this)[0].name == 'work_street' || $(this)[0].name == 'work_house')
             {
@@ -170,19 +174,17 @@ $("#email").suggestions({
 	type: 'POST',
 	url: '/validate/phone/',
 	data: 'phone='+$('#phone').val(),
-	success: function(data){          
+	success: function(data){
             validator = JSON.parse(data);
             if(validator.status){
-                //console.log(validator.operator);
                 $('#phonestatus').removeClass('glyphicon-remove').removeClass('glyphicon-ok');
                 $('#phonestatus').html('<img src="/templates/common/img/mobile/'+validator.operator+'.png" width="24px" />');
                 $('#phonestatus').parent().parent().removeClass('has-error').addClass('has-success');
                 if(validator.operator == 'undefined'){
                     $('#phonestatus').html('');
                     $('#phonestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok');
-                }                
+                }
             }else{
-                //console.log('error');
                 $('#phonestatus').html('');
                 $('#phonestatus').removeClass('glyphicon-ok').addClass('glyphicon-remove');
                 $('#phonestatus').parent().parent().removeClass('has-success').addClass('has-error');
@@ -197,10 +199,10 @@ $("#email").suggestions({
 	url: '/validate/passport_code/',
 	data: 'passport_code='+$('#passport_code').val(),
 	success: function(data){
-            //console.log(data);    
             validator = JSON.parse(data);
             if(validator.status){
                 $('#passport_who').val(validator.who);
+                $('#birthplace').focus();
             }else{
             }   
         }    
@@ -220,8 +222,7 @@ $("#email").suggestions({
           lang++;
             var input = $(this),
             text = input.val().replace(/[^а-яёА-ЯЁ0-9-_\s]/g, "");
-            //text = '';
-            input.val(text);         
+            input.val(text);
           if(lang==1){
               $(this).parent().addClass('has-error');
               $(this).after('<span class="help-block form-error help-lang">Пожалуйста, смените раскладку клавиатуры на <span class="label label-info">RU</span></span>');
@@ -274,6 +275,9 @@ $("#email").suggestions({
             $('#birthdate').focus();
             $('#birthdate').blur();
             $('#birthdate').datepicker("hide");
+            if ($(this).val().indexOf("_") == -1) {
+                $('#phone').focus();
+            }
         }
   });
   $('#passportdate').datepicker({
@@ -293,9 +297,12 @@ $("#email").suggestions({
             $('select#passport_dd').append($("<option></option>").attr("value",birth[0]).text(birth[0]));
             $("select#passport_dd").val(birth[0]);
             $('select#passport_mm').append($("<option></option>").attr("value",birth[1]).text(birth[1]));
-            $("select#passport_mm").val(birth[1]);     
+            $("select#passport_mm").val(birth[1]);
             $('select#passport_yyyy').append($("<option></option>").attr("value",birth[2]).text(birth[2]));
             $("select#passport_yyyy").val(birth[2]);
+
+            if ($(this).val().indexOf("_") == -1) 
+                $('#passport_code').focus();
         }
   });       
 function setcookies() {

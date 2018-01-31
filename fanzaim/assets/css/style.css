@@ -13461,3 +13461,6 @@ main.ex-receive.ex-bankingCard ul li:last-of-type {
 a {
   text-decoration: none !important;
 }
+input#i , input#o, input#f, input#feedback-name {
+    text-transform: capitalize !important;
+  }

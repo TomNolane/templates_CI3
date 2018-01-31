@@ -87,7 +87,7 @@
                     <div class="form-group has-feedback">
                         <label class="label-required" for="email">Электронная почта</label>
                         <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Введите свой email адрес"
-                            placeholder="Введите свой email адрес" title="Email" data-validation="email" required>
+                            placeholder="Введите свой email адрес" title="Email" data-validation="email"  data-validation-error-msg="Введите свой email адрес" required>
                         <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     </div>
                 </div>

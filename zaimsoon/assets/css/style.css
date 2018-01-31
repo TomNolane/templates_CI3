@@ -140,9 +140,9 @@ body {
 /* line 99, ../sass/core/_global.scss */
 .ex-adds {
   position: relative;
-  min-height: 175px;
+  min-height: 40px;
   overflow: hidden;
-  height: 220px;
+  height: 40px;
   background-color: #d8d8d8;
 }
 /* line 105, ../sass/core/_global.scss */
@@ -13033,11 +13033,7 @@ main.ex-offerta .col-md-3 figure button {
   main.ex-offerta .col-md-3 figure table tr td:last-of-type {
     font-size: 14px;
   }
-}
-/* line 111, ../sass/desktop/_offerta.scss */
-main.ex-offerta .ex-adds {
-  margin-top: 79px;
-}
+} 
 @media (max-width: 991px) {
   /* line 116, ../sass/desktop/_offerta.scss */
   main.ex-offerta .col-md-3 figure {

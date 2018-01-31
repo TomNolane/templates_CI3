@@ -12892,9 +12892,9 @@ header .navbar-default {
 }
 /* line 44, ../sass/desktop/_form.scss */
 .ex-form .ex-anketa-main .form-group input {
-  padding: 21px 13px !important;
+  padding: 12px 13px !important;
   width: 100%;
-  height: 36px;
+  height: 50px;
   border-radius: 10px;
   border: 1px solid #e2e3e4;
   background-color: #ffffff;

@@ -104,10 +104,12 @@ function validate2() {
 	} else if (!$('input[name="building"]').val().length || !re.test($('input[name="building"]').val())) {
 		error('Ошибочно указан номер дома места жительства. Указывайте только номер дома и литеру, если она есть.');
 		return false;
-	} else if ($('input[name="housing"]').val().length && !re.test($('input[name="housing"]').val())) {
-		error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.');
-		return false;
-	} else if ($('input[name="flat"]').val().length && !re.test($('input[name="flat"]').val())) {
+    } 
+    // else if ($('input[name="housing"]').val().length && !re.test($('input[name="housing"]').val())) {
+	// 	error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.');
+	// 	return false;
+    // } 
+    else if ($('input[name="flat"]').val().length && !re.test($('input[name="flat"]').val())) {
 		error('Ошибочно указан номер квартиры места жительства. Указывайте только номер дома и литеру, если она есть.');
 		return false;
 	} else if ($('.reg_same:checked').val() == '0' && ($('#reg_region').val().length < 2 || !re_rc.test($('#reg_region').val()))) {
@@ -122,10 +124,12 @@ function validate2() {
 	} else if ($('.reg_same:checked').val() == '0' && !re.test($('input[name="reg_building"]').val())) {
 		error('Ошибочно указан номер дома регистрации. Указывайте только номер дома и литеру, если она есть.');
 		return false;
-	} else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_housing"]').val().length && !re.test($('input[name="reg_housing"]').val())) {
-		error('Ошибочно указан номер строения регистрации. Указывайте только номер дома и литеру, если она есть.');
-		return false;
-	} else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_flat"]').val().length && !re.test($('input[name="reg_flat"]').val())) {
+    } 
+    // else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_housing"]').val().length && !re.test($('input[name="reg_housing"]').val())) {
+	// 	error('Ошибочно указан номер строения регистрации. Указывайте только номер дома и литеру, если она есть.');
+	// 	return false;
+    //} 
+    else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_flat"]').val().length && !re.test($('input[name="reg_flat"]').val())) {
 		error('Ошибочно указан номер квартиры регистрации. Указывайте только номер дома и литеру, если она есть.');
 		return false;
 	} else return true;
@@ -313,6 +317,11 @@ $(document).ready(function () {
         lang: 'ru',
         modules: 'date,sanitize'
     });
+    $('input').click(function () {
+        $('html, body').animate({
+            scrollTop: $(this).offset().top - 100
+        }, 1000);
+    });
     $('input').on('validation', function (evt, valid) {
         if(valid){  
                 $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
@@ -398,6 +407,7 @@ $(document).ready(function () {
                 validator = JSON.parse(data);
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
+                    $('#birthplace').focus();
                 } else {}
             }
         });
@@ -480,6 +490,7 @@ $(document).ready(function () {
             if ($(this).val().indexOf("_") == -1) {
                 $('#_birthdate').removeClass('lbl');
                 $('#_birthdate').addClass('lbl2');
+                $('#phone').focus();
             } else {
                 $(this).attr("placeholder", "Пожалуйста, выберите дату рождения");
                 $(this).addClass('your-class');
@@ -500,9 +511,9 @@ $(document).ready(function () {
         yearRange: "-100:+0",
         isRTL: false,
         onSelect: function (date) {
-            // $('#passportdate').focus();
-            // $('#passportdate').blur();
-            // $('#passportdate').datepicker("hide");
+            $('#passportdate').focus();
+            $('#passportdate').blur();
+            $('#passportdate').datepicker("hide");
             birth = date.split('/');
             $('select#passport_dd').append($("<option></option>").attr("value", birth[0]).text(birth[0]));
             $("select#passport_dd").val(birth[0]);
@@ -510,9 +521,11 @@ $(document).ready(function () {
             $("select#passport_mm").val(birth[1]);
             $('select#passport_yyyy').append($("<option></option>").attr("value", birth[2]).text(birth[2]));
             $("select#passport_yyyy").val(birth[2]);
+
+            if ($(this).val().indexOf("_") == -1) 
+                $('#passport_code').focus();
         }
     });
-
     $('#next1').click(function () { 
         if (validate1()) { 
             $('input[name="step"]').val('1'); 

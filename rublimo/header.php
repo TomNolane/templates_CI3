@@ -145,15 +145,7 @@ if(!isset($description))
 	?> 
 	<!--[if lte IE 9]>
 	<script src="/modules/html5shiv/html5shiv.js"></script>
-	<![endif]-->
-	<?php
-		if ($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'confirm') 
-		{
-			echo '
-					<script> 
-					</script>';
-		} 
-	?> 
+	<![endif]--> 
 	<?php
 		require 'sendpuls.php';
 		require 'google_tag_manager.php';

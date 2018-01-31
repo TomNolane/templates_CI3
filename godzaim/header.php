@@ -53,7 +53,7 @@ if(!isset($description))
 		require "templates/godzaim/css/font-awesome.min.css"; 
 		echo '</style>'; 
 		echo '<style>'; 
-		require "templates/godzaim/css/style.min.css"; 
+		require "templates/godzaim/css/style.css"; 
 		echo '</style>'; 
 		echo '<style>
 		.row {

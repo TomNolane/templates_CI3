@@ -374,7 +374,7 @@ if($this->uri->segment(1) != 'form')
             require 'templates/fanzaim/assets/js/loanCalculator.js';
             echo '</script>';
         ?>
-    <script >$(document).ready(function () {
+    <script>$(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 40,

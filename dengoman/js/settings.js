@@ -65,7 +65,7 @@ function validate2(){
 	else if ($('input[name="city"]').val().length < 2 || !re_rc.test($('input[name="city"]').val())) {error('<p>Ошибка в указании населённого пункта места жительства.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>'); return false;}
 	else if ($('input[name="street"]').val().length < 2) {error('Необходимо указать улицу места жительства.'); return false;}
 	else if (!$('input[name="building"]').val().length || !re.test($('input[name="building"]').val())) {error('Ошибочно указан номер дома места жительства. Указывайте только номер дома и литеру, если она есть.'); return false;}
-	else if ($('input[name="housing"]').val().length && !re.test($('input[name="housing"]').val())) {error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.'); return false;}
+	// else if ($('input[name="housing"]').val().length && !re.test($('input[name="housing"]').val())) {error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.'); return false;}
 	else if ($('input[name="flat"]').val().length    && !re.test($('input[name="flat"]').val())) {error('Ошибочно указан номер квартиры места жительства. Указывайте только номер дома и литеру, если она есть.'); return false;}
 	else if ($('.reg_same:checked').val() == '0' && ($('#reg_region').val().length < 2 || !re_rc.test($('#reg_region').val()))) {error('Вы не указали регион регистрации.'); return false;}
 	else if ($('.reg_same:checked').val() == '0' && ($('input[name="reg_city"]').val().length < 2 || !re_rc.test($('input[name="reg_city"]').val()))) {error('<p>Ошибка в указании населённого пункта места регистрации.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>'); return false;}
@@ -215,6 +215,11 @@ $("#email").suggestions({
     lang : 'ru',
     modules : 'date,sanitize'
   });
+    $('input').click(function () {
+        $('html, body').animate({
+            scrollTop: $(this).offset().top - 100
+        }, 1000);
+    });
   $('input').on('validation', function(evt, valid) {
     if(valid){  
         $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
@@ -281,6 +286,7 @@ $("#email").suggestions({
             validator = JSON.parse(data);
             if(validator.status){
                 $('#passport_who').val(validator.who);
+                $('#birthplace').focus();
             }else{
             }
         }
@@ -358,6 +364,7 @@ $("#email").suggestions({
             if ($(this).val().indexOf("_") == -1) {
                 $('#_birthdate').removeClass('lbl');
                 $('#_birthdate').addClass('lbl2');
+                $('#phone').focus();
             } else {
                 $(this).attr("placeholder", "Выберите дату рождения");
                 $(this).addClass('your-class');
@@ -389,6 +396,9 @@ $("#email").suggestions({
             $("select#passport_mm").val(birth[1]);
             $('select#passport_yyyy').append($("<option></option>").attr("value", birth[2]).text(birth[2]));
             $("select#passport_yyyy").val(birth[2]);
+
+            if ($(this).val().indexOf("_") == -1) 
+                $('#passport_code').focus();
         }
     });
 	$('#next').click(function(){

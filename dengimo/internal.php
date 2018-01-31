@@ -78,6 +78,7 @@ switch($this->uri->segment(1))
 			elseif ($this->uri->segment(1) == 'contacts') require 'internal-contacts.php';
 			elseif ($this->uri->segment(1) == 'faq') require 'internal-faq.php';
 			elseif ($this->uri->segment(1) == 'info') require 'internal-info.php';
+			elseif ($this->uri->segment(1) == 'service') require 'internal-service.php';
 			?>
 		</div>
 	</div>

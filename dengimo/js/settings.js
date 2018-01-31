@@ -117,6 +117,11 @@ $("#feedback-email").suggestions({
     addon: "none",
     scrollOnFocus: false
 });
+$('input').click(function () {
+    $('html, body').animate({
+        scrollTop: $(this).offset().top - 100
+    }, 1000);
+});
 $('input').on('validation', function (evt, valid) {
     if(valid){ 
             $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
@@ -175,6 +180,7 @@ $('#passport_code').blur(function () {
             validator = JSON.parse(data);
             if (validator.status) {
                 $('#passport_who').val(validator.who);
+                $('#birthplace').focus();
             } else {}
         }
     });
@@ -254,6 +260,7 @@ $(document).ready(function () {
                         $('#birthdate').focus();
                         $('#birthdate').blur();
                         $('#birthdate').datepicker("hide");
+                        $('#phone').focus();
                     }
                 });
                 $('#passportdate').datepicker({
@@ -281,6 +288,9 @@ $(document).ready(function () {
                         $('select#passport_yyyy').append($("<option></option>").attr("value", birth[2])
                             .text(birth[2]));
                         $("select#passport_yyyy").val(birth[2]);
+
+                        if ($(this).val().indexOf("_") == -1) 
+                        $('#passport_code').focus();
                     }
                 });
     
