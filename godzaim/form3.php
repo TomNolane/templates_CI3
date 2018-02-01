@@ -45,7 +45,7 @@
 	<label class="col-sm-4 control-label label-required hidden-xs">Стаж работы <br class="hidden-xs">(в месяцах)</label>
 	<div class="col-sm-8">
             <div class="shadow">
-                <input type="tel" class="form-control ec tip" min="0" max="360" name="work_experience" id="work_experience" placeholder="Стаж работы (в месяцах)" title="Пожалуйста, введите ваш стаж работы в месяцах" data-validation="number" data-validation-error-msg="Пожалуйста, введите ваш стаж работы в месяцах" required>
+                <input type="tel" class="form-control ec tip"  name="work_experience" id="work_experience" placeholder="Стаж работы (в месяцах)" title="Пожалуйста, введите ваш стаж работы в месяцах" data-validation="number" data-validation-error-msg="Пожалуйста, введите ваш стаж работы в месяцах" required>
                 <span id="work_experiencestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>               
             </div>
         </div>

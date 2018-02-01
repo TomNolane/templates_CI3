@@ -1,14 +1,14 @@
 <div class="form-group has-feedback">
-    <label class="col-sm-4 control-label label-required hidden-xs">Вид трудоустройства</label>
+    <label class="col-sm-4 control-label label-required hidden-xs" for="work">Вид трудоустройства</label>
     <div class="col-sm-8 col-xs-12">
         <div class="shadow">
-            <select class="form-control ec" id="work" name="work" required>
-                <option value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
-                <option value="ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ">Индивидуальный предприниматель</option>
-                <option value="СТУДЕНТ">Студент</option>
-                <option value="ПЕНСИОНЕР">Пенсионер</option>
-                <option value="БЕЗРАБОТНЫЙ">Безработный</option>
-            </select>
+        <select size="1" class="form-control ec" id="work" name="work" required>
+            <option value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
+            <option value="ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ">Индивидуальный предприниматель</option>
+            <option value="СТУДЕНТ">Студент</option>
+            <option value="ПЕНСИОНЕР">Пенсионер</option>
+            <option value="БЕЗРАБОТНЫЙ">Безработный</option>
+        </select>
         </div>
     </div>
 </div>
@@ -48,7 +48,7 @@
     <label class="col-sm-4 control-label label-required hidden-xs">Стаж работы
         <br class="hidden-xs">(в месяцах)</label>
     <div class="col-sm-8 col-xs-12">
-        <input type="tel" class="form-control ec tip" min="0" max="360" placeholder="Стаж работы в месяцах" name="work_experience"
+        <input type="tel" class="form-control ec tip"  placeholder="Стаж работы в месяцах" name="work_experience"
             id="work_experience" title="Пожалуйста, введите ваш стаж работы в месяцах" data-validation="number" data-validation-error-msg="Пожалуйста, введите ваш стаж работы в месяцах"
             required>
         <span id="work_experiencestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -72,19 +72,19 @@
 <div class="clearfix">&nbsp;</div>
 
 <div class="form-group has-feedback">
-    <label class="col-sm-4 control-label label-required hidden-xs">Регион</label>
+    <label class="col-sm-4 control-label label-required hidden-xs" for="work_region">Регион</label>
     <div class="col-sm-8 col-xs-12">
         <div class="shadow">
-            <select class="form-control ec tip" name="work_region" id="work_region" autocomplete="off" required>
-                <option value="0">-- Выберите регион --</option>
-                <?php
-		if (isset($regions) && is_array($regions))
-		{
-			foreach($regions as $region)
-			echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
-		}
-		?>
-            </select>
+        <select size="1" class="form-control ec tip" name="work_region" id="work_region" autocomplete="off" required>
+            <option value="0">-- Выберите регион --</option>
+            <?php
+        if (isset($regions) && is_array($regions))
+        {
+            foreach($regions as $region)
+            echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
+        }
+        ?>
+        </select>
         </div>
     </div>
 </div>

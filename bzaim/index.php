@@ -59,7 +59,7 @@
     <div class="container">
         <div class="row">
             <h1 class="hidden-xs hidden-sm visible-md visible-lg">Как получить деньги сейчас?</h1> 
-			<h1 class="hidden-md hidden-lg visible-xs visible-sm special_ind42">Как получить деньги сейчас?</h1> 
+			<h2 class="hidden-md hidden-lg visible-xs visible-sm special_ind42">Как получить деньги сейчас?</h2> 
             <div class="col-md-6 hidden-xs hidden-sm visible-md visible-lg">
                 <div class="ex-get-money-block">
                 <a href="/form"><img src="templates/bzaim/assets/img/calc.png" alt="calc.png" class="ex-vh-center"></a>
@@ -74,7 +74,7 @@
             </div> 
 			<div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm special_ind34">
                 <div class="ex-get-money-steps special_ind35">
-                    <span clas="special_ind36">1</span>
+                    <span class="special_ind36">1</span>
                     <h3 class="special_ind41">Выберите сумму займа и заполните простую анкету</h3>
                     <p>После выбора суммы вам необходимо заполнить простую анкету внеся корректные данные</p>
                 </div>
@@ -144,7 +144,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="ex-info-block hidden-xs hidden-sm visible-md visible-lg">
-                    <h3 id="ddd">О проекте</h3> 
+                    <h3>О проекте</h3> 
                     <p>Bzaim5 - это самый удобный и выгодный сервис по получению онлайн-займов. Благодаря используемым
                         принципам обработки данных нашим клиентом может стать любой гражданин России. Даже если вы пенсионер,
                         студент или у вас плохая кредитная история, не бойтесь обратиться за помощью. Мы оперативно решим
@@ -152,7 +152,7 @@
                         им по собственному усмотрению.</p>
                 </div>
 				<div class="ex-info-block hidden special_ind33">
-                    <h3 id="ddd special_ind34">О проекте</h3> 
+                    <h3 id="special_ind34">О проекте</h3> 
                     <p>Bzaim5 - это самый удобный и выгодный сервис по получению онлайн-займов. Благодаря используемым
                         принципам обработки данных нашим клиентом может стать любой гражданин России. Даже если вы пенсионер,
                         студент или у вас плохая кредитная история, не бойтесь обратиться за помощью. Мы оперативно решим

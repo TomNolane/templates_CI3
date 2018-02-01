@@ -17,9 +17,9 @@ if(!isset($description))
 	<meta name="keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="microdengi.pl" /> 
-	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Cache-control" content="no-cache"> 
-	<meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
+	
+	 
+	
 	<meta property="og:title" content="Pożyczki online - szybkie i na raty - Microdengi" />
 	<meta property="og:description" content="Microdengi -zawiera oceny i opinie o instytucjach mikrofinansowych, działających w Polsce, szybkie chwilówki online, a także aktualności z firm!"/>
 	<meta property="og:image" content="https://microdengi.pl/templates/microdengi_pol/assets/img/pic.png"/>

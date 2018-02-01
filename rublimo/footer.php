@@ -32,7 +32,7 @@ if($this->uri->segment(1) != 'form')
                     </a>
                 </div>
                 <div class="col-md-4 col-xs-12 spec_footer4">
-                    <p class="gut" id="font10">
+                    <p class="gut font10">
                         «RUBLIMO» - сервис по подбору выгодных онлайн займов находящийся по адресу: Россия, Ленинградская обл. г. Санкт-Петербург,
                         ул. Осипенко, 12, оф 201 email:
                         <a href="mailto:support@rublimo.ru" target="_blank">support@rublimo.ru</a>
@@ -40,7 +40,7 @@ if($this->uri->segment(1) != 'form')
                     </p>
                 </div>
                 <div class="col-md-6 hidden-xs hidden-sm spec_footer5">
-                    <p class="gut" id="font10">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная
+                    <p class="gut font10">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная
                         процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости
                         займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят
                         11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае
@@ -60,7 +60,7 @@ if($this->uri->segment(1) != 'form')
          echo '</script>';
          
          echo '<!--[if lt IE 10]>
-         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+         <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
          <![endif]-->';
          echo '<script>';
          require 'templates/rublimo/js/jquery.suggestions.min.js';
@@ -832,12 +832,12 @@ echo '<script>
                 //traffic(window.location.hostname,window.location.pathname);
             }
         </script>
-        <script type="text/javascript">
+        <script >
             (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
                 '//vk.com/rtrg?r=UzhaCPx8CdujAr5T6aQ/0Bm3ERynfPznf2dnE8LQ2Z8ux3b6Hx7uaeYYT0htNFbnPyzRR/AwkpL1S*co2CawMJzshhbBYJn43IAV00/rM8iULK5bmmSbvYIvGFpZ1oLAlD5bxFxTF/eWSCa*lTsoXNN4vJkpMOzY4oIS50dEoqM-&pixel_id=1000099081';
         </script>
         <!--Константин Гутлид-->
-        <script type="text/javascript">
+        <script >
             (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
                 '//vk.com/rtrg?r=NOf/xn/SOZZu1z5zSTnJwkDlXpuyNIuW73Up0x84SEhs8D7Ji1kcZl7xrzCtd3T4c3wWr89FtkTlWDHt0039QoieLbBJEzvITZLZpZ2tLq7N6OxU0n8/1z2dHACFGd22hi7UhhWpkpB83L4j1xzZm/ZHZg2e09SoMlbOaLb00rE-&pixel_id=1000099731';
         </script>
@@ -857,7 +857,7 @@ echo '<script>
             ga('create', 'UA-104407838-1', 'auto');
             ga('send', 'pageview');
         </script>
-        <script type="text/javascript">
+        <script >
             var isMobile = false; //initiate as false
             // device detection
             if (
@@ -904,14 +904,14 @@ echo '<script>
         </script> 
         <!-- Код тега ремаркетинга Google -->
         <!-- С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup. -->
-        <script type="text/javascript">
+        <script >
             /* <![CDATA[ */
             var google_conversion_id = 841045015;
             var google_custom_params = window.google_tag_params;
             var google_remarketing_only = true;
             /* ]]> */
         </script>
-        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        <script  src="//www.googleadservices.com/pagead/conversion.js">
         </script>
         <noscript>
             <div style="display:inline;">

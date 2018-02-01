@@ -32,7 +32,7 @@
 	<div class="col-sm-6">
 		<div class="form-group">
 			<label class="label-required">Стаж работы (в месяцах)</label>
-			<input type="number" class="form-control" min="0" max="360" name="work_experience" required>
+			<input type="number" class="form-control"  name="work_experience" required>
 		</div>
 	</div>
 </div>

@@ -1,4 +1,5 @@
 <?php require 'header.php'; ?>
+<form id="anketa" action="/form" method="post">
 <section class="calc" id="calc">
 	<div class="container">
 		<div class="row">
@@ -12,7 +13,7 @@
 					<h3>
 						<b class="text-uppercase">Выберите сумму и срок</b>
 					</h3>
-					<form id="anketa" action="/form" method="post">
+					
 					<input type="hidden" id="amount" name="amount" value="20000" />
 					<input type="hidden" id="period" name="period" value="21" />
 					<input type="hidden" id="form_slrd" name="form_slrd" value="15" />
@@ -47,7 +48,6 @@
 							</div>
 						</div>
 						<button type="submit" class="btn form-button">Оформить</button>
-					</form>
 				</div>
 				<img src="/templates/rublimo/img/bank2.png" alt="rublimo.ru" id="bank">
 			</div>
@@ -56,8 +56,7 @@
 					<h2 itemprop="name" id="getmoney">Моментальные
 						<br>займы онлайн</h2>
 				</div>
-				<div class="form text-center">
-					<form id="anketa" action="/form" method="post">
+				<div class="form text-center"> 
 						<input type="hidden" class="period" name="period" value="10" />
 						<input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
 						<?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
@@ -69,7 +68,6 @@
 							<div class="form-label-3 pull-right">100 000</div>
 							<div class="clearfix"></div>
 						</div>
-
 						<div class="info">
 							<div class="btn form-info">
 								<span class="form-info-title">Сумма займа</span>
@@ -94,12 +92,12 @@
 						<div class="shadow">
 							<button type="submit" class="btn ind_spec2">Оформить займ</button>
 						</div>
-					</form>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+</form>
 <div class="doc">
 	<section class="howto hidden-xs">
 		<div class="howto-header text-center">
@@ -121,7 +119,7 @@
 		</div>
 	</section>
 
-	<section class="howto-xs visible-xs">
+	<div class="howto-xs visible-xs">
 		<div class="howto-1">
 			<div class="container">
 				<div class="row">
@@ -144,7 +142,7 @@
 							<div class="middle">
 								<div class="pull-left">2. Выберите сумму
 									<br>и срок займа</div>
-								<img src="/templates/rublimo/img/howto/2.png" alt="Выберите сумму" align="right">
+								<img src="/templates/rublimo/img/howto/2.png" alt="Выберите сумму" class="pull-right">
 							</div>
 						</div>
 					</div>
@@ -158,7 +156,7 @@
 						<div class="middle-cover">
 							<div class="middle">
 								<span>3. Получите деньги</span>
-								<img src="/templates/rublimo/img/howto/3.png" alt="Получите деньги" align="right">
+								<img src="/templates/rublimo/img/howto/3.png" alt="Получите деньги" class="pull-right">
 							</div>
 						</div>
 					</div>
@@ -172,7 +170,7 @@
 						<div class="middle-cover">
 							<div class="middle">
 								<div class="shadow">
-									<a type="submit" onclick="GetMoney();" class="btn btn-get">Оформить займ</a>
+									<a onclick="GetMoney();" class="btn btn-get">Оформить займ</a>
 								</div>
 							</div>
 						</div>
@@ -180,13 +178,13 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 	<section class="rating hidden-md hidden-sm hidden-xs">
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-sm-7">
 					<div itemscope itemtype="http://schema.org/Offer">
-						<h3 itemprop="name" id="font26">
+						<h3 itemprop="name" class="font26">
 							<b>Улучшение кредитной истории</b>
 						</h3>
 						<br>
@@ -209,7 +207,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 text-center">
-						<h3 id="font26">
+						<h3 class="font26">
 							<b>Отзывы клиентов</b>
 						</h3>
 					</div>
@@ -270,7 +268,7 @@
 				<div class="row">
 					<div class="col-sm-12 great-support-box wow fadeInLeft">
 						<div class="great-support-box-text great-support-box-text-left">
-							<h3 id="font26">
+							<h3 class="font26">
 								<b>Быстрые кредиты в режиме онлайн</b>
 							</h3>
 							<p class="medium-paragraph">В жизни каждого человека бывают ситуации, когда срочно нужны деньги: поломка бытовой техники, автомобиля, внезапная
@@ -287,7 +285,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
-						<h3 id="font26">
+						<h3 class="font26">
 							<b>Что нужно для получения микрокредита?</b>
 						</h3>
 					</div>
@@ -318,7 +316,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
-						<h3 id="font26">
+						<h3 class="font26">
 							<b>Сотрудничество с нами имеет ряд преимуществ:</b>
 						</h3>
 					</div>
@@ -349,7 +347,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
-					<h3 id="font26">
+					<h3 class="font26">
 						<b>RUBLIMO: безопасно и быстро</b>
 					</h3>
 				</div>
@@ -372,7 +370,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 call-to-action section-description wow fadeInLeftBig">
-					<h3 id="font26">
+					<h3 class="font26">
 						<b>Кредит в течение 15 минут</b>
 					</h3>
 				</div>
@@ -395,7 +393,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 blog section-description wow fadeIn text-center">
-					<h3 id="font26">
+					<h3 class="font26">
 						<b>Информация о кредиторах с которыми мы сотрудничаем:</b>
 					</h3>
 					<div class="divider-1 wow fadeInUp">

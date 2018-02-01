@@ -77,7 +77,7 @@ $(document).ready(function(){
 <!-- Google Code for  
 &#1056;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1103;  
 Conversion Page -->
-<script type="text/javascript">
+<script >
 /* <![CDATA[ */
 var google_conversion_id = 854183902;
 var google_conversion_language = "en";
@@ -87,7 +87,7 @@ var google_conversion_label = "HGSECLCjsnMQ3p-nlwM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
+<script   
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
@@ -99,7 +99,7 @@ src="//www.googleadservices.com/pagead/conversion/854183902/?label=HGSECLCjsnMQ3
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
 Page -->
-<script type="text/javascript">
+<script >
 /* <![CDATA[ */
 var google_conversion_id = 832752826;
 var google_conversion_language = "en";
@@ -109,7 +109,7 @@ var google_conversion_label = "2ehdCJqw9nUQupmLjQM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
+<script   
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
@@ -121,7 +121,7 @@ src="//www.googleadservices.com/pagead/conversion/832752826/?label=2ehdCJqw9nUQu
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
 Page -->
-<script type="text/javascript">
+<script >
 /* <![CDATA[ */
 var google_conversion_id = 841045015;
 var google_conversion_language = "en";
@@ -131,7 +131,7 @@ var google_conversion_label = "eJmwCJan2HMQl6iFkQM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
+<script   
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>

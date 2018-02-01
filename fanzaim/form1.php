@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <input type="hidden" id="gender" value="1" name="gender" required>
+            <input type="hidden" id="gender" value="1" name="gender">
             <div class="form-group has-feedback">
                 <label class="control-label col-md-3" for="birthdate">Дата рождения</label>
                 <div class="col-md-9">

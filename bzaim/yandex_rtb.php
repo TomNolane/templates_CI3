@@ -1,5 +1,5 @@
 <!-- Yandex.RTB R-A-243981-1 мобильная версия-->
-<script type="text/javascript">
+<script >
     (function(w, d, n, s, t) {
         w[n] = w[n] || [];
         w[n].push(function() {
@@ -19,7 +19,7 @@
 </script>
 
 <!-- Yandex.RTB R-A-243981-3 декстоп версия-->
-<script type="text/javascript">
+<script >
     (function(w, d, n, s, t) {
         w[n] = w[n] || [];
         w[n].push(function() {

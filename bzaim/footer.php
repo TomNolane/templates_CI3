@@ -168,10 +168,10 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
     require 'templates/common/detect.min.php';
 ?> 
 <!--[if lt IE 10]>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif]--> 
 <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') { ?>
-        <script async type="text/javascript">
+        <script>
         $("#rangeSlider").ionRangeSlider({
         hide_min_max: false, 
         keyboard: true, 

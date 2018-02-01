@@ -17,9 +17,9 @@ if(!isset($description))
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="zaimrubli.ru" /> 
-	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Cache-control" content="no-cache"> 
-	<meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
+	
+	 
+	
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="Zaimrubli - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
 	<meta property="og:image" content="https://zaimrubli.ru/templates/zaimrubli/assets/img/rubles.png"/>

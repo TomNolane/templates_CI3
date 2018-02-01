@@ -16,10 +16,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="hidden" class="form-control ec" id="passport-s" name="passport_s" placeholder="0000" title="Серия паспорта"
+                            <input type="hidden" class="form-control ec" id="passport-s" name="passport_s"  title="Серия паспорта"
                                 data-validation="number" data-validation-allowing="range[1;9999]" data-validation-error-msg="Пожалуйста, введите серию паспорта"
                                 required>
-                            <input type="hidden" class="form-control ec" id="passport-n" name="passport_n" placeholder="000000" title="Номер паспорта"
+                            <input type="hidden" class="form-control ec" id="passport-n" name="passport_n"  title="Номер паспорта"
                                 data-validation="number" data-validation-allowing="range[1;999999]" data-validation-error-msg="Пожалуйста, введите номер паспорта"
                                 required>
                             <div class="form-group has-feedback hidden">

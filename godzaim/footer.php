@@ -788,7 +788,7 @@ jQuery(document).ready(function (o) {
     require 'templates/common/switch_form2.php';
 ?>
                 <!--[if lt IE 10]>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif]-->
 <?php require 'templates/common/js.php';
                 
@@ -850,17 +850,17 @@ if(isset($_GET['email'])){
     }
    
 </script>
-<script type="text/javascript">
+<script >
     (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
         '//vk.com/rtrg?r=RRRhvxA7nvURG7xAUtL1b2tM0X6dhz4tDAGsjmC3XYdu0hMp4G5M1qB0DwX9x5CjKiwuRfUUCPeTFJgPM96VEJMDEF2kd2TqnCHkwMhTMLKMsje7SOydhyYmYfpnJZCNZHLFjJlRoiPU4bCFDyrAjhJufuYNkPM30caOVnC7B/8-&pixel_id=1000099082';
 </script>
 <!--Константин Гутлид-->
-<script type="text/javascript">
+<script >
     (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
         '//vk.com/rtrg?r=Z7pk5C4xjqokU5G*QALWNq2pkJhzPOom99yo3Qxf9oIeFlECprDRQgjZP9SEA86kYiMHFgew1rs3AF6e*l8tUryFp/Fl495P7rPnkWnSEnGPEQiabdvpee/7*npmHm33ovO1TSw3ulRHBDU7ITWvhsLgKc4jAIpbdw4C7HeMV/s-&pixel_id=1000099730';
 </script>
 
-<script type="text/javascript">
+<script >
     var isMobile = false; //initiate as false
     // device detection
     if (
@@ -908,17 +908,17 @@ if(isset($_GET['email'])){
     }
 </script>
 <!-- Код тега ремаркетинга Google -->
-<!-- ------------------------------------------------
+<!-- 
 С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
-------------------------------------------------- -->
-<script type="text/javascript">
+ -->
+<script >
     /* <![CDATA[ */
     var google_conversion_id = 844462441;
     var google_custom_params = window.google_tag_params;
     var google_remarketing_only = true;
     /* ]]> */
 </script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+<script  src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
     <div style="display:inline;">

@@ -17,13 +17,7 @@ a, a:hover, a:visited{
 
 label{
     font-size:20px;
-}
-
-input[type="radio"], input[type="checkbox"] {
-    block-size:20px;
-    inline-size:20px;
-}
-
+} 
 .form-control{
     border-color: #636363;
     font-size: 21px;

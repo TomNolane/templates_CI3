@@ -1069,11 +1069,17 @@ footer .copy{
 
 @font-face {
     font-family: SFUIDisplayMedium;
-    src: url("/templates/edenga/fonts/SFUIDisplay-Medium.otf") format("opentype");
+    src:
+    local('SFUIDisplay-Medium'),
+    url("/templates/edenga/fonts/SFUIDisplay-Medium.woff") format("opentype"),
+    format('woff'); 
 }
 @font-face {
     font-family: SFUIDisplayRegular;
-    src: url("/templates/edenga/fonts/SFUIDisplay-Regular.otf") format("opentype");
+    src: 
+    local('SFUIDisplay-Regular'),
+    url("/templates/edenga/fonts/SFUIDisplay-Regular.woff") format("opentype"),
+    format('woff'); 
 }
 #ya-rtb {
     text-align: center !important;

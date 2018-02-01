@@ -93,7 +93,7 @@ if($this->uri->segment(1) != 'form')
     echo '</script>';
 ?> 
 <!--[if lt IE 10]>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif]--> 
 
 <?php require 'yandex-metrika.php'; ?>
@@ -573,10 +573,10 @@ elseif ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')  {
     ?>
 
 
-<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=LXOGS14Mckvak8y6PqTJ1ipVo6GUndpL/0lz*Oxtc1ZXl02xRuQQBvu7tS0ixHqq3*JJ057ri6tjG/uuPhxq9hKtAY1B1YvnkiO5c9I8l6XTurE6HL/oJbRFm2wQ6bjIbJLMdySh47BmhISTMfq4HLVAUlTEgaF*iO2zVH5vRB0-&pixel_id=1000099084';</script>
+<script >(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=LXOGS14Mckvak8y6PqTJ1ipVo6GUndpL/0lz*Oxtc1ZXl02xRuQQBvu7tS0ixHqq3*JJ057ri6tjG/uuPhxq9hKtAY1B1YvnkiO5c9I8l6XTurE6HL/oJbRFm2wQ6bjIbJLMdySh47BmhISTMfq4HLVAUlTEgaF*iO2zVH5vRB0-&pixel_id=1000099084';</script>
 <!--Константин Гутлид-->
-<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=asexo0CXnxyfrTPKupW5cBn6KvfsIwG2vdxtQdwRID76tIB*nDP5C0Lq8SQT21MLOL1JoDW5MPgq74pPrE6I7ePJf1zd2Qj5dLLmpgN6s0Ha0G6b4*vCId6rbRQWzlYKDuYUpc9VZYY1O*bHch7iOKeDUWNZm*fopqPHiPQEWJQ-&pixel_id=1000099723';</script>
-<script type="text/javascript">
+<script >(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=asexo0CXnxyfrTPKupW5cBn6KvfsIwG2vdxtQdwRID76tIB*nDP5C0Lq8SQT21MLOL1JoDW5MPgq74pPrE6I7ePJf1zd2Qj5dLLmpgN6s0Ha0G6b4*vCId6rbRQWzlYKDuYUpc9VZYY1O*bHch7iOKeDUWNZm*fopqPHiPQEWJQ-&pixel_id=1000099723';</script>
+<script >
 
     var isMobile = false; //initiate as false
         // device detection

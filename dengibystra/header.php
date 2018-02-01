@@ -8,9 +8,7 @@ if(!isset($description))
 <!doctype html>
 <html lang="ru">
 <head>
-    <title>
-        <?php echo $my_title;?>
-    </title>
+    <title><?php echo $my_title;?></title>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
@@ -18,17 +16,11 @@ if(!isset($description))
     <meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
     <meta name="robots" content="all" />
     <meta name="copyright" lang="ru" content="dengibystra.ru" /> 
-
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-control" content="no-cache"> 
-    <meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
-
     <meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
     <meta property="og:description" content="dengibystra - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
     <meta property="og:image" content="https://dengibystra.ru/templates/dengibystra/assets/img/calc.png"/>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dengibystra.ru/" />
-
     <meta name="twitter:card" content="https://dengibystra.ru/templates/dengibystra/assets/img/calc.png"/>
     <meta name="twitter:title" content="Срочные займы круглосуточно без проверок Онлайн"/>
     <meta name="twitter:description" content="dengibystra - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
@@ -219,7 +211,7 @@ if(!isset($description))
                 <div id="navbarCollapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right"> 
                         <li class="dropdown">
-                            <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">О проекте
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">О проекте
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
@@ -233,7 +225,7 @@ if(!isset($description))
                         </li>
                         <li><a href="/faq">Вопросы-ответы</a></li>
                         <li class="dropdown">
-                            <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">Информация
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Информация
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">

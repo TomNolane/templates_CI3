@@ -35,7 +35,7 @@
                 <span id="work_phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="tel" class="form-control ec tip" min="0" max="360" placeholder="Стаж работы в месяцах" name="work_experience"
+                <input type="tel" class="form-control ec tip"  placeholder="Стаж работы в месяцах" name="work_experience"
                     id="work_experience" title="Введите ваш стаж работы в месяцах" data-validation="number" data-validation-error-msg="Введите ваш стаж работы в месяцах"
                     required>
                 <span id="work_experiencestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>

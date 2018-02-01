@@ -50,7 +50,7 @@
             <label class="control-label col-md-2" for="experience">Стаж (в месяцах)</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
-                    <input type="tel" class="form-control ec tip" min="0" max="360" placeholder="Стаж работы в месяцах" name="work_experience"
+                    <input type="tel" class="form-control ec tip"  placeholder="Стаж работы в месяцах" name="work_experience"
                     id="work_experience" title="Пожалуйста, введите ваш стаж работы в месяцах" data-validation="number" data-validation-error-msg="Пожалуйста, введите ваш стаж работы в месяцах"
                     required>
                     <span id="work_experiencestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>

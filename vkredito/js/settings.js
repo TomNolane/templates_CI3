@@ -272,9 +272,6 @@ $("#email").suggestions({
     defaultDate: "01/01/1999",
     isRTL: false,
     onSelect: function(date) {
-            $('#birthdate').focus();
-            $('#birthdate').blur();
-            $('#birthdate').datepicker("hide");
             if ($(this).val().indexOf("_") == -1) {
                 $('#phone').focus();
             }
@@ -290,9 +287,6 @@ $("#email").suggestions({
     yearRange: "-100:+0",
     isRTL: false,
     onSelect: function(date) {
-            $('#passportdate').focus();
-            $('#passportdate').blur();
-            $('#passportdate').datepicker("hide");
             birth = date.split('/');
             $('select#passport_dd').append($("<option></option>").attr("value",birth[0]).text(birth[0]));
             $("select#passport_dd").val(birth[0]);

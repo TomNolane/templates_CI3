@@ -8,38 +8,28 @@ if(!isset($description))
 <!doctype html>
 <html lang="ru">
 <head>
-    <title>
-        <?php echo $my_title;?>
-    </title>
+    <title><?php echo $my_title;?></title>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <meta name="Description" content="<?php echo $description;?>" />
     <meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
     <meta name="robots" content="all" />
-    <meta name="copyright" lang="ru" content="bzaim5.ru" /> 
-
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-control" content="no-cache"> 
-    <meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
-
+    <meta name="copyright" lang="ru" content="bzaim5.ru" />  
     <meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
     <meta property="og:description" content="Bzaim5 - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
     <meta property="og:image" content="https://bzaim5.ru/templates/bzaim/assets/img/calc.png"/>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bzaim5.ru/" />
-
     <meta name="twitter:card" content="https://bzaim5.ru/templates/bzaim/assets/img/calc.png"/>
     <meta name="twitter:title" content="Срочные займы круглосуточно без проверок Онлайн"/>
     <meta name="twitter:description" content="Bzaim5 - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
     <meta name="twitter:image:src" content="https://bzaim5.ru/templates/bzaim/assets/img/calc.png"/>
     <meta name="twitter:url" content="https://bzaim5.ru/"/>
     <meta name="twitter:domain" content="bzaim5.ru"/>
-	
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="/templates/bzaim/assets/favicon/favicon.ico" /> 
     <link rel="icon" type="image/png" sizes="16x16" href="/templates/bzaim/assets/favicon/favicon.png">
-    
     <?php 
         echo '<!-- style --> ';
         echo '<style>';
@@ -215,7 +205,7 @@ if(!isset($description))
                 <div id="navbarCollapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right"> 
                         <li class="dropdown">
-                            <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">О проекте
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">О проекте
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
@@ -229,33 +219,33 @@ if(!isset($description))
                         </li>
                         <li><a href="/faq">Вопросы-ответы</a></li>
                         <li class="dropdown">
-                            <a  href="#" class="dropdown-toggle" data-toggle="dropdown" id="text-decoration">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
                                 Новости
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a  href="/news1" id="text-decoration">Где взять займ на карту Сбербанка?</a>
+                                    <a href="/news1" >Где взять займ на карту Сбербанка?</a>
                                 </li>
                                 <li>
-                                    <a  href="/news2" id="text-decoration">Как получить кредит на Яндекс.Деньги?</a>
+                                    <a href="/news2" >Как получить кредит на Яндекс.Деньги?</a>
                                 </li> 
                                 <li>
-                                    <a  href="/news3" id="text-decoration">Мгновенные займы – доступная и удобная услуга</a>
+                                    <a href="/news3" >Мгновенные займы – доступная и удобная услуга</a>
                                 </li>
                                 <li>
-                                    <a  href="/news4" id="text-decoration">Очистить кредитную историю</a>
+                                    <a href="/news4" >Очистить кредитную историю</a>
                                 </li>
                                 <li>
-                                    <a  href="/news5" id="text-decoration">Как получить займ на QIWI кошелек</a>
+                                    <a href="/news5" >Как получить займ на QIWI кошелек</a>
                                 </li>
                                 <li>
-                                    <a  href="/news6" id="text-decoration">Как получить займ через систему Contact без отказа</a>
+                                    <a href="/news6" >Как получить займ через систему Contact без отказа</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">Информация
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Информация
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">

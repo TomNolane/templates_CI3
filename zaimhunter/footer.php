@@ -73,7 +73,7 @@ require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
 echo '</script>';
 ?> 
 <!--[if lt IE 10]>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif]--> 
 <?php
 echo '<script>';

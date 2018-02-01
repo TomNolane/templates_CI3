@@ -483,10 +483,7 @@ $(document).ready(function () {
         yearRange: "-72:-18",
         defaultDate: "01/01/1999",
         isRTL: false,
-        onSelect: function (date) { 
-            $('#birthdate').focus();
-            $('#birthdate').blur();
-            $('#birthdate').datepicker("hide");
+        onSelect: function (date) {
             if ($(this).val().indexOf("_") == -1) {
                 $('#_birthdate').removeClass('lbl');
                 $('#_birthdate').addClass('lbl2');
@@ -511,9 +508,6 @@ $(document).ready(function () {
         yearRange: "-100:+0",
         isRTL: false,
         onSelect: function (date) {
-            $('#passportdate').focus();
-            $('#passportdate').blur();
-            $('#passportdate').datepicker("hide");
             birth = date.split('/');
             $('select#passport_dd').append($("<option></option>").attr("value", birth[0]).text(birth[0]));
             $("select#passport_dd").val(birth[0]);

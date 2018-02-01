@@ -9,7 +9,7 @@ if($this->uri->segment(1) != 'form')
     echo '<!-- mobile Yandex.RTB R-A-260538-2 -->
     <div class="hidden-lg hidden-md">
     <div id="yandex_rtb_R-A-260538-2"></div></div>
-    <script type="text/javascript">
+    <script >
     (function(w, d, n, s, t) {
     w[n] = w[n] || [];
     w[n].push(function() {
@@ -30,7 +30,7 @@ if($this->uri->segment(1) != 'form')
     <!-- desktop Yandex.RTB R-A-260538-1 -->
     <div class="hidden-xs hidden-sm">
     <div id="yandex_rtb_R-A-260538-1"></div></div>
-    <script type="text/javascript">
+    <script >
     (function(w, d, n, s, t) {
     w[n] = w[n] || [];
     w[n].push(function() {
@@ -115,7 +115,7 @@ if($this->uri->segment(1) != 'form')
     ?>
      
     <!--[if lt IE 10]>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
 
 <?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>

@@ -74,7 +74,7 @@
     ?>
 
     <!--[if lt IE 10]>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
 
 <?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') 
@@ -221,6 +221,7 @@
 });
 </script> 
 <?php } ?> 
+<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script async>
     function getcookie(name) {
         var cookie = " " + document.cookie;
@@ -789,7 +790,6 @@ function markTarget(target,param, id)
             }
         });
 }
-
 function traffic(site, page)
 {
     $.ajax({
@@ -800,8 +800,5 @@ function traffic(site, page)
             }
     });
 }
-//traffic(window.location.hostname,window.location.pathname);
 </script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-</body>
-</html>
+</body></html>

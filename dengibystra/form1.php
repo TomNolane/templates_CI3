@@ -61,7 +61,7 @@
                     </div>
                 </div>
             </div>
-            <input type="hidden" id="gender" value="1" name="gender" required>
+            <input type="hidden" id="gender" value="1" name="gender">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
@@ -87,13 +87,13 @@
                     <div class="form-group has-feedback">
                         <label class="label-required" for="email">Электронная почта</label>
                         <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Введите свой email адрес"
-                            placeholder="Введите свой email адрес" title="Email" data-validation="email" required>
+                            placeholder="Введите свой email адрес" data-validation="email" required>
                         <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group ex-arrow-on">
-                        <label for="credit" for="credit">Кредитная история</label>
+                        <label for="credit">Кредитная история</label>
                         <select class="form-control" id="credit">
                             <option>Никогда не брал кредитов</option>
                             <option>Кредиты закрыты, просрочек не было</option>

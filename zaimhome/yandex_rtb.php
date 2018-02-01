@@ -1,4 +1,4 @@
-<script type="text/javascript">
+<script >
     (function(w, d, n, s, t) {
         w[n] = w[n] || [];
         w[n].push(function() {
@@ -16,7 +16,7 @@
         t.parentNode.insertBefore(s, t);
     })(this, this.document, "yandexContextAsyncCallbacks");
 </script>
-<script type="text/javascript">
+<script >
     (function(w, d, n, s, t) {
         w[n] = w[n] || [];
         w[n].push(function() {

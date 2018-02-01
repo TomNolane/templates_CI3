@@ -257,9 +257,6 @@ $(document).ready(function () {
                     defaultDate: "01/01/1999",
                     isRTL: false,
                     onSelect: function (date) {
-                        $('#birthdate').focus();
-                        $('#birthdate').blur();
-                        $('#birthdate').datepicker("hide");
                         $('#phone').focus();
                     }
                 });
@@ -276,8 +273,6 @@ $(document).ready(function () {
                     defaultDate: "01/01/2015",
                     isRTL: false,
                     onSelect: function (date) {
-                        $('#passportdate').focus();
-                        $('#passportdate').blur();
                         birth = date.split('/');
                         $('select#passport_dd').append($("<option></option>").attr("value", birth[0]).text(
                             birth[0]));

@@ -44,7 +44,7 @@
             </label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
-                        <input type="tel" class="form-control ec tip" min="0" max="360" placeholder="Стаж работы в месяцах" name="work_experience" id="work_experience" title="Введите ваш стаж работы в месяцах" data-validation="number" data-validation-error-msg="Введите ваш стаж работы в месяцах" required>
+                        <input type="tel" class="form-control ec tip"  placeholder="Стаж работы в месяцах" name="work_experience" id="work_experience" title="Введите ваш стаж работы в месяцах" data-validation="number" data-validation-error-msg="Введите ваш стаж работы в месяцах" required>
                     </div>
                 </div>
             </div>

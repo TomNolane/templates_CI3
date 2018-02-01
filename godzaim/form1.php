@@ -45,7 +45,7 @@
 		<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 	</div>
 </div>
-<input type="hidden" id="gender" value="1" name="gender" required>
+<input type="hidden" id="gender" value="1" name="gender">
 <!-- Скрываем старую форму даты рождения -->
 <div class="form-group hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs">Дата рождения*</label>

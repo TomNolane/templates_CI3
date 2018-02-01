@@ -70,7 +70,7 @@ if($this->uri->segment(1) != 'form')
     echo "</script>"; 
     echo '
     <!--[if lt IE 10]>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->';
     echo "<script>";
     require 'templates/zaimol/assets/js/jquery.form-validator.js';

@@ -96,7 +96,7 @@ $pixel = $this->pixel->stat('edenga.ru');
                     <?php
                         foreach($data as $item){
                                     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-                                    $item['link'] = str_replace("#site", $domen, $item['link']);                            
+                                    $item['link'] = str_replace("#site", $domen, $item['link']);
                             echo '
                                 <hr>
                                     <div class="row">
@@ -105,7 +105,7 @@ $pixel = $this->pixel->stat('edenga.ru');
                                         </div>
                                         <div class="col-sm-4 text-center"><p>Вероятность одобрения: '.$prob = ( ($item['prob']-floor($item['prob'])) == 0 ? floor($item['prob']) : $item['prob']).'%</p></div>
                                         <div class="col-sm-4 text-center">
-                                            <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" class="btn btn-primary" style="width: 90%"target="_blank">Получить деньги</a>
+                                            <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" class="btn btn-primary" style="width: 90%" target="_blank">Получить деньги</a>
                                         </div>
                                 </div>
                             ';
@@ -120,14 +120,14 @@ $pixel = $this->pixel->stat('edenga.ru');
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
 Page -->
-<!-- <script type="text/javascript">
+<!-- <script >
 /* <![CDATA[ */
 var google_conversion_id = 827428872;
 var google_conversion_label = "xmjJCLrypHkQiKDGigM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
+<script   
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
@@ -139,14 +139,14 @@ src="//www.googleadservices.com/pagead/conversion/827428872/?label=xmjJCLrypHkQi
 <!-- Google Code for  
 &#1056;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1080;  
 Conversion Page -->
-<script type="text/javascript">
+<script >
 /* <![CDATA[ */
 var google_conversion_id = 845982081;
 var google_conversion_label = "qy42CPmIk3YQgdOykwM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
+<script   
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>

@@ -104,14 +104,14 @@ $pixel = $this->pixel->stat('rublimo.ru');
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080;  
 (&#1073;&#1077;&#1079; &#1044;&#1086;&#1080;) Conversion Page -->
-<script type="text/javascript">
+<script >
 /* <![CDATA[ */
 var google_conversion_id = 832752826;
 var google_conversion_label = "rzldCPv3u3gQupmLjQM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
+<script   
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>

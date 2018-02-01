@@ -38,7 +38,7 @@
                     <div class="col-md-9">
                         <p class="spec_footer7">Сервис по подбору выгодных онлайн займов Dengomir, находящийся по адресу
                             Россия, Ленинградская обл., г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
-                            <a href="mailto:support@dengomir.ru" class="special_footer99" target="_blank">| support@dengomir.ru</a></span> | +7(495) 006 19 61<br>
+                            <a href="mailto:support@dengomir.ru" class="special_footer99" target="_blank">| support@dengomir.ru</a> | +7(495) 006 19 61<br>
                             <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365
                             дней.
                             Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
@@ -116,7 +116,7 @@
     ?>
 
     <!--[if lt IE 10]>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
 
 <?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') 

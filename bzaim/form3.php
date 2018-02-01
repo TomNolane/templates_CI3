@@ -10,7 +10,7 @@
                 <div class="col-sm-6">
                     <div class="form-group ex-arrow-on has-feedback">
                         <label class="label-required" for="work">Вид трудоустройства</label>
-                        <select class="form-control ec" id="work" name="work" required>
+                        <select size="1" class="form-control ec" id="work" name="work" required>
                             <option value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
                             <option value="ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ">Индивидуальный предприниматель</option>
                             <option value="СТУДЕНТ">Студент</option>
@@ -54,7 +54,7 @@
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
                         <label class="label-required" for="work_experience">Стаж работы (в месяцах)</label>
-                        <input type="tel" class="form-control ec tip" min="0" max="360" name="work_experience" id="work_experience" placeholder="Стаж работы (в месяцах)"
+                        <input type="tel" class="form-control ec tip"  name="work_experience" id="work_experience" placeholder="Стаж работы (в месяцах)"
                             title="Введите ваш стаж работы в месяцах" data-validation="number" data-validation-error-msg="Введите ваш стаж работы в месяцах"
                             required>
                         <span id="work_experiencestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -74,7 +74,7 @@
                 <div class="col-sm-6">
                     <div class="form-group ex-arrow-on has-feedback">
                         <label class="label-required" for="work_region">Регион</label>
-                        <select class="form-control ec tip" name="work_region" id="work_region" autocomplete="off" required>
+                        <select size="1" class="form-control ec tip" name="work_region" id="work_region" autocomplete="off" required>
                             <option value="0">-- Выберите регион --</option>
                             <?php
                         if (isset($regions) && is_array($regions))

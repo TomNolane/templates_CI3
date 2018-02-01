@@ -12,9 +12,9 @@ if(!isset($description)) $description='Vkredito - лучший онлайн се
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="Vkredito.ru" />
-	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Cache-control" content="no-cache">
-	<meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
+	
+	
+	
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="Vkredito - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
 	<meta property="og:image" content="https://Vkredito.ru/templates/vkredito/img/bg.png" />
@@ -139,7 +139,7 @@ if(!isset($description)) $description='Vkredito - лучший онлайн се
     }
 ?>
 	<!--[if lte IE 9]><script src="/modules/html5shiv/html5shiv.js"></script><![endif]-->
-	<script type="text/javascript">
+	<script >
 		(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
 			'//vk.com/rtrg?r=AB08QuA*AHqYGgS1qSBS6k8osS6uuM0vwS7*GJOxHTjgB6b3yrRzsaxRA1KdhNf2pLUkYjuXeJvfaRnExxKnHxYFNvF2NIeOXGQG6ID7zAK1LjO2*5JwKmrAYlejenz3cv*G0tu9UfpsE3Bj9StLFGJC4Xc7FnTUd7KiOjzBcJY-&pixel_id=1000081266';
 	</script>
