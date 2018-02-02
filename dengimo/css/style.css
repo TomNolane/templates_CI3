@@ -485,7 +485,7 @@ p.text-indent{
     height:25px;
 }
 .panel-default {
-    border-color: none;
+    border-color: transparent;
 }
 .panel-title{
     white-space: nowrap;

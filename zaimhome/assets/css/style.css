@@ -380,7 +380,7 @@ pre,
 blockquote{border:1px solid #999;page-break-inside:avoid;}
 thead{display:table-header-group;}
 tr,
-img{page-break-inside:avoid;}
+img{page-break-inside:avoid;} 
 img{max-width:100% !important;}
 p,
 h2,
@@ -2917,7 +2917,7 @@ td.visible-print{display:table-cell !important;}
 .j-rating .top{white-space:nowrap;overflow:hidden;color:#358ed7;}
 .j-rating .bottom{position:absolute;top:0;left:0;color:#b0b0b0;}
 .j-rating .glyphicon{left:0.5px;font-size:16px;}
-.j-rating .text{float:right;line-height:1.1;margin-left:5px;padding:0 5px;color:#fff;background-color:#f0ad4e;border-radius:3px;cursor:default;display:inline-block;text-align:center;}
+.j-rating .text{line-height:1.1;margin-left:5px;padding:0 5px;color:#fff;background-color:#f0ad4e;border-radius:3px;cursor:default;display:inline-block;text-align:center;}
 .irs{position:relative;display:block;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
 .irs-line{position:relative;display:block;overflow:hidden;outline:none !important;}
 .irs-line-left, .irs-line-mid, .irs-line-right{position:absolute;display:block;top:0;}
@@ -3073,8 +3073,8 @@ td.visible-print{display:table-cell !important;}
 #ex-faq .panel-group .panel .panel-heading{padding:12px 30px 12px 15px;background-color:#f8f4f4;}
 #ex-faq .panel-group .panel .panel-heading h4 a{text-decoration:none;font-weight:700;}
 #ex-faq .panel-group .panel .panel-heading h4 a.collapsed{font-weight:400;}
-#ex-faq .panel-group .panel .panel-heading i.ex-plus-icon{margin-top:3px;display:inline-block;float:right;width:12px;height:12px;background:url(/templates/zaimhome/assets/img/plus-icon.png) no-repeat;}
-#ex-faq .panel-group .panel .panel-heading i.ex-minus-icon{margin-top:5px;display:inline-block;float:right;width:13px;height:3px;background:url(/templates/zaimhome/assets/img/minus-icon.png) no-repeat;}
+#ex-faq .panel-group .panel .panel-heading i.ex-plus-icon{margin-top:3px;display:inline-block;width:12px;height:12px;background:url(/templates/zaimhome/assets/img/plus-icon.png) no-repeat;}
+#ex-faq .panel-group .panel .panel-heading i.ex-minus-icon{margin-top:5px;display:inline-block;width:13px;height:3px;background:url(/templates/zaimhome/assets/img/minus-icon.png) no-repeat;}
 @media (max-width:767px){#ex-faq .panel-group .panel .panel-heading i{display:none !important;}
 }
 #ex-faq .panel-group .panel .panel-collapse .panel-body{border-top:none;}
@@ -3311,4 +3311,7 @@ td.visible-print{display:table-cell !important;}
 }
 .special_news2 {
     height: 50vh;
+}
+#ya-rtb {
+  text-align: center !important;
 }

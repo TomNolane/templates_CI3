@@ -2,11 +2,11 @@
     $from = '15'; $px = '63.974'; 
     if ($this->uri->segment(1) != 'form') {
 
-        echo '<!-- Декстоп Yandex.RTB R-A-257494-1 --><center><div id="ya-rtb" class="text-center spec_ind_foot"><div class="hidden-xs hidden-sm"><div id="yandex_rtb_R-A-257494-1"></div></div>';
+        echo '<!-- Декстоп Yandex.RTB R-A-257494-1 --><div id="ya-rtb" class="text-center spec_ind_foot"><div class="hidden-xs hidden-sm"><div id="yandex_rtb_R-A-257494-1"></div></div>';
         if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
             echo '<!-- Мобайл Yandex.RTB R-A-257494-3 --><div class="hidden-md hidden-lg"><div id="yandex_rtb_R-A-257494-3"></div></div>';
         }
-        echo '</div></center>';
+        echo '</div>';
 
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Займхоум -->
@@ -20,13 +20,12 @@
         </script>';
     }
 ?>
-
     <footer class="ex-main-footer">
         <div class="container" style="width: 100%">
             <div class="col-sm-3 text-center">
                 <div class="ex-footer-logo">
                     <a href="/"><img src="/templates/zaimhome/assets/img/header-logo.png" alt="Missing image" class="special_foot22"></a>
-                </div>
+                </div> 
                 <p class="special_footer3 ">Сервис выгодного онлайн займа</p>
             </div>
             <div class="col-sm-3 small spec_footer4 ">
@@ -631,7 +630,7 @@ if(isset($_GET['email']))
             success: function(data) {}
         });
     }
-    //traffic(window.location.hostname,window.location.pathname);
+    
 </script>
 <?php  
     if ($this->uri->segment(1) != 'form') {

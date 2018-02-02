@@ -26,12 +26,7 @@ label{
 }
 .dadabr{
     padding: 10px;
-}
-input[type="radio"], input[type="checkbox"] {
-    block-size:20px;
-    line-size:20px;
-}
-
+} 
 .label-required::after {
     color:#80909c;
     content:" *";
@@ -56,7 +51,7 @@ input[type="radio"], input[type="checkbox"] {
     position:absolute;
     top:19px;
     width:100%;
-    z-order:0;
+    z-index:0;
 }
 .form-steps-green-line::before {
     background-color:#629fd1;

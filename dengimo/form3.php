@@ -1,13 +1,15 @@
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="work">Вид трудоустройства</label>
 	<div class="col-sm-8 col-sm-12">
-		<div class="shadow"><select class="form-control ec" id="work" name="work" required>
-            <option value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
+		<div class="shadow">
+        <select size="1" class="form-control ec" id="work" name="work">
+            <option selected value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
             <option value="ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ">Индивидуальный предприниматель</option>
             <option value="СТУДЕНТ">Студент</option>
             <option value="ПЕНСИОНЕР">Пенсионер</option>
             <option value="БЕЗРАБОТНЫЙ">Безработный</option>
-        </select></div>
+        </select>
+    </div>
 	</div>
 </div>
 
@@ -59,14 +61,14 @@
 </div>
 
 <div class="clearfix">&nbsp;</div>
-<div class="form-group"><label class="col-sm-8 col-sm-12 col-sm-offset-4" for"work_region">Место работы</label></div>
+<div class="form-group"><label class="col-sm-8 col-sm-12 col-sm-offset-4" >Место работы</label></div>
 <div class="clearfix">&nbsp;</div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Регион</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="work_region">Регион</label>
 	<div class="col-sm-8 col-sm-12">
 		<div class="shadow"><select class="form-control ec tip" name="work_region" id="work_region" autocomplete="off" required>
-		<option value="0">!!! Выберите регион !!!</option>
+		<option value="">!!! Выберите регион !!!</option> 
 		<?php
 		if (isset($regions) && is_array($regions))
 		{

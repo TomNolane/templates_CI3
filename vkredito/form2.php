@@ -98,7 +98,7 @@
 	<label class="col-sm-4 control-label label-required hidden-xs">Регион</label>
 	<div class="col-sm-8 col-xs-12">
 		<select class="form-control ec tip" id="region" name="region" autocomplete="off" required>
-			<option value="0">-- Выберите регион --</option>
+			<option value="">-- Выберите регион --</option>
 			<?php
 		if (isset($regions) && is_array($regions))
 		{

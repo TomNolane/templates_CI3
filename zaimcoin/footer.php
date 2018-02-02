@@ -834,7 +834,7 @@ require 'googleanalytics.php';
                 }
             });
         }
-        //traffic(window.location.hostname,window.location.pathname);
+        
     </script>
     </body>
     </html>

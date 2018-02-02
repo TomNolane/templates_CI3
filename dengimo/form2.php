@@ -92,7 +92,7 @@
 	<label class="col-sm-4 control-label label-required hidden-xs" for="region">Регион</label>
 	<div><div class="col-sm-8 col-xs-12">
 	<select class="form-control ec tip" id="region" name="region" autocomplete="off" required>
-		<option value="0">-- Выберите регион --</option>
+		<option value="">-- Выберите регион --</option>
 		<?php
 		if (isset($regions) && is_array($regions))
 		{
@@ -150,8 +150,8 @@
 <div class="form-group">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="reg_type">Тип регистрации</label>
 	<div><div class="col-sm-8 col-xs-12">
-		<select class="form-control ec" name="reg_type" id="reg_type" required>
-			<option value="1">Постоянная регистрация</option>
+		<select class="form-control ec" name="reg_type" id="reg_type">
+			<option selected value="1">Постоянная регистрация</option>
 			<option value="0">Без регистрации</option>
 			<option value="2">Временная регистрация</option>
 		</select>
@@ -160,7 +160,7 @@
 
 <fieldset id="reg_same" class="hidden">
 <div class="form-group">
-	<label class="col-sm-9 control-label label-required" for="reg_same"><b>Регистрация совпадает с местом жительства</b></label>
+	<label class="col-sm-9 control-label label-required"><b>Регистрация совпадает с местом жительства</b></label>
 	<div class="col-sm-3">
 		<div class="pull-right">
 			<label class="radio-inline"><input type="radio" class="reg_same ec" name="reg_same" value="1" required checked="checked"> Да</label>
@@ -171,49 +171,49 @@
 </div>
 </fieldset>
 
-<fieldset id="reg_address hidden" class="hidden">
+<fieldset id="reg_address" class="hidden">
 	<div class="form-group">
-		<label class="col-sm-4 control-label label-required hidden-xs" for="reg_region">Регион*</label>
+		<label class="col-sm-4 control-label label-required hidden-xs">Регион*</label>
 		<div class="col-sm-8 col-xs-12">
-		<select class="form-control ec" id="reg_region" name="reg_region" id="reg_region" autocomplete="off">
-			<option value="0">Регион</option>
+		<select class="form-control ec" id="reg_region" name="reg_region" autocomplete="off">
+			<option value="">Регион</option>
 			<?php
 			if (isset($regions) && is_array($regions))
 			{
 			foreach($regions as $region)
 			echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
-			}
+			} 
 			?>
 		</select>
 		</div>
 	</div>
 	<div class="form-group">
-		<label class="col-sm-4 control-label label-required hidden-xs" for="reg_city">Населённый пункт*</label>
+		<label class="col-sm-4 control-label label-required hidden-xs">Населённый пункт*</label>
 		<div class="col-sm-8 col-xs-12">
 			<input type="text" class="form-control ec" name="reg_city" id="reg_city" title="Населённый пункт" value="<?php echo isset($city_name)? $city_name : ''; ?>">
 		</div>
 	</div>
 	<div class="form-group">
-		<label class="col-sm-4 control-label label-required hidden-xs" for="reg_street">Улица*</label>
+		<label class="col-sm-4 control-label label-required hidden-xs">Улица*</label>
 		<div class="col-sm-8 col-xs-12">
 			<input type="text" class="form-control ec" name="reg_street" id="reg_street">
 		</div>
 	</div>
 	<div class="form-group">
-		<label class="col-sm-4 control-label label-required hidden-xs" for="reg_building">Номер дома*</label>
+		<label class="col-sm-4 control-label label-required hidden-xs" >Номер дома*</label>
 		<div class="col-sm-8 col-xs-12">
 			<input type="text" class="form-control ec" name="reg_building" id="reg_building" title="Дом">
 			<p class="help-block">Например: 9а</p>
 		</div>
 	</div>
 	<div class="form-group">
-		<label class="col-sm-4 control-label" for="reg_housing">Строение</label>
+		<label class="col-sm-4 control-label" >Строение</label>
 		<div class="col-sm-8 col-xs-12">
 			<input type="text" class="form-control ec" name="reg_housing" id="reg_housing">
 		</div>
 	</div>
 	<div class="form-group">
-		<label class="col-sm-4 control-label" for="reg_flat">Квартира</label>
+		<label class="col-sm-4 control-label" >Квартира</label>
 		<div class="col-sm-8 col-xs-12">
 			<input type="text" class="form-control ec" name="reg_flat" id="reg_flat">
 		</div>

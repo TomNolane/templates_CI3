@@ -1,4 +1,12 @@
 <?php 
+if ($this->uri->segment(1) == 'robots.txt') 
+{ 
+	$page_title = preg_replace("/[^A-Za-z0-9]/", "", require 'internal-robots.txt');
+	//echo preg_replace('/[^a-zA-Z0-9-]/', '', require 'internal-robots.txt')
+	echo $page_title;
+} 
+else
+{
 $my_title = ''; $description = '';
 switch($this->uri->segment(1))
 {
@@ -90,111 +98,102 @@ switch($this->uri->segment(1))
 		break;
 	default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'Rublimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
 }
-
-require 'header.php'; 
-
-
-?>
- 
-
-<div class="clearfix">&nbsp;</div>
-
-<?php
-
-	if ($this->uri->segment(1) == 'about') 
-	{
-		require 'sidebar_start.php';
-		require 'internal-about.php';
-		require 'sidebar_end.php';
-	} 
-	elseif($this->uri->segment(1) == 'faq')
-	{ 
-		require 'sidebar_start2.php';
-		require 'internal-faq.php'; 
-		require 'sidebar_end2.php';
-	}
-	elseif($this->uri->segment(1) == '404')
-	{  
-		require 'internal-404.php';  
-	}
-	elseif ($this->uri->segment(1) == 'info')
-	{
-		require 'sidebar_start.php';
-		require 'internal-info.php';
-		require 'sidebar_end.php';
-	}
-	elseif ($this->uri->segment(1) == 'oferta') 
-	{
-		require 'sidebar_start.php';
-		require 'internal-oferta.php';
-		require 'sidebar_end.php';
-	}
-	elseif ($this->uri->segment(1) == 'agree')
-	{
-		require 'sidebar_start.php';
-		require 'internal-agree.php';
-		require 'sidebar_end.php';
-	} 
-	elseif ($this->uri->segment(1) == 'soglasie') 
-	{
-		require 'sidebar_start.php';
-		require 'internal-soglasie.php';
-		require 'sidebar_end.php';
-	} 
-	elseif ($this->uri->segment(1) == 'rules')
-	{
-		require 'sidebar_start.php';
-		require 'internal-rules.php';
-		require 'sidebar_end.php';
-	}
-	elseif ($this->uri->segment(1) == 'contacts')
-	{
-		require 'sidebar_start.php';
-		require 'internal-contacts.php';
-		require 'sidebar_end.php';
-	} 
-	elseif ($this->uri->segment(1) == 'news1')
-	{
-		require 'sidebar_start2.php';
-		require 'internal-news1.php'; 
-		require 'sidebar_end.php';
-	}
-	elseif ($this->uri->segment(1) == 'news2')
-	{
-		require 'sidebar_start2.php';
-		require 'internal-news2.php'; 
-		require 'sidebar_end.php';
-	}
-	elseif ($this->uri->segment(1) == 'news3')
-	{
-		require 'sidebar_start2.php';
-		require 'internal-news3.php'; 
-		require 'sidebar_end.php';
-	}
-	elseif ($this->uri->segment(1) == 'news4')
-	{
-		require 'sidebar_start2.php';
-		require 'internal-news4.php'; 
-		require 'sidebar_end.php';
-	}
-	elseif ($this->uri->segment(1) == 'news5')
-	{
-		require 'sidebar_start2.php';
-		require 'internal-news5.php'; 
-		require 'sidebar_end.php';
-	}
-	elseif ($this->uri->segment(1) == 'news6')
-	{
-		require 'sidebar_start2.php';
-		require 'internal-news6.php'; 
-		require 'sidebar_end.php';
-	}
-	elseif ($this->uri->segment(1) == 'zaim-card') { require 'sidebar_start.php'; require 'internal-zaim-card.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}
-	elseif ($this->uri->segment(1) == 'zaim-qiwi') { require 'sidebar_start.php'; require 'internal-zaim-qiwi.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}
-	elseif ($this->uri->segment(1) == 'zaim-yandex') { require 'sidebar_start.php'; require 'internal-zaim-yandex.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}
-	elseif ($this->uri->segment(1) == 'zaim-contact') { require 'sidebar_start.php'; require 'internal-zaim-contact.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}
-	elseif ($this->uri->segment(1) == 'zaim-bank') { require 'sidebar_start.php'; require 'internal-zaim-bank.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}
-	 
 	
+		require 'header.php';
+		echo '<div class="clearfix">&nbsp;</div>';
+        if ($this->uri->segment(1) == 'about') 
+		{
+			require 'sidebar_start.php';
+			require 'internal-about.php';
+			require 'sidebar_end.php';
+		} 
+		elseif($this->uri->segment(1) == 'faq')
+		{ 
+			require 'sidebar_start2.php';
+			require 'internal-faq.php'; 
+			require 'sidebar_end2.php';
+		}
+		elseif($this->uri->segment(1) == '404')
+		{  
+			require 'internal-404.php';  
+		}
+		elseif ($this->uri->segment(1) == 'info')
+		{
+			require 'sidebar_start.php';
+			require 'internal-info.php';
+			require 'sidebar_end.php';
+		}
+		elseif ($this->uri->segment(1) == 'oferta') 
+		{
+			require 'sidebar_start.php';
+			require 'internal-oferta.php';
+			require 'sidebar_end.php';
+		}
+		elseif ($this->uri->segment(1) == 'agree')
+		{
+			require 'sidebar_start.php';
+			require 'internal-agree.php';
+			require 'sidebar_end.php';
+		} 
+		elseif ($this->uri->segment(1) == 'soglasie') 
+		{
+			require 'sidebar_start.php';
+			require 'internal-soglasie.php';
+			require 'sidebar_end.php';
+		} 
+		elseif ($this->uri->segment(1) == 'rules')
+		{
+			require 'sidebar_start.php';
+			require 'internal-rules.php';
+			require 'sidebar_end.php';
+		}
+		elseif ($this->uri->segment(1) == 'contacts')
+		{
+			require 'sidebar_start.php';
+			require 'internal-contacts.php';
+			require 'sidebar_end.php';
+		} 
+		elseif ($this->uri->segment(1) == 'news1')
+		{
+			require 'sidebar_start2.php';
+			require 'internal-news1.php'; 
+			require 'sidebar_end.php';
+		}
+		elseif ($this->uri->segment(1) == 'news2')
+		{
+			require 'sidebar_start2.php';
+			require 'internal-news2.php'; 
+			require 'sidebar_end.php';
+		}
+		elseif ($this->uri->segment(1) == 'news3')
+		{
+			require 'sidebar_start2.php';
+			require 'internal-news3.php'; 
+			require 'sidebar_end.php';
+		}
+		elseif ($this->uri->segment(1) == 'news4')
+		{
+			require 'sidebar_start2.php';
+			require 'internal-news4.php'; 
+			require 'sidebar_end.php';
+		}
+		elseif ($this->uri->segment(1) == 'news5')
+		{
+			require 'sidebar_start2.php';
+			require 'internal-news5.php'; 
+			require 'sidebar_end.php';
+		}
+		elseif ($this->uri->segment(1) == 'news6')
+		{
+			require 'sidebar_start2.php';
+			require 'internal-news6.php'; 
+			require 'sidebar_end.php';
+		}
+		elseif ($this->uri->segment(1) == 'zaim-card') { require 'sidebar_start.php'; require 'internal-zaim-card.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}
+		elseif ($this->uri->segment(1) == 'zaim-qiwi') { require 'sidebar_start.php'; require 'internal-zaim-qiwi.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}
+		elseif ($this->uri->segment(1) == 'zaim-yandex') { require 'sidebar_start.php'; require 'internal-zaim-yandex.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}
+		elseif ($this->uri->segment(1) == 'zaim-contact') { require 'sidebar_start.php'; require 'internal-zaim-contact.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}
+		elseif ($this->uri->segment(1) == 'zaim-bank') { require 'sidebar_start.php'; require 'internal-zaim-bank.php'; require 'internal-zaim-button.php'; require 'sidebar_end.php';}
+		require 'footer.php';
+	} 
 ?>
-<?php require 'footer.php'; ?>

@@ -9,7 +9,7 @@
                     </figure>
 
                     <div class="hidden-xs hidden-sm">
-                    <div id="ex-main-slider-range ">
+                    <div id="ex-main-slider-range">
                         <figure class="ex-range-slider">
                             <input type="text" id="rangeSlider" name="rangeSlider" value="0" />
                         </figure>
@@ -59,47 +59,52 @@
             </div>
          </div> 
         <input type="hidden" id="gender" value="1" name="gender"> 
-        <!-- Скрываем старую форму даты рождения -->
+      <!-- Скрываем старую форму даты рождения -->
 <div class="form-group hidden">
-	<label class="col-sm-4 control-label label-required hidden-xs">Дата рождения*</label>
-	<div class="col-sm-2">
-		<div class="shadow">
-			<select class="form-control ec" id="birth_dd" name="birth_dd" required>
-				<option value="0">День</option>
-				<?php for($i=1;$i<=31;$i++) echo '<option value="'.(($i<10)? '0' : '').$i.'">'.$i.'</option>'; ?>
-			</select>
-		</div>
-	</div>
-	<div class="col-sm-3">
-		<div class="shadow">
-			<select class="form-control ec" id="birth_mm" name="birth_mm" required>
-				<option value="0">Месяц</option>
-				<option value="01">Январь</option>
-				<option value="02">Февраль</option>
-				<option value="03">Март</option>
-				<option value="04">Апрель</option>
-				<option value="05">Май</option>
-				<option value="06">Июнь</option>
-				<option value="07">Июль</option>
-				<option value="08">Август</option>
-				<option value="09">Сентябрь</option>
-				<option value="10">Октябрь</option>
-				<option value="11">Ноябрь</option>
-				<option value="12">Декабрь</option>
-			</select>
-		</div>
-	</div>
-	<div class="col-sm-3">
-		<div class="shadow">
-			<select class="form-control ec" id="birth_yyyy" name="birth_yyyy" required>
-				<option value="0">Год</option>
-				<?php
-				for($i=date('Y', strtotime('-80 years', time()));$i<=date('Y', strtotime('-18 years', time()));$i++)
-				echo '<option value="'.$i.'">'.$i.'</option>';
-				?>
-			</select>
-		</div>
-	</div>
+<label class="col-sm-4 control-label label-required hidden-xs" for="birth_dd">Дата рождения*</label>
+<div class="col-sm-2">
+    <div class="shadow">
+        <select size="1" class="form-control ec" id="birth_dd" name="birth_dd">
+            <option>выбери</option>
+            <option value="0">День</option>
+            <?php for($i=1;$i<=31;$i++) echo '<option value="'.(($i<10)? '0' : '').$i.'">'.$i.'</option>'; ?>
+        </select>
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="shadow">
+    <label class="col-sm-4 control-label label-required hidden-xs" for="birth_mm">Дата рождения</label>
+        <select size="1" class="form-control ec" id="birth_mm" name="birth_mm">
+            <option>выбери</option>
+            <option value="0">Месяц</option>
+            <option value="01">Январь</option>
+            <option value="02">Февраль</option>
+            <option value="03">Март</option>
+            <option value="04">Апрель</option>
+            <option value="05">Май</option>
+            <option value="06">Июнь</option>
+            <option value="07">Июль</option>
+            <option value="08">Август</option>
+            <option value="09">Сентябрь</option>
+            <option value="10">Октябрь</option>
+            <option value="11">Ноябрь</option>
+            <option value="12">Декабрь</option>
+        </select>
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="shadow">
+    <label class="col-sm-4 control-label label-required hidden-xs" for="birth_yyyy">Дата рождения</label>
+        <select size="1" class="form-control ec" id="birth_yyyy" name="birth_yyyy">
+            <option>выбери</option>
+            <option value="0">Год</option>
+            <?php
+            for($i=date('Y', strtotime('-80 years', time()));$i<=date('Y', strtotime('-18 years', time()));$i++)
+            echo '<option value="'.$i.'">'.$i.'</option>';
+            ?>
+        </select>
+    </div>
+</div>
 </div>
 <!-- Скрываем старую форму даты рождения -->
         <div class="form-group has-feedback">
@@ -126,7 +131,7 @@
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Пожалуйста, введите свой email адрес" placeholder="Email"
-                    title="Email" data-validation="email"  data-validation-error-msg="Пожалуйста, введите свой email" required>
+                      data-validation="email"  data-validation-error-msg="Пожалуйста, введите свой email" required>
                     <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
             </div>
@@ -134,8 +139,8 @@
         <div class="form-group">
             <label class="control-label col-md-2" for="delays_type">Кредитная история</label>
             <div class="col-md-8">
-                <select class="form-control ec" name="delays_type" id="delays_type" required>
-                    <option value="never">Никогда не брал(а) кредитов</option>
+                <select size="1" class="form-control ec" name="delays_type" id="delays_type">
+                    <option selected value="never">Никогда не брал(а) кредитов</option>
                     <option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
                     <option value="credit_open_no_delay">Кредиты есть, просрочек нет</option>
                     <option value="credit_closed_had_delay">Кредиты закрыты, просрочки были</option>
@@ -158,15 +163,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-right"> 
-                <a id="next1">
-                    <button type="button" class="ex-blue-btn special_forms"> Далее </button>
-                </a> 
+            <div class="col-md-8 col-md-offset-2 text-right">  
+                    <button type="button" id="next1" class="ex-blue-btn special_forms"> Далее </button> 
             </div>
         </div>
     </div>
 </div>
 <div class="ex-inf-anceta">
     <img src="/templates/zaimcoin/assets/img/doc.png" alt="doc.png">
-    <p id="spec_form">Заполнение анкеты не обязывает вас взять займ. Вы сможете подтвердить его или отказаться от предложения</p>
+    <p class="spec_form">Заполнение анкеты не обязывает вас взять займ. Вы сможете подтвердить его или отказаться от предложения</p>
 </div> 

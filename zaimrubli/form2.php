@@ -107,7 +107,7 @@
                                 <div class="col-md-8">
                                     <div class="ex-wrapper ex-arrow">
                                         <select class="form-control ec tip special_form99" id="region" name="region" autocomplete="off" required>
-                                            <option value="0">-- Выберите регион --</option>
+                                            <option value="">-- Выберите регион --</option>
                                             <?php
                             if (isset($regions) && is_array($regions))
                             {
@@ -176,8 +176,8 @@
                                 </label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper ex-arrow">
-                                        <select class="form-control ec special_form99" name="reg_type" id="reg_type" required>
-                                            <option value="1">Постоянная регистрация</option>
+                                        <select class="form-control ec special_form99" name="reg_type" id="reg_type">
+                                            <option selected value="1">Постоянная регистрация</option>
                                             <option value="0">Без регистрации</option>
                                             <option value="2">Временная регистрация</option>
                                         </select>

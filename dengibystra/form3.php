@@ -10,8 +10,8 @@
                 <div class="col-sm-6">
                     <div class="form-group ex-arrow-on has-feedback">
                         <label class="label-required" for="work">Вид трудоустройства</label>
-                        <select size="1" class="form-control ec" id="work" name="work" required>
-                            <option value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
+                        <select size="1" class="form-control ec" id="work" name="work">
+                            <option selected value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
                             <option value="ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ">Индивидуальный предприниматель</option>
                             <option value="СТУДЕНТ">Студент</option>
                             <option value="ПЕНСИОНЕР">Пенсионер</option>
@@ -75,7 +75,7 @@
                     <div class="form-group ex-arrow-on has-feedback">
                         <label class="label-required" for="work_region">Регион</label>
                         <select size="1" class="form-control ec tip" name="work_region" id="work_region" autocomplete="off" required>
-                            <option value="0">-- Выберите регион --</option>
+                            <option value="">-- Выберите регион --</option>
                             <?php
                         if (isset($regions) && is_array($regions))
                         {

@@ -2964,9 +2964,9 @@ header .navbar-default{background-color:#fff !important;}
 .ex-main-footer p{padding-top:0px;}
 .ex-main h2{text-align:center;color:#ffffff;font-size:30px;font-weight:600;line-height:30px;margin:20px 0;}
 }
-#spec_form{margin-bottom:-100px !important;}/* Tom Nolane */
+.spec_form{margin-bottom:-100px !important;}/* Tom Nolane */
 @media (max-width:767px){.ex-main .ex-calc-wraper .ex-range-scope #ex-main-slider-range{padding:0;}
-#spec_form{margin-bottom:-100px;}
+.spec_form{margin-bottom:-100px;}
 }
 .ex-main .ex-calc-wraper .ex-range-scope #ex-main-slider-range .ex-slider-info span{color:#ffffff;font-size:14px;font-weight:500;line-height:12px;}
 .ex-main .ex-calc-wraper .ex-range-scope #ex-main-slider-range .ex-slider-info span:first-child{float:left;}
@@ -3097,7 +3097,7 @@ header .navbar-default{background-color:#fff !important;}
 @media (max-width:1090){.ex-money .ex-nav-menu ul li{display:block;text-align:center;margin-left:0;}
 }
 .ex-money .ex-money-img-block{min-height:220px;margin-top:34px;box-shadow:0 2px 4px rgba(0, 0, 0, 0.18);border-radius:5px;background-color:#ffffff;text-align:center;padding-top:64px;}
-.ex-money .ex-money-img-block img{max-width:100%;vert-align:top;}
+.ex-money .ex-money-img-block img{max-width:100%;vertical-align:top;}
 .ex-money .ex-money-img-block.money2{padding-top:71px;}
 .ex-money .ex-money-img-block.money3{padding-top:23px;}
 .ex-money .ex-money-img-block.money4{padding-top:39px;}

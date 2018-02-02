@@ -11922,7 +11922,6 @@ button.close {
 .owl-carousel .owl-nav .owl-next,
 .owl-carousel .owl-dot {
   cursor: pointer;
-  cursor: hand;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -12091,7 +12090,7 @@ button.close {
   width: 100%;
 }
 
-/*--------------------------------------------Theme------------------------------------------------*/
+/* Theme */
 /**
  * Owl Carousel v2.2.1
  * Copyright 2013-2017 David Deutsch
@@ -14181,7 +14180,7 @@ main.ex-offers .ex-offers-content .ex-off-block .ex-offers-foot .ex-main-btn {
 /* line 57, ../sass/desktop/_docs.scss */
 .ex-doc .ex-doc-content .panel .panel-body .ex-text {
   color: #333333;
-  font-family:   "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;

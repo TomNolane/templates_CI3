@@ -113,7 +113,7 @@
                     <div class="form-group ex-arrow-on has-feedback">
                         <label class="label-required" for="region">Регион</label>
                         <select size="1" class="form-control ec tip" id="region" name="region" autocomplete="off" required>
-                            <option value="0">-- Выберите регион --</option>
+                            <option value="">-- Выберите регион --</option>
                             <?php
                                 if (isset($regions) && is_array($regions))
                                 {
@@ -178,8 +178,8 @@
                 <div class="col-xs-12">
                     <div class="form-group ex-arrow-on has-feedback">
                         <label class="label-required" for="reg_type">Тип регистрации</label>
-                        <select size="1" class="form-control ec" name="reg_type" id="reg_type" required>
-                            <option value="1">Постоянная регистрация</option>
+                        <select size="1" class="form-control ec" name="reg_type" id="reg_type">
+                            <option selected value="1">Постоянная регистрация</option>
                             <option value="0">Без регистрации</option>
                             <option value="2">Временная регистрация</option>
                         </select>

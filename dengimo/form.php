@@ -123,7 +123,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 }
 ?>
     <div class="container">
-        <section class="steps">
+        <div class="steps">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-steps-line">
@@ -149,15 +149,15 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
         <section class="steps">
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                    <h1>Заполните свои личные данные</h1>
+                    <h2 class="h1">Заполните свои личные данные</h2>
                 </div>
-            </div>
+            </div> 
         </section>
-        <section class="form">
+        <div class="form">
             <div class="row">
                 <div class="col-md-8 col-md-offset-1 col-xs-12">
                     <form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off" novalidate>
@@ -202,9 +202,9 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     </form>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="triggers hidden-xs hidden-sm">
+        <div class="triggers hidden-xs hidden-sm">
             <div class="row">
                 <div class="col-sm-2 col-sm-offset-2">
                     <img src="/templates/dengimo/img/form/t1.png" alt="t1.png">
@@ -223,7 +223,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     <p>Деньги Вас ждут прямо сейчас</p>
                 </div>
             </div>
-        </section>
+        </div>
         <div class="clearfix visible-sm visible-xs">&nbsp;</div>
     </div>
     <!-- Modal -->
@@ -234,8 +234,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h1 class="modal-title hidden-xs" id="tosModalLabel">Политика конфиденциальности</h1>
-                    <h2 class="modal-title visible-xs-block" id="tosModalLabel">Политика конфиденциальности</h2>
+                    <h1 class="modal-title hidden-xs" id="tosModalLabel">Политика конфиденциальности</h1> 
                     <p>Заполняя заявку на кредит Вы соглашаетесь с нашими правилами использования данных</p>
                 </div>
                 <div class="modal-body">

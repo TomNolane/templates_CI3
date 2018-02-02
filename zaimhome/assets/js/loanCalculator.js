@@ -77,4 +77,4 @@ $(document).ready(function () {
         setDynamicProbability();
         setDynamicTimePeriod();
     });
-}); 
+});

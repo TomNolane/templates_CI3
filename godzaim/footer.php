@@ -161,7 +161,7 @@ jQuery(document).ready(function (o) {
             }
         });
     }
-    //traffic(window.location.hostname,window.location.pathname); 
+     
     function getcookie(name) {
         var cookie = " " + document.cookie;
         var search = " " + name + "=";

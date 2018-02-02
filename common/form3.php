@@ -58,7 +58,7 @@
 <div class="form-group">
 	<label class="label-required">Регион</label>
 	<select class="form-control" name="work_region" autocomplete="off" required>
-		<option value="0">-- Выберите регион --</option>
+		<option value="">-- Выберите регион --</option>
 		<?php
 		if (isset($regions) && is_array($regions))
 		{

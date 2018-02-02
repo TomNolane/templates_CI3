@@ -103,7 +103,7 @@
     <label class="control-label col-md-4 label-required" for="region">Регион</label>
     <div class="col-md-6">
         <select class="form-control ec tip" id="region" name="region" autocomplete="off" required>
-            <option value="0">-- Выберите регион --</option>
+            <option value="">-- Выберите регион --</option>
             <?php
             if (isset($regions) && is_array($regions))
             {
@@ -174,8 +174,8 @@
 <div class="form-group has-feedback">
     <label class="control-label col-md-4 label-required" for="reg_type">Тип регистрации</label>
     <div class="col-md-6">
-        <select class="form-control ec" name="reg_type" id="reg_type" required>
-            <option value="1">Постоянная регистрация</option>
+        <select class="form-control ec" name="reg_type" id="reg_type">
+            <option selected value="1">Постоянная регистрация</option>
             <option value="0">Без регистрации</option>
             <option value="2">Временная регистрация</option>
         </select>
@@ -203,7 +203,7 @@
     <div class="form-group">
         <label class="control-label col-md-4 label-required " for="reg_region">Регион*</label>
         <div class="col-md-6">
-            <select class="form-control ec" id="reg_region" name="reg_region" id="reg_region" autocomplete="off">
+            <select class="form-control ec" id="reg_region" name="reg_region" autocomplete="off">
                 <option value="0">Регион</option>
                 <?php
 			if (isset($regions) && is_array($regions))
@@ -241,7 +241,7 @@
             </div>
         </div>
     </div>
-    <div class="form-group" class="hidden">
+    <div class="form-group hidden">
         <label class="control-label col-md-4" for="reg_housing">Строение</label>
         <div class="col-md-6">
             <div class="ex-wrapper">
@@ -257,8 +257,7 @@
             </div>
         </div>
     </div>
-</fieldset>
-
+</fieldset> 
 <div class="form-group">
     <div class="col-md-12 text-center">
         <input type="button" class="ex-main-btn" value="Далее" id="next2">

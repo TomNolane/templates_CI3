@@ -70,7 +70,7 @@
 	<label class="col-sm-4 control-label label-required hidden-xs" for="work_region">Регион*</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow"><select class="form-control ec" name="work_region" id="work_region" autocomplete="off" required>
-		<option value="0">-- Выберите регион --</option>
+		<option value="">-- Выберите регион --</option>
 		<?php
 		if (isset($regions) && is_array($regions))
 		{

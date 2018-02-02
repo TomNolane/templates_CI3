@@ -24,11 +24,7 @@ if(!isset($description))
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="Rublimo.ru" /> 
-
-	
-	 
-	
-
+	<meta name="yandex-verification" content="5f2b2f09988764fa" />
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="Rublimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
 	<meta property="og:image" content="https://rublimo.ru/templates/rublimo/img/atmo.png"/>

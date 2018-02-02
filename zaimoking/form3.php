@@ -5,8 +5,8 @@
             <label class="control-label col-md-4" for="work" id="work_label">Вид трудоустройства</label>
             <div class="col-md-8">
                 <div class="ex-wrapper ex-arrow">
-                <select class="form-control ec special_form99" id="work" name="work" required>
-                <option value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
+                <select class="form-control ec special_form99" id="work" name="work">
+                <option selected value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
                 <option value="ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ">Индивидуальный предприниматель</option>
                 <option value="СТУДЕНТ">Студент</option>
                 <option value="ПЕНСИОНЕР">Пенсионер</option>
@@ -30,7 +30,7 @@
                 <input type="text" class="form-control ec tip" name="work_occupation" id="work_occupation" placeholder="Должность" title="Укажите, вашу должность" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Укажите, вашу должность" required>
                 </div>
             </div>
-        </div>
+        </div> 
             <div class="form-group has-feedback">
                 <label class="control-label col-md-4" for="work_phone" id="work_phone_label">Рабочий телефон</label>
                 <div class="col-md-8">
@@ -61,7 +61,7 @@
                 <div class="col-md-8">
                     <div class="ex-wrapper ex-arrow">
                         <select class="form-control ec tip special_form99" name="work_region" id="work_region" autocomplete="off" required>
-                        <option value="0">!!! Выберите регион места работы !!!</option>
+                        <option value="">!!! Выберите регион места работы !!!</option>
                         <?php
                             if (isset($regions) && is_array($regions))
                             {

@@ -886,9 +886,9 @@ function traffic(site, page){
         data: 'site='+site+'&page='+page,
             success: function(data){
             }
-    });
+    }); 
 }
-//traffic(window.location.hostname,window.location.pathname);
+
 </script>
 <script >(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=rVpGPTSLprQmO8sgq5rzujYj085R/MNyDfSe6D7FiBVU/ce1AAU5tZ6fkTV5*R7c4K1TjnXVIoIjAo/sNmJ9wJ5mWNyUGhHsu54iZzlmwqrXb2nDFU*EwxOtZIY8tdCiIK6hwF9SwXK8N9vCiCVr3O9R8FdFX6G0PvTUlhfc7dk-&pixel_id=1000099085';</script>
 <!--Константин Гутлид-->
@@ -903,26 +903,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-98195621-1', 'auto');
 ga('send', 'pageview');
 
-</script>
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
- fbq('init', '122176371687010'); 
-fbq('track', 'PageView');
-</script>
-<noscript>
- <img height="1" width="1" 
-src="https://www.facebook.com/tr?id=122176371687010&ev=PageView
-&noscript=1"/>
-</noscript>
-<!-- End Facebook Pixel Code -->
+</script> 
 <!-- Yandex.RTB R-A-232716-2 -->
 <script >
     
@@ -970,9 +951,9 @@ src="https://www.facebook.com/tr?id=122176371687010&ev=PageView
         }
 </script>
 <!-- Код тега ремаркетинга Google -->
-<!-- ------------------------------------------------
+<!-- 
 С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
-------------------------------------------------- -->
+ -->
 <script >
 
 /* <![CDATA[ */

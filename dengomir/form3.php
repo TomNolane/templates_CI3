@@ -80,7 +80,7 @@
                     <div class="col-md-9">
                         <div class="ex-wrapper ex-arrow">
                             <select class="form-control ec tip special_form99" name="work_region" id="work_region" autocomplete="off" required>
-                                <option value="0">!!! Выберите регион места работы !!!</option>
+                                <option value="">!!! Выберите регион места работы !!!</option>
                                 <?php
                                 if (isset($regions) && is_array($regions))
                                 {
@@ -140,7 +140,7 @@
     </div>
     <div class="form-group">
         <div class="col-md-6 col-md-offset-3">
-            <button id="getmoney" class="ex-main-btn">Получить деньги</button>
+            <button type="button" id="getmoney" class="ex-main-btn">Получить деньги</button>
         </div>
     </div>
 </section>

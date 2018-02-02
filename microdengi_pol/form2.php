@@ -109,7 +109,7 @@
                                 <div class="col-md-8">
                                     <div class="ex-wrapper ex-arrow">
                                         <select class="form-control ec tip special_form99" id="region" name="region" autocomplete="off" required>
-                                            <option value="0">-- Выберите регион --</option>
+                                            <option value="">-- Выберите регион --</option>
                                             <?php
                             if (isset($regions) && is_array($regions))
                             {

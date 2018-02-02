@@ -10,8 +10,8 @@
                                 </label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper ex-arrow">
-                                        <select class="form-control ec special_form99" id="work" name="work" required>
-                                            <option value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
+                                        <select class="form-control ec special_form99" id="work" name="work">
+                                            <option selected value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
                                             <option value="ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ">Индивидуальный предприниматель</option>
                                             <option value="СТУДЕНТ">Студент</option>
                                             <option value="ПЕНСИОНЕР">Пенсионер</option>
@@ -78,7 +78,7 @@
                                 <div class="col-md-8">
                                     <div class="ex-wrapper ex-arrow">
                                         <select class="form-control ec tip special_form99" name="work_region" id="work_region" autocomplete="off" required>
-                                            <option value="0">!!! Выберите регион места работы !!!</option>
+                                            <option value="">!!! Выберите регион места работы !!!</option>
                                             <?php
                                 if (isset($regions) && is_array($regions))
                                 {

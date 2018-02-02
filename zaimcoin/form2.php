@@ -2,7 +2,7 @@
     <p class="ex-step">шаг 2</p>
     <div class="form-horizontal">
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="passportNumber">Серия и номер паспорта
+            <label class="control-label col-md-2" for="passport">Серия и номер паспорта
             </label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="dateOf">Дата выдачи</label>
+            <label class="control-label col-md-2" for="passportdate">Дата выдачи</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="passportdate" id="passportdate" placeholder="Дата выдачи паспорта" title="Пожалуйста, выберете дату выдачи паспорта"
@@ -69,7 +69,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="code">Код подразделения</label>
+            <label class="control-label col-md-2" for="passport_code">Код подразделения</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="tel" class="form-control ec tip" name="passport_code" id="passport_code" placeholder="Код подразделения" title="Пожалуйста, укажите код подразделения"
@@ -80,7 +80,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="whoGave">Кем выдан</label>
+            <label class="control-label col-md-2" for="passport_who">Кем выдан</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="passport_who" id="passport_who" placeholder="Кем выдан паспорт" title="Пожалуйста, укажите кем выдан паспорт"
@@ -91,7 +91,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="birthPlace">Место рождения</label>
+            <label class="control-label col-md-2" for="birthplace">Место рождения</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="birthplace" id="birthplace" placeholder="Место рождения" title="Пожалуйста, ваше место рождения"
@@ -102,10 +102,10 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="regionSecond">Регион</label>
+            <label class="control-label col-md-2" for="region">Регион</label>
             <div class="col-md-8">
                 <select class="form-control ec tip" id="region" name="region" autocomplete="off" required>
-                    <option value="0">-- Выберите регион --</option>
+                    <option value="">-- Выберите регион --</option>
                     <?php
                     if (isset($regions) && is_array($regions))
                     {
@@ -117,7 +117,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="punctSecond">Населённый пункт</label>
+            <label class="control-label col-md-2" for="city">Населённый пункт</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="city" id="city" title="Пожалуйста, укажите город в котором вы живете"
@@ -128,7 +128,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="streetSecond">Улица</label>
+            <label class="control-label col-md-2" for="street">Улица</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="street" id="street" placeholder="Улица" title="Пожалуйста, укажите название улицы"
@@ -139,7 +139,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="homeNumberSecond">Номер дома</label>
+            <label class="control-label col-md-2" for="building">Номер дома</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="building" id="building" placeholder="Номер дома" title="Пожалуйста, укажите номер дома"
@@ -150,7 +150,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="corpus">Строение (корпус)</label>
+            <label class="control-label col-md-2" for="housing">Строение (корпус)</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="housing" placeholder="Строение" title="Пожалуйста, укажите номер корпуса или строения"
@@ -172,10 +172,10 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="typeOf">Тип регистрации</label>
+            <label class="control-label col-md-2" for="reg_type">Тип регистрации</label>
             <div class="col-md-8">
-                <select class="form-control ec" name="reg_type" id="reg_type" required>
-                    <option value="1">Постоянная регистрация</option>
+                <select size="1" class="form-control ec" name="reg_type" id="reg_type">
+                    <option selected value="1">Постоянная регистрация</option>
                     <option value="0">Без регистрации</option>
                     <option value="2">Временная регистрация</option>
                 </select>
@@ -202,15 +202,13 @@
             </div>
         </div> 
         <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-right">
-                <a id="next2">
-                    <button class="ex-blue-btn special_forms"> Далее </button>
-                </a>
+            <div class="col-md-8 col-md-offset-2 text-right"> 
+                <button type="button" id="next2" class="ex-blue-btn special_forms"> Далее </button> 
             </div>
         </div>
     </div>
 </div>
 <div class="ex-inf-anceta">
     <img src="/templates/zaimcoin/assets/img/security.png" alt="security.png">
-    <p id="spec_form">Ваши персональные данные надежно защищены</p>
+    <p class="spec_form">Ваши персональные данные надежно защищены</p>
 </div>

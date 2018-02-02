@@ -829,7 +829,7 @@ echo '<script>
                     data: 'id=' + id + '&pixel=' + param,
                     success: function (data) {}
                 });
-                //traffic(window.location.hostname,window.location.pathname);
+                
             }
         </script>
         <script >

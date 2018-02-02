@@ -8,11 +8,12 @@
 	</div>
 </div>
 <input type="hidden" class="form-control ec" id="passport-s" name="passport_s"  title="Серия паспорта" data-validation="number" data-validation-allowing="range[1;9999]" data-validation-error-msg="Введите серию паспорта">
-                        <input type="hidden" class="form-control ec" id="passport-n" name="passport_n"  title="Номер паспорта"  data-validation="number" data-validation-allowing="range[1;999999]" data-validation-error-msg="Введите номер паспорта">
+<input type="hidden" class="form-control ec" id="passport-n" name="passport_n"  title="Номер паспорта"  data-validation="number" data-validation-allowing="range[1;999999]" data-validation-error-msg="Введите номер паспорта">
 	<div class="form-group hidden"> 
 	<div class="col-sm-2">
 	<label class="col-sm-4 control-label label-required" for="passport_dd">Дата выдачи*</label>
-	    <select size="33" class="form-control ec" id="passport_dd" name="passport_dd" required>
+	    <select size="1" class="form-control ec" id="passport_dd" name="passport_dd">
+	    	<option>выбери</option>
 		<option selected value="04">&nbsp;</option>
 		<option value="0">День</option>
 		<?php
@@ -23,7 +24,8 @@
 	</div>
 	<div class="col-sm-3">
 	<label class="col-sm-4 control-label label-required" for="passport_mm">Дата выдачи*</label>
-	    <select size="13" class="form-control ec" id="passport_mm" name="passport_mm" required>
+	    <select size="1" class="form-control ec" id="passport_mm" name="passport_mm">
+	    	<option>выбери</option>
 		<option selected value="06">Июнь</option>
 		<option value="0">Месяц</option>
 		<option value="01">Январь</option>
@@ -41,7 +43,8 @@
 	</div>
 	<div class="col-sm-3">
 	<label class="col-sm-4 control-label label-required" for="passport_yyyy">Дата выдачи*</label>
-	    <select size="41" class="form-control ec" id="passport_yyyy" name="passport_yyyy" required>
+	    <select size="1" class="form-control ec" id="passport_yyyy" name="passport_yyyy">
+	    	<option>выбери</option>
 		<option selected value="2000">&nbsp;</option>
 		<option value="0">Год</option>
 		<?php
@@ -98,7 +101,7 @@
 	<label class="col-sm-4 control-label label-required hidden-xs" for="region">Регион</label>
 	<div class="col-sm-8 col-xs-12">
 	<select size="1" class="form-control ec tip" id="region" name="region" autocomplete="off" required>
-		<option value="0">-- Выберите регион --</option>
+		<option value="">-- Выберите регион --</option>
 		<?php
 		if (isset($regions) && is_array($regions))
 		{
@@ -161,8 +164,8 @@
 <div class="form-group">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="reg_type">Тип регистрации</label>
 	<div class="col-sm-8 col-xs-12">
-	<select size="1" class="form-control ec" name="reg_type" id="reg_type" required>
-		<option value="1">Постоянная регистрация</option>
+	<select size="1" class="form-control ec" name="reg_type" id="reg_type">
+		<option selected value="1">Постоянная регистрация</option>
 		<option value="0">Без регистрации</option>
 		<option value="2">Временная регистрация</option>
 	</select>

@@ -100,6 +100,7 @@ body{
 			elseif ($this->uri->segment(1) == 'contacts') require 'internal-contacts.php';
 			elseif ($this->uri->segment(1) == 'faq') require 'internal-faq.php';
 			elseif ($this->uri->segment(1) == 'info') require 'internal-info.php';
+			elseif ($this->uri->segment(1) == 'test22') require 'internal-test22.php';
 			?>
 		</div>
 	</div>

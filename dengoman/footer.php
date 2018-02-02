@@ -134,7 +134,7 @@ function traffic(site, page){
             }
     });
 }
-//traffic(window.location.hostname,window.location.pathname);
+
 var d = new Date();
 var amount = 20000;
 var day = 10;

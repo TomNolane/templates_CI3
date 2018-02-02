@@ -51,10 +51,11 @@
 <input type="hidden" id="gender" value="1" name="gender">
 <!-- Скрываем старую форму даты рождения -->
 <div class="form-group hidden">
-	<label class="col-sm-4 control-label label-required hidden-xs">Дата рождения*</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="birth_dd">Дата рождения*</label>
 	<div class="col-sm-2">
 		<div class="shadow">
-			<select class="form-control ec" id="birth_dd" name="birth_dd" required>
+			<select size="1" class="form-control ec" id="birth_dd" name="birth_dd">
+			    <option>выбери</option>
 				<option value="0">День</option>
 				<?php for($i=1;$i<=31;$i++) echo '<option value="'.(($i<10)? '0' : '').$i.'">'.$i.'</option>'; ?>
 			</select>
@@ -62,7 +63,9 @@
 	</div>
 	<div class="col-sm-3">
 		<div class="shadow">
-			<select class="form-control ec" id="birth_mm" name="birth_mm" required>
+		<label class="col-sm-4 control-label label-required hidden-xs" for="birth_mm">Дата рождения</label>
+			<select size="1" class="form-control ec" id="birth_mm" name="birth_mm">
+				<option>выбери</option>
 				<option value="0">Месяц</option>
 				<option value="01">Январь</option>
 				<option value="02">Февраль</option>
@@ -81,7 +84,9 @@
 	</div>
 	<div class="col-sm-3">
 		<div class="shadow">
-			<select class="form-control ec" id="birth_yyyy" name="birth_yyyy" required>
+		<label class="col-sm-4 control-label label-required hidden-xs" for="birth_yyyy">Дата рождения</label>
+			<select size="1" class="form-control ec" id="birth_yyyy" name="birth_yyyy">
+				<option>выбери</option>
 				<option value="0">Год</option>
 				<?php
 				for($i=date('Y', strtotime('-80 years', time()));$i<=date('Y', strtotime('-18 years', time()));$i++)

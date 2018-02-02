@@ -73,7 +73,7 @@
                         </div>
                         <div class="form-group has-feedback">
                         <select class="form-control ec tip" id="region" name="region" autocomplete="off" required>
-                            <option value="0">-- Выберите регион --</option>
+                            <option value="">-- Выберите регион --</option>
                             <?php
                             if (isset($regions) && is_array($regions))
                             {

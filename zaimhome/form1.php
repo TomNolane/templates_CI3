@@ -26,8 +26,8 @@
 </div> 
 <div class="form-group has-feedback">
     <label class="control-label col-md-4 label-required" for="i">Имя</label>
-    <div class="col-md-6">
-        <div class="ex-wrapper"> 
+    <div class="col-md-6"> 
+        <div class="ex-wrapper">
             <input type="text" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Пожалуйста, введите свое имя" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое имя" required>
             <span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>  
         </div>
@@ -45,10 +45,11 @@
 <input type="hidden" id="gender" value="1" name="gender"> 
 <!-- Скрываем старую форму даты рождения -->
 <div class="form-group hidden">
-	<label class="col-sm-4 control-label label-required hidden-xs">Дата рождения*</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="birth_dd">Дата рождения*</label>
 	<div class="col-sm-2">
 		<div class="shadow">
-			<select class="form-control ec" id="birth_dd" name="birth_dd" required>
+			<select size="1" class="form-control ec" id="birth_dd" name="birth_dd">
+			    <option>выбери</option>
 				<option value="0">День</option>
 				<?php for($i=1;$i<=31;$i++) echo '<option value="'.(($i<10)? '0' : '').$i.'">'.$i.'</option>'; ?>
 			</select>
@@ -56,7 +57,9 @@
 	</div>
 	<div class="col-sm-3">
 		<div class="shadow">
-			<select class="form-control ec" id="birth_mm" name="birth_mm" required>
+		<label class="col-sm-4 control-label label-required hidden-xs" for="birth_mm">Дата рождения</label>
+			<select size="1" class="form-control ec" id="birth_mm" name="birth_mm">
+				<option>выбери</option>
 				<option value="0">Месяц</option>
 				<option value="01">Январь</option>
 				<option value="02">Февраль</option>
@@ -75,7 +78,9 @@
 	</div>
 	<div class="col-sm-3">
 		<div class="shadow">
-			<select class="form-control ec" id="birth_yyyy" name="birth_yyyy" required>
+		<label class="col-sm-4 control-label label-required hidden-xs" for="birth_yyyy">Дата рождения</label>
+			<select size="1" class="form-control ec" id="birth_yyyy" name="birth_yyyy">
+				<option>выбери</option>
 				<option value="0">Год</option>
 				<?php
 				for($i=date('Y', strtotime('-80 years', time()));$i<=date('Y', strtotime('-18 years', time()));$i++)
@@ -110,7 +115,7 @@
     <label class="control-label col-md-4" for="email">Почта</label>
     <div class="col-md-6">
         <div class="ex-wrapper">
-             <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Пожалуйста, введите свой email адрес" placeholder="Email" title="Email" data-validation="email" data-validation-error-msg="Пожалуйста, введите email" required>
+             <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Пожалуйста, введите свой email адрес" placeholder="Email" data-validation="email" data-validation-error-msg="Пожалуйста, введите email" required>
             <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <div></div>
         </div>
@@ -121,7 +126,7 @@
 <label class="control-label col-md-4" for="credit">Кредитная история</label>
 <div class="col-md-6">
     <select class="form-control" id="credit">
-        <option>Никогда не брал кредитов</option>
+        <option selected>Никогда не брал кредитов</option>
         <option>Кредиты закрыты, просрочек не было</option>
         <option>Кредиты есть, просрочек нет</option>
         <option>Кредиты закрыты, просрочки были</option>
