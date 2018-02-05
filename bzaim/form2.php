@@ -92,7 +92,7 @@
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
                         <label class="label-required" for="passport_who">Кем выдан</label>
-                        <input type="text" class="form-control ec tip" name="passport_who" id="passport_who" placeholder="Кем выдан паспорт" title="Пожалуйста, укажите кем выдан паспорт"
+                        <input type="text" class="form-control ec tip" name="passport_who" id="passport_who" placeholder="Кем выдан паспорт" title="Укажите кем выдан паспорт"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\№\(\)\s\d]+$"
                             data-validation-error-msg="Укажите, кем выдан паспорт" required>
                         <span id="passport_whostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -103,7 +103,7 @@
                         <label class="label-required" for="birthplace">Место рождения</label>
                         <input type="text" class="form-control ec tip" name="birthplace" id="birthplace" placeholder="Место рождения" title="Ваше место рождения"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
-                            data-validation-error-msg="Пожалуйста, укажите место рождения" required>
+                            data-validation-error-msg="Укажите место рождения" required>
                         <span id="birthplacestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
                         <label class="label-required" for="street">Улица</label>
-                        <input type="text" class="form-control ec tip" name="street" id="street" placeholder="Улица" title="Пожалуйста, укажите название улицы"
+                        <input type="text" class="form-control ec tip" name="street" id="street" placeholder="Улица" title="Укажите название улицы"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                             data-validation-error-msg="Укажите улицу" required>
                         <span id="streetstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -158,7 +158,7 @@
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
                         <label for="housing">Строение</label>
-                        <input type="text" class="form-control ec tip" name="housing" placeholder="Строение/корпус" title="Пожалуйста, укажите номер корпуса или строения"
+                        <input type="text" class="form-control ec tip" name="housing" placeholder="Строение/корпус" title="Укажите номер корпуса или строения"
                             id="housing" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите строение/корпус"
                             data-validation-optional="true">
                         <span id="housingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -167,8 +167,8 @@
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
                         <label for="flat">№ квартиры</label>
-                        <input type="text" class="form-control ec tip" name="flat" placeholder="Квартира" title="Пожалуйста, укажите номер квартиры"
-                            id="flat" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, номер квартиры"
+                        <input type="text" class="form-control ec tip" name="flat" placeholder="Квартира" title="Укажите номер квартиры"
+                            id="flat" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер квартиры"
                             data-validation-optional="true">
                         <span id="flatstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     </div>

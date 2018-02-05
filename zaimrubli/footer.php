@@ -337,7 +337,6 @@ if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
             $("#i").text(i);
         } 
     });
-
     function clone(o) {
         if (!o || "object" !== typeof o) return o;
 
@@ -354,8 +353,7 @@ if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
             }
         }
         return c;
-    } 
-   // traffic("zaimrubli.ru", "4");
+    }
 </script>';
 }
 ?>

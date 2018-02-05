@@ -420,6 +420,10 @@ $("#email").suggestions({
             $('#firstStep').removeClass('in active');
             $('#secondStep').addClass('in active');
             $('.spec_footer4').css('visibility','hidden');
+            if($('.ex-calc-zaim').hasClass('ex-calc-zaim-open'))
+            {
+                $('.ex-calc-zaim').click();
+            }
             //traffic(window.location.hostname,1);
             $('.spec_footer5').css('visibility','hidden'); 
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);

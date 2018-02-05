@@ -2,7 +2,7 @@
 if ($this->uri->segment(1) == 'robots.txt') 
 {
 	header("Content-type: text/plain");  
-	require 'internal-robots.txt'; 
+	require 'internal-robots.txt.php'; 
 } 
 else
 {
@@ -95,5 +95,6 @@ else
 		elseif ($this->uri->segment(1) == 'credit-history') require 'internal-credit-history.php';
 		elseif ($this->uri->segment(1) == 'specials') require 'internal-specials.php';
 		elseif ($this->uri->segment(1) == 'best') require 'internal-best.php';
+		elseif ($this->uri->segment(1) == 'money') require 'internal-money.php';
 }
 ?>

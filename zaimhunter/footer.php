@@ -249,7 +249,6 @@ if ($this->uri->segment(1) == 'form')
         }
     }); 
     </script>';
-    
     ?>
      <script>
     function getParameterByName(name, url) {
@@ -322,9 +321,6 @@ elseif ($this->uri->segment(1) == 'money')
     }); 
     </script>';
 } 
-?>
-
-<?php
 echo '<script>';
 require 'templates/zaimhunter/assets/js/coockie.js';
 echo '</script>';
@@ -610,29 +606,28 @@ if ($this->uri->segment(1) == 'form')
         echo '    
     <!-- Modal Popup-->
     <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-                <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                                <div class="modal-header text-center">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                                </div>
-                                <div class="modal-body text-center">
-                                        <div class="row">
-                                                <div class="col-md-12">
-                                                    <img src="/templates/common/img/popup.jpg">                                             
-                                                    <h2>'.$popup_text.'</h2>
-                                                    <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
                 </div>
+                <div class="modal-body text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="/templates/common/img/popup.jpg">
+                            <h2>'.$popup_text.'</h2>
+                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-            <script type= " text/javascript">
-                $(window).load(function(){
-                    $("#popup").modal("show");
-                });
-            </script>';
+    <script type= " text/javascript">
+        $(window).load(function(){
+            $("#popup").modal("show");
+        });
+    </script>';
     }
 }
 ?>
@@ -663,7 +658,6 @@ function markTarget(target,param, id){
             url: '/pixel/',
             data: 'id='+id+'&pixel='+param,
             success: function(data){
-                //console.log(data);
             }
         });
 }
@@ -676,11 +670,8 @@ function traffic(site, page){
             }
     });
 }
-
 </script>
-
 <?php
-
 if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
     { 
         echo '<script>
@@ -714,7 +705,6 @@ if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
                 var i = getcookie("i");
                 $("#i").text(i);
             }
-            //traffic("zaimcoin.ru", "4");
         });
         function clone(o) {
             if (!o || "object" !== typeof o) return o;
@@ -732,11 +722,9 @@ if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
                 }
             }
             return c;
-        } 
-        //traffic("zaimhunter.ru", "4");
+        }
     </script>';
     }
-
 require 'yandex_metrika.php';
 require 'google_analytics.php';
 echo '<script>';

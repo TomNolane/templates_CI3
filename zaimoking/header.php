@@ -211,9 +211,9 @@ if(!isset($description))
 				</div>
                 <div class="modal-body">
                     <div class="form-group has-feedback">
-                        <input type="text" class="form-control ec tip" name="feedback-name" title="Пожалуйста, введите свое имя"
+                        <input type="text" class="form-control ec tip" name="feedback-name" title="Введите свое имя"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                data-validation-error-msg="Пожалуйста, введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
+                                data-validation-error-msg="Введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
                     </div>
                     <div class="form-group">
                         <input type="hidden" class="form-control" id="feedback-phone" title="Тефелон" placeholder="Введите ваш телефон" value="79777777777" required>

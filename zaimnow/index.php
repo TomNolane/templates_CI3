@@ -246,7 +246,7 @@
                                     </tr>
                                 </table>
                                 <div >
-                                    <button type="submit" class="ex-main-btn">Получить деньги</button>
+                                    <a href="/form?amount=5000"><button type="button" class="ex-main-btn">Получить деньги</button></a>
                                 </div>
                             </div>
                         </div>
@@ -274,7 +274,7 @@
                                     </tr>
                                 </table>
                                 <div>
-                                    <button type="submit" class="ex-main-btn">Получить деньги</button>
+                                <a href="/form?amount=30000"><button type="button" class="ex-main-btn">Получить деньги</button></a>
                                 </div>
                             </div>
                         </div>

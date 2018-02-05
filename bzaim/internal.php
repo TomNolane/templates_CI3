@@ -1,4 +1,11 @@
 <?php
+if ($this->uri->segment(1) == 'robots.txt') 
+{
+	header("Content-type: text/plain");
+	require 'internal-robots.txt.php';
+} 
+else
+{
 $my_title = ''; $description = '';
 switch($this->uri->segment(1))
 {
@@ -159,12 +166,13 @@ default: $my_title = 'Срочные Займы Круглосуточно бе�
     elseif ($this->uri->segment(1) == 'money'){ require 'internal-money.php';}
     elseif ($this->uri->segment(1) == 'thanks'){ require 'internal-thanks.php';}
     elseif ($this->uri->segment(1) == 'rules') {require 'internal-rules.php';}
-    elseif ($this->uri->segment(1) == 'lk') { $my_title = "Вам автоматически одобрен займ"; require 'lk.php';} 
+    elseif ($this->uri->segment(1) == 'lk') { $my_title = "Вам автоматически одобрен займ"; require 'lk.php';}
     elseif ($this->uri->segment(1) == 'news1') { require 'internal-news1.php'; }
 	elseif ($this->uri->segment(1) == 'news2') { require 'internal-news2.php';  }
 	elseif ($this->uri->segment(1) == 'news3')  { require 'internal-news3.php'; }
     elseif ($this->uri->segment(1) == 'news4') { require 'internal-news4.php'; }
 	elseif ($this->uri->segment(1) == 'news5') { require 'internal-news5.php'; }
-	elseif ($this->uri->segment(1) == 'news6') { require 'internal-news6.php'; }
-?> 
-   
+    elseif ($this->uri->segment(1) == 'news6') { require 'internal-news6.php'; }
+    elseif($this->uri->segment(1) == '404') require 'internal-404.php';
+}
+?>

@@ -6,7 +6,15 @@
 
     if($this->uri->segment(1) != 'form')
     {
-        echo '';
+        echo '<!-- Zaimoking -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="1833795772"
+        data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     }
 ?>
 
@@ -211,11 +219,11 @@
     function Loading(flag) 
     {
         if (typeof flag == 'undefined') { 
-            $('#feedback-send').prop('disabled', true);
-            $('#feedback-send').html('Отправлено <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        } else if (!flag) {
-            $('#feedback-send').html('Отправить');
             $('#feedback-send').prop('disabled', false); 
+            $('#feedback-send').html('Отправляется <i class="fa fa-spinner fa-spin fa-pulse"></i>');
+        } else if (!flag) {
+            $('#feedback-send').html('Отправлено');
+            $('#feedback-send').prop('disabled', true);
         }
     } 
 

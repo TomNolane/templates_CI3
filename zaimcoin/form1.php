@@ -28,8 +28,8 @@
             <label class="control-label col-md-2" for="f">Фамилия</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
-                    <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию"
-			        data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свою фамилию"
+                    <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
+			        data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
                     required>
                     <figure></figure>
 			        <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -40,8 +40,8 @@
             <label class="control-label col-md-2" for="i">Имя</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
-                    <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Пожалуйста, введите свое имя" data-sanitize="capitalize"
-                    data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое имя"
+                    <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize"
+                    data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя"
                     required>
                     <span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
@@ -51,8 +51,8 @@
             <label class="control-label col-md-2" for="o">Отчество</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
-                    <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество"
-                    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое отчество"
+                    <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
+                    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
                     required>
                     <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
@@ -120,8 +120,8 @@
             <label class="control-label col-md-2" id="spec_form2" for="phone">Телефон</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
-                    <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Введите свой номер телефона" title="Пожалуйста, введите свой номер телефона"
-                    data-validation-error-msg="Пожалуйста, введите номер телефона"   required>
+                    <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Введите свой номер телефона" title="Введите свой номер телефона"
+                    data-validation-error-msg="Введите номер телефона"   required>
                     <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
             </div>
@@ -130,8 +130,8 @@
             <label class="control-label col-md-2" for="email">Email</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
-                    <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Пожалуйста, введите свой email адрес" placeholder="Email"
-                      data-validation="email"  data-validation-error-msg="Пожалуйста, введите свой email" required>
+                    <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Введите свой email адрес" placeholder="Email"
+                      data-validation="email"  data-validation-error-msg="Введите свой email" required>
                     <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
             </div>

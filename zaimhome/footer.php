@@ -603,9 +603,7 @@ if(isset($_GET['email']))
         }
         echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
     }
-?>
 
-                    <?php
     require 'yandex_metrika.php';
     require 'google_analitycs.php';
 ?>
@@ -670,7 +668,6 @@ if(isset($_GET['email']))
                 var i = getcookie("i");
                 $("#i").text(i);
             }
-            traffic("zaimcoin.ru", "4");
         });
         function clone(o) {
             if (!o || "object" !== typeof o) return o;
@@ -688,8 +685,7 @@ if(isset($_GET['email']))
                 }
             }
             return c;
-        } 
-        //traffic("zaimhome.ru", "4");
+        }
     </script>';
     }
 ?>

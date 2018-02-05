@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <div class="container">
 	<div class="row">
 		<div class="col-sm-2"></div>
@@ -24,5 +25,5 @@
 	</div>
 	<br>
 	<br>
-	<div class="rectangl"></div>
 </div>
+<?php require 'footer.php';?>

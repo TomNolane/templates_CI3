@@ -22,6 +22,7 @@
                                             <input type="text" class="form-control ec tip" name="work_name" id="work_name" placeholder="Место работы" title="Укажите, ваше место работы"
                                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp='^[А-Яа-яЁё\d\s\-\,\№\#\.\+\(\)"]+$'
                                                 data-validation-error-msg="Укажите, ваше место работы" required>
+                                                <p class="text-muted helpblock" id="work_name_help">Пример: ООО "Завод"</p>
                                         </div>
                                     </div>
                                 </div>

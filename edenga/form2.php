@@ -118,7 +118,7 @@
 	<label class="col-sm-4 col-xs-12 control-label label-required hidden-xs" for="city">Населённый пункт *</label>
 	<div class="col-sm-8 col-xs-12"><div>
 		<input type="text" class="form-control ec" name="city" id="city" value="<?php echo isset($city_name)? $city_name : ''; ?>"
-		    pattern="^[А-Яа-яЁё\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, населенный пункт">
+		    pattern="^[А-Яа-яЁё\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт">
 		<span id="citystatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 	</div></div>
 </div>

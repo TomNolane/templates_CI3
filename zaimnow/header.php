@@ -47,8 +47,7 @@ if(!isset($description))
     <link rel="manifest" href="/templates/zaimnow/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/templates/zaimnow/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
+    <meta name="theme-color" content="#ffffff"> 
     <!-- CSS -->
      <?php 
      echo '<style>';
@@ -157,7 +156,7 @@ if(!isset($description))
                                 <a class="nav-link ex-ask-question" href="#">Обратная связь</a> 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="/form">Получение денег</a>
+                                <a class="nav-link " href="/money">Получение денег</a>
                             </li>
                         </ul>
                     </div>
@@ -185,14 +184,14 @@ if(!isset($description))
                         <a class="nav-link ex-ask-question" href="#">Обратная связь</a> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="/form">Получение денег</a>
+                        <a class="nav-link " href="/money">Получение денег</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>';
     }
-    elseif($this->uri->segment(1) == 'faq' || $this->uri->segment(1) == 'rules' || $this->uri->segment(1) == 'soglasie' || $this->uri->segment(1) == 'oferta' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2'|| $this->uri->segment(1) == 'money' || $this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-bank' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-yandex' || $this->uri->segment(1) == 'zaim-contact') {
+    elseif($this->uri->segment(1) == 'faq' || $this->uri->segment(1) == 'rules' || $this->uri->segment(1) == 'soglasie' || $this->uri->segment(1) == 'oferta' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2'|| $this->uri->segment(1) == 'money') {
          echo '<body>
          <nav class="navbar navbar-expand-lg ex-main-header">
              <div class="container">
@@ -213,7 +212,7 @@ if(!isset($description))
                             <a class="nav-link ex-ask-question" href="#">Обратная связь</a> 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="/form">Получение денег</a>
+                            <a class="nav-link " href="/money">Получение денег</a>
                         </li>
                     </ul>
                  </div>
@@ -241,7 +240,7 @@ if(!isset($description))
                             <a class="nav-link ex-ask-question" href="#">Обратная связь</a> 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="/form">Получение денег</a>
+                            <a class="nav-link " href="/money">Получение денег</a>
                         </li>
                     </ul>
                 </div>
@@ -256,28 +255,26 @@ if(!isset($description))
         <div class="modal-content">
             <div class="modal-body">
                 <h2 class="text-center">Заполните форму
-                    и наш менеджер свяжется с вами</h2>
-                <form>
+                    и наш менеджер свяжется с вами</h2> 
                     <div class="form-group">
                         <label for=""></label>
-                        <input type="text" class="form-control ec tip" name="feedback-name" title="Пожалуйста, введите свое имя"
+                        <input type="text" class="form-control ec tip" name="feedback-name" title="Введите свое имя"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                data-validation-error-msg="Пожалуйста, введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
+                                data-validation-error-msg="Введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
                     </div>
                     <div class="form-group">
                         <input type="hidden" class="form-control" id="feedback-phone" title="Тефелон" placeholder="Введите ваш телефон" value="79777777777" required>
                     </div>
                     <div class="form-group">
-                        <label for=""> <label for=""></label>
+                        <label for="feedback-email"> <label for=""></label>
                         </label>
-                        <input type="email" class="form-control" id="feedback-email" title="Email" placeholder="Введите ваш email" required> 
+                        <input type="email" class="form-control" name="feedback-email" id="feedback-email" title="Email" placeholder="Введите ваш email" required> 
                     </div>
                     <div class="form-group">
-                        <label for=""></label> 
-                        <textarea id="feedback-comment" rows="3"  title="Текст вашего сообщения" placeholder="Введите текст сообщения" required></textarea>
-                        <button type="button"  id="feedback-send" class="ex-main-btn">Отправить</button>
-                    </div>
-                </form>
+                        <label for="feedback-comment"></label> 
+                        <textarea id="feedback-comment" rows="3" name="feedback-comment" title="Текст вашего сообщения" placeholder="Введите текст сообщения" required></textarea>
+                        <button type="button" id="feedback-send" class="ex-main-btn">Отправить</button>
+                    </div> 
             </div>
         </div>
     </div>

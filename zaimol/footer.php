@@ -165,7 +165,6 @@ if($this->uri->segment(1) != 'form')
             }
             return c;
         }
-        //traffic("zaimol.ru", "4");
         </script>';
     }
 ?>

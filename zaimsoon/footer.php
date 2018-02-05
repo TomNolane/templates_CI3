@@ -230,22 +230,22 @@
     function Loading(flag) 
     {
         if (typeof flag == 'undefined') { 
-            $('#feedback-send').prop('disabled', true);
-            $('#feedback-send').html('Отправлено <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        } else if (!flag) {
-            $('#feedback-send').html('Отправить');
             $('#feedback-send').prop('disabled', false); 
+            $('#feedback-send').html('Отправляется <i class="fa fa-spinner fa-spin fa-pulse"></i>');
+        } else if (!flag) {
+            $('#feedback-send').html('Отправлено');
+            $('#feedback-send').prop('disabled', true);
         }
     }
 
     function Loading2(flag) 
     {
         if (typeof flag == 'undefined') { 
-            $('#feedback-send2').prop('disabled', true);
-            $('#feedback-send2').html('Отправлено <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        } else if (!flag) {
-            $('#feedback-send2').html('Отправить');
             $('#feedback-send2').prop('disabled', false); 
+            $('#feedback-send2').html('Отправляется <i class="fa fa-spinner fa-spin fa-pulse"></i>');
+        } else if (!flag) {
+            $('#feedback-send2').html('Отправлено');
+            $('#feedback-send2').prop('disabled', true);
         }
     }
 
@@ -446,7 +446,6 @@
             $("#i").text(i);
         } 
     });
-
     function clone(o) {
         if (!o || "object" !== typeof o) return o;
 
@@ -463,8 +462,7 @@
             }
         }
         return c;
-    } 
-   // traffic("zaimsoon.ru", "4");
+    }
 </script>';
 }
 ?>

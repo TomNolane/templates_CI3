@@ -529,12 +529,12 @@ echo '<script>
             }
 
             function Loading(flag) {
-                if (typeof flag == 'undefined') {
-                    $('#feedback-send').prop('disabled', true);
-                    $('#feedback-send').html('Отправлено');
+                if (typeof flag == 'undefined') { 
+                    $('#feedback-send').prop('disabled', false); 
+                    $('#feedback-send').html('Отправляется <i class="fa fa-spinner fa-spin fa-pulse"></i>');
                 } else if (!flag) {
-                    $('#feedback-send').html('Отправляется');
-                    $('#feedback-send').prop('disabled', false);
+                    $('#feedback-send').html('Отправлено');
+                    $('#feedback-send').prop('disabled', true);
                 }
             }
             

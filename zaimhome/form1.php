@@ -19,7 +19,7 @@
     <label class="control-label col-md-4 label-required" for="f">Фамилия</label>
     <div class="col-md-6">
         <div class="ex-wrapper"> 
-            <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свою фамилию" required>
+            <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
             <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> 
         </div> 
     </div>
@@ -28,7 +28,7 @@
     <label class="control-label col-md-4 label-required" for="i">Имя</label>
     <div class="col-md-6"> 
         <div class="ex-wrapper">
-            <input type="text" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Пожалуйста, введите свое имя" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое имя" required>
+            <input type="text" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя" required>
             <span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>  
         </div>
     </div>
@@ -37,7 +37,7 @@
     <label class="control-label col-md-4 label-required" for="o">Отчество</label>
     <div class="col-md-6">
         <div class="ex-wrapper"> 
-            <input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое отчество" required>
+            <input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Введите свое отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество" required>
             <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> 
         </div>
     </div>
@@ -104,7 +104,7 @@
     <label class="control-label col-md-4 label-required" for="phone">Телефон</label>
     <div class="col-md-6">
         <div class="ex-wrapper">
-            <input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон" title="Пожалуйста, введите свой телефон" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Пожалуйста, введите телефон" required>
+            <input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон" title="Введите свой телефон" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Введите телефон" required>
             <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
         </div>
     </div>
@@ -115,7 +115,7 @@
     <label class="control-label col-md-4" for="email">Почта</label>
     <div class="col-md-6">
         <div class="ex-wrapper">
-             <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Пожалуйста, введите свой email адрес" placeholder="Email" data-validation="email" data-validation-error-msg="Пожалуйста, введите email" required>
+             <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Введите свой email адрес" placeholder="Email" data-validation="email" data-validation-error-msg="Введите email" required>
             <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <div></div>
         </div>

@@ -17,10 +17,10 @@
                                 </div>
                             </div>
                             <input type="hidden" class="form-control ec" id="passport-s" name="passport_s"  title="Серия паспорта"
-                                data-validation="number" data-validation-allowing="range[1;9999]" data-validation-error-msg="Пожалуйста, введите серию паспорта"
+                                data-validation="number" data-validation-allowing="range[1;9999]" data-validation-error-msg="Введите серию паспорта"
                                 required>
                             <input type="hidden" class="form-control ec" id="passport-n" name="passport_n"  title="Номер паспорта"
-                                data-validation="number" data-validation-allowing="range[1;999999]" data-validation-error-msg="Пожалуйста, введите номер паспорта"
+                                data-validation="number" data-validation-allowing="range[1;999999]" data-validation-error-msg="Введите номер паспорта"
                                 required>
                             <div class="form-group has-feedback hidden">
                                 <label class="col-sm-4 control-label label-required hidden-xs hidden-sm">Дата выдачи*</label>

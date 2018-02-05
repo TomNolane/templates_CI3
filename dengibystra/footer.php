@@ -3,9 +3,9 @@ if($this->uri->segment(1) != 'form')
 {
     echo '<!-- Декстоп --><div class="text-center" id="ya-rtb"><div class="visible-xs visible-sm hidden-md hidden-lg" id="yandex_rtb_R-A-247243-1"></div>';
         
-        if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
-        echo '<!-- мобайл --><div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-247243-3"></div>';
-        }
+    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
+    echo '<!-- мобайл --><div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-247243-3"></div>';
+    }
         
     echo '</div>';
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -19,15 +19,13 @@ if($this->uri->segment(1) != 'form')
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
 }
-?>
 
-<?php
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
 {
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-?>
-<?php if ($this->uri->segment(1) != 'confirm'  && $this->uri->segment(1) != 'spasibo' && $this->uri->segment(1) != 'lk' ) {
+
+if ($this->uri->segment(1) != 'confirm'  && $this->uri->segment(1) != 'spasibo' && $this->uri->segment(1) != 'lk' ) {
 echo '<footer class="ex-start-footer">
     <div class="container">
         <div class="row">
@@ -98,7 +96,7 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
                     <div class="text-center">
                         <a href="/"><img src="templates/dengibystra/assets/img/logo-2.png" alt="logo-2"></a>
                         <p class="spec_footer4">Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
-                            <a href="mailto:support@dengibystra.ru" target="_blank">support@dengibystra.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
+                        <a href="mailto:support@dengibystra.ru" target="_blank">support@dengibystra.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
                     </div>
                 </div>
             </div>
@@ -308,7 +306,6 @@ elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
         $(".offer-type").change(function () {
             update_offers();
         });
-
         function update_offers() {
             var str = ".results tbody tr";
             //var curr = clone(by_reg.length? by_reg : offers);
@@ -351,8 +348,7 @@ elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
             }
         }
         return c;
-    } 
-   // traffic("dengibystra.ru", "4");
+    }
 </script>';
 }
 include "googleadservices_all.php"; 

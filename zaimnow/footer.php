@@ -6,7 +6,15 @@
 
     if($this->uri->segment(1) != 'form')
     {
-        echo '';
+        echo '<!-- Zaimnow -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="1314921028"
+        data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     }
 ?>
 <footer class="ex-main-footer ex-sticky-footer">
@@ -42,7 +50,7 @@
             | ИНН 9705113909 | КПП 770501001</span>
         </p>
     </div>
-</footer> 
+</footer>
 
     <?php
     require 'templates/common/get_display_size.php';
@@ -223,11 +231,11 @@
     function Loading(flag) 
     {
         if (typeof flag == 'undefined') { 
-            $('#feedback-send').prop('disabled', true);
-            $('#feedback-send').html('Отправлено <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        } else if (!flag) {
-            $('#feedback-send').html('Отправить');
             $('#feedback-send').prop('disabled', false); 
+            $('#feedback-send').html('Отправляется <i class="fa fa-spinner fa-spin fa-pulse"></i>');
+        } else if (!flag) {
+            $('#feedback-send').html('Отправлено');
+            $('#feedback-send').prop('disabled', true);
         }
     } 
 
@@ -326,7 +334,7 @@
                         alert('Ошибка. ' + response.error);
                     } else {
                         $('#askQuestion').modal('hide');
-                        Loading(0); 
+                        Loading(0);
                         alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
                         $('#feedback-send').prop("disabled", true);
                     }
@@ -501,11 +509,12 @@ if ($this->uri->segment(1) == 'form')
         $('.ex-calc-zaim').toggleClass('ex-calc-zaim-open');
         $('.ex-calc-zaim').prev('.ex-calc-block').toggleClass('d-none');
     });
+    $('.ex-calc-zaim').click();
     </script>";
     require 'templates/common/switch_form.php';
     require 'templates/common/js.php';
     if(isset($_GET['popup']) and $_GET['popup']==1 ){
-        echo '    
+        echo '
     <!-- Modal Popup-->
     <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
     <div class="modal-dialog modal-lg" role="document">
@@ -533,6 +542,16 @@ if ($this->uri->segment(1) == 'form')
     }
 }
 
+if ($this->uri->segment(1) == 'money') 
+{
+    echo "<script>
+        $('.nav-item').on('click', function () {
+            $('.nav-item').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>";
+}
+
 if(isset($_GET['email']))
 {
     //данные пользователя
@@ -557,9 +576,9 @@ if(isset($_GET['email']))
 <script>
 function markTarget(target,param, id) 
 {
-    if (typeof yaCounter47483542 == 'undefined') return;
-	if (typeof param == 'undefined') yaCounter47483542.reachGoal(target);
-	else yaCounter47483542.reachGoal(target,param);
+    if (typeof yaCounter47569456 == 'undefined') return;
+	if (typeof param == 'undefined') yaCounter47569456.reachGoal(target);
+	else yaCounter47569456.reachGoal(target,param);
         
         $.ajax({
             type: 'POST',

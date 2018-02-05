@@ -5,8 +5,8 @@
                 <label class="control-label col-md-4" for="passport">Серия и номер паспорта</label>
                 <div class="col-md-6">
                     <div class="ex-wrapper">
-                        <input type="tel" class="form-control ec tip" id="passport" name="passport" placeholder="Серия и номер паспорта" title="Пожалуйста, введите серию и номер паспорта"
-                            data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Пожалуйста, введите номер и серию паспорта"
+                        <input type="tel" class="form-control ec tip" id="passport" name="passport" placeholder="Серия и номер паспорта" title="Введите серию и номер паспорта"
+                            data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Введите номер и серию паспорта"
                             required>
                     </div>
                 </div>
@@ -69,8 +69,8 @@
                 <label class="control-label col-md-4" for="passport_code">Код подразделения</label>
                 <div class="col-md-6">
                     <div class="ex-wrapper">
-                        <input type="tel" class="form-control ec tip" name="passport_code" id="passport_code" placeholder="Код подразделения" title="Пожалуйста, укажите код подразделения"
-                            data-validation="custom" data-validation-regexp="^([0-9]{3}-[0-9]{3})$" data-validation-error-msg="Пожалуйста, введите код подразделения"
+                        <input type="tel" class="form-control ec tip" name="passport_code" id="passport_code" placeholder="Код подразделения" title="Укажите код подразделения"
+                            data-validation="custom" data-validation-regexp="^([0-9]{3}-[0-9]{3})$" data-validation-error-msg="Введите код подразделения"
                             required>
                     </div>
                 </div>
@@ -79,9 +79,9 @@
                 <label class="control-label col-md-4" for="passport_who">Кем выдан</label>
                 <div class="col-md-6">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip" name="passport_who" id="passport_who" placeholder="Кем выдан паспорт" title="Пожалуйста, укажите кем выдан паспорт"
+                        <input type="text" class="form-control ec tip" name="passport_who" id="passport_who" placeholder="Кем выдан паспорт" title="Укажите кем выдан паспорт"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\№\(\)\s\d]+$"
-                            data-validation-error-msg="Пожалуйста, укажите, кем выдан паспорт" required>
+                            data-validation-error-msg="Укажите, кем выдан паспорт" required>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip" name="birthplace" id="birthplace" placeholder="Место рождения" title="Пожалуйста, ваше место рождения"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
-                            data-validation-error-msg="Пожалуйста, укажите место рождения" required>
+                            data-validation-error-msg="Укажите место рождения" required>
                     </div>
                 </div>
             </div>
@@ -116,9 +116,9 @@
                 <label class="control-label col-md-4" for="city">Населённый пункт</label>
                 <div class="col-md-6">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip" name="city" id="city" title="Пожалуйста, укажите город в котором вы живете"
+                        <input type="text" class="form-control ec tip" name="city" id="city" title="Укажите город в котором вы живете"
                             value="<?php echo isset($city_name)? $city_name : ''; ?>" pattern="^[А-Яа-яЁё\s]+$" data-validation="custom"
-                            data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, населенный пункт">
+                            data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт">
                     </div>
                 </div>
             </div>
@@ -126,9 +126,9 @@
                 <label class="control-label col-md-4" for="street">Улица</label>
                 <div class="col-md-6">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip" name="street" id="street" placeholder="Улица" title="Пожалуйста, укажите название улицы"
+                        <input type="text" class="form-control ec tip" name="street" id="street" placeholder="Улица" title="Укажите название улицы"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
-                            data-validation-error-msg="Пожалуйста, укажите, улицу" required>
+                            data-validation-error-msg="Укажите, улицу" required>
                     </div>
                 </div>
             </div>
@@ -136,8 +136,8 @@
                 <label class="control-label col-md-4" for="building">Номер дома</label>
                 <div class="col-md-6">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip" name="building" id="building" placeholder="Номер дома" title="Пожалуйста, укажите номер дома"
-                            data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, номер дома"
+                        <input type="text" class="form-control ec tip" name="building" id="building" placeholder="Номер дома" title="Укажите номер дома"
+                            data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер дома"
                             required>
                     </div>
                 </div>
@@ -146,8 +146,8 @@
                 <label class="control-label col-md-4" for="housing">Строение</label>
                 <div class="col-md-6">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip" name="housing" placeholder="Строение" title="Пожалуйста, укажите номер корпуса или строения"
-                            id="housing" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, строение (корпус)"
+                        <input type="text" class="form-control ec tip" name="housing" placeholder="Строение" title="Укажите номер корпуса или строения"
+                            id="housing" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, строение (корпус)"
                             data-validation-optional="true">
                     </div>
                 </div>
@@ -156,8 +156,8 @@
                 <label class="control-label col-md-4" for="flat">Квартира</label>
                 <div class="col-md-6">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip" name="flat" placeholder="Квартира" title="Пожалуйста, укажите номер квартиры"
-                            id="flat" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, номер квартиры"
+                        <input type="text" class="form-control ec tip" name="flat" placeholder="Квартира" title="Укажите номер квартиры"
+                            id="flat" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер квартиры"
                             data-validation-optional="true">
                     </div>
                 </div>
