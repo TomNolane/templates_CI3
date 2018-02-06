@@ -178,7 +178,7 @@
                 <div class="col-xs-12">
                     <div class="form-group ex-arrow-on has-feedback">
                         <label class="label-required" for="reg_type">Тип регистрации</label>
-                        <select  size="3" class="form-control ec" name="reg_type" id="reg_type">
+                        <select  size="1" class="form-control ec" name="reg_type" id="reg_type">
                             <option selected value="1">Постоянная регистрация</option>
                             <option value="0">Без регистрации</option>
                             <option value="2">Временная регистрация</option>

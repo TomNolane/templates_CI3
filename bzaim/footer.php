@@ -103,13 +103,11 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
         </div>
     </footer>';
 } 
-?>
 
-<?php
     require 'templates/common/get_display_size.php';
     echo '<script>';
     require 'modules/jquery/jquery-1.11.3.min.js';
-    echo '</script>';
+    echo '</script>'; 
     echo '<script>';
     require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
     echo '</script>';
@@ -121,16 +119,13 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
     echo '</script>';
     echo '<script>';
     require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
-    echo '</script>';
+    echo '</script>'; 
     echo '<script>';
     require 'templates/bzaim/assets/js/jquery.form-validator.js';
     echo '</script>';
     echo '<script>';
     require 'templates/bzaim/assets/js/jquery.suggestions.min.js';
-    echo '</script>';
+    echo '</script>'; 
     echo '<script>';
     require 'templates/bzaim/assets/js/coockie.js';
     echo '</script>';
