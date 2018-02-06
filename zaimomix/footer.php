@@ -47,7 +47,7 @@
     require 'modules/jquery/jquery-1.11.3.min.js';
     echo '</script>';
     echo '<script>';
-    require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
+    require 'templates/zaimomix/assets/js/bootstrap.min.js';
     echo '</script>';
     echo '<script>';
     require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';

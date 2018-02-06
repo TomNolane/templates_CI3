@@ -440,7 +440,6 @@ if(!isset($description))
                     и наш менеджер свяжется с вами</h2>
                 <form>
                     <div class="form-group">
-                        <label for=""></label>
                         <input type="text" class="form-control ec tip" name="feedback-name" title="Введите свое имя"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
                                 data-validation-error-msg="Введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
@@ -449,12 +448,9 @@ if(!isset($description))
                         <input type="hidden" class="form-control" id="feedback-phone" title="Тефелон" placeholder="Введите ваш телефон" value="79777777777" required>
                     </div>
                     <div class="form-group">
-                        <label for=""> <label for=""></label>
-                        </label>
                         <input type="email" class="form-control" id="feedback-email" title="Email" placeholder="Введите ваш email" required> 
                     </div>
                     <div class="form-group">
-                        <label for=""></label> 
                         <textarea id="feedback-comment" rows="3"  title="Текст вашего сообщения" placeholder="Введите текст сообщения" required></textarea>
                         <button type="button"  id="feedback-send" class="ex-main-btn">Отправить</button>
                     </div>

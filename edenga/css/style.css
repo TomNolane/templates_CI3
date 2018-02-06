@@ -1213,3 +1213,9 @@ input#i , input#o, input#f, input#feedback-name {
   .modal-footer button{
     color: #333333;
   }
+  .helpblock
+{
+  margin-bottom: 0;
+  margin-top: 0px;
+  font-size: 0.8em;
+}

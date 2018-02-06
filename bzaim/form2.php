@@ -16,6 +16,7 @@
                                     data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Введите номер и серию паспорта"
                                     required>
                                 <span id="passportstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <p class="text-muted helpblock">Пример: 4510 123456</p>
                             </div>
                         </div>
                         <input type="hidden" class="form-control ec" id="passport-s" name="passport_s"  title="Серия паспорта" data-validation="number" data-validation-allowing="range[1;9999]" data-validation-error-msg="Введите серию паспорта">
@@ -31,6 +32,7 @@
                                     data-validation="custom" data-validation-regexp="^([0-9]{3}-[0-9]{3})$" data-validation-error-msg="Введите код"
                                     required>
                                 <span id="passport_codestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <p class="text-muted helpblock">Пример: 770-098</p>
                             </div>
                         </div>
                         <div class="form-group hidden"> 
@@ -83,6 +85,7 @@
                                     data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Дата выдачи паспорта"
                                     required>
                                 <span id="passportdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <p class="text-muted helpblock">Пример: 24/03/2016</p>
                             </div>
                         </div>
                     </div>
@@ -96,6 +99,7 @@
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\№\(\)\s\d]+$"
                             data-validation-error-msg="Укажите, кем выдан паспорт" required>
                         <span id="passport_whostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <p class="text-muted helpblock">Пример: ОТДЕЛЕНИЕ УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЩУКИНО</p>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -105,6 +109,7 @@
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                             data-validation-error-msg="Укажите место рождения" required>
                         <span id="birthplacestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <p class="text-muted helpblock">Пример: г. Новосибирск, Новосибирского района</p>
                     </div>
                 </div>
             </div>
@@ -131,6 +136,7 @@
                             value="<?php echo isset($city_name)? $city_name : ''; ?>" pattern="^[А-Яа-яЁё\s]+$" data-validation="custom"
                             data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт">
                         <span id="citystatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <p class="text-muted helpblock">Пример: г. Новосибирск</p>
                     </div>
                 </div>
             </div>
@@ -142,6 +148,7 @@
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                             data-validation-error-msg="Укажите улицу" required>
                         <span id="streetstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <p class="text-muted helpblock">Пример: ул. Ленина</p>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -151,6 +158,7 @@
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите № дома"
                             required>
                         <span id="buildingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <p class="text-muted helpblock">Пример: 14</p>
                     </div>
                 </div>
             </div>
@@ -162,6 +170,7 @@
                             id="housing" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите строение/корпус"
                             data-validation-optional="true">
                         <span id="housingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <p class="text-muted helpblock">Пример: 1а</p>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -171,6 +180,7 @@
                             id="flat" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер квартиры"
                             data-validation-optional="true">
                         <span id="flatstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <p class="text-muted helpblock">Пример: 38</p>
                     </div>
                 </div>
             </div>
@@ -217,7 +227,7 @@
         <div class="col-sm-8 col-sm-offset-2 text-right">
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 text-right">
-                    <input type="button" class="ex-main-btn" value="Далее" id="next2">
+                    <button class="ex-main-btn" id="next2" type="button"> Далее </button>
                 </div>
             </div>
         </div>

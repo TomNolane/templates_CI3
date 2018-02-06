@@ -55,9 +55,6 @@ if(!isset($description))
     require 'templates/zaimhome/assets/css/main.css';
     echo '</style>';
     echo '<style>';
-    require 'templates/zaimhome/assets/css/jquery-ui-1.10.4.custom.min.css';
-    echo '</style>';
-    echo '<style>';
     require 'templates/zaimhome/assets/css/suggestions.min.css';
     echo '</style>';
     echo '<style>';
@@ -242,7 +239,7 @@ if(!isset($description))
                                 <input type="text" class="form-control" id="feedback-name" placeholder="Имя" title="Имя" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="feedback-phone" placeholder="Телефон" title="Телефон" required>
+                                <input type="hidden" class="form-control" id="feedback-phone" value="8(905)9789787" placeholder="Телефон" title="Телефон" required>
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control" id="feedback-email" placeholder="Email" title="Email" required>

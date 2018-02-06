@@ -174,27 +174,22 @@ label{
 
 .er:-moz-placeholder {
     color: #ff0000;
-    font-size: 0.9em;
 }
 
 .er::-moz-placeholder {
     color: #ff0000;
-    font-size: 0.9em;
 }
 
 .er::placeholder {
     color: #ff0000;
-    font-size: 0.9em;
 }
 
 .er:-ms-input-placeholder {
     color: #ff0000;
-    font-size: 0.9em;
 }
 
 .er::-webkit-input-placeholder {
     color: #ff0000;
-    font-size: 0.9em;
 }
 
 .label_er {
@@ -203,4 +198,10 @@ color: #b94a48 !important;
 .label_true {
 color: #3c763d !important;
 }
- 
+.helpblock
+{
+    margin-bottom: 5px;
+    margin-top: 2px;
+    font-size: 0.8em;
+    float: right;
+}

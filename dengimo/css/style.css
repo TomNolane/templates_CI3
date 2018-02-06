@@ -150,7 +150,7 @@ p.text-indent{
 }
 .navbar-nav > li > a:hover {
     background-color:#779ece;
-    color: #ffffff !important;
+    color: #fff000 !important;
     -webkit-transition: all .3s 0s, visibility 0s .3s;
     -moz-transition: all .3s 0s, visibility 0s .3s;
     transition: all .3s 0s, visibility 0s .3s;

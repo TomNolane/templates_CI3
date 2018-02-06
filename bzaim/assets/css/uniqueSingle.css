@@ -37,3 +37,13 @@
 .irs-slider.single{
     border: 2px solid #04ff00;
 }
+.helpblock
+{
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-size: 0.8em;
+  float: right;
+}
+label.control-label {
+    padding-left: 0 !important;
+}

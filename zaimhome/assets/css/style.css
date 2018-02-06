@@ -3315,3 +3315,10 @@ td.visible-print{display:table-cell !important;}
 #ya-rtb {
   text-align: center !important;
 }
+.helpblock
+{
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-size: 0.8em;
+  float: right;
+} 

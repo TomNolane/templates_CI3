@@ -88,7 +88,10 @@ if($this->uri->segment(1) != 'form')
     require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
     echo '</script>';
     echo '<script>';
-    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+    require 'templates/fanzaim/assets/js/jquery.pickmeup.twitter-bootstrap.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/fanzaim/assets/js/pickmeup.min.js';
     echo '</script>';
     require 'templates/common/detect.min.php';
     echo '<script>';
@@ -562,9 +565,6 @@ if(isset($_GET['email']))
     }
     echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
 }
-?>
-<!-- всплывающее окошко --> 
-<?php
  require 'yandexmetrika.php';
  require 'googleanalytics.php';
 ?>
@@ -590,7 +590,6 @@ function traffic(site, page){
             }
     });
 }
-
 </script> 
 </body>
 </html>

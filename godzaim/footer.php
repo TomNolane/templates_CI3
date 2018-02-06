@@ -74,7 +74,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
                                     <input type="text" class="form-control input-lg" id="feedback-name" placeholder="Имя" title="Имя">
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control input-lg" id="feedback-phone" placeholder="Телефон" title="Телефон">
+                                    <input type="hidden" class="form-control input-lg" id="feedback-phone" value="8(977)7474833" placeholder="Телефон" title="Телефон">
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control input-lg" id="feedback-email" placeholder="Email" title="Email" required>
@@ -93,8 +93,8 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
             </div>
         </div>
 
-        <?php
-        require 'templates/common/get_display_size.php';
+<?php
+require 'templates/common/get_display_size.php';
 echo '<style>'; 
 require "modules/3dgallery/css/style.css"; 
 echo '</style>'; 
@@ -759,7 +759,7 @@ jQuery(document).ready(function (o) {
     day = 30;
     }
 
-    }, 5);
+    }, 50);
     <?php } ?>
     });
     </script>
@@ -775,7 +775,10 @@ jQuery(document).ready(function (o) {
     require 'templates/godzaim/js/jquery.form-validator.js';
     echo '</script>';
     echo '<script>';
-    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+    require 'templates/godzaim/js/jquery.pickmeup.twitter-bootstrap.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/godzaim/js/pickmeup.min.js';
     echo '</script>';
     echo '<script>';
     require 'templates/godzaim/js/jquery.suggestions.min.js';
@@ -829,8 +832,6 @@ if(isset($_GET['email'])){
     echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
 }
  } 
- 
- 
         require 'yandex_metrika.php';
     ?>
 <script>
@@ -846,7 +847,6 @@ if(isset($_GET['email'])){
             success: function (data) {}
         });
     }
-   
 </script>
 <script >
     (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
@@ -916,8 +916,7 @@ if(isset($_GET['email'])){
     var google_remarketing_only = true;
     /* ]]> */
 </script>
-<script  src="//www.googleadservices.com/pagead/conversion.js">
-</script>
+<script src="//www.googleadservices.com/pagead/conversion.js"></script>
 <noscript>
     <div style="display:inline;">
         <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/844462441/?guid=ON&amp;script=0"

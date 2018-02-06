@@ -69,7 +69,10 @@ echo '<script>';
 require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
 echo '</script>';
 echo '<script>';
-require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+require 'templates/zaimhunter/assets/js/jquery.pickmeup.twitter-bootstrap.js';
+echo '</script>';
+echo '<script>';
+require 'templates/zaimhunter/assets/js/pickmeup.min.js';
 echo '</script>';
 ?> 
 <!--[if lt IE 10]>

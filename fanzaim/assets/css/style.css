@@ -1,10 +1,4 @@
 @charset "UTF-8";
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/*@@@@@@ Helper files import here @@@@@@*/
-/*@@@@@@ Core files import here @@@@@@*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,900&subset=cyrillic,cyrillic-ext");
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @font-face {
@@ -13465,3 +13459,9 @@ a {
 input#i , input#o, input#f, input#feedback-name {
     text-transform: capitalize !important;
   }
+  .helpblock
+{
+  margin-bottom: 0;
+  margin-top: 0px;
+  font-size: 0.8em;
+}

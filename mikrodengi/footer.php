@@ -50,7 +50,10 @@
     require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
     echo '</script>';
     echo '<script>';
-    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+    require 'templates/mikrodengi/assets/js/jquery.pickmeup.twitter-bootstrap.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/mikrodengi/assets/js/pickmeup.min.js';
     echo '</script>';
     echo '<script>';
     require 'templates/mikrodengi/assets/js/jquery.form-validator.js';

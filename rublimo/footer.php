@@ -81,8 +81,11 @@ if($this->uri->segment(1) != 'form')
          require 'templates/rublimo/js/jquery.form-validator.js';
          echo '</script>';
          echo '<script>';
-         require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
-         echo '</script>';
+        require 'templates/rublimo/js/jquery.pickmeup.twitter-bootstrap.js';
+        echo '</script>';
+        echo '<script>';
+        require 'templates/rublimo/js/pickmeup.min.js';
+        echo '</script>';
          echo '<script>';
          require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
          echo '</script>';
@@ -258,35 +261,33 @@ if($this->uri->segment(1) != 'form')
                 }
             }); 
             </script>'; 
-            
             require 'templates/common/js.php';
             if(isset($_GET['popup']) and $_GET['popup']==1 ){
                 echo '    
             <!-- Modal Popup-->
             <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-                        <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content">
-                                        <div class="modal-header text-center">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                                        </div>
-                                        <div class="modal-body text-center">
-                                                <div class="row">
-                                                        <div class="col-md-12">
-                                                            <img src="/templates/common/img/popup.jpg" alt="popup">                                             
-                                                            <h3>'.$popup_text.'</h3>
-                                                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                                                        </div>
-                                                </div>
-                                        </div>
-                                </div>
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </div>
+                        <div class="modal-body text-center">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img src="/templates/common/img/popup.jpg" alt="popup">
+                                    <h3>'.$popup_text.'</h3>
+                                    <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-                    <script type= " text/javascript">
-                        $(window).load(function(){
-                            $("#popup").modal("show");
-                        });
-                    </script>';
+            <script type= " text/javascript">
+                $(window).load(function(){
+                    $("#popup").modal("show");
+                });
+            </script>';
             }
             if(isset($_GET['email'])){
                 //данные пользователя
@@ -382,7 +383,6 @@ if($this->uri->segment(1) != 'form')
                 }
                 return c;
             }
-            //traffic("rublimo.ru", "4");
             </script>';
         }
     
@@ -478,8 +478,6 @@ echo '<script>
                     }
                 }
             });
-        </script>
-        <script>
             function setcookie(name, value, expires, path, domain, secure) {
                 document.cookie = name + "=" + escape(value) +
                     ((expires) ? "; expires=" + (new Date(expires)) : "") +
@@ -520,7 +518,6 @@ echo '<script>
                         setStr = unescape(cookie.substring(offset, end));
                     }
                 }
-
                 return (setStr);
             }
 
@@ -792,7 +789,7 @@ echo '<script>
                     amount = slider.result.from_value;
                     updateComm();
 
-                }, 5);
+                }, 50);
                 <?php } ?>
                 var updateComm = function () {
                     if (amount <= 30000) {
@@ -814,9 +811,7 @@ echo '<script>
 
             });
         </script>
-
         <?php require 'yandex-metrika.php'; ?>
-
         <script>
             function markTarget(target, param, id) {
                 if (typeof yaCounter39264105 == 'undefined') return;

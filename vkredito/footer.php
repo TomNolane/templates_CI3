@@ -134,8 +134,11 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     echo '<script>'; 
 	require "templates/vkredito/js/jquery.suggestions.min.js"; 
     echo '</script>';
-    echo '<script>'; 
-	require "modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js"; 
+    echo '<script>';
+    require 'templates/vkredito/js/jquery.pickmeup.twitter-bootstrap.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/vkredito/js/pickmeup.min.js';
     echo '</script>';
     echo '<script>'; 
 	require "templates/vkredito/js/settings.js"; 

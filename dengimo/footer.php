@@ -73,7 +73,10 @@ echo '<script>';
 require 'templates/dengimo/js/jquery.form-validator.js';
 echo '</script>';
 echo '<script>';
-require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+require 'templates/dengimo/js/jquery.pickmeup.twitter-bootstrap.js';
+echo '</script>';
+echo '<script>';
+require 'templates/dengimo/js/pickmeup.min.js';
 echo '</script>';
 echo '<script>';
 require 'templates/dengimo/js/jquery.suggestions.min.js';
@@ -97,213 +100,7 @@ $(document).ready(function () {
 });
 </script>';
 }elseif ($this->uri->segment(1) == 'form') {
-    echo ' <script>
-    $("#work").change(function(){
-        if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
-        { 
-            $("#work_name").addClass("valid");
-            $("#work_name").parent().addClass("has-success").removeClass("has-error");
-            $("#work_name").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_name").removeClass("er");
-            $("#"+$("#work_name").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_occupation").addClass("valid");
-            $("#work_occupation").parent().addClass("has-success").removeClass("has-error");
-            $("#work_occupation").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_occupation").removeClass("er");
-            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_phone").addClass("valid");
-            $("#work_phone").parent().addClass("has-success").removeClass("has-error");
-            $("#work_phone").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_phone").removeClass("er");
-            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
-
-            $("#work_experience").addClass("valid");
-            $("#work_experience").parent().addClass("has-success").removeClass("has-error");
-            $("#work_experience").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_experience").removeClass("er");
-            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
-
-            $("#work_salary").addClass("valid");
-            $("#work_salary").parent().addClass("has-success").removeClass("has-error");
-            $("#work_salary").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_salary").removeClass("er"); 
-            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
-
-            $("#work_region").addClass("valid");
-            $("#work_region").parent().addClass("has-success").removeClass("has-error");
-            $("#work_region").parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_region").removeClass("er");
-            $("#"+$("#work_region").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_city").addClass("valid");
-            $("#work_city").parent().addClass("has-success").removeClass("has-error");
-            $("#work_city").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_city").removeClass("er");
-            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_street").addClass("valid");
-            $("#work_street").parent().addClass("has-success").removeClass("has-error");
-            $("#work_street").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_street").removeClass("er");
-            $("#"+$("#work_street").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_house").addClass("valid");
-            $("#work_house").parent().addClass("has-success").removeClass("has-error");
-            $("#work_house").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_house").removeClass("er");
-            $("#"+$("#work_house").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_office").addClass("valid");
-            $("#work_office").parent().addClass("has-success").removeClass("has-error");
-            $("#work_office").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_office").removeClass("er");
-            $("#"+$("#work_office").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-//            $("#work_name").prop("disabled", true);
-            if($(this).val().toLowerCase() == "пенсионер")
-            $("#work_name").val("пенсионер");
-            else  $("#work_name").val("безработный");
-
-//            $("#work_occupation").prop("disabled", true);
-            if($(this).val().toLowerCase() == "пенсионер")
-            $("#work_occupation").val("пенсионер");
-            else  $("#work_occupation").val("безработный"); 
-
-//            $("#work_phone").prop("disabled", true);
-            var teemp = $("#phone").val();
-            $("#work_phone").val(teemp);
-
-//            $("#work_experience").prop("disabled", false);
-            $("#work_experience").val(100);
-
-//            $("#work_salary").prop("disabled", false);
-            $("#work_salary").val("");
-            $("#work_salary").focus();
-
-            var teemp2 = Number($("#region").find(":selected").index());
-            $("#work_region option").eq(teemp2).prop("selected", true);
-//            $("#work_region").prop("disabled", false); 
-
-//            $("#work_city").prop("disabled", true);
-            var teemp3 = $("#city").val();
-            $("#work_city").val(teemp3);
-
-//            $("#work_street").prop("disabled", true);
-            var teemp4 = $("#street").val();
-            $("#work_street").val(teemp4);
-
-            
-            var teemp5 = $("#building").val();
-            $("#work_house").val(teemp5);
-
-//            $("#work_building").prop("disabled", true);
-            $("#work_building").val(" ");
-
-//            $("#work_office").prop("disabled", true);
-            var teemp6 = $("#flat").val();
-            $("#work_office").val(teemp6);
-        }
-        else { 
-
-            $("#work_name").val("");
-            $("#work_name").removeClass("valid");
-            $("#work_name").parent().removeClass("has-success");
-            $("#work_name").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_name").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_occupation").val("");
-            $("#work_occupation").removeClass("valid");
-            $("#work_occupation").parent().removeClass("has-success");
-            $("#work_occupation").parent().parent().prev().removeClass("label_true"); 
-            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-ok"); 
-
-            $("#work_phone").val("");
-            $("#work_phone").removeClass("valid");
-            $("#work_phone").parent().removeClass("has-success");
-            $("#work_phone").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_experience").val("");
-            $("#work_experience").removeClass("valid");
-            $("#work_experience").parent().removeClass("has-success");
-            $("#work_experience").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_salary").val("");
-            $("#work_salary").removeClass("valid");
-            $("#work_salary").parent().removeClass("has-success");
-            $("#work_salary").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-ok");
- 
-            $("#work_region").removeClass("valid");
-            $("#work_region").parent().removeClass("has-success");
-            $("#work_region").parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_region").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_city").val("");
-            $("#work_city").removeClass("valid");
-            $("#work_city").parent().removeClass("has-success");
-            $("#work_city").parent().parent().prev().removeClass("label_true"); 
-            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-ok"); 
-
-            $("#work_street").val("");
-            $("#work_street").removeClass("valid");
-            $("#work_street").parent().removeClass("has-success");
-            $("#work_street").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_street").id+"status").removeClass("glyphicon-ok"); 
-
-            $("#work_house").val("");
-            $("#work_house").removeClass("valid");
-            $("#work_house").parent().removeClass("has-success");
-            $("#work_house").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_house").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_office").val("");
-            $("#work_office").removeClass("valid");
-            $("#work_office").parent().removeClass("has-success");
-            $("#work_office").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_office").id+"status").removeClass("glyphicon-ok");
-
-//            $("#work_name").prop("disabled", false);
-            $("#work_name").val(""); 
- 
-//            $("#work_occupation").prop("disabled", false);
-             $("#work_occupation").val(""); 
-
-//            $("#work_phone").prop("disabled", false);
-            $("#work_phone").val("");
-
-//            $("#work_experience").prop("disabled", false);
-            $("#work_experience").val("");
-
-//            $("#work_salary").prop("disabled", false);
-            $("#work_salary").val("");
-
-            $("#work_region option").eq(0, true).prop("selected", true);
-//            $("#work_region").prop("disabled", false); 
-
-//            $("#work_city").prop("disabled", false);
-            $("#work_city").val("");
-
-//            $("#work_street").prop("disabled", false);
-            $("#work_street").val("");
-
-//            $("#work_house").prop("disabled", false);
-            $("#work_house").val("");
-
-//            $("#work_building").prop("disabled", false);
-            $("#work_building").val("");
-
-//            $("#work_office").prop("disabled", false);
-            $("#work_office").val("");
-        }
-    }); 
-
-    </script>';
-    
-
+    require 'templates/common/switch_form2.php';
     require 'templates/common/js.php';
     if(isset($_GET['email'])){
         //данные пользователя
@@ -345,11 +142,10 @@ $(document).ready(function () {
     </script>';
     }
 }
-
 ?>
 <script>
-    //backtotop
-    jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});
+//backtotop
+jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});
 
 function setcookie(name, value, expires, path, domain, secure)
 {
@@ -516,7 +312,7 @@ var amount = 20000;
 var day = 15;
 var percent = 1.3;
 $(document).ready(function(){
-        $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
+    $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
 	$('[data-toggle="popover"]').popover();
         $('input#phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
         $('input#feedback-phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
@@ -717,7 +513,7 @@ $(document).ready(function(){
             d = 'От 61 до 100 <br class="hidden-xs"/> дней';
             percent = 1.3;
 			comm1 = Math.ceil((amount/100)*percent)*day;
-			comm2 = 0;                        
+			comm2 = 0;
 		}
 		else if (amount <= 15000) {
 			per = 94;
@@ -727,7 +523,7 @@ $(document).ready(function(){
             d = 'От 100 до 130 <br class="hidden-xs"/> дней';
             percent = 1.3;
 			comm1 = Math.ceil((amount/100)*percent)*day;
-			comm2 = 0;                        
+			comm2 = 0;
 		}
 		else if (amount <= 30000) {
             per = 84;
@@ -757,13 +553,13 @@ $(document).ready(function(){
             d = 'От 250 до 365 <br class="hidden-xs"/> дней';
             percent=0.2;
 			comm1 = 390*day;
-			comm2 = Math.ceil(((amount-30000)/100)*percent)*day;                       
+			comm2 = Math.ceil(((amount-30000)/100)*percent)*day;
 		}
 		comm = comm1 + comm2;
 		summ = amount + comm;
         $('.comm').html(comm+'<i class="fa fa-rub" aria-hidden="true"></i>');
 		$('.perc').html(percent+'<i class="fa fa-percent" aria-hidden="true"></i>');
-        $('.sum').html(String(summ).split(/(?=(?:\d{3})+$)/).join(' ')+'<i class="fa fa-rub" aria-hidden="true"></i>');                
+        $('.sum').html(String(summ).split(/(?=(?:\d{3})+$)/).join(' ')+'<i class="fa fa-rub" aria-hidden="true"></i>');
         $('.d').html(d);
 		$('.current_amount').text(String(amount).split(/(?=(?:\d{3})+$)/).join(' '));
 		$('.percent_rate').text(per + '%');
@@ -771,7 +567,6 @@ $(document).ready(function(){
 });
 </script>
 <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { ?>
-
 <script>
 var offers = <?php echo json_encode($data); ?>;
 var by_reg = null;
@@ -857,7 +652,6 @@ function clone(o) {
 }
 </script>
 <?php } 
-
 require 'yandex_metrika.php';
 ?>
 <script>
@@ -865,7 +659,6 @@ function markTarget(target,param,id){
     if (typeof yaCounter39556840 == 'undefined') return;
 	if (typeof param == 'undefined') yaCounter39556840.reachGoal(target);
 	else yaCounter39556840.reachGoal(target,param);
-        
         $.ajax({
             type: 'POST',
             url: '/pixel/',
@@ -873,7 +666,6 @@ function markTarget(target,param,id){
             success: function(data){
             }
         });
-        
 }
 function traffic(site, page){
     $.ajax({
@@ -889,7 +681,6 @@ function traffic(site, page){
 <script >(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=rVpGPTSLprQmO8sgq5rzujYj085R/MNyDfSe6D7FiBVU/ce1AAU5tZ6fkTV5*R7c4K1TjnXVIoIjAo/sNmJ9wJ5mWNyUGhHsu54iZzlmwqrXb2nDFU*EwxOtZIY8tdCiIK6hwF9SwXK8N9vCiCVr3O9R8FdFX6G0PvTUlhfc7dk-&pixel_id=1000099085';</script>
 <!--Константин Гутлид-->
 <script >(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=ISE1RYyD*mRdoi0TCOSmzLd9lPOPOw8OsUQwzOCRHERjILwv5UHUu9nI1bIsjZLVnb7WP3y/uZsgbMd5yAvEXF*8WRIuzuYKBSMc3E8dsKAFZl7wLVRO5yHTL286msqSou5CpAUqWP8RM4Wd8o/dXK7r9mRHpAPfNtsKH35gIMs-&pixel_id=1000099726';</script>
-
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -902,7 +693,6 @@ ga('send', 'pageview');
 </script> 
 <!-- Yandex.RTB R-A-232716-2 -->
 <script >
-    
     var isMobile = false; //initiate as false
         // device detection
         if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -951,13 +741,11 @@ ga('send', 'pageview');
 С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
  -->
 <script >
-
 /* <![CDATA[ */
 var google_conversion_id = 854183902;
 var google_custom_params = window.google_tag_params;
 var google_remarketing_only = true;
 /* ]]> */
-
 </script>
 <script  src="//www.googleadservices.com/pagead/conversion.js">
 </script>

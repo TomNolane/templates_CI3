@@ -116,7 +116,7 @@
             <div class="form-group has-feedback">
                 <div class="col-md-8 col-md-offset-4">
                     <div class="col-md-8 col-md-offset-2 text-center">
-                        <input id="form-send" class="ex-main-btn btn2 text-center" value="Получить деньги"/>
+                        <button class="ex-main-btn btn2 text-center" id="form-send" type="button"> Получить деньги </button> 
                     </div>
                 </div>
             </div>

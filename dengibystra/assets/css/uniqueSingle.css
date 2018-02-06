@@ -40,3 +40,10 @@
 .irs-slider.single{
     border: 2px solid #48d2a0;
 }
+.helpblock
+{
+    margin-bottom: 5px;
+    margin-top: 2px;
+    font-size: 0.8em;
+    float: right;
+}

@@ -38,8 +38,6 @@ label{
     font-size:16px;
     margin:0;
 }
-
-
 .form-steps-line, .form-steps-green-line{
     position:relative;
 }
@@ -178,51 +176,32 @@ label{
 }
   .er:-moz-placeholder {
     color: #ff0000  !important;
-    font-size: 0.8em;
 }
 
 .er::-moz-placeholder {
     color: #ff0000  !important;
-    font-size: 0.8em;
 }
 
 .er::placeholder {
     color: #ff0000  !important;
-    font-size: 0.8em;
 }
 
 .er:-ms-input-placeholder {
     color: #ff0000  !important;
-    font-size: 0.8em;
 }
 
 .er::-webkit-input-placeholder {
     color: #ff0000  !important;
-    font-size: 0.8em;
-}
-input:-moz-placeholder {
-  /* color: #000000   !important;
-  opacity: .8; */
-}
-input::-moz-placeholder {
-  /* color: #000000   !important; */
-  /* opacity: .8; */
-}
-input::placeholder {
-  /* color: #000000   !important;
-   opacity: .8; */
-}
-input:-ms-input-placeholder {
-  /* color: #000000   !important;
-   opacity: .8; */
-}
-input:-webkit-input-placeholder {
-  /* color: #000000   !important;
-   opacity: .8; */
 }
 .label_er {
 color: #b94a48 !important;
 }
 .label_true {
 color: #3c763d !important;
+}
+.helpblock
+{
+  margin-bottom: 0;
+  margin-top: 0px;
+  font-size: 0.8em;
 }

@@ -35,6 +35,7 @@
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
 			    required>
 			<span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="text-muted helpblock">Пример: Иванова</p>
 	</div>
 </div>
 <div class="form-group has-feedback">
@@ -44,6 +45,7 @@
 			    data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя"
 			    required>
 			<span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="text-muted helpblock">Пример: Лариса</p>
 	 
 	</div>
 </div>
@@ -54,6 +56,7 @@
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
 			    required>
 			<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="text-muted helpblock">Пример: Ивановна</p>
 		 
 	</div>
 </div> 
@@ -112,7 +115,8 @@
 			<input type="text" class="form-control ec tip" name="birthdate" id="birthdate" placeholder="День рождения" title="Пожалуйста, выберете свою дату рождения"
 			    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения"
 			    required>
-			<span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> 
+			<span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="text-muted helpblock">Пример: 06/02/2000</p>
 	</div>
 </div>
 <div class="form-group has-feedback">
@@ -121,6 +125,7 @@
 		<input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон" title="Введите свой телефон"
 		data-validation-error-msg="Пожалуйста, выберите номер телефона"   required>
 		<span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
 	</div>
 </div>
 <div class="form-group has-feedback">
@@ -128,7 +133,8 @@
 	<div class="col-sm-8 col-xs-12"> 
 		<input type="email" class="form-control ec tip" name="email" id="email" title="Введите свой email адрес" placeholder="Email"
 			  data-validation="email" required>
-		<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> 
+		<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: email@mail.ru</p>
 	</div>
 </div>
 <div class="form-group">

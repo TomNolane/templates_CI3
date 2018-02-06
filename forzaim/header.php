@@ -56,9 +56,6 @@ if(!isset($description))
      echo '</style>'; 
      echo '<style>';
      require 'templates/forzaim/assets/css/style_custom.min.css';
-     echo '</style>'; 
-     echo '<style>';
-     require 'templates/forzaim/assets/css/jquery-ui-1.10.4.custom.min.css';
      echo '</style>';
      echo '<style>';
      require 'templates/forzaim/assets/css/suggestions.min.css';

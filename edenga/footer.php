@@ -62,11 +62,12 @@ echo '</script>';
 echo '<script>';
 require 'templates/edenga/js/coockie.js';
 echo '</script>';
-echo '<script>
-jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});</script>';
 echo '<script>';
-require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
-echo '</script>'; 
+require 'templates/edenga/js/jquery.pickmeup.twitter-bootstrap.js';
+echo '</script>';
+echo '<script>';
+require 'templates/edenga/js/pickmeup.min.js';
+echo '</script>';
 echo '<script>';
 require 'templates/edenga/js/validate.js';
 echo '</script>';
@@ -280,7 +281,6 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri-
             </div>
         </div>
     </div>
-    
     <script type= " text/javascript">
         $(window).load(function(){
             $("#popup").modal("show");

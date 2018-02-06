@@ -75,48 +75,23 @@
   
   .er:-moz-placeholder {
     color: #ff0000 !important;
-    font-size: 0.8em;
   }
   
   .er::-moz-placeholder {
     color: #ff0000 !important;
-    font-size: 0.8em;
   }
   
   .er::placeholder {
     color: #ff0000 !important;
-    font-size: 0.8em;
   }
   
   .er:-ms-input-placeholder {
     color: #ff0000 !important;
-    font-size: 0.8em;
   }
   
   .er::-webkit-input-placeholder {
     color: #ff0000 !important;
-    font-size: 0.8em;
-  }
-  
-  input:-moz-placeholder {
-    /* color: #000000   !important;  */
-  }
-  
-  input::-moz-placeholder {
-    /* color: #000000   !important;  */
-  }
-  
-  input::placeholder {
-    /* color: #000000   !important;  */
-  }
-  
-  input:-ms-input-placeholder {
-    /* color: #000000   !important;  */
-  }
-  
-  input:-webkit-input-placeholder {
-    /* color: #000000   !important;  */
-  }
+  } 
   
   .label_er {
     color: #b94a48 !important;
@@ -159,3 +134,9 @@
   .spec_calc{
     font-size: 0.7em;
   }
+  .helpblock
+{
+  margin-bottom: 0;
+  margin-top: 0px;
+  font-size: 0.8em;
+}

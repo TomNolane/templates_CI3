@@ -1052,6 +1052,9 @@ input#i , input#o, input#f, input#feedback-name {
 .special_contact {
     font-size: 15px;
 }
-#phonestatus {
-
+.helpblock
+{
+  margin-bottom: 0;
+  margin-top: 0px;
+  font-size: 0.8em;
 }

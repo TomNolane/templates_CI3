@@ -130,8 +130,8 @@
 <div class="form-group">
 	<label class="col-sm-4 control-label label-required hidden-xs">Кредитная история</label>
 	<div class="col-sm-8 col-xs-12">
-		<select class="form-control ec" name="delays_type" id="delays_type" required>
-			<option value="never">Никогда не брал(а) кредитов</option>
+		<select class="form-control ec" name="delays_type" id="delays_type">
+			<option selected value="never">Никогда не брал(а) кредитов</option>
 			<option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
 			<option value="credit_open_no_delay">Кредиты есть, просрочек нет</option>
 			<option value="credit_closed_had_delay">Кредиты закрыты, просрочки были</option>

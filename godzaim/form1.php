@@ -105,7 +105,7 @@
 	</div>
 </div>
 <div class="form-group has-feedback" >
-	<label class="col-sm-4 control-label label-required hidden-xs">Телефон</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" id="spec_form2">Телефон</label>
 	<div class="col-sm-8 col-xs-12">
 		<input style="margin-bottom: 20px;" type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон"
 		    title="Введите свой телефон" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$"

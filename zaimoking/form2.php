@@ -203,7 +203,7 @@
             <div class="form-group has-feedback">
                 <div class="col-md-8 col-md-offset-4">
                     <div class="col-md-8 col-md-offset-2">
-                        <input id="submitTwo" class="ex-main-btn btn2 text-center" value="Далее"/> 
+                        <button class="ex-main-btn btn2 text-center" id="submitTwo" type="button"> Далее </button>
                     </div>
                 </div>
             </div>

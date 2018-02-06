@@ -6,6 +6,7 @@
                 data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Введите номер и серию паспорта"
                 required>
             <span id="passportstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: 4510 123456</p>
         </div>
     </div>
 </div>
@@ -61,6 +62,7 @@
                 data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату выдачи паспорта"
                 required>
             <span id="passportdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: 24/03/2016</p>
         </div>
     </div>
 </div>
@@ -72,6 +74,7 @@
                 data-validation="custom" data-validation-regexp="^([0-9]{3}-[0-9]{3})$" data-validation-error-msg="Введите код подразделения"
                 required>
             <span id="passport_codestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: 770-098</p>
         </div>
     </div>
 </div>
@@ -84,6 +87,7 @@
                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\№\(\)\s\d]+$" data-validation-error-msg="Укажите, кем выдан паспорт"
                 required>
             <span id="passport_whostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: ОТДЕЛЕНИЕ УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЩУКИНО</p>
         </div>
     </div>
 </div>
@@ -96,6 +100,7 @@
                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                 data-validation-error-msg="Укажите место рождения" required>
             <span id="birthplacestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: г. Новосибирск, Новосибирского района</p>
         </div>
     </div>
 </div>
@@ -122,6 +127,7 @@
                 value="<?php echo isset($city_name)? $city_name : ''; ?>" pattern="^[А-Яа-яЁё\s]+$" data-validation="custom"
                 data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт" >
             <span id="citystatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: г. Новосибирск</p>
         </div>
     </div>
 </div>
@@ -133,6 +139,7 @@
                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                 data-validation-error-msg="Укажите, улицу" required>
             <span id="streetstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: ул. Ленина</p>
         </div>
     </div>
 </div>
@@ -144,7 +151,7 @@
                 data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер дома"
                 required>
             <span id="buildingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-            <p class="help-block">Например: 9а</p>
+            <p class="text-muted helpblock">Пример: 14</p>
         </div>
     </div>
 </div>
@@ -157,6 +164,7 @@
                 id="housing" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, строение (корпус)"
                 data-validation-optional="true">
             <span id="housingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: 1а</p>
         </div>
     </div>
 </div>
@@ -168,6 +176,7 @@
                 id="flat" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер квартиры"
                 data-validation-optional="true">
             <span id="flatstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: 38</p>
         </div>
     </div>
 </div>
@@ -198,68 +207,8 @@
         <div class="clearfix">&nbsp;</div>
     </div>
 </fieldset>
-
-<fieldset id="reg_address" class="hidden">
-    <div class="form-group">
-        <label class="control-label col-md-4 label-required " for="reg_region">Регион*</label>
-        <div class="col-md-6">
-            <select class="form-control ec" id="reg_region" name="reg_region" autocomplete="off">
-                <option value="0">Регион</option>
-                <?php
-			if (isset($regions) && is_array($regions))
-			{
-				foreach($regions as $region)
-				echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
-			}
-			?>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="control-label col-md-4 label-required " for="reg_city">Населённый пункт*</label>
-        <div class="col-md-6">
-            <div class="ex-wrapper">
-                <input type="text" class="form-control ec" name="reg_city" id="reg_city" title="Населённый пункт" value="<?php echo isset($city_name)? $city_name : ''; ?>">
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-md-4 label-required " for="reg_street">Улица*</label>
-        <div class="col-md-6">
-            <div class="ex-wrapper">
-                <input type="text" class="form-control ec" name="reg_street" id="reg_street">
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-md-4 label-required " for="reg_building">Номер дома*</label>
-        <div class="col-md-6">
-            <div class="ex-wrapper">
-                <input type="text" class="form-control ec" name="reg_building" id="reg_building" title="Дом">
-                <p class="help-block">Например: 9а</p>
-            </div>
-        </div>
-    </div>
-    <div class="form-group hidden">
-        <label class="control-label col-md-4" for="reg_housing">Строение</label>
-        <div class="col-md-6">
-            <div class="ex-wrapper">
-                <input type="text" class="form-control ec" name="reg_housing" id="reg_housing">
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-md-4" for="reg_flat">Квартира</label>
-        <div class="col-md-6">
-            <div class="ex-wrapper">
-                <input type="text" class="form-control ec" name="reg_flat" id="reg_flat">
-            </div>
-        </div>
-    </div>
-</fieldset> 
 <div class="form-group">
     <div class="col-md-12 text-center">
-        <input type="button" class="ex-main-btn" value="Далее" id="next2">
+        <button class="ex-main-btn" id="next2" type="button"> Далее </button> 
     </div>
 </div>

@@ -337,7 +337,7 @@ $(document).ready(function () {
 
                 if(this.name == 'phone')
                 {
-                    ('#spec_form2').removeClass('label_true').addClass('label_er');
+                   $('#spec_form2').removeClass('label_true').addClass('label_er');
                 } 
             } 
     });
