@@ -350,6 +350,14 @@ function clone(o) {
 include "googleadservices_all.php"; 
 include "yandexmetrika.php"; 
 include "yandex_rtb.php";
+echo '<!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104386531-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag(\'js\', new Date());
+        gtag(\'config\', \'UA-104386531-1\');
+        </script>';
 ?>
 </body>
 </html>

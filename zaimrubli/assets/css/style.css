@@ -12236,6 +12236,7 @@ button.close {
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 /* line 53, ../sass/desktop/_header.scss */
 .ex-main-header .navbar-nav li a.ex-menu-item:focus {

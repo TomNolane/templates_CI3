@@ -1,4 +1,3 @@
-
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="work">Вид трудоустройства *</label>
 	<div class="col-sm-8 col-xs-12">

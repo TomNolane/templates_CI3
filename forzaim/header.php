@@ -17,9 +17,6 @@ if(!isset($description))
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="forzaim.ru" /> 
-	
-	 
-	
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="forzaim - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
 	<meta property="og:image" content="https://forzaim.ru/templates/forzaim/assets/img/art1.png"/>
@@ -137,13 +134,7 @@ if(!isset($description))
      ?>
      <!--[if lte IE 9]>
      <script src="/modules/html5shiv/html5shiv.js"></script>
-     <![endif]-->
-	<?php
-		if ($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'confirm') 
-		{
-			echo '';
-		} 
-	?> 
+     <![endif]--> 
 	<?php
 		require 'sendpuls.php';
 		require 'google_tag_manager.php';
