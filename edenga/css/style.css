@@ -1215,7 +1215,8 @@ input#i , input#o, input#f, input#feedback-name {
   }
   .helpblock
 {
-  margin-bottom: 0;
-  margin-top: 0px;
-  font-size: 0.8em;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    font-size: 0.8em;
+    float: right;
 }

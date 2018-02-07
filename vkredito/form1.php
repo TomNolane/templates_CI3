@@ -10,18 +10,16 @@
 	</div>
 </div>
 
-<input type="hidden" id="amount" name="amount" value="<?php if(empty($_POST['amount'])){if(empty($_GET['amount'])){echo'6000';}else{echo $_GET['amount'];}}else{echo $_POST['amount'];} ?>"
-/>
-<input type="hidden" id="period" name="period" value="<?php if(empty($_POST['period'])){echo'10';}else{echo $_POST['period'];} ?>"
-/>
+<input type="hidden" id="amount" name="amount" value="<?php if(empty($_POST['amount'])){if(empty($_GET['amount'])){echo'6000';}else{echo $_GET['amount'];}}else{echo $_POST['amount'];} ?>"/>
+<input type="hidden" id="period" name="period" value="<?php if(empty($_POST['period'])){echo'10';}else{echo $_POST['period'];} ?>"/>
 
 <div class="form-group has-feedback dadata">
 	<label class="col-sm-4 control-label label-required hidden-xs">Фамилия</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow">
-			<input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
-			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
-			    required>
+			<input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию" data-sanitize="capitalize"
+			    data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
+				<p class="text-muted helpblock">Пример: Иванова</p>
 			<span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 		</div>
 	</div>
@@ -34,6 +32,7 @@
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя"
 			    required>
 			<span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="text-muted helpblock">Пример: Лариса</p>
 		</div>
 	</div>
 </div>
@@ -45,6 +44,7 @@
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
 			    required>
 			<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="text-muted helpblock">Пример: Ивановна</p>
 		</div>
 	</div>
 </div>
@@ -55,7 +55,7 @@
 	<div class="col-sm-2">
 		<div class="shadow">
 			<select size="1" class="form-control ec" id="birth_dd" name="birth_dd">
-			    <option>выбери</option>
+				<option>выбери</option>
 				<option value="0">День</option>
 				<?php for($i=1;$i<=31;$i++) echo '<option value="'.(($i<10)? '0' : '').$i.'">'.$i.'</option>'; ?>
 			</select>
@@ -63,7 +63,7 @@
 	</div>
 	<div class="col-sm-3">
 		<div class="shadow">
-		<label class="col-sm-4 control-label label-required hidden-xs" for="birth_mm">Дата рождения</label>
+			<label class="col-sm-4 control-label label-required hidden-xs" for="birth_mm">Дата рождения</label>
 			<select size="1" class="form-control ec" id="birth_mm" name="birth_mm">
 				<option>выбери</option>
 				<option value="0">Месяц</option>
@@ -84,7 +84,7 @@
 	</div>
 	<div class="col-sm-3">
 		<div class="shadow">
-		<label class="col-sm-4 control-label label-required hidden-xs" for="birth_yyyy">Дата рождения</label>
+			<label class="col-sm-4 control-label label-required hidden-xs" for="birth_yyyy">Дата рождения</label>
 			<select size="1" class="form-control ec" id="birth_yyyy" name="birth_yyyy">
 				<option>выбери</option>
 				<option value="0">Год</option>
@@ -105,6 +105,7 @@
 			    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения"
 			    required>
 			<span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="text-muted helpblock">Пример: 06/02/2000</p>
 		</div>
 	</div>
 </div>
@@ -115,6 +116,7 @@
 		    data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Введите телефон"
 		    required>
 		<span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
 	</div>
 </div>
 <div class="form-group has-feedback dadata">
@@ -124,6 +126,7 @@
 			<input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Введите свой email адрес"
 			    placeholder="Email" title="Email" data-validation="email" required>
 			<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="text-muted helpblock">Пример: email@mail.ru</p>
 		</div>
 	</div>
 </div>

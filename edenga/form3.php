@@ -2,8 +2,8 @@
 	<label class="col-sm-4 control-label label-required hidden-xs" for="work">Вид трудоустройства *</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow">
-            <select class="form-control ec" id="work" name="work" required>
-                <option value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
+            <select size="1" class="form-control ec" id="work" name="work">
+                <option selected value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
                 <option value="ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ">Индивидуальный предприниматель</option>
                 <option value="СТУДЕНТ">Студент</option>
                 <option value="ПЕНСИОНЕР">Пенсионер</option>
@@ -19,6 +19,7 @@
         <div class="shadow">
             <input type="text" class="form-control ec" name="work_name" id="work_name" placeholder="Место работы" data-sanitize="capitalize"  data-validation="custom" data-validation-regexp='^[А-Яа-яЁё\d\s\-\,\№\#\.\+\(\)"]+$' data-validation-error-msg="Укажите, ваше место работы" required>
             <span id="work_namestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: ООО "Завод"</p>
         </div>
     </div>
 </div>
@@ -29,6 +30,7 @@
         <div class="shadow">
             <input type="text" class="form-control ec" name="work_occupation" id="work_occupation" placeholder="Должность" data-sanitize="capitalize"  data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Укажите, вашу должность" required>
             <span id="work_occupationstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: электрик-монтажник</p>
         </div>
     </div>
 </div>
@@ -39,6 +41,7 @@
         <div class="shadow">
             <input type="tel" class="form-control ec" name="work_phone"  placeholder="Рабочий телефон" id="work_phone" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Введите ваш рабочий телефон" data-validation-optional="true">
             <span id="work_phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">только мобильный: 8(912)123-45-67</p>
         </div>
     </div>
 </div>
@@ -49,6 +52,7 @@
         <div class="shadow">
             <input type="tel" class="form-control ec"  name="work_experience" placeholder="Стаж работы в месяцах" id="work_experience" data-validation="number" data-validation-error-msg="Введите ваш стаж работы в месяцах" required>
             <span id="work_experiencestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: 12</p>
         </div>
     </div>
 </div>
@@ -59,6 +63,7 @@
         <div class="shadow">
             <input type="tel" class="form-control ec" name="work_salary" maxlength="6" placeholder="Зарплата в рублях" id="work_salary" data-validation="number" data-validation-error-msg="Введите среднюю зарплату" required>
             <span id="work_salarystatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: 25000</p>
         </div>
     </div>
 </div>
@@ -87,6 +92,7 @@
 		<div class="shadow">
             <input type="text" class="form-control ec" name="work_city" id="work_city" pattern="Город" value="<?php echo isset($city_name)? $city_name : ''; ?>" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт" required>
             <span id="work_citystatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: г. Новосибирск</p>
         </div>
 	</div>
 </div>
@@ -97,6 +103,7 @@
         <div class="shadow">
             <input type="text" class="form-control ec" name="work_street" id="work_street" placeholder="Улица" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Укажите, улицу" required>
             <span id="work_streetstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: ул. Ленина</p>
         </div>
     </div>
 </div>
@@ -107,6 +114,7 @@
         <div class="shadow">
             <input type="text" class="form-control ec" name="work_house" id="work_house" placeholder="Номер дома" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер дома" required>
             <span id="work_housestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: 14</p>
         </div>
     </div>
 </div>
@@ -116,6 +124,7 @@
         <div class="shadow">
             <input type="text" class="form-control ec" name="work_office" placeholder="Офис" id="work_office" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер офиса" data-validation-optional="true">
             <span id="work_officestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="text-muted helpblock">Пример: 108</p>
         </div>
     </div>
 </div>

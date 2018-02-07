@@ -544,3 +544,10 @@ h1, h2{font-size:30px;}
   input#i , input#o, input#f {
     text-transform: capitalize !important;
   } 
+  .helpblock
+{
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-size: 0.8em;
+  float: right;
+} 

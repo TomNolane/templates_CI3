@@ -6,6 +6,7 @@
 		    data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Введите номер и серию паспорта"
 		    required>
 		<span id="passportstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: 4510 123456</p>
 		</div>
 	</div>
 </div>
@@ -60,6 +61,7 @@
 		    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату выдачи паспорта"
 		    required>
 		<span id="passportdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: 24/03/2016</p>
 	</div></div>
 </div>
 <div class="form-group has-feedback">
@@ -69,6 +71,7 @@
 		    data-validation="custom" data-validation-regexp="^([0-9]{3}\-[0-9]{3})$" data-validation-error-msg="Введите код подразделения"
 		    required>
 		<span id="passport_codestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: 770-098</p>
 	</div></div>
 </div>
 <div class="form-group has-feedback">
@@ -78,6 +81,7 @@
 		    data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\№\(\)\s\d]+$" data-validation-error-msg="Укажите, кем выдан паспорт"
 		    required>
 		<span id="passport_whostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: ОТДЕЛЕНИЕ УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЩУКИНО</p>
 	</div></div>
 </div>
 
@@ -88,6 +92,7 @@
 		<input type="text" class="form-control ec" name="birthplace" id="birthplace" placeholder="Место рождения" data-validation="custom"
 		    data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите место рождения" required>
 		<span id="birthplacestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: г. Новосибирск, Новосибирского района</p>
 	</div></div>
 </div>
 
@@ -120,6 +125,7 @@
 		<input type="text" class="form-control ec" name="city" id="city" value="<?php echo isset($city_name)? $city_name : ''; ?>"
 		    pattern="^[А-Яа-яЁё\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт">
 		<span id="citystatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: г. Новосибирск</p>
 	</div></div>
 </div>
 
@@ -130,6 +136,7 @@
 		    data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Укажите, улицу"
 		    required>
 		<span id="streetstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: ул. Ленина</p>
 	</div></div>
 </div>
 
@@ -138,17 +145,18 @@
 	<div class="col-sm-8 col-xs-12"><div>
 		<input type="text" class="form-control ec" name="building" id="building" placeholder="Номер дома" title="Дом" data-validation="custom"
 		    data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер дома" required>
-		<p class="help-block">Например: 9а</p>
 		<span id="buildingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: 14</p>
 	</div></div>
 </div>
 
-<div class="form-group has-feedback hidden">
+<div class="form-group has-feedback">
 	<label class="col-sm-4 col-xs-12 control-label" for="housing">Строение (корпус)</label>
 	<div class="col-sm-8 col-xs-12"><div>
 		<input type="text" class="form-control ec" name="housing" id="housing" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$"
 		    data-validation-error-msg="Укажите, строение (корпус)" data-validation-optional="true">
 		<span id="housingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: 1а</p>
 	</div></div>
 </div>
 
@@ -158,6 +166,7 @@
 		<input type="text" class="form-control ec" name="flat" id="flat" placeholder="Квартира" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$"
 		    data-validation-error-msg="Укажите, номер квартиры" data-validation-optional="true">
 		<span id="flatstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: 38</p> 
 	</div></div>
 </div>
 
@@ -168,8 +177,8 @@
 <div class="form-group">
 	<label class="col-sm-4 col-xs-12 control-label label-required hidden-xs" for="reg_type">Тип регистрации*</label>
 	<div class="col-sm-8 col-xs-12">
-		<select class="form-control ec" name="reg_type" id="reg_type" required>
-			<option value="1">Постоянная регистрация</option>
+		<select size="1" class="form-control ec" name="reg_type" id="reg_type">
+			<option selected value="1">Постоянная регистрация</option>
 			<option value="0">Без регистрации</option>
 			<option value="2">Временная регистрация</option>
 		</select>

@@ -216,7 +216,7 @@ if(!isset($description))
                                 data-validation-error-msg="Введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
                     </div>
                     <div class="form-group">
-                        <input type="tel" class="form-control" id="feedback-phone" title="Тефелон" placeholder="Введите ваш телефон" required>
+                        <input type="hidden" class="form-control" value="8(999)9876543" id="feedback-phone" title="Тефелон" placeholder="Введите ваш телефон" required>
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control" id="feedback-email" title="Email" placeholder="Введите ваш email" required>

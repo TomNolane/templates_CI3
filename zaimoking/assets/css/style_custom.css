@@ -149,3 +149,10 @@
   .adsbygoogle {
     text-align: center;
   }
+  .helpblock
+{
+  margin-bottom: 5px !important;
+  margin-top: 2px;
+  font-size: 0.8em !important;
+  float: right;
+} 

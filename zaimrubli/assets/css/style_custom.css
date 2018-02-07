@@ -202,3 +202,13 @@ input#i , input#o, input#f, input#feedback-name {
     border-radius: 5px;
   }
 }
+.helpblock
+{
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-size: 0.8em;
+  float: right;
+} 
+.special3 {
+  width: 100%;text-transform: uppercase; text-decoration: none;
+}

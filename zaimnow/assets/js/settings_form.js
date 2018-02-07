@@ -278,6 +278,9 @@ $("#email").suggestions({
     modules : 'date,sanitize'
   });
   $('input').click(function () {
+    if ($(this).attr("type") == "checkbox") {
+        return;
+    }
     $('html, body').animate({
         scrollTop: $(this).offset().top - 100
     }, 1000);

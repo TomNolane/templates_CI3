@@ -152,3 +152,10 @@
 .adsbygoogle {
   text-align: center;
 }
+.helpblock
+{
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-size: 0.8em;
+  float: right;
+} 

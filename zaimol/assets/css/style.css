@@ -13691,7 +13691,7 @@ section.ex-spasibo .ex-draft .ex-wrapper {
     transform: translateY(-100%);
   }
   .form-control {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
   }
 }
 /* line 128, ../sass/desktop/_spasibo.scss */

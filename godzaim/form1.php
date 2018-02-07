@@ -24,6 +24,7 @@
 		    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
 		    required>
 		<span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: Иванова</p>
 
 	</div>
 </div>
@@ -34,6 +35,7 @@
 		    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя"
 		    required>
 		<span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: Лариса</p>
 	</div>
 </div>
 <div class="form-group has-feedback" >
@@ -43,6 +45,7 @@
 		    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
 		    required>
 		<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="text-muted helpblock">Пример: Ивановна</p>
 	</div>
 </div>
 <input type="hidden" id="gender" value="1" name="gender">
@@ -101,6 +104,7 @@
 			    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения"
 			    required>
 			<span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="text-muted helpblock">Пример: 06/02/2000</p>
 		 
 	</div>
 </div>
@@ -111,6 +115,7 @@
 		    title="Введите свой телефон" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$"
 		    data-validation-error-msg="Введите телефон" required>
 		<span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true" style="margin-top: -4px;"></span>
+		<p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
 	</div>
 </div>
 <div class="form-group has-feedback" > 
@@ -119,14 +124,14 @@
 			<input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Введите свой email адрес"
 			    placeholder="Email" title="Email" data-validation="email" required>
 			<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-	 
+			<p class="text-muted helpblock">Пример: email@mail.ru</p>
 	</div>
 </div>
 <div class="form-group">
 	<label class="col-sm-4 control-label label-required hidden-xs">Кредитная история</label>
 	<div class="col-sm-8 col-xs-12">
-		<select class="form-control ec" name="delays_type" id="delays_type" required>
-			<option value="never">Никогда не брал(а) кредитов</option>
+		<select class="form-control ec" name="delays_type" id="delays_type">
+			<option selected value="never">Никогда не брал(а) кредитов</option>
 			<option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
 			<option value="credit_open_no_delay">Кредиты есть, просрочек нет</option>
 			<option value="credit_closed_had_delay">Кредиты закрыты, просрочки были</option>

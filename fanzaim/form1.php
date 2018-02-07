@@ -24,6 +24,7 @@
                     <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
                                 data-validation-error-msg="Введите свою фамилию" required>
+                                <p class="text-muted helpblock">Пример: Иванова</p>
                     </div>
                 </div>
             </div> 
@@ -34,6 +35,7 @@
                     <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Введите свое имя"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
                                 data-validation-error-msg="Введите свое имя" required>
+                                <p class="text-muted helpblock">Пример: Лариса</p>
                     </div>
                 </div>
             </div>
@@ -44,6 +46,7 @@
                     <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
                     data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
                     data-validation-error-msg="Введите свое отчество" required>
+                    <p class="text-muted helpblock">Пример: Ивановна</p>
                     </div>
                 </div>
             </div>
@@ -103,6 +106,7 @@
                             <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
                                 data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
                                 required>
+                                <p class="text-muted helpblock">Пример: 06/02/2000</p>
                     </div>
                 </div>
             </div>
@@ -114,6 +118,7 @@
                                 title="Введите свой номер телефона" data-validation-error-msg="Введите номер телефона"
                                 required>
                             <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
                     </div>
                 </div>
             </div>
@@ -121,9 +126,9 @@
                 <label class="control-label col-md-3" for="email">Email</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
-                    <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Введите свой email адрес"
-                                placeholder="Email" data-validation="email" data-validation-error-msg="Введите свой email"
-                                required>
+                        <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Введите свой email адрес"
+                        placeholder="Email" data-validation="email" data-validation-error-msg="Введите свой email" required>
+                        <p class="text-muted helpblock">Пример: email@mail.ru</p>
                     </div>
                 </div>
             </div>
@@ -131,8 +136,8 @@
                 <label class="control-label col-md-3" for="delays_type">Кредитная история</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper ex-arrow">
-                    <select class="form-control ec special_form99" name="delays_type" id="delays_type" required>
-                        <option value="never">Никогда не брал(а) кредитов</option>
+                    <select size="1" class="form-control ec special_form99" name="delays_type" id="delays_type">
+                        <option selected value="never">Никогда не брал(а) кредитов</option>
                         <option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
                         <option value="credit_open_no_delay">Кредиты есть, просрочек нет</option>
                         <option value="credit_closed_had_delay">Кредиты закрыты, просрочки были</option>

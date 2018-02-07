@@ -124,3 +124,10 @@ input#i , input#o, input#f, input#feedback-name {
 .spec_foot {
   color: #c0c0c0 !important;
 }
+.helpblock
+{
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-size: 0.8em;
+  float: right;
+} 
