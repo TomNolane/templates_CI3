@@ -50,7 +50,7 @@ function send_form(send, href) {
 
 function validate1() {
 	if (isWebvisor) return true;
-	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 100000) {
+	if ($('input[name="amount"]').val() < 7000 || $('input[name="amount"]').val() > 150000) {
 		error('Вы не указали сумму.', $('input[name="amount"]'));
 		return false;
 	} else if ($('input[name="period"]').val() < 5 || $('input[name="period"]').val() > 30) {

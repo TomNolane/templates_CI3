@@ -79,11 +79,11 @@
                             <div class="ex-icon-block d-flex align-items-center justify-content-center">
                                 <img src="/templates/zaimnow/assets/img/icons/1.png" alt="1.png">
                             </div>
-                            <h3>0 рублей<br>
+                            <h3>0 тенге<br>
                                 за подбор займов</h3>
                             <p>Отсутствие комиссии
                                 за поиск выгодных позиций.
-                                Ваша экономия – до 900 рублей.</p>
+                                Ваша экономия – до 5040 тенге.</p>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="ex-icon-block d-flex align-items-center justify-content-center">
@@ -140,7 +140,7 @@
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-lg-4">
                     <p>Специальное предложение
-                        10 000 рублей*</p>
+                        10 000 /тенге*</p>
                     <div class="row justify-content-center">
                         <div class="col-9">
                             <button type="submit" class="ex-main-btn">Получить деньги</button>

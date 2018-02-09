@@ -1,4 +1,4 @@
-<?php $from = '15';
+<?php $from = '53';
     if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'faq')
     {
         echo '<a href="#0" class="cd-top">Наверх</a>';
@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="ex-foot-logo">
-                    <a href="/"><img src="/templates/zaimnow/assets/img/logo-footer.svg" alt="logo-footer.svg"></a>
+                    <a href="/"><img src="/templates/zaimnowsu/assets/img/logo-footer.svg" alt="logo-footer.svg"></a>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -58,7 +58,7 @@
     require 'modules/jquery/jquery-1.11.3.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimnow/assets/js/bootstrap.min.js';
+    require 'templates/zaimnowsu/assets/js/bootstrap.min.js';
     echo '</script>';
     echo '<script>';
     require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
@@ -67,26 +67,26 @@
     require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimnow/assets/js/jquery.pickmeup.twitter-bootstrap.js';
+    require 'templates/zaimnowsu/assets/js/jquery.pickmeup.twitter-bootstrap.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimnow/assets/js/pickmeup.min.js';
+    require 'templates/zaimnowsu/assets/js/pickmeup.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimnow/assets/js/jquery.form-validator.js';
+    require 'templates/zaimnowsu/assets/js/jquery.form-validator.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimnow/assets/js/jquery.suggestions.min.js';
+    require 'templates/zaimnowsu/assets/js/jquery.suggestions.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimnow/assets/js/coockie.js';
+    require 'templates/zaimnowsu/assets/js/coockie.js';
     echo '</script>';
     require 'templates/common/detect.min.php';
     echo '<script>';
-    require 'templates/zaimnow/assets/js/custom.js';
+    require 'templates/zaimnowsu/assets/js/custom.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimnow/assets/js/settings_form.js';
+    require 'templates/zaimnowsu/assets/js/settings_form.js';
     echo '</script>';
     ?>
 
@@ -100,7 +100,7 @@
     require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimnow/assets/js/loanCalculator.js';
+    require 'templates/zaimnowsu/assets/js/loanCalculator.js';
     echo '</script>';
 ?>
 
@@ -134,34 +134,156 @@
         {  
             switch($_GET['amount'])
             {
-                case '1000': $from = '0' ; break;
-                case '2000': $from = '1' ; break;
-                case '3000': $from = '2' ; break;
-                case '4000': $from = '3' ; break;
-                case '5000': $from = '4' ; break;
-                case '6000': $from = '5' ; break;
-                case '7000': $from = '6' ; break;
-                case '8000': $from = '7' ; break;
-                case '9000': $from = '8' ; break;
-                case '10000': $from = '9' ; break;
-                case '11000': $from = '10' ; break;
-                case '12000': $from = '11' ; break;
-                case '13000': $from = '12' ; break;
-                case '14000': $from = '13' ; break;
-                case '15000': $from = '14' ; break;
-                case '20000': $from = '15' ; break;
-                case '25000': $from = '16' ; break;
-                case '30000': $from = '17' ; break;
-                case '40000': $from = '18' ; break;
-                case '50000': $from = '19' ; break;
-                case '80000': $from = '20' ; break;
-                case '100000': $from = '21' ; break;
+                case '7000': $from = '0' ; break;
+                case '8000': $from = '1' ; break;
+                case '9000': $from = '2' ; break;
+                case '10000': $from = '3' ; break;
+                case '11000': $from = '4' ; break;
+                case '12000': $from = '5' ; break;
+                case '13000': $from = '6' ; break;
+                case '14000': $from = '7' ; break;
+                case '15000': $from = '8' ; break;
+                case '16000': $from = '9' ; break;
+                case '17000': $from = '10' ; break;
+                case '18000': $from = '11' ; break;
+                case '19000': $from = '12' ; break;
+                case '20000': $from = '13' ; break;
+                case '21000': $from = '14' ; break;
+                case '22000': $from = '15' ; break;
+                case '23000': $from = '16' ; break;
+                case '24000': $from = '17' ; break;
+                case '25000': $from = '18' ; break;
+                case '26000': $from = '19' ; break;
+                case '27000': $from = '20' ; break;
+                case '28000': $from = '21' ; break;
+                case '29000': $from = '22' ; break;
+                case '30000': $from = '23' ; break;
+                case '31000': $from = '24' ; break;
+                case '32000': $from = '25' ; break;
+                case '33000': $from = '26' ; break;
+                case '34000': $from = '27' ; break;
+                case '35000': $from = '28' ; break;
+                case '36000': $from = '29' ; break;
+                case '37000': $from = '30' ; break;
+                case '38000': $from = '31' ; break;
+                case '39000': $from = '32' ; break;
+                case '40000': $from = '33' ; break;
+                case '41000': $from = '34' ; break;
+                case '42000': $from = '35' ; break;
+                case '43000': $from = '36' ; break;
+                case '44000': $from = '37' ; break;
+                case '45000': $from = '38' ; break;
+                case '46000': $from = '39' ; break;
+                case '47000': $from = '40' ; break;
+                case '48000': $from = '41' ; break;
+                case '49000': $from = '42' ; break;
+                case '50000': $from = '43' ; break;
+                case '51000': $from = '44' ; break;
+                case '52000': $from = '45' ; break;
+                case '53000': $from = '46' ; break;
+                case '54000': $from = '47' ; break;
+                case '55000': $from = '48' ; break;
+                case '56000': $from = '49' ; break;
+                case '57000': $from = '50' ; break;
+                case '58000': $from = '51' ; break;
+                case '59000': $from = '52' ; break;
+                case '60000': $from = '53' ; break;
+                case '61000': $from = '54' ; break;
+                case '62000': $from = '55' ; break;
+                case '63000': $from = '56' ; break;
+                case '64000': $from = '57' ; break;
+                case '65000': $from = '58' ; break;
+                case '66000': $from = '59' ; break;
+                case '67000': $from = '60' ; break;
+                case '68000': $from = '61' ; break;
+                case '69000': $from = '62' ; break;
+                case '70000': $from = '63' ; break;
+                case '71000': $from = '64' ; break;
+                case '72000': $from = '65' ; break;
+                case '73000': $from = '66' ; break;
+                case '74000': $from = '67' ; break;
+                case '75000': $from = '68' ; break;
+                case '76000': $from = '69' ; break;
+                case '77000': $from = '70' ; break;
+                case '78000': $from = '71' ; break;
+                case '79000': $from = '72' ; break;
+                case '80000': $from = '73' ; break;
+                case '81000': $from = '74' ; break;
+                case '82000': $from = '75' ; break;
+                case '83000': $from = '76' ; break;
+                case '84000': $from = '77' ; break;
+                case '85000': $from = '78' ; break;
+                case '86000': $from = '79' ; break;
+                case '87000': $from = '80' ; break;
+                case '88000': $from = '81' ; break;
+                case '89000': $from = '82' ; break;
+                case '90000': $from = '83' ; break;
+                case '91000': $from = '84' ; break;
+                case '92000': $from = '85' ; break;
+                case '93000': $from = '86' ; break;
+                case '94000': $from = '87' ; break;
+                case '95000': $from = '88' ; break;
+                case '96000': $from = '89' ; break;
+                case '97000': $from = '90' ; break;
+                case '98000': $from = '91' ; break;
+                case '99000': $from = '92' ; break;
+                case '100000': $from = '93' ; break;
+                case '101000': $from = '94' ; break;
+                case '102000': $from = '95' ; break;
+                case '103000': $from = '96' ; break;
+                case '104000': $from = '97' ; break;
+                case '105000': $from = '98' ; break;
+                case '106000': $from = '99' ; break;
+                case '107000': $from = '100' ; break;
+                case '108000': $from = '101' ; break;
+                case '109000': $from = '102' ; break;
+                case '110000': $from = '103' ; break;
+                case '111000': $from = '104' ; break;
+                case '112000': $from = '105' ; break;
+                case '113000': $from = '106' ; break;
+                case '114000': $from = '107' ; break;
+                case '115000': $from = '108' ; break;
+                case '116000': $from = '109' ; break;
+                case '117000': $from = '110' ; break;
+                case '118000': $from = '111' ; break;
+                case '119000': $from = '112' ; break;
+                case '120000': $from = '113' ; break;
+                case '121000': $from = '114' ; break;
+                case '122000': $from = '115' ; break;
+                case '123000': $from = '116' ; break;
+                case '124000': $from = '117' ; break;
+                case '125000': $from = '118' ; break;
+                case '126000': $from = '119' ; break;
+                case '127000': $from = '120' ; break;
+                case '128000': $from = '121' ; break;
+                case '129000': $from = '122' ; break;
+                case '130000': $from = '123' ; break;
+                case '131000': $from = '124' ; break;
+                case '132000': $from = '125' ; break;
+                case '133000': $from = '126' ; break;
+                case '134000': $from = '127' ; break;
+                case '135000': $from = '128' ; break;
+                case '136000': $from = '129' ; break;
+                case '137000': $from = '130' ; break;
+                case '138000': $from = '131' ; break;
+                case '139000': $from = '132' ; break;
+                case '140000': $from = '133' ; break;
+                case '141000': $from = '134' ; break;
+                case '142000': $from = '135' ; break;
+                case '143000': $from = '136' ; break;
+                case '144000': $from = '137' ; break;
+                case '145000': $from = '138' ; break;
+                case '146000': $from = '139' ; break;
+                case '147000': $from = '140' ; break;
+                case '148000': $from = '141' ; break;
+                case '149000': $from = '142' ; break;
+                case '150000': $from = '143' ; break;
             }
             echo $from; 
         }
-        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        elseif(!isset($_POST['form_slrd'])) echo '53'; else echo $_POST['form_slrd']; 
         ?>,
-        values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
+        values: [7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000, 22000, 23000, 24000, 25000, 26000, 27000, 28000, 29000, 30000, 31000, 32000, 33000, 34000, 35000, 36000, 37000, 38000, 39000, 40000, 41000, 42000, 43000, 44000, 45000, 46000, 47000, 48000, 49000, 50000, 51000, 52000, 53000, 54000, 55000, 56000, 57000, 58000, 59000, 60000, 61000, 62000, 63000, 64000, 65000, 66000, 67000, 68000, 69000, 70000, 71000, 72000, 73000, 74000, 75000, 76000, 77000, 78000, 79000, 80000, 81000, 82000, 83000, 84000, 85000, 86000, 87000, 88000, 89000, 90000, 91000, 92000, 93000, 94000, 95000, 96000, 97000, 98000, 99000, 100000, 101000, 102000, 103000, 104000, 105000, 106000, 107000, 108000, 109000, 110000, 111000, 112000, 113000, 114000, 115000, 116000, 117000, 118000, 119000, 120000, 121000, 122000, 123000, 124000, 125000, 126000, 127000, 128000, 129000, 130000, 131000, 132000, 133000, 134000, 135000, 136000, 137000, 138000, 139000, 140000, 141000, 142000, 143000, 144000, 145000, 146000, 147000, 148000, 149000, 150000],
         onFinish: function (data) {
             $('#amount').val(data.from_value);
             $('#form_slrd').val(data.from);
@@ -171,19 +293,19 @@
             $('#form_slrd').val(data.from);
         },
         onChange: function (range) {
-            if (range.from_value <= 10000) {
+            if (range.from_value <= 20000) {
             $('#period').val('7');
             $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 15000) {
+        } else if (range.from_value <= 45000) {
             $('#period').val('14');
             $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 20000) {
+        } else if (range.from_value <= 60000) {
             $('#period').val('21');
             $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 30000) {
+        } else if (range.from_value <= 90000) {
             $('#period').val('21');
             $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 50000) {
+        } else if (range.from_value <= 120000) {
             $('#period').val('30');
             $('#period2').val('От 130 до 250 дней');
         } else {
@@ -373,11 +495,11 @@
         } else {
             n--;
         }
-        if (n == 21 && n != <?php echo $from;?>) {
+        if (n == 143 && n != <?php echo $from;?>) {
             slider_plus = false;
         }else if (n == <?php echo $from;?> && slider_plus == false) {
             clearInterval(slider_init);
-        }else if (n == 21 && n == <?php echo $from;?>) {
+        }else if (n == 143 && n == <?php echo $from;?>) {
             clearInterval(slider_init);
         }
 
@@ -385,34 +507,34 @@
             from: n
         });
 
-        if (n <= 9) {
+        if (n <= 13) {
             $('#period').val('7'); 
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
-        } else if (n <= 14 && n > 9) {
+        } else if (n <= 38 && n > 13) {
             $('#period').val('14');
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
-        } else if (n <= 15 && n > 14) {
+        } else if (n <= 53 && n > 38) {
             $('#period').val('21');
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
-        } else if (n <= 17 && n > 15) {
+        } else if (n <= 83 && n > 53) {
             $('#period').val('21');
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
-        } else if (n <= 19 && n > 17) {
+        } else if (n <= 113 && n > 83) {
             $('#period').val('30');
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
-        } else if (n > 19) {
+        } else if (n > 113) {
             $('#period').val('30'); 
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
         }
-    }, 50);
+    }, 5);
 });
-<?php require 'templates/zaimnow/assets/js/owl.carousel.min.js';?>
+<?php require 'templates/zaimnowsu/assets/js/owl.carousel.min.js';?>
     $('.owl-carousel').owlCarousel({
         stagePadding: 40,
         center: true,

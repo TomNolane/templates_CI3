@@ -7,8 +7,8 @@
 /*@@@@@@ Core files import here @@@@@@*/
 @font-face {
   font-family: 'Lato';
-  src: url("/templates/zaimnow/assets/fonts/Lato-Regular.eot");
-  src: url("/templates/zaimnow/assets/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("/templates/zaimnow/assets/fonts/Lato-Regular.woff") format("woff"), url("/templates/zaimnow/assets/fonts/Lato-Regular.ttf") format("truetype");
+  src: url("/templates/zaimnowsu/assets/fonts/Lato-Regular.eot");
+  src: url("/templates/zaimnowsu/assets/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("/templates/zaimnowsu/assets/fonts/Lato-Regular.woff") format("woff"), url("/templates/zaimnowsu/assets/fonts/Lato-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -12926,7 +12926,7 @@ a.text-dark:focus, a.text-dark:hover {
 .ex-main-header .ex-brand {
   width: 193px;
   height: 41px;
-  background-image: url(/templates/zaimnow/assets/img/logo.svg);
+  background-image: url(/templates/zaimnowsu/assets/img/logo.svg);
   background-repeat: no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
@@ -12942,7 +12942,7 @@ a.text-dark:focus, a.text-dark:hover {
 .ex-main-header .navbar-toggler-icon {
   width: 30px;
   height: 30px;
-  background-image: url(/templates/zaimnow/assets/img/icons/hamburger-icon.png);
+  background-image: url(/templates/zaimnowsu/assets/img/icons/hamburger-icon.png);
   opacity: .3;
 }
 /* line 27, ../sass/desktop/_header.scss */
@@ -13032,7 +13032,7 @@ footer.ex-main-footer .ex-foot-menu li a:after {
   display: inline-block;
   width: 7px;
   height: 5px;
-  background-image: url(/templates/zaimnow/assets/img/icons/white-arrow.png);
+  background-image: url(/templates/zaimnowsu/assets/img/icons/white-arrow.png);
   background-repeat: no-repeat;
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
@@ -13112,7 +13112,7 @@ footer.ex-main-footer p {
   height: 9px;
   right: 22px;
   top: 15px;
-  background-image: url(/templates/zaimnow/assets/img/icons/icon-check.png);
+  background-image: url(/templates/zaimnowsu/assets/img/icons/icon-check.png);
   background-repeat: no-repeat;
 }
 /* line 26, ../sass/desktop/_modal.scss */
@@ -13164,7 +13164,7 @@ footer.ex-main-footer p {
   height: 9px;
   right: 22px;
   top: 15px;
-  background-image: url(/templates/zaimnow/assets/img/icons/icon-cross.png);
+  background-image: url(/templates/zaimnowsu/assets/img/icons/icon-cross.png);
   background-repeat: no-repeat;
 }
 /* line 53, ../sass/desktop/_modal.scss */
@@ -13240,7 +13240,7 @@ footer.ex-main-footer p {
   height: 9px;
   right: 22px;
   top: 22px;
-  background-image: url(/templates/zaimnow/assets/img/icons/icon-arrow.png);
+  background-image: url(/templates/zaimnowsu/assets/img/icons/icon-arrow.png);
   background-repeat: no-repeat;
 }
 /* line 86, ../sass/desktop/_modal.scss */
@@ -13440,7 +13440,7 @@ footer.ex-main-footer p {
   width: 100%;
   display: block;
   position: absolute;
-  background-image: url("/templates/zaimnow/assets/img/bg.png");
+  background-image: url("/templates/zaimnowsu/assets/img/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -13556,7 +13556,7 @@ footer.ex-main-footer p {
   display: inline-block;
   width: 17px;
   height: 20px;
-  background-image: url("/templates/zaimnow/assets/img/rub.svg");
+  background-image: url("/templates/zaimnowsu/assets/img/rub2.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -13597,7 +13597,7 @@ footer.ex-main-footer p {
 .ex-home .ex-main-section .ex-for-img {
   width: 525px;
   height: 450px;
-  background-image: url("/templates/zaimnow/assets/img/notebook.png");
+  background-image: url("/templates/zaimnowsu/assets/img/notebook.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -13778,7 +13778,7 @@ footer.ex-main-footer p {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url("/templates/zaimnow/assets/img/icons/shape.png");
+  background-image: url("/templates/zaimnowsu/assets/img/icons/shape.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -14007,7 +14007,7 @@ main.ex-form .ex-calc-block .ex-wrapper .ex-values .ex-slider-block .ex-slider-v
   display: inline-block;
   width: 17px;
   height: 20px;
-  background-image: url("/templates/zaimnow/assets/img/rub.svg");
+  background-image: url("/templates/zaimnowsu/assets/img/rub2.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -14063,7 +14063,7 @@ main.ex-form .ex-calc-zaim p:before {
   top: 0;
   width: 16px;
   height: 20px;
-  background-image: url("/templates/zaimnow/assets/img/icons/color-calc.png");
+  background-image: url("/templates/zaimnowsu/assets/img/icons/color-calc.png");
   background-repeat: no-repeat;
 }
 /* line 164, ../sass/desktop/_form.scss */
@@ -14075,7 +14075,7 @@ main.ex-form .ex-calc-zaim p:after {
   top: 6px;
   width: 8px;
   height: 7px;
-  background-image: url("/templates/zaimnow/assets/img/icons/color-arrow.png");
+  background-image: url("/templates/zaimnowsu/assets/img/icons/color-arrow.png");
   background-repeat: no-repeat;
 }
 /* line 178, ../sass/desktop/_form.scss */
@@ -14170,7 +14170,7 @@ main.ex-form .tab-content .ex-main-form .ex-calc-block .ex-wrapper .ex-slider-bl
   display: inline-block;
   width: 17px;
   height: 20px;
-  background-image: url("/templates/zaimnow/assets/img/rub.svg");
+  background-image: url("/templates/zaimnowsu/assets/img/rub2.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -14194,7 +14194,7 @@ main.ex-form .tab-content .ex-main-form .ex-wrapper.ex-success:after {
   height: 9px;
   right: 22px;
   top: 22px;
-  background-image: url(/templates/zaimnow/assets/img/icons/icon-check.png);
+  background-image: url(/templates/zaimnowsu/assets/img/icons/icon-check.png);
   background-repeat: no-repeat;
 }
 /* line 286, ../sass/desktop/_form.scss */
@@ -14242,7 +14242,7 @@ main.ex-form .tab-content .ex-main-form .ex-wrapper.ex-error:after {
   height: 9px;
   right: 22px;
   top: 22px;
-  background-image: url(/templates/zaimnow/assets/img/icons/icon-cross.png);
+  background-image: url(/templates/zaimnowsu/assets/img/icons/icon-cross.png);
   background-repeat: no-repeat;
 }
 /* line 312, ../sass/desktop/_form.scss */
@@ -14314,7 +14314,7 @@ main.ex-form .tab-content .ex-main-form .ex-wrapper.ex-arrow:after {
   height: 9px;
   right: 22px;
   top: 22px;
-  background-image: url(/templates/zaimnow/assets/img/icons/icon-arrow.png);
+  background-image: url(/templates/zaimnowsu/assets/img/icons/icon-arrow.png);
   background-repeat: no-repeat;
 }
 /* line 344, ../sass/desktop/_form.scss */
@@ -14738,14 +14738,14 @@ main.ex-form .nav {
 .ex-faq .ex-faq-content .card .card-header h4 a i.ex-plus {
   width: 20px;
   height: 20px;
-  background-image: url(/templates/zaimnow/assets/img/icons/plus.png);
+  background-image: url(/templates/zaimnowsu/assets/img/icons/plus.png);
   background-repeat: no-repeat;
 }
 /* line 47, ../sass/desktop/_faq.scss */
 .ex-faq .ex-faq-content .card .card-header h4 a i.ex-minus {
   width: 20px;
   height: 20px;
-  background-image: url(/templates/zaimnow/assets/img/icons/minus.png);
+  background-image: url(/templates/zaimnowsu/assets/img/icons/minus.png);
   background-repeat: no-repeat;
 }
 @media (max-width: 1199px) {
@@ -15117,7 +15117,7 @@ main.ex-form .nav {
 /* line 2, ../sass/desktop/_about.scss */
 .ex-about .ex-for-about-bg {
   height: 340px;
-  background-image: url("/templates/zaimnow/assets/img/aboutbg.png");
+  background-image: url("/templates/zaimnowsu/assets/img/aboutbg.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -15224,15 +15224,15 @@ main.ex-form .nav {
 
 /* line 27, ../sass/desktop/_articles.scss */
 .ex-art1-bg {
-  background-image: url("/templates/zaimnow/assets/img/art1.png");
+  background-image: url("/templates/zaimnowsu/assets/img/art1.png");
 }
 
 /* line 30, ../sass/desktop/_articles.scss */
 .ex-art2-bg {
-  background-image: url("/templates/zaimnow/assets/img/art2.png");
+  background-image: url("/templates/zaimnowsu/assets/img/art2.png");
 }
 
 /* line 33, ../sass/desktop/_articles.scss */
 .ex-art3-bg {
-  background-image: url("/templates/zaimnow/assets/img/art3.png");
+  background-image: url("/templates/zaimnowsu/assets/img/art3.png");
 }

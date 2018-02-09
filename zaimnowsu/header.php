@@ -19,48 +19,48 @@ if(!isset($description))
 	<meta name="copyright" lang="ru" content="zaimnow.su" /> 
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="zaimnow - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
-	<meta property="og:image" content="https://zaimnow.su/templates/zaimnow/assets/img/info2.png"/>
+	<meta property="og:image" content="https://zaimnow.su/templates/zaimnowsu/assets/img/info2.png"/>
 	<meta property="og:type" content="website"/>
 	<meta property="og:url" content="https://zaimnow.su/" />
-	<meta name="twitter:card" content="https://zaimnow.su/templates/zaimnow/assets/img/info2.png"/>
+	<meta name="twitter:card" content="https://zaimnow.su/templates/zaimnowsu/assets/img/info2.png"/>
 	<meta name="twitter:title" content="Срочные займы круглосуточно без проверок Онлайн"/>
 	<meta name="twitter:description" content="zaimnow - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
-	<meta name="twitter:image:src" content="https://zaimnow.su/templates/zaimnow/assets/img/info2.png"/>
+	<meta name="twitter:image:src" content="https://zaimnow.su/templates/zaimnowsu/assets/img/info2.png"/>
 	<meta name="twitter:url" content="https://zaimnow.su/"/>
 	<meta name="twitter:domain" content="zaimnow.su"/>
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="/templates/zaimnow/favicon/favicon-16x16.png" type="image/png">
-    <link rel="apple-touch-icon" sizes="57x57" href="/templates/zaimnow/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/templates/zaimnow/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/templates/zaimnow/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/templates/zaimnow/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/templates/zaimnow/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/templates/zaimnow/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/templates/zaimnow/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/templates/zaimnow/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/templates/zaimnow/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/templates/zaimnow/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/templates/zaimnow/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/templates/zaimnow/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/templates/zaimnow/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/templates/zaimnow/favicon/manifest.json">
+    <link rel="shortcut icon" href="/templates/zaimnowsu/favicon/favicon-16x16.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/templates/zaimnowsu/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/templates/zaimnowsu/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/templates/zaimnowsu/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/templates/zaimnowsu/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/templates/zaimnowsu/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/templates/zaimnowsu/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/templates/zaimnowsu/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/templates/zaimnowsu/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/templates/zaimnowsu/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/templates/zaimnowsu/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/templates/zaimnowsu/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/templates/zaimnowsu/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/templates/zaimnowsu/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/templates/zaimnowsu/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/templates/zaimnow/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="/templates/zaimnowsu/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff"> 
     <!-- CSS -->
      <?php 
      echo '<style>';
-     require 'templates/zaimnow/assets/css/style.css';
+     require 'templates/zaimnowsu/assets/css/style.css';
      echo '</style>';
      echo '<style>';
-     require 'templates/zaimnow/assets/css/style_custom.css';
+     require 'templates/zaimnowsu/assets/css/style_custom.css';
      echo '</style>';
      echo '<style>';
-     require 'templates/zaimnow/assets/css/font-awesome.min.css';
+     require 'templates/zaimnowsu/assets/css/font-awesome.min.css';
      echo '</style>';
      echo '<style>';
-     require 'templates/zaimnow/assets/css/suggestions.min.css';
+     require 'templates/zaimnowsu/assets/css/suggestions.min.css';
      echo '</style>'; 
      echo '<style>'; 
      echo '.tip-twitter {
@@ -85,7 +85,7 @@ if(!isset($description))
          left:50%;
          width:9px;
          height:5px;
-         background:url(/templates/zaimnow/assets/img/tip-twitter_arrows.gif) no-repeat;
+         background:url(/templates/zaimnowsu/assets/img/tip-twitter_arrows.gif) no-repeat;
      }
      .tip-twitter .tip-arrow-right {
          margin-top:-4px; /* approx. half the height to center it */
@@ -94,7 +94,7 @@ if(!isset($description))
          left:100%;
          width:5px;
          height:9px;
-         background:url(/templates/zaimnow/assets/img/tip-twitter_arrows.gif) no-repeat -9px 0;
+         background:url(/templates/zaimnowsu/assets/img/tip-twitter_arrows.gif) no-repeat -9px 0;
      }
      .tip-twitter .tip-arrow-bottom {
          margin-top:0;
@@ -103,7 +103,7 @@ if(!isset($description))
          left:50%;
          width:9px;
          height:5px;
-         background:url(/templates/zaimnow/assets/img/tip-twitter_arrows.gif) no-repeat -18px 0;
+         background:url(/templates/zaimnowsu/assets/img/tip-twitter_arrows.gif) no-repeat -18px 0;
      }
      .tip-twitter .tip-arrow-left {
          margin-top:-4px; /* approx. half the height to center it */
@@ -112,14 +112,14 @@ if(!isset($description))
          left:0;
          width:5px;
          height:9px;
-         background:url(/templates/zaimnow/assets/img/tip-twitter_arrows.gif) no-repeat -27px 0;
+         background:url(/templates/zaimnowsu/assets/img/tip-twitter_arrows.gif) no-repeat -27px 0;
      }';
      echo '</style>';
 
      if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') 
      {
          echo '<style>';
-         require "templates/zaimnow/assets/css/style_lk.css";
+         require "templates/zaimnowsu/assets/css/style_lk.css";
          echo '</style>';
      }
      ?>

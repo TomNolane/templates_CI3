@@ -16,7 +16,7 @@
             </a>
             </li>
             <li class="nav-item"><a data-toggle="tab" href="#menu2" >
-                <span>Займ на банковский счет</span>
+                <span>Займ на Qiwi</span>
                 <img src="/templates/zaimnow/assets/img/unknown.png" alt="unknown.png">
             </a>
             </li>

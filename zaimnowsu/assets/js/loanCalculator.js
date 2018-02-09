@@ -65,10 +65,10 @@ $(document).ready(function () {
         };
     //------------------------Declaration of variables end-------------------------
     rangeUpperValue.append("<span>"+currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+"</span><i></i>");
-    rangeTableValue.append("<span>"+currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" рублей</span>");
+    rangeTableValue.append("<span>"+currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" тенге</span>");
     timeTable.append("<span>"+time+"</span>");
-    commissionTableSize.append("<span>"+commission.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" рублей</span>");
-    returnTable.append("<span>"+returnTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" рублей</span>");
+    commissionTableSize.append("<span>"+commission.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" тенге</span>");
+    returnTable.append("<span>"+returnTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" тенге</span>");
     probabilityTable.text('').append("<span>вероятность "+ probability+"%</span>");
     probabilityTable2.text('').append("<span>"+ probability+"%</span>");
     //-------------------Use this function to get and set range slider current value----------------------//
@@ -81,9 +81,9 @@ $(document).ready(function () {
             commissionToShow = commission.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "),
             totalToShow = returnTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
         rangeUpperValue.html("<span>"+currentLoanToShow+"</span><i></i>");
-        rangeTableValue.html("<span>"+currentLoanToShow+" рублей</span>");
-        commissionTableSize.html("<span>"+commissionToShow+" рублей</span>");
-        returnTable.html("<span>"+totalToShow+" рублей</span>");
+        rangeTableValue.html("<span>"+currentLoanToShow+" тенге</span>");
+        commissionTableSize.html("<span>"+commissionToShow+" тенге</span>");
+        returnTable.html("<span>"+totalToShow+" тенге</span>");
         setDynamicProbability();
         setDynamicTimePeriod();
     });
