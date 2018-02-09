@@ -128,9 +128,8 @@ $("#email").suggestions({
                 $('#phonestatus').removeClass('glyphicon-ok').addClass('glyphicon-remove');
                 $('#phonestatus').parent().parent().removeClass('has-success').addClass('has-error');
             }
-            
-        }    
-    });   
+        }
+    });
   });
   $('#passport_code').blur(function(){
     $.ajax({
@@ -139,21 +138,15 @@ $("#email").suggestions({
 	data: 'passport_code='+$('#passport_code').val(),
 	success: function(data){ 
             validator = JSON.parse(data);
-            if(validator.status){
+            if(validator.status)
+            {
                 $('#passport_who').val(validator.who);
                 $('#birthplace').focus();
-            }else{
-            }   
-        }    
-    });   
-  });  
-    var time = 0;
-    var time1 = 0;
-    var time2 = 0;
-    var time3 = 0;
-    var timer = setInterval(function() {
-        time++;
-    }, 2000);
+            } 
+        }
+    });
+  });
+
   var lang=0;
   
   $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street').on('keyup keypress', function(e) {
@@ -161,8 +154,7 @@ $("#email").suggestions({
           lang++;
             var input = $(this),
             text = input.val().replace(/[^а-яёА-ЯЁ0-9-_\s]/g, "");
-            //text = '';
-            input.val(text);         
+            input.val(text);
           if(lang==1){
               $(this).parent().addClass('has-error');
               $(this).after('<span class="help-block form-error help-lang" style="margin-top: 15px !important;">Пожалуйста, смените раскладку клавиатуры на <span class="label label-info">RU</span></span>');
@@ -255,7 +247,7 @@ $("#email").suggestions({
             ); 
         }  
     else {
-        console.log('nope.')
+        
     }
 	function setcookies() {
 		$('.ec').each(function(){
@@ -280,10 +272,7 @@ $("#email").suggestions({
             $('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
             $('.spec_footer4').css('visibility','hidden');
             $('.spec_footer5').css('visibility','hidden');
-            //traffic(window.location.hostname,1); 
 			markTarget('form-step-1');
-                        time1=time;
-                        time=0;
 		} 
 		showBzzz = false;
 		$('.reg_same').change();
@@ -295,14 +284,11 @@ $("#email").suggestions({
                         $('input[name="step"]').val('2');
 			send_form();
             $('#step3').removeClass('off');
-            //traffic(window.location.hostname,2);
 			$('.form-steps-green-line').addClass('step3');
 			$('.form-steps-line').show();
 			$('#form-steps a[href="#form3"]').tab('show');
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			markTarget('form-step-2');
-                        time2=time;
-                        time=0;
 		}
 		showBzzz = false;
 		setcookies();
@@ -312,19 +298,8 @@ $("#email").suggestions({
 		if (validate()) {
                         $('input[name="step"]').val('3');
             $('#form-modal').show();
-            //traffic(window.location.hostname,3);
 			send_form(true, '/lk');
 			markTarget('form-step-3');
-                        time3=time;
-                        $.ajax({
-                            type: 'POST',
-                            url: '/time/',
-                            data: 'site=godzaim.ru&time1='+time1+'&time2='+time2+'&time3='+time3,
-                            success: function(data){
-                                clearTimeout(timer);
-                                window.location = '/lk';
-                            }
-                        });
 		}
 		showBzzz = false;
 		setcookies();
@@ -354,15 +329,7 @@ $("#email").suggestions({
             var pass = $('#passport').val().split(' ');
             $('#passport-s').val(pass[0]);
             $('#passport-n').val(pass[1]);
-        });   
-        $('#work').change(function(){
-            if($('#work').val() == 'ПЕНСИОНЕР' ){
-                //console.log('ПЕНСИОНЕР');
-                $('#work_name_help').html('');
-            } else {
-                $('#work_name_help').html('');
-            }
-        });  
+        });
         var isMobile = false; //initiate as false
         // device detection
         if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 

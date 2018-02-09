@@ -357,14 +357,6 @@ $("#email").suggestions({
         }
     });
   });
-    var time = 0;
-    var time1 = 0;
-    var time2 = 0;
-    var time3 = 0;
-    var timer = setInterval(function() {
-        time++;
-    }, 2000);
-    
     var lang=0;
   
   $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street, #feedback-name, #feedback-comment').on('keyup keypress', function(e) {
@@ -482,7 +474,6 @@ $("#email").suggestions({
             $('#firstStep').removeClass('in active');
             $('#secondStep').addClass('in active');
             $('.spec_footer4').css('visibility','hidden');
-            //traffic(window.location.hostname,1);
             $('.spec_footer5').css('visibility','hidden'); 
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			markTarget('form-step-1');
@@ -492,8 +483,6 @@ $("#email").suggestions({
 		setcookies();
         setcookie('i', $('#i').val());
 		$('select[name="reg_type"]').change();
-        time1=time;
-        time=0;
        
 	});
 	$('#submitTwo').click(function(){
@@ -507,8 +496,6 @@ $("#email").suggestions({
             $('#thirdStep').addClass('in active');
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			markTarget('form-step-2');
-            time2=time;
-            time=0;
 		}
 		showBzzz = false;
 		setcookies();
@@ -523,16 +510,6 @@ $("#email").suggestions({
 		}
 		showBzzz = false;
 		setcookies();
-        time3=time;
-        $.ajax({
-            type: 'POST',
-            url: '/time/',
-            data: 'site=mikrodengi.su&time1='+time1+'&time2='+time2+'&time3='+time3,
-            success: function(data){
-                clearTimeout(timer);
-                window.location = '/lk';
-            }
-        });
 	});
 	$('select[name="reg_type"]').change(function(){
 		if ($(this).val() == '0') {
@@ -558,14 +535,6 @@ $("#email").suggestions({
         $('#passport-s').val(pass[0]);
         $('#passport-n').val(pass[1]);
     });
-    
-    $('#work').change(function(){
-        if($('#work').val() == 'ПЕНСИОНЕР' ){
-            $('#work_name_help').html('');
-        } else {
-            $('#work_name_help').html('');
-        }
-    });  
     var isMobile = false; //initiate as false
     // device detection
     if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 

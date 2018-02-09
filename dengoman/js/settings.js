@@ -355,13 +355,6 @@ $("#email").suggestions({
         }
     });
   });
-    var time = 0;
-    var time1 = 0;
-    var time2 = 0;
-    var time3 = 0;
-    var timer = setInterval(function() {
-        time++;
-    }, 2000);
     
     var lang=0;
   
@@ -475,7 +468,7 @@ $("#email").suggestions({
             ); 
         }  
     else {
-        console.log('nope.')
+        
     }
 	$('#next').click(function(){
 		if (validate1()) {
@@ -496,8 +489,6 @@ $("#email").suggestions({
 		setcookies();
         setcookie('i', $('#i').val());
 		$('select[name="reg_type"]').change();
-        time1=time;
-        time=0;
 	});
 	$('#next2').click(function(){
 		if (validate2()) {
@@ -511,8 +502,6 @@ $("#email").suggestions({
 			$('#form-steps a[href="#form3"]').tab('show');
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			markTarget('form-step-2');
-            time2=time;
-            time=0;
 		}
 		showBzzz = false;
 		setcookies();
@@ -521,22 +510,11 @@ $("#email").suggestions({
 		if (validate()) {
             $('input[name="step"]').val('3');
             $('#form-modal').show();
-            //traffic(window.location.hostname,3); 
 			send_form(true, '/lk');
 			markTarget('form-step-3');
 		}
 		showBzzz = false;
 		setcookies();
-        time3=time;
-        $.ajax({
-            type: 'POST',
-            url: '/time/',
-            data: 'site=dengoman.ru&time1='+time1+'&time2='+time2+'&time3='+time3,
-            success: function(data){
-                clearTimeout(timer);
-                window.location = '/lk';
-            }
-        });
 	});
 	$('select[name="reg_type"]').change(function(){
 		if ($(this).val() == '0') {
@@ -562,14 +540,6 @@ $("#email").suggestions({
         $('#passport-s').val(pass[0]);
         $('#passport-n').val(pass[1]);
     });
-    
-    $('#work').change(function(){
-        if($('#work').val() == 'ПЕНСИОНЕР' ){
-            $('#work_name_help').html('');
-        } else {
-            $('#work_name_help').html('');
-        }
-    });  
     var isMobile = false; //initiate as false
     // device detection
     if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 

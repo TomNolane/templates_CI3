@@ -1,36 +1,37 @@
-<?php 
+<?php
+$sum = '8000'; 
+$period = '16';
+
+if(isset($_GET['amount'])) 
+{ 
+    $sum = $_GET['amount'];
+
+    if ($sum < '500' || $sum > '25000') 
+    $sum = '8000';
+
+    if($period < '1' || $period > '61')
+    $period = '16'; 
+} 
+
+if(isset($_POST['amount']))
+{ 
+    $sum = $_POST['amount'];
+
+    if ($sum < '500' || $sum > '25000') 
+    $sum = '8000';
+
+    $period = $_POST['period'];
+
+    if($period < '1' || $period > '61')
+    $period = '16'; 
+} 
+
 if(!isset($my_title))
 {
-	$my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Zaimrubli';
-	$description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
+	$my_title = 'Złożenie Wniosku o udzielenie Pożyczki Online | Serwis Microdengi';
+	$description = 'Chcesz uzyskać kredyt gotówkowy w krótkim czasie?Następnie wypełnij prosty formularz zgłoszenie na naszym internetowym serwisie w udzielaniu pożyczek pieniężnych';
 }  
-require 'header.php'; ?>
-<?php
-// IP
-$this->load->helper('ip');
-// GEO
-require_once FCPATH.'modules/ipgeobase/ipgeobase.php';
-$gb = new IPGeoBase();
-$geo = $gb->getRecord(IP::$ip);
-if ($geo)
-    {
-        if (isset($geo['region'])){
-            $region_name = $geo['region'];
-        }else{
-            $region_name = 'Владимир';
-        }
-        if (isset($geo['city'])){
-            $city_name = $geo['city'];
-        }else{
-            $city_name = 'Владимир';
-        }
-    }else{
-        $region_name = 'Владимир';
-        $city_name = 'Владимир';
-    }
-// Список регионов
-$this->load->model('geo/geo_model', 'geo');
-$regions = $this->geo->regions();
+require 'header.php'; 
 if(isset($_SERVER['HTTP_REFERER'])){
     $referer = $_SERVER['HTTP_REFERER'];
     parse_str($_SERVER['HTTP_REFERER'], $output);
@@ -63,39 +64,62 @@ if(isset($_SERVER['HTTP_REFERER'])){
     $ad_id = '4';
 }
 ?>
-<div class="ex-form">
-    <div class="container" id="to_scroll">
-        <h1 class="text-center">Заполните анкету и получите деньги</h1>
-    </div>
-    <div class="container-fluid ex-step-counter hidden-xs">
-        <ul class="ex-step-indicator">
-            <li><span>шаг 1  Личные данные</span></li>
-            <li><span>шаг 2  Паспортные данные</span></li>
-            <li><span>шаг 3   Данные о работе</span></li>
-        </ul>
-    </div>
-    <section class="ex-main-form">
-            <?php $period; ?>
-            <form id="anketa" action="/lk" method="post" class="form-horizontal" onsubmit="return validate();" autocomplete="off">
-                <input type="hidden" name="display" id="display" value="0">
-                <input type="hidden" name="referer" value="<?=$referer?>">
-                <input type="hidden" name="id" value="">
-                <input type="hidden" name="step" value="1">
-                <input type="hidden" name="ad_id" value="<?=$ad_id?>">
-                <input type="hidden" id="amount" name="amount" value="<?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>"/>
-                <input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 21 : $_POST['period']; ?>"/>
-            <div class="tab-content">
-                <div id="firstStep" class="tab-pane fade in active">
-                    <?php require 'form1.php'; ?>
-                </div>
-                <div id="secondStep" class="tab-pane fade">
-                    <?php require 'form2.php'; ?>
-                </div>
-                <div id="thirdStep" class="tab-pane fade">
-                    <?php require 'form3.php'; ?>
+<section class="ex-anketa">
+<form class="form-horizontal" id="anketa" method="post" autocomplete="off">
+<input type="hidden" name="referer" value="<?=$referer?>">
+<input type="hidden" name="id" value="">
+<input type="hidden" name="step" value="1">
+<input type="hidden" name="ad_id" value="<?=$ad_id?>">
+<input type="hidden" name="display" value="1" class="visible-xs">
+<input type="hidden" id="amount" name="amount" value="<?php echo $sum;?>"/>
+<input type="hidden" id="period" name="period" value="<?php echo $period; ?>"/>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="ex-main-form "> 
+                        <div class="form-group">
+                            <div class="ex-wrapper">
+                                <input type="text" class="form-control" id="i" name="i" placeholder="Imię" title="Przykład: Walenty" pattern="^[A-Z-zóąśłżźćńÓĄŚŁŻŹĆŃa-z-zóąśłżźćńÓĄŚŁŻŹĆŃ]{1,25}$" required>
+                                <p class="text-muted helpblock">Przykład: Walenty</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="ex-wrapper">
+                                <input type="text" class="form-control" id="f" name="f" placeholder="Nazwisko" title="Przykład: Wiśniewski" pattern="^[A-Z-zóąśłżźćńÓĄŚŁŻŹĆŃa-z-zóąśłżźćńÓĄŚŁŻŹĆŃ]{1,25}$" required>
+                                <p class="text-muted helpblock">Przykład: Nazwisko</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="ex-wrapper">
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Number telefonu" title="Przykład: 123-456-789 vs. 12 345 67 89 vs. (+48) 123 456 789" pattern="^(?:\(?\+?48)?(?:[-\.\(\)\s]*(\d)){9}\)?$" required>
+                                <p class="text-muted helpblock">Przykład: 123-456-789 vs. 12 345 67 89 vs. (+48) 123 456 789</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="ex-wrapper">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="E-mail" title="Przykład: email@google.com" pattern="^[a-zA-Z0-9.!#$%’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                                <p class="text-muted helpblock">Przykład: email@google.com</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="ex-wrapper">
+                                <input type="text" class="form-control" id="pesel" name="pesel" placeholder="Pesel" title="Przykład: 81100216467" pattern="^[0-9]{11}$" required>
+                                <p class="text-muted helpblock">Przykład: 81100216467</p>
+                            </div>
+                        </div>
+                        <div class="form-group  ex-agreement-check">
+                            <label class="checkbox-inline"><span>Wyrażam zgodę na przetwarzanie moich danych osobowych ... pełna treść klauzuli</span>
+                                <input type="checkbox" id="agree" checked value="1">
+                                <i></i>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="getmoney" class="ex-main-btn">otrzymywać pieniądze</button>
+                        </div>
                 </div>
             </div>
-        </form>
-    </section>
-</div>
-<?php require 'footer.php';?>
+        </div>
+    </div>
+</form>
+</section>
+<?php require "footer.php";?>

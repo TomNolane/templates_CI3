@@ -213,17 +213,10 @@ $(document).ready(function () {
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
                     $('#birthplace').focus();
-                } else {}
+                }
             }
         });
     });
-    var time = 0;
-    var time1 = 0;
-    var time2 = 0;
-    var time3 = 0;
-    var timer = setInterval(function () {
-        time++;
-    }, 2000);
     var lang = 0;
 
     $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street, #feedback-name').on('keyup keypress', function (e) {
@@ -334,7 +327,7 @@ $(document).ready(function () {
             })
         );
     } else {
-        console.log('nope.')
+        
     }
 
     function setcookies() {
@@ -357,14 +350,11 @@ $(document).ready(function () {
             $('.form-steps-line').show();
             $('.spec_footer4').css('visibility', 'hidden');
             $('.spec_footer5').css('visibility', 'hidden');
-            //traffic(window.location.hostname,1);
             $('#form-steps a[href="#form2"]').tab('show');
             $('html, body').animate({
                 scrollTop: $('#form-steps').offset().top
             }, 1000);
             markTarget('form-step-1');
-            time1 = time;
-            time = 0;
         }
         showBzzz = false;
         $('.reg_same').change();
@@ -384,8 +374,6 @@ $(document).ready(function () {
                 scrollTop: $('#form-steps').offset().top
             }, 1000);
             markTarget('form-step-2');
-            time2 = time;
-            time = 0;
         }
         showBzzz = false;
         setcookies();
@@ -393,20 +381,9 @@ $(document).ready(function () {
     $('#form-send').click(function () {
         if (validate()) {
             $('input[name="step"]').val('3');
-            $('#form-modal').show();
-            //traffic(window.location.hostname,3);  
+            $('#form-modal').show(); 
             send_form(true, '/lk');
             markTarget('form-step-3');
-            time3 = time;
-            $.ajax({
-                type: 'POST',
-                url: '/time/',
-                data: 'site=vkredito.ru&time1=' + time1 + '&time2=' + time2 + '&time3=' + time3,
-                success: function (data) {
-                    clearTimeout(timer);
-                    window.location = '/lk';
-                }
-            });
         }
         showBzzz = false;
         setcookies();

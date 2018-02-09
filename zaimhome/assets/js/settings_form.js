@@ -376,7 +376,7 @@ $(document).ready(function () {
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
                     $('#birthplace').focus();
-                } else {}
+                }
             }
         });
     });
@@ -490,7 +490,7 @@ $(document).ready(function () {
             ); 
         }  
     else {
-        console.log('nope.')
+        
     }
     $('#next1').click(function () {
         if (validate1()) {
@@ -500,7 +500,6 @@ $(document).ready(function () {
             $('.spec_footer5').css('display','none'); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstTabContent').removeClass('in active');
-            //traffic(window.location.hostname,1); 
             $('#secondTabContent').addClass('in active');
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
@@ -517,7 +516,6 @@ $(document).ready(function () {
             $('input[name="step"]').val('2');
             send_form();
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
-            //traffic(window.location.hostname,2);
             $('#secondTabContent').removeClass('in active');
             $('#lastTabContent').addClass('in active');
             $('html, body').animate({
@@ -531,7 +529,6 @@ $(document).ready(function () {
     $('#getmoney').click(function () {
         if (validate()) {
             $('input[name="step"]').val('3');
-            //traffic(window.location.hostname,3);
             setcookies();
             send_form(true, '/lk');
             markTarget('form-step-3');

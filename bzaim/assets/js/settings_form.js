@@ -384,7 +384,7 @@ $(document).ready(function () {
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
 					$('#passportdate').focus();
-                } else {}
+                }
             }
         });
     });
@@ -394,7 +394,6 @@ $(document).ready(function () {
             lang++;
             var input = $(this),
                 text = input.val().replace(/[^а-яёА-ЯЁ0-9-_\s]/g, "");
-            //text = '';
             input.val(text);
             if (lang == 1) {
                 $(this).parent().addClass('ex-error');
@@ -499,7 +498,7 @@ $(document).ready(function () {
             ); 
         }  
     else {
-        console.log('nope.')
+        
     }
     $('#next1').click(function () { 
         if (validate1()) { 
@@ -509,7 +508,6 @@ $(document).ready(function () {
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstTabContent').removeClass('in active');
             $('#secondTabContent').addClass('in active');
-            //traffic(window.location.hostname,1);
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
@@ -527,7 +525,6 @@ $(document).ready(function () {
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondTabContent').removeClass('in active');
             $('#lastTabContent').addClass('in active');
-            //traffic(window.location.hostname,2);
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
@@ -539,7 +536,6 @@ $(document).ready(function () {
     $('#getmoney').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
-            //traffic(window.location.hostname,3);
             send_form(true, '/lk');
             markTarget('form-step-3');
             window.location = '/lk';

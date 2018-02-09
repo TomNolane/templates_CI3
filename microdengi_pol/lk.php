@@ -1,27 +1,6 @@
 <?php 
-    $my_title = "Вам автоматически одобрен займ";
-    require 'header.php'; 
-    $this->load->model('offers/offers_model', 'offers');
-    $data = $this->offers->all();
-    
-    // IP
-    $this->load->helper('ip');
-    // GEO
-    require_once FCPATH.'modules/ipgeobase/ipgeobase.php';
-    $gb = new IPGeoBase();
-    $geo = $gb->getRecord(IP::$ip);
-    if ($geo)
-    {
-        if (isset($geo['region'])) $region_name = $geo['region'];
-    }
-    // Список регионов
-    $this->load->model('geo/geo_model', 'geo');
-    $regions = $this->geo->regions();
-    
-    //pixel stat
-    $this->load->model('pixel/pixel_model', 'pixel');
-    $pixel = $this->pixel->stat('mikrodengi.com');
-?>
+$my_title = "Automatycznie zatwierdzony pożyczki";
+require 'header.php';?>
 <div class="ex-offerta">
     <div class="container">
         <div class="ex-offers-block ex-off-active ex-on-small-devices">
@@ -30,8 +9,7 @@
                 <tr>
                     <td>
                         <div>
-                            <figure class="ex-offers-img1">
-                            </figure>
+                            <figure class="ex-offers-img1"></figure>
                         </div>
                     </td>
                     <td>
@@ -114,8 +92,7 @@
                 <tr>
                     <td>
                         <div>
-                            <figure class="ex-offers-img1">
-                            </figure>
+                            <figure class="ex-offers-img1"></figure>
                         </div>
                     </td>
                     <td>
@@ -138,4 +115,4 @@
         </div>
     </div>
 </div>
-<?php require 'footer.php'; ?>
+<?php require 'footer.php';?> 

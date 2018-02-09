@@ -397,7 +397,7 @@ $(document).ready(function () {
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
                     $('#birthplace').focus();
-                } else {}
+                }
             }
         });
     });
@@ -527,7 +527,7 @@ $(document).ready(function () {
             ); 
         }  
     else {
-        console.log('nope.')
+        
     }
     $('#next1').click(function () { 
         if (validate1()) { 
@@ -541,8 +541,7 @@ $(document).ready(function () {
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
-            markTarget('form-step-1'); 
-            //traffic(window.location.hostname,1);
+            markTarget('form-step-1');
         }
         showBzzz = false;
         $('.reg_same').change();
@@ -562,7 +561,6 @@ $(document).ready(function () {
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
             markTarget('form-step-1'); 
-            //traffic(window.location.hostname,1);
         }
         showBzzz = false;
         $('.reg_same').change();
@@ -581,7 +579,6 @@ $(document).ready(function () {
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
             markTarget('form-step-2');
-            //traffic(window.location.hostname,2);
         }
         showBzzz = false;
         setcookies();
@@ -592,7 +589,6 @@ $(document).ready(function () {
             $('input[name="step"]').val('3');
             send_form(true, '/lk');
             markTarget('form-step-3');
-            //traffic(window.location.hostname,3);
             $('#anketa').submit();
         }
         showBzzz = false;
@@ -621,14 +617,6 @@ $(document).ready(function () {
         var pass = $('#passport').val().split(' ');
         $('#passport-s').val(pass[0]);
         $('#passport-n').val(pass[1]);
-    });
-    $('#work').change(function () {
-        if ($('#work').val() == 'ПЕНСИОНЕР') {
-            //console.log('ПЕНСИОНЕР');
-            $('#work_name_help').html('укажите последнее место работы');
-        } else {
-            $('#work_name_help').html('');
-        }
     });
     var isMobile = false; //initiate as false
     // device detection

@@ -1,8 +1,8 @@
 <?php require 'header.php';?>
 <div class="ex-about">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1 ">
+        <div class="row justify-content-center">
+            <div class="col-md-10 ">
                 <div class="ex-about-bg">
                     <h1 class="text-center">O serwisie</h1>
                     <p>Niespodziewana sytuacja może stanąć na drodze, wywołać bezradność i rozczarowanie. Gdzie się
@@ -23,7 +23,6 @@
                     <p><b>7 minut - średni czas zatwierdzenia wniosku.</b> Zapomnij o stracie czasu w konwencjonalnych
                         bankach.
                     </p>
-
                     <p>
                         <b>Pożyczki dla wszystkich obywateli Rosji.</b> Gdziekolwiek jesteś, potrzebujesz tylko
                         paszportu,

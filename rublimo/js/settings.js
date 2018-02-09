@@ -358,7 +358,7 @@ $(document).ready(function () {
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
                     $('#birthplace').focus();
-                } else {}
+                }
             }
         });
     });
@@ -477,7 +477,7 @@ $(document).ready(function () {
             })
         );
     } else {
-        console.log('nope.')
+        
     }
 
     function setcookies() {
@@ -501,7 +501,6 @@ $(document).ready(function () {
             $('#step2').removeClass('off');
             $('.form-steps-green-line').addClass('step2');
             $('.form-steps-line').show();
-            //traffic(window.location.hostname,1); 
             $('#form-steps a[href="#form2"]').tab('show');
             $('html, body').animate({
                 scrollTop: $('#form-steps').offset().top
@@ -519,7 +518,6 @@ $(document).ready(function () {
         if (validate2()) {
             $('input[name="step"]').val('2');
             send_form();
-            //traffic(window.location.hostname,2);
             $('#step3').removeClass('off');
             $('.form-steps-green-line').addClass('step3');
             $('.form-steps-line').show();
@@ -537,7 +535,6 @@ $(document).ready(function () {
     $('#form-send').click(function () {
         if (validate()) {
             $('input[name="step"]').val('3');
-            //traffic(window.location.hostname,3);
             $('#form-modal').show();
             send_form(true, '/lk');
             markTarget('form-step-3');
@@ -568,13 +565,6 @@ $(document).ready(function () {
         var pass = $('#passport').val().split(' ');
         $('#passport-s').val(pass[0]);
         $('#passport-n').val(pass[1]);
-    });
-    $('#work').change(function () {
-        if ($('#work').val() == 'ПЕНСИОНЕР') {
-            $('#work_name_help').html('');
-        } else {
-            $('#work_name_help').html('');
-        }
     });
     var isMobile = false; //initiate as false
     // device detection

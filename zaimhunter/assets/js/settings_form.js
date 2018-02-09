@@ -399,7 +399,7 @@ $(document).ready(function () {
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
                     $('#birthplace').focus();
-                } else {}
+                }
             }
         });
     });
@@ -409,7 +409,6 @@ $(document).ready(function () {
             lang++;
             var input = $(this),
                 text = input.val().replace(/[^а-яёА-ЯЁ0-9-_\s]/g, "");
-            //text = '';
             input.val(text);
             if (lang == 1) {
                 $(this).parent().addClass('has-error');
@@ -528,7 +527,7 @@ $(document).ready(function () {
             ); 
         }  
     else {
-        console.log('nope.')
+        
     }
     $('#next1').click(function () { 
         if (validate1()) { 
@@ -537,7 +536,6 @@ $(document).ready(function () {
             send_form(); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstTabContent').removeClass('in active');
-            //traffic(window.location.hostname,1);
             $('#secondTabContent').addClass('in active');
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
@@ -555,7 +553,6 @@ $(document).ready(function () {
             send_form();
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondTabContent').removeClass('in active');
-            //traffic(window.location.hostname,2);
             $('#lastTabContent').addClass('in active');
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
@@ -568,7 +565,6 @@ $(document).ready(function () {
     $('#getmoney').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
-            //traffic(window.location.hostname,3);
             send_form(true, '/lk');
             markTarget('form-step-3');
             $('#anketa').submit();
@@ -597,14 +593,6 @@ $(document).ready(function () {
         var pass = $('#passport').val().split(' ');
         $('#passport-s').val(pass[0]);
         $('#passport-n').val(pass[1]);
-    });
-    $('#work').change(function () {
-        if ($('#work').val() == 'ПЕНСИОНЕР') {
-            //console.log('ПЕНСИОНЕР');
-            $('#work_name_help').html('укажите последнее место работы');
-        } else {
-            $('#work_name_help').html('');
-        }
     });
     var isMobile = false; //initiate as false
     // device detection

@@ -63,5 +63,5 @@ if ($('#birthdate').attr('placeholder')) {
         ); 
     }  
 else {
-    console.log('nope.')
+    
 }

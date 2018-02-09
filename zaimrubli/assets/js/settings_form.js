@@ -347,17 +347,14 @@ $(document).ready(function () {
                 validator = JSON.parse(data);
                 if (validator.status) { 
                     $('#spec_form2').removeClass('label_er').addClass('label_true');
-                    // $('#phonestatus').removeClass('glyphicon-remove').removeClass('glyphicon-ok');
                     $('#phonestatus').html('<img src="/templates/common/img/mobile/' + validator.operator + '.png" width="24px" />');
                     $('#phone').parent().removeClass('ex-error').addClass('ex-success');
                     if (validator.operator == 'undefined') {
                         $('#phonestatus').html('');
-                        // $('#phonestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok');
                     }
                 } else { 
                     $('#phonestatus').html('');
                     $('#spec_form2').addClass('label_er').removeClass('label_true');
-                    // $('#phonestatus').removeClass('glyphicon-ok').addClass('glyphicon-remove');
                     $('#phone').parent().removeClass('ex-success').addClass('ex-error');
                 } 
             }
@@ -396,7 +393,7 @@ $(document).ready(function () {
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
                     $('#birthplace').focus();
-                } else {}
+                }
             }
         });
     });
@@ -406,7 +403,6 @@ $(document).ready(function () {
             lang++;
             var input = $(this),
                 text = input.val().replace(/[^а-яёА-ЯЁ0-9-_\s]/g, "");
-            //text = '';
             input.val(text);
             if (lang == 1) {
                 $(this).parent().addClass('ex-error');
@@ -526,7 +522,7 @@ $(document).ready(function () {
             ); 
         }  
     else {
-        console.log('nope.')
+        
     }
     $('#next1').click(function () { 
         if (validate1()) { 
@@ -537,7 +533,6 @@ $(document).ready(function () {
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstStep').removeClass('in active');
             $('#secondStep').addClass('in active');
-            //traffic(window.location.hostname,1);
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
@@ -552,7 +547,6 @@ $(document).ready(function () {
         if (validate2()) {
             $('input[name="step"]').val('2');
             send_form();
-            //traffic(window.location.hostname,2);
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('.ex-step-counter').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondStep').removeClass('in active');
@@ -570,7 +564,6 @@ $(document).ready(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
             send_form(true, '/lk');
-            //traffic(window.location.hostname,3); 
             markTarget('form-step-3');
             $('#anketa').submit();
         }
@@ -600,14 +593,6 @@ $(document).ready(function () {
         var pass = $('#passport').val().split(' ');
         $('#passport-s').val(pass[0]);
         $('#passport-n').val(pass[1]);
-    });
-    $('#work').change(function () {
-        if ($('#work').val() == 'ПЕНСИОНЕР') {
-            //console.log('ПЕНСИОНЕР');
-            $('#work_name_help').html('укажите последнее место работы');
-        } else {
-            $('#work_name_help').html('');
-        }
     });
     var isMobile = false; //initiate as false
     // device detection

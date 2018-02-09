@@ -386,7 +386,7 @@ $(document).ready(function () {
                 if (validator.status) {
                     $('#passport_who').val(validator.who);
                     $('#birthplace').focus();
-                } else {}
+                }
             }
         });
     });
@@ -500,14 +500,13 @@ $(document).ready(function () {
             ); 
         }  
     else {
-        console.log('nope.')
+        
     }
     $('#next1').click(function () { 
         if (validate1()) { 
             $('input[name="step"]').val('1'); 
             $('.spec_footer4').css('display','none');
             $('.spec_footer5').css('display','none');
-            //traffic(window.location.hostname,1);
             send_form(); 
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstTabContent').removeClass('in active');
@@ -525,7 +524,6 @@ $(document).ready(function () {
     $('#next2').click(function () {
         if (validate2()) {
             $('input[name="step"]').val('2');
-            //traffic(window.location.hostname,2);
             send_form();
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondTabContent').removeClass('in active');
@@ -541,7 +539,6 @@ $(document).ready(function () {
     $('#getmoney').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
-            //traffic(window.location.hostname,3); 
             send_form(true, '/lk');
             markTarget('form-step-3');
             $('#anketa').submit();
@@ -572,13 +569,6 @@ $(document).ready(function () {
         var pass = $('#passport').val().split(' ');
         $('#passport-s').val(pass[0]);
         $('#passport-n').val(pass[1]);
-    });
-    $('#work').change(function () {
-        if ($('#work').val() == 'ПЕНСИОНЕР') {
-            $('#work_name_help').html('');
-        } else {
-            $('#work_name_help').html('');
-        }
     });
     var isMobile = false; //initiate as false
     // device detection

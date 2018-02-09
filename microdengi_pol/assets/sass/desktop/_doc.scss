@@ -2,23 +2,25 @@
   padding-top: 42px;
   padding-bottom: 30px;
   .ex-doc-content {
-    .panel {
+    .card {
       border: none;
-      margin-bottom: 2px;
+      margin-bottom: 10px;
       box-shadow: none;
-      .panel-heading {
+      .card-header {
         padding: 13px 34px 13px 42px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
         background-color: #f9f9f9;
-        @include prefix(border-radius,5px);
+        @include prefix(border-radius, 5px);
+        border-bottom: none;
         h4 {
+          margin-bottom: 0;
           position: relative;
           a {
             display: block;
+            position: relative;
             text-decoration: none;
             font-weight: 700;
             line-height: 20px;
-            position: relative;
             color: #427674;
             font-size: 20px;
             i {
@@ -47,46 +49,40 @@
               padding: 0;
             }
           }
-
-
+        }
+        @media (max-width: 991px) {
+          padding: 15px;
         }
       }
-      .panel-collapse{
+      .panel-collapse {
         margin-top: 5px;
-        .panel-body {
+        .card-body {
           padding: 13px 30px;
           background-color: #ffffff;
           box-shadow: none;
           border: none;
           @include prefix(border-radius, 5px);
-          .ex-text {
+          p {
             font-size: 14px;
             font-weight: 400;
             line-height: 24px;
-            ul {
-              padding-left: 17px;
-              margin-bottom: 32px;
-            }
-            p {
-              margin-bottom: 32px;
-              &:last-of-type {
-                margin-bottom: 0;
-              }
-            }
+          }
+          @media (max-width: 991px) {
+            padding: 15px;
           }
         }
       }
     }
   }
-.panel.ex-border{
-  border: 1px solid #9b9b9b;
-}
   .ex-bg-head {
     background-color: transparent !important;
-    box-shadow: none!important;
+    box-shadow: none !important;
     a {
       color: #427674 !important;
     }
   }
+}
 
+.ex-border {
+  border: 1px solid #9b9b9b!important;
 }
