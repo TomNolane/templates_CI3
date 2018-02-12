@@ -568,6 +568,7 @@ $(document).ready(function () {
             send_form(true, '/lk');
             markTarget('form-step-3');
             $('#anketa').submit();
+            window.location = '/lk';
         }
         showBzzz = false;
         setcookies();

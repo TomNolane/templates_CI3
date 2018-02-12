@@ -4,10 +4,10 @@
 $(document).ready(function () {
     //-----------------------Declaration of variables--------------------------
     var c = getParameterByName('amount');
-    var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());
+    var gg = parseInt(($('#amount').val().trim().length < 1) ? 60000 : $('#amount').val());
     if (c != null) {
-        if (c > 100000 || c < 1000) {
-            c = 20000;
+        if (c > 150000 || c < 7000) {
+            c = 60000;
         }
         gg = c;
     };
@@ -22,44 +22,44 @@ $(document).ready(function () {
         probabilityTable = $('.irs-single'),
         probabilityTable2 = $('.ex-prob'),
         probability = 95,
-        time = 'от 130 дня',
+        time = 'от 130 дней',
         commission = (currentLoanSize * commissionPercantage) / 100,
         returnTotal = currentLoanSize + commission,
         setDynamicProbability = function () {
-            if(currentLoanSize >= 30000 && currentLoanSize < 50000){
+            if(currentLoanSize >= 60000 && currentLoanSize < 90000){
                 probability = 85;
                 probabilityTable.text("вероятность " + probability).append('%');
                 probabilityTable2.html("<span>"+probability +"%</span>");
-            }else if(currentLoanSize >= 50000 && currentLoanSize < 80000){
+            }else if(currentLoanSize >= 90000 && currentLoanSize < 120000){
                 probability = 77;
                 probabilityTable.text("вероятность " + probability).append('%');;
                 probabilityTable2.html("<span>"+probability +"%</span>");
-            }else if(currentLoanSize >= 80000){
+            }else if(currentLoanSize >= 120000){
                 probability = 65;
                 probabilityTable.text("вероятность " + probability).append('%');
                 probabilityTable2.html("<span>"+probability +"%</span>");
             }
-            else if(currentLoanSize <= 25000){
+            else if(currentLoanSize <= 45000){
                 probability = 95;
                 probabilityTable.text("вероятность " + probability).append('%');
                 probabilityTable2.html("<span>"+probability +"%</span>");
             }
         },
         setDynamicTimePeriod = function () {
-            if(currentLoanSize < 20000){
-                time = 'от 100 дня';
+            if(currentLoanSize < 60000 && currentLoanSize > 45000){
+                time = 'от 100 дней';
                 timeTable.html("<span>"+time+"</span>");
-            }if(currentLoanSize < 8000){
+            }if(currentLoanSize < 45000){
                 time = 'от 61 дня';
                 timeTable.html("<span>"+time+"</span>");
-            }if(currentLoanSize >= 20000 && currentLoanSize < 30000){
-                time = 'от 130 дня';
+            }if(currentLoanSize >= 60000 && currentLoanSize < 90000){
+                time = 'от 130 дней';
                 timeTable.html("<span>"+time+"</span>");
-            }if(currentLoanSize > 30000 && currentLoanSize < 50000){
-                time = 'от 200 дня';
+            }if(currentLoanSize > 90000 && currentLoanSize < 120000){
+                time = 'от 200 дней';
                 timeTable.html("<span>"+time+"</span>");
-            }if(currentLoanSize > 50000){
-                time = 'от 250 дня';
+            }if(currentLoanSize > 120000){
+                time = 'от 250 дней';
                 timeTable.html("<span>"+time+"</span>");
             }
         };

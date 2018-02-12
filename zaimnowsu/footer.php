@@ -34,21 +34,12 @@
             </div>
             <div class="col-lg-4">
                 <ul class="ex-foot-menu">
-                    <li><a href="/oferta">Публичная оферта</a></li>
-                    <li><a href="/soglasie">Согласие на обработку данных</a></li>
+                    <li><a href="/oferta">Политика конфиденциальности</a></li>
+                    <!-- <li><a href="/soglasie">Согласие на обработку данных</a></li> -->
                     <li><a href="/rules">Правила предоставления займов</a></li>
                 </ul>
             </div>
         </div>
-        <p> Сервис по подбору выгодных онлайн займов и кредитов находящийся по адресу: Россия, Ленинградская обл. г.
-            Санкт-Петербург, ул. Осипенко, 12, оф 201 support@zaimnow.su<span class="hidden-xs hidden-sm"> 8 (960) 950 93 53</span> |
-            <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. |
-            Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. | Пример расчета общей
-            стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период
-            составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём
-            до 10 000 рублей выдается по ставке 0% в случае своевременного погашения | ООО «Альянс» | ОГРН 5177746353054
-            | ИНН 9705113909 | КПП 770501001</span>
-        </p>
     </div>
 </footer>
 
@@ -556,73 +547,7 @@
         }
     });
     </script>
-<?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
-{  
-    echo '<script> 
-     
-    function traffic(site, page)
-    {
-        $.ajax({
-            type: \'POST\',
-            url: \'/traffic/\',
-            data: \'site=\'+site+\'&page=\'+page,
-                success: function(data){ 
-                }
-        });
-    }
-    var offers = '.json_encode($data).'
-    var by_reg = null;
-    $(document).ready(function () {
-        $(".offer-type").change(function () {
-            update_offers();
-        });
-
-        function update_offers() {
-            var str = ".results tbody tr";
-            //var curr = clone(by_reg.length? by_reg : offers);
-            var ot_card = $(".offer-type[data-id=\'card\']").prop("checked");
-            var ot_qiwi = $(".offer-type[data-id=\'qiwi\']").prop("checked");
-            var ot_yandex = $(".offer-type[data-id=\'yandex\']").prop("checked");
-            var ot_contact = $(".offer-type[data-id=\'contact\']").prop("checked");
-            // Прячем всё
-            $(str).hide();
-            // Пробегаемся по списку офферов
-            ((by_reg !== null) ? by_reg : offers).forEach(function (offer, i) {
-                var $tr = $(str + "[data-id=\'" + offer.id + "\']");
-                if ($tr.data("amount") >= amount) {
-                    if (ot_card && !!$tr.data(\'card\') == ot_card) $tr.show();
-                    else if (ot_qiwi && !!$tr.data(\'qiwi\') == ot_qiwi) $tr.show();
-                    else if (ot_yandex && !!$tr.data(\'yandex\') == ot_yandex) $tr.show();
-                    else if (ot_contact && !!$tr.data(\'contact\') == ot_contact) $tr.show();
-                }
-            });
-        }
-        if (getcookie("i")) {
-            var i = getcookie("i");
-            $("#i").text(i);
-        } 
-    });
-
-    function clone(o) {
-        if (!o || "object" !== typeof o) return o;
-
-        var c = "function" === typeof o.pop ? [] : {};
-        var p, v;
-        for (p in o) {
-            if (o.hasOwnProperty(p)) {
-                v = o[p];
-                if (v && "object" === typeof v) {
-                    c[p] = clone(v);
-                } else {
-                    c[p] = v;
-                }
-            }
-        }
-        return c;
-    }
-</script>';
-} 
-
+<?php } 
 if ($this->uri->segment(1) == 'form') 
 {
     echo "

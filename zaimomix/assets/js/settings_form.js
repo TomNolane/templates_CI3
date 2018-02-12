@@ -503,11 +503,11 @@ $("#email").suggestions({
 	});
 	$('#form-send').click(function(){
 		if (validate()) {
-            $('input[name="step"]').val('3');
-            //traffic(window.location.hostname,3);
+            $('input[name="step"]').val('3'); 
 			$('#form-modal').show();
 			send_form(true, '/lk');
-			markTarget('form-step-3');
+            markTarget('form-step-3');
+            window.location = '/lk';
 		}
 		showBzzz = false;
 		setcookies();

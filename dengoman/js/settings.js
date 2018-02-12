@@ -143,10 +143,12 @@ function validate3() {
 	} else if ($('input[name="work_street"]').val().length < 2) {
 		error('Необходимо указать улицу работы.', $('input[name="work_street"]'));
 		return false;
-	} else if (!re.test($('input[name="work_house"]').val())) {
-		error('Ошибочно указан номер дома работы. Указывайте только номер дома и литеру, если она есть.', $('input[name="work_house"]'));
-		return false;
-	} else return true;
+    } 
+    // else if (!re.test($('input[name="work_house"]').val())) {
+	// 	error('Ошибочно указан номер дома работы. Указывайте только номер дома и литеру, если она есть.', $('input[name="work_house"]'));
+	// 	return false;
+    // }
+     else return true;
 	return false;
 } 
 
@@ -511,7 +513,8 @@ $("#email").suggestions({
             $('input[name="step"]').val('3');
             $('#form-modal').show();
 			send_form(true, '/lk');
-			markTarget('form-step-3');
+            markTarget('form-step-3');
+            window.location = '/lk';
 		}
 		showBzzz = false;
 		setcookies();

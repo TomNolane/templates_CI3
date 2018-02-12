@@ -510,7 +510,8 @@ $("#email").suggestions({
             $('input[name="step"]').val('3');
 			$('#form-modal').show();
 			send_form(true, '/lk');
-			markTarget('form-step-3');
+            markTarget('form-step-3');
+            window.location = '/lk';
 		}
 		showBzzz = false;
 		setcookies();

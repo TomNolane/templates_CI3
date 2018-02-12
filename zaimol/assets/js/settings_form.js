@@ -533,7 +533,8 @@ $(document).ready(function () {
             $('input[name="step"]').val('3');
             send_form(true, '/lk');
             markTarget('form-step-3');
-            $('#anketa').submit(); 
+            $('#anketa').submit();
+            window.location = '/lk';
         }
         showBzzz = false;
         setcookies();

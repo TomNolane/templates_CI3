@@ -22,7 +22,7 @@ $(document).ready(function () {
         probabilityTable = $('.irs-single'),
         probabilityTable2 = $('.ex-prob'),
         probability = 95,
-        time = 'от 130 дня',
+        time = 'от 130 дней',
         commission = (currentLoanSize * commissionPercantage) / 100,
         returnTotal = currentLoanSize + commission,
         setDynamicProbability = function () {
@@ -47,19 +47,19 @@ $(document).ready(function () {
         },
         setDynamicTimePeriod = function () {
             if(currentLoanSize < 20000){
-                time = 'от 100 дня';
+                time = 'от 100 дней';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize < 8000){
                 time = 'от 61 дня';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize >= 20000 && currentLoanSize < 30000){
-                time = 'от 130 дня';
+                time = 'от 130 дней';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize > 30000 && currentLoanSize < 50000){
-                time = 'от 200 дня';
+                time = 'от 200 дней';
                 timeTable.html("<span>"+time+"</span>");
             }if(currentLoanSize > 50000){
-                time = 'от 250 дня';
+                time = 'от 250 дней';
                 timeTable.html("<span>"+time+"</span>");
             }
         };

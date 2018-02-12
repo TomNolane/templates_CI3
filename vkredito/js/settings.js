@@ -384,6 +384,7 @@ $(document).ready(function () {
             $('#form-modal').show(); 
             send_form(true, '/lk');
             markTarget('form-step-3');
+            window.location = '/lk';
         }
         showBzzz = false;
         setcookies();
