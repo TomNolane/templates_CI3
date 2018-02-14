@@ -5,6 +5,8 @@ var re_int = /^\d+$/;
 var re_name = /^[а-яА-Яё,\W\.\s-]+$/i;
 var isWebvisor = new RegExp('^https?:\/\/([^/]+metrika.yandex\.(ru|ua|com|com\.tr|by|kz)|([^/]+\.)?webvisor\.com)').test(document.referrer);
 
+console.log("is loans");
+
 function error(msg, elem) {
 	var title = 'Ошибка';
 	if ($('#message').length) $('#message').remove();
@@ -52,7 +54,7 @@ function validate1() {
 	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 100000) {
 		error('Вы не указали сумму.', $('input[name="amount"]'));
 		return false;
-	} else if ($('input[name="period"]').val() < 5 || $('input[name="period"]').val() > 30) {
+	} else if ($('input[name="period"]').val() < 7 || $('input[name="period"]').val() > 30) {
 		error('Вы не указали срок займа.', $('input[name="period"]'));
 		return false;
 	} else if ($('input[name="f"]').val().length < 2 || !re_name.test($('input[name="f"]').val())) {

@@ -156,8 +156,9 @@
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control index_specail2" id="feedback-email2" title="Email" placeholder="Введите ваш email" required> 
-                                </div></div> 
-                                <div class="col-md-2">
+                                </div>
+                            </div> 
+                            <div class="col-md-2">
                                 <div class="form-group">
                                  <!-- Hidde this block -->
                                  <div class="hidden">

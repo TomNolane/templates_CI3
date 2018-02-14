@@ -10,6 +10,15 @@ function Loading(flag) {
 
 $('#feedback-send').click(function () {
     Loading();
+
+    if(!re_email.test($('#feedback-email').val()))
+    {
+        Loading(0);
+        alert('Пожалуйста, заполните поле "ваш емаил" корректно.');
+        $('#feedback-send').prop('disabled', false);
+        $('#feedback-send').html('Отправить');
+        return;
+    } 
     
     var data;
     if(window.location.pathname == '/form')
@@ -142,6 +151,14 @@ $('#feedback-send2').click(function () {
 
     if ((typeof data2.phone != 'undefined' && data2.phone != '') && (typeof data2.email != 'undefined' && data2
             .email != '') && (typeof data2.comment != 'undefined' && data2.comment != '')) {
+
+        if(!re_email.test($('#feedback-email2').val()))
+        {
+            Loading2(0);
+            alert('Пожалуйста, заполните поле "ваш емаил" корректно.');
+            return;
+        } 
+
         $.ajax({
             url: '/feedback/',
             type: 'POST',

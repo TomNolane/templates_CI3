@@ -67,9 +67,11 @@ if(isset($_SERVER['HTTP_REFERER'])){
     <div class="container">
         <h1 class="text-center" id="form-steps">До одобрения кредита вас отделяют всего 3 шага</h1>
         <ul class="ex-tab-steps ">
-            <li class="ex-step-counter ex-step-active">шаг 1 Заполните личные данные</li>
-            <li class="ex-step-counter ex-step-2">шаг 2 Заполните паспортные данные</li>
-            <li class="ex-step-counter ex-step-3">шаг 3 Заполните данные о работе</li>
+        <li></li>
+            <li class="ex-step-counter ex-step-active">Заполните личные данные</li>
+            <li></li>
+            <!-- <li class="ex-step-counter ex-step-2">шаг 2 Заполните паспортные данные</li>
+            <li class="ex-step-counter ex-step-3">шаг 3 Заполните данные о работе</li> -->
         </ul>
         <div class="row justify-content-center">
             <div class="col-xl-6 ">

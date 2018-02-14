@@ -13892,7 +13892,7 @@ main.ex-form .ex-tab-steps li {
   -webkit-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
-  border: 1px solid rgba(155, 155, 155, 0.18);
+  /* border: 1px solid rgba(155, 155, 155, 0.18); */
   background-color: #ffffff;
   color: #9b9b9b;
   font-size: 14px;
@@ -14180,7 +14180,7 @@ main.ex-form .tab-content .ex-main-form label {
   color: #333333;
   font-size: 13px;
   font-weight: 700;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 /* line 273, ../sass/desktop/_form.scss */
 main.ex-form .tab-content .ex-main-form .ex-wrapper {

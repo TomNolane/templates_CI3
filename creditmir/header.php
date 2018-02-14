@@ -17,9 +17,6 @@ if(!isset($description))
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="creditmir.ru" /> 
-	
-	 
-	
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="creditmir - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
 	<meta property="og:image" content="https://creditmir.ru/templates/creditmir/assets/img/pic.png"/>
@@ -133,14 +130,7 @@ if(!isset($description))
      <!--[if lte IE 9]>
      <script src="/modules/html5shiv/html5shiv.js"></script>
      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-     <![endif]-->
-
-	<?php
-		if ($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'confirm') 
-		{
-			echo '';
-		} 
-	?>
+     <![endif]--> 
 
 	<?php
 		require 'sendpuls.php';

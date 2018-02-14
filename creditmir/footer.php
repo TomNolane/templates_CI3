@@ -80,10 +80,20 @@
     echo '</script>'; 
     echo '<script>';
     require 'templates/creditmir/assets/js/owl.carousel.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/creditmir/assets/js/settings_form.js';
-    echo '</script>';
+    echo '</script>'; 
+    if((isset($_GET['is_credit']) || isset($_POST['is_credit'])) && $this->uri->segment(1) == 'form') {
+        echo '<script>';
+        if(isset($_GET['is_credit']) && $_GET['is_credit'] == "1") require 'templates/creditmir/assets/js/settings_form2.js';
+        elseif(isset($_POST['is_credit']) && $_POST['is_credit'] == "1") require 'templates/creditmir/assets/js/settings_form2.js';
+        else require 'templates/creditmir/assets/js/settings_form.js';
+        echo '</script>';
+    }
+    else
+    {
+        echo '<script>';
+        require 'templates/creditmir/assets/js/settings_form.js';
+        echo '</script>';
+    } 
     require 'templates/common/detect.min.php';
     ?>
 

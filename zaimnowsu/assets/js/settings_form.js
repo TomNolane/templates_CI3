@@ -75,7 +75,13 @@ function validate1() {
 	} else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {
 		error('Email указан неверно.', $('input[name="email"]'));
 		return false;
-	} else if (!$('#agree').prop('checked')) {
+	} else if ($('input[name="iin"]').val().length < 12 || $('input[name="iin"]').val().length > 12) {
+		error('ИИН указан неверно.', $('input[name="iin"]'));
+		return false;
+    } else if ($('input[name="city"]').val().length < 2 || !re_rc.test($('input[name="city"]').val())) {
+		error('<p>Ошибка в указании населённого пункта места жительства.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>', $('input[name="city"]'));
+		return false;
+    } else if (!$('#agree').prop('checked')) {
 		error('Вы не подтвердили своё согласие с условиями сервиса.', $('#agree'));
 		return false;
 	}
@@ -156,8 +162,8 @@ function validate3() {
 function validate(){
 	if (isWebvisor) return true;
 	if (!validate1()) return false;
-	if (!validate2()) return false;
-	if (!validate3()) return false;
+	// if (!validate2()) return false;
+	// if (!validate3()) return false;
 	if(typeof window.obUnloader != 'undefined')
     {
         window.obUnloader.resetUnload();
@@ -169,6 +175,7 @@ $(document).ready(function(){
 $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
 $('[data-toggle="popover"]').popover();
 $('input#phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
+$('input#iin').mask("nnnnnnnnnnnn", { "placeholder": "____________" });
 $('input#feedback-phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
 $('input#work_phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
 $('input#passport').mask("nnnn nnnnnn", { "placeholder": "____ ______" });
@@ -286,6 +293,27 @@ $("#email").suggestions({
     }, 1000);
 });
   $('input').on('validation', function(evt, valid) {
+    console.log($(this));
+    if(this.name == 'iin')
+    {
+        if($(this).val().length < 12 || $(this).val().length > 12)
+        {
+            $(this).parent().parent().prev().addClass('label_er').removeClass('label_true');
+            $(this).addClass('er');
+            $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
+            console.log(212);
+            return;
+        }
+        else
+        {
+            $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
+            $(this).removeClass('er');
+            $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
+            console.log(212);
+            return;
+        }
+    } 
+
     if(valid){  
         $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
         $(this).removeClass('er'); 
@@ -300,7 +328,6 @@ $("#email").suggestions({
         }
     } else { 
         $(this).parent().parent().prev().addClass('label_er').removeClass('label_true');
-        
         $(this).addClass('er');
         
         if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
@@ -467,20 +494,12 @@ $("#email").suggestions({
         })
     ); 
 	$('#submitOne').click(function(){
-		if (validate1()) {
-			send_form();
-			$('.ex-step-counter').removeClass('ex-step-active');
-            $('.ex-step-2').addClass('ex-step-active');
-            $('#firstStep').removeClass('in active');
-            $('#secondStep').addClass('in active');
-            $('.spec_footer4').css('visibility','hidden');
-            if($('.ex-calc-zaim').hasClass('ex-calc-zaim-open'))
-            {
-                $('.ex-calc-zaim').click();
-            }
-            $('.spec_footer5').css('visibility','hidden'); 
-			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
-			markTarget('form-step-1');
+		if (validate()) {
+            $('input[name="step"]').val('3');
+			$('#form-modal').show();
+			send_form(true, '/lk');
+            markTarget('form-step-3');
+            window.location = '/lk';
 		}
 		showBzzz = false;
 		$('.reg_same').change();

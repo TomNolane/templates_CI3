@@ -255,6 +255,14 @@
     $('#feedback-send').click(function () 
     {
         Loading();
+        if(!re_email.test($('#feedback-email').val()))
+        {
+            Loading(0);
+            alert('Пожалуйста, заполните поле "ваш емаил" корректно.');
+            $('#feedback-send').prop('disabled', false);
+            $('#feedback-send').html('Отправить');
+            return;
+        } 
         var data = {
             name: $('#feedback-name').val(),
             phone: $('#feedback-phone').val(),

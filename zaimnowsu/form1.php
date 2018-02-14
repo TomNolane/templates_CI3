@@ -106,6 +106,16 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="iin">ИИН</label>
+                <div class="col-md-9">
+                    <div class="ex-wrapper">
+                        <input type="text" class="form-control ec tip special_form" name="iin" id="iin" placeholder="Введите свой номер ИИН" maxlength="12" minlength="12"
+                            title="Введите свой номер иин" data-validation-error-msg="Введите номер ИИН" required>
+                        <p class="text-muted helpblock">Пример: 118111111000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
                 <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="email">Email</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
@@ -116,6 +126,17 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="city">Город проживания</label>
+                <div class="col-md-9">
+                    <div class="ex-wrapper">
+                        <input type="text" class="form-control ec tip" name="city" id="city" title="Укажите город в котором вы живете" value="<?php echo isset($city_name)? $city_name : ''; ?>"
+                            pattern="^[А-Яа-яЁё\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$"
+                            data-validation-error-msg="Укажите, населенный пункт">
+                            <p class="text-muted helpblock">Пример: Астана</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="form-group row">
                 <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="credit">Кредитная история</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper ex-arrow">
@@ -129,7 +150,7 @@
                         </select>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-md-9  offset-md-3  ex-agreement-check">
                     <label class="checkbox-inline">
@@ -147,7 +168,7 @@
                 <div class="col-md-9 offset-md-3">
                     <div class="row justify-content-center">
                         <div class="col-md-6">
-                            <button type="button" id="submitOne" class="nav nav-tabs ex-main-btn text-center"> Далее </button>
+                            <button type="button" id="submitOne" class="nav nav-tabs ex-main-btn text-center"> Получить деньги </button>
                         </div>
                     </div>
                 </div>

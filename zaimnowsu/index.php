@@ -228,7 +228,7 @@
                                     <img src="/templates/zaimnow/assets/img/icons/card.png" alt="card.png">
                                 </figure>
                                 <p class="ex-count-zaim">
-                                    5 000
+                                    30 000
                                     <i></i>
                                 </p>
                                 <table>
@@ -238,15 +238,11 @@
                                     </tr>
                                     <tr>
                                         <td>Cрок займа</td>
-                                        <td>2.1 %</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cрок займа</td>
                                         <td>от 61 дня</td>
                                     </tr>
                                 </table>
                                 <div >
-                                    <a href="/form?amount=5000"><button type="button" class="ex-main-btn">Получить деньги</button></a>
+                                    <a href="/form?amount=30000"><button type="button" class="ex-main-btn">Получить деньги</button></a>
                                 </div>
                             </div>
                         </div>
@@ -256,7 +252,7 @@
                                     <img src="/templates/zaimnow/assets/img/icons/rocket.png" alt="rocket.png">
                                 </figure>
                                 <p class="ex-count-zaim">
-                                    30 000
+                                    100 000
                                     <i></i>
                                 </p>
                                 <table>
@@ -266,15 +262,11 @@
                                     </tr>
                                     <tr>
                                         <td>Cрок займа</td>
-                                        <td>1.6 %</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cрок займа</td>
                                         <td>от 130 дней</td>
                                     </tr>
                                 </table>
                                 <div>
-                                <a href="/form?amount=30000"><button type="button" class="ex-main-btn">Получить деньги</button></a>
+                                <a href="/form?amount=100000"><button type="button" class="ex-main-btn">Получить деньги</button></a>
                                 </div>
                             </div>
                         </div>

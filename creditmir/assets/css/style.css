@@ -13916,7 +13916,7 @@ main.ex-offers .ex-off-block p .fa {
 }
 /* line 19, ../sass/desktop/offers.scss */
 main.ex-offers .ex-off-block figure {
-  padding: 29px;
+  padding: 24px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   background-color: #f6f6f6;
   margin-bottom: 18px;
@@ -13967,7 +13967,7 @@ main.ex-offers .ex-off-block figure table tr td:first-of-type {
 main.ex-offers .ex-off-block figure table tr td:last-of-type {
   text-align: right;
   color: #333333;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 14px;
 }

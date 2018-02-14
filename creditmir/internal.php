@@ -92,6 +92,7 @@ switch($this->uri->segment(1))
 	elseif ($this->uri->segment(1) == 'unsecured-loan') require 'internal-unsecured-loan.php';
 	elseif ($this->uri->segment(1) == 'credit-line') require 'internal-credit-line.php';
 	elseif ($this->uri->segment(1) == 'allarticles') require 'internal-allarticles.php';
+	elseif ($this->uri->segment(1) == 'lk3') require 'internal-lk3.php';
 	elseif($this->uri->segment(1) == '404') require 'internal-404.php';
 }
 ?>
