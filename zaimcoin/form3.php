@@ -74,7 +74,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="work_region">Регион</label>
+            <label class="control-label col-md-2" for="work_region">Регион работы</label>
             <div class="col-md-8">
                 <select class="form-control ec tip" name="work_region" id="work_region" autocomplete="off" required>
                     <option value="">!!! Выберите регион места работы !!!</option>
@@ -89,7 +89,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="work_city">Населённый пункт</label>
+            <label class="control-label col-md-2" for="work_city">Место работы (город)</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="work_city" placeholder="Город" title="Укажите населенный пункт" id="work_city"
@@ -102,7 +102,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="work_street">Улица</label>
+            <label class="control-label col-md-2" for="work_street">Место работы (улица)</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="work_street" placeholder="Улица" title="Укажите улицу" id="work_street"
@@ -114,7 +114,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="work_house">Номер дома</label>
+            <label class="control-label col-md-2" for="work_house" >№ дома работы</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="work_house" placeholder="Номер дома" title="Укажите номер дома" id="work_house"
@@ -126,7 +126,7 @@
             </div>
         </div>
         <div class="form-group has-feedback">
-            <label class="control-label col-md-2" for="work_office">Офис</label>
+            <label class="control-label col-md-2" for="work_office">№ кабинета</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="work_office" placeholder="Номер офиса" title="Укажите номер офиса" id="work_office"

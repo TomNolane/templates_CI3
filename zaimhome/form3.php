@@ -61,7 +61,7 @@
     </div>
 </div>
 <div class="form-group has-feedback">
-    <label class="control-label col-md-4 label-required" for="work_region">Регион</label>
+    <label class="control-label col-md-4 label-required" for="work_region">Регион работы</label>
     <div class="col-md-6">
         <select class="form-control ec tip" name="work_region" id="work_region" autocomplete="off" required>
         <option value="">-- Выберите регион --</option>
@@ -76,7 +76,7 @@
     </div>
 </div>
 <div class="form-group has-feedback">
-    <label class="control-label col-md-4 label-required" for="work_city">Населённый пункт</label>
+    <label class="control-label col-md-4 label-required" for="work_city">Место работы (город)</label>
     <div class="col-md-6">
         <div class="ex-wrapper">
             <input type="text" class="form-control ec tip" name="work_city" placeholder="Населённый пункт" title="Укажите населенный пункт" id="work_city" value="<?php echo isset($city_name)? $city_name : ''; ?>" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт" required>
@@ -86,7 +86,7 @@
     </div>
 </div> 
 <div class="form-group has-feedback">
-<label class="control-label col-md-4 label-required" for="work_street">Улица</label>
+<label class="control-label col-md-4 label-required" for="work_street">Место работы (улица)</label>
 <div class="col-md-6">
     <div class="ex-wrapper">
         <input type="text" class="form-control ec tip" name="work_street" placeholder="Улица" title="Укажите улицу" id="work_street" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Укажите, улицу" required>
@@ -96,7 +96,7 @@
 </div>
 </div> 
 <div class="form-group has-feedback">
-    <label class="control-label col-md-4 label-required" for="work_house">Номер дома</label>
+    <label class="control-label col-md-4 label-required" for="work_house" >№ дома работы</label>
     <div class="col-md-6">
         <div class="ex-wrapper">
             <input type="text" class="form-control ec tip" name="work_house" placeholder="Номер дома" title="Укажите номер дома" id="work_house"  data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер дома" required>
@@ -116,7 +116,7 @@
     </div>
 </div>
 <div class="form-group has-feedback">
-    <label class="control-label col-md-4" for="work_office">Офис</label>
+    <label class="control-label col-md-4" for="work_office">№ кабинета</label>
     <div class="col-md-6">
         <div class="ex-wrapper">
             <input type="text" class="form-control ec tip" name="work_office" placeholder="Офис" title="Укажите номер офиса" id="work_office" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер офиса" data-validation-optional="true">

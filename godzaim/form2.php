@@ -68,7 +68,7 @@
         </div>
 </div>
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Кем выдан</label>
+	<label class="col-sm-4 control-label label-required hidden-xs">Кем выдан паспорт</label>
 	<div class="col-sm-8 col-xs-12">
 		<input type="text" class="form-control ec tip" name="passport_who" id="passport_who" placeholder="Кем выдан паспорт" title="Укажите кем выдан паспорт" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\№\(\)\s\d]+$" data-validation-error-msg="Укажите, кем выдан паспорт" required>
                 <span id="passport_whostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -89,7 +89,7 @@
 <div class="clearfix">&nbsp;</div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Регион</label>
+	<label class="col-sm-4 control-label label-required hidden-xs">Регион проживания</label>
 	<div class="col-sm-8 col-xs-12">
 	<select class="form-control ec tip" id="region" name="region" autocomplete="off" required>
 		<option value="">-- Выберите регион --</option>
@@ -105,7 +105,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Населённый пункт</label>
+	<label class="col-sm-4 control-label label-required hidden-xs">Город проживания</label>
 	<div class="col-sm-8 col-xs-12">
 		<input type="text" class="form-control ec tip" name="city" id="city" placeholder="Населённый пункт" title="Укажите город в котором вы живете" value="<?php echo isset($city_name)? $city_name : ''; ?>" pattern="^[А-Яа-яЁё\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт">
                 <span id="citystatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>

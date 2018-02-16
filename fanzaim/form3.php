@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="form-group has-feedback">
-                <label class="control-label col-md-3" for="work_region">Регион</label>
+                <label class="control-label col-md-3" for="work_region">Регион работы</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper ex-arrow">
                     <select class="form-control ec tip special_form99" name="work_region" id="work_region" autocomplete="off" required>
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <div class="form-group has-feedback">
-                <label class="control-label col-md-3" for="street">Улица</label>
+                <label class="control-label col-md-3" for="street">Улица проживания</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="work_street" placeholder="Улица" title="Укажите улицу" id="work_street"
@@ -109,7 +109,7 @@
                 </div>
             </div>
             <div class="form-group has-feedback">
-                <label class="control-label col-md-3" for="work_house">Номер дома</label>
+                <label class="control-label col-md-3" for="work_house" >№ дома работы</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="work_house" placeholder="Номер дома" title="Укажите номер дома"
@@ -119,7 +119,7 @@
                 </div>
             </div> 
             <div class="form-group has-feedback">
-                <label class="control-label col-md-3" for="work_office">Офис</label>
+                <label class="control-label col-md-3" for="work_office">№ кабинета</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="work_office" placeholder="Номер офиса" title="Уукажите номер офиса"

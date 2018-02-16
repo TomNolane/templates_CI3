@@ -87,7 +87,7 @@
                     </div>
                 </div>
                 <div class="form-group has-feedback">
-                    <label class="control-label col-md-3" for="passport_who">Кем выдан</label>
+                    <label class="control-label col-md-3" for="passport_who">Кем выдан паспорт</label>
                     <div class="col-md-9">
                         <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip" name="passport_who" id="passport_who" placeholder="Кем выдан паспорт" title="Укажите кем выдан паспорт"
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div class="form-group has-feedback">
-                    <label class="control-label col-md-3" for="region">Регион</label>
+                    <label class="control-label col-md-3" for="region">Регион проживания</label>
                     <div class="col-md-9">
                         <div class="ex-wrapper ex-arrow">
                             <select class="form-control ec tip special_form99" id="region" name="region" autocomplete="off" required>
@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <div class="form-group has-feedback">
-                    <label class="control-label col-md-3" for="street">Улица</label>
+                    <label class="control-label col-md-3" for="street">Улица проживания</label>
                     <div class="col-md-9">
                         <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip" name="street" id="street" placeholder="Улица" title="Укажите название улицы"

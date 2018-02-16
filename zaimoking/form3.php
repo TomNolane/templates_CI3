@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="form-group has-feedback">
-                <label class="control-label col-md-4" for="work_region" id="work_region_label">Регион</label>
+                <label class="control-label col-md-4" for="work_region" id="work_region_label">Регион работы</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper ex-arrow">
                         <select class="form-control ec tip special_form99" name="work_region" id="work_region" autocomplete="off" required>
@@ -112,7 +112,7 @@
                 </div>
             </div>
             <div class="form-group has-feedback">
-                <label class="control-label col-md-4" for="work_house" id="work_house_label">Номер дома</label>
+                <label class="control-label col-md-4" for="work_house"  id="work_house_label">Номер дома</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip" name="work_house" placeholder="Номер дома" title="Укажите номер дома" id="work_house"

@@ -87,7 +87,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs" for="work_city">Населённый пункт *</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="work_city">Место работы (город) *</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow">
             <input type="text" class="form-control ec" name="work_city" id="work_city" pattern="Город" value="<?php echo isset($city_name)? $city_name : ''; ?>" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт" required>
@@ -98,7 +98,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs" for="work_street">Улица *</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="work_street">Место работы (улица) *</label>
 	<div class="col-sm-8 col-xs-12">
         <div class="shadow">
             <input type="text" class="form-control ec" name="work_street" id="work_street" placeholder="Улица" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Укажите, улицу" required>
@@ -109,7 +109,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs" for="work_house">Номер дома *</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="work_house" >№ дома работы *</label>
 	<div class="col-sm-8">
         <div class="shadow">
             <input type="text" class="form-control ec" name="work_house" id="work_house" placeholder="Номер дома" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер дома" required>
@@ -119,7 +119,7 @@
     </div>
 </div>
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label hidden-xs" for="work_office">Офис</label>
+	<label class="col-sm-4 control-label hidden-xs" for="work_office">№ кабинета</label>
 	<div class="col-sm-8">
         <div class="shadow">
             <input type="text" class="form-control ec" name="work_office" placeholder="Офис" id="work_office" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер офиса" data-validation-optional="true">

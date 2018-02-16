@@ -58,36 +58,36 @@ function plural_type($n) {
                         "img" => "moneyman",
                         "text" => "Займы онлайн в Казахстане от Moneyman",
                         "link" => "https://pxl.leads.su/click/3fede75a05555fc1afbedaf279d75e21?aff_sub1=Zaimnow.su",
-                        "amount" => "65000",
+                        "amount" => "200000",
                         "period" => "31",
-                        "percent" => "1.20"
+                        "percent" => "0.50"
                       ),
                       array(
                         "title" => "Zing",
                         "img" => "zing",
                         "text" => "Займы онлайн в Казахстане от Zing",
                         "link" => "https://pxl.leads.su/click/a604b113bfa4287bd880c340a6bb9825?aff_sub1=Zaimnow.su",
-                        "amount" => "50000",
+                        "amount" => "200000",
                         "period" => "30",
-                        "percent" => "2.00"
+                        "percent" => "0.50"
                       ),
                       array(
                         "title" => "Zaimer",
                         "img" => "zaymer",
                         "text" => "Займы онлайн в Казахстане от Займер",
                         "link" => "https://pxl.leads.su/click/64d72b33de41d8fbc5d8007e108e3914?aff_sub1=Zaimnow.su",
-                        "amount" => "50000",
+                        "amount" => "200000",
                         "period" => "21",
-                        "percent" => "2.00"
+                        "percent" => "0.90"
                       ),
                       array(
                         "title" => "ccloan",
                         "img" => "ccloan",
                         "text" => "Займы онлайн в Казахстане от ccloan",
                         "link" => "https://pxl.leads.su/click/a35dfa2f3d49fe02d7ffcb7ed3f1b0f1?aff_sub1=Zaimnow.su",
-                        "amount" => "100000",
+                        "amount" => "200000",
                         "period" => "30",
-                        "percent" => "2.00"
+                        "percent" => "1.00"
                       )
                 );
                     foreach($arr as $item)

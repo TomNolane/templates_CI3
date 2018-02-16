@@ -130,7 +130,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 col-xs-12 control-label label-required hidden-xs" for="street">Улица *</label>
+	<label class="col-sm-4 col-xs-12 control-label label-required hidden-xs" for="street">Улица проживания *</label>
 	<div class="col-sm-8 col-xs-12"><div>
 		<input type="text" class="form-control ec" name="street" id="street" placeholder="Улица" title="Улица" data-sanitize="capitalize"
 		    data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Укажите, улицу"

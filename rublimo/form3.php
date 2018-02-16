@@ -73,7 +73,7 @@
 <div class="clearfix">&nbsp;</div>
 
 <div class="form-group has-feedback">
-    <label class="col-sm-4 control-label label-required hidden-xs" for="work_region">Регион</label>
+    <label class="col-sm-4 control-label label-required hidden-xs" for="work_region">Регион работы</label>
     <div class="col-sm-8 col-xs-12">
         <div class="shadow">
         <select size="1" class="form-control ec tip" name="work_region" id="work_region" autocomplete="off" required>

@@ -72,7 +72,7 @@
         </div></div>
 </div>
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs" for="passport_who">Кем выдан</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="passport_who">Кем выдан паспорт</label>
 	<div><div class="col-sm-8 col-xs-12">
 		<input type="text" class="form-control ec tip" name="passport_who" id="passport_who" placeholder="Кем выдан паспорт" title="Укажите кем выдан паспорт" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\№\(\)\s\d]+$" data-validation-error-msg="Укажите, кем выдан паспорт" required>
                 <span id="passport_whostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -94,7 +94,7 @@
 <div class="clearfix">&nbsp;</div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs" for="region">Регион</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="region">Регион проживания</label>
 	<div><div class="col-sm-8 col-xs-12">
 	<select class="form-control ec tip" id="region" name="region" autocomplete="off" required>
 		<option value="">-- Выберите регион --</option>
@@ -110,7 +110,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs" for="city">Населённый пункт</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="city">Город проживания</label>
 	<div><div class="col-sm-8 col-xs-12">
 		<input type="text" class="form-control ec tip" name="city" id="city" placeholder="Город" title="Укажите город в котором вы живете" value="<?php echo isset($city_name)? $city_name : ''; ?>" pattern="^[А-Яа-яЁё\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт">
                 <span id="citystatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -119,7 +119,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs" for="street">Улица</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="street">Улица проживания</label>
 	<div><div class="col-sm-8 col-xs-12">
 		<input type="text" class="form-control ec tip" name="street" id="street" placeholder="Улица" title="Укажите название улицы" data-sanitize="capitalize"  data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Укажите, улицу" required>
                 <span id="streetstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>

@@ -94,7 +94,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
-                        <label class="label-required" for="passport_who">Кем выдан</label>
+                        <label class="label-required" for="passport_who">Кем выдан паспорт</label>
                         <input type="text" class="form-control ec tip" name="passport_who" id="passport_who" placeholder="Кем выдан паспорт" title="Укажите кем выдан паспорт"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\№\(\)\s\d]+$"
                             data-validation-error-msg="Укажите, кем выдан паспорт" required>
@@ -116,7 +116,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group ex-arrow-on has-feedback">
-                        <label class="label-required" for="region">Регион</label>
+                        <label class="label-required" for="region">Регион проживания</label>
                         <select size="1" class="form-control ec tip" id="region" name="region" autocomplete="off" required>
                             <option value="">-- Выберите регион --</option>
                             <?php
@@ -131,7 +131,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
-                        <label class="label-required" for="city">Населенный пункт</label>
+                        <label class="label-required" for="city">Город проживания</label>
                         <input type="text" class="form-control ec tip" name="city" id="city" placeholder="Населённый пункт" title="Укажите город в котором вы живете"
                             value="<?php echo isset($city_name)? $city_name : ''; ?>" pattern="^[А-Яа-яЁё\s]+$" data-validation="custom"
                             data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт">
@@ -143,7 +143,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
-                        <label class="label-required" for="street">Улица</label>
+                        <label class="label-required" for="street">Улица проживания</label>
                         <input type="text" class="form-control ec tip" name="street" id="street" placeholder="Улица" title="Укажите название улицы"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                             data-validation-error-msg="Укажите улицу" required>

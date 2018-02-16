@@ -69,7 +69,7 @@ function validate1() {
 	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
 		error('Вы не указали пол.', $('input[name="gender"]'));
 		return false;
-	} else if ($('input[name="phone"]').val().length != 16) {
+	} else if ($('input[name="phone"]').val().length != 13) {
 		error('Номер телефона указан неверно.', $('input[name="phone"]'));
 		return false;
 	} else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {
@@ -174,7 +174,7 @@ function validate(){
 $(document).ready(function(){
 $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
 $('[data-toggle="popover"]').popover();
-$('input#phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
+$('input#phone').mask("7nn nnn nn nn", { "placeholder": "7__ ___ __ __" });
 $('input#iin').mask("nnnnnnnnnnnn", { "placeholder": "____________" });
 $('input#feedback-phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
 $('input#work_phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
@@ -292,28 +292,24 @@ $("#email").suggestions({
         scrollTop: $(this).offset().top - 100
     }, 1000);
 });
-  $('input').on('validation', function(evt, valid) {
-    console.log($(this));
+  $('input').on('validation', function(evt, valid) { 
     if(this.name == 'iin')
     {
         if($(this).val().length < 12 || $(this).val().length > 12)
         {
             $(this).parent().parent().prev().addClass('label_er').removeClass('label_true');
             $(this).addClass('er');
-            $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
-            console.log(212);
+            $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg); 
             return;
         }
         else
         {
             $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
             $(this).removeClass('er');
-            $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
-            console.log(212);
+            $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok');  
             return;
         }
-    } 
-
+    }  
     if(valid){  
         $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
         $(this).removeClass('er'); 
@@ -345,29 +341,18 @@ $("#email").suggestions({
         }
     } 
   });
-  $('#phone').blur(function(){
-    $('#phonestatus').html('');
-    $.ajax({
-        type: 'POST',
-        url: '/validate/phone/',
-        data: 'phone='+$('#phone').val(),
-        success: function(data)
-        {
-            validator = JSON.parse(data);
-            if (validator.status) { 
-                $('#spec_form2').removeClass('label_er').addClass('label_true'); 
-                $('#phonestatus').html('<img src="/templates/common/img/mobile/' + validator.operator + '.png" width="24px" />');
-                $('#phone').parent().removeClass('ex-error').addClass('ex-success');
-                if (validator.operator == 'undefined') {
-                    $('#phonestatus').html(''); 
-                }
-            } else { 
-                $('#phonestatus').html('');
-                $('#spec_form2').addClass('label_er').removeClass('label_true'); 
-                $('#phone').parent().removeClass('ex-success').addClass('ex-error');
-            }
-        }
-    });
+  $('#phone').blur(function()
+  { 
+    if ($('input[name="phone"]').val().length != 13) {
+        $('#phonestatus').html('');
+        $('#spec_form2').addClass('label_er').removeClass('label_true'); 
+        $('#phone').parent().removeClass('ex-success').addClass('ex-error');
+    }
+    else
+    {
+        $('#spec_form2').removeClass('label_er').addClass('label_true');
+        $('#phone').parent().removeClass('ex-error').addClass('ex-success');
+    } 
 });
   $('#passport_code').blur(function(){
     $.ajax({
@@ -496,6 +481,7 @@ $("#email").suggestions({
 	$('#submitOne').click(function(){
 		if (validate()) {
             $('input[name="step"]').val('3');
+            $('input[name="phone"]').val($('input[name="phone"]').val().split(" ").join(""));
 			$('#form-modal').show();
 			send_form(true, '/lk');
             markTarget('form-step-3');

@@ -57,7 +57,7 @@
 <div class="row">
 	<div class="col-sm-6">
 		<div class="form-group">
-			<label class="label-required">Кем выдан</label>
+			<label class="label-required">Кем выдан паспорт</label>
 			<input type="text" class="form-control" name="passport_who" placeholder="" title="Кем выдан" required>
 		</div>
 	</div>
@@ -130,7 +130,7 @@
 <input type="hidden" id="passportdate" name="passportdate">
 
 <div class="form-group">
-	<label class="label-required">Кем выдан</label>
+	<label class="label-required">Кем выдан паспорт</label>
 	<input type="text" class="form-control" name="passport_who" placeholder="" title="Кем выдан" required>
 </div>
 

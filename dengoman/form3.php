@@ -66,7 +66,7 @@
 <div class="form-group"><label class="col-sm-8 col-xs-12 col-sm-offset-4">Место работы</label></div>
 <div class="clearfix hidden-xs">&nbsp;</div>
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Регион</label>
+	<label class="col-sm-4 control-label label-required hidden-xs">Регион работы</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow"><select class="form-control ec tip" name="work_region" id="work_region" autocomplete="off" required>
 		<option value="">-- Выберите регион --</option>

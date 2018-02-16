@@ -6,31 +6,6 @@ if(!isset($my_title))
 }  
 require 'header.php'; 
 
-// IP
-$this->load->helper('ip');
-// GEO
-require_once FCPATH.'modules/ipgeobase/ipgeobase.php';
-$gb = new IPGeoBase();
-$geo = $gb->getRecord(IP::$ip);
-if ($geo)
-    {
-        if (isset($geo['region'])){
-            $region_name = $geo['region'];
-        }else{
-            $region_name = 'Владимир';
-        }
-        if (isset($geo['city'])){
-            $city_name = $geo['city'];
-        }else{
-            $city_name = 'Владимир';
-        }
-    }else{
-        $region_name = 'Владимир';
-        $city_name = 'Владимир';
-    }
-// Список регионов
-$this->load->model('geo/geo_model', 'geo');
-$regions = $this->geo->regions();
 if(isset($_SERVER['HTTP_REFERER'])){
     $referer = $_SERVER['HTTP_REFERER'];
     parse_str($_SERVER['HTTP_REFERER'], $output);
@@ -44,7 +19,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     break;
                 case 'mytarget':
                     $utm = '3';
-                    break;
+                    break; 
                 case 'google':
                     $utm = '4';
                     break;    
@@ -125,11 +100,9 @@ if(isset($_SERVER['HTTP_REFERER'])){
                 <div id="firstStep" class="tab-pane active">
                     <?php require 'form1.php';?>
                 </div>
-                <div id="secondStep" class="tab-pane">
-                    <?php require 'form2.php';?>
+                <div id="secondStep" class="tab-pane"> 
                 </div>
-                <div id="thirdStep" class="tab-pane">
-                    <?php require 'form3.php';?>
+                <div id="thirdStep" class="tab-pane"> 
                 </div>
             </div>
         </form>

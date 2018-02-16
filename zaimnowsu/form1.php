@@ -101,7 +101,7 @@
                         <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Введите свой номер телефона"
                             title="Введите свой номер телефона" data-validation-error-msg="Введите номер телефона" required>
                         <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                        <p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
+                        <p class="text-muted helpblock">Пример: 711 123 45 67</p>
                     </div>
                 </div>
             </div>
@@ -129,32 +129,17 @@
                 <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="city">Город проживания</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip" name="city" id="city" title="Укажите город в котором вы живете" value="<?php echo isset($city_name)? $city_name : ''; ?>"
-                            pattern="^[А-Яа-яЁё\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$"
+                        <input type="text" class="form-control ec tip" name="city" id="city" title="Укажите город в котором вы живете" placeholder="Город проживания"
+                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$"
                             data-validation-error-msg="Укажите, населенный пункт">
                             <p class="text-muted helpblock">Пример: Астана</p>
                     </div>
                 </div>
-            </div>
-            <!-- <div class="form-group row">
-                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="credit">Кредитная история</label>
-                <div class="col-md-9">
-                    <div class="ex-wrapper ex-arrow">
-                        <select class="form-control ec special_form99" name="delays_type" id="delays_type">
-                            <option selected value="never">Никогда не брал(а) кредитов</option>
-                            <option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
-                            <option value="credit_open_no_delay">Кредиты есть, просрочек нет</option>
-                            <option value="credit_closed_had_delay">Кредиты закрыты, просрочки были</option>
-                            <option value="had_delay">Просрочки были, сейчас нет</option>
-                            <option value="has_delay">Просрочки сейчас есть</option>
-                        </select>
-                    </div>
-                </div>
-            </div> -->
+            </div> 
             <div class="row">
                 <div class="col-md-9  offset-md-3  ex-agreement-check">
                     <label class="checkbox-inline">
-                        <span>Я согласен на обработку персональных данных и с публичной офертой</span>
+                        <span>Я ознакомился/ась и принимаю Правила предоставления займов и Политику конфиденциальности.</span>
                         <input type="checkbox" id="agree" value="1" checked>
                         <i></i>
                     </label>

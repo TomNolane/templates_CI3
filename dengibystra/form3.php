@@ -77,7 +77,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group ex-arrow-on has-feedback">
-                        <label class="label-required" for="work_region">Регион</label>
+                        <label class="label-required" for="work_region">Регион работы</label>
                         <select size="1" class="form-control ec tip" name="work_region" id="work_region" autocomplete="off" required>
                             <option value="">-- Выберите регион --</option>
                             <?php
@@ -92,7 +92,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
-                        <label class="label-required" for="work_city">Населённый пункт</label>
+                        <label class="label-required" for="work_city">Место работы (город)</label>
                         <input type="text" class="form-control ec tip" name="work_city" placeholder="Населённый пункт" title="Укажите населенный пункт"
                             id="work_city" value="<?php echo isset($city_name)? $city_name : ''; ?>" data-sanitize="capitalize"
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт"
@@ -105,7 +105,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
-                        <label class="label-required" for="work_street">Улица</label>
+                        <label class="label-required" for="work_street">Место работы (улица)</label>
                         <input type="text" class="form-control ec tip" name="work_street" placeholder="Улица" title="Укажите улицу" id="work_street"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                             data-validation-error-msg="Укажите улицу" required>
@@ -115,7 +115,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
-                        <label class="label-required" for="work_house">№ дома</label>
+                        <label class="label-required" for="work_house" >№ дома</label>
                         <input type="text" class="form-control ec tip" name="work_house" placeholder="№ дома" title="Укажите № дома" id="work_house"
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите № дома"
                             required>
@@ -137,7 +137,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
-                        <label for="work_office">Офис</label>
+                        <label for="work_office">№ кабинета</label>
                         <input type="text" class="form-control ec tip" name="work_office" placeholder="Офис" title="Укажите № офиса" id="work_office"
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите № офиса"
                             data-validation-optional="true">
