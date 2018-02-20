@@ -21,16 +21,20 @@ var isWebvisor = new RegExp('^https?:\/\/([^/]+metrika.yandex\.(ru|ua|com|com\.t
 
 function error(msg, elem) {
 	var title = 'Ошибка';
-	if ($('#message').length) $('#message').remove();
-	$('body').append('<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-		'<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' +
-        '<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">OK</button></div></div></div></div>');
+	// if ($('#message').length) $('#message').remove();
+	// $('body').append('<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
+	// 	'<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' +
+    //     '<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">OK</button></div></div></div></div>');
         $('html, body').animate({
             scrollTop: elem.offset().top - 160
         }, 1000);
         elem.click();
-        elem.blur();
-        $('#message').modal('show');
+        elem.blur(); 
+        elem.parent(elem).find('.help-block2').css('display','inline-block');
+         //elem.next('p').css('display','inline-block');
+         //console.log(elem.parent(elem).find('.help-block2').text());
+        //console.log(elem.next());
+        // $('#message').modal('show');
 }
 
 function send_form(send, href) {
@@ -292,7 +296,7 @@ $("#email").suggestions({
         return;
     }
     $('html, body').animate({
-        scrollTop: $(this).offset().top - 100
+        scrollTop: $(this).offset().top - 150
     }, 1000);
 });
   $('input').on('validation', function(evt, valid) { 
@@ -312,8 +316,10 @@ $("#email").suggestions({
             $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok');  
             return;
         }
-    }  
+    } 
+
     if(valid){  
+        $(this).parent($(this)).find('.help-block2').css('display','none');
         $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
         $(this).removeClass('er'); 
 
@@ -332,7 +338,13 @@ $("#email").suggestions({
         if(this.name !== 'f' && this.name !== 'i' && this.name !== 'o')
         {
             $(this).attr('placeholder',evt.currentTarget.dataset.validationErrorMsg);
-        } 
+            $(this).parent($(this)).find('.help-block2').css('display','inline-block');
+            $(this).parent($(this)).find('.help-block2').text(evt.currentTarget.dataset.validationErrorMsg);
+        }
+        else
+        {
+            $(this).parent($(this)).find('.help-block2').css('display','inline-block');
+        }
 
         if(this.name == 'phone')
         {
@@ -346,15 +358,32 @@ $("#email").suggestions({
   });
   $('#phone').blur(function()
   { 
-    if ($('input[name="phone"]').val().length != 13) {
-        $('#phonestatus').html('');
+    console.log($('input[name="phone"]').val().length);
+    if ($('input[name="phone"]') || $('input[name="phone"]').val().length != 13) { 
         $('#spec_form2').addClass('label_er').removeClass('label_true'); 
         $('#phone').parent().removeClass('ex-success').addClass('ex-error');
+        $(this).parent($(this)).find('.help-block2').css('display','inline-block');
     }
     else
     {
         $('#spec_form2').removeClass('label_er').addClass('label_true');
         $('#phone').parent().removeClass('ex-error').addClass('ex-success');
+        $(this).parent($(this)).find('.help-block2').css('display','none');
+    } 
+});
+$('#iin').blur(function()
+{  
+    if ($('input[name="iin"]').val().length != 12) {  
+        $('#spec_form3').addClass('label_er').removeClass('label_true'); 
+        $('#iin').parent().removeClass('ex-success').addClass('ex-error');
+        $(this).parent().removeClass('ex-success').addClass('ex-error');
+        $(this).parent($(this)).find('.help-block2').css('display','inline-block');
+    }
+    else
+    { 
+        $('#spec_form3').removeClass('label_er').addClass('label_true');
+        $('#iin').parent().removeClass('ex-error').addClass('ex-success'); 
+        $(this).parent($(this)).find('.help-block2').css('display','none');
     } 
 });
   $('#passport_code').blur(function(){

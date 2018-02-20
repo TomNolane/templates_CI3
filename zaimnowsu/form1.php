@@ -8,7 +8,8 @@
                         <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
                             required>
-                        <p class="text-muted helpblock">Пример: Иванова</p>
+                          <p class="help-block2">Нужно указать фамилию</p> 
+                        <p class="text-muted helpblock">Пример: Сулейменова</p>
                     </div>
                 </div>
             </div>
@@ -19,7 +20,8 @@
                         <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize"
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя"
                             required>
-                            <p class="text-muted helpblock">Пример: Лариса</p>
+                            <p class="help-block2">Нужно указать имя</p> 
+                            <p class="text-muted helpblock">Пример: Аида</p>
                     </div>
                 </div>
             </div>
@@ -30,7 +32,8 @@
                         <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
                             required>
-                            <p class="text-muted helpblock">Пример: Ивановна</p>
+                            <p class="help-block2">Нужно указать отчество</p> 
+                            <p class="text-muted helpblock">Пример: Аскаркызы</p>
                     </div>
                 </div>
             </div>
@@ -88,8 +91,9 @@
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="tel" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
-                            data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
+                            data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Нужно указать дату рождения"
                             required>
+                            <p class="help-block2"></p> 
                             <p class="text-muted helpblock">Пример: 06/02/2000</p>
                     </div>
                 </div>
@@ -101,41 +105,45 @@
                         <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Введите свой номер телефона"
                             title="Введите свой номер телефона" data-validation-error-msg="Введите номер телефона" required>
                         <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <p class="help-block2">Нужно указать номер телефона</p> 
                         <p class="text-muted helpblock">Пример: 711 123 45 67</p>
                     </div>
                 </div>
             </div>
             <div class="form-group row">
-                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="iin">ИИН</label>
+                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="iin" id="spec_form3">ИИН</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="iin" id="iin" placeholder="Введите свой номер ИИН" maxlength="12" minlength="12"
                             title="Введите свой номер иин" data-validation-error-msg="Введите номер ИИН" required>
+                            <p class="help-block2">Нужно указать номер ИИН</p> 
                         <p class="text-muted helpblock">Пример: 118111111000</p>
                     </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="email">Email</label>
-                <div class="col-md-9">
-                    <div class="ex-wrapper">
-                        <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Введите свой email адрес" placeholder="Email"
-                            data-validation="email" data-validation-error-msg="Введите свой email" required>
-                            <p class="text-muted helpblock">Пример: email@mail.ru</p>
-                    </div>
-                </div>
-            </div>
+            </div> 
             <div class="form-group row">
                 <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="city">Город проживания</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip" name="city" id="city" title="Укажите город в котором вы живете" placeholder="Город проживания"
                              data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$"
-                            data-validation-error-msg="Укажите город в котором вы живете">
+                            data-validation-error-msg="Нужно указать город в котором вы живете">
+                            <p class="help-block2"></p> 
                             <p class="text-muted helpblock">Пример: Астана</p>
                     </div>
                 </div>
             </div> 
+            <div class="form-group row">
+                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="email">Email</label>
+                <div class="col-md-9">
+                    <div class="ex-wrapper">
+                        <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Введите свой email адрес" placeholder="Email"
+                            data-validation="email" data-validation-error-msg="Нужно указать свой email" required>
+                            <p class="help-block2"></p> 
+                            <p class="text-muted helpblock">Пример: email@mail.ru</p>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-9  offset-md-3  ex-agreement-check">
                     <label class="checkbox-inline">

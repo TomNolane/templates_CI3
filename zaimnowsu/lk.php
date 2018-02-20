@@ -60,7 +60,7 @@ function plural_type($n) {
                         "link" => "https://pxl.leads.su/click/64d72b33de41d8fbc5d8007e108e3914?aff_sub1=Zaimnow.su",
                         "amount" => "200000",
                         "period" => "21",
-                        "percent" => "0.90"
+                        "percent" => "0,49"
                       ),
                       array(
                         "title" => "Zing",
@@ -95,7 +95,7 @@ function plural_type($n) {
                         $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
                         $item['link'] = str_replace("#site", $domen, $item['link']);
 
-                        echo '<div class="ex-offerta-block ex-on-small-device">
+                        echo '<div class="ex-offerta-block ex-on-small-device ex-offerta-active">
                             <table>
                                 <tbody>
                                 <tr>

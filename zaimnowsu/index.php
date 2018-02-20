@@ -77,7 +77,7 @@
                     <div class="row justify-content-center text-center">
                         <div class="col-lg-4 col-md-6">
                             <div class="ex-icon-block d-flex align-items-center justify-content-center">
-                                <img src="/templates/zaimnow/assets/img/icons/1.png" alt="1.png">
+                                <img src="/templates/zaimnowsu/assets/img/icons/1.png" alt="1.png">
                             </div>
                             <h3>0 тенге<br>
                                 за подбор займов</h3>
@@ -87,7 +87,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="ex-icon-block d-flex align-items-center justify-content-center">
-                                <img src="/templates/zaimnow/assets/img/icons/2.png" alt="2.png">
+                                <img src="/templates/zaimnowsu/assets/img/icons/2.png" alt="2.png">
                             </div>
                             <h3>7 минут<br>
                                 на одобрение вашей заявки</h3>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="ex-icon-block d-flex align-items-center justify-content-center">
-                                <img src="/templates/zaimnow/assets/img/icons/3.png" alt="3.png">
+                                <img src="/templates/zaimnowsu/assets/img/icons/3.png" alt="3.png">
                             </div>
                             <h3>5 надёжных вариантов<br>
                                 получения денег</h3>
@@ -105,7 +105,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="ex-icon-block d-flex align-items-center justify-content-center">
-                                <img src="/templates/zaimnow/assets/img/icons/4.png" alt="4.png">
+                                <img src="/templates/zaimnowsu/assets/img/icons/4.png" alt="4.png">
                             </div>
                             <h3>1 документ<br>
                                 для оформления займа</h3>
@@ -115,7 +115,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="ex-icon-block d-flex align-items-center justify-content-center">
-                                <img src="/templates/zaimnow/assets/img/icons/5.png" alt="5.png">
+                                <img src="/templates/zaimnowsu/assets/img/icons/5.png" alt="5.png">
                             </div>
                             <h3>100%-ая приватность</h3>
                             <p>Европейское качество передачи
@@ -123,7 +123,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="ex-icon-block d-flex align-items-center justify-content-center">
-                                <img src="/templates/zaimnow/assets/img/icons/6.png" alt="6.png">
+                                <img src="/templates/zaimnowsu/assets/img/icons/6.png" alt="6.png">
                             </div>
                             <h3>Одобрение<br>
                                 с любой кредитной историей</h3>
@@ -148,7 +148,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <img src="/templates/zaimnow/assets/img/icons/0.png" alt="0.png">
+                    <img src="/templates/zaimnowsu/assets/img/icons/0.png" alt="0.png">
                     <span>*в случае своевременного погашения </span>
                 </div>
             </div>
@@ -170,7 +170,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="ex-info-image">
-                                    <img src="/templates/zaimnow/assets/img/info1.png" alt="info1.png">
+                                    <img src="/templates/zaimnowsu/assets/img/info1.png" alt="info1.png">
                                 </div>
                             </div>
                         </div>
@@ -190,7 +190,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="ex-info-image">
-                                    <img src="/templates/zaimnow/assets/img/info2.png" alt="info2.png">
+                                    <img src="/templates/zaimnowsu/assets/img/info2.png" alt="info2.png">
                                 </div>
                             </div>
                         </div>
@@ -207,7 +207,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="ex-info-image">
-                                    <img src="/templates/zaimnow/assets/img/info3.png" alt="info3.png">
+                                    <img src="/templates/zaimnowsu/assets/img/info3.png" alt="info3.png">
                                 </div>
                             </div>
                         </div>
@@ -225,7 +225,7 @@
                         <div class="col-xl-4 col-md-6 text-center">
                             <div class="ex-cards-block">
                                 <figure>
-                                    <img src="/templates/zaimnow/assets/img/icons/card.png" alt="card.png">
+                                    <img src="/templates/zaimnowsu/assets/img/icons/card.png" alt="card.png">
                                 </figure>
                                 <p class="ex-count-zaim">
                                     30 000
@@ -249,7 +249,7 @@
                         <div class="col-xl-4 col-md-6 text-center">
                             <div class="ex-cards-block">
                                 <figure>
-                                    <img src="/templates/zaimnow/assets/img/icons/rocket.png" alt="rocket.png">
+                                    <img src="/templates/zaimnowsu/assets/img/icons/rocket.png" alt="rocket.png">
                                 </figure>
                                 <p class="ex-count-zaim">
                                     100 000

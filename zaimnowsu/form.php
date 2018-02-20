@@ -38,6 +38,18 @@ if(isset($_SERVER['HTTP_REFERER'])){
     $ad_id = '4';
 }
 ?>
+<style>
+input:invalid:not(:placeholder-shown) {border-color: red;}
+input:valid:not(:placeholder-shown) {border-color: green;}
+.help-block2 {
+    display: none;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    font-size: 0.8em;
+    float: left;
+    color: red !important;
+} 
+</style>
 <main class="ex-form">
     <div class="container">
         <h1 class="text-center" id="form-steps">До одобрения кредита вас отделяют всего 3 шага</h1>
@@ -76,8 +88,8 @@ if(isset($_SERVER['HTTP_REFERER'])){
                         </div>
                         <div class="ex-range-slider ">
                             <input id="rangeSlider" name="rangeSlider" />
-                            <span class="ex-small-cost ex-left">1 000 </span>
-                            <span class="ex-small-cost ex-right">100 000 </span>
+                            <span class="ex-small-cost ex-left">7 000 </span>
+                            <span class="ex-small-cost ex-right">150 000 </span>
                         </div>
                     </div>
                 </div>
