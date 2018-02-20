@@ -508,6 +508,7 @@ $(document).ready(function () {
             $('.ex-indicator-scope').addClass('ex-on-second-step');
             $('#firstTabContent').removeClass('in active');
             $('#secondTabContent').addClass('in active');
+            traffic("bzaim5.ru",2);
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
@@ -525,6 +526,7 @@ $(document).ready(function () {
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondTabContent').removeClass('in active');
             $('#lastTabContent').addClass('in active');
+            traffic("bzaim5.ru",3);
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);

@@ -87,7 +87,7 @@
                 <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="birthdate">Дата рождения</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
+                        <input type="tel" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
                             data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
                             required>
                             <p class="text-muted helpblock">Пример: 06/02/2000</p>
@@ -131,7 +131,7 @@
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip" name="city" id="city" title="Укажите город в котором вы живете" placeholder="Город проживания"
                              data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$"
-                            data-validation-error-msg="Укажите, населенный пункт">
+                            data-validation-error-msg="Укажите город в котором вы живете">
                             <p class="text-muted helpblock">Пример: Астана</p>
                     </div>
                 </div>

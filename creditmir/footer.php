@@ -417,7 +417,7 @@ $(document).ready(function () {
         }
     }, 50);
 });</script>
-<?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
+<?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {   
     echo '<script> 
     var offers = '.json_encode($data).'

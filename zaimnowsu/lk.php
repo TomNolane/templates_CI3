@@ -54,13 +54,13 @@ function plural_type($n) {
                 <?php  
                 $arr = array(
                     array(
-                        "title" => "Moneyman",
-                        "img" => "moneyman",
-                        "text" => "Займы онлайн в Казахстане от Moneyman",
-                        "link" => "https://pxl.leads.su/click/3fede75a05555fc1afbedaf279d75e21?aff_sub1=Zaimnow.su",
+                        "title" => "Zaimer",
+                        "img" => "zaymer",
+                        "text" => "Займы онлайн в Казахстане от Займер",
+                        "link" => "https://pxl.leads.su/click/64d72b33de41d8fbc5d8007e108e3914?aff_sub1=Zaimnow.su",
                         "amount" => "200000",
-                        "period" => "31",
-                        "percent" => "0.50"
+                        "period" => "21",
+                        "percent" => "0.90"
                       ),
                       array(
                         "title" => "Zing",
@@ -72,15 +72,6 @@ function plural_type($n) {
                         "percent" => "0.50"
                       ),
                       array(
-                        "title" => "Zaimer",
-                        "img" => "zaymer",
-                        "text" => "Займы онлайн в Казахстане от Займер",
-                        "link" => "https://pxl.leads.su/click/64d72b33de41d8fbc5d8007e108e3914?aff_sub1=Zaimnow.su",
-                        "amount" => "200000",
-                        "period" => "21",
-                        "percent" => "0.90"
-                      ),
-                      array(
                         "title" => "ccloan",
                         "img" => "ccloan",
                         "text" => "Займы онлайн в Казахстане от ccloan",
@@ -88,6 +79,15 @@ function plural_type($n) {
                         "amount" => "200000",
                         "period" => "30",
                         "percent" => "1.00"
+                      ),
+                      array(
+                        "title" => "Moneyman",
+                        "img" => "moneyman",
+                        "text" => "Займы онлайн в Казахстане от Moneyman",
+                        "link" => "https://pxl.leads.su/click/3fede75a05555fc1afbedaf279d75e21?aff_sub1=Zaimnow.su",
+                        "amount" => "200000",
+                        "period" => "31",
+                        "percent" => "0.50"
                       )
                 );
                     foreach($arr as $item)

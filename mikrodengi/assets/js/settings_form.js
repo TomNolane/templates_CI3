@@ -401,10 +401,10 @@ $("#email").suggestions({
         } else {
             lang = 0;
             $(this).parent().removeClass('ex-error');
-            $(this).next("span").text(' ');
+			$(this).next("span").text(' ');
         }
     });
-    var JSdate = new Date();
+	var JSdate = new Date();
     var current_date = JSdate.getDate();
     var current_month = JSdate.getMonth() + 1;
     var current_year = JSdate.getFullYear();
@@ -417,6 +417,8 @@ $("#email").suggestions({
     var today_100  = current_date + "/" + current_month + "/" + current_year_100;
     var today  = current_date + "/" + current_month + "/" + current_year;
     var today_5  = current_date + "/" + current_month + "/" + current_year_5;
+    
+            
     if ($('#birthdate').attr('placeholder')) { 
             $('#birthdate').pickmeup_twitter_bootstrap(
                 pickmeup.defaults.locales['en'] = {

@@ -286,6 +286,16 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
             }
             $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
         }, 50);
+        function traffic(site, page){
+        $.ajax({
+            type: 'POST',
+            url: '/traffic/',
+            data: 'site='+site+'&page='+page,
+                success: function(data){
+                }
+        });
+    }
+        traffic("bzaim5.ru",0);
         </script>
 <?php
 } 
@@ -340,7 +350,32 @@ function clone(o) {
     }
     return c;
 }
+function traffic(site, page){
+    $.ajax({
+        type: \'POST\',
+        url: \'/traffic/\',
+        data: \'site=\'+site+\'&page=\'+page,
+            success: function(data){
+            }
+    });
+}
+traffic("bzaim5.ru",4);
 </script>';
+}
+elseif($this->uri->segment(1) == '404')
+{
+    echo '<script>
+    function traffic(site, page){
+        $.ajax({
+            type: \'POST\',
+            url: \'/traffic/\',
+            data: \'site=\'+site+\'&page=\'+page,
+                success: function(data){
+                }
+        });
+    }
+    traffic("bzaim5.ru",9);
+    </script>';
 }
 include "googleadservices_all.php"; 
 include "yandexmetrika.php"; 

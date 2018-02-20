@@ -390,6 +390,16 @@ if(isset($_SERVER['HTTP_REFERER'])){
         setDynamicTimePeriod();
     });
 });
+function traffic(site, page){
+    $.ajax({
+        type: 'POST',
+        url: '/traffic/',
+        data: 'site='+site+'&page='+page,
+            success: function(data){
+            }
+    });
+}
+traffic("bzaim5.ru",1);
 </script>
 <!-- всплывающее окошко -->
 <?php  
