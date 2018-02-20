@@ -6,7 +6,7 @@
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
-                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁёiI\-\s]+$" data-validation-error-msg="Введите свою фамилию"
+                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[-А-я ЁёІіЇїҐґЄє']+$" data-validation-error-msg="Введите свою фамилию"
                             required>
                         <p class="text-muted helpblock">Пример: Батейко</p>
                     </div>
@@ -17,7 +17,7 @@
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize"
-                            data-validation="custom" data-validation-regexp="^[А-Яа-яЁёiI\-\s]+$" data-validation-error-msg="Введите свое имя"
+                            data-validation="custom" data-validation-regexp="^[-А-я ЁёІіЇїҐґЄє']+$" data-validation-error-msg="Введите свое имя"
                             required>
                         <p class="text-muted helpblock">Пример: Олександр</p>
                     </div>
@@ -28,7 +28,7 @@
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
-                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁёiI\-\s]+$" data-validation-error-msg="Введите свое отчество"
+                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[-А-я ЁёІіЇїҐґЄє']+$" data-validation-error-msg="Введите свое отчество"
                             required>
                         <p class="text-muted helpblock">Пример: Дмитрович</p>
                     </div>
@@ -147,7 +147,7 @@
                 <div class="col-md-9 offset-md-3">
                     <div class="row justify-content-center">
                         <div class="col-md-6">
-                            <button type="button" id="submitOne" class="nav nav-tabs ex-main-btn text-center"> Далее </button>
+                            <button type="button" id="submitOne" class="nav nav-tabs ex-main-btn text-center"> Получить деньги </button>
                         </div>
                     </div>
                 </div>

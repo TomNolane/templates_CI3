@@ -1,4 +1,4 @@
-<?php $from = '15';
+<?php $from = '13';
 
     if($this->uri->segment(1) != 'form')
     {
@@ -19,14 +19,12 @@
                     Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 support@zaimomir.su<span class="hidden-xs hidden-sm"> | 8
                     (960) 950 93
                     53</span><br>
-                    <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 гривен включительно на срок от 61 до 365
+                    <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 200 до 5 000 гривен включительно на срок от 61 до 365
                     дней.<br>
                     Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.<br>
-                    Пример расчета общей стоимости займа: заём 20 000 гривен. срок пользования 10 недель под 0,08% в день;
-                    проценты
-                    за весь период составят 11 200 гривен. Итого к выплате 31 200 гривен. Первый заём до 10 000 гривен
-                    выдается по
-                    ставке 0% в случае своевременного погашения  
+                    Пример расчета общей стоимости займа: заём 5 000 гривен. Срок пользования 10 недель под 0,08% в день;
+                    проценты за весь период составят 650 гривен. Итого к выплате 6 550 гривен. Первый заём до 1 000 гривен
+                    выдается по ставке 0% в случае своевременного погашения  
                     <!-- | ООО «Альянс» | ОГРН 5177746353054 | ИНН 9705113909 | КПП 770501001 -->
                     ИП Бабакова К.К ОГРНИП 316222500122426 ИНН 222511216499</span>
                 </p>
@@ -102,7 +100,7 @@
     <script>
     $(document).ready(function () 
     {
-        $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
+        $.mask.definitions['*'] = "[-А-я ЁёІіЇїҐґЄє'а-яёА-ЯЁA-Za-z0-9\/\-_]";
         $('[data-toggle="popover"]').popover();
         $("#rangeSlider").ionRangeSlider({
         hide_min_max: true,
@@ -114,34 +112,32 @@
         {  
             switch($_GET['amount'])
             {
-                case '1000': $from = '0' ; break;
-                case '2000': $from = '1' ; break;
-                case '3000': $from = '2' ; break;
-                case '4000': $from = '3' ; break;
-                case '5000': $from = '4' ; break;
-                case '6000': $from = '5' ; break;
-                case '7000': $from = '6' ; break;
-                case '8000': $from = '7' ; break;
-                case '9000': $from = '8' ; break;
-                case '10000': $from = '9' ; break;
-                case '11000': $from = '10' ; break;
-                case '12000': $from = '11' ; break;
-                case '13000': $from = '12' ; break;
-                case '14000': $from = '13' ; break;
-                case '15000': $from = '14' ; break;
-                case '20000': $from = '15' ; break;
-                case '25000': $from = '16' ; break;
-                case '30000': $from = '17' ; break;
-                case '40000': $from = '18' ; break;
-                case '50000': $from = '19' ; break;
-                case '80000': $from = '20' ; break;
-                case '100000': $from = '21' ; break;
+                case '100': $from = '0' ; break;
+                case '200': $from = '1' ; break;
+                case '300': $from = '2' ; break;
+                case '400': $from = '3' ; break;
+                case '500': $from = '4' ; break;
+                case '600': $from = '5' ; break;
+                case '700': $from = '6' ; break;
+                case '800': $from = '7' ; break;
+                case '900': $from = '8' ; break;
+                case '1000': $from = '9' ; break;
+                case '1100': $from = '10' ; break;
+                case '1200': $from = '11' ; break;
+                case '1300': $from = '12' ; break;
+                case '1400': $from = '13' ; break;
+                case '1500': $from = '14' ; break;
+                case '2000': $from = '15' ; break;
+                case '2500': $from = '16' ; break;
+                case '3000': $from = '17' ; break;
+                case '4000': $from = '18' ; break;
+                case '5000': $from = '19' ; break;
             }
             echo $from; 
         }
-        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        elseif(!isset($_POST['form_slrd'])) echo '13'; else echo $_POST['form_slrd']; 
         ?>,
-        values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
+        values: [200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 2000, 2500, 3000, 4000, 5000],
         onFinish: function (data) {
             $('#amount').val(data.from_value);
             $('#form_slrd').val(data.from);
@@ -151,23 +147,23 @@
             $('#form_slrd').val(data.from);
         },
         onChange: function (range) {
-            if (range.from_value <= 10000) {
+            if (range.from_value <= 1000) {
             $('#period').val('7');
             $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 15000) {
+        } else if (range.from_value <= 1500) {
+            $('#period').val('10');
+            $('#period2').val('От 61 до 130 дней');
+        } else if (range.from_value <= 2000) {
+            $('#period').val('10');
+            $('#period2').val('От 61 до 130 дней');
+        } else if (range.from_value <= 3000) {
+            $('#period').val('10');
+            $('#period2').val('От 61 до 130 дней');
+        } else if (range.from_value < 5000) {
             $('#period').val('14');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 20000) {
-            $('#period').val('21');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 30000) {
-            $('#period').val('21');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 50000) {
-            $('#period').val('30');
             $('#period2').val('От 130 до 250 дней');
         } else {
-            $('#period').val('30');
+            $('#period').val('14');
             $('#period2').val('От 250 до 365 дней');
         } 
             $('#amount').val(range.from_value);
@@ -409,18 +405,18 @@
          
     var slider3 = $('#rangeSlider').data('ionRangeSlider');
     var slider_plus = true;
-    var n = 10;
+    var n = 8;
     var slider_init = setInterval(function () {
         if (slider_plus) {
             n++;
         } else {
             n--;
         }
-        if (n == 21 && n != <?php echo $from;?>) {
+        if (n == 19 && n != <?php echo $from;?>) {
             slider_plus = false;
         }else if (n == <?php echo $from;?> && slider_plus == false) {
             clearInterval(slider_init);
-        }else if (n == 21 && n == <?php echo $from;?>) {
+        }else if (n == 19 && n == <?php echo $from;?>) {
             clearInterval(slider_init);
         }
 
@@ -433,23 +429,23 @@
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
         } else if (n <= 14 && n > 9) {
-            $('#period').val('14');
+            $('#period').val('10');
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
         } else if (n <= 15 && n > 14) {
-            $('#period').val('21');
+            $('#period').val('10');
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
         } else if (n <= 17 && n > 15) {
-            $('#period').val('21');
+            $('#period').val('10');
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
-        } else if (n <= 19 && n > 17) {
-            $('#period').val('30');
+        } else if (n < 19 && n > 17) {
+            $('#period').val('14');
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
-        } else if (n > 19) {
-            $('#period').val('30'); 
+        } else if (n => 19) {
+            $('#period').val('14'); 
             $('#form_slrd').val(n);
             $('#amount').val(slider3.result.from_value);
         }

@@ -182,11 +182,11 @@ if(!isset($description))
                                 <div class="ex-wrapper">
                                     <i class="ex-user"></i>
                                     <input type="text" class="form-control" name="feedback-name" title="Введите свое имя"
-                                data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
+                                data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[-А-я ЁёІіЇїҐґЄє'А-Яа-яЁё\-\s]+$"
                                 data-validation-error-msg="Введите имя" id="feedback-name" placeholder="Ваше имя">
                                 </div>
                             </div>
-                            <input type="hidden" class="form-control" id="feedback-phone" title="Тефелон" placeholder="Введите ваш телефон" value="79777777777" required>
+                            <input type="hidden" class="form-control" id="feedback-phone" title="Тефелон" placeholder="Введите ваш телефон" value="095 725 09 99" required>
                             <div class="col-md-6">
                                 <div class="ex-wrapper">
                                     <i class="ex-email"></i>
