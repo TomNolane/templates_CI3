@@ -622,9 +622,9 @@ if(isset($_GET['email']))
 <script>
 function markTarget(target,param, id) 
 {
-    if (typeof yaCounter47569456 == 'undefined') return;
-	if (typeof param == 'undefined') yaCounter47569456.reachGoal(target);
-	else yaCounter47569456.reachGoal(target,param);
+    if (typeof yaCounter47764510 == 'undefined') return;
+	if (typeof param == 'undefined') yaCounter47764510.reachGoal(target);
+	else yaCounter47764510.reachGoal(target,param);
         
         $.ajax({
             type: 'POST',

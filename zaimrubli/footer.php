@@ -6,6 +6,10 @@
 
     if($this->uri->segment(1) != 'form')
     {
+        echo '<!-- декстоп Yandex.RTB R-A-264025-1 -->
+        <div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-264025-1"></div> 
+        <!-- мобайл Yandex.RTB R-A-264025-2 -->
+        <div class="hidden-lg hidden-md visible-sm visible-xs" id="yandex_rtb_R-A-264025-2"></div>';
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Zaimrubli -->
         <ins class="adsbygoogle"
