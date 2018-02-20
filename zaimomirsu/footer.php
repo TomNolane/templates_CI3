@@ -11,23 +11,24 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="ex-foot-logo">
-                    <a href="/"><img src="/templates/zaimomir/assets/img/logo-footer.png" alt="logo-footer.png"></a>
+                    <a href="/"><img src="/templates/zaimomirsu/assets/img/logo-footer.png" alt="logo-footer.png"></a>
                 </div>
             </div>
             <div class="col-lg-9">
                 <p>Сервис по подбору выгодных онлайн займов и кредитов находящийся по адресу:<br>
-                    Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 support@zaimomir.ru<span class="hidden-xs hidden-sm"> | 8
+                    Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 support@zaimomir.su<span class="hidden-xs hidden-sm"> | 8
                     (960) 950 93
                     53</span><br>
-                    <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365
+                    <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 гривен включительно на срок от 61 до 365
                     дней.<br>
                     Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.<br>
-                    Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день;
+                    Пример расчета общей стоимости займа: заём 20 000 гривен. срок пользования 10 недель под 0,08% в день;
                     проценты
-                    за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей
+                    за весь период составят 11 200 гривен. Итого к выплате 31 200 гривен. Первый заём до 10 000 гривен
                     выдается по
-                    ставке 0% в случае своевременного погашения | ООО «Альянс» | ОГРН 5177746353054
-                    | ИНН 9705113909 | КПП 770501001</span>
+                    ставке 0% в случае своевременного погашения  
+                    <!-- | ООО «Альянс» | ОГРН 5177746353054 | ИНН 9705113909 | КПП 770501001 -->
+                    ИП Бабакова К.К ОГРНИП 316222500122426 ИНН 222511216499</span>
                 </p>
             </div>
         </div>
@@ -39,7 +40,7 @@
     require 'modules/jquery/jquery-1.11.3.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimomir/assets/js/bootstrap.min.js';
+    require 'templates/zaimomirsu/assets/js/bootstrap.min.js';
     echo '</script>';?>
     <script>  
     function getParameterByName(name, url) 
@@ -61,26 +62,26 @@
     require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimomir/assets/js/jquery.pickmeup.twitter-bootstrap.js';
+    require 'templates/zaimomirsu/assets/js/jquery.pickmeup.twitter-bootstrap.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimomir/assets/js/pickmeup.min.js';
+    require 'templates/zaimomirsu/assets/js/pickmeup.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimomir/assets/js/jquery.form-validator.js';
+    require 'templates/zaimomirsu/assets/js/jquery.form-validator.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimomir/assets/js/jquery.suggestions.min.js';
+    require 'templates/zaimomirsu/assets/js/jquery.suggestions.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimomir/assets/js/coockie.js';
+    require 'templates/zaimomirsu/assets/js/coockie.js';
     echo '</script>';
     require 'templates/common/detect.min.php';
     echo '<script>';
-    require 'templates/zaimomir/assets/js/custom.js';
+    require 'templates/zaimomirsu/assets/js/custom.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimomir/assets/js/settings_form.js';
+    require 'templates/zaimomirsu/assets/js/settings_form.js';
     echo '</script>';
     ?>
 
@@ -94,7 +95,7 @@
     require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimomir/assets/js/loanCalculator.js';
+    require 'templates/zaimomirsu/assets/js/loanCalculator.js';
     echo '</script>';
 ?>
 
@@ -454,7 +455,7 @@
         }
     }, 50);
 });
-<?php require 'templates/zaimomir/assets/js/owl.carousel.min.js';?>
+<?php require 'templates/zaimomirsu/assets/js/owl.carousel.min.js';?>
     $('.owl-carousel').owlCarousel({
         stagePadding: 40,
         center: true,

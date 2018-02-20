@@ -167,10 +167,10 @@ function validate(){
 }
 $(document).ready(function(){
 $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
-$('[data-toggle="popover"]').popover();
-$('input#phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
-$('input#feedback-phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
-$('input#work_phone').mask("8 (9nn) nnn nnnn", { "placeholder": "8 (9__) ___ ____" });
+$('[data-toggle="popover"]').popover(); //10 050 xx xx
+$('input#phone').mask("nnn nnn nn nn", { "placeholder": "___ ___ __ __" });
+$('input#feedback-phone').mask("nnn nnn nn nn", { "placeholder": "___ ___ __ __" });
+$('input#work_phone').mask("nnn nnn nn nn", { "placeholder": "___ ___ __ __" });
 $('input#passport').mask("nnnn nnnnnn", { "placeholder": "____ ______" });
 $('#passport_code').mask("nnn-nnn", { "placeholder": "___-___" });
 $('input#birthdate').mask("nn/nn/nnnn", { "placeholder": "__/__/__" });

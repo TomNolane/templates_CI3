@@ -20,7 +20,7 @@ $regions = $this->geo->regions();
 
 //pixel stat
 $this->load->model('pixel/pixel_model', 'pixel');
-$pixel = $this->pixel->stat('zaimomir.ru');
+$pixel = $this->pixel->stat('zaimomir.su');
 
 $_plural_years = array('год', 'года', 'лет');
 $_plural_months = array('месяц', 'месяца', 'месяцев');

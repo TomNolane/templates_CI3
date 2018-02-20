@@ -7,8 +7,8 @@
 /*@@@@@@ Core files import here @@@@@@*/
 @font-face {
   font-family: 'Roboto-Regular';
-  src: url("/templates/zaimomir/assets/fonts/Roboto-Regular.eot");
-  src: url("/templates/zaimomir/assets/fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("/templates/zaimomir/assets/fonts/Roboto-Regular.woff") format("woff"), url("/templates/zaimomir/assets/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("/templates/zaimomirsu/assets/fonts/Roboto-Regular.eot");
+  src: url("/templates/zaimomirsu/assets/fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("/templates/zaimomirsu/assets/fonts/Roboto-Regular.woff") format("woff"), url("/templates/zaimomirsu/assets/fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -200,7 +200,7 @@ body {
   width: 40px;
   height: 40px;
   transform: translate(-50%, -50%);
-  background-image: url("/templates/zaimomir/assets/img/icons/triangle.png");
+  background-image: url("/templates/zaimomirsu/assets/img/icons/triangle.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -12974,7 +12974,7 @@ a.text-dark:focus, a.text-dark:hover {
 .ex-main-header .ex-brand {
   width: 148px;
   height: 36px;
-  background-image: url(/templates/zaimomir/assets/img/logo.png);
+  background-image: url(/templates/zaimomirsu/assets/img/logo.png);
   background-repeat: no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
@@ -12990,7 +12990,7 @@ a.text-dark:focus, a.text-dark:hover {
 .ex-main-header .navbar-toggler-icon {
   width: 30px;
   height: 30px;
-  background-image: url(/templates/zaimomir/assets/img/icons/hamburger-icon.png);
+  background-image: url(/templates/zaimomirsu/assets/img/icons/hamburger-icon.png);
   opacity: .3;
 }
 /* line 32, ../sass/desktop/_header.scss */
@@ -13022,7 +13022,7 @@ a.text-dark:focus, a.text-dark:hover {
   top: 12px;
   width: 8px;
   height: 5px;
-  background-image: url(/templates/zaimomir/assets/img/icons/dr-arrow.png);
+  background-image: url(/templates/zaimomirsu/assets/img/icons/dr-arrow.png);
   background-repeat: no-repeat;
 }
 @media (max-width: 991px) {
@@ -13080,7 +13080,7 @@ a.text-dark:focus, a.text-dark:hover {
   display: inline-block;
   width: 7px;
   height: 5px;
-  background-image: url(/templates/zaimomir/assets/img/icons/dropdown-arrow.png);
+  background-image: url(/templates/zaimomirsu/assets/img/icons/dropdown-arrow.png);
   background-repeat: no-repeat;
 }
 /* line 107, ../sass/desktop/_header.scss */
@@ -13227,7 +13227,7 @@ footer.ex-main-footer p {
   height: 9px;
   right: 22px;
   top: 15px;
-  background-image: url(/templates/zaimomir/assets/img/icons/icon-check.png);
+  background-image: url(/templates/zaimomirsu/assets/img/icons/icon-check.png);
   background-repeat: no-repeat;
 }
 /* line 27, ../sass/desktop/_modal.scss */
@@ -13279,7 +13279,7 @@ footer.ex-main-footer p {
   height: 9px;
   right: 22px;
   top: 15px;
-  background-image: url(/templates/zaimomir/assets/img/icons/icon-cross.png);
+  background-image: url(/templates/zaimomirsu/assets/img/icons/icon-cross.png);
   background-repeat: no-repeat;
 }
 /* line 54, ../sass/desktop/_modal.scss */
@@ -13443,19 +13443,19 @@ footer.ex-main-footer p {
 #askQuestion .modal-dialog .modal-content .modal-body .form-group .ex-wrapper i.ex-user {
   width: 14px;
   height: 14px;
-  background-image: url("/templates/zaimomir/assets/img/icons/user.png");
+  background-image: url("/templates/zaimomirsu/assets/img/icons/user.png");
 }
 /* line 121, ../sass/desktop/_modal.scss */
 #askQuestion .modal-dialog .modal-content .modal-body .form-group .ex-wrapper i.ex-email {
   width: 18px;
   height: 14px;
-  background-image: url("/templates/zaimomir/assets/img/icons/email-icon.png");
+  background-image: url("/templates/zaimomirsu/assets/img/icons/email-icon.png");
 }
 /* line 126, ../sass/desktop/_modal.scss */
 #askQuestion .modal-dialog .modal-content .modal-body .form-group .ex-wrapper i.ex-message {
   width: 16px;
   height: 14px;
-  background-image: url("/templates/zaimomir/assets/img/icons/message-icon.png");
+  background-image: url("/templates/zaimomirsu/assets/img/icons/message-icon.png");
 }
 /* line 135, ../sass/desktop/_modal.scss */
 #askQuestion .modal-dialog .modal-content .modal-body .ex-main-btn, #askQuestion .modal-dialog .modal-content .modal-body .ex-blue-btn, #askQuestion .modal-dialog .modal-content .modal-body .ex-grey-btn {
@@ -13485,7 +13485,7 @@ footer.ex-main-footer p {
   width: 100%;
   display: block;
   position: absolute;
-  background-image: url("/templates/zaimomir/assets/img/bg.png");
+  background-image: url("/templates/zaimomirsu/assets/img/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -13554,7 +13554,7 @@ footer.ex-main-footer p {
   position: absolute;
   left: 648px;
   top: 24px;
-  background-image: url("/templates/zaimomir/assets/img/creditcard.png");
+  background-image: url("/templates/zaimomirsu/assets/img/creditcard.png");
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
@@ -13625,23 +13625,23 @@ footer.ex-main-footer p {
 }
 /* line 108, ../sass/desktop/_start.scss */
 .ex-home .ex-main-section .ex-calc-block .ex-wrapper .ex-Commission i {
-  vertical-align: middle;
+  vertical-align: sub;
   margin-left: 10px;
   display: inline-block;
   width: 17px;
-  height: 20px;
-  background-image: url("/templates/zaimomir/assets/img/rub.svg");
+  height: 24px;
+  background-image: url("/templates/zaimomirsu/assets/img/rub.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
 /* line 120, ../sass/desktop/_start.scss */
 .ex-home .ex-main-section .ex-calc-block .ex-wrapper .ex-slider-val i {
-  vertical-align: middle;
+  vertical-align: sub;
   margin-left: 10px;
   display: inline-block;
   width: 17px;
-  height: 20px;
-  background-image: url("/templates/zaimomir/assets/img/rub.svg");
+  height: 24px;
+  background-image: url("/templates/zaimomirsu/assets/img/rub.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -13681,7 +13681,7 @@ footer.ex-main-footer p {
 .ex-home .ex-main-section .ex-for-img {
   width: 525px;
   height: 450px;
-  background-image: url("/templates/zaimomir/assets/img/notebook.png");
+  background-image: url("/templates/zaimomirsu/assets/img/notebook.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -13917,20 +13917,20 @@ footer.ex-main-footer p {
 .ex-home .ex-why-get-money .timeline > li > .timeline-badge i.ex-timline-icon1 {
   width: 24px;
   height: 24px;
-  background-image: url("/templates/zaimomir/assets/img/icons/calculator.png");
+  background-image: url("/templates/zaimomirsu/assets/img/icons/calculator.png");
   background-position: center;
 }
 /* line 350, ../sass/desktop/_start.scss */
 .ex-home .ex-why-get-money .timeline > li > .timeline-badge i.ex-timline-icon2 {
   width: 18px;
   height: 23px;
-  background-image: url("/templates/zaimomir/assets/img/icons/apply.png");
+  background-image: url("/templates/zaimomirsu/assets/img/icons/apply.png");
 }
 /* line 355, ../sass/desktop/_start.scss */
 .ex-home .ex-why-get-money .timeline > li > .timeline-badge i.ex-timline-icon3 {
   width: 24px;
   height: 20px;
-  background-image: url("/templates/zaimomir/assets/img/icons/estimate.png");
+  background-image: url("/templates/zaimomirsu/assets/img/icons/estimate.png");
 }
 /* line 362, ../sass/desktop/_start.scss */
 .ex-home .ex-why-get-money .timeline > li.timeline-inverted > .timeline-panel {
@@ -14011,7 +14011,7 @@ footer.ex-main-footer p {
   width: 100%;
   display: block;
   position: absolute;
-  background-image: url("/templates/zaimomir/assets/img/bg-art-news.png");
+  background-image: url("/templates/zaimomirsu/assets/img/bg-art-news.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -14115,11 +14115,11 @@ footer.ex-main-footer p {
 }
 /* line 498, ../sass/desktop/_start.scss */
 .ex-home .ex-newsletter .ex-art-block .ex-art-img1 {
-  background-image: url("/templates/zaimomir/assets/img/art1.png");
+  background-image: url("/templates/zaimomirsu/assets/img/art1.png");
 }
 /* line 501, ../sass/desktop/_start.scss */
 .ex-home .ex-newsletter .ex-art-block .ex-art-img2 {
-  background-image: url("/templates/zaimomir/assets/img/art2.png");
+  background-image: url("/templates/zaimomirsu/assets/img/art2.png");
 }
 /* line 504, ../sass/desktop/_start.scss */
 .ex-home .ex-newsletter .ex-art-block .ex-art-cont {
@@ -14249,7 +14249,7 @@ main.ex-form .ex-calc-block .ex-wrapper .ex-Commission i {
   display: inline-block;
   width: 17px;
   height: 20px;
-  background-image: url("/templates/zaimomir/assets/img/rub.svg");
+  background-image: url("/templates/zaimomirsu/assets/img/rub.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -14260,7 +14260,7 @@ main.ex-form .ex-calc-block .ex-wrapper .ex-slider-val i {
   display: inline-block;
   width: 17px;
   height: 20px;
-  background-image: url("/templates/zaimomir/assets/img/rub.svg");
+  background-image: url("/templates/zaimomirsu/assets/img/rub.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -14345,7 +14345,7 @@ main.ex-form .ex-bg-form .tab-content .ex-main-form .ex-calc-block .ex-wrapper .
   display: inline-block;
   width: 17px;
   height: 20px;
-  background-image: url("/templates/zaimomir/assets/img/rub.svg");
+  background-image: url("/templates/zaimomirsu/assets/img/rub.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -14369,7 +14369,7 @@ main.ex-form .ex-bg-form .tab-content .ex-main-form .ex-wrapper.ex-success:after
   height: 9px;
   right: 22px;
   top: 22px;
-  background-image: url(/templates/zaimomir/assets/img/icons/icon-check.png);
+  background-image: url(/templates/zaimomirsu/assets/img/icons/icon-check.png);
   background-repeat: no-repeat;
 }
 /* line 201, ../sass/desktop/_form.scss */
@@ -14417,7 +14417,7 @@ main.ex-form .ex-bg-form .tab-content .ex-main-form .ex-wrapper.ex-error:after {
   height: 9px;
   right: 22px;
   top: 22px;
-  background-image: url(/templates/zaimomir/assets/img/icons/icon-cross.png);
+  background-image: url(/templates/zaimomirsu/assets/img/icons/icon-cross.png);
   background-repeat: no-repeat;
 }
 /* line 227, ../sass/desktop/_form.scss */
@@ -14489,7 +14489,7 @@ main.ex-form .ex-bg-form .tab-content .ex-main-form .ex-wrapper.ex-arrow:after {
   height: 9px;
   right: 22px;
   top: 22px;
-  background-image: url(/templates/zaimomir/assets/img/icons/icon-arrow.png);
+  background-image: url(/templates/zaimomirsu/assets/img/icons/icon-arrow.png);
   background-repeat: no-repeat;
 }
 /* line 259, ../sass/desktop/_form.scss */
@@ -14786,7 +14786,7 @@ main.ex-form .ex-bg-form .nav {
   height: 488px;
   left: 0;
   top: -7px;
-  background-image: url("/templates/zaimomir/assets/img/sircle.png");
+  background-image: url("/templates/zaimomirsu/assets/img/sircle.png");
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
@@ -15082,14 +15082,14 @@ main.ex-form .ex-bg-form .nav {
 .ex-faq .ex-faq-content .card .card-header h4 a i.ex-plus {
   width: 20px;
   height: 20px;
-  background-image: url(/templates/zaimomir/assets/img/icons/plus.png);
+  background-image: url(/templates/zaimomirsu/assets/img/icons/plus.png);
   background-repeat: no-repeat;
 }
 /* line 48, ../sass/desktop/_faq.scss */
 .ex-faq .ex-faq-content .card .card-header h4 a i.ex-minus {
   width: 20px;
   height: 20px;
-  background-image: url(/templates/zaimomir/assets/img/icons/minus.png);
+  background-image: url(/templates/zaimomirsu/assets/img/icons/minus.png);
   background-repeat: no-repeat;
 }
 @media (max-width: 1199px) {
@@ -15475,7 +15475,7 @@ main.ex-form .ex-bg-form .nav {
 /* line 4, ../sass/desktop/_about.scss */
 .ex-about .ex-for-about-bg {
   height: 340px;
-  background-image: url("/templates/zaimomir/assets/img/about.png");
+  background-image: url("/templates/zaimomirsu/assets/img/about.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -15575,10 +15575,10 @@ main.ex-form .ex-bg-form .nav {
 
 /* line 31, ../sass/desktop/_articles.scss */
 .ex-art1-bg {
-  background-image: url("/templates/zaimomir/assets/img/art-full1.png");
+  background-image: url("/templates/zaimomirsu/assets/img/art-full1.png");
 }
 
 /* line 34, ../sass/desktop/_articles.scss */
 .ex-art2-bg {
-  background-image: url("/templates/zaimomir/assets/img/art-full2.png");
+  background-image: url("/templates/zaimomirsu/assets/img/art-full2.png");
 }

@@ -61,7 +61,7 @@
                 <div class="row  text-center">
                     <div class="col-lg-3 col-md-6 ">
                         <div class="">
-                            <img src="/templates/zaimomir/assets/img/icons/1.png" alt="1.png">
+                            <img src="/templates/zaimomirsu/assets/img/icons/1.png" alt="1.png">
                         </div>
                         <div class="ex-icon-block ">
                             <h3>Один документ</h3>
@@ -70,7 +70,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="d-flex align-items-center justify-content-center">
-                            <img src="/templates/zaimomir/assets/img/icons/2.png" alt="2.png">
+                            <img src="/templates/zaimomirsu/assets/img/icons/2.png" alt="2.png">
                         </div>
                         <div class="ex-icon-block">
                             <h3>Безопасность на 100%</h3>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="d-flex align-items-center justify-content-center">
-                            <img src="/templates/zaimomir/assets/img/icons/3.png" alt="3.png">
+                            <img src="/templates/zaimomirsu/assets/img/icons/3.png" alt="3.png">
                         </div>
                         <div class="ex-icon-block">
                             <h3>Одобрение в 98% случаев</h3>
@@ -89,11 +89,11 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="d-flex align-items-center justify-content-center">
-                            <img src="/templates/zaimomir/assets/img/icons/4.png" alt="4.png">
+                            <img src="/templates/zaimomirsu/assets/img/icons/4.png" alt="4.png">
                         </div>
                         <div class="ex-icon-block">
                             <h3>Бесплатно</h3>
-                            <p>Экономьте до 950 рублей, не оплачивая поиск выгодных позиций.</p>
+                            <p>Экономьте до 950 гривен, не оплачивая поиск выгодных позиций.</p>
                         </div>
                     </div>
                 </div>

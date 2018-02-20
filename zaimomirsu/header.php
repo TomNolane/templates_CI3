@@ -16,18 +16,18 @@ if(!isset($description))
 	<meta name="Description" content="<?php echo $description;?>" />
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
-	<meta name="copyright" lang="ru" content="zaimomir.ru" /> 
+	<meta name="copyright" lang="ru" content="zaimomir.su" /> 
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="Zaimomir - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
-	<meta property="og:image" content="https://zaimomir.ru/templates/zaimomir/assets/img/creditcard.png"/>
+	<meta property="og:image" content="https://zaimomir.su/templates/zaimomirsu/assets/img/creditcard.png"/>
 	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="https://zaimomir.ru/" />
-	<meta name="twitter:card" content="https://zaimomir.ru/templates/zaimomir/assets/img/creditcard.png"/>
+	<meta property="og:url" content="https://zaimomir.su/" />
+	<meta name="twitter:card" content="https://zaimomir.su/templates/zaimomirsu/assets/img/creditcard.png"/>
 	<meta name="twitter:title" content="Срочные займы круглосуточно без проверок Онлайн"/>
 	<meta name="twitter:description" content="Zaimomir - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
-	<meta name="twitter:image:src" content="https://zaimomir.ru/templates/zaimomir/assets/img/creditcard.png"/>
-	<meta name="twitter:url" content="https://zaimomir.ru/"/>
-	<meta name="twitter:domain" content="zaimomir.ru"/>
+	<meta name="twitter:image:src" content="https://zaimomir.su/templates/zaimomirsu/assets/img/creditcard.png"/>
+	<meta name="twitter:url" content="https://zaimomir.su/"/>
+	<meta name="twitter:domain" content="zaimomir.su"/>
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="/templates/zaimomir/favicon/favicon-16x16.png" type="image/png">
@@ -51,16 +51,16 @@ if(!isset($description))
     <!-- CSS -->
      <?php 
      echo '<style>';
-     require 'templates/zaimomir/assets/css/style.css';
+     require 'templates/zaimomirsu/assets/css/style.css';
      echo '</style>';
      echo '<style>';
-     require 'templates/zaimomir/assets/css/style_custom.css';
+     require 'templates/zaimomirsu/assets/css/style_custom.css';
      echo '</style>';
      echo '<style>';
-     require 'templates/zaimomir/assets/css/font-awesome.min.css';
+     require 'templates/zaimomirsu/assets/css/font-awesome.min.css';
      echo '</style>';
      echo '<style>';
-     require 'templates/zaimomir/assets/css/suggestions.min.css';
+     require 'templates/zaimomirsu/assets/css/suggestions.min.css';
      echo '</style>'; 
      echo '<style>'; 
      echo '.tip-twitter {
@@ -85,7 +85,7 @@ if(!isset($description))
          left:50%;
          width:9px;
          height:5px;
-         background:url(/templates/zaimomir/assets/img/tip-twitter_arrows.gif) no-repeat;
+         background:url(/templates/zaimomirsu/assets/img/tip-twitter_arrows.gif) no-repeat;
      }
      .tip-twitter .tip-arrow-right {
          margin-top:-4px; /* approx. half the height to center it */
@@ -94,7 +94,7 @@ if(!isset($description))
          left:100%;
          width:5px;
          height:9px;
-         background:url(/templates/zaimomir/assets/img/tip-twitter_arrows.gif) no-repeat -9px 0;
+         background:url(/templates/zaimomirsu/assets/img/tip-twitter_arrows.gif) no-repeat -9px 0;
      }
      .tip-twitter .tip-arrow-bottom {
          margin-top:0;
@@ -103,7 +103,7 @@ if(!isset($description))
          left:50%;
          width:9px;
          height:5px;
-         background:url(/templates/zaimomir/assets/img/tip-twitter_arrows.gif) no-repeat -18px 0;
+         background:url(/templates/zaimomirsu/assets/img/tip-twitter_arrows.gif) no-repeat -18px 0;
      }
      .tip-twitter .tip-arrow-left {
          margin-top:-4px; /* approx. half the height to center it */
@@ -112,14 +112,14 @@ if(!isset($description))
          left:0;
          width:5px;
          height:9px;
-         background:url(/templates/zaimomir/assets/img/tip-twitter_arrows.gif) no-repeat -27px 0;
+         background:url(/templates/zaimomirsu/assets/img/tip-twitter_arrows.gif) no-repeat -27px 0;
      }';
      echo '</style>';
 
      if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') 
      {
          echo '<style>';
-         require "templates/zaimomir/assets/css/style_lk.css";
+         require "templates/zaimomirsu/assets/css/style_lk.css";
          echo '</style>';
      }
      ?>
