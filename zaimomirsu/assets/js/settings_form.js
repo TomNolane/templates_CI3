@@ -50,7 +50,7 @@ function send_form(send, href) {
 
 function validate1() {
 	if (isWebvisor) return true;
-	if ($('input[name="amount"]').val() < 200 || $('input[name="amount"]').val() > 5000) {
+	if ($('input[name="amount"]').val() < 200 || $('input[name="amount"]').val() > 15000) {
 		error('Вы не указали сумму.', $('input[name="amount"]'));
 		return false;
 	} else if ($('input[name="period"]').val() < 7 || $('input[name="period"]').val() > 14) {
@@ -83,81 +83,9 @@ function validate1() {
 	return false;
 }
 
-function validate2() {
-	if (isWebvisor) return true;
-	if ($('input[name="passport"]').val().length < 11) {
-		error('Вы не указали номер и серию паспорта.', $('input[name="passport"]'));
-		return false;
-	}
-	else if ($('input[name="passport_who"]').val().length < 3) {
-		error('Необходимо указать, кем выдан паспорт.', $('input[name="passport_who"]'));
-		return false;
-	} else if ($('input[name="passport_code"]').val().length < 7) {
-		error('Необходимо указать, код подразделения, выдавшего паспорт.', $('input[name="passport_code"]'));
-		return false;
-	} else if ($('input[name="birthplace"]').val().length < 3) {
-		error('Необходимо указать место рождения.', $('input[name="birthplace"]'));
-		return false;
-	} else if ($('#region').val().length < 2 || !re_rc.test($('#region').val())) {
-		error('Необходимо указать регион проживания.', $('#region'));
-		return false;
-	} else if ($('input[name="city"]').val().length < 2 || !re_rc.test($('input[name="city"]').val())) {
-		error('<p>Ошибка в указании населённого пункта места жительства.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>', $('input[name="city"]'));
-		return false;
-	} else if ($('input[name="street"]').val().length < 2) {
-		error('Необходимо указать улицу места жительства.', $('input[name="street"]'));
-		return false;
-	} else if (!$('input[name="building"]').val().length || !re.test($('input[name="building"]').val())) {
-		error('Ошибочно указан номер дома места жительства. Указывайте только номер дома и литеру, если она есть.', $('input[name="building"]'));
-		return false;
-	} else if ($('input[name="housing"]').val().length && !re.test($('input[name="housing"]').val())) {
-		error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.', $('input[name="housing"]'));
-		return false;
-	} else if ($('input[name="flat"]').val().length && !re.test($('input[name="flat"]').val())) {
-		error('Ошибочно указан номер квартиры места жительства. Указывайте только номер дома и литеру, если она есть.', $('input[name="flat"]'));
-		return false;
-	} else if ($('.reg_same:checked').val() == '0' && ($('#reg_region').val().length < 2 || !re_rc.test($('#reg_region').val()))) {
-		error('Вы не указали регион регистрации.', $('.reg_same:checked'));
-		return false;
-	} else return true;
-	return false;
-}
-
-function validate3() {
-	if (isWebvisor) return true;
-	if (!re_int.test($('input[name="work_experience"]').val())) {
-		error('Вы не указали стаж работы.', $('input[name="work_experience"]'));
-		return false;
-	} else if (!re_int.test($('input[name="work_salary"]').val())) {
-		error('Вы не указали доход.', $('input[name="work_salary"]'));
-		return false;
-	} else if ($('input[name="work_name"]').val().length < 2) {
-		error('Вы не указали название места работы.', $('input[name="work_name"]'));
-		return false;
-	} else if ($('input[name="work_occupation"]').val().length < 2) {
-		error('Вы не указали вашу должность.', $('input[name="work_occupation"]'));
-		return false;
-	} else if ($('input[name="work_region"]').val() == '0') {
-		error('Вы не указали регион работы.', $('input[name="work_region"]'));
-		return false;
-	} else if ($('input[name="work_city"]').val().length < 2) {
-		error('Необходимо указать город работы.', $('input[name="work_city"]'));
-		return false;
-	} else if ($('input[name="work_street"]').val().length < 2) {
-		error('Необходимо указать улицу работы.', $('input[name="work_street"]'));
-		return false;
-	} else if (!re.test($('input[name="work_house"]').val())) {
-		error('Ошибочно указан номер дома работы. Указывайте только номер дома и литеру, если она есть.', $('input[name="work_house"]'));
-		return false;
-	} else return true;
-	return false;
-} 
-
 function validate(){
 	if (isWebvisor) return true;
 	if (!validate1()) return false;
-	// if (!validate2()) return false;
-	// if (!validate3()) return false;
 	if(typeof window.obUnloader != 'undefined')
     {
         window.obUnloader.resetUnload();
@@ -165,6 +93,7 @@ function validate(){
 	$('#form-modal').show();
 	return true;
 }
+
 $(document).ready(function(){
 $.mask.definitions['*'] = "[-ЁёІіЇїҐґЄє'а-яёА-ЯЁA-Za-z0-9\/\-_]";
 $('[data-toggle="popover"]').popover(); //10 050 xx xx

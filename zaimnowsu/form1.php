@@ -91,7 +91,7 @@
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="tel" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
-                            data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Нужно указать дату рождения"
+                            data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Возраст должен быть от 18 до 70 лет"
                             required>
                             <p class="help-block2"></p> 
                             <p class="text-muted helpblock">Пример: 06/02/2000</p>

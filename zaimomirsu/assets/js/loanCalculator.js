@@ -4,10 +4,10 @@
 $(document).ready(function () {
     //-----------------------Declaration of variables--------------------------
     var c = getParameterByName('amount'); 
-    var gg = parseInt(($('#amount').val().trim().length < 1) ? 1500 : $('#amount').val());
+    var gg = parseInt(($('#amount').val().trim().length < 1) ? 5000 : $('#amount').val());
     if (c != null) {
-        if (c > 5000 || c < 200) {
-            c = 1500;
+        if (c > 15000 || c < 200) {
+            c = 5000;
         }
         gg = c;
     }
@@ -26,39 +26,39 @@ $(document).ready(function () {
         commission = (currentLoanSize * commissionPercantage) / 100,
         returnTotal = currentLoanSize + commission,
         setDynamicProbability = function () {
-            if(currentLoanSize > 1000 && currentLoanSize < 2000){
+            if(currentLoanSize >= 4000 && currentLoanSize <= 9000){
                 probability = 85;
                 probabilityTable.text("вероятность " + probability).append('%');
                 probabilityTable2.html("<span>"+probability +"%</span>");
-            }else if(currentLoanSize >= 2000 && currentLoanSize < 4000){
+            }else if(currentLoanSize <= 12000 && currentLoanSize > 9000){
                 probability = 77;
                 probabilityTable.text("вероятность " + probability).append('%');;
                 probabilityTable2.html("<span>"+probability +"%</span>");
-            }else if(currentLoanSize >= 4000){
+            }else if(currentLoanSize > 12000){
                 probability = 65;
                 probabilityTable.text("вероятность " + probability).append('%');
                 probabilityTable2.html("<span>"+probability +"%</span>");
             }
-            else if(currentLoanSize <= 1000){
+            else if(currentLoanSize < 4000){
                 probability = 95;
                 probabilityTable.text("вероятность " + probability).append('%');
                 probabilityTable2.html("<span>"+probability +"%</span>");
             }
         },
         setDynamicTimePeriod = function () {
-            if(currentLoanSize > 1000 && currentLoanSize < 2000){
+            if(currentLoanSize < 4000){
                 time = '100-130 дней';
                 timeTable.html("<span>"+time+"</span>");
-            }if(currentLoanSize <= 1000){
+            }if(currentLoanSize <= 2000){
                 time = '61-100 дней';
                 timeTable.html("<span>"+time+"</span>");
-            }if(currentLoanSize >= 2000 && currentLoanSize < 3000){
+            }if(currentLoanSize >= 4000 && currentLoanSize <= 9000){
                 time = '130-200 дней';
                 timeTable.html("<span>"+time+"</span>");
-            }if(currentLoanSize >= 3000 && currentLoanSize < 4000){
+            }if(currentLoanSize <= 12000 && currentLoanSize > 9000){
                 time = '200-250 дней';
                 timeTable.html("<span>"+time+"</span>");
-            }if(currentLoanSize >= 4000){
+            }if(currentLoanSize > 12000){
                 time = '250-365 дней';
                 timeTable.html("<span>"+time+"</span>");
             }

@@ -1,4 +1,23 @@
 <?php 
+$sum = "5000"; $period = "10";
+if(isset($_GET['amount'])) 
+{  
+    if($_GET['amount'] >= "200" || $_GET['amount'] <= "15000")
+        $sum = $_GET['amount'];
+}
+
+if(isset($_POST['period'])) 
+{  
+    if($_POST['amount'] >= "7" || $_POST['amount'] <= "14")
+        $period = $_POST['period'];
+}
+
+if(isset($_POST['amount'])) 
+{  
+    if($_POST['amount'] >= "200" || $_POST['amount'] <= "15000")
+        $sum = $_POST['amount'];
+}
+
 if(!isset($my_title))
 {
 	$my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис zaimomir.su';
@@ -99,8 +118,8 @@ if(isset($_SERVER['HTTP_REFERER'])){
                 <input type="hidden" name="id" value="">
                 <input type="hidden" name="step" value="1">
                 <input type="hidden" name="ad_id" value="<?=$ad_id?>">
-                <input type="hidden" id="amount" name="amount" value="<?php if(isset($_GET['amount'])) { $sum = '1500'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 1000) { $period = '7'; } else if ($sum <= 1500) { $period = '10'; } else if ($sum <= 2000) { $period = '10'; } else if ($sum <= 3000) { $period = '14'; } else if ($sum <= 5000) { $period = '14'; } else { $period = '14'; } } elseif(!isset($_POST['amount'])) echo '1500'; else echo $_POST['amount'];  ?>"/>
-                <input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 10 : $_POST['period']; ?>"/>
+                <input type="hidden" id="amount" name="amount" value="<?php echo $sum;?>"/>
+                <input type="hidden" id="period" name="period" value="<?php echo $period;?>"/>
                 <div class="tab-content">
                     <div id="firstStep" class="tab-pane active">
                         <?php require 'form1.php';?>

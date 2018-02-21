@@ -1,4 +1,4 @@
-<?php $from = '13';
+<?php $from = '18';
 
     if($this->uri->segment(1) != 'form')
     {
@@ -19,7 +19,7 @@
                     Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 support@zaimomir.su<span class="hidden-xs hidden-sm"> | 8
                     (960) 950 93
                     53</span><br>
-                    <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 200 до 5 000 гривен включительно на срок от 61 до 365
+                    <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 200 до 15 000 гривен включительно на срок от 61 до 365
                     дней.<br>
                     Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.<br>
                     Пример расчета общей стоимости займа: заём 5 000 гривен. Срок пользования 10 недель под 0,08% в день;
@@ -111,33 +111,42 @@
         if(isset($_GET['amount'])) 
         {  
             switch($_GET['amount'])
-            {
-                case '100': $from = '0' ; break;
-                case '200': $from = '1' ; break;
-                case '300': $from = '2' ; break;
-                case '400': $from = '3' ; break;
-                case '500': $from = '4' ; break;
-                case '600': $from = '5' ; break;
-                case '700': $from = '6' ; break;
-                case '800': $from = '7' ; break;
-                case '900': $from = '8' ; break;
-                case '1000': $from = '9' ; break;
-                case '1100': $from = '10' ; break;
-                case '1200': $from = '11' ; break;
-                case '1300': $from = '12' ; break;
-                case '1400': $from = '13' ; break;
-                case '1500': $from = '14' ; break;
-                case '2000': $from = '15' ; break;
-                case '2500': $from = '16' ; break;
-                case '3000': $from = '17' ; break;
-                case '4000': $from = '18' ; break;
-                case '5000': $from = '19' ; break;
+            { 
+                case '200': $from = '0' ; break;
+                case '300': $from = '1' ; break;
+                case '400': $from = '2' ; break;
+                case '500': $from = '3' ; break;
+                case '600': $from = '4' ; break;
+                case '700': $from = '5' ; break;
+                case '800': $from = '6' ; break;
+                case '900': $from = '7' ; break;
+                case '1000': $from = '8' ; break;
+                case '1100': $from = '9' ; break;
+                case '1200': $from = '10' ; break;
+                case '1300': $from = '11' ; break;
+                case '1400': $from = '12' ; break;
+                case '1500': $from = '13' ; break;
+                case '2000': $from = '14' ; break;
+                case '2500': $from = '15' ; break;
+                case '3000': $from = '16' ; break;
+                case '4000': $from = '17' ; break;
+                case '5000': $from = '18' ; break;
+                case '6000': $from = '19' ; break;
+                case '7000': $from = '20' ; break;
+                case '8000': $from = '21' ; break;
+                case '9000': $from = '22' ; break;
+                case '10000': $from = '23' ; break;
+                case '11000': $from = '24' ; break;
+                case '12000': $from = '25' ; break;
+                case '13000': $from = '26' ; break;
+                case '14000': $from = '27' ; break;
+                case '15000': $from = '28' ; break; 
             }
             echo $from; 
         }
-        elseif(!isset($_POST['form_slrd'])) echo '13'; else echo $_POST['form_slrd']; 
+        elseif(!isset($_POST['form_slrd'])) echo '18'; else echo $_POST['form_slrd']; 
         ?>,
-        values: [200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 2000, 2500, 3000, 4000, 5000],
+        values: [200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 2000, 2500, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000],
         onFinish: function (data) {
             $('#amount').val(data.from_value);
             $('#form_slrd').val(data.from);
@@ -147,25 +156,24 @@
             $('#form_slrd').val(data.from);
         },
         onChange: function (range) {
-            if (range.from_value <= 1000) {
-            $('#period').val('7');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 1500) {
-            $('#period').val('10');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 2000) {
-            $('#period').val('10');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 3000) {
-            $('#period').val('10');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value < 5000) {
-            $('#period').val('14');
-            $('#period2').val('От 130 до 250 дней');
-        } else {
-            $('#period').val('14');
-            $('#period2').val('От 250 до 365 дней');
-        } 
+
+            if(range.from_value < 4000){
+                $('#period').val('7');
+                $('#period2').val('100-130 дней');
+            }if(range.from_value <= 2000){
+                $('#period').val('10');
+                $('#period2').val('61-100 дней');
+            }if(range.from_value >= 4000 && range.from_value <= 9000){
+                $('#period').val('10');
+                $('#period2').val('130-200 дней');
+            }if(range.from_value <= 12000 && range.from_value > 9000){
+                $('#period').val('10');
+                $('#period2').val('200-250 дней');
+            }if(range.from_value > 12000){
+                $('#period').val('14');
+                $('#period2').val('250-365 дней');
+            }
+ 
             $('#amount').val(range.from_value);
             $('#form_slrd').val(range.from); 
         },
@@ -412,11 +420,11 @@
         } else {
             n--;
         }
-        if (n == 19 && n != <?php echo $from;?>) {
+        if (n == 28 && n != <?php echo $from;?>) {
             slider_plus = false;
         }else if (n == <?php echo $from;?> && slider_plus == false) {
             clearInterval(slider_init);
-        }else if (n == 19 && n == <?php echo $from;?>) {
+        }else if (n == 28 && n == <?php echo $from;?>) {
             clearInterval(slider_init);
         }
 

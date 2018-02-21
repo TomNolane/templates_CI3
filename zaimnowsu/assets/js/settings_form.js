@@ -1,3 +1,54 @@
+function addDate(numberOfYears)
+{
+    var startDate = new Date();
+    var returnDate = new Date(
+                            startDate.getFullYear()-numberOfYears,
+                            startDate.getMonth(),
+                            startDate.getDate(),
+                            startDate.getHours(),
+                            startDate.getMinutes(),
+                            startDate.getSeconds());
+    return returnDate;
+};
+function addDate2(numberOfDays,numberOfMonth,numberOfYears)
+{
+    var startDate = new Date();
+    var returnDate = new Date(
+                            numberOfYears,
+                            numberOfMonth-1,
+                            numberOfDays,
+                            startDate.getHours(),
+                            startDate.getMinutes(),
+                            startDate.getSeconds());
+    return returnDate;
+};
+function CheckTime()
+{
+    var today = addDate2($('#birthdate').val().split('/')[0],$('#birthdate').val().split('/')[1],$('#birthdate').val().split('/')[2]).getTime();
+    var from = addDate(18).getTime();
+    var to = addDate(70).getTime();
+    var withinRange = today <= from && today >= to;
+
+    if(withinRange)
+    {
+        $('#birthdate').parent($('#birthdate')).find('.help-block2').css('display','none');
+        $('#birthdate').parent().parent().prev().removeClass('label_er').addClass('label_true');
+        $('#birthdate').removeClass('er');
+        $('#birthdate').parent().removeClass('ex-error').addClass('ex-success');
+        $('#birthdatestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
+        return true;
+    }
+    else
+    {
+        $('#birthdate').parent().parent().prev().addClass('label_er').removeClass('label_true');
+        $('#birthdate').addClass('er');
+        $('#birthdate').parent().removeClass('ex-success').addClass('ex-error');
+        $('#birthdate').attr('placeholder',"Возраст должен быть от 18 до 70 лет");
+        $('#birthdate').parent($('#birthdate')).find('.help-block2').css('display','inline-block');
+        $('#birthdate').parent($('#birthdate')).find('.help-block2').text("Возраст должен быть от 18 до 70 лет");
+        return false;
+    }
+}
 var agree = 0;
 $('#agree').change(function(){ 
     if (agree == 1)
@@ -69,15 +120,17 @@ function validate1() {
 	} else if ($('input[name="o"]').val().length < 2 || !re_name.test($('input[name="o"]').val())) {
 		error('Необходимо указать отчество.', $('input[name="o"]'));
 		return false;
-	}
+    }
+    else if(!CheckTime())
+    {
+        error('Возраст должен быть от 18 до 70 лет', $('input[name="birthdate"]'));
+        return false;
+    }
 	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
 		error('Вы не указали пол.', $('input[name="gender"]'));
 		return false;
 	} else if ($('input[name="phone"]').val().length != 13) {
 		error('Номер телефона указан неверно.', $('input[name="phone"]'));
-		return false;
-	} else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {
-		error('Email указан неверно.', $('input[name="email"]'));
 		return false;
 	} else if ($('input[name="iin"]').val().length < 12 || $('input[name="iin"]').val().length > 12) {
 		error('ИИН указан неверно.', $('input[name="iin"]'));
@@ -85,7 +138,10 @@ function validate1() {
     } else if ($('input[name="city"]').val().length < 2 || !re_rc.test($('input[name="city"]').val())) {
 		error('<p>Ошибка в указании населённого пункта места жительства.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>', $('input[name="city"]'));
 		return false;
-    } else if (!$('#agree').prop('checked')) {
+    } else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {
+		error('Email указан неверно.', $('input[name="email"]'));
+		return false;
+	}  else if (!$('#agree').prop('checked')) {
 		error('Вы не подтвердили своё согласие с условиями сервиса.', $('#agree'));
 		return false;
 	}
@@ -93,81 +149,10 @@ function validate1() {
 	return false;
 }
 
-function validate2() {
-	if (isWebvisor) return true;
-	if ($('input[name="passport"]').val().length < 11) {
-		error('Вы не указали номер и серию паспорта.', $('input[name="passport"]'));
-		return false;
-	}
-	else if ($('input[name="passport_who"]').val().length < 3) {
-		error('Необходимо указать, кем выдан паспорт.', $('input[name="passport_who"]'));
-		return false;
-	} else if ($('input[name="passport_code"]').val().length < 7) {
-		error('Необходимо указать, код подразделения, выдавшего паспорт.', $('input[name="passport_code"]'));
-		return false;
-	} else if ($('input[name="birthplace"]').val().length < 3) {
-		error('Необходимо указать место рождения.', $('input[name="birthplace"]'));
-		return false;
-	} else if ($('#region').val().length < 2 || !re_rc.test($('#region').val())) {
-		error('Необходимо указать регион проживания.', $('#region'));
-		return false;
-	} else if ($('input[name="city"]').val().length < 2 || !re_rc.test($('input[name="city"]').val())) {
-		error('<p>Ошибка в указании населённого пункта места жительства.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>', $('input[name="city"]'));
-		return false;
-	} else if ($('input[name="street"]').val().length < 2) {
-		error('Необходимо указать улицу места жительства.', $('input[name="street"]'));
-		return false;
-	} else if (!$('input[name="building"]').val().length || !re.test($('input[name="building"]').val())) {
-		error('Ошибочно указан номер дома места жительства. Указывайте только номер дома и литеру, если она есть.', $('input[name="building"]'));
-		return false;
-	} else if ($('input[name="housing"]').val().length && !re.test($('input[name="housing"]').val())) {
-		error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.', $('input[name="housing"]'));
-		return false;
-	} else if ($('input[name="flat"]').val().length && !re.test($('input[name="flat"]').val())) {
-		error('Ошибочно указан номер квартиры места жительства. Указывайте только номер дома и литеру, если она есть.', $('input[name="flat"]'));
-		return false;
-	} else if ($('.reg_same:checked').val() == '0' && ($('#reg_region').val().length < 2 || !re_rc.test($('#reg_region').val()))) {
-		error('Вы не указали регион регистрации.', $('.reg_same:checked'));
-		return false;
-	} else return true;
-	return false;
-}
-
-function validate3() {
-	if (isWebvisor) return true;
-	if (!re_int.test($('input[name="work_experience"]').val())) {
-		error('Вы не указали стаж работы.', $('input[name="work_experience"]'));
-		return false;
-	} else if (!re_int.test($('input[name="work_salary"]').val())) {
-		error('Вы не указали доход.', $('input[name="work_salary"]'));
-		return false;
-	} else if ($('input[name="work_name"]').val().length < 2) {
-		error('Вы не указали название места работы.', $('input[name="work_name"]'));
-		return false;
-	} else if ($('input[name="work_occupation"]').val().length < 2) {
-		error('Вы не указали вашу должность.', $('input[name="work_occupation"]'));
-		return false;
-	} else if ($('input[name="work_region"]').val() == '0') {
-		error('Вы не указали регион работы.', $('input[name="work_region"]'));
-		return false;
-	} else if ($('input[name="work_city"]').val().length < 2) {
-		error('Необходимо указать город работы.', $('input[name="work_city"]'));
-		return false;
-	} else if ($('input[name="work_street"]').val().length < 2) {
-		error('Необходимо указать улицу работы.', $('input[name="work_street"]'));
-		return false;
-	} else if (!re.test($('input[name="work_house"]').val())) {
-		error('Ошибочно указан номер дома работы. Указывайте только номер дома и литеру, если она есть.', $('input[name="work_house"]'));
-		return false;
-	} else return true;
-	return false;
-} 
 
 function validate(){
 	if (isWebvisor) return true;
 	if (!validate1()) return false;
-	// if (!validate2()) return false;
-	// if (!validate3()) return false;
 	if(typeof window.obUnloader != 'undefined')
     {
         window.obUnloader.resetUnload();
@@ -299,6 +284,8 @@ $("#email").suggestions({
         scrollTop: $(this).offset().top - 150
     }, 1000);
 });
+
+
   $('input').on('validation', function(evt, valid) { 
     if(this.name == 'iin')
     {
@@ -316,9 +303,38 @@ $("#email").suggestions({
             $('#'+this.id+'status').removeClass('glyphicon-remove').addClass('glyphicon-ok');  
             return;
         }
-    } 
+    }
 
     if(valid){  
+
+        if(this.name == 'birthdate')
+        {    
+            var today = addDate2($('#birthdate').val().split('/')[0],$('#birthdate').val().split('/')[1],$('#birthdate').val().split('/')[2]).getTime();
+            var from = addDate(18).getTime();
+            var to = addDate(70).getTime();
+            var withinRange = today <= from && today >= to;
+
+            if(withinRange)
+            {
+                $('#birthdate').parent($('#birthdate')).find('.help-block2').css('display','none');
+                $('#birthdate').parent().parent().prev().removeClass('label_er').addClass('label_true');
+                $('#birthdate').removeClass('er');
+                $('#birthdate').parent().removeClass('ex-error').addClass('ex-success');
+                $('#birthdatestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
+                return;
+            }
+            else
+            {
+                $('#birthdate').parent().parent().prev().addClass('label_er').removeClass('label_true');
+                $('#birthdate').addClass('er');
+                $('#birthdate').parent().removeClass('ex-success').addClass('ex-error');
+                $('#birthdate').attr('placeholder',"Возраст должен быть от 18 до 70 лет");
+                $('#birthdate').parent($('#birthdate')).find('.help-block2').css('display','inline-block');
+                $('#birthdate').parent($('#birthdate')).find('.help-block2').text("Возраст должен быть от 18 до 70 лет");
+                return;
+            }
+        } 
+
         $(this).parent($(this)).find('.help-block2').css('display','none');
         $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
         $(this).removeClass('er'); 
@@ -357,9 +373,8 @@ $("#email").suggestions({
     } 
   });
   $('#phone').blur(function()
-  { 
-    console.log($('input[name="phone"]').val().length);
-    if ($('input[name="phone"]') || $('input[name="phone"]').val().length != 13) { 
+  {  
+    if ($('input[name="phone"]').val().length != 13) { 
         $('#spec_form2').addClass('label_er').removeClass('label_true'); 
         $('#phone').parent().removeClass('ex-success').addClass('ex-error');
         $(this).parent($(this)).find('.help-block2').css('display','inline-block');
@@ -367,7 +382,7 @@ $("#email").suggestions({
     else
     {
         $('#spec_form2').removeClass('label_er').addClass('label_true');
-        $('#phone').parent().removeClass('ex-error').addClass('ex-success');
+        $('#phone').parent().removeClass('ex-error').addClass('ex-success'); 
         $(this).parent($(this)).find('.help-block2').css('display','none');
     } 
 });
@@ -510,7 +525,7 @@ $('#iin').blur(function()
     //          }
     //     })
     // ); 
-	$('#submitOne').click(function(){
+	$('#submitOne').click(function(){ 
 		if (validate()) {
             $('input[name="step"]').val('3');
             $('input[name="phone"]').val($('input[name="phone"]').val().split(" ").join(""));

@@ -14244,22 +14244,22 @@ main.ex-form .ex-calc-block .ex-wrapper .ex-crumbs .ex-result-style span {
 }
 /* line 78, ../sass/desktop/_form.scss */
 main.ex-form .ex-calc-block .ex-wrapper .ex-Commission i {
-  vertical-align: middle;
-  margin-left: 10px;
-  display: inline-block;
-  width: 17px;
-  height: 20px;
+  vertical-align: sub;
+    margin-left: 10px;
+    display: inline-block;
+    width: 17px;
+    height: 24px;
   background-image: url("/templates/zaimomirsu/assets/img/rub.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
 /* line 90, ../sass/desktop/_form.scss */
 main.ex-form .ex-calc-block .ex-wrapper .ex-slider-val i {
-  vertical-align: middle;
-  margin-left: 10px;
-  display: inline-block;
-  width: 17px;
-  height: 20px;
+  vertical-align: sub;
+    margin-left: 10px;
+    display: inline-block;
+    width: 17px;
+    height: 24px;
   background-image: url("/templates/zaimomirsu/assets/img/rub.svg");
   background-repeat: no-repeat;
   background-size: contain;

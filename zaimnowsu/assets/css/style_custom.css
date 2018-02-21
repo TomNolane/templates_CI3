@@ -130,7 +130,7 @@
     text-decoration: none !important;
   }
    
-  input#i , input#o, input#f, input#feedback-name {
+  input#i , input#o, input#f, input#feedback-name, input#city {
     text-transform: capitalize !important;
   } 
 
