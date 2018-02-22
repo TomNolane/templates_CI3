@@ -173,7 +173,11 @@ if(!isset($description))
                                     <ul>
                                         <li><a href="/oferta">Публичная оферта</a></li>
                                         <li><a href="/soglasie">Согласие на обработку данных</a></li>
-                                        <li><a href="/rules">Правила предоставления займов</a></li>
+                                        <li><a href="/rules">Условия пользования сайтом</a></li>
+                                        <li><a href="/personal-data">Политика компании</a></li>
+                                        <li><a href="/calls">Согласие на звонки</a></li> 
+                                        <li><a href="/regulation">Персональные данные</a></li>
+                                        <li><a href="/safety">Безопасность персональных данных</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3">
