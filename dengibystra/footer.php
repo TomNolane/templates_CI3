@@ -25,7 +25,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
 
-if ($this->uri->segment(1) != 'confirm'  && $this->uri->segment(1) != 'spasibo' && $this->uri->segment(1) != 'lk' ) {
+if ($this->uri->segment(1) != 'confirm'  && $this->uri->segment(1) != 'spasibo' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2') {
 echo '<footer class="ex-start-footer">
     <div class="container">
         <div class="row">
@@ -121,9 +121,6 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
     echo '</script>';
     echo '<script>';
     require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
     echo '</script>';
     echo '<script>';
     require 'templates/dengibystra/assets/js/jquery.form-validator.js';

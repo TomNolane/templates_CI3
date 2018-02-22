@@ -51,7 +51,7 @@ if(!isset($description))
         require "templates/dengibystra/assets/css/style.css"; 
         echo '</style>';
         echo '<style>';
-        require "templates/dengibystra/assets/css/uniqueSingle.min.css";
+        require "templates/dengibystra/assets/css/uniqueSingle.css";
         echo '</style>';
         echo '<style>';
         require "templates/dengibystra/assets/css/suggestions.min.css";

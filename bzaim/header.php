@@ -99,7 +99,68 @@ if(!isset($description))
             echo '<style>';
             require "templates/bzaim/assets/css/style_lk.css";
             echo '</style>';
-        } 
+            echo "<!-- Facebook Pixel Code -->
+            <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '488744834856590'); 
+            fbq('track', 'PageView');
+            </script>
+            <noscript>
+            <img height=\"1\" width=\"1\" 
+            src=\"https://www.facebook.com/tr?id=488744834856590&ev=PageView
+            &noscript=1\"/>
+            </noscript>
+            <!-- End Facebook Pixel Code -->";
+        }
+        else
+        {
+            echo "<!-- Facebook Pixel Code -->
+            <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '335513273608010'); 
+            fbq('track', 'PageView');
+            </script>
+            <noscript>
+            <img height=\"1\" width=\"1\" 
+            src=\"https://www.facebook.com/tr?id=335513273608010&ev=PageView
+            &noscript=1\"/>
+            </noscript>
+            <!-- End Facebook Pixel Code -->
+            <!-- Facebook Pixel Code -->
+            <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '488744834856590'); 
+            fbq('track', 'PageView');
+            </script>
+            <noscript>
+            <img height=\"1\" width=\"1\" 
+            src=\"https://www.facebook.com/tr?id=488744834856590&ev=PageView
+            &noscript=1\"/>
+            </noscript>
+            <!-- End Facebook Pixel Code --> 
+            ";
+        }
 
         if ($this->uri->segment(1) == 'form') 
         {
