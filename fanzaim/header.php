@@ -177,7 +177,7 @@ if(!isset($description))
                                         <li><a href="/personal-data">Политика компании</a></li>
                                         <li><a href="/calls">Согласие на звонки</a></li> 
                                         <li><a href="/regulation">Персональные данные</a></li>
-                                        <li><a href="/safety">Безопасность персональных данных</a></li>
+                                        <li><a href="/safety">Безопасность данных</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3">

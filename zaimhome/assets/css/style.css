@@ -3182,8 +3182,8 @@ td.visible-print{display:table-cell !important;}
 .ex-form form #ex-main-slider-range .ex-range-slider{padding-top:15px;background-color:#ffffff;}
 .ex-form form #ex-main-slider-range .ex-slider-info{margin-top:initial;padding-top:6px;}
 .ex-form form #ex-main-slider-range .irs{bottom:6px !important;}
-.ex-form form .form-group{margin-bottom:20px;}
-.ex-form form .form-group label{padding-top:15px;color:#858585;font-weight:700;letter-spacing:0.76px;}
+.ex-form form .form-group{margin-bottom:0px;}
+.ex-form form .form-group label{padding-top:15px;padding-left: 30px;color:#858585;font-weight:700;letter-spacing:0.76px;}
 .ex-form form .form-group .ex-wrapper{position:relative;}
 .ex-form form .form-group .ex-wrapper input{height: 60px;
   color: #262626;
@@ -3196,7 +3196,7 @@ td.visible-print{display:table-cell !important;}
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
   -ms-border-radius: 100px;
-  border-radius: 100px;}
+  border-radius: 12px;}
 .ex-form .error form .form-group .ex-wrapper input::-webkit-input-placeholder{font-weight:400;}
 .ex-form .error form .form-group .ex-wrapper input:-moz-placeholder{font-weight:400;}
 .ex-form .error form .form-group .ex-wrapper input::-moz-placeholder{font-weight:400;}

@@ -286,7 +286,7 @@ init2($("#feedback-name"));
     modules : 'date,sanitize'
   });
   $('input').click(function () {
-    if ($(this).attr("type") == "checkbox") {
+    if ($(this).attr("type") == "checkbox" || $(this).attr("id") == "feedback-email" || $(this).attr("id") == "feedback-phone" || $(this).attr("id") == "feedback-name" || $(this).attr("id") == "feedback-email2" || $(this).attr("id") == "feedback-phone2" || $(this).attr("id") == "feedback-name2") {
         return;
     }
     $('html, body').animate({

@@ -49,7 +49,7 @@ if(!isset($description))
     <!-- style -->
     <?php
     echo '<style>';
-    require 'templates/zaimhome/assets/css/style.min.css';
+    require 'templates/zaimhome/assets/css/style.css';
     echo '</style>';
     echo '<style>';
     require 'templates/zaimhome/assets/css/main.css';

@@ -117,6 +117,7 @@ require 'header.php';
         </div>
     </div>
 </div>
+<br><br>
 <?php require 'footer.php';?>
 </body>
 </html>

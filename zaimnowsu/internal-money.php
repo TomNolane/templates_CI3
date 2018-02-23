@@ -6,28 +6,28 @@
             <li class="active nav-item">
                 <a data-toggle="tab" href="#home" >
                     <span>Займ на банковскую карту</span>
-                    <img src="/templates/zaimnow/assets/img/visa-color.png" alt="visa-color.png">
-                    <img src="/templates/zaimnow/assets/img/mastercard-color.png" alt="/mastercard-color.png">
+                    <img src="/templates/zaimnowsu/assets/img/visa-color.png" alt="visa-color.png">
+                    <img src="/templates/zaimnowsu/assets/img/mastercard-color.png" alt="/mastercard-color.png">
                 </a>
             </li>
             <li class="nav-item"><a data-toggle="tab" href="#menu1" >
                 <span>Займ на Яндекс.Деньги</span>
-                <img src="/templates/zaimnow/assets/img/yandex.png" alt="yandex.png">
+                <img src="/templates/zaimnowsu/assets/img/yandex.png" alt="yandex.png">
             </a>
             </li>
             <li class="nav-item"><a data-toggle="tab" href="#menu2" >
                 <span>Займ на Qiwi</span>
-                <img src="/templates/zaimnow/assets/img/unknown.png" alt="unknown.png">
+                <img src="/templates/zaimnowsu/assets/img/unknown.png" alt="unknown.png">
             </a>
             </li>
             <li class="nav-item"><a data-toggle="tab" href="#menu3" >
                 <span>Займ на банковский счет</span>
-                <img src="/templates/zaimnow/assets/img/safebox.png" alt="safebox.png">
+                <img src="/templates/zaimnowsu/assets/img/safebox.png" alt="safebox.png">
             </a>
             </li>
             <li class="nav-item"><a data-toggle="tab" href="#menu4" >
                 <span>Займ через Contact</span>
-                <img src="/templates/zaimnow/assets/img/contact.png" alt="contact.png">
+                <img src="/templates/zaimnowsu/assets/img/contact.png" alt="contact.png">
             </a>
             </li>
         </ul>
