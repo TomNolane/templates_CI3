@@ -10,9 +10,7 @@ if(!isset($description))
 <html lang="ru">
 
 <head>
-	<title>
-		<?php echo $my_title;?>
-	</title>
+	<title><?php echo $my_title;?></title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="IE=Edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
@@ -20,11 +18,6 @@ if(!isset($description))
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="dengoman5.ru" /> 
-
-	
-	 
-	
-
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="dengoman5 - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
 	<meta property="og:image" content="https://dengoman5.ru/templates/dengoman/img/bg.jpg"/>
@@ -37,13 +30,7 @@ if(!isset($description))
 	<meta name="twitter:image:src" content="https://dengoman5.ru/templates/dengoman/img/bg.jpg"/>
 	<meta name="twitter:url" content="https://dengoman5.ru/"/>
 	<meta name="twitter:domain" content="dengoman5.ru"/>
-    <link rel="shortcut icon" type="image/png" href="/templates/dengoman/img/favicon.png" /> 
-
-<!-- <link href="/modules/jquery.ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" media="screen">
-<link href="/modules/jquery.ion.rangeslider/css/ion.rangeSlider.skinHTML5.css" rel="stylesheet" media="screen">
-
-<link href="/modules/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="https://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="shortcut icon" type="image/png" href="/templates/dengoman/img/favicon.png" />
 
 	<!-- CSS --> 
     <?php
@@ -513,7 +500,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             data-validation-error-msg="Введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
                 </div>
                 <div class="form-group">
-                    <input type="tel" class="form-control" id="feedback-phone" title="Тефелон" placeholder="Введите ваш телефон" required>
+                    <input type="hidden" class="form-control" id="feedback-phone" title="Тефелон" value="89777474747" placeholder="Введите ваш телефон" required>
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" id="feedback-email" title="Email" placeholder="Введите ваш email" required>

@@ -16,10 +16,7 @@ if(!isset($description))
 	<meta name="Description" content="<?php echo $description;?>" />
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
-	<meta name="copyright" lang="ru" content="zaimhunter.ru" /> 
-	
-	 
-	
+	<meta name="copyright" lang="ru" content="zaimhunter.ru" />
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="zaimhunter - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
 	<meta property="og:image" content="https://zaimhunter.ru/templates/zaimhunter/assets/img/pic-email.png"/>
@@ -202,13 +199,13 @@ if(!isset($description))
                             data-validation-error-msg="Введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
                 </div>
                 <div class="form-group">
-                    <input type="tel" class="form-control" id="feedback-phone" title="Тефелон" placeholder="Введите ваш телефон" required>
+                    <input type="hidden" class="form-control" id="feedback-phone" value="89777474747" title="Тефелон" placeholder="Введите ваш телефон" required>
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" id="feedback-email" title="Email" placeholder="Введите ваш email" required>
                 </div>
                 <div class="form-group">
-                    <textarea id="feedback-comment" rows="3" class="form-control" title="Текст вашего сообщения" placeholder="Введите текст сообщения" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Введите текст сообщения" required></textarea>
+                <textarea class="form-control" id="feedback-comment" placeholder="Текст вашего сообщения" title="Текст вашего сообщения" required></textarea>
                 </div>
                 <button type="button" id="feedback-send" class="ex-main-btn">Отправить</button>
             </div>

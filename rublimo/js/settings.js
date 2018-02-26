@@ -1,3 +1,89 @@
+function addDate(numberOfYears)
+{
+    var startDate = new Date();
+    var returnDate = new Date(
+                            startDate.getFullYear()-numberOfYears,
+                            startDate.getMonth(),
+                            startDate.getDate(),
+                            startDate.getHours(),
+                            startDate.getMinutes(),
+                            startDate.getSeconds());
+    return returnDate;
+};
+function addDate2(numberOfDays,numberOfMonth,numberOfYears)
+{
+    var startDate = new Date();
+    var returnDate = new Date(
+                            numberOfYears,
+                            numberOfMonth-1,
+                            numberOfDays,
+                            startDate.getHours(),
+                            startDate.getMinutes(),
+                            startDate.getSeconds());
+    return returnDate;
+};
+function CheckTime()
+{
+    var today = addDate2($('#birthdate').val().split('/')[0],$('#birthdate').val().split('/')[1],$('#birthdate').val().split('/')[2]).getTime();
+    var from = addDate(18).getTime();
+    var to = addDate(70).getTime();
+    var withinRange = today <= from && today >= to;
+
+    if(withinRange)
+    {
+        $('#birthdate').parent($('#birthdate')).find('.help-block2').css('display','none');
+        $('#birthdate').parent().parent().prev().removeClass('label_er').addClass('label_true');
+        $('#birthdate').removeClass('er');
+        $('#birthdate').parent().removeClass('ex-error').addClass('ex-success');
+        $('#birthdatestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
+        return true;
+    }
+    else
+    {
+        $('#birthdate').parent().parent().prev().addClass('label_er').removeClass('label_true');
+        $('#birthdate').addClass('er');
+        $('#birthdate').parent().removeClass('ex-success').addClass('ex-error');
+        $('#birthdate').attr('placeholder',"Возраст должен быть от 18 до 70 лет");
+        $('#birthdate').parent($('#birthdate')).find('.help-block2').css('display','inline-block');
+        $('#birthdate').parent($('#birthdate')).find('.help-block2').text("Возраст должен быть от 18 до 70 лет");
+        return false;
+    }
+}
+function CheckTime2()
+{
+    var today = addDate2($('#passportdate').val().split('/')[0],$('#passportdate').val().split('/')[1],$('#passportdate').val().split('/')[2]).getTime();
+    var from = addDate(0).getTime();
+    var to = addDate(100).getTime();
+    var withinRange = today <= from && today >= to;
+
+    if(withinRange)
+    {
+        $('#passportdate').parent($('#passportdate')).find('.help-block2').css('display','none');
+        $('#passportdate').parent().parent().prev().removeClass('label_er').addClass('label_true');
+        $('#passportdate').removeClass('er');
+        $('#passportdate').parent().removeClass('ex-error').addClass('ex-success');
+        $('#passportdatestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok');
+        var birth = $('#passportdate').val().split('/');
+        $('select#passport_dd').append($("<option></option>").attr("value", birth[0]).text(birth[0]));
+        $("select#passport_dd").val(birth[0]);
+        $('select#passport_mm').append($("<option></option>").attr("value", birth[1]).text(birth[1]));
+        $("select#passport_mm").val(birth[1]);
+        $('select#passport_yyyy').append($("<option></option>").attr("value", birth[2]).text(birth[2]));
+        $("select#passport_yyyy").val(birth[2]);
+        return true;
+    }
+    else
+    {
+        $('#passportdate').parent().parent().prev().addClass('label_er').removeClass('label_true');
+        $('#passportdate').addClass('er');
+        $('#passportdate').parent().removeClass('ex-success').addClass('ex-error');
+        $('#passportdate').attr('placeholder',"Возраст должен быть от 18 до 100 лет");
+        $('#passportdate').parent($('#passportdate')).find('.help-block2').css('display','inline-block');
+        $('#passportdate').parent($('#passportdate')).find('.help-block2').text("Возраст должен быть от 18 до 100 лет");
+        return false;
+    }
+}
+
 var re = /^[а-яА-Я0-9\/]+$/i;
 var re_rc = /^[а-яА-Яё,\W\.\s-]+$/i;
 var re_email = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
@@ -5,18 +91,13 @@ var re_int = /^\d+$/;
 var re_name = /^[а-яА-Яё,\W\.\s-]+$/i;
 var isWebvisor = new RegExp('^https?:\/\/([^/]+metrika.yandex\.(ru|ua|com|com\.tr|by|kz)|([^/]+\.)?webvisor\.com)').test(document.referrer);
 
-function error(msg, elem) {
-    var title = 'Ошибка';
-    if ($('#message').length) $('#message').remove();
-    $('body').append('<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-        '<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' +
-        '<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">OK</button></div></div></div></div>');
-    $('html, body').animate({
-        scrollTop: elem.offset().top - 160
-    }, 1000);
-    elem.click();
-    elem.blur();
-    $('#message').modal('show');
+function error(msg, elem) {  
+	$('html, body').animate({
+		scrollTop: elem.offset().top - 160
+	}, 1000);
+	elem.click();
+	elem.blur(); 
+	elem.parent(elem).find('.help-block2').css('display','inline-block'); 
 }
 
 function send_form(send, href) {
@@ -54,6 +135,10 @@ function validate1() {
     } else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
         error('Вы не указали пол.', $('input[name="gender"]'));
         return false;
+    } else if(!CheckTime())
+    {
+        error('Возраст должен быть от 18 до 70 лет', $('input[name="birthdate"]'));
+        return false;
     } else if ($('input[name="phone"]').val().length != 16) {
         error('Номер телефона указан неверно.', $('input[name="phone"]'));
         return false;
@@ -71,6 +156,10 @@ function validate2() {
     if (isWebvisor) return true;
     if ($('input[name="passport"]').val().length < 11) {
         error('Вы не указали номер и серию паспорта.', $('input[name="passport"]'));
+        return false;
+    } else if(!CheckTime2())
+    {
+        error('Возраст должен быть от 18 до 70 лет', $('input[name="passportdate"]'));
         return false;
     } else if ($('input[name="passport_who"]').val().length < 3) {
         error('Необходимо указать, кем выдан паспорт.', $('input[name="passport_who"]'));
@@ -167,12 +256,8 @@ $(document).ready(function () {
     $('#passport_code').mask("nnn-nnn", {
         "placeholder": "___-___"
     });
-    $('input#birthdate').mask("nn/nn/nnnn", {
-        "placeholder": "__/__/__"
-    });
-    $('input#passportdate').mask("nn/nn/nnnn", {
-        "placeholder": "__/__/__"
-    });
+    $('input#birthdate').mask("nn/nn/nnnn", { "placeholder": "__/__/__" });
+    $('input#passportdate').mask("nn/nn/nnnn", { "placeholder": "__/__/__" });
     $('input#work_salary').mask("nnnn?nn", {
         "placeholder": ""
     });
@@ -305,12 +390,71 @@ $(document).ready(function () {
     });
     $('input').on('validation', function (evt, valid) {
         if (valid) {
+
+            if(this.name == 'birthdate')
+            {    
+                var today = addDate2($('#birthdate').val().split('/')[0],$('#birthdate').val().split('/')[1],$('#birthdate').val().split('/')[2]).getTime();
+                var from = addDate(18).getTime();
+                var to = addDate(70).getTime();
+                var withinRange = today <= from && today >= to;
+
+                if(withinRange)
+                {
+                    $('#birthdate').parent($('#birthdate')).find('.help-block2').css('display','none');
+                    $('#birthdate_label').removeClass('label_er').addClass('label_true');
+                    $('#birthdate').removeClass('er');
+                    $('#birthdate').parent().removeClass('ex-error').addClass('ex-success');
+                    $('#birthdatestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
+                    return;
+                }
+                else
+                {
+                    $('#birthdate_label').addClass('label_er').removeClass('label_true');
+                    $('#birthdate').addClass('er');
+                    $('#birthdate').parent().removeClass('ex-success').addClass('ex-error');
+                    $('#birthdate').attr('placeholder',"Возраст должен быть от 18 до 70 лет");
+                    $('#birthdate').parent($('#birthdate')).find('.help-block2').css('display','inline-block');
+                    $('#birthdate').parent($('#birthdate')).find('.help-block2').text("Возраст должен быть от 18 до 70 лет");
+                    return;
+                }
+            }
+
+            if(this.name == 'passportdate')
+            {    
+                var today = addDate2($('#passportdate').val().split('/')[0],$('#passportdate').val().split('/')[1],$('#passportdate').val().split('/')[2]).getTime();
+                var from = addDate(0).getTime();
+                var to = addDate(100).getTime();
+                var withinRange = today <= from && today >= to;
+
+                if(withinRange)
+                {
+                    $('#passportdate').parent($('#passportdate')).find('.help-block2').css('display','none');
+                    $('#passportdate').parent().parent().prev().removeClass('label_er').addClass('label_true');
+                    $('#passportdate').removeClass('er');
+                    $('#passportdate').parent().removeClass('ex-error').addClass('ex-success');
+                    $('#passportdatestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
+                    return;
+                }
+                else
+                {
+                    $('#passportdate').parent().parent().prev().addClass('label_er').removeClass('label_true');
+                    $('#passportdate').addClass('er');
+                    $('#passportdate').parent().removeClass('ex-success').addClass('ex-error');
+                    $('#passportdate').attr('placeholder',"Возраст должен быть от 18 до 100 лет");
+                    $('#passportdate').parent($('#passportdate')).find('.help-block2').css('display','inline-block');
+                    $('#passportdate').parent($('#passportdate')).find('.help-block2').text("Возраст должен быть от 18 до 100 лет");
+                    return;
+                }
+            } 
+
             if ($(this)[0].name == 'birthdate' || $(this)[0].name == 'passportdate' || $(this)[0].name == 'passport_code' || $(this)[0].name == 'passport' || $(this)[0].name == 'passport_who' || $(this)[0].name == 'birthplace' || $(this)[0].name == 'city' || $(this)[0].name == 'street' || $(this)[0].name == 'building' || $(this)[0].name == 'work_experience' || $(this)[0].name == 'work_occupation' || $(this)[0].name == 'work_phone' || $(this)[0].name == 'work_salary' || $(this)[0].name == 'work_city' || $(this)[0].name == 'work_street' || $(this)[0].name == 'work_house') {
                 $(this).css('margin-bottom', '0px');
             }
             $(this).parent().prev().removeClass('label_er').addClass('label_true');
             $(this).removeClass('er');
             $('#' + this.id + 'status').removeClass('glyphicon-remove').addClass('glyphicon-ok');
+            $(this).parent($(this)).find('.help-block2').css('display','none'); 
+            $(this).parent($(this)).find('.help-block2').text(evt.currentTarget.dataset.validationErrorMsg);
         } else {
             $(this).parent().prev().addClass('label_er').removeClass('label_true');
             $('#' + this.id + 'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
@@ -323,6 +467,8 @@ $(document).ready(function () {
             if (this.name !== 'f' && this.name !== 'i' && this.name !== 'o') {
                 $(this).attr('placeholder', evt.currentTarget.dataset.validationErrorMsg);
             }
+            $(this).parent($(this)).find('.help-block2').text(evt.currentTarget.dataset.validationErrorMsg);
+            $(this).parent($(this)).find('.help-block2').css('display','inline-block');
         }
     });
     $('#phone').blur(function () {
@@ -362,8 +508,7 @@ $(document).ready(function () {
             }
         });
     });
-    var lang = 0;
-
+    var lang = 0; 
     $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street, #feedback-name').on('keyup keypress', function (e) {
         if ($(this).val().match(/([a-zA-Z]+)/)) {
             lang++;
@@ -412,74 +557,7 @@ $(document).ready(function () {
             $(this).parent().removeClass('ex-error');
             $(this).next("span").text(' ');
         }
-    });
-    var JSdate = new Date();
-    var current_date = JSdate.getDate();
-    var current_month = JSdate.getMonth() + 1;
-    var current_year = JSdate.getFullYear();
-    var current_year_5 = JSdate.getFullYear() - 5;
-    var current_year_18 = JSdate.getFullYear() - 18;
-    var current_year_70 = JSdate.getFullYear() - 70;
-    var current_year_100 = JSdate.getFullYear() - 100;
-    var today_18 = current_date + "/" + current_month + "/" + current_year_18;
-    var today_70 = current_date + "/" + current_month + "/" + current_year_70;
-    var today_100 = current_date + "/" + current_month + "/" + current_year_100;
-    var today = current_date + "/" + current_month + "/" + current_year;
-    var today_5 = current_date + "/" + current_month + "/" + current_year_5;
-    if ($('#birthdate').attr('placeholder')) {
-        $('#birthdate').pickmeup_twitter_bootstrap(
-            pickmeup.defaults.locales['en'] = {
-                days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-                daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-                daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-                months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-                monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
-            },
-            pickmeup('#birthdate', {
-                format: 'd/m/Y',
-                default_date: true,
-                hide_on_select: true,
-                date: today_18,
-                min: today_70,
-                max: today_18,
-                change: function (formatted_date) {
-                    if ($(this).val().indexOf("_") == -1) $('#phone').focus();
-                }
-            })
-        );
-        $('#passportdate').pickmeup_twitter_bootstrap(
-            pickmeup.defaults.locales['en'] = {
-                days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-                daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-                daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-                months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-                monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
-            },
-            pickmeup('#passportdate', {
-                format: 'd/m/Y',
-                default_date: true,
-                hide_on_select: true,
-                date: today_5,
-                min: today_100,
-                max: today,
-                change: function (formatted_date) {
-                    var birth = formatted_date.split('/');
-                    $('select#passport_dd').append($("<option></option>").attr("value", birth[0]).text(birth[0]));
-                    $("select#passport_dd").val(birth[0]);
-                    $('select#passport_mm').append($("<option></option>").attr("value", birth[1]).text(birth[1]));
-                    $("select#passport_mm").val(birth[1]);
-                    $('select#passport_yyyy').append($("<option></option>").attr("value", birth[2]).text(birth[2]));
-                    $("select#passport_yyyy").val(birth[2]);
-
-                    if ($(this).val().indexOf("_") == -1)
-                        $('#passport_code').focus();
-                }
-            })
-        );
-    } else {
-        
-    }
-
+    }); 
     function setcookies() {
         $('.ec').each(function () {
             var variant = $(this).attr('name');
@@ -570,9 +648,7 @@ $(document).ready(function () {
     // device detection
     if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) ||
         /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0, 4))) isMobile = true;
-    if (isMobile) {
-        $('#birthdate').prop('readonly', true);
-        $('#passportdate').prop('readonly', true);
+    if (isMobile) { 
     } else {
         $('.tip').poshytip({
             className: 'tip-twitter',

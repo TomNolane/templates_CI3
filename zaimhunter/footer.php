@@ -731,7 +731,7 @@ if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
 require 'yandex_metrika.php';
 require 'google_analytics.php';
 echo '<script>';
-require 'templates/zaimrubli/assets/js/modal.js';
+require 'templates/zaimhunter/assets/js/modal.js';
 echo '</script>';
 ?>
 </body>

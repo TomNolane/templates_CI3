@@ -31,20 +31,22 @@
 <div class="form-group has-feedback"> 
 	<label class="col-sm-4 control-label label-required hidden-xs">Фамилия</label>
 	<div class="col-sm-8 col-xs-12"> 
-			<input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
-			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
+			<input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию"
+			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
 			    required>
 			<span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="help-block2">Нужно указать фамилию</p>
 			<p class="text-muted helpblock">Пример: Иванова</p>
 	</div>
 </div>
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Имя</label>
 	<div class="col-sm-8 col-xs-12"> 
-			<input type="text" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize"
-			    data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя"
+			<input type="text" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Укажите свое имя" data-sanitize="capitalize"
+			    data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое имя"
 			    required>
 			<span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="help-block2">Нужно указать имя</p> 
 			<p class="text-muted helpblock">Пример: Лариса</p>
 	 
 	</div>
@@ -52,10 +54,11 @@
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Отчество</label>
 	<div class="col-sm-8 col-xs-12"> 
-			<input type="text" class="form-control ec tip" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
-			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
+			<input type="text" class="form-control ec tip" name="o" id="o" placeholder="Отчество" title="Укажите свое отчество"
+			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
 			    required>
 			<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="help-block2">Нужно указать отчество</p> 
 			<p class="text-muted helpblock">Пример: Ивановна</p>
 		 
 	</div>
@@ -110,30 +113,33 @@
 </div>
 <!-- Скрываем старую форму даты рождения -->
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Дата рождения</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" id="birthdate_label">Дата рождения</label>
 	<div class="col-sm-8 col-xs-12"> 
-			<input type="text" class="form-control ec tip" name="birthdate" id="birthdate" placeholder="День рождения" title="Пожалуйста, выберете свою дату рождения"
-			    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения"
+			<input type="tel" class="form-control ec tip" name="birthdate" id="birthdate" placeholder="День рождения" title="Укажите свою дату рождения"
+			    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Укажите дату рождения"
 			    required>
 			<span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="help-block2"></p>
 			<p class="text-muted helpblock">Пример: 06/02/2000</p>
 	</div>
 </div>
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Телефон</label>
 	<div class="col-sm-8 col-xs-12">
-		<input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон" title="Введите свой телефон"
-		data-validation-error-msg="Пожалуйста, выберите номер телефона"   required>
+		<input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон" title="Укажите свой телефон"
+		data-validation-error-msg="Укажите номер телефона"   required>
 		<span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="help-block2">Нужно указать номер телефона</p>
 		<p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
 	</div>
 </div>
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Почта</label>
 	<div class="col-sm-8 col-xs-12"> 
-		<input type="email" class="form-control ec tip" name="email" id="email" title="Введите свой email адрес" placeholder="Email"
+		<input type="email" class="form-control ec tip" name="email" id="email" title="Укажите свой email адрес" placeholder="Email"
 			  data-validation="email" required>
 		<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="help-block2"></p>
 		<p class="text-muted helpblock">Пример: email@mail.ru</p>
 	</div>
 </div>

@@ -24,8 +24,8 @@ $pixel = $this->pixel->stat('zaimnow.su');
 
 $_plural_years = array('год', 'года', 'лет');
 $_plural_months = array('месяц', 'месяца', 'месяцев');
-$_plural_days = array('дня', 'дня', 'дней');
-$_plural_times = array('раз', 'раза', 'раз'); 
+$_plural_days = array('день', 'дня', 'дней');
+$_plural_times = array('раз', 'раза', 'раз');
 function plural_type($n) { 
     return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
 } 
@@ -52,50 +52,12 @@ function plural_type($n) {
                     </table>
                 </div>
                 <?php  
-                $arr = array(
-                    array(
-                        "title" => "Zaimer",
-                        "img" => "zaymer",
-                        "text" => "Займы онлайн в Казахстане от Займер",
-                        "link" => "https://pxl.leads.su/click/64d72b33de41d8fbc5d8007e108e3914?aff_sub1=Zaimnow.su",
-                        "amount" => "200000",
-                        "period" => "21",
-                        "percent" => "0,49"
-                      ),
-                      array(
-                        "title" => "Zing",
-                        "img" => "zing",
-                        "text" => "Займы онлайн в Казахстане от Zing",
-                        "link" => "https://pxl.leads.su/click/a604b113bfa4287bd880c340a6bb9825?aff_sub1=Zaimnow.su",
-                        "amount" => "200000",
-                        "period" => "30",
-                        "percent" => "0.50"
-                      ),
-                      array(
-                        "title" => "ccloan",
-                        "img" => "ccloan",
-                        "text" => "Займы онлайн в Казахстане от ccloan",
-                        "link" => "https://pxl.leads.su/click/a35dfa2f3d49fe02d7ffcb7ed3f1b0f1?aff_sub1=Zaimnow.su",
-                        "amount" => "200000",
-                        "period" => "30",
-                        "percent" => "1.00"
-                      ),
-                      array(
-                        "title" => "Moneyman",
-                        "img" => "moneyman",
-                        "text" => "Займы онлайн в Казахстане от Moneyman",
-                        "link" => "https://pxl.leads.su/click/3fede75a05555fc1afbedaf279d75e21?aff_sub1=Zaimnow.su",
-                        "amount" => "200000",
-                        "period" => "31",
-                        "percent" => "0.50"
-                      )
-                );
-                    foreach($arr as $item)
+                    foreach($data as $item)
                     {
                         $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
                         $item['link'] = str_replace("#site", $domen, $item['link']);
 
-                        echo '<div class="ex-offerta-block ex-on-small-device ex-offerta-active">
+                        echo '<div class="ex-offerta-block ex-on-small-device">
                             <table>
                                 <tbody>
                                 <tr>
@@ -105,7 +67,7 @@ function plural_type($n) {
                                         </a></div>
                                     </td>
                                     <td data-label="Сумма займа">
-                                        <div>до '.number_format($item['amount'],0,'',' ').' &#8376;</div>
+                                        <div>до '.number_format($item['amount'],0,'',' ').'</div>
                                     </td>
                                     <td data-label="Срок займа">
                                         <div>до '.$item['period'].' '.$_plural_days[plural_type($item['period'])].'</div>
@@ -129,7 +91,7 @@ function plural_type($n) {
             </div>
         </div>
     </div>
-</div> 
+</div>
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
 Page -->

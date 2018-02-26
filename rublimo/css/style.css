@@ -1022,4 +1022,16 @@ footer .copy{
 }
 input#i , input#o, input#f, input#feedback-name {
     text-transform: capitalize !important;
-  } 
+  }
+  input:invalid:not(:placeholder-shown) {border-color: red;}
+input:valid:not(:placeholder-shown) {border-color: green;}
+.help-block2 {
+    display: none;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    float: left;
+    color: red !important;
+}  
+.help-block {
+    display: none !important;
+}

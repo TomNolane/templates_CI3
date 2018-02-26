@@ -203,5 +203,5 @@ color: #3c763d !important;
     margin-bottom: 5px;
     margin-top: 2px;
     font-size: 0.8em;
-    float: right;
+    float: right !important;
 }
