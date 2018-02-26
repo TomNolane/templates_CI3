@@ -10566,8 +10566,6 @@ button.close {
 /* line 16, ../sass/library/_owlCarousel.scss */
 .owl-carousel .owl-stage {
   position: relative;
-  -ms-touch-action: pan-Y;
-  -moz-backface-visibility: hidden;
   /* fix firefox animation glitch */
 }
 
@@ -10762,7 +10760,6 @@ button.close {
   background: url("owl.video.play.png") no-repeat;
   cursor: pointer;
   z-index: 1;
-  -webkit-backface-visibility: hidden;
   transition: transform 100ms ease;
 }
 
@@ -13460,9 +13457,22 @@ input#i , input#o, input#f, input#feedback-name {
     text-transform: capitalize !important;
   }
   .helpblock
-{
-  margin-bottom: 5px;
-  margin-top: 2px;
-  font-size: 0.8em;
-  float: right;
-}
+  {
+    margin-bottom: 5px;
+    margin-top: 2px;
+    font-size: 0.8em;
+    float: right !important;
+  }
+  input:invalid:not(:placeholder-shown) {border-color: red;}
+  input:valid:not(:placeholder-shown) {border-color: green;}
+  .help-block {
+    display: none !important;
+  }
+  .help-block2 {
+      display: none;
+      margin-bottom: 5px;
+      margin-top: 2px;
+      font-size: 0.8em;
+      float: left;
+      color: red !important;
+  }  

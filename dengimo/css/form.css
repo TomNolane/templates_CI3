@@ -92,8 +92,7 @@ label{
     margin-right:10px;
 }
 .secure-item{
-    display:inline-block;
-    float:left;
+    display:inline-block; 
 }
 .secure img{
     margin-top:8px;
@@ -204,5 +203,5 @@ color: #3c763d !important;
   margin-bottom: 5px;
   margin-top: 2px;
   font-size: 0.8em;
-  float: right;
+  float: right !important;
 } 

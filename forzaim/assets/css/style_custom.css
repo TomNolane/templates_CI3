@@ -98,31 +98,6 @@
   font-size: 0.8em;
 }
 
-input:-moz-placeholder {
-  /* color: #000000   !important;
-  opacity: .8; */
-}
-
-input::-moz-placeholder {
-  /* color: #000000   !important; */
-  /* opacity: .8; */
-}
-
-input::placeholder {
-  /* color: #000000   !important;
-   opacity: .8; */
-}
-
-input:-ms-input-placeholder {
-  /* color: #000000   !important;
-   opacity: .8; */
-}
-
-input:-webkit-input-placeholder {
-  /* color: #000000   !important;
-   opacity: .8; */
-}
-
 .label_er {
   color: #b94a48 !important;
 }
@@ -198,5 +173,18 @@ main.ex-faq .col-sm-3 button:last-of-type:hover {
   margin-bottom: 5px;
   margin-top: 2px;
   font-size: 0.8em;
-  float: right;
+  float: right !important;
 }
+input:invalid:not(:placeholder-shown) {border-color: red;}
+input:valid:not(:placeholder-shown) {border-color: green;}
+.help-block {
+  display: none !important;
+}
+.help-block2 {
+    display: none;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    font-size: 0.8em;
+    float: left;
+    color: red !important;
+}  

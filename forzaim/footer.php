@@ -88,12 +88,6 @@ if($this->uri->segment(1) != 'form')
     require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
     echo '</script>';
     echo '<script>';
-require 'templates/bzaim/assets/js/jquery.pickmeup.twitter-bootstrap.js';
-echo '</script>';
-echo '<script>';
-require 'templates/bzaim/assets/js/pickmeup.min.js';
-echo '</script>';
-    echo '<script>';
     require 'templates/forzaim/assets/js/jquery.form-validator.js';
     echo '</script>';
     echo '<script>';

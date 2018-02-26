@@ -34,6 +34,7 @@
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
 			    autofocus required>
 			<span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="help-block2">Нужно указать фамилию</p>
 			<p class="text-muted helpblock">Пример: Иванова</p>
 		</div>
 	</div>
@@ -46,6 +47,7 @@
 			    data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя"
 			    required>
 			<span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="help-block2">Нужно указать имя</p>
 			<p class="text-muted helpblock">Пример: Лариса</p>
 		</div>
 	</div>
@@ -58,6 +60,7 @@
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
 			    required>
 			<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="help-block2">Нужно указать отчество</p> 
 			<p class="text-muted helpblock">Пример: Ивановна</p>
 		</div>
 	</div>
@@ -115,10 +118,11 @@
 	<label class="col-sm-4 control-label label-required hidden-xs" for="birthdate">Дата рождения</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow dadata">
-			<input type="text" class="form-control ec tip" name="birthdate" id="birthdate" placeholder="День рождения" title="Выберете свою дату рождения"
+			<input type="tel" class="form-control ec tip" name="birthdate" id="birthdate" placeholder="День рождения" title="Выберете свою дату рождения"
 			    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
 			    required>
 			<span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="help-block2"></p>
 			<p class="text-muted helpblock">Пример: 06/02/2000</p>
 		</div>
 	</div>
@@ -131,6 +135,7 @@
 			    data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Введите телефон"
 			    required>
 			<span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="help-block2">Нужно указать номер телефона</p>
 			<p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
 		</div>
 	</div>
@@ -142,6 +147,7 @@
 			<input type="email" class="form-control ec tip" name="email" id="email" title="Введите свой email адрес" placeholder="Email"
 			    data-validation="email" data-validation-error-msg="Введите свой email" required>
 			<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<p class="help-block2"></p>
 			<p class="text-muted helpblock">Пример: email@mail.ru</p>
 		</div>
 	</div>
