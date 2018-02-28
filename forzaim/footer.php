@@ -123,7 +123,9 @@ if($this->uri->segment(1) != 'form')
     echo '<script>';
     require 'templates/forzaim/assets/js/loanCalculator.js';
     echo '</script>';
-    
+    echo '<script>';
+    require 'templates/forzaim/assets/js/homepageAnimations.js';
+    echo '</script>';
     ?>
     <script> 
     //backtotop

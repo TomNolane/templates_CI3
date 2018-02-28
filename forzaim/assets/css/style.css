@@ -10724,7 +10724,7 @@ button.close {
 .owl-carousel .owl-nav .owl-next,
 .owl-carousel .owl-dot {
   cursor: pointer;
-  cursor: hand;
+  
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -11400,9 +11400,15 @@ aside.ex-aside-menu main ul li.ex-larger:hover {
 /* line 84, ../sass/desktop/_homepage.scss */
 .ex-section-2 {
   padding-top: 120px;
+  overflow: hidden;
 }
 /* line 86, ../sass/desktop/_homepage.scss */
 .ex-section-2 .ex-int-block {
+  opacity: 0;
+  -moz-transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
   text-align: center;
 }
 /* line 88, ../sass/desktop/_homepage.scss */
@@ -13006,3 +13012,47 @@ main.ex-offerta .ex-adds {
 input#i , input#o, input#f {
   text-transform: capitalize !important;
 } 
+
+/* line 3, ../sass/core/_animate.scss */
+.animated-1 {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+/* line 7, ../sass/core/_animate.scss */
+.animated-2 {
+  animation-duration: 0.4s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+/* line 12, ../sass/core/_animate.scss */
+.animated-3 {
+  animation-duration: 0.4s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+/* line 17, ../sass/core/_animate.scss */
+.animated-4 {
+  animation-duration: 0.3s;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* line 37, ../sass/core/_animate.scss */
+.fadeInRight {
+  animation-name: fadeInRight;
+}

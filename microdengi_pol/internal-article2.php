@@ -7,28 +7,10 @@
                     <div class="ex-art-pic ex-art-pic2">
                     </div>
                     <div class="ex-art-content">
-                        <h1 class="text-center">Podstawowe metody pozyskiwania pożyczek online</h1>
-                        <p>W tym artykule rozpatrzymy najczęstsze opcje uzyskiwania pożyczek online. - Na kartę płatniczą VISA
-                            lub Maestro. Według tradycji jest to najpopularniejsza opcja uzyskania pożyczki. Łatwość użytkowania
-                            i szybkie wpłynięcie środków to główne cechy pożyczki online na kartę. Przesyłając wniosek o
-                            pilne pieniądze, należy zarejestrować dane karty i potwierdzić jej przynależność za pomocą wiadomości
-                            SMS.</p>
-                        <p>
-                            - Na konto bankowe. Jest to metoda mniej popularna, choć dość powszechna. Odpowiednia dla tych, którzy nie mają własnej karty.
-                            Wśród niedociągnięć tej opcji jest konieczność udania się do banku, aby uzyskać pilną pożyczkę.
-                            Ponadto pożyczkobiorca musi z góry znać dane konta.</p>
-                        <p>
-                            - Poprzez systemy płatności. Najbardziej znanym przedstawicielem jest system błyskawicznych przelewów pieniężnych Contact.
-                            Ta metoda wymaga wizyty w punkcie wydania w celu uzyskania pożyczki w gotówce.
-                        </p>
-                        <p>
-                            - Na portfele elektroniczne. Najbardziej znane z nich to Yandex.Money, WebMoney, QIWI i Dengi Mail.ru. Dużym plusem jest
-                            to, że po zatwierdzeniu wniosku, przekazanie pożyczki online odbywa się natychmiastowo. Aby skorzystać
-                            z tej metody, wystarczy zarejestrować portfel i znać jego numer.
-                        </p>
-                        <p>
-                            Aby uzyskać mikropożyczkę online, zalecamy skontaktowanie się z serwisami, które oferują co najmniej kilka sposobów otrzymywania
-                            pieniędzy.</p>
+                        <h1 class="text-center">Metoda wypłaty pożyczki online</h1>
+                        <p>Najczęstszą opcją wypłaty pożyczki jest przelew na numer rachunku bankowego. Jest to łatwy i przede wszystkim szybki sposób dostarczenia do Ciebie pieniędzy. Przesyłając wniosek, należy podać dane niezbędne do wykonania przelewu, który zostanie zrealizowany w momencie pozytywnego rozpatrzenia wniosku przez pożyczkodawcę.
+<br><br>Pieniądze już w ciągu 15 min znajdą się na Twoim koncie i będziesz mógł niezwłocznie z nich skorzystać.
+</p>
                     </div>
                 </div>
             </div>

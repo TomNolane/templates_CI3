@@ -131,6 +131,7 @@ if(!isset($description))
 		require 'sendpuls.php';
         require 'google_tag_manager.php';
         require 'googlesyndication.php';
+        require 'facebook.php';
     ?>
 </head>
 <body class="ex-sticky">

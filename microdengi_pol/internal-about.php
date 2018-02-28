@@ -5,67 +5,38 @@
             <div class="col-md-10 ">
                 <div class="ex-about-bg">
                     <h1 class="text-center">O serwisie</h1>
-                    <p>Niespodziewana sytuacja może stanąć na drodze, wywołać bezradność i rozczarowanie. Gdzie się
-                        zwrócić, gdy potrzebne są pieniądze, bardzo pilnie, a nawet bliscy ludzie nie mogą pomóc?
-                    </p>
-                    <h3>Mikrodengi - pomagamy spełnić życzenia i rozwiązać problemy tu i teraz, nie czekając na wypłatę
-                        pensji</h3>
-                    <p>
-                        Witamy w serwisie Mikrodengi - miejscu, w którym w każdej chwili można uzyskać pożyczkę bez
-                        kolejki i niepotrzebnych zapytań. Już od zaraz zdobądź pieniądze na wszelkie potrzeby:
-                        rozwiązanie sytuacji kryzysowych, pilne zakupy, rozrywka lub prezent dla bliskiej osoby.
+                    <p>Niespodziewana sytuacja może stanąć na drodze, wywołać bezradność i przysporzyć wiele zmartwień. Gdzie się zwrócić, gdy pilnie potrzebne są pieniądze, a nawet bliscy ludzie nie mogą pomóc?</p>
+                    <h3>Mikrodengi - pomagamy spełnić marzenia i rozwiązać problemy tu i teraz. Dzięki nam już nie musisz czekać na pensję jak na zbawienie.</h3>
+                    <p> 
+                        Witamy w serwisie Mikrodengi - miejscu, w którym w każdej chwili można uzyskać pożyczkę - bez kolejki i niepotrzebnych formalności. Już w ciągu 15 minut możesz zdobyć pieniądze na ważne wydatki np.: rozwiązanie sytuacji kryzysowych, pilne zakupy, wymarzony sprzęt lub prezent dla bliskiej osoby.
                     </p>
                     <h3>Pożyczka w Mikrodengi jest korzystna, prosta i niezawodna, przekonaj się sam:</h3>
                     <p>
-                        <b> Brak płatności i prowizji za fakt wyboru pożyczek.</b> Serwis wybierze za darmo najbardziej
-                        korzystne pilne pożyczki w Rosji - właśnie z uwzględnieniem Twoich osobistych warunków.
+                        <strong> Brak płatności i prowizji za pomoc w wyborze pożyczki.</strong>Serwis wybierze za darmo najbardziej korzystną pożyczkę, spośród ofert dostępnych na runku. Pożyczka dobrana specjalnie dla Ciebie, dopasowana do Twoich potrzeb i możliwości.
                     </p>
-                    <p><b>7 minut - średni czas zatwierdzenia wniosku.</b> Zapomnij o stracie czasu w konwencjonalnych
-                        bankach.
+                    <p><b>7 minut - średni czas zatwierdzenia wniosku.</b> Zapomnij o stracie czasu w konwencjonalnych bankach.
                     </p>
                     <p>
-                        <b>Pożyczki dla wszystkich obywateli Rosji.</b> Gdziekolwiek jesteś, potrzebujesz tylko
-                        paszportu,
-                        telefonu komórkowego i dostępu do Internetu w celu uzyskania pomocy finansowej.
+                        <b>Pożyczki dla wszystkich obywateli Polski.</b> Gdziekolwiek jesteś, aby uzyskać pomoc finansową, potrzebujesz tylko dowodu tożsamości, telefonu komórkowego i dostępu do Internetu.
                     </p>
                     <p>
-                        <b>Całodobowe wsparcie.</b> Możesz skorzystać z pożyczki online natychmiast, o każdej porze dnia
-                        i w
-                        dowolnym dniu tygodnia, nawet w święta.</p>
+                        <b>Całodobowe wsparcie.</b> Możesz skorzystać z pożyczki online i złożyć wniosek, o każdej porze dnia i nocy, w dowolnym dniu tygodnia, a nawet w święta.</p>
                     <p><b>Jasny i zwięzły kwestionariusz. </b>Wypełnienie wniosku zajmie Ci 2-3 minuty.</p>
-                    <p><b>Minimalny procent.</b> Serwis automatycznie wybiera najbardziej korzystne dla Ciebie opcje
-                        mikropożyczek. </p>
-                    <p><b>Europejska jakość i niezawodność udzielenia pożyczki na kartę. </b>Twoje dane osobowe są
-                        przesyłane
-                        bezpiecznym kanałem i nie są dostępne dla stron trzecich.
+                    <p><b>Minimalny procent.</b> Serwis automatycznie wybiera najbardziej korzystne dla Ciebie opcje mikropożyczek.</p>
+                    <p><b>Europejska jakość i niezawodność udzielenia pożyczki. </b>Twoje dane osobowe są przesyłane bezpiecznym kanałem i nie są udostępniane osobom trzecim.
                     </p>
-                    <p><b>Szybkie i wygodne opcje uzyskania mikropożyczki:</b> na konto bankowe lub kartę bankową, na
-                        portfel
-                        WebMoney lub Yandex.Money, za pośrednictwem systemu CONTACT.</p>
+                    <p><b>Szybka i wygodna metoda uzyskania mikropożyczki. </b> Po uzyskaniu pozytywnej decyzji o przyznaniu pożyczki, pieniądze wpłyną prosto na Twoje konto bankowe już w ciągu 15 min.</p>
 
-                    <p><b>Elastyczny limit dla stałych klientów. </b>Spłacaj na czas osobistą pożyczkę trzy razy z rzędu
-                        w
-                        naszym serwisie i otrzymaj możliwość pożyczenia pieniędzy na kwotę nawet do 100 000 rubli!</p>
+                    <p><b>Więcej możliwości dla stałych klientów. </b>Stali klienci mogą liczyć na specjalną ofertę z jeszcze lepszymi warunkami spłaty i większymi limitami kwot pożyczek.</p>
                     <p>
-                        <b>Bez gwarantów, zastawów, kontroli i kolejek.</b> W przeciwieństwie do konwencjonalnych
-                        banków,
-                        absolutnie nie tracisz czasu na niepotrzebne procedury.</p>
-                    <p><b>Natychmiastowe uznawanie środków.</b> Pożyczka online wpłynie do Ciebie natychmiast po
-                        zatwierdzeniu.</p>
-                    <p><b>Szansa na naprawienie ujemnej historii kredytowej.</b> Spłacaj pożyczki na czas w Mikrodengi i
-                        popraw
-                        swój rating kredytowy.</p>
-                    <p><b>Zatwierdzamy pożyczki dla wszystkich.</b> Zdecydowana większość wniosków w naszym serwisie
-                        jest
-                        natychmiast zatwierdzana - niezależnie od historii kredytowej.</p>
+                        <b>Bez gwarantów, zastawów, kontroli i kolejek. </b> W przeciwieństwie do konwencjonalnych banków, absolutnie nie tracisz czasu na niepotrzebne procedury.</p>
+                    <p><b>Natychmiastowy przelew środków na konto. </b>Pożyczka online wpłynie do Ciebie natychmiast po zatwierdzeniu.</p>
+                    <p><b>Szansa na naprawienie złej historii kredytowej. </b>Spłacając pożyczki, wzięte w serwisie Mikrodengi, na czas możesz poprawić swoją historię kredytową.</p>
+                    <p><b>Zatwierdzamy pożyczki dla wszystkich. </b> Zdecydowana większość wniosków w naszym serwisie jest natychmiast zatwierdzana - niezależnie od historii kredytowej</p>
                     <p><b>Odpowiedzialność.</b> Współpracujemy wyłącznie z legalnymi organizacjami finansowymi.</p>
-                    <p><b>Cenny newsletter online.</b> Nie zapomnij zapisać się do naszego newslettera. To pozwoli Ci
-                        otrzymywać aktualne informacje o najbardziej wygodnych pożyczkach online w Rosji.</p>
-                    <h3>94% naszych klientów potwierdziło, że serwis Mikrodengi pomógł im szybko rozwiązać<br>
-                        powstały problem życiowy</h3>
-                    <p>Pozwól sobie nie zależeć od okoliczności i otrzymuj pilne pieniądze bez zadawania pytań i w
-                        dowolnym czasie. Aby uzyskać pożyczkę w ciągu 10-15 minut, po prostu wypełnij krótki
-                        kwestionariusz i poczekaj, aż zadzwoni menedżer.</p>
+                    <p><b>Przydatny newsletter online.</b> Nie zapomnij zapisać się do naszego newslettera. To pozwoli Ci otrzymywać aktualne informacje o najkorzystniejszych pożyczkach online w Polsce.</p>
+                    <h3>94% naszych klientów potwierdziło, że serwis Mikrodengi pomógł im szybko rozwiązać powstały problem życiowy</h3>
+                    <p>Dzięki naszemu Serwisowi możesz czuć się bezpiecznie, niezależnie od sytuacji finansowej. Otrzymuj potrzebne pieniądze bez zadawania pytań i w dowolnym czasie. Aby uzyskać pożyczkę w ciągu 10-15 minut, po prostu wypełnij krótki kwestionariusz i poczekaj, aż zadzwoni menadżer.</p>
                 </div>
             </div>
         </div>

@@ -10941,7 +10941,7 @@ a.text-dark:focus, a.text-dark:hover {
 .owl-carousel .owl-nav .owl-next,
 .owl-carousel .owl-dot {
   cursor: pointer;
-  cursor: hand;
+  
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -11658,6 +11658,7 @@ a.text-dark:focus, a.text-dark:hover {
 /* line 1, /templates/microdengi_pol/assets/sass/desktop/_footer.scss */
 footer.ex-main-footer {
   height: 200px;
+  margin-top: 200px;
   background-color: #000000;
 }
 

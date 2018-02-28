@@ -131,9 +131,22 @@
     .ex-for-img {
       width: 525px;
       height: 450px;
-      background-image: url("../img/notebook.png");
       background-repeat: no-repeat;
+      -webkit-background-size: contain;
       background-size: contain;
+      @include prefix(transition, all 0.5s linear);
+      &.ex-count-1{
+        background-image: url(../img/ruble-1.png);
+      }
+      &.ex-count-2{
+        background-image: url(../img/ruble-2.png);
+      }
+      &.ex-count-3{
+        background-image: url(../img/ruble-3.png);
+      }
+      &.ex-count-4{
+        background-image: url(../img/ruble-4.png);
+      }
       @media (max-width: 1199px) {
         width: 472px;
       }

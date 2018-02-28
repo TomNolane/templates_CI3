@@ -23,6 +23,7 @@ $(document).ready(function () {
         probabilityTable2 = $('.ex-prob'),
         probability = 95,
         time = 'от 130 дней',
+        rubleCounter = $('.ex-for-img'),
         commission = (currentLoanSize * commissionPercantage) / 100,
         returnTotal = currentLoanSize + commission,
         setDynamicProbability = function () {
@@ -49,15 +50,19 @@ $(document).ready(function () {
             if(currentLoanSize < 60000 && currentLoanSize > 45000){
                 time = 'от 100 дней';
                 timeTable.html("<span>"+time+"</span>");
+                rubleCounter.removeClass('ex-count-1 ex-count-3 ex-count-4').addClass('ex-count-2');
             }if(currentLoanSize < 45000){
                 time = 'от 61 дня';
                 timeTable.html("<span>"+time+"</span>");
+                rubleCounter.removeClass('ex-count-2 ex-count-3 ex-count-4').addClass('ex-count-1');
             }if(currentLoanSize >= 60000 && currentLoanSize < 90000){
                 time = 'от 130 дней';
                 timeTable.html("<span>"+time+"</span>");
+                rubleCounter.removeClass('ex-count-1 ex-count-2 ex-count-4').addClass('ex-count-3');
             }if(currentLoanSize > 90000 && currentLoanSize < 120000){
                 time = 'от 200 дней';
                 timeTable.html("<span>"+time+"</span>");
+                rubleCounter.removeClass('ex-count-1 ex-count-2 ex-count-3').addClass('ex-count-4');
             }if(currentLoanSize > 120000){
                 time = 'от 250 дней';
                 timeTable.html("<span>"+time+"</span>");

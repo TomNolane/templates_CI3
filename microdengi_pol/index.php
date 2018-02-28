@@ -5,9 +5,8 @@
             <div class="col-lg-7 ">
                 <h1>
                     <span>
-                        Mikrodengi
-                    </span>- pożyczki w 7 minut,
-                    <br> niezależnie od historii kredytowej</h1>
+                    Microdengi
+                    </span> - pożyczka w 7 minut, niezależnie od historii kredytowej </h1>
                 <p>Bezpłatny wybór pożyczek - bez zaświadczeń i odmów</p>
             </div>
             <div class="col-lg-5">
@@ -60,6 +59,21 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <div class="row">
+            <div class="col-sm-4">
+            <strong>Krok 1.</strong> Ustaw okres, na który chcesz wziąć pożyczkę, a także jej wysokość w kalkulatorze.
+Po prostu przesuń kursor. Licznik natychmiast pokaże warunki pożyczki.
+            </div>
+            <div class="col-sm-4">
+            <strong>Krok 2.</strong> Poświęć 2 minuty, aby wypełnić krótki kwestionariusz 
+Do tego potrzebny jest tylko dowód tożsamości. Nie wymagamy niepotrzebnych dokumentów.
+            </div>
+            <div class="col-sm-4">
+            <strong>Krok 3.</strong> Zaciągnij pożyczkę bez odmowy w 10-15 minut
+Pieniądze zostaną przesłane na numer Twojego rachunku bankowego już w ciągu 15 minut od momentu pozytywnego rozpatrzenia wniosku.
+            </div>
+            </div> 
         </form>
     </div>
 </div>
@@ -141,34 +155,25 @@
         <div class="item">
             <figure>
                 <figcaption>
-                    Pilnie potrzebowałam pieniędzy na prezent, synek kończy 5 lat, i nikt nie mógł pożyczyć... Krewni też mają problemy, no i
-                    nie wypada prosić. W rezultacie weszłam do Internetu, przeczytałam na tej stronie, że pożyczki wydają
-                    w 15 minut! Nie uwierzyłam w to, oczywiście, ale spróbowałam, i to prawda, pieniądze przyszły od razu,
-                    a problem został rozwiązany! Dziękuję za pomoc i darmowy dobór pilnej pożyczki, zwrócę ją z pensją !!
+                    Pilnie potrzebowałam pieniędzy na prezent dla synka kończącego 5 lat. Nikt nie mógł pożyczyć... Krewni też mają problemy, no i nie wypada prosić. W rezultacie weszłam do Internetu, natknęłam się na tę stronę i przeczytałam, że pożyczki wydają w 15 minut! Nie uwierzyłam w to, oczywiście, ale spróbowałam. To prawda! Na pieniądze nie trzeba było długo czekać i mój problem szybko został rozwiązany! Dziękuję za pomoc i darmowe dobranie najlepszej oferty!
                 </figcaption>
-                <h3>Szymon, 29 lat</h3>
+                <h3>Katarzyna Zarzycka, 29 lat, Białystok</h3>
             </figure>
         </div>
         <div class="item">
             <figure>
                 <figcaption>
-                    Hurra! To jedyne miejsce, w którym otrzymałem pożyczkę bez odmowy. Musiałem pilnie wynająć mieszkanie, a prawie nie mam krewnych,
-                    nikt mi nie pomoże ... I wszystkie banki odmawiają, bo jestem studentem. A tutaj nawet dodatkowych pytań
-                    nie zadawali, tylko podałem dane paszportowe! Pożyczkę odebrałem w 10 minut po zatwierdzeniu. A tak przy
-                    okazji, usługi serwisu są bezpłatne, to prawda, nie wzięli ani rubla!
+                    Miałem problemy w biznesie i musiałem pilnie zapłacić ważne należności! Wtedy znajomy doradził mi serwis Mikrodengi. Powiedział, że tam nie trzeba dostarczać miliona zaświadczeń i szukać gwarantów. Właśnie tego potrzebowałem – szybko, łatwo i bez zbędnych formalności. Po przyznaniu pożyczki, pieniądze już po kilku minutach były na koncie. Bez ściemy!! Super obsługa i łatwy kontakt. W razie potrzeby, w przyszłości, na pewno jeszcze skorzystam!
                 </figcaption>
-                <h3>Mateusz, 21 lat</h3>
+                <h3>Paweł Marszałkowski, 32 lata, Warszawa</h3>
             </figure>
         </div>
         <div class="item">
             <figure>
                 <figcaption>
-                    Miałem problemy w biznesie i musiałem pilnie zapłacić czynsz! Wtedy znajomy doradził serwis Mikrodending, powiedział, że
-                    tam nie ma potrzeby okazywać zaświadczenia i szukać gwarantów. I właśnie tego potrzebowałem, nie miałem
-                    absolutnie czasu! Pożyczka online natychmiast wpłynęła na kartę, czekałem kilka minut, tutaj nie oszukują
-                    !! Super usługa, teraz za pożyczką tylko tutaj, ale mam nadzieję, że nie będzie potrzebna))
+                    Hurra! To jedyne miejsce, w którym nie odmówiono mi pożyczki. Musiałem pilnie wynająć mieszkanie, a nikt z krewnych nie dał rady pomóc. Do tego wszystkie banki odmawiają, bo jestem studentką. A tutaj nawet dodatkowych pytań nie zadawali, tylko podałam kilka danych. Pieniądze dostałam w ciągu 10 minut od momentu zatwierdzenia wniosku. A tak przy okazji, usługi serwisu są bezpłatne, nie wzięli ode mnie ani grosza! 
                 </figcaption>
-                <h3>Zuzanna, 32 lata</h3>
+                <h3>Julia Dobrzycka, 21 lat, Kraków</h3>
             </figure>
         </div>
     </div>

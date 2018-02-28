@@ -11,64 +11,29 @@
                                     <div class="card-header  ex-bg-head">
                                         <h4 class="card-title">
                                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                                                Публичная оферта
-                                                <i class="ex-minus"></i></a>
+                                                Polityka prywatności
+                                                <i class="ex-minus"></i>
+                                            </a>
                                         </h4>
                                     </div>
                                     <div id="collapse1" class="panel-collapse collapse show">
                                         <div class="card-body">
                                             <p>
-                                                Я, нижеподписавшийся (далее – «Клиент»), настоящим даю сервису Forzaim
-                                                (далее – "Сервис"), согласие на обработку своих персональных данных в
-                                                порядке и на условиях, изложенных в настоящем согласии.<br>
-                                                &emsp;1. Клиент дает согласие на обработку своих персональных данных, то есть
-                                                совершение следующих действий: сбор, систематизация, накопление,
-                                                хранение, уточнение (обновление, изменение), использование,
-                                                распространение (в том числе передачу), обезличивание, блокирование,
-                                                уничтожение персональных данных, при этом описание вышеуказанных
-                                                способов обработки данных приведено в Федеральном законе от 27.07.2006 №
-                                                152-ФЗ «О персональных данных», в следующих целях:<br><br>
+                                                Serwis internetowy Mikrodengi.pl (“Serwis”) zgonie z Ustawą o ochronie danych osobowych z 29 sierpnia 1977 r. (Dz.U. z 2015
+                                                r., poz. 2135) ma obowiązek chronić prywatność i zapewnić bezpieczeństwo
+                                                danych osobowych użytkowników odwiedzających jego stronę. Wszystkie dane
+                                                znajdują się pod ochroną i są przetwarzane zgodnie z w/w Ustawą.
+                                                <br>
+                                                <br> Administratorem danych osobowych udostępnionych Serwisowi jest ………………………
+                                                z siedzibą w …………………..
+                                                <br>
+                                                <br> Serwis zastrzega sobie prawo dokonywania zmian w polityce prywatności. Zmiany
+                                                widoczne będą na stronie internetowej w zakładce zawierającej aktualne zasady
+                                                dotyczące polityki prywatności.
+                                                <br>
+                                                <br> Z Serwisu korzystać mogą tylko osoby pełnoletnie, posiadające zdolność do
+                                                czynności prawnych.
 
-                                                • &emsp; исполнения Договора Займа<br>
-                                                • &emsp; предложения продуктов и услуг Сервиса<br>
-                                                • &emsp; предоставления скидок и льготных условий предоставления займов<br>
-                                                • &emsp; обслуживание заемщиков и лиц, подающих заявку на получение
-                                                микрозаймов, (клиентов) через Сервис Forzaim<br>
-                                                • &emsp; продвижение товаров, работ и услуг Сервиса<br><br>
-
-                                                &emsp;2. Перечень персональных данных, на обработку которых дается согласие:<br>
-                                                • &emsp; фамилия, имя и отчество; адрес регистрации и фактического проживания;
-                                                место рождения;<br>
-                                                • &emsp; дата, месяц и год рождения; гражданство; фотография документа,
-                                                удостоверяющего личность (далее «Паспорт»);<br>
-                                                • &emsp; идентификационный номер налогоплательщика;<br>
-                                                • &emsp; наименование и реквизиты работодателя или учебного заведения; номер
-                                                мобильного телефона; адрес электронной почты;<br>
-                                                • &emsp; иная информация, содержащаяся в документах, предоставленных Заемщиком
-                                                на сайте (далее – "Персональные данные").<br>
-
-                                                &emsp;3. Обработка Персональных данных на сайте Forzaim будет осуществляться в
-                                                целях исполнения заключенного Договора персонального обслуживания.<br>
-                                                &emsp;4. Сервис вправе обрабатывать Персональные данные Заемщика любыми
-                                                способами, как это необходимо, включая, сбор, запись, систематизацию,
-                                                накопление, хранение, уточнение (обновление, изменение), извлечение,
-                                                использование, передачу (распространение, предоставление, доступ),
-                                                обезличивание, блокирование, удаление, уничтожение персональных данных.<br>
-                                                &emsp;5. Сервис будет осуществлять обработку Персональных данных с
-                                                использованием средств автоматизации, а также без использования таких
-                                                средств.<br>
-                                                &emsp;6. Настоящее согласие на обработку Персональных данных Клиента действует
-                                                в течение 10 (десяти) лет с даты его подписания электронной подписью, а
-                                                также впоследствии в течение срока, необходимого для целей соблюдения
-                                                применимого законодательства.<br>
-                                                &emsp;7. В соответствии с пунктом 4 статьи 14 Федерального закона от
-                                                27.07.2006 № 152-ФЗ «О персональных данных» субъект персональных данных
-                                                по письменному запросу имеет право на получение информации, касающейся
-                                                обработки его персональных данных.<br>
-                                                &emsp;8. Настоящее согласие может быть отозвано посредством направления
-                                                соответствующего уведомления о его отзыве уполномоченному представителю
-                                                Сервиса не позднее, чем за 1 (один) месяц до даты вступления
-                                                соответствующего отзыва в силу.<br>
                                             </p>
                                         </div>
                                     </div>
@@ -77,14 +42,51 @@
                                     <div class="card-header">
                                         <h4 class="card-title">
                                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                                                Согласие на обработку данных
-                                                <i class="ex-plus"></i></a>
+                                                Dane osobowe
+                                                <i class="ex-plus"></i>
+                                            </a>
                                         </h4>
                                     </div>
                                     <div id="collapse2" class="panel-collapse collapse">
                                         <div class="card-body">
                                             <p>
-                                                no text
+                                                Serwis wykorzystuje dane udostępnione przez Użytkownika, tylko za jego zgodą, w celu niezbędnej identyfikacji danej osoby.
+                                                W trakcie korzystania z usług Serwisu, Użytkownik ma obowiązek podać swoje
+                                                dane osobowe m.in.: imię, nazwisko, PESEL, numer dowodu osobistego, adres
+                                                pocztowy (zameldowania i zamieszkania), adres e-mail, numer telefonu, informacje
+                                                o wysokości dochodów, ich źródła, a także o okresie zatrudnienia, stan cywilny,
+                                                a także ilość osób na utrzymaniu. Korzystanie z usług Serwisu jest jednoznaczne
+                                                z wyrażeniem zgody na gromadzenie i przetwarzanie udostępnionych danych osobowych.
+                                                <br>
+                                                <br> Każdy Użytkownik Serwisu ma prawo do wglądu w swoje dane osobowe, ich aktualizacji,
+                                                sprostowania oraz uzupełnienia. Dodatkowo Użytkownik ma prawo uzyskać informację
+                                                na temat celu, zakresu i sposobu ich przetwarzania. W dowolnym momencie Użytkownik
+                                                może zażądać czasowego lub stałego wstrzymania przetwarzania danych osobowych,
+                                                w tym celu należy skontaktować się z Obsługą Klienta poprzez formularz kontaktowy
+                                                dostępny na stronie.
+                                                <br>
+                                                <br> Dane Użytkownika mogą być udostępnione zgodnie z artykułem 24 Ustawy z dnia
+                                                9 kwietnia 2010 r. o udostępnianiu informacji gospodarczych i wymianie danych
+                                                gospodarczych (Dz. U. z 2010 r. Nr 81, poz. 530) podmiotom upoważnionym na
+                                                mocy przepisów prawnych. Dodatkowo dane mogą zostać ujawnione w formie statystyk,
+                                                jednakże Użytkownik w dalszym ciągu pozostaje anonimowy, a tego rodzaju dane
+                                                nie dają możliwości identyfikacji jego tożsamości.
+                                                <br>
+                                                <br> Przetwarzanie danych osobowych odbywa się w celu:
+                                                <ul>
+                                                    <li>utrzymania, kontrolowania i tworzenia usług oferowanych przez Serwis
+                                                        m.in. zarządzania wnioskami o pożyczkę, podejmowania decyzji o przyznaniu
+                                                        pożyczki, aktualizowania informacji na temat pożyczek, odzyskiwania
+                                                        zaległych zadłużeń, odpowiadania na wnioski i reklamacje;</li>
+                                                    <li>informowania Użytkownika o usługach oferowanych przez Serwis;</li>
+                                                    <li>zapewnienia najwyższej jakości oferowanych usług;</li>
+                                                    <li>umożliwienia zalogowania się w Serwisie;</li>
+                                                    <li>potwierdzenia tożsamości Użytkownika;</li>
+                                                    <li>potwierdzenie zdolności kredytowej;</li>
+                                                    <li>umożliwienia kontaktu w przypadku nagłych wypadków;</li>
+                                                    <li>identyfikacji, zapobiegania oraz wykrywania oszustw finansowych;</li>
+                                                    <li>przekazywania danych w przypadku naruszenia prawa przez Użytkownika.</li>
+                                                </ul>
                                             </p>
                                         </div>
                                     </div>
@@ -93,15 +95,46 @@
                                     <div class="card-header">
                                         <h4 class="card-title">
                                             <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                                                Правила предоставления займов
-                                                <i class="ex-plus"></i></a>
+                                                Pliki cookies
+                                                <i class="ex-plus"></i>
+                                            </a>
                                         </h4>
                                     </div>
                                     <div id="collapse3" class="panel-collapse collapse">
                                         <div class="card-body">
 
                                             <p>
-                                                no text
+                                                Serwis Mikrodengi.pl wykorzystuje “pliki cookies” - małe pliki tekstowe, umieszczane na komputerze Użytkownika przez przeglądarkę.
+                                                Pliki te służą do ustalenia preferencji Użytkownika, jego identyfikacji,
+                                                a także do podnoszenia jakości oferowanych przez Serwis usług. Dzięki plikom
+                                                cookies Serwis ma możliwość zidentyfikowania źródła, z którego Użytkownik
+                                                trafił na stronę.
+                                                <br>
+                                                <br>Pliki cookies nie zawierają żadnych informacji identyfikujących Użytkownika
+                                                i nie służą przetwarzaniu jego danych osobowych. Gromadzone są w celach statystycznych
+                                                i dotyczą wyłącznie aktywności Użytkownika w serwisach internetowych. Pliki
+                                                nie mają wpływu na bezpieczeństwo i pracę sprzętu technicznego. Użytkownik
+                                                zgodnie ze swoimi preferencjami ma prawo do usuwania plików cookies.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                                Kontakt
+                                                <i class="ex-plus"></i>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse4" class="panel-collapse collapse">
+                                        <div class="card-body">
+
+                                            <p>
+                                                Reklamacje, zapytania, opinie i skargi prosimy wysyłać poprzez formularz kontaktowy znajdujący się na stronie internetowej
+                                                Serwisu.
                                             </p>
 
                                         </div>

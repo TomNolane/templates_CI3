@@ -8,28 +8,14 @@
                     </div>
                     <div class="ex-art-content">
                         <h1 class="text-center">Co oznacza odroczenie spłaty pożyczki?</h1>
-                        <p>Składając wniosek do organizacji mikrofinansowej (OMF), przyszły pożyczkobiorca ma nadzieję na terminową
-                            spłatę zadłużenia. Co może zrobić, jeśli nie udaje się spłacić zaciągniętej pożyczki online na
-                            czas z powodu zaistniałych okoliczności? Idealną opcją w tym przypadku jest odroczenie spłaty
-                            pilnej pożyczki.</p>
+                        <p>Parabank to pozabankowa instytucja finansowa, zajmująca się udzielaniem pożyczek i kredytów pozabankowych. Składając wniosek o przyznanie pożyczki do jednego z parabanków, działających w Polsce, przyszły pożyczkobiorca ma nadzieję na terminową spłatę zadłużenia. Co można zrobić, jeśli z powodu zaistniałych okoliczności, nie udaje się spłacić zaciągniętej pożyczki na czas? Idealną opcją w tym przypadku jest odroczenie jej spłaty.</p>
 
-                        <p> Odroczenie jest przedłużeniem terminu spłaty zaciągniętej pożyczki lub kredytu bez pobierania opłat
-                            i w ramach dwustronnej umowy między instytucją finansową a pożyczkobiorcą. Należy pamiętać, że
-                            w związku z przedłużeniem pożyczki pilnie należy zapłacić prowizję za każdy dzień przedłużenia.
-                            Ale w przypadku odroczenia nie jest to wymagane.
+                        <p> Odroczenie jest przedłużeniem terminu spłaty zaciągniętej pożyczki lub kredytu bez pobierania opłat, w ramach dwustronnej umowy między parabankiem a pożyczkobiorcą. Należy pamiętać, że w przypadku przedłużenia terminu spłaty pożyczki, należy zapłacić prowizję za każdy dzień przedłużenia. Natomiast w przypadku odroczenia nie jest to wymagane.</p>
+                        <p>
+                        Nie wszystkie parabanki zapewniają odroczenie w ramach pożyczek online. Niemniej jednak, w przypadku poważnych przyczyn u pożyczkobiorcy, parabank może rozważyć ten rodzaj "ulgi finansowej". Klientowi zaś zaleca się w zaistniałej krytycznej sytuacji sporządzić kopie niezbędnych dokumentów, które mogą potwierdzić przypadek choroby, nieoczekiwanego zwolnienia, wypadku lub innych nieprzewidzianych zdarzeń. Warto jednak wziąć pod uwagę, że parabank ma prawo nawet w przypadku potwierdzonych okoliczności odmówić odroczenia płatności mikropożyczki.
                         </p>
                         <p>
-                            Nie wszystkie instytucje finansowe zapewniają odroczenie w ramach pożyczek online. Niemniej jednak, w przypadku poważnych
-                            przyczyn u pożyczkobiorcy OMF może rozważyć ten rodzaj "ulgi finansowej". Klientowi zaś zaleca
-                            się w zaistniałej krytycznej sytuacji sporządzić kopie niezbędnych dokumentów, które mogą potwierdzić
-                            przypadek choroby, nieoczekiwanego zwolnienia, wypadku lub innych zdarzeń. Warto jednak wziąć
-                            pod uwagę, że OMF ma prawo nawet w przypadku potwierdzonych okoliczności odmówić odroczenia płatności
-                            według mikropożyczki.
-                        </p>
-                        <p>
-                            Zanim zdecydować się poprosić o odroczenie, pożyczkobiorcy zaleca się rozważyć wszystkie za i przeciw. Ponieważ fakt świadczenia
-                            tej usługi może mieć wpływ na wiarygodność kredytową i prawdopodobieństwo zatwierdzenia następujących
-                            pożyczek osobistych.</p>
+                        Zanim pożyczkobiorca zdecyduje się poprosić o odroczenie, warto by rozważył on wszystkie za i przeciw, ponieważ fakt świadczenia tej usługi może mieć wpływ na wiarygodność kredytową i zmniejszać prawdopodobieństwo zatwierdzenia następnych pożyczek.</p>
                     </div>
                 </div>
             </div>

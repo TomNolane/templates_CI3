@@ -52,7 +52,7 @@ if(!isset($description))
     <!-- CSS -->
      <?php
      echo '<style>';
-     require 'templates/forzaim/assets/css/style.min.css';
+     require 'templates/forzaim/assets/css/style.css';
      echo '</style>'; 
      echo '<style>';
      require 'templates/forzaim/assets/css/style_custom.min.css';

@@ -12665,7 +12665,7 @@ a.text-dark:focus, a.text-dark:hover {
 .owl-carousel .owl-nav .owl-next,
 .owl-carousel .owl-dot {
   cursor: pointer;
-  cursor: hand;
+  
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -13596,10 +13596,31 @@ footer.ex-main-footer p {
 /* line 131, ../sass/desktop/_start.scss */
 .ex-home .ex-main-section .ex-for-img {
   width: 525px;
-  height: 450px;
-  background-image: url("/templates/zaimnowsu/assets/img/notebook.png");
+  height: 450px; 
   background-repeat: no-repeat;
+  -webkit-background-size: contain;
   background-size: contain;
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+/* line 139, ../sass/desktop/_start.scss */
+.ex-home .ex-main-section .ex-for-img.ex-count-1 {
+  background-image: url(/templates/zaimnowsu/assets/img/ruble-1.png);
+}
+/* line 142, ../sass/desktop/_start.scss */
+.ex-home .ex-main-section .ex-for-img.ex-count-2 {
+  background-image: url(/templates/zaimnowsu/assets/img/ruble-2.png);
+}
+/* line 145, ../sass/desktop/_start.scss */
+.ex-home .ex-main-section .ex-for-img.ex-count-3 {
+  background-image: url(/templates/zaimnowsu/assets/img/ruble-3.png);
+}
+/* line 148, ../sass/desktop/_start.scss */
+.ex-home .ex-main-section .ex-for-img.ex-count-4 {
+  background-image: url(/templates/zaimnowsu/assets/img/ruble-4.png);
+
 }
 @media (max-width: 1199px) {
   /* line 131, ../sass/desktop/_start.scss */

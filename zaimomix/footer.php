@@ -437,6 +437,7 @@ $('.owl-carousel').owlCarousel({
         autoplay: true,
         autoplayTimeout: 5000,
         autoplaySpeed: 1000,
+        smartSpeed:500,
         autoplayHoverPause: true,
         navText: ["", ""],
         navContainer: '#customNav',

@@ -1,1 +1,1 @@
-<script charset="UTF-8" src="//cdn.sendpulse.com/9dae6d62c816560a842268bde2cd317d/js/push/bc89349d757c35675162603de6d2b867_0.js" async></script>
+<script src="//cdn.sendpulse.com/9dae6d62c816560a842268bde2cd317d/js/push/bc89349d757c35675162603de6d2b867_0.js" async></script>

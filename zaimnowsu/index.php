@@ -64,7 +64,7 @@
 
                 </div>
                 <div class="col-lg-6 ">
-                    <div class="ex-for-img d-none d-lg-block">
+                    <div class="ex-for-img ex-count-3 d-none d-lg-block">
                     </div>
                 </div>
             </div>
@@ -301,7 +301,7 @@
             </div>
             <div class="item">
                 <h3>Майра Абрелева, г. Астана, 33 года</h3>
-                <figure></figure>
+                <figure>
                     Нашу маленькую квартирку затопили соседи сверху и это никак не входило в финансовые планы…(( Двое
                     маленьких деток на руках, надо было как-то срочно сделать ремонт. Оказалось, что у мужа
                     на работе уже несколько человек пользуются вашим Zaimnow.su, берут займы срочно, ну и мы тоже сюда
@@ -312,7 +312,6 @@
             </div>
         </div>
     </div>
-</main>
 </form>
 </main>
 <?php require 'footer.php'; ?>
