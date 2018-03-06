@@ -136,7 +136,9 @@ if(!isset($description))
 </head>
 <?php 
     if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index') {
-        echo '<body>
+        echo '<body>';
+        require 'googleanalytics.php';
+        echo '
         <main class="ex-home">
             <nav class="navbar navbar-expand-lg ex-main-header">
                 <div class="container">
@@ -165,7 +167,9 @@ if(!isset($description))
             </nav>';
     }
     elseif($this->uri->segment(1) == 'form') {
-         echo '<body class="ex-sticky">
+         echo '<body class="ex-sticky">';
+         require 'googleanalytics.php';
+         echo '
          <nav class="navbar navbar-expand-lg ex-main-header">
              <div class="container">
                  <a class="ex-brand navbar-brand" href="/"></a>
@@ -193,7 +197,9 @@ if(!isset($description))
     </nav>';
     }
     elseif($this->uri->segment(1) == 'faq' || $this->uri->segment(1) == 'rules' || $this->uri->segment(1) == 'soglasie' || $this->uri->segment(1) == 'oferta' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2'|| $this->uri->segment(1) == 'money') {
-         echo '<body>
+         echo '<body>';
+         require 'googleanalytics.php';
+         echo '
          <nav class="navbar navbar-expand-lg ex-main-header">
              <div class="container">
                  <a class="ex-brand navbar-brand" href="/"></a>
@@ -221,7 +227,9 @@ if(!isset($description))
          </nav>';
     }
     else {
-        echo '<body>
+        echo '<body>';
+        require 'googleanalytics.php';
+        echo '
         <nav class="navbar navbar-expand-lg ex-main-header ex-grey-header">
             <div class="container">
                 <a class="ex-brand navbar-brand" href="/"></a>

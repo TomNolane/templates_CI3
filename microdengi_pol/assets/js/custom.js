@@ -157,15 +157,16 @@ $('#getmoney').click(function(){
         send_form(true, '/lk');
         markTarget('form-step-3');
         setcookies();
+        window.location = '/lk';
     }
     showBzzz = false;
 });
 function Loading(flag) {
     if (typeof flag == 'undefined') { 
         $('#feedback-send').prop('disabled', false); 
-        $('#feedback-send').html('Отправляется <i class="fa fa-spinner fa-spin fa-pulse"></i>');
+        $('#feedback-send').html('Wywoływane <i class="fa fa-spinner fa-spin fa-pulse"></i>');
     } else if (!flag) {
-        $('#feedback-send').html('Отправлено');
+        $('#feedback-send').html('Wysłany');
         $('#feedback-send').prop('disabled', true);
     }
 }

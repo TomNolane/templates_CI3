@@ -1,5 +1,18 @@
 <a href="#0" class="cd-top">Na górę</a>
-<footer class="ex-main-footer"></footer>
+<footer class="ex-main-footer">
+<div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                <div class="ex-foot-logo">
+                    <a href="/"><img src="/templates/microdengi_pol/assets/img/logo.png" class="footer-img" alt="logo.png"></a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                <p class="footer-p">Usługę w zakresie doboru korzystnych online pożyczek i kredytów.<br>Pożyczki udzielane są na kwotę od 500 do 25 000 zł włącznie na okres od 61 do 365 dni.</p>
+            </div>
+        </div>
+    </div>
+</footer>
 <?php
     $from = 15;
     require 'templates/common/get_display_size.php';

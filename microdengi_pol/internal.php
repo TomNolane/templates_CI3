@@ -35,7 +35,7 @@ else
             $description = 'Wybierając organizację mikrofinansową (OMF) do zaciągnięcia osobistej pożyczki online, należy wziąć pod uwagę szereg parametrów. - Obecność tej firmy w oficjalnym rejestrze organizacji mikrofinansowych. Rejestr jest utrzymywany i kontrolowany przez Centralny Bank Rosji. A wszystkie OMF, które otrzymały certyfikat, przeszły wiele obowiązkowych kontroli, co wskazuje na ich wysoką niezawodność.';
             break;
 
-        default: $my_title = 'Pożyczki online - szybkie i na raty - Microdengi'; $description = 'Microdengi -zawiera oceny i opinie o instytucjach mikrofinansowych, działających w Polsce, szybkie chwilówki online, a także aktualności z firm!'; break;
+        default: $my_title = 'Pożyczki online - szybkie i na raty - Kasaodzaraz'; $description = 'Kasaodzaraz -zawiera oceny i opinie o instytucjach mikrofinansowych, działających w Polsce, szybkie chwilówki online, a także aktualności z firm!'; break;
     } 
         if ($this->uri->segment(1) == 'about') require 'internal-about.php';
         elseif ($this->uri->segment(1) == 'faq') require 'internal-faq.php';

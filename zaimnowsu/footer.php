@@ -630,8 +630,7 @@ if(isset($_GET['email']))
 
 <!-- всплывающее окошко --> 
 <?php
- require 'yandexmetrika.php';
- require 'googleanalytics.php';
+ require 'yandexmetrika.php'; 
 ?>
 
 <script>

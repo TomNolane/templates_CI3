@@ -11585,8 +11585,8 @@ a.text-dark:focus, a.text-dark:hover {
 }
 /* line 8, /templates/microdengi_pol/assets/sass/desktop/_header.scss */
 .ex-main-header .ex-brand {
-  width: 132px;
-  height: 30px;
+  width: 264px;
+  height: 60px;
   background-image: url(/templates/microdengi_pol/assets/img/logo.png);
   background-repeat: no-repeat;
   -webkit-background-size: contain;
@@ -12915,4 +12915,11 @@ main.ex-faq .ex-bg-head a {
   .ex-anketa .ex-main-form {
     padding: 0 10px 30px;
   }
+}
+.footer-img {
+  margin-top: 30px;
+}
+.footer-p {
+  margin-top: 30px !important;
+  color: #ddd;
 }

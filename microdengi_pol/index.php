@@ -5,7 +5,7 @@
             <div class="col-lg-7 ">
                 <h1>
                     <span>
-                    Microdengi
+                    Kasaodzaraz
                     </span> - pożyczka w 7 minut, niezależnie od historii kredytowej </h1>
                 <p>Bezpłatny wybór pożyczek - bez zaświadczeń i odmów</p>
             </div>

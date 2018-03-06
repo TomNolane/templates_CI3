@@ -17,9 +17,6 @@ if(!isset($description))
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="edenga.ru" />
-	
-	
-	
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="edenga - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверк вашей кредитной истории.Только у нас лучшие кредитные предложения!" />
 	<meta property="og:image" content="https://edenga.ru/templates/edenga/img/atmo.png" />

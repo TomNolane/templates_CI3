@@ -28,7 +28,7 @@ if(isset($_POST['amount']))
 
 if(!isset($my_title))
 {
-	$my_title = 'Złożenie Wniosku o udzielenie Pożyczki Online | Serwis Microdengi';
+	$my_title = 'Złożenie Wniosku o udzielenie Pożyczki Online | Serwis Kasaodzaraz';
 	$description = 'Chcesz uzyskać kredyt gotówkowy w krótkim czasie?Następnie wypełnij prosty formularz zgłoszenie na naszym internetowym serwisie w udzielaniu pożyczek pieniężnych';
 }  
 require 'header.php'; 

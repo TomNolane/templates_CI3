@@ -6,8 +6,20 @@
 
     if($this->uri->segment(1) != 'form')
     {
-        echo '';
+        
     }
+
+    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Микроденьги -->
+        <ins class="adsbygoogle text-center"
+             style="display:block"
+             data-ad-client="ca-pub-2018999784099007"
+             data-ad-slot="1587330252"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        ';
 ?>
 
 <footer class="ex-main-footer">
@@ -20,9 +32,9 @@
             </div>
             <div class="col-md-10">
                 <p>Сервис по подбору выгодных онлайн займов и кредитов находящийся по адресу:<br>
-                    Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 support@mikrodengi.su<span class="hidden-xs hidden-sm"> | 8
-                    (960) 950 93 53</span><br>
-                    <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365
+                    Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<span class="hidden"> support@mikrodengi.su | 8
+                    (960) 950 93 53 <br>
+                    Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365
                     дней.<br>
                     Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.<br>
                     Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день;
@@ -224,7 +236,6 @@
 });
 </script> 
 <?php } ?> 
-<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script async>
     function getcookie(name) {
         var cookie = " " + document.cookie;

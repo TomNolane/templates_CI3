@@ -44,7 +44,7 @@
                                 </div>
                                 <div id="collapse2" class="panel-collapse collapse">
                                     <div class="card-body">
-                                       <p>Dane osobowe użytkowników są przetwarzane przez serwis Microdengi zgodnie z przepisami prawa oraz przekazywane tylko pożyczkodawcom oraz bankom w celach weryfikacji danej osoby.
+                                       <p>Dane osobowe użytkowników są przetwarzane przez serwis Kasaodzaraz zgodnie z przepisami prawa oraz przekazywane tylko pożyczkodawcom oraz bankom w celach weryfikacji danej osoby.
                                         <br>Dane osobowe są przetwarzane w następujących celach: weryfikacja tożsamości klienta, przeprowadzenie analizy jego zdolności kredytowej, stały kontakt z użytkownikiem, realizacja umów zawartych z klientem, przeciwdziałanie przestępstwom finansowym.
                                        </p>
                                     </div>
@@ -54,14 +54,14 @@
                                 <div class="card-header">
                                     <h4 class="card-title">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                                            W których miastach działa serwis Microdengi?
+                                            W których miastach działa serwis Kasaodzaraz?
                                             <i class="ex-plus"></i>
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="collapse3" class="panel-collapse collapse">
                                     <div class="card-body">
-                                        <p>Serwis Microdengi działa na terenie całej Polski</p>
+                                        <p>Serwis Kasaodzaraz działa na terenie całej Polski</p>
                                     </div>
                                 </div>
                             </div>

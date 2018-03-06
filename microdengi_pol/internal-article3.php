@@ -24,7 +24,7 @@
 <br><br>
 - Dowiedzieć się o dodatkowych opcjach dla stałych pożyczkobiorców. Z reguły przejawia się to w bonusach i podwyższaniu limitów pieniężnych zaciąganych w przyszłości pożyczki (w przypadku pomyślnej spłaty poprzednich mikropożyczek).
 <br><br>
-Serwis Mikrodengi współpracuje tylko z legalnymi organizacjami, które udzielają rzetelnych i zgodnych z prawem pożyczek online bez niepotrzebnych zaświadczeń.
+Serwis Kasaodzaraz współpracuje tylko z legalnymi organizacjami, które udzielają rzetelnych i zgodnych z prawem pożyczek online bez niepotrzebnych zaświadczeń.
 </p>
                     </div>
                 </div>

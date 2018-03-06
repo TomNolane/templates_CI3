@@ -19,7 +19,7 @@
                                     <div id="collapse1" class="panel-collapse collapse show">
                                         <div class="card-body">
                                             <p>
-                                                Serwis internetowy Mikrodengi.pl (“Serwis”) zgonie z Ustawą o ochronie danych osobowych z 29 sierpnia 1977 r. (Dz.U. z 2015
+                                                Serwis internetowy Kasaodzaraz.pl (“Serwis”) zgonie z Ustawą o ochronie danych osobowych z 29 sierpnia 1977 r. (Dz.U. z 2015
                                                 r., poz. 2135) ma obowiązek chronić prywatność i zapewnić bezpieczeństwo
                                                 danych osobowych użytkowników odwiedzających jego stronę. Wszystkie dane
                                                 znajdują się pod ochroną i są przetwarzane zgodnie z w/w Ustawą.
@@ -104,7 +104,7 @@
                                         <div class="card-body">
 
                                             <p>
-                                                Serwis Mikrodengi.pl wykorzystuje “pliki cookies” - małe pliki tekstowe, umieszczane na komputerze Użytkownika przez przeglądarkę.
+                                                Serwis Kasaodzaraz.pl wykorzystuje “pliki cookies” - małe pliki tekstowe, umieszczane na komputerze Użytkownika przez przeglądarkę.
                                                 Pliki te służą do ustalenia preferencji Użytkownika, jego identyfikacji,
                                                 a także do podnoszenia jakości oferowanych przez Serwis usług. Dzięki plikom
                                                 cookies Serwis ma możliwość zidentyfikowania źródła, z którego Użytkownik

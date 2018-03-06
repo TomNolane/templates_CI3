@@ -48,16 +48,7 @@ if($this->uri->segment(1) != 'form')
     t.parentNode.insertBefore(s, t);
     })(this, this.document, "yandexContextAsyncCallbacks");
     </script>';
-    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Fanzaim -->
-    <ins class="adsbygoogle text-center"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="9262887402"
-    data-ad-format="auto"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>';
+    echo '';
 }
 ?> 
 

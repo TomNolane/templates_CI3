@@ -12,15 +12,24 @@ if($this->uri->segment(1) != 'form')
         echo '<!-- Мобайл --><div id="yandex_rtb_R-A-243982-1"></div>';
     }
     echo '</div>';
-	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Еденьга -->
-    <ins class="adsbygoogle text-center"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="7951350323"
-    data-ad-format="auto"></ins>
+	// echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    // <!-- Еденьга -->
+    // <ins class="adsbygoogle text-center"
+    // style="display:block"
+    // data-ad-client="ca-pub-4970738258373085"
+    // data-ad-slot="7951350323"
+    // data-ad-format="auto"></ins>
+    // <script>
+    // (adsbygoogle = window.adsbygoogle || []).push({});
+    // </script>
+    // ';
+
+    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9729149501728150",
+        enable_page_level_ads: true
+      });
     </script>';
 }
 ?>

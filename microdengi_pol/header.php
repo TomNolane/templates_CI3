@@ -16,18 +16,18 @@ if(!isset($description))
 	<meta name="description" content="<?php echo $description;?>" />
 	<meta name="keywords" content="natychmiastowa pożyczka, pożyczki, online, pieniądze" />
 	<meta name="robots" content="all" />
-	<meta name="copyright" lang="ru" content="microdengi.pl" /> 
-	<meta property="og:title" content="Pożyczki online - szybkie i na raty - Microdengi" />
-	<meta property="og:description" content="Microdengi -zawiera oceny i opinie o instytucjach mikrofinansowych, działających w Polsce, szybkie chwilówki online, a także aktualności z firm!"/>
-	<meta property="og:image" content="https://microdengi.pl/templates/microdengi_pol/assets/img/pic.png"/>
+	<meta name="copyright" lang="ru" content="kasaodzaraz.pl" /> 
+	<meta property="og:title" content="Pożyczki online - szybkie i na raty - Kasaodzaraz" />
+	<meta property="og:description" content="Kasaodzaraz -zawiera oceny i opinie o instytucjach mikrofinansowych, działających w Polsce, szybkie chwilówki online, a także aktualności z firm!"/>
+	<meta property="og:image" content="https://kasaodzaraz.pl/templates/microdengi_pol/assets/img/pic.png"/>
 	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="https://microdengi.pl/" />
-	<meta name="twitter:card" content="https://microdengi.pl/templates/microdengi_pol/assets/img/pic.png"/>
-	<meta name="twitter:title" content="Pożyczki online - szybkie i na raty - Microdengi"/>
-	<meta name="twitter:description" content="Microdengi -zawiera oceny i opinie o instytucjach mikrofinansowych, działających w Polsce, szybkie chwilówki online, a także aktualności z firm!"/>
-	<meta name="twitter:image:src" content="https://microdengi.pl/templates/microdengi_pol/assets/img/pic.png"/>
-	<meta name="twitter:url" content="https://microdengi.pl/"/>
-    <meta name="twitter:domain" content="microdengi.pl"/>
+	<meta property="og:url" content="https://kasaodzaraz.pl/" />
+	<meta name="twitter:card" content="https://kasaodzaraz.pl/templates/microdengi_pol/assets/img/pic.png"/>
+	<meta name="twitter:title" content="Pożyczki online - szybkie i na raty - Kasaodzaraz"/>
+	<meta name="twitter:description" content="Kasaodzaraz -zawiera oceny i opinie o instytucjach mikrofinansowych, działających w Polsce, szybkie chwilówki online, a także aktualności z firm!"/>
+	<meta name="twitter:image:src" content="https://kasaodzaraz.pl/templates/microdengi_pol/assets/img/pic.png"/>
+	<meta name="twitter:url" content="https://kasaodzaraz.pl/"/>
+    <meta name="twitter:domain" content="kasaodzaraz.pl"/>
     
     <!-- Favicons -->
     <link rel="shortcut icon" href="/templates/microdengi_pol/favicon/favicon-16x16.png" type="image/png">

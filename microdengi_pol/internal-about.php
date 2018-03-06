@@ -6,11 +6,11 @@
                 <div class="ex-about-bg">
                     <h1 class="text-center">O serwisie</h1>
                     <p>Niespodziewana sytuacja może stanąć na drodze, wywołać bezradność i przysporzyć wiele zmartwień. Gdzie się zwrócić, gdy pilnie potrzebne są pieniądze, a nawet bliscy ludzie nie mogą pomóc?</p>
-                    <h3>Mikrodengi - pomagamy spełnić marzenia i rozwiązać problemy tu i teraz. Dzięki nam już nie musisz czekać na pensję jak na zbawienie.</h3>
+                    <h3>Kasaodzaraz - pomagamy spełnić marzenia i rozwiązać problemy tu i teraz. Dzięki nam już nie musisz czekać na pensję jak na zbawienie.</h3>
                     <p> 
-                        Witamy w serwisie Mikrodengi - miejscu, w którym w każdej chwili można uzyskać pożyczkę - bez kolejki i niepotrzebnych formalności. Już w ciągu 15 minut możesz zdobyć pieniądze na ważne wydatki np.: rozwiązanie sytuacji kryzysowych, pilne zakupy, wymarzony sprzęt lub prezent dla bliskiej osoby.
+                        Witamy w serwisie Kasaodzaraz - miejscu, w którym w każdej chwili można uzyskać pożyczkę - bez kolejki i niepotrzebnych formalności. Już w ciągu 15 minut możesz zdobyć pieniądze na ważne wydatki np.: rozwiązanie sytuacji kryzysowych, pilne zakupy, wymarzony sprzęt lub prezent dla bliskiej osoby.
                     </p>
-                    <h3>Pożyczka w Mikrodengi jest korzystna, prosta i niezawodna, przekonaj się sam:</h3>
+                    <h3>Pożyczka w Kasaodzaraz jest korzystna, prosta i niezawodna, przekonaj się sam:</h3>
                     <p>
                         <strong> Brak płatności i prowizji za pomoc w wyborze pożyczki.</strong>Serwis wybierze za darmo najbardziej korzystną pożyczkę, spośród ofert dostępnych na runku. Pożyczka dobrana specjalnie dla Ciebie, dopasowana do Twoich potrzeb i możliwości.
                     </p>
@@ -31,11 +31,11 @@
                     <p>
                         <b>Bez gwarantów, zastawów, kontroli i kolejek. </b> W przeciwieństwie do konwencjonalnych banków, absolutnie nie tracisz czasu na niepotrzebne procedury.</p>
                     <p><b>Natychmiastowy przelew środków na konto. </b>Pożyczka online wpłynie do Ciebie natychmiast po zatwierdzeniu.</p>
-                    <p><b>Szansa na naprawienie złej historii kredytowej. </b>Spłacając pożyczki, wzięte w serwisie Mikrodengi, na czas możesz poprawić swoją historię kredytową.</p>
+                    <p><b>Szansa na naprawienie złej historii kredytowej. </b>Spłacając pożyczki, wzięte w serwisie Kasaodzaraz, na czas możesz poprawić swoją historię kredytową.</p>
                     <p><b>Zatwierdzamy pożyczki dla wszystkich. </b> Zdecydowana większość wniosków w naszym serwisie jest natychmiast zatwierdzana - niezależnie od historii kredytowej</p>
                     <p><b>Odpowiedzialność.</b> Współpracujemy wyłącznie z legalnymi organizacjami finansowymi.</p>
                     <p><b>Przydatny newsletter online.</b> Nie zapomnij zapisać się do naszego newslettera. To pozwoli Ci otrzymywać aktualne informacje o najkorzystniejszych pożyczkach online w Polsce.</p>
-                    <h3>94% naszych klientów potwierdziło, że serwis Mikrodengi pomógł im szybko rozwiązać powstały problem życiowy</h3>
+                    <h3>94% naszych klientów potwierdziło, że serwis Kasaodzaraz pomógł im szybko rozwiązać powstały problem życiowy</h3>
                     <p>Dzięki naszemu Serwisowi możesz czuć się bezpiecznie, niezależnie od sytuacji finansowej. Otrzymuj potrzebne pieniądze bez zadawania pytań i w dowolnym czasie. Aby uzyskać pożyczkę w ciągu 10-15 minut, po prostu wypełnij krótki kwestionariusz i poczekaj, aż zadzwoni menadżer.</p>
                 </div>
             </div>
