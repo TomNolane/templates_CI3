@@ -1,7 +1,7 @@
 <section class="ex-main-form">
     <div class="row">
         <div class="col-md-9">
-            <div class="form-group has-feedback">
+            <!-- <div class="form-group has-feedback">
                 <label class="control-label col-md-4" for="f">Фамилия</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
@@ -11,8 +11,8 @@
                             <p class="text-muted helpblock">Пример: Иванова</p>
                     </div>
                 </div>
-            </div>
-            <div class="form-group has-feedback">
+            </div> -->
+            <!-- <div class="form-group has-feedback">
                 <label class="control-label col-md-4" for="i">Имя</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
@@ -22,8 +22,19 @@
                             <p class="text-muted helpblock">Пример: Лариса</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="form-group has-feedback">
+                <label class="control-label col-md-4" for="i">Фамилия Имя</label>
+                <div class="col-md-8">
+                    <div class="ex-wrapper">
+                        <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize"
+                            data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя"
+                            required>
+                            <p class="text-muted helpblock">Пример: Иванова Лариса</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="form-group has-feedback">
                 <label class="control-label col-md-4" for="o">Отчество</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
@@ -33,7 +44,7 @@
                             <p class="text-muted helpblock">Пример: Ивановна</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <input type="hidden" id="gender" value="1" name="gender">
             <!-- Скрываем старую форму даты рождения -->
             <div class="form-group hidden">
@@ -83,7 +94,7 @@
                 </div>
             </div>
             <!-- Скрываем старую форму даты рождения -->
-            <div class="form-group has-feedback">
+            <!-- <div class="form-group has-feedback">
                 <label class="control-label col-md-4" for="birthdate">Дата рождения</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
@@ -93,7 +104,7 @@
                             <p class="text-muted helpblock">Пример: 06/02/2000</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="form-group has-feedback">
                 <label class="control-label col-md-4" for="phone">Телефон</label>
                 <div class="col-md-8">
@@ -115,7 +126,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback">
+            <!-- <div class="form-group has-feedback">
                 <label class="control-label col-md-4" for="delays_type">Кредитная история</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper ex-arrow">
@@ -129,7 +140,7 @@
                         </select>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-md-8 col-md-offset-4 ex-agreement-check">
                     <label class="checkbox-inline">

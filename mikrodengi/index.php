@@ -60,17 +60,8 @@
     </div>
     <div class="ex-articles">
         <div class="container">
-        <?php echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Микроденьги -->
-        <ins class="adsbygoogle text-center"
-             style="display:block"
-             data-ad-client="ca-pub-2018999784099007"
-             data-ad-slot="1587330252"
-             data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        '; ?>
+        <div class="text-center"><a href="https://panel.marketagent.com/Register/Account/NewRegistration/ru?RefUID=1466811" target="_new"><img style="border-style: none; width: 468px; height: 60px" src="http://www.marketagent.com/MA_WebResources/pic/banner/468x60_Marketagent_weiss_RU.gif"></a></div>
+       
             <h2 class="text-center">Статьи</h2>
             <div class="row">
                 <a href="/delay">

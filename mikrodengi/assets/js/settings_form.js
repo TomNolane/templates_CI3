@@ -56,16 +56,19 @@ function validate1() {
 	} else if ($('input[name="period"]').val() < 5 || $('input[name="period"]').val() > 30) {
 		error('Вы не указали срок займа.', $('input[name="period"]'));
 		return false;
-	} else if ($('input[name="f"]').val().length < 2 || !re_name.test($('input[name="f"]').val())) {
-		error('Необходимо указать фамилию.', $('input[name="f"]'));
-		return false;
-	} else if ($('input[name="i"]').val().length < 2 || !re_name.test($('input[name="i"]').val())) {
+    } 
+    // else if ($('input[name="f"]').val().length < 2 || !re_name.test($('input[name="f"]').val())) {
+	// 	error('Необходимо указать фамилию.', $('input[name="f"]'));
+	// 	return false;
+    // } 
+    else if ($('input[name="i"]').val().length < 2 || !re_name.test($('input[name="i"]').val())) {
 		error('Необходимо указать имя.', $('input[name="i"]'));
 		return false;
-	} else if ($('input[name="o"]').val().length < 2 || !re_name.test($('input[name="o"]').val())) {
-		error('Необходимо указать отчество.', $('input[name="o"]'));
-		return false;
-	}
+    } 
+    // else if ($('input[name="o"]').val().length < 2 || !re_name.test($('input[name="o"]').val())) {
+	// 	error('Необходимо указать отчество.', $('input[name="o"]'));
+	// 	return false;
+	// }
 	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
 		error('Вы не указали пол.', $('input[name="gender"]'));
 		return false;
@@ -475,15 +478,20 @@ $("#email").suggestions({
     }
 	$('#submitOne').click(function(){
 		if (validate1()) {
-			send_form();
-			$('.ex-step-counter').removeClass('ex-step-active');
-            $('.ex-step-2').addClass('ex-step-active');
-            $('#firstStep').removeClass('in active');
-            $('#secondStep').addClass('in active');
-            $('.spec_footer4').css('visibility','hidden');
-            $('.spec_footer5').css('visibility','hidden'); 
-			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
-			markTarget('form-step-1');
+            $('input[name="step"]').val('3');
+            $('#form-modal').show();
+			send_form(true, '/lk');
+            markTarget('form-step-3');
+            window.location = '/lk';
+			// send_form();
+			// $('.ex-step-counter').removeClass('ex-step-active');
+            // $('.ex-step-2').addClass('ex-step-active');
+            // $('#firstStep').removeClass('in active');
+            // $('#secondStep').addClass('in active');
+            // $('.spec_footer4').css('visibility','hidden');
+            // $('.spec_footer5').css('visibility','hidden'); 
+			// $('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
+			// markTarget('form-step-1');
 		}
 		showBzzz = false;
 		$('.reg_same').change();
