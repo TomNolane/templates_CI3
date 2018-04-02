@@ -87,12 +87,12 @@
                     </div>
                 </div>
                 <!-- Скрываем старую форму даты рождения -->
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="birthdate">Дата рождения</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
                             <input type="tel" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
-                                data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
+                                data-validation="custom" value="06/02/2000" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
                                 required>
                                 <p class="help-block2"></p>
                                 <p class="text-muted helpblock">Пример: 06/02/2000</p>
@@ -153,7 +153,7 @@
                 <div class="form-group">
                     <a id="next1">
                         <div class="col-md-8 col-md-offset-4 text-right">
-                            <span id="submitOne" class="ex-main-btn hidden-sm hidden-xs">Далее</span>
+                            <span id="submitOne" class="ex-main-btn hidden-sm hidden-xs">Получить деньги</span>
                         </div>
                     </a>
                 </div>
@@ -163,7 +163,7 @@
     <div class="row">
         <a id="next1b">
             <div class="col-xs-12 text-center">
-                <span id="submitOneSecond" class="ex-main-btn hidden-md hidden-lg">Далее</span>
+                <span id="submitOneSecond" class="ex-main-btn hidden-md hidden-lg">Получить деньги</span>
             </div>
         </a>
     </div>

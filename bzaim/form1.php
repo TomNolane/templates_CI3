@@ -1,6 +1,6 @@
 <div class="ex-anketa-head">
     <p class="text-conf text-center">
-        Личные данные (шаг 1 из 3)
+        Личные данные (всего 1 шаг)
     </p>
 </div>
 <div class="ex-anketa-main">
@@ -69,7 +69,7 @@
             </div>
             <input type="hidden" id="gender" value="1" name="gender">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     <div class="form-group has-feedback">
                         <label class="label-required" for="phone">Номер телефона</label>
                         <input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон" title="Укажите свой телефон"
@@ -128,11 +128,11 @@
                     </div>
                 </div>
                 <!-- Скрываем старую форму даты рождения -->
-                <div class="col-sm-6">
+                <div class="col-sm-6 hidden">
                     <div class="form-group has-feedback">
                         <label class="label-required" for="birthdate">Дата рождения</label>
                         <input type="tel" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Укажите свою дату рождения"
-                            data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Укажите дату рождения"
+                            data-validation="custom" value="06/02/2000" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Укажите дату рождения"
                             required>
                         <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2"></p>
@@ -184,7 +184,7 @@
                 </label>
             </div>
             <div class="col-sm-4 col-xs-12">
-                <button class="ex-main-btn" id="next1" type="button"> Далее </button>
+                <button class="ex-main-btn" id="next1" type="button"> Получить займ </button>
             </div>
         </div>
     </div>

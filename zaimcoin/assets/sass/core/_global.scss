@@ -32,8 +32,8 @@ body{
   line-height: 21px;
   text-transform: uppercase;
   background: #ffbc58; /* Old browsers */
-  background: -moz-linear-gradient(to top,  #ffbc58 0%, #ff7900 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(to top,  #ffbc58 0%,#ff7900 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -moz-linear-gradient(top,  #ffbc58 0%, #ff7900 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ffbc58 0%,#ff7900 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  #ffbc58 0%,#ff7900 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbc58', endColorstr='#ff7900',GradientType=0 ); /* IE6-9 */
   @include prefix(border-radius, 30px);

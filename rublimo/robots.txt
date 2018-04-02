@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /lk/
+Disallow: /application/
+Disallow: /nbproject/
+Disallow: /system/
+Disallow: /assets/
+Disallow: /modules/
+Disallow: /templates/common/
+Allow: /templates/

@@ -102,5 +102,6 @@ switch($this->uri->segment(1))
 	elseif ($this->uri->segment(1) == 'allarticles') require 'internal-allarticles.php';
 	elseif ($this->uri->segment(1) == 'refinancing') require 'internal-refinancing.php';
 	elseif($this->uri->segment(1) == '404') require 'internal-404.php';
+	elseif($this->uri->segment(1) == 'post') require 'internal-post.php';
 }
 ?>

@@ -88,14 +88,14 @@ function plural_type($n) {
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
 Page -->
-<script >
+<script type="text/javascript">
 /* <![CDATA[ */
 var google_conversion_id = 819783468;
 var google_conversion_label = "umfOCI-B1XsQrM7zhgM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script   
+<script type="text/javascript"  
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>

@@ -11,7 +11,7 @@ $(document).ready(function () {
         }
         gg = c;
     }
-    var currentLoanSize = gg;
+    var currentLoanSize = gg,
         range = $("#rangeSlider"),
         commissionPercantage = 13,
         rangeUpperValue =  $('.ex-slider-val'),

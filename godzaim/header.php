@@ -18,11 +18,17 @@ if(!isset($description))
 <meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 <meta name="robots" content="all" />
 <meta name="copyright" lang="ru" content="Godzaim.ru" /> 
+
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache"> 
+<meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
+
 <meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 <meta property="og:description" content="Godzaim - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
 <meta property="og:image" content="https://godzaim.ru/templates/godzaim/img/how-bgg.png"/>
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://godzaim.ru/" />
+
 <meta name="twitter:card" content="https://godzaim.ru/templates/godzaim/img/how-bgg.png"/>
 <meta name="twitter:title" content="Срочные займы круглосуточно без проверок Онлайн"/>
 <meta name="twitter:description" content="Godzaim - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
@@ -47,7 +53,7 @@ if(!isset($description))
 		require "templates/godzaim/css/font-awesome.min.css"; 
 		echo '</style>'; 
 		echo '<style>'; 
-		require "templates/godzaim/css/style.css"; 
+		require "templates/godzaim/css/style.min.css"; 
 		echo '</style>'; 
 		echo '<style>
 		.row {
@@ -58,6 +64,11 @@ if(!isset($description))
 			visibility: hidden;
 		}
 		</style>';
+		echo '<style>'; 
+		echo 'input#i , input#o, input#f, input#feedback-name {
+			text-transform: capitalize !important;
+		  }'; 
+		echo '</style>'; 
 		echo '<style>'; 
 		require "templates/godzaim/css/suggestions.min.css"; 
 		echo '</style>'; 
@@ -283,7 +294,7 @@ if(!isset($description))
 <script src="/modules/html5shiv/html5shiv.js"></script>
 <![endif]-->
 
-<script >(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=AB08QuA*AHqYGgS1qSBS6k8osS6uuM0vwS7*GJOxHTjgB6b3yrRzsaxRA1KdhNf2pLUkYjuXeJvfaRnExxKnHxYFNvF2NIeOXGQG6ID7zAK1LjO2*5JwKmrAYlejenz3cv*G0tu9UfpsE3Bj9StLFGJC4Xc7FnTUd7KiOjzBcJY-&pixel_id=1000081266';</script>
+<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=AB08QuA*AHqYGgS1qSBS6k8osS6uuM0vwS7*GJOxHTjgB6b3yrRzsaxRA1KdhNf2pLUkYjuXeJvfaRnExxKnHxYFNvF2NIeOXGQG6ID7zAK1LjO2*5JwKmrAYlejenz3cv*G0tu9UfpsE3Bj9StLFGJC4Xc7FnTUd7KiOjzBcJY-&pixel_id=1000081266';</script>
 <?php
 		require 'sendpuls.php';
 		require 'google_tag_manager.php';

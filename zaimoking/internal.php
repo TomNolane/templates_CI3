@@ -1,11 +1,4 @@
-<?php
-if ($this->uri->segment(1) == 'robots.txt') 
-{
-	header("Content-type: text/plain");
-	require 'internal-robots.txt.php';
-} 
-else
-{
+<?php 
 $my_title = ''; $description = ''; 
 switch($this->uri->segment(1))
 {
@@ -97,6 +90,4 @@ switch($this->uri->segment(1))
 	elseif ($this->uri->segment(1) == 'without_check') require 'internal-without_check.php';
 	elseif ($this->uri->segment(1) == 'microloans') require 'internal-microloans.php';
 	elseif ($this->uri->segment(1) == 'urgent-loans') require 'internal-urgent-loans.php';
-	elseif($this->uri->segment(1) == '404') require 'internal-404.php';
-}
 ?>

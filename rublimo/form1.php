@@ -112,11 +112,11 @@
 	</div>
 </div>
 <!-- Скрываем старую форму даты рождения -->
-<div class="form-group has-feedback">
+<div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs" id="birthdate_label">Дата рождения</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="tel" class="form-control ec tip" name="birthdate" id="birthdate" placeholder="День рождения" title="Укажите свою дату рождения"
-			    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Укажите дату рождения"
+			    data-validation="custom" value="06/02/2000" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Укажите дату рождения"
 			    required>
 			<span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2"></p>
@@ -174,7 +174,8 @@
 
 </div>
 <div class="clearfix"></div>
-<div class="col-sm-5 col-sm-offset-4 col-xs-12">
+<div class="col-sm-7 col-sm-offset-4 col-xs-12">
 <div class="shadow">
-<a class="btn btn-next" id="next">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Далее <i class="fa fa-caret-right"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-</div></div>
+<a class="btn btn-ok btn-block" id="next">Отправить заявку</a>
+</div>
+</div> 

@@ -1,7 +1,7 @@
 <section class="ex-main-form">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="form-group has-feedback">
+            <!-- <div class="form-group has-feedback">
                 <label class="control-label col-md-3" for="passport">Серия и номер
                     паспорта</label>
                 <div class="col-md-9">
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <input type="hidden" class="form-control ec" id="passport-s" name="passport_s"  title="Серия паспорта" data-validation="number" data-validation-allowing="range[1;9999]" data-validation-error-msg="Введите серию паспорта">
-            <input type="hidden" class="form-control ec" id="passport-n" name="passport_n"  title="Номер паспорта"  data-validation="number" data-validation-allowing="range[1;999999]" data-validation-error-msg="Введите номер паспорта">
+            <input type="hidden" class="form-control ec" id="passport-n" name="passport_n"  title="Номер паспорта"  data-validation="number" data-validation-allowing="range[1;999999]" data-validation-error-msg="Введите номер паспорта"> -->
                 <div class="form-group hidden"> 
                 <div class="col-sm-2">
                 <label class="col-sm-4 control-label label-required" for="passport_dd">Дата выдачи*</label>
@@ -101,18 +101,18 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback">
+            <!-- <div class="form-group has-feedback">
                 <label class="control-label col-md-3" for="region">Регион проживания</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper ex-arrow">
                     <select class="form-control ec tip special_form99" id="region" name="region" autocomplete="off" required>
                     <option value="">-- Выберите регион --</option>
                         <?php
-                        if (isset($regions) && is_array($regions))
-                        {
-                            foreach($regions as $region)
-                            echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
-                        }
+                        // if (isset($regions) && is_array($regions))
+                        // {
+                              //foreach($regions as $region)
+                              //echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
+                        // }
                         ?>
                     </select>
                     </div>
@@ -122,13 +122,13 @@
                 <label class="control-label col-md-3" for="city">Город проживания</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
-                    <input type="text" class="form-control ec tip" name="city" id="city" title="Укажите город в котором вы живете" value="<?php echo isset($city_name)? $city_name : ''; ?>"
+                    <input type="text" class="form-control ec tip" name="city" id="city" title="Укажите город в котором вы живете" value="<?php // echo isset($city_name)? $city_name : ''; ?>"
                     pattern="^[А-Яа-яЁё\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$"
                     data-validation-error-msg="Укажите, населенный пункт">
                     <p class="text-muted helpblock">Пример: г. Новосибирск</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="form-group has-feedback">
                 <label class="control-label col-md-3" for="street">Улица проживания</label>
                 <div class="col-md-9">

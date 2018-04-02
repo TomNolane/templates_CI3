@@ -151,10 +151,7 @@ else
     require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/zaimcoin/assets/js/jquery.pickmeup.twitter-bootstrap.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimcoin/assets/js/pickmeup.min.js';
+    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
     echo '</script>';
     echo '<script>';
     require 'templates/zaimcoin/assets/js/jquery.form-validator.js';
@@ -179,7 +176,7 @@ else
     require 'templates/zaimcoin/assets/js/settings_form.js';
     echo '</script>';
     echo '<!--[if lt IE 10]>
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->';
 
  if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form' || $this->uri->segment(1) == 'money' || $this->uri->segment(1) == 'zaim-bank' || $this->uri->segment(1) == 'zaim-yandex' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-contact') 
@@ -341,46 +338,16 @@ else
     }
 
     function Loading(flag) {
-        if (typeof flag == 'undefined') { 
-            $('#feedback-send').prop('disabled', false); 
-            $('#feedback-send').html('Отправляется <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        } else if (!flag) {
-            $('#feedback-send').html('Отправлено');
+        if (typeof flag == 'undefined') {
             $('#feedback-send').prop('disabled', true);
+            $('#feedback-send').html('Отправка <i class="fa fa-spinner fa-spin fa-pulse"></i>');
+        } else if (!flag) {
+            $('#feedback-send').html('Отправить');
+            $('#feedback-send').prop('disabled', false);
         }
     }
     $('#feedback-send').click(function () {
-
-        var re_name2 = /^[а-яА-Яё,\W\.\s-]+$/i;
-        if($('#feedback-name').val().length < 2 || !re_name2.test($('#feedback-name').val()))
-        {
-            alert("Корректно заполните Ваше имя");
-            return;
-        }
-
-        var re_email2 = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
-        if($('#feedback-email').val().length < 6 || !re_email2.test($('#feedback-email').val()))
-        {
-            alert("Корректно заполните Ваш email");
-            return;
-        }
-
-        if($('#feedback-comment').val().length < 4)
-        {
-            alert("Корректно заполните Ваше обращение");
-            return;
-        }
-
         Loading();
-
-        if(!re_email.test($('#feedback-email').val()))
-        {
-            Loading(0);
-            alert('Пожалуйста, заполните поле "ваш емаил" корректно.');
-            $('#feedback-send').prop('disabled', false);
-            $('#feedback-send').html('Отправить');
-            return;
-        } 
 
         var data;
         if (window.location.pathname == '/form') {
@@ -632,7 +599,7 @@ if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
             }
         }
         return c;
-    }
+    }  
 </script>';
 }
 
@@ -798,49 +765,7 @@ if ($this->uri->segment(1) == 'form')
         }
     }); 
     </script>';
-    require 'templates/common/js.php';
-    if(isset($_GET['popup']) and $_GET['popup']==1 )
-    {
-        echo '<!-- Modal Popup-->
-            <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header text-center">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                        </div>
-                        <div class="modal-body text-center">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <img src="templates/common/img/popup.jpg" alt="popup.jpg">
-                                    <h2>'.$popup_text.'</h2>
-                                    <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script >
-                $(window).load(function(){
-                    $("#popup").modal("show");
-                });
-            </script>';
-    }
 }
-
-if(isset($_GET['email']))
-{
-    $this->load->model('user/user_model', 'user');
-    $user_data = $this->user->get_user($_GET['email']);
-    $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
-    $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
-    foreach ($user_data as $name => $item)
-    {
-        echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
-    }
-    echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
-}
-
 require 'yandexmetrika.php';
 require 'googleanalytics.php';
 ?>
@@ -866,6 +791,7 @@ require 'googleanalytics.php';
                 }
             });
         }
+        //traffic(window.location.hostname,window.location.pathname);
     </script>
     </body>
     </html>

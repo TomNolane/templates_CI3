@@ -6,11 +6,13 @@
 
     if($this->uri->segment(1) != 'form')
     {
-        echo '<!-- Zaimomix -->
+        echo '</script>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Займомикс -->
         <ins class="adsbygoogle"
         style="display:block"
-        data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="1865585360"
+        data-ad-client="ca-pub-2169296404508755"
+        data-ad-slot="9029396493"
         data-ad-format="auto"></ins>
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
@@ -603,7 +605,6 @@ function markTarget(target,param, id)
         });
 }
 
-</script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</script> 
 </body>
 </html>

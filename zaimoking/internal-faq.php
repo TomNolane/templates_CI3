@@ -2,7 +2,7 @@
 </header>
 <main class="ex-faq">
     <div class="container">
-        <h1 class="text-center">Часто задаваемые вопросы</h1>
+        <h1 class="text-center">Способы получения денег</h1>
         <div class="col-sm-offset-1 col-sm-10">
             <div class="form-group ex-select-block">
                 <form action="#" method="post" id="frmMyform">

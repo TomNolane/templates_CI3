@@ -54,12 +54,12 @@
             ?>
         </select>
     </div>
-</div> 
+</div>
 <div class="form-group has-feedback">
     <label class="control-label col-md-4 label-required" for="passportdate">Дата выдачи</label>
     <div class="col-md-6">
         <div class="ex-wrapper">
-            <input type="tel" class="form-control ec tip" name="passportdate" id="passportdate" placeholder="Дата выдачи паспорта" title="Пожалуйста, выберете дату выдачи паспорта"
+            <input type="text" class="form-control ec tip" name="passportdate" id="passportdate" placeholder="Дата выдачи паспорта" title="Пожалуйста, выберете дату выдачи паспорта"
                 data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату выдачи паспорта"
                 required>
             <span id="passportdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>

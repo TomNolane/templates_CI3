@@ -12768,7 +12768,7 @@ footer.ex-main-footer p {
 }
 /* line 155, ../sass/desktop/_homepage.scss */
 .ex-home .ex-articles {
-  padding-top: 109px;
+  /* padding-top: 109px; */
   padding-bottom: 108px;
   background-color: #f9f9f9;
 }
@@ -13767,7 +13767,7 @@ main.ex-offerta h1 {
 }
 /* line 12, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 60px;
 }
 /* line 16, ../sass/desktop/_offerta.scss */
@@ -13782,8 +13782,7 @@ main.ex-offerta .ex-offers-content .ex-off-block p .fa {
 }
 /* line 24, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content .ex-off-block figure {
-  padding: 22px 26px 32px;
-  background-color: #fcfcfc;
+  padding: 22px 26px 32px; 
   margin-bottom: 20px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -13793,8 +13792,8 @@ main.ex-offerta .ex-offers-content .ex-off-block figure {
 /* line 29, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content .ex-off-block figure .ex-img-offerta {
   text-align: center;
-  height: 41px;
-  margin-bottom: 51px;
+  height: 150px;
+  margin-bottom: 21px;
 }
 /* line 33, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content .ex-off-block figure .ex-img-offerta img {
@@ -13830,10 +13829,10 @@ main.ex-offerta .ex-offers-content .ex-off-block figure table tr td:first-of-typ
 }
 /* line 60, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content .ex-off-block figure table tr td:last-of-type {
-  text-align: right;
+  text-align: left;
   font-size: 16px;
-  font-weight: 700;
-  line-height: 14px;
+  font-weight: 500;
+  line-height: 18px;
   color: #4a4a4a;
 }
 @media screen and (max-width: 1199px) and (min-width: 992px) {
