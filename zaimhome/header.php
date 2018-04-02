@@ -18,18 +18,12 @@ if(!isset($description))
     <meta name="Description" content="<?php echo $description;?>" />
     <meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
     <meta name="robots" content="all" />
-    <meta name="copyright" lang="ru" content="zaimhome.ru" /> 
-
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-control" content="no-cache"> 
-    <meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
-
+    <meta name="copyright" lang="ru" content="zaimhome.ru" />
     <meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
     <meta property="og:description" content="zaimhome - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
     <meta property="og:image" content="https://zaimhome.ru/templates/zaimhome/assets/img/header-logo.png"/>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://zaimhome.ru/" />
-
     <meta name="twitter:card" content="https://zaimhome.ru/templates/zaimhome/assets/img/header-logo.png"/>
     <meta name="twitter:title" content="Срочные займы круглосуточно без проверок Онлайн"/>
     <meta name="twitter:description" content="zaimhome - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
@@ -55,13 +49,10 @@ if(!isset($description))
     <!-- style -->
     <?php
     echo '<style>';
-    require 'templates/zaimhome/assets/css/style.min.css';
+    require 'templates/zaimhome/assets/css/style.css';
     echo '</style>';
     echo '<style>';
     require 'templates/zaimhome/assets/css/main.css';
-    echo '</style>';
-    echo '<style>';
-    require 'templates/zaimhome/assets/css/jquery-ui-1.10.4.custom.min.css';
     echo '</style>';
     echo '<style>';
     require 'templates/zaimhome/assets/css/suggestions.min.css';
@@ -172,17 +163,7 @@ if(!isset($description))
                             </li>
                             <li>
                                 <a href="/money" class="hov">Виды займов</a>
-                            </li> 
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/form">Получить деньги</a> 
-                    </li> 
-                    <li class="dropdown">
-                        <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">Информация
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
+                            </li>
                             <li>
                                 <a href="/oferta" class="hov">Публичная оферта</a>
                             </li> 
@@ -198,6 +179,35 @@ if(!isset($description))
                         </ul>
                     </li>
                     <li>
+                        <a href="/form">Получить деньги</a> 
+                    </li>
+                    <li class="dropdown">
+                            <a  href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Новости
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a  href="/news1" class="hov" >Где взять займ на карту Сбербанка?</a>
+                                </li>
+                                <li>
+                                    <a  href="/news2" class="hov" >Как получить кредит на Яндекс.Деньги?</a>
+                                </li> 
+                                <li>
+                                    <a  href="/news3" class="hov" >Мгновенные займы – доступная и удобная услуга</a>
+                                </li>
+                                <li>
+                                    <a  href="/news4" class="hov" >Очистить кредитную историю</a>
+                                </li>
+                                <li>
+                                    <a  href="/news5" class="hov" >Как получить займ на QIWI кошелек</a>
+                                </li>
+                                <li>
+                                    <a  href="/news6" class="hov" >Как получить займ через систему Contact без отказа</a>
+                                </li>
+                            </ul>
+                        </li>
+                    <li> 
                         <a href="/faq">FAQ</a>
                     </li>
                     <li>
@@ -224,12 +234,12 @@ if(!isset($description))
             <div class="modal-body">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                        <form action="">
+                        <form>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="feedback-name" placeholder="Имя" title="Имя" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="feedback-phone" placeholder="Телефон" title="Телефон" required>
+                                <input type="hidden" class="form-control" id="feedback-phone" value="8(905)9789787" placeholder="Телефон" title="Телефон" required>
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control" id="feedback-email" placeholder="Email" title="Email" required>

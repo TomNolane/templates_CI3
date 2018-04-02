@@ -1,9 +1,17 @@
-<?php $my_title = ''; $description = '';
+<?php
+if ($this->uri->segment(1) == 'robots.txt') 
+{
+	header("Content-type: text/plain");
+	require 'internal-robots.txt.php';
+} 
+else
+{
+$my_title = ''; $description = '';
 switch($this->uri->segment(1))
 {
 	case 'about': 
     $my_title = 'Лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
-    $description = 'BZAIM5 осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
+    $description = 'bzaim осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
     break;
 case 'contacts': 
     $my_title = 'Где Лучше Взять Срочный Займ без Отказа'; 
@@ -47,11 +55,11 @@ case 'agree':
     break;
 case 'soglasie': 
     $my_title = 'Соглашение на Обработку Данных для Получения Займа'; 
-    $description = 'Условия получения мгновенных займов и кредитов с помощью лучшего онлайн сервиса  BZAIM5 с самой низкой процентной ставкой';
+    $description = 'Условия получения мгновенных займов и кредитов с помощью лучшего онлайн сервиса  Bzaim5 с самой низкой процентной ставкой';
     break;
 case 'rules': 
     $my_title = 'Основные Правила для Предоставления Срочных Займов'; 
-    $description = 'Онлайн сервис  BZAIM5 предоставления срочных займов и кредитов с самой низкой процентной ставкой предоставляет условия для получения займов';
+    $description = 'Онлайн сервис  Bzaim5 предоставления срочных займов и кредитов с самой низкой процентной ставкой предоставляет условия для получения займов';
     break;
 case 'credits': 
     $my_title = 'Непосильные кредиты: как не попасть в долговую яму'; 
@@ -71,10 +79,10 @@ case 'insolvency':
     break;
 case 'docs': 
     $my_title = 'Основные Правила для Предоставления Срочных Займов'; 
-    $description = 'Онлайн сервис  BZAIM5 предоставления срочных займов и кредитов с самой низкой процентной ставкой предоставляет условия для получения займов';
+    $description = 'Онлайн сервис  Bzaim5 предоставления срочных займов и кредитов с самой низкой процентной ставкой предоставляет условия для получения займов';
     break;
 case 'money': 
-    $my_title = 'Получение денег BZAIM5'; 
+    $my_title = 'Получение денег bzaim'; 
     $description = 'Их можно будет обналичить или потратить в Интернете.проверок кредитной истории и не выходя из дома.';
     break;
 case 'borrow': 
@@ -117,28 +125,54 @@ case 'articles':
     $my_title = 'Статьи о займах'; 
     $description = 'Актуальные статьи о займах и кредитах. О том как правильно взять займ, погасить его, как  оформить заявку на кредит с плохой кредитной историей и многое другое.';
     break;
-default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'BZAIM5 - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
-}
- require 'header.php'; ?>
 
-<header>
-    <div class="p">
-        <div class="clearfix">&nbsp;</div>
-            <div class="container">
-                    <div class="row">
-                            <div class="col-md-12 col-sm-12 internal">
-                                    <?php
-                                    if ($this->uri->segment(1) == 'about') require 'internal-about.php';
-                                    elseif ($this->uri->segment(1) == 'docs') require 'internal-docs.php';
-                                    elseif ($this->uri->segment(1) == 'contacts') require 'internal-contacts.php';
-                                    elseif ($this->uri->segment(1) == 'faq') require 'internal-faq.php';
-                                    elseif ($this->uri->segment(1) == 'article') require 'internal-article.php';
-                                    ?>
-                            </div>
-                    </div>
-            </div>
-        <div class="clearfix">&nbsp;</div>
-        <div class="clearfix">&nbsp;</div>
-    </div>
-</header> 
-<?php require 'footer.php'; ?>
+
+case 'news1': 
+    $my_title = 'Где взять займ на карту Сбербанка?'; 
+    $description = 'Сбербанк - самое популярное финучреждение у россиян. Обладателями его карт являются более 80% граждан РФ. Широкий спектр услуг и карточных продуктов Сбербанка в совокупности с его высоким уровнем надежности делают его таким распространенным.';
+    break;
+case 'news2': 
+    $my_title = 'Как получить онлайн-кредит на кошелек Яндекс.Деньги?'; 
+    $description = 'Оформление займа на Яндекс.Кошелек - самый быстрый способ получить нужную сумму. Перевод осуществляется буквально в течение
+    2-3 минут, тогда как на банковскую карточку или другую электронную систему - часто сутки и более. Если вы не хотите тратить
+    ни секунды личного времени, такой вид займа для вас.';
+    break;
+    case 'news3': 
+    $my_title = 'Мгновенные займы – доступная и удобная услуга'; 
+    $description = 'В условиях затянувшегося кризиса сложно отыскать человека, который ни разу не одалживал деньги у знакомых или не пользовался услугами кредитования.';
+    break;
+case 'news4': 
+    $my_title = 'Можно ли самостоятельно улучшить или очистить (исправить) кредитную историю'; 
+    $description = 'Выражение – кредитная история слышали многие люди, обратившиеся к банковским структурам, у которых возникли финансовые затруднения.';
+    break;
+case 'news5': 
+    $my_title = 'Как получить займ на QIWI кошелек?'; 
+    $description = 'Ситуация, когда срочно нужны деньги, знакома каждому из нас. Для некоторых подобный форс-мажор наступает перед самой зарплатой, в особенности, когда ее задерживают на денек другой, для других появляется неожиданная возможность сделать выгодное приобретение.';
+    break;
+case 'news6': 
+    $my_title = 'Как получить займ через систему Contact без отказа?'; 
+    $description = 'Жизнь сегодня течет куда быстрее, чем 100, 50 и даже 10 лет назад. Человечество постоянно куда-то очень торопится и почему-то всегда опаздывает. Темп, задаваемый миром, требует все более быстрого принятия решений в любой ситуации.';
+    break;
+default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'bzaim - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
+}
+
+    if ($this->uri->segment(1) == 'about') {  require 'internal-about.php';} 
+    elseif ($this->uri->segment(1) == 'form') { require 'form.php';}
+    elseif ($this->uri->segment(1) == 'agreement') { require 'internal-agreement.php';}
+    elseif ($this->uri->segment(1) == 'faq') { require 'internal-faq.php';}
+    elseif ($this->uri->segment(1) == 'documents') { require 'internal-documents.php';}
+    elseif ($this->uri->segment(1) == 'contract'){ require 'internal-contract.php'; }
+    elseif ($this->uri->segment(1) == 'oferta') { require 'internal-oferta.php';}
+    elseif ($this->uri->segment(1) == 'money'){ require 'internal-money.php';}
+    elseif ($this->uri->segment(1) == 'thanks'){ require 'internal-thanks.php';}
+    elseif ($this->uri->segment(1) == 'rules') {require 'internal-rules.php';}
+    elseif ($this->uri->segment(1) == 'lk') { $my_title = "Вам автоматически одобрен займ"; require 'lk.php';}
+    elseif ($this->uri->segment(1) == 'news1') { require 'internal-news1.php'; }
+	elseif ($this->uri->segment(1) == 'news2') { require 'internal-news2.php';  }
+	elseif ($this->uri->segment(1) == 'news3')  { require 'internal-news3.php'; }
+    elseif ($this->uri->segment(1) == 'news4') { require 'internal-news4.php'; }
+	elseif ($this->uri->segment(1) == 'news5') { require 'internal-news5.php'; }
+    elseif ($this->uri->segment(1) == 'news6') { require 'internal-news6.php'; }
+    elseif($this->uri->segment(1) == '404') require 'internal-404.php';
+}
+?>

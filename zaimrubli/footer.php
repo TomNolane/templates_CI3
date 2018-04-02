@@ -355,6 +355,7 @@ if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
         }
         return c;
     } 
+    traffic("zaimrubli.ru", "4");
 </script>';
 }
 ?>
@@ -603,6 +604,7 @@ function traffic(site, page)
             }
     });
 }
+//traffic(window.location.hostname,window.location.pathname);
 </script>
 </body>
 </html>

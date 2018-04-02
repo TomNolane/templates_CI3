@@ -41,7 +41,7 @@
             {
                 $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
                 $item['link'] = str_replace("#site", $domen, $item['link']);
-                echo '<div class="col-md-3">
+                echo '<div class="col-md-3" style="margin-top: 33px;">
                 <figure class="text-center">
                     <div class="ex-wrapper text-center">
                         <p class="text-right">

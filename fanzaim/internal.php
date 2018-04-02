@@ -1,4 +1,11 @@
-<?php 
+<?php
+if ($this->uri->segment(1) == 'robots.txt') 
+{
+	header("Content-type: text/plain");
+	require 'internal-robots.txt.php';
+} 
+else
+{
 $my_title = ''; $description = '';
 switch($this->uri->segment(1))
 {
@@ -78,6 +85,22 @@ switch($this->uri->segment(1))
 		$my_title = 'Как снять финансовый стресс и не волноваться'; 
 		$description = 'Деньги и неудовлетворительное финансовое состояние являются одной из главнейших причин повседневного стресса – подтверждают исследования.';
 		break;
+	case 'personal-data':
+		$my_title = 'Политика компании в отношении обработки персональных данных'; 
+		$description = 'Настоящая Политика определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных в ООО «Альянс» (далее – Оператор) с целью защиты прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.';
+		break;
+	case 'calls':
+		$my_title = 'Согласие на звонки'; 
+		$description = 'для информирования о поступлении новых услуг, проверки актуализации запроса, согласование заявки, проверки получения информации';
+		break;
+	case 'regulation':
+		$my_title = 'Положение об обработке персональных данных'; 
+		$description = 'Положение об обработке персональных данных в ООО «Альянс» (далее – Положение) разработано в соответствии с Федеральным законом от 27.07.2006 № 152ФЗ «О персональных данных» (далее – ФЗ152), Трудовым кодексом Российской Федерации (далее – ТК РФ), а также «Перечнем сведений конфиденциального характера», утвержденным Указом Президента Российской Федерации от 06.03.1997 № 188.';
+		break;
+	case 'safety':
+		$my_title = 'Положение об обеспечении безопасности персональных данных'; 
+		$description = 'Персональные данные (ПДн) – любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных)';
+		break;
 	default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'Fanzaim - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
 } 
     if ($this->uri->segment(1) == 'about') require 'internal-about.php';
@@ -96,5 +119,11 @@ switch($this->uri->segment(1))
 	elseif ($this->uri->segment(1) == 'allarticles') require 'internal-allarticles.php';
 	elseif ($this->uri->segment(1) == '9-rules') require 'internal-9-rules.php';
 	elseif ($this->uri->segment(1) == 'harmony') require 'internal-harmony.php';
-	elseif ($this->uri->segment(1) == 'problems') require 'internal-problems.php'; 
+	elseif ($this->uri->segment(1) == 'problems') require 'internal-problems.php';
+	elseif ($this->uri->segment(1) == 'personal-data') require 'internal-personal-data.php';
+	elseif ($this->uri->segment(1) == 'calls') require 'internal-calls.php';
+	elseif ($this->uri->segment(1) == 'regulation') require 'internal-regulation.php';
+	elseif ($this->uri->segment(1) == 'safety') require 'internal-safety.php';
+	elseif($this->uri->segment(1) == '404') require 'internal-404.php';
+}
 ?>

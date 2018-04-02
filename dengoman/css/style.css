@@ -184,12 +184,7 @@ p.text-indent{
 .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover{
     background:none;
     color:#42d79e;
-}
-
-
-#feedbackModal .modal-dialog {
-    /*width:976px;*/
-}
+} 
 .modal-content{
     background:#ffffff;
     border-radius:20px;
@@ -292,8 +287,7 @@ p.text-indent{
 .current_amount_color.orange{color:#ffd25b;}
 .current_amount_color.green{color:#5db992;}
 .current_amount_color.red{color:#c13433;}
-.orange .irs-single{background:rgba(255,210,91,0.7);}
-.green .irs-single{}
+.orange .irs-single{background:rgba(255,210,91,0.7);} 
 .red .irs-single{background:rgba(193,52,51,0.7);}
 .orange .irs-bar, .orange .irs-bar-edge{
     background:#ffd25b;
@@ -1052,6 +1046,23 @@ input#i , input#o, input#f, input#feedback-name {
 .special_contact {
     font-size: 15px;
 }
-#phonestatus {
-
+.helpblock
+{
+  margin-bottom: 0;
+  margin-top: 0px;
+  font-size: 0.9em;
+  float: right !important;
+}
+input:invalid:not(:placeholder-shown) {border-color: red;}
+input:valid:not(:placeholder-shown) {border-color: green;}
+.help-block2 {
+    display: none;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    font-size: 0.8em;
+    float: left;
+    color: red !important;
+} 
+.help-block {
+    display: none !important;
 }

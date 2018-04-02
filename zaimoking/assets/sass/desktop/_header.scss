@@ -1,0 +1,192 @@
+.ex-main-header.hidden-xs {
+  text-align: center;
+  padding: 26px 0;
+  color: #fff;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  @include prefix(border-radius, 0);
+  margin-bottom: 0;
+  .ex-brand {
+    display: inline-block;
+    width: 79px;
+    height: 68px;
+    background-image: url(../img/logo.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    vertical-align: middle;
+  }
+  .navbar-nav {
+    padding: 16px 20px;
+    list-style-type: none;
+    .ex-dropdown-menu {
+      &.open{
+        .dropdown-toggle{
+          font-weight: 700;
+          color: #9b9b9b;
+          i{
+            @include prefix(transform, rotate(180deg));
+            border-color: #9b9b9b transparent transparent transparent;
+          }
+        }
+      }
+      a.ex-menu-item {
+        color: #000000;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 0;
+        line-height: 36px;
+        text-decoration: none;
+        background-color: transparent !important;
+        @include prefix(transition, all 0.3s ease);
+        &:focus {
+          background-color: transparent !important;
+        }
+        &:active {
+          background-color: transparent !important;
+        }
+        &:hover {
+          font-weight: 700;
+          color: #9b9b9b;
+          i {
+            border-color: #9b9b9b transparent transparent transparent;
+          }
+        }
+        @media (max-width: 767px) {
+        text-align: left;
+        }
+      }
+      > a {
+        position: relative;
+        i {
+          position: absolute;
+          top: 7px;
+          right: -15px;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 6px 3px 0 3px;
+          border-color: #000000 transparent transparent transparent;
+        }
+        @media (max-width: 991px) {
+          padding-right: 15px !important;
+        }
+      }
+      .dropdown-menu {
+        border: none;
+        padding: 0;
+        left: 52px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+        border-radius: 0 0 5px 5px;
+        background-image: linear-gradient(180deg, #f4f4f4 0%, #ffffff 100%);
+        ul {
+          list-style-type: none;
+          border: none;
+          padding: 0;
+          li {
+            @include prefix(transition, all 0.3s ease);
+            padding: 10px 44px 10px 20px;
+            a {
+              text-decoration: none;
+              color: #9b9b9b;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 14px;
+              padding: 0;
+              margin: 0;
+            }
+            &:hover {
+              cursor: pointer;
+              background-color: #379297;
+              a {
+                color: #ffffff;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+        .ex-action {
+          padding: 16px 20px;
+          .ex-main-btn {
+            padding: 16px 5px;
+            background-color: #379297;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.47px;
+          }
+        }
+      }
+      @media (max-width: 767px) {
+        text-align: left;
+        position: absolute!important;
+        z-index: 99999;
+      }
+    }
+    @media (max-width: 767px) {
+      float: left;
+    }
+  }
+  .navbar-collapse {
+    border-color: transparent;
+  }
+}
+.ex-main-header.visible-xs {
+  background-color: transparent;
+  border: none;
+  @include prefix(border-radius, 0);
+  margin-bottom: 0;
+  .navbar-header {
+    .navbar-toggle {
+      margin-top: 25px;
+    }
+    .navbar-brand {
+      padding: 54px 15px;
+      i {
+        display: inline-block;
+        width: 60px;
+        height: 52px;
+        background-image: url(../img/logo.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
+        vertical-align: middle;
+
+      }
+      @media (max-width:  767px) {
+        padding:15px;
+      }
+    }
+  }
+  .navbar-nav {
+    padding: 15px;
+    li {
+      a {
+        padding: 0;
+        line-height: 36px;
+        background-color: transparent !important;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .navbar-collapse {
+    border-color: transparent;
+  }
+  .ex-action {
+    padding: 16px 20px;
+    .ex-main-btn {
+      padding: 16px 5px;
+      background-color: #379297;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.47px;
+    }
+
+  }
+}
+

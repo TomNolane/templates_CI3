@@ -17,9 +17,9 @@ if(!isset($description))
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="fanzaim.ru" /> 
-	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Cache-control" content="no-cache"> 
-	<meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
+	
+	 
+	
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="fanzaim - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
 	<meta property="og:image" content="https://fanzaim.ru/templates/fanzaim/assets/img/pic.png"/>
@@ -58,9 +58,6 @@ if(!isset($description))
      echo '</style>'; 
      echo '<style>';
      require 'templates/fanzaim/assets/css/style_custom.min.css';
-     echo '</style>'; 
-     echo '<style>';
-     require 'templates/fanzaim/assets/css/jquery-ui-1.10.4.custom.min.css';
      echo '</style>';
      echo '<style>';
      require 'templates/fanzaim/assets/css/suggestions.min.css';
@@ -176,7 +173,11 @@ if(!isset($description))
                                     <ul>
                                         <li><a href="/oferta">Публичная оферта</a></li>
                                         <li><a href="/soglasie">Согласие на обработку данных</a></li>
-                                        <li><a href="/rules">Правила предоставления займов</a></li>
+                                        <li><a href="/rules">Условия пользования сайтом</a></li>
+                                        <li><a href="/personal-data">Политика компании</a></li>
+                                        <li><a href="/calls">Согласие на звонки</a></li> 
+                                        <li><a href="/regulation">Персональные данные</a></li>
+                                        <li><a href="/safety">Безопасность данных</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3">
@@ -214,12 +215,12 @@ if(!isset($description))
 				</div>
                 <div class="modal-body">
                     <div class="form-group has-feedback">
-                        <input type="text" class="form-control ec tip" name="feedback-name" title="Пожалуйста, введите свое имя"
+                        <input type="text" class="form-control ec tip" name="feedback-name" title="Введите свое имя"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                data-validation-error-msg="Пожалуйста, введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
+                                data-validation-error-msg="Введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
                     </div>
                     <div class="form-group">
-                        <input type="tel" class="form-control" id="feedback-phone" title="Тефелон" placeholder="Введите ваш телефон" required>
+                        <input type="hidden" class="form-control" value="8(999)9876543" id="feedback-phone" title="Тефелон" placeholder="Введите ваш телефон" required>
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control" id="feedback-email" title="Email" placeholder="Введите ваш email" required>

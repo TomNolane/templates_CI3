@@ -102,11 +102,11 @@
 	</div>
 </div>
 <!-- Скрываем старую форму даты рождения -->
-        <div class="form-group has-feedback">
+        <div class="form-group has-feedback hidden">
             <label class="control-label col-md-2" for="birthdate">Дата рождения</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
-                    <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Пожалуйста, выберете свою дату рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения" required>
+                    <input type="text" value="06/12/1988" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Пожалуйста, выберете свою дату рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения" required>
                     <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
             </div>
@@ -160,7 +160,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-right"> 
                 <a id="next1">
-                    <button type="button" class="ex-blue-btn special_forms"> Далее </button>
+                    <button type="button" class="ex-blue-btn special_forms"> Получить заём </button>
                 </a> 
             </div>
         </div>

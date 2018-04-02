@@ -1,4 +1,11 @@
-<?php 
+<?php
+if ($this->uri->segment(1) == 'robots.txt') 
+{
+	header("Content-type: text/plain");
+	require 'internal-robots.txt.php';
+} 
+else
+{
 $my_title = ''; $description = '';
 switch($this->uri->segment(1))
 {
@@ -64,11 +71,8 @@ switch($this->uri->segment(1))
 		break;
 	default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'Dengimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
 }
-
- require 'header.php'; ?>
-
+require 'header.php'; ?>
 <div class="clearfix">&nbsp;</div>
-
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12 internal">
@@ -78,12 +82,12 @@ switch($this->uri->segment(1))
 			elseif ($this->uri->segment(1) == 'contacts') require 'internal-contacts.php';
 			elseif ($this->uri->segment(1) == 'faq') require 'internal-faq.php';
 			elseif ($this->uri->segment(1) == 'info') require 'internal-info.php';
+			elseif ($this->uri->segment(1) == 'service') require 'internal-service.php';
+			elseif($this->uri->segment(1) == '404') require 'internal-404.php';
 			?>
 		</div>
 	</div>
 </div>
-
 <div class="clearfix">&nbsp;</div>
 <div class="clearfix">&nbsp;</div>
-
-<?php require 'footer.php'; ?>
+<?php require 'footer.php'; }?>

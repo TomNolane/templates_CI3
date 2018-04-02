@@ -123,25 +123,25 @@ if(isset($_SERVER['HTTP_REFERER'])){
 }
 ?>
     <div class="container">
-        <section class="steps">
+        <div class="steps">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-steps-line">
-                        <div class="form-steps-green-line">
+                        <div class="form-steps-green-line step2 step3">
                             <div class="row" role="tablist" id="form-steps">
                                 <div class="col-xs-2 col-xs-offset-3 text-center" role="presentation">
                                     <a href="#form1" aria-controls="form1" role="tab">
-                                        <span class="btn btn-circle" id="step1">1</span>
+                                        <span class="btn btn-circle" id="step1"></span>
                                     </a>
                                 </div>
                                 <div class="col-xs-2 text-center" role="presentation">
                                     <a href="#form2" aria-controls="form1" role="tab">
-                                        <span class="btn btn-circle off" id="step2">2</span>
+                                        <span class="btn btn-circle " id="step2">1</span>
                                     </a>
                                 </div>
                                 <div class="col-xs-2 text-center" role="presentation">
                                     <a href="#form3" aria-controls="form1" role="tab">
-                                        <span class="btn btn-circle off" id="step3">3</span>
+                                        <span class="btn btn-circle " id="step3"></span>
                                     </a>
                                 </div>
                             </div>
@@ -149,15 +149,15 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
         <section class="steps">
             <div class="row">
-                <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                    <h1>Заполните свои личные данные</h1>
+                <div class="col-sm-6 col-sm-offset-3 col-xs-12">
+                    <h2 class="h1">Заполните свои личные данные</h2>
                 </div>
-            </div>
+            </div> 
         </section>
-        <section class="form">
+        <div class="form">
             <div class="row">
                 <div class="col-md-8 col-md-offset-1 col-xs-12">
                     <form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off" novalidate>
@@ -171,9 +171,8 @@ if(isset($_SERVER['HTTP_REFERER'])){
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="form1">
                                 <?php require 'form1.php'; ?>
-                                <div class="pull-right">
-                                    <a class="btn btn-next" id="next">Далее
-                                        <i class="fa fa-caret-right"></i>
+                                <div class="col-sm-8 col-sm-offset-4 col-xs-12">
+                                    <a class="btn btn-block" id="next" style="padding: 13px;">Отправить заявку 
                                     </a>
                                 </div>
                                 <div class="clearfix"></div>
@@ -202,9 +201,9 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     </form>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="triggers hidden-xs hidden-sm">
+        <div class="triggers hidden-xs hidden-sm">
             <div class="row">
                 <div class="col-sm-2 col-sm-offset-2">
                     <img src="/templates/dengimo/img/form/t1.png" alt="t1.png">
@@ -223,7 +222,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     <p>Деньги Вас ждут прямо сейчас</p>
                 </div>
             </div>
-        </section>
+        </div>
         <div class="clearfix visible-sm visible-xs">&nbsp;</div>
     </div>
     <!-- Modal -->
@@ -234,8 +233,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h1 class="modal-title hidden-xs" id="tosModalLabel">Политика конфиденциальности</h1>
-                    <h2 class="modal-title visible-xs-block" id="tosModalLabel">Политика конфиденциальности</h2>
+                    <h1 class="modal-title hidden-xs" id="tosModalLabel">Политика конфиденциальности</h1> 
                     <p>Заполняя заявку на кредит Вы соглашаетесь с нашими правилами использования данных</p>
                 </div>
                 <div class="modal-body">

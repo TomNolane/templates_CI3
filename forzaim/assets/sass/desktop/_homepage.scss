@@ -83,7 +83,10 @@
 }
 .ex-section-2 {
   padding-top: 120px;
+  overflow: hidden;
   .ex-int-block {
+    opacity: 0;
+    @include prefix(transform, translate3d(100%, 0, 0));
     text-align: center;
     h3 {
       font-family: $lato;
@@ -319,5 +322,3 @@
   }
 
 }
-
-

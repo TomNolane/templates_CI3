@@ -1,4 +1,11 @@
 <?php
+if ($this->uri->segment(1) == 'robots.txt') 
+{
+	header("Content-type: text/plain");
+	require 'internal-robots.txt.php';
+} 
+else
+{
 $my_title = ''; $description = '';
 switch($this->uri->segment(1))
 {
@@ -131,6 +138,7 @@ default: $my_title = 'Срочные Займы Круглосуточно бе�
     elseif ($this->uri->segment(1) == 'money'){ require 'internal-money.php';}
     elseif ($this->uri->segment(1) == 'thanks'){ require 'internal-thanks.php';}
     elseif ($this->uri->segment(1) == 'rules') {require 'internal-rules.php';}
-    elseif ($this->uri->segment(1) == 'lk') { $my_title = "Правила предоставления займов"; require 'lk.php';} 
-?> 
-   
+    elseif ($this->uri->segment(1) == 'lk') { $my_title = "Правила предоставления займов"; require 'lk.php';}
+    elseif($this->uri->segment(1) == '404') require 'internal-404.php';
+}
+?>

@@ -128,3 +128,14 @@ color: #b94a48 !important;
 .label_true {
 color: #3c763d !important;
 }
+.helpblock
+{
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-size: 0.8em;
+  float: right;
+}
+.help-block
+{
+    margin-bottom: 0;
+}

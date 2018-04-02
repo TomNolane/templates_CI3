@@ -10017,12 +10017,12 @@ button.close {
 .datepicker table tr td.today.disabled,
 .datepicker table tr td.today.disabled:hover {
   background-color: #fde19a;
-  background-image: -moz-linear-gradient(top, #fdd49a, #fdf59a);
-  background-image: -ms-linear-gradient(top, #fdd49a, #fdf59a);
+  background-image: -moz-linear-gradient(to top, #fdd49a, #fdf59a);
+  background-image: -ms-linear-gradient(to top, #fdd49a, #fdf59a);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fdd49a), to(#fdf59a));
-  background-image: -webkit-linear-gradient(top, #fdd49a, #fdf59a);
-  background-image: -o-linear-gradient(top, #fdd49a, #fdf59a);
-  background-image: linear-gradient(top, #fdd49a, #fdf59a);
+  background-image: -webkit-linear-gradient(to top, #fdd49a, #fdf59a);
+  background-image: -o-linear-gradient(to top, #fdd49a, #fdf59a);
+  background-image: linear-gradient(to top, #fdd49a, #fdf59a);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdd49a', endColorstr='#fdf59a', GradientType=0);
   border-color: #fdf59a #fdf59a #fbed50;
@@ -10072,12 +10072,12 @@ button.close {
 .datepicker table tr td.active.disabled,
 .datepicker table tr td.active.disabled:hover {
   background-color: #006dcc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -moz-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -ms-linear-gradient(to top, #0088cc, #0044cc);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
-  background-image: linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: linear-gradient(to top, #0088cc, #0044cc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
   border-color: #0044cc #0044cc #002a80;
@@ -10156,12 +10156,12 @@ button.close {
 .datepicker table tr td span.active.disabled,
 .datepicker table tr td span.active.disabled:hover {
   background-color: #006dcc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -moz-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -ms-linear-gradient(to top, #0088cc, #0044cc);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
-  background-image: linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: linear-gradient(to top, #0088cc, #0044cc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
   border-color: #0044cc #0044cc #002a80;
@@ -10724,7 +10724,7 @@ button.close {
 .owl-carousel .owl-nav .owl-next,
 .owl-carousel .owl-dot {
   cursor: pointer;
-  cursor: hand;
+  
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -10893,7 +10893,7 @@ button.close {
   width: 100%;
 }
 
-/*--------------------------------------------Theme------------------------------------------------*/
+/* Theme */
 /**
  * Owl Carousel v2.2.1
  * Copyright 2013-2017 David Deutsch
@@ -11400,9 +11400,15 @@ aside.ex-aside-menu main ul li.ex-larger:hover {
 /* line 84, ../sass/desktop/_homepage.scss */
 .ex-section-2 {
   padding-top: 120px;
+  overflow: hidden;
 }
 /* line 86, ../sass/desktop/_homepage.scss */
 .ex-section-2 .ex-int-block {
+  opacity: 0;
+  -moz-transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
   text-align: center;
 }
 /* line 88, ../sass/desktop/_homepage.scss */
@@ -13006,3 +13012,47 @@ main.ex-offerta .ex-adds {
 input#i , input#o, input#f {
   text-transform: capitalize !important;
 } 
+
+/* line 3, ../sass/core/_animate.scss */
+.animated-1 {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+/* line 7, ../sass/core/_animate.scss */
+.animated-2 {
+  animation-duration: 0.4s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+/* line 12, ../sass/core/_animate.scss */
+.animated-3 {
+  animation-duration: 0.4s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+/* line 17, ../sass/core/_animate.scss */
+.animated-4 {
+  animation-duration: 0.3s;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* line 37, ../sass/core/_animate.scss */
+.fadeInRight {
+  animation-name: fadeInRight;
+}

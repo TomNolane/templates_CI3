@@ -3,9 +3,9 @@ if($this->uri->segment(1) != 'form')
 {
     echo '<!-- Декстоп --><div class="text-center" id="ya-rtb"><div class="visible-xs visible-sm hidden-md hidden-lg" id="yandex_rtb_R-A-247243-1"></div>';
         
-        if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
-        echo '<!-- мобайл --><div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-247243-3"></div>';
-        }
+    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
+    echo '<!-- мобайл --><div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-247243-3"></div>';
+    }
         
     echo '</div>';
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -19,15 +19,13 @@ if($this->uri->segment(1) != 'form')
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
 }
-?>
 
-<?php
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
 {
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-?>
-<?php if ($this->uri->segment(1) != 'confirm'  && $this->uri->segment(1) != 'spasibo' && $this->uri->segment(1) != 'lk' ) {
+
+if ($this->uri->segment(1) != 'confirm'  && $this->uri->segment(1) != 'spasibo' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2') {
 echo '<footer class="ex-start-footer">
     <div class="container">
         <div class="row">
@@ -98,7 +96,7 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
                     <div class="text-center">
                         <a href="/"><img src="templates/dengibystra/assets/img/logo-2.png" alt="logo-2"></a>
                         <p class="spec_footer4">Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
-                            <a href="mailto:support@dengibystra.ru" target="_blank">support@dengibystra.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
+                        <a href="mailto:support@dengibystra.ru" target="_blank">support@dengibystra.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
                     </div>
                 </div>
             </div>
@@ -123,9 +121,6 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
     echo '</script>';
     echo '<script>';
     require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
     echo '</script>';
     echo '<script>';
     require 'templates/dengibystra/assets/js/jquery.form-validator.js';
@@ -170,14 +165,14 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
     require 'templates/common/detect.min.php';
 ?> 
 <!--[if lt IE 10]>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif]--> 
 <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {
     echo '<script>';
     require 'templates/dengibystra/assets/js/loanCalculator.js';
     echo '</script>'; 
     ?>
-        <script type="text/javascript">
+        <script >
         $("#rangeSlider").ionRangeSlider({
         hide_min_max: true, 
         keyboard: true, 
@@ -215,33 +210,38 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
         ?>,
         values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
         onChange: function (range3) {
-                if (range3.from_value <= 10000) {
-                    $("#period").val("7");
-                    $("#period2").val("От 61 до 130 дней");
-                    $('#percent').val('95');
-                } else if (range3.from_value <= 15000) {
-                    $("#period").val("14");
-                    $("#period2").val("От 61 до 130 дней");
-                    $('#percent').val('95');
-                } else if (range3.from_value <= 20000) {
-                    $("#period").val("21");
-                    $("#period2").val("От 61 до 130 дней");
-                    $('#percent').val('95');
-                } else if (range3.from_value <= 30000) {
-                    $("#period").val("21");
-                    $("#period2").val("От 61 до 130 дней");
-                    $('#percent').val('85');
-                } else if (range3.from_value <= 50000) {
-                    $("#period").val("30");
-                    $("#period2").val("От 130 до 250 дней");
-                    $('#percent').val('77');
-                } else {
-                    $("#period").val("30");
-                    $("#period2").val("От 250 до 365 дней");
-                    $('#percent').val('65');
-                }
-                $("#amount").val(range3.from_value);
+            if (range3.from_value <= 10000) {
+                $("#period").val("7");
+                $("#period2").val("От 61 до 130 дней");
+                $('#percent').val('95');
+            } else if (range3.from_value <= 15000) {
+                $("#period").val("14");
+                $("#period2").val("От 61 до 130 дней");
+                $('#percent').val('95');
+            } else if (range3.from_value <= 20000) {
+                $("#period").val("21");
+                $("#period2").val("От 61 до 130 дней");
+                $('#percent').val('95');
+            } else if (range3.from_value <= 30000) {
+                $("#period").val("21");
+                $("#period2").val("От 61 до 130 дней");
+                $('#percent').val('85');
+            } else if (range3.from_value <= 50000) {
+                $("#period").val("30");
+                $("#period2").val("От 130 до 250 дней");
+                $('#percent').val('77');
+            } else {
+                $("#period").val("30");
+                $("#period2").val("От 250 до 365 дней");
+                $('#percent').val('65');
             }
+
+            $("#amount").val(range3.from_value);
+            $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
+        },
+        onFinish: function (range3) {
+            $('.irs-single').text('').append("<span>&nbsp;&nbsp;"+ range3.from_value+"&nbsp;&nbsp;рублей&nbsp;&nbsp;</span>");
+        }
 });
         var slider = $('#rangeSlider').data('ionRangeSlider'); 
         var slider_plus = true;
@@ -265,31 +265,32 @@ else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' ||
             }); 
 
             if (n <= 9) {
-            $('#period').val('7');
-            $('#period2').val('От 61 до 130 дней');
-            $('#percent').val('95');
-            } else if (n <= 14 && n > 9) {
-                $('#period').val('14');
+                $('#period').val('7');
                 $('#period2').val('От 61 до 130 дней');
                 $('#percent').val('95');
-            } else if (n <= 15 && n > 14) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('95');
-            } else if (n <= 17 && n > 15) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('85');
-            } else if (n <= 19 && n > 17) {
-                $('#period').val('30');
-                $('#period2').val('От 130 до 250 дней');
-                $('#percent').val('77');
-            } else if (n > 19) {
-                $('#period').val('30');
-                $('#period2').val('От 250 до 365 дней');
-                $('#percent').val('65');
-            }
-        }, 5);
+                } else if (n <= 14 && n > 9) {
+                    $('#period').val('14');
+                    $('#period2').val('От 61 до 130 дней');
+                    $('#percent').val('95');
+                } else if (n <= 15 && n > 14) {
+                    $('#period').val('21');
+                    $('#period2').val('От 61 до 130 дней');
+                    $('#percent').val('95');
+                } else if (n <= 17 && n > 15) {
+                    $('#period').val('21');
+                    $('#period2').val('От 61 до 130 дней');
+                    $('#percent').val('85');
+                } else if (n <= 19 && n > 17) {
+                    $('#period').val('30');
+                    $('#period2').val('От 130 до 250 дней');
+                    $('#percent').val('77');
+                } else if (n > 19) {
+                    $('#period').val('30');
+                    $('#period2').val('От 250 до 365 дней');
+                    $('#percent').val('65');
+                }
+                $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
+        }, 50);
         </script>
 <?php
 } 
@@ -302,7 +303,6 @@ elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
         $(".offer-type").change(function () {
             update_offers();
         });
-
         function update_offers() {
             var str = ".results tbody tr";
             //var curr = clone(by_reg.length? by_reg : offers);
@@ -332,7 +332,7 @@ elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
     function clone(o) {
         if (!o || "object" !== typeof o) return o;
 
-        var c = "function" === typeof o.pop ? [] : {};
+        var c = "function" === typeof o.pop ? [] : {}; 
         var p, v;
         for (p in o) {
             if (o.hasOwnProperty(p)) {
@@ -345,7 +345,7 @@ elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
             }
         }
         return c;
-    } 
+    }
 </script>';
 }
 include "googleadservices_all.php"; 

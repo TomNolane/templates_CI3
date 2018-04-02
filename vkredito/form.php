@@ -94,8 +94,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 									<?php require 'form1.php'; ?>
 									<div class="col-sm-8 col-sm-offset-4 col-xs-12">
 										<div class="text-center">
-											<a class="btn btn-primary btn-next" id="next">Далее
-												<i class="fa fa-arrow-right"></i>
+											<a class="btn btn-primary btn-next" id="next">Оформить заявку 
 											</a>
 										</div>
 									</div>

@@ -2,11 +2,11 @@
     $from = '15'; $px = '63.974'; 
     if ($this->uri->segment(1) != 'form') {
 
-        echo '<!-- Декстоп Yandex.RTB R-A-257494-1 --><center><div id="ya-rtb" class="text-center spec_ind_foot"><div class="hidden-xs hidden-sm"><div id="yandex_rtb_R-A-257494-1"></div></div>';
+        echo '<!-- Декстоп Yandex.RTB R-A-257494-1 --><div id="ya-rtb" class="text-center spec_ind_foot"><div class="hidden-xs hidden-sm"><div id="yandex_rtb_R-A-257494-1"></div></div>';
         if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
             echo '<!-- Мобайл Yandex.RTB R-A-257494-3 --><div class="hidden-md hidden-lg"><div id="yandex_rtb_R-A-257494-3"></div></div>';
         }
-        echo '</div></center>';
+        echo '</div>';
 
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Займхоум -->
@@ -20,13 +20,12 @@
         </script>';
     }
 ?>
-
     <footer class="ex-main-footer">
         <div class="container" style="width: 100%">
             <div class="col-sm-3 text-center">
                 <div class="ex-footer-logo">
                     <a href="/"><img src="/templates/zaimhome/assets/img/header-logo.png" alt="Missing image" class="special_foot22"></a>
-                </div>
+                </div> 
                 <p class="special_footer3 ">Сервис выгодного онлайн займа</p>
             </div>
             <div class="col-sm-3 small spec_footer4 ">
@@ -58,9 +57,6 @@ echo '<script>';
 require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
 echo '</script>';
 echo '<script>';
-require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
-echo '</script>';
-echo '<script>';
 require 'templates/zaimhome/assets/js/jquery.form-validator.js';
 echo '</script>';
 echo '<script>';
@@ -81,252 +77,11 @@ require 'templates/zaimhome/assets/js/modal.js';
 echo '</script>';
 echo '<script>';
 require 'templates/zaimhome/assets/js/settings_form.js';
-echo '</script>';
-
-?>
+echo '</script>'; ?>
     <!--[if lt IE 10]>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-<![endif]-->
-    <?php
-if ($this->uri->segment(1) == 'form') 
-{ 
-    echo ' <script>
-    $("#work").change(function(){
-        if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
-        { 
-            $("#work_name").addClass("valid");
-            $("#work_name").parent().addClass("has-success").removeClass("has-error");
-            $("#work_name").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_name").removeClass("er");
-            $("#"+$("#work_name").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_occupation").addClass("valid");
-            $("#work_occupation").parent().addClass("has-success").removeClass("has-error");
-            $("#work_occupation").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_occupation").removeClass("er");
-            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_phone").addClass("valid");
-            $("#work_phone").parent().addClass("has-success").removeClass("has-error");
-            $("#work_phone").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_phone").removeClass("er");
-            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
-
-            $("#work_experience").addClass("valid");
-            $("#work_experience").parent().addClass("has-success").removeClass("has-error");
-            $("#work_experience").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_experience").removeClass("er");
-            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok");
-
-            $("#work_salary").removeClass("valid");
-            $("#work_salary").parent().addClass("has-error").removeClass("has-success");
-            $("#work_salary").parent().parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_salary").addClass("er");
-            $("#work_salary").focus();
-            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-ok").addClass("glyphicon-remove");
-
-            $("#work_region").addClass("valid");
-            $("#work_region").parent().addClass("has-success").removeClass("has-error");
-            $("#work_region").parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_region").removeClass("er");
-            $("#"+$("#work_region").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_city").addClass("valid");
-            $("#work_city").parent().addClass("has-success").removeClass("has-error");
-            $("#work_city").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_city").removeClass("er");
-            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_street").addClass("valid");
-            $("#work_street").parent().addClass("has-success").removeClass("has-error");
-            $("#work_street").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_street").removeClass("er");
-            $("#"+$("#work_street").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_house").addClass("valid");
-            $("#work_house").parent().addClass("has-success").removeClass("has-error");
-            $("#work_house").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_house").removeClass("er");
-            $("#"+$("#work_house").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_office").addClass("valid");
-            $("#work_office").parent().addClass("has-success").removeClass("has-error");
-            $("#work_office").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_office").removeClass("er");
-            $("#"+$("#work_office").id+"status").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-//            $("#work_name").prop("disabled", true);
-            if($(this).val().toLowerCase() == "пенсионер")
-            $("#work_name").val("пенсионер");
-            else  $("#work_name").val("безработный");
-
-//            $("#work_occupation").prop("disabled", true);
-            if($(this).val().toLowerCase() == "пенсионер")
-            $("#work_occupation").val("пенсионер");
-            else  $("#work_occupation").val("безработный"); 
-
-//            $("#work_phone").prop("disabled", true);
-            var teemp = $("#phone").val();
-            $("#work_phone").val(teemp);
-
-//            $("#work_experience").prop("disabled", false);
-            $("#work_experience").val(100);
-
-//            $("#work_salary").prop("disabled", false);
-            $("#work_salary").val("");
-
-            var teemp2 = Number($("#region").find(":selected").index());
-            $("#work_region option").eq(teemp2).prop("selected", true);
-//            $("#work_region").prop("disabled", false); 
-
-//            $("#work_city").prop("disabled", true);
-            var teemp3 = $("#city").val();
-            $("#work_city").val(teemp3);
-
-//            $("#work_street").prop("disabled", true);
-            var teemp4 = $("#street").val();
-            $("#work_street").val(teemp4);
-
-            
-            var teemp5 = $("#building").val();
-            $("#work_house").val(teemp5);
-
-//            $("#work_building").prop("disabled", true);
-            $("#work_building").val(" ");
-
-//            $("#work_office").prop("disabled", true);
-            var teemp6 = $("#flat").val();
-            $("#work_office").val(teemp6);
-        }
-        else { 
-
-            $("#work_name").val("");
-            $("#work_name").removeClass("valid");
-            $("#work_name").parent().removeClass("has-success");
-            $("#work_name").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_name").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_occupation").val("");
-            $("#work_occupation").removeClass("valid");
-            $("#work_occupation").parent().removeClass("has-success");
-            $("#work_occupation").parent().parent().prev().removeClass("label_true"); 
-            $("#"+ $("#work_occupation").id+"status").removeClass("glyphicon-ok"); 
-
-            $("#work_phone").val("");
-            $("#work_phone").removeClass("valid");
-            $("#work_phone").parent().removeClass("has-success");
-            $("#work_phone").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_phone").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_experience").val("");
-            $("#work_experience").removeClass("valid");
-            $("#work_experience").parent().removeClass("has-success");
-            $("#work_experience").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_experience").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_salary").val("");
-            $("#work_salary").removeClass("valid");
-            $("#work_salary").parent().removeClass("has-success");
-            $("#work_salary").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_salary").id+"status").removeClass("glyphicon-ok");
- 
-            $("#work_region").removeClass("valid");
-            $("#work_region").parent().removeClass("has-success");
-            $("#work_region").parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_region").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_city").val("");
-            $("#work_city").removeClass("valid");
-            $("#work_city").parent().removeClass("has-success");
-            $("#work_city").parent().parent().prev().removeClass("label_true"); 
-            $("#"+ $("#work_city").id+"status").removeClass("glyphicon-ok"); 
-
-            $("#work_street").val("");
-            $("#work_street").removeClass("valid");
-            $("#work_street").parent().removeClass("has-success");
-            $("#work_street").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_street").id+"status").removeClass("glyphicon-ok"); 
-
-            $("#work_house").val("");
-            $("#work_house").removeClass("valid");
-            $("#work_house").parent().removeClass("has-success");
-            $("#work_house").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_house").id+"status").removeClass("glyphicon-ok");
-
-            $("#work_office").val("");
-            $("#work_office").removeClass("valid");
-            $("#work_office").parent().removeClass("has-success");
-            $("#work_office").parent().parent().prev().removeClass("label_true"); 
-            $("#"+$("#work_office").id+"status").removeClass("glyphicon-ok");
-
-//            $("#work_name").prop("disabled", false);
-            $("#work_name").val(""); 
- 
-//            $("#work_occupation").prop("disabled", false);
-             $("#work_occupation").val(""); 
-
-//            $("#work_phone").prop("disabled", false);
-            $("#work_phone").val("");
-
-//            $("#work_experience").prop("disabled", false);
-            $("#work_experience").val("");
-
-//            $("#work_salary").prop("disabled", false);
-            $("#work_salary").val("");
-
-            $("#work_region option").eq(0, true).prop("selected", true);
-//            $("#work_region").prop("disabled", false); 
-
-//            $("#work_city").prop("disabled", false);
-            $("#work_city").val("");
-
-//            $("#work_street").prop("disabled", false);
-            $("#work_street").val("");
-
-//            $("#work_house").prop("disabled", false);
-            $("#work_house").val("");
-
-//            $("#work_building").prop("disabled", false);
-            $("#work_building").val("");
-
-//            $("#work_office").prop("disabled", false);
-            $("#work_office").val("");
-        }
-    }); 
-
-    </script>';
-    require 'templates/common/js.php';
-    if(isset($_GET['popup']) and $_GET['popup']==1 ){
-    echo '
-    <!-- Modal Popup-->
-    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-body text-center">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="/templates/common/img/popup.jpg">
-                            <h2>'.$popup_text.'</h2>
-                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type= " text/javascript">
-        $(window).load(function(){
-            $("#popup").modal("show");
-        });
-    </script>';
-    }
-}
-?>
-        <!-- всплывающее окно -->
-        <?php 
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+<![endif]--> 
+<?php 
  if ($this->uri->segment(1) == '') {?>
         <script>
             function getParameterByName(name, url) {
@@ -590,23 +345,8 @@ if ($this->uri->segment(1) == 'form')
     ?>
                 <?php
 }
+ 
 
-if(isset($_GET['email']))
-    {
-        //данные пользователя
-        $this->load->model('user/user_model', 'user');
-        $user_data = $this->user->get_user($_GET['email']);
-        $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
-        $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
-        foreach ($user_data as $name => $item)
-        {
-            echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
-        }
-        echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
-    }
-?>
-
-                    <?php
     require 'yandex_metrika.php';
     require 'google_analitycs.php';
 ?>
@@ -623,7 +363,6 @@ if(isset($_GET['email']))
             success: function(data) {}
         });
     }
-
     function traffic(site, page) {
         $.ajax({
             type: 'POST',
@@ -632,10 +371,64 @@ if(isset($_GET['email']))
             success: function(data) {}
         });
     }
-
+    
 </script>
 <?php  
     if ($this->uri->segment(1) != 'form') {
         require 'yandex_rtb.php';
+    }
+
+    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
+    { 
+        echo '<script>
+        var offers = '.json_encode($data).'
+        var by_reg = null;
+        $(document).ready(function () {
+            $(".offer-type").change(function () {
+                update_offers();
+            });
+            function update_offers() {
+                var str = ".results tbody tr";
+                //var curr = clone(by_reg.length? by_reg : offers);
+                var ot_card = $(".offer-type[data-id=\'card\']").prop("checked");
+                var ot_qiwi = $(".offer-type[data-id=\'qiwi\']").prop("checked");
+                var ot_yandex = $(".offer-type[data-id=\'yandex\']").prop("checked");
+                var ot_contact = $(".offer-type[data-id=\'contact\']").prop("checked");
+                // Прячем всё
+                $(str).hide();
+                // Пробегаемся по списку офферов
+                ((by_reg !== null) ? by_reg : offers).forEach(function (offer, i) {
+                    var $tr = $(str + "[data-id=\'" + offer.id + "\']");
+                    if ($tr.data("amount") >= amount) {
+                        if (ot_card && !!$tr.data(\'card\') == ot_card) $tr.show();
+                        else if (ot_qiwi && !!$tr.data(\'qiwi\') == ot_qiwi) $tr.show();
+                        else if (ot_yandex && !!$tr.data(\'yandex\') == ot_yandex) $tr.show();
+                        else if (ot_contact && !!$tr.data(\'contact\') == ot_contact) $tr.show();
+                    }
+                });
+            }
+            if (getcookie("i")) {
+                var i = getcookie("i");
+                $("#i").text(i);
+            }
+        });
+        function clone(o) {
+            if (!o || "object" !== typeof o) return o;
+
+            var c = "function" === typeof o.pop ? [] : {};
+            var p, v;
+            for (p in o) {
+                if (o.hasOwnProperty(p)) {
+                    v = o[p];
+                    if (v && "object" === typeof v) {
+                        c[p] = clone(v);
+                    } else {
+                        c[p] = v;
+                    }
+                }
+            }
+            return c;
+        }
+    </script>';
     }
 ?>

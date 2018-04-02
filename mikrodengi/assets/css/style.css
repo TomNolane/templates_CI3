@@ -11225,12 +11225,12 @@ button.close {
 .datepicker table tr td.today.disabled,
 .datepicker table tr td.today.disabled:hover {
   background-color: #fde19a;
-  background-image: -moz-linear-gradient(top, #fdd49a, #fdf59a);
-  background-image: -ms-linear-gradient(top, #fdd49a, #fdf59a);
+  background-image: -moz-linear-gradient(to top, #fdd49a, #fdf59a);
+  background-image: -ms-linear-gradient(to top, #fdd49a, #fdf59a);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fdd49a), to(#fdf59a));
-  background-image: -webkit-linear-gradient(top, #fdd49a, #fdf59a);
-  background-image: -o-linear-gradient(top, #fdd49a, #fdf59a);
-  background-image: linear-gradient(top, #fdd49a, #fdf59a);
+  background-image: -webkit-linear-gradient(to top, #fdd49a, #fdf59a);
+  background-image: -o-linear-gradient(to top, #fdd49a, #fdf59a);
+  background-image: linear-gradient(to top, #fdd49a, #fdf59a);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdd49a', endColorstr='#fdf59a', GradientType=0);
   border-color: #fdf59a #fdf59a #fbed50;
@@ -11280,12 +11280,12 @@ button.close {
 .datepicker table tr td.active.disabled,
 .datepicker table tr td.active.disabled:hover {
   background-color: #006dcc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -moz-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -ms-linear-gradient(to top, #0088cc, #0044cc);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
-  background-image: linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: linear-gradient(to top, #0088cc, #0044cc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
   border-color: #0044cc #0044cc #002a80;
@@ -11364,12 +11364,12 @@ button.close {
 .datepicker table tr td span.active.disabled,
 .datepicker table tr td span.active.disabled:hover {
   background-color: #006dcc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -moz-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -ms-linear-gradient(to top, #0088cc, #0044cc);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
-  background-image: linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: linear-gradient(to top, #0088cc, #0044cc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
   border-color: #0044cc #0044cc #002a80;
@@ -11912,7 +11912,7 @@ button.close {
 .owl-carousel .owl-nav .owl-next,
 .owl-carousel .owl-dot {
   cursor: pointer;
-  cursor: hand;
+  
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -12081,7 +12081,7 @@ button.close {
   width: 100%;
 }
 
-/*--------------------------------------------Theme------------------------------------------------*/
+/* Theme */
 /**
  * Owl Carousel v2.2.1
  * Copyright 2013-2017 David Deutsch
@@ -12768,7 +12768,7 @@ footer.ex-main-footer p {
 }
 /* line 155, ../sass/desktop/_homepage.scss */
 .ex-home .ex-articles {
-  padding-top: 109px;
+  /* padding-top: 109px; */
   padding-bottom: 108px;
   background-color: #f9f9f9;
 }
@@ -13767,7 +13767,7 @@ main.ex-offerta h1 {
 }
 /* line 12, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 60px;
 }
 /* line 16, ../sass/desktop/_offerta.scss */
@@ -13782,8 +13782,7 @@ main.ex-offerta .ex-offers-content .ex-off-block p .fa {
 }
 /* line 24, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content .ex-off-block figure {
-  padding: 22px 26px 32px;
-  background-color: #fcfcfc;
+  padding: 22px 26px 32px; 
   margin-bottom: 20px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -13793,8 +13792,8 @@ main.ex-offerta .ex-offers-content .ex-off-block figure {
 /* line 29, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content .ex-off-block figure .ex-img-offerta {
   text-align: center;
-  height: 41px;
-  margin-bottom: 51px;
+  height: 150px;
+  margin-bottom: 21px;
 }
 /* line 33, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content .ex-off-block figure .ex-img-offerta img {
@@ -13830,10 +13829,10 @@ main.ex-offerta .ex-offers-content .ex-off-block figure table tr td:first-of-typ
 }
 /* line 60, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content .ex-off-block figure table tr td:last-of-type {
-  text-align: right;
+  text-align: left;
   font-size: 16px;
-  font-weight: 700;
-  line-height: 14px;
+  font-weight: 500;
+  line-height: 18px;
   color: #4a4a4a;
 }
 @media screen and (max-width: 1199px) and (min-width: 992px) {

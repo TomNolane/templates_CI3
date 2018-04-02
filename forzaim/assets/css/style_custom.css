@@ -193,3 +193,23 @@ main.ex-faq .col-sm-3 button:last-of-type:hover {
 .spec_lk3 {
   margin-top: 15px;
 }
+.helpblock
+{
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-size: 0.8em;
+  float: right !important;
+}
+input:invalid:not(:placeholder-shown) {border-color: red;}
+input:valid:not(:placeholder-shown) {border-color: green;}
+.help-block {
+  display: none !important;
+}
+.help-block2 {
+    display: none;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    font-size: 0.8em;
+    float: left;
+    color: red !important;
+}  

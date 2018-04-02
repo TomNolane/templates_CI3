@@ -11596,7 +11596,7 @@ button.close {
 .owl-carousel .owl-nav .owl-next,
 .owl-carousel .owl-dot {
   cursor: pointer;
-  cursor: hand;
+  
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -11765,7 +11765,7 @@ button.close {
   width: 100%;
 }
 
-/*--------------------------------------------Theme------------------------------------------------*/
+/* Theme */
 /**
  * Owl Carousel v2.2.1
  * Copyright 2013-2017 David Deutsch

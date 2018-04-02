@@ -61,7 +61,6 @@
 		</div>
 	</form>
 </section>
-
 <section class="features hidden-xs hidden-sm">
 	<h1>Преимущества нашего сервиса</h1>
 	<div class="features-cover">
@@ -132,7 +131,6 @@
 		</div>
 	</div> 
 </section>
-
 <section class="reviews hidden-xs hidden-sm">
 	<div class="container">
 		<h1>Отзывы клиентов</h1>
@@ -300,7 +298,6 @@
 		</div>
 	</div>
 </section>
-
 <div class="doc hidden-xs hidden-sm" style="color: #333">
 	<div class="great-support-container section-container section-container-gray-bg">
 		<div class="container">
@@ -430,7 +427,6 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="blog-container section-container partner-container hidden-xs hidden-sm">
 		<div class="container">
 			<div class="row">
@@ -476,7 +472,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="row">
 				<div class="col-sm-3 blog-box wow fadeInLeft">
 					<div class="row">
@@ -485,7 +480,7 @@
 							<p>№ лицензии 211017700000 </p>
 							<p>Адрес: 115088, г. Москва,</p>
 							<p>2-ой Южнопортовый проезд, д. 33, стр. 1</p>
-							<p>Годовая процентная ставка: 248,2%/p>
+							<p>Годовая процентная ставка: 248,2%</p>
 						</div>
 					</div>
 				</div>
@@ -507,7 +502,7 @@
 							<p>№ лицензии 1097746179585 </p>
 							<p>Адрес: 115201, г. Москва,</p>
 							<p>Старокаширское ш., д. 2, корп. 2</p>
-							<p>Годовая процентная ставка: 360%/p>
+							<p>Годовая процентная ставка: 360%</p>
 						</div>
 					</div>
 				</div>

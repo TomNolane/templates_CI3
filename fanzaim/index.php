@@ -345,5 +345,6 @@
             </div>
         </div>
     </div>
+    </div>
 </section>
 <?php require 'footer.php'; ?>

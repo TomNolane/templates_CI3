@@ -5,13 +5,13 @@ var re_int = /^\d+$/;
 var re_name = /^[а-яА-Яё,\W\.\s-]+$/i;
 var isWebvisor = new RegExp('^https?:\/\/([^/]+metrika.yandex\.(ru|ua|com|com\.tr|by|kz)|([^/]+\.)?webvisor\.com)').test(document.referrer);
 
-function error(msg) {
-	var title = 'Ошибка';
-	if ($('#message').length) $('#message').remove();
-	$('body').append('<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-		'<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' +
-		'<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">OK</button></div></div></div></div>');
-	$('#message').modal('show');
+function error(msg, elem) {  
+	$('html, body').animate({
+		scrollTop: elem.offset().top - 160
+	}, 1000);
+	elem.click();
+	elem.blur(); 
+	elem.parent(elem).find('.help-block2').css('display','inline-block'); 
 }
 
 function send_form(send, href) {
@@ -47,32 +47,32 @@ function validate(){
 function validate1() {
 	if (isWebvisor) return true;
 	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 100000) {
-		error('Вы не указали сумму.');
+		error('Вы не указали сумму.', $('input[name="amount"]'));
 		return false;
 	} else if ($('input[name="period"]').val() < 5 || $('input[name="period"]').val() > 30) {
-		error('Вы не указали срок займа.');
+		error('Вы не указали срок займа.', $('input[name="period"]'));
 		return false;
 	} else if ($('input[name="f"]').val().length < 2 || !re_name.test($('input[name="f"]').val())) {
-		error('Необходимо указать фамилию.');
+		error('Необходимо указать фамилию.', $('input[name="f"]'));
 		return false;
 	} else if ($('input[name="i"]').val().length < 2 || !re_name.test($('input[name="i"]').val())) {
-		error('Необходимо указать имя.');
+		error('Необходимо указать имя.', $('input[name="i"]'));
 		return false;
 	} else if ($('input[name="o"]').val().length < 2 || !re_name.test($('input[name="o"]').val())) {
-		error('Необходимо указать отчество.');
+		error('Необходимо указать отчество.', $('input[name="o"]'));
 		return false;
 	}
 	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
-		error('Вы не указали пол.');
+		error('Вы не указали пол.', $('input[name="gender"]'));
 		return false;
 	} else if ($('input[name="phone"]').val().length != 16) {
-		error('Номер телефона указан неверно.');
+		error('Номер телефона указан неверно.', $('input[name="phone"]'));
 		return false;
 	} else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {
-		error('Email указан неверно.');
+		error('Email указан неверно.', $('input[name="email"]'));
 		return false;
 	} else if (!$('#agree').prop('checked')) {
-		error('Вы не подтвердили своё согласие с условиями сервиса.');
+		error('Вы не подтвердили своё согласие с условиями сервиса.', $('#agree'));
 		return false;
 	}
 	else return true;
@@ -82,53 +82,43 @@ function validate1() {
 function validate2() {
 	if (isWebvisor) return true;
 	if ($('input[name="passport"]').val().length < 11) {
-		error('Вы не указали номер и серию паспорта.');
+		error('Вы не указали номер и серию паспорта.', $('input[name="passport"]'));
 		return false;
-	}
+    }
+    else if(!CheckTime2())
+    {
+        error('Возраст должен быть от 18 до 70 лет', $('input[name="passportdate"]'));
+        return false;
+    }
 	else if ($('input[name="passport_who"]').val().length < 3) {
-		error('Необходимо указать, кем выдан паспорт.');
+		error('Необходимо указать, кем выдан паспорт.', $('input[name="passport_who"]'));
 		return false;
 	} else if ($('input[name="passport_code"]').val().length < 7) {
-		error('Необходимо указать, код подразделения, выдавшего паспорт.');
+		error('Необходимо указать, код подразделения, выдавшего паспорт.', $('input[name="passport_code"]'));
 		return false;
 	} else if ($('input[name="birthplace"]').val().length < 3) {
-		error('Необходимо указать место рождения.');
+		error('Необходимо указать место рождения.', $('input[name="birthplace"]'));
 		return false;
 	} else if ($('#region').val().length < 2 || !re_rc.test($('#region').val())) {
-		error('Необходимо указать регион проживания.');
+		error('Необходимо указать регион проживания.', $('#region'));
 		return false;
 	} else if ($('input[name="city"]').val().length < 2 || !re_rc.test($('input[name="city"]').val())) {
-		error('<p>Ошибка в указании населённого пункта места жительства.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>');
+		error('<p>Ошибка в указании населённого пункта места жительства.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>', $('input[name="city"]'));
 		return false;
 	} else if ($('input[name="street"]').val().length < 2) {
-		error('Необходимо указать улицу места жительства.');
+		error('Необходимо указать улицу места жительства.', $('input[name="street"]'));
 		return false;
 	} else if (!$('input[name="building"]').val().length || !re.test($('input[name="building"]').val())) {
-		error('Ошибочно указан номер дома места жительства. Указывайте только номер дома и литеру, если она есть.');
+		error('Ошибочно указан номер дома места жительства. Указывайте только номер дома и литеру, если она есть.', $('input[name="building"]'));
 		return false;
 	} else if ($('input[name="housing"]').val().length && !re.test($('input[name="housing"]').val())) {
-		error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.');
+		error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.', $('input[name="housing"]'));
 		return false;
 	} else if ($('input[name="flat"]').val().length && !re.test($('input[name="flat"]').val())) {
-		error('Ошибочно указан номер квартиры места жительства. Указывайте только номер дома и литеру, если она есть.');
+		error('Ошибочно указан номер квартиры места жительства. Указывайте только номер дома и литеру, если она есть.', $('input[name="flat"]'));
 		return false;
 	} else if ($('.reg_same:checked').val() == '0' && ($('#reg_region').val().length < 2 || !re_rc.test($('#reg_region').val()))) {
-		error('Вы не указали регион регистрации.');
-		return false;
-	} else if ($('.reg_same:checked').val() == '0' && ($('input[name="reg_city"]').val().length < 2 || !re_rc.test($('input[name="reg_city"]').val()))) {
-		error('<p>Ошибка в указании населённого пункта места регистрации.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>');
-		return false;
-	} else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_street"]').val().length < 2) {
-		error('Необходимо указать улицу регистрации.');
-		return false;
-	} else if ($('.reg_same:checked').val() == '0' && !re.test($('input[name="reg_building"]').val())) {
-		error('Ошибочно указан номер дома регистрации. Указывайте только номер дома и литеру, если она есть.');
-		return false;
-	} else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_housing"]').val().length && !re.test($('input[name="reg_housing"]').val())) {
-		error('Ошибочно указан номер строения регистрации. Указывайте только номер дома и литеру, если она есть.');
-		return false;
-	} else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_flat"]').val().length && !re.test($('input[name="reg_flat"]').val())) {
-		error('Ошибочно указан номер квартиры регистрации. Указывайте только номер дома и литеру, если она есть.');
+		error('Вы не указали регион регистрации.', $('.reg_same:checked'));
 		return false;
 	} else return true;
 	return false;
@@ -137,30 +127,32 @@ function validate2() {
 function validate3() {
 	if (isWebvisor) return true;
 	if (!re_int.test($('input[name="work_experience"]').val())) {
-		error('Вы не указали стаж работы.');
+		error('Вы не указали стаж работы.', $('input[name="work_experience"]'));
 		return false;
 	} else if (!re_int.test($('input[name="work_salary"]').val())) {
-		error('Вы не указали доход.');
+		error('Вы не указали доход.', $('input[name="work_salary"]'));
 		return false;
 	} else if ($('input[name="work_name"]').val().length < 2) {
-		error('Вы не указали название места работы.');
+		error('Вы не указали название места работы.', $('input[name="work_name"]'));
 		return false;
 	} else if ($('input[name="work_occupation"]').val().length < 2) {
-		error('Вы не указали вашу должность.');
+		error('Вы не указали вашу должность.', $('input[name="work_occupation"]'));
 		return false;
 	} else if ($('input[name="work_region"]').val() == '0') {
-		error('Вы не указали регион работы.');
+		error('Вы не указали регион работы.', $('input[name="work_region"]'));
 		return false;
 	} else if ($('input[name="work_city"]').val().length < 2) {
-		error('Необходимо указать город работы.');
+		error('Необходимо указать город работы.', $('input[name="work_city"]'));
 		return false;
 	} else if ($('input[name="work_street"]').val().length < 2) {
-		error('Необходимо указать улицу работы.');
+		error('Необходимо указать улицу работы.', $('input[name="work_street"]'));
 		return false;
-	} else if (!re.test($('input[name="work_house"]').val())) {
-		error('Ошибочно указан номер дома работы. Указывайте только номер дома и литеру, если она есть.');
-		return false;
-	} else return true;
+    } 
+    // else if (!re.test($('input[name="work_house"]').val())) {
+	// 	error('Ошибочно указан номер дома работы. Указывайте только номер дома и литеру, если она есть.', $('input[name="work_house"]'));
+	// 	return false;
+    // }
+     else return true;
 	return false;
 } 
 $(document).ready(function () {
@@ -314,6 +306,14 @@ $(document).ready(function () {
     $.validate({
         lang: 'ru',
         modules: 'date,sanitize'
+    });
+    $('input').click(function () {
+        if ($(this).attr("type") == "checkbox" || $(this).attr("id") == "feedback-email" || $(this).attr("id") == "feedback-phone" || $(this).attr("id") == "feedback-name" || $(this).attr("id") == "feedback-email2" || $(this).attr("id") == "feedback-phone2" || $(this).attr("id") == "feedback-name2") {
+            return;
+        }
+        $('html, body').animate({
+            scrollTop: $(this).offset().top - 100
+        }, 1000);
     });
     $('input').on('validation', function (evt, valid) {
         if(valid)
@@ -514,17 +514,22 @@ $(document).ready(function () {
     });
     $('#next1').click(function () { 
         if (validate1()) { 
-            $('input[name="step"]').val('1'); 
-            $('.spec_footer7').css('display','none');
-            send_form(); 
-            $('.ex-indicator-scope').addClass('ex-on-second-step');
-            $('.ex-step-counter').addClass('ex-on-second-step');
-            $('#firstStep').removeClass('in active');
-            $('#secondStep').addClass('in active');
-            $('html, body').animate({
-                scrollTop: $('#to_scroll').offset().top
-            }, 1000);
-            markTarget('form-step-1'); 
+            // $('input[name="step"]').val('1'); 
+            // $('.spec_footer7').css('display','none');
+            // send_form(); 
+            // //traffic(window.location.hostname,1);
+            // $('.ex-indicator-scope').addClass('ex-on-second-step');
+            // $('.ex-step-counter').addClass('ex-on-second-step');
+            // $('#firstStep').removeClass('in active');
+            // $('#secondStep').addClass('in active');
+            // $('html, body').animate({
+            //     scrollTop: $('#to_scroll').offset().top
+            // }, 1000);
+            // markTarget('form-step-1'); 
+            $('input[name="step"]').val('3'); 
+            send_form(true, '/lk');
+            markTarget('form-step-3');
+            $('#anketa').submit();
         }
         showBzzz = false;
         $('.reg_same').change();
@@ -535,6 +540,7 @@ $(document).ready(function () {
         if (validate2()) {
             $('input[name="step"]').val('2');
             send_form();
+            //traffic(window.location.hostname,2);
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('.ex-step-counter').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondStep').removeClass('in active');
@@ -549,8 +555,7 @@ $(document).ready(function () {
     });
     $('#getmoney').click(function () {
         if (validate()) { 
-            $('input[name="step"]').val('3');
-            //$('#form-modal').show();
+            $('input[name="step"]').val('3'); 
             send_form(true, '/lk');
             markTarget('form-step-3');
             $('#anketa').submit();

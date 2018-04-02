@@ -64,7 +64,8 @@ $pixel = $this->pixel->stat('zaimhome.ru');
             </div>
             <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" style="text-decoration: none; color: white;" target="_blank"><button class="ex-main-btn">получить деньги</button></a>
         </div></a>
-';$ii++;}
+';$ii++;
+}
 ?>
     </div>
 </div>

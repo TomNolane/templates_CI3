@@ -75,7 +75,7 @@ a, a:hover, a:visited, a:focus{
 }
 .navbar-nav > li > a{
     color:#444444;
-    font-size:17px;
+    font-size:16px;
     font-weight:bold;
     line-height:60px;
     text-decoration:none;
@@ -880,13 +880,13 @@ footer .copy{
 #email_later {
     color:#ccc !important;
 }
-#font10 {
+.font10 {
     font-size: 10px !important;
 }
-#font40 {
+.font40 {
     font-size: 40px !important;
 }
-#font26 {
+.font26 {
     font-size: 26px !important;
 }
 .help-block {
@@ -1013,10 +1013,25 @@ footer .copy{
 .special_news {
     margin:30px;
 }
+.special_news2 {
+    height: 50vh;
+}
 .lk-img {
     background-color: #ffffff;
     border-radius: 15px;
 }
 input#i , input#o, input#f, input#feedback-name {
     text-transform: capitalize !important;
-  } 
+  }
+  input:invalid:not(:placeholder-shown) {border-color: red;}
+input:valid:not(:placeholder-shown) {border-color: green;}
+.help-block2 {
+    display: none;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    float: left;
+    color: red !important;
+}  
+.help-block {
+    display: none !important;
+}

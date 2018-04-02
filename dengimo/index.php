@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 hidden-xs">
-                    <h1>Моментальные займы онлайн</h1>
+                    <h2 class="h1">Моментальные займы онлайн</h2>
                 </div>
                 <form id="anketa" action="/form" method="post">
                 <div class="col-lg-7 col-md-8 col-sm-10 col-xs-12 hidden-xs">
@@ -27,38 +27,37 @@
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
-
                             <div class="col-md-3 col-sm-6">
-                                <span class="btn form-info">
+                                <div class="btn form-info">
                                     <div class="form-info-data sum">6780
                                         <i class="fa fa-rub" aria-hidden="true"></i>
                                     </div>
                                     <div class="form-info-title">К возврату</div>
-                                </span>
+                                </div>
                             </div>
                             <div class="col-md-3 col-sm-6">
-                                <span class="btn form-info">
+                                <div class="btn form-info">
                                     <div class="form-info-data comm">780
                                         <i class="fa fa-rub" aria-hidden="true"></i>
                                     </div>
                                     <div class="form-info-title">Комиссия</div>
-                                </span>
+                                </div>
                             </div>
                             <div class="col-md-3 col-sm-6">
-                                <span class="btn form-info">
+                                <div class="btn form-info">
                                     <div class="form-info-data d">От 61 до 100
                                         <br/> дней</div>
-                                </span>
+                                </div>
                             </div>
                             <div class="col-md-3 col-sm-6">
-                                <span class="btn form-info">
+                                <div class="btn form-info">
                                     <div class="form-info-data percent_rate">97
                                         <span>
                                             <i class="fa fa-percent" aria-hidden="true"></i>
                                         </span>
                                     </div>
                                     <div class="form-info-title">Вероятность</div>
-                                </span>
+                                </div>
                             </div> 
                             <div class="col-md-12 col-sm-12 text-center">
                                 <button type="submit" class="btn">Получить деньги</button>
@@ -66,7 +65,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12 visible-xs text-center">
-                    <h1 id="getmoney">Моментальные займы онлайн</h1>
+                    <h2 class="h1" id="getmoney">Моментальные займы онлайн</h2>
                     <div class="form text-center">
                             <div class="form-slider green">
                                 <input type="text" class="amount amount2" name="amount" value="6000" />

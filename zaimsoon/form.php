@@ -63,21 +63,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
     $ad_id = '4';
 }
 ?>
-
-<div class="container-fluid ex-step-counter hidden-xs">
-    <div class="row">
-        <div class="col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3">
-            <ul class="ex-step-indicator">
-                <li><span>Шаг 1</span></li>
-                <li><span>Шаг 2</span></li>
-                <li><span>Шаг 3</span></li>
-            </ul>
-        </div>
-    </div>
-</div> 
+ 
     <main class="container ex-form">
         <?php $period; ?>
-        <form id="anketa" action="/lk" method="post" class="form-horizontal" onsubmit="return validate();" autocomplete="off">
+        <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off">
             <input type="hidden" name="display" id="display" value="0">
             <input type="hidden" name="referer" value="<?=$referer?>">
             <input type="hidden" name="id" value="">
@@ -85,10 +74,6 @@ if(isset($_SERVER['HTTP_REFERER'])){
             <input type="hidden" name="ad_id" value="<?=$ad_id?>">
             <input type="hidden" id="amount" name="amount" value="<?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>"/>
             <input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 21 : $_POST['period']; ?>"/>
-            
-            
-            
-            
             
             <div class="tab-content" id="to_scroll">
                 <div id="firstStep" class="tab-pane fade in active">

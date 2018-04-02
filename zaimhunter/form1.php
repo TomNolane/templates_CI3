@@ -71,8 +71,8 @@
 	</div>
 </div>
 <!-- Скрываем старую форму даты рождения -->
-            <div class="form-group has-feedback ex-arrow-on">
-                <input type="text" class="form-control ec tip special_form" name="birthdate" id="birthdate" placeholder="День рождения" title="Выберете свою дату рождения"
+            <div class="form-group has-feedback ex-arrow-on hidden">
+                <input type="text" class="form-control ec tip special_form" value="06/12/1988" name="birthdate" id="birthdate" placeholder="День рождения" title="Выберете свою дату рождения"
 			    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
 			    required>
 			    <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> 

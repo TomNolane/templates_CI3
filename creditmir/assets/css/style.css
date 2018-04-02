@@ -44,58 +44,62 @@ body {
 
 /* line 23, ../sass/core/_global.scss */
 .ex-btn-blue {
-  position: relative;
-  z-index: 99;
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-  padding: 13px 5px;
-  border: none;
-  outline: none;
-  background-color: #007aff;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 17px;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  letter-spacing: 0.5px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
-  -moz-transition: all 0.6s ease;
-  -webkit-transition: all 0.6s ease;
-  -ms-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  position: relative !important;
+  z-index: 99 !important;
+  display: inline-block !important;
+  text-align: center !important;
+  width: 100% !important;
+  padding: 13px 5px !important;
+  border: none !important;
+  outline: none !important;
+  background-color: #007aff !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  letter-spacing: 0.5px !important;
+  -moz-border-radius: 10px !important;
+  -webkit-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  border-radius: 10px !important;
+  -moz-transition: all 0.6s ease !important;
+  -webkit-transition: all 0.6s ease !important;
+  -ms-transition: all 0.6s ease !important;
+  transition: all 0.6s ease !important;
 }
 /* line 43, ../sass/core/_global.scss */
 .ex-btn-blue:after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  height: 100%;
-  left: -35%;
-  top: 0;
-  transform: skew(50deg);
-  transition-duration: 0.6s;
-  transform-origin: top left;
-  width: 0;
-  background-color: #0062cc;
-  -webkit-transition: all 0.6s;
-  -moz-transition: all 0.6s;
-  -o-transition: all 0.6s;
-  transition: all 0.6s;
+  content: '' !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  height: 100% !important;
+  left: -35% !important;
+  top: 0 !important;
+  transform: skew(50deg) !important;
+  transition-duration: 0.6s !important;
+  transform-origin: top left !important;
+  width: 0 !important;
+  background-color: #0062cc !important;
+  -webkit-transition: all 0.6s !important;
+  -moz-transition: all 0.6s !important;
+  -o-transition: all 0.6s !important;
+  transition: all 0.6s !important;
 }
 /* line 60, ../sass/core/_global.scss */
 .ex-btn-blue:hover {
-  background-color: transparent;
+  /* background-color: transparent !important; */
+  /* background-color: #fff000 !important;
+  color: #000000 !important; */ 
+  font-size: 20px !important;
+  font-weight: 600 !important;
 }
 /* line 62, ../sass/core/_global.scss */
 .ex-btn-blue:hover:after {
-  height: 100%;
-  width: 135%;
+  height: 100% !important;
+  width: 135% !important;
 }
 
 /* line 69, ../sass/core/_global.scss */
@@ -11327,12 +11331,12 @@ button.close {
 .datepicker table tr td.today.disabled,
 .datepicker table tr td.today.disabled:hover {
   background-color: #fde19a;
-  background-image: -moz-linear-gradient(top, #fdd49a, #fdf59a);
-  background-image: -ms-linear-gradient(top, #fdd49a, #fdf59a);
+  background-image: -moz-linear-gradient(to top, #fdd49a, #fdf59a);
+  background-image: -ms-linear-gradient(to top, #fdd49a, #fdf59a);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fdd49a), to(#fdf59a));
-  background-image: -webkit-linear-gradient(top, #fdd49a, #fdf59a);
-  background-image: -o-linear-gradient(top, #fdd49a, #fdf59a);
-  background-image: linear-gradient(top, #fdd49a, #fdf59a);
+  background-image: -webkit-linear-gradient(to top, #fdd49a, #fdf59a);
+  background-image: -o-linear-gradient(to top, #fdd49a, #fdf59a);
+  background-image: linear-gradient(to top, #fdd49a, #fdf59a);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdd49a', endColorstr='#fdf59a', GradientType=0);
   border-color: #fdf59a #fdf59a #fbed50;
@@ -11382,12 +11386,12 @@ button.close {
 .datepicker table tr td.active.disabled,
 .datepicker table tr td.active.disabled:hover {
   background-color: #006dcc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -moz-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -ms-linear-gradient(to top, #0088cc, #0044cc);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
-  background-image: linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: linear-gradient(to top, #0088cc, #0044cc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
   border-color: #0044cc #0044cc #002a80;
@@ -11466,12 +11470,12 @@ button.close {
 .datepicker table tr td span.active.disabled,
 .datepicker table tr td span.active.disabled:hover {
   background-color: #006dcc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -moz-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -ms-linear-gradient(to top, #0088cc, #0044cc);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
-  background-image: linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: linear-gradient(to top, #0088cc, #0044cc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
   border-color: #0044cc #0044cc #002a80;
@@ -12002,7 +12006,7 @@ button.close {
 .owl-carousel .owl-nav .owl-next,
 .owl-carousel .owl-dot {
   cursor: pointer;
-  cursor: hand;
+  
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -12171,7 +12175,7 @@ button.close {
   width: 100%;
 }
 
-/*--------------------------------------------Theme------------------------------------------------*/
+/* Theme */
 /**
  * Owl Carousel v2.2.1
  * Copyright 2013-2017 David Deutsch
@@ -13912,7 +13916,7 @@ main.ex-offers .ex-off-block p .fa {
 }
 /* line 19, ../sass/desktop/offers.scss */
 main.ex-offers .ex-off-block figure {
-  padding: 29px;
+  padding: 24px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   background-color: #f6f6f6;
   margin-bottom: 18px;
@@ -13963,7 +13967,7 @@ main.ex-offers .ex-off-block figure table tr td:first-of-type {
 main.ex-offers .ex-off-block figure table tr td:last-of-type {
   text-align: right;
   color: #333333;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 14px;
 }
@@ -13984,4 +13988,76 @@ main.ex-offers .ex-off-block figure table tr td:last-of-type {
   main.ex-offers .ex-off-block {
     margin-bottom: 60px;
   }
+}
+.myButt {
+  max-width: 295px;
+  position: relative !important;
+  z-index: 99 !important;
+  display: inline-block !important;
+  text-align: center !important;
+  width: 100% !important;
+  padding: 13px 5px !important;
+  outline: none !important;
+  background-color: #007aff !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  letter-spacing: 0.5px !important;
+  -moz-border-radius: 10px !important;
+  -webkit-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  border-radius: 10px !important; 
+  
+	/* outline: none;
+	border: none;
+	padding: 20px;
+	display: block;
+	margin: 50px auto;
+	cursor: pointer;
+	font-size: 20px;
+	background-color: transparent;
+	position: relative; */
+	border: 2px solid #fff;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+}
+.one {
+	border-color: #fff;
+	overflow: hidden;
+	color: #fff;
+}
+
+.one .insider {
+	background-color: #fff;
+	width: 100%;
+	height: 20px;
+	position: absolute;
+	left: -200px;
+	transform: rotateZ(45deg);
+	-webkit-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+}
+
+.one:hover {
+	background-color: #F44336;
+	border-color: #fff;
+	color: #fff;
+}
+
+.one:hover .insider {
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	left: 200px;
 }

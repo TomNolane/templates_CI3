@@ -58,7 +58,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="ex-int-block">
+                <div class="ex-int-block ex-first">
                     <img src="/templates/forzaim/assets/img/img1.png" alt="img1.png">
                     <h3>7 минут<br>
                         на одобрение</h3>
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="ex-int-block">
+                <div class="ex-int-block ex-second">
                     <img src="/templates/forzaim/assets/img/img2.png" alt="img2.png">
                     <h3>Услуги сервиса<br>
                         бесплатны</h3>
@@ -75,7 +75,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="ex-int-block">
+                <div class="ex-int-block ex-third">
                     <img src="/templates/forzaim/assets/img/img3.png" alt="img3.png">
                     <h3>Работаем<br>
                         24 часа в сутки</h3>
@@ -84,7 +84,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="ex-int-block">
+                <div class="ex-int-block ex-fourth">
                     <img src="/templates/forzaim/assets/img/img4.png" alt="img4.png">
                     <h3>Не требуем<br>
                         пакета документов</h3>

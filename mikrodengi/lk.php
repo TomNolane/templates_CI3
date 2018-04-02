@@ -32,51 +32,114 @@ function plural_type($n) {
 ?>
 <main class="ex-offerta">
     <div class="container">
-        <h1 class="text-center">Вам автоматически одобрен займ в следующих организациях:</h1>
+        <h1 class="text-center">Воспользуйтесь уникальным предложением:</h1>
         <div class="ex-offers-content">
             <div class="row">
-                <?php  foreach($data as $item)
+                <?php 
+                
+                $arr = array(
+                    // array(
+                    // "text" => "Ваша Карта \"Совесть\" одобрена! Рассрочка 0% до 12 мес! Лимит до 300 000 руб.<br><br><br>",
+                    // "img" => "/templates/mikrodengi/assets/img/lk1.png",
+                    // "header" => "Карта \"Совесть\"",
+                    // "link" => "http://c.cpl7.ru/mybA",
+                    // "btn" => "Получить карту"
+                    // ),
+                    array(
+                        "text" =>  "Играй и выигрывай от 9856 рублей в день! Специальное предложение для Вас. 100% бонус от клуба Вулкан!<br><br>",
+                        "img" => "/templates/mikrodengi/assets/img/lk2.jpg",
+                        "header" => "Забери свои деньги",
+                        "link" => "http://c.cpl7.ru/mA3p",
+                        "btn" => "Начать выигрывать"
+                    ),
+                    array(
+                        "text" => "Минус 10-12 кг в месяц без строгих диет и фитнеса! Gardenin FatFlex по скидке сегодня 50% специально для Вас!<br><br>",
+                        "img" => "/templates/mikrodengi/assets/img/lk3.jpg",
+                        "header" => "\"Gardenin FatFlex\"",
+                        "link" => "http://c.twtn.ru/mzhP",
+                        "btn" => "Заказать со скидкой"
+                    ),
+                    array(
+                        "text" => "Продай свой автомобиль за считанные минуты, а главное за хорошую цену! Бонус специально для Вас! Сервис номер один в России!",
+                        "img" => "/templates/mikrodengi/assets/img/lk4.jpg",
+                        "header" => "\"СarPrice\"",
+                        "link" => "http://c.cpl7.ru/mAq2",
+                        "btn" => "Продать авто"
+                    )
+                );
+                
+                foreach($arr as $item)
                         {
-                            $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-                            $item['link'] = str_replace("#site", $domen, $item['link']); 
-        
-                            echo '<div class="col-md-3">
-                                <div class="ex-off-block">
-                                    <p class="text-right">
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                    </p>
-                                    <figure>
-                                        <div class="ex-img-offerta">
-                                        <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
-                                            <img class="lk-img '.$item['img'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
-                                        </a> 
-                                        </div>
-                                        <table>
-                                            <tbody>
-                                            <tr>
-                                                <td>Сумма займа</td>
-                                                <td>до '.number_format($item['amount'],0,'',' ').' рублей</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Срок займа</td>
-                                                <td>до '.$item['period'].' '.$_plural_days[plural_type($item['period'])].'</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Основная ставка</td>
-                                                <td>'.$item['percent'].'%</td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </figure>
-                                    <div class="ex-offers-footer">
-                                        <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn">Получить деньги</button></a> 
+                            // $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
+                            // $item['link'] = str_replace("#site", $domen, $item['link']); 
+                            echo '<div class="col-md-4">
+                            <div class="ex-off-block">
+                                <p class="text-center">
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </p>
+                                <figure>
+                                    <div class="ex-img-offerta">
+                                    <a href="'.$item['link'].'" target="_blank">
+                                        <img class="lk-img '.$item['img'].'" src="'.$item['img'].'" alt="'.$item['header'].'">
+                                    </a> 
                                     </div>
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td class="text-center" style="text-align: center"><strong >'.$item['header'].'</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>'.$item['text'].'</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </figure>
+                                <div class="ex-offers-footer">
+                                    <a href="'.$item['link'].'" target="_blank"><button class="ex-main-btn">'.$item['btn'].'</button></a> 
                                 </div>
-                            </div>';
+                            </div>
+                        </div>';
+                            // echo '<div class="col-md-3">
+                            //     <div class="ex-off-block">
+                            //         <p class="text-right">
+                            //             <span class="fa fa-star"></span>
+                            //             <span class="fa fa-star"></span>
+                            //             <span class="fa fa-star"></span>
+                            //             <span class="fa fa-star"></span>
+                            //             <span class="fa fa-star"></span>
+                            //         </p>
+                            //         <figure>
+                            //             <div class="ex-img-offerta">
+                            //             <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
+                            //                 <img class="lk-img '.$item['img'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
+                            //             </a> 
+                            //             </div>
+                            //             <table>
+                            //                 <tbody>
+                            //                 <tr>
+                            //                     <td>Сумма займа</td>
+                            //                     <td>до '.number_format($item['amount'],0,'',' ').' рублей</td>
+                            //                 </tr>
+                            //                 <tr>
+                            //                     <td>Срок займа</td>
+                            //                     <td>до '.$item['period'].' '.$_plural_days[plural_type($item['period'])].'</td>
+                            //                 </tr>
+                            //                 <tr>
+                            //                     <td>Основная ставка</td>
+                            //                     <td>'.$item['percent'].'%</td>
+                            //                 </tr>
+                            //                 </tbody>
+                            //             </table>
+                            //         </figure>
+                            //         <div class="ex-offers-footer">
+                            //             <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn">Получить деньги</button></a> 
+                            //         </div>
+                            //     </div>
+                            // </div>';
                         }
                     ?> 
             </div>
@@ -84,24 +147,5 @@ function plural_type($n) {
     </div>
     <div class="buffer2"></div>
 </main>
-
-<!-- Google Code for  
-&#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
-Page -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 820672461;
-var google_conversion_label = "mo6fCJOfuHsQze-phwM";
-var google_remarketing_only = false;
-/* ]]> */
-</script>
-<script type="text/javascript"  
-src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt=""  
-src="//www.googleadservices.com/pagead/conversion/820672461/?label=mo6fCJOfuHsQze-phwM&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
+ 
 <?php require 'footer.php'; ?>

@@ -1,0 +1,113 @@
+main.ex-offerta{
+  padding-top: 46px;
+ h1{
+   margin: 0;
+   font-weight: 700;
+   color: #000000;
+   font-size: 36px;
+   line-height: 36px;
+   text-transform: uppercase;
+   @media (max-width: 767px) {
+     font-size: 20px;
+   }
+ }
+  .ex-offers-content {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    .ex-off-block {
+
+      p {
+        margin-bottom: 20px;
+        .fa {
+          font-size: 18px;
+          margin: 0 3px;
+        }
+        .fa-gradient {
+          background-image: linear-gradient(180deg, #fdd193 0%, #75452d 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      figure {
+        padding: 22px 26px 32px;
+        margin-bottom: 20px;
+        border: 1px solid #979797;
+        @include prefix(border-radius, 5px);
+        .ex-img-offerta {
+          text-align: center;
+          height: 41px;
+          margin-bottom: 51px;
+          img {
+            position: relative;
+            object-fit: contain;
+            max-width: 100%;
+            max-height: 100%;
+            top: 50%;
+            @include prefix(transform, translateY(-50%));
+          }
+        }
+        table {
+          width: 100%;
+          tr {
+            &:last-of-type {
+              td {
+                padding-bottom: 0;
+              }
+            }
+            td {
+              padding-bottom: 20px;
+              &:first-of-type {
+                text-align: left;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 14px;
+                color: #4a4a4a;
+              }
+              &:last-of-type {
+                text-align: right;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 14px;
+                color: #4a4a4a;
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 1199px) and (min-width: 992px) {
+          padding: 18px;
+        }
+      }
+      .ex-main-btn {
+        padding: 15px 5px;
+      }
+      @media (max-width: 991px) {
+        margin-bottom: 60px;
+      }
+      &.ex-offers-active {
+        figure {
+          cursor: pointer;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+          @include prefix(border-radius, 5px);
+          border: 1px solid #379297;
+          background-color: #ffffff;
+        }
+      }
+      &.ex-on-small-device{
+        @media (max-width: 767px) {
+          figure {
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+            @include prefix(border-radius, 5px);
+            border: 1px solid #379297;
+            background-color: #ffffff;
+          }
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+  }
+}

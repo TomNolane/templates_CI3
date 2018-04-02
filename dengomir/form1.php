@@ -61,12 +61,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <ul class="ex-tab-steps">
-        <li class="ex-step-active-first ">Личные данные</li>
-        <li>шаг 2</li>
-        <li>шаг 3</li>
-    </ul>
+    </div> 
     <div class="ex-form-wrap">
         <div class="form-group has-feedback">
             <div class="row">
@@ -104,14 +99,14 @@
                 </div>
             </div>
             <input type="hidden" id="gender" value="1" name="gender" required>
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback hidden">
                 <div class="row">
                     <label class="control-label col-md-3" for="birthdate">Дата рождения
                     </label>
                     <div class="col-md-9">
                         <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
-                                data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
+                                data-validation="custom" value="06/12/1988" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
                                 required>
                         </div>
                     </div>
@@ -178,7 +173,7 @@
         <div class="row">
             <a id="next1">
                 <div class="col-md-6 col-md-offset-3">
-                    <span id="submitOne" class="ex-main-btn">Далее
+                    <span id="submitOne" class="ex-main-btn">Получить деньги
                         <i></i>
                     </span>
                 </div>

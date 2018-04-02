@@ -45,8 +45,8 @@ if($this->uri->segment(1) != 'form')
 <?php
 require 'templates/common/get_display_size.php';
 echo '<script>';
-require 'templates/bzaim/vendor/jquery/jquery.min.js';
-echo '</script>';
+require 'modules/jquery/jquery-1.11.3.min.js';
+echo '</script>'; 
 echo '<script>';
 require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
 echo '</script>';
@@ -257,50 +257,8 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri-
             $("#work_office").val("");
         }
     }); 
-    </script>';
-    require 'templates/common/js.php'; 
-    if(isset($_GET['popup']) and $_GET['popup']==1 ){
-        echo '
-    <!-- Modal Popup-->
-    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                </div>
-                <div class="modal-body text-center">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="/templates/common/img/popup.jpg">
-                            <h2>'.$popup_text.'</h2>
-                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <script type= " text/javascript">
-        $(window).load(function(){
-            $("#popup").modal("show");
-        });
-    </script>';
-    } 
-     
-        if(isset($_GET['email'])){
-            //данные пользователя
-            $this->load->model('user/user_model', 'user');
-            $user_data = $this->user->get_user($_GET['email']);
-            $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
-            $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
-            foreach ($user_data as $name => $item){
-                echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
-            }
-            echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
-        }  
-        
-        echo '
+    </script>';  
+    echo '
             <script type="text/javascript">
                 $("#email").suggestions({
                     serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
@@ -347,6 +305,7 @@ function traffic(site, page){
             }
     });
 }
+//traffic(window.location.hostname,window.location.pathname);
 function getcookie(name)
 {
     var cookie = " " + document.cookie;
@@ -989,7 +948,7 @@ function clone(o) {
 		}
 	}
 	return c;
-}
+} 
 </script>
 <?php } ?>
 <?php require 'yandex_metrika.php'; ?> 

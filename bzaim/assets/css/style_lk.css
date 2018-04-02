@@ -1,0 +1,38 @@
+.spec_footer4 { 
+    visibility: hidden;
+}
+.spec_footer5 { 
+    visibility: hidden;
+}
+.spec_footer6 { 
+    visibility: hidden;
+}
+.table_text {
+    color: #000000 !important;
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.29px;
+    float: left;
+}
+.table_text2 {
+    color: #000000 !important;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.29px;
+    float: right;
+}
+tr:hover {
+    outline: 2px solid #ffdd2d;
+}
+@media (max-width: 767px) {
+    /* line 185, sass/desktop/_form.scss */
+    .ex-main-spasibo h1 {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+  }

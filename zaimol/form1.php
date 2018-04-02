@@ -82,11 +82,11 @@
 	</div>
 </div>
 <!-- Скрываем старую форму даты рождения -->
-                <div class="form-group">
+                <div class="form-group hidden">
                     <label class="control-label col-md-4" for="birthdate">Дата рождения</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
-                            <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Пожалуйста, выберете свою дату рождения"
+                            <input type="text" class="form-control ec tip" value="06/12/1988" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Пожалуйста, выберете свою дату рождения"
                                 data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения"
                                 required>
                             <!-- <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> -->
@@ -143,9 +143,11 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-md-8 col-md-offset-4 text-right">
-                    <a id="next1"><span id="submitOne" class="ex-main-btn" >Далее</span></a>
-                    </div>
+
+            <div class="col-md-6 col-md-offset-4 text-right">
+                 <a  id="next1"><button class="ex-main-btn">Получить деньги</button></a>
+            </div> 
+            
                 </div>
             </div>
         </div>

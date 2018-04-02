@@ -1,16 +1,11 @@
 @charset "UTF-8";
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/*@@@@@@ Helper files import here @@@@@@*/
-/*@@@@@@ Core files import here @@@@@@*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,900&subset=cyrillic,cyrillic-ext");
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @font-face {
   font-family: 'Rounds';
-  src: url("/templates/fanzaim/assets/fonts/RoundsBlack.eot");
-  src: url("/templates/fanzaim/assets/fonts/RoundsBlack.eot?#iefix") format("embedded-opentype"), url("/templates/fanzaim/assets/fonts/RoundsBlack.woff") format("woff"), url("/templates/fanzaim/assets/fonts/RoundsBlack.ttf") format("truetype");
+  src: 
+  url("/templates/fanzaim/assets/fonts/RoundsBlack.woff") format("woff")
+  , url("/templates/fanzaim/assets/fonts/RoundsBlack.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -9922,12 +9917,12 @@ button.close {
 .datepicker table tr td.today.disabled,
 .datepicker table tr td.today.disabled:hover {
   background-color: #fde19a;
-  background-image: -moz-linear-gradient(top, #fdd49a, #fdf59a);
-  background-image: -ms-linear-gradient(top, #fdd49a, #fdf59a);
+  background-image: -moz-linear-gradient(to top, #fdd49a, #fdf59a);
+  background-image: -ms-linear-gradient(to top, #fdd49a, #fdf59a);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fdd49a), to(#fdf59a));
-  background-image: -webkit-linear-gradient(top, #fdd49a, #fdf59a);
-  background-image: -o-linear-gradient(top, #fdd49a, #fdf59a);
-  background-image: linear-gradient(top, #fdd49a, #fdf59a);
+  background-image: -webkit-linear-gradient(to top, #fdd49a, #fdf59a);
+  background-image: -o-linear-gradient(to top, #fdd49a, #fdf59a);
+  background-image: linear-gradient(to top, #fdd49a, #fdf59a);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdd49a', endColorstr='#fdf59a', GradientType=0);
   border-color: #fdf59a #fdf59a #fbed50;
@@ -9977,12 +9972,12 @@ button.close {
 .datepicker table tr td.active.disabled,
 .datepicker table tr td.active.disabled:hover {
   background-color: #006dcc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -moz-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -ms-linear-gradient(to top, #0088cc, #0044cc);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
-  background-image: linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: linear-gradient(to top, #0088cc, #0044cc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
   border-color: #0044cc #0044cc #002a80;
@@ -10061,12 +10056,12 @@ button.close {
 .datepicker table tr td span.active.disabled,
 .datepicker table tr td span.active.disabled:hover {
   background-color: #006dcc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -moz-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -ms-linear-gradient(to top, #0088cc, #0044cc);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
-  background-image: linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(to top, #0088cc, #0044cc);
+  background-image: linear-gradient(to top, #0088cc, #0044cc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
   border-color: #0044cc #0044cc #002a80;
@@ -10571,8 +10566,6 @@ button.close {
 /* line 16, ../sass/library/_owlCarousel.scss */
 .owl-carousel .owl-stage {
   position: relative;
-  -ms-touch-action: pan-Y;
-  -moz-backface-visibility: hidden;
   /* fix firefox animation glitch */
 }
 
@@ -10632,7 +10625,7 @@ button.close {
 .owl-carousel .owl-nav .owl-next,
 .owl-carousel .owl-dot {
   cursor: pointer;
-  cursor: hand;
+  
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -10767,7 +10760,6 @@ button.close {
   background: url("owl.video.play.png") no-repeat;
   cursor: pointer;
   z-index: 1;
-  -webkit-backface-visibility: hidden;
   transition: transform 100ms ease;
 }
 
@@ -10801,7 +10793,7 @@ button.close {
   width: 100%;
 }
 
-/*--------------------------------------------Theme------------------------------------------------*/
+/* Theme */
 /**
  * Owl Carousel v2.2.1
  * Copyright 2013-2017 David Deutsch
@@ -11827,9 +11819,9 @@ section.ex-section-3 main .col-sm-4:first-of-type .ex-wrapper span {
   right: 49px;
   background: #201f53;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #201f53 0%, #1f3382 100%);
+  background: -moz-linear-gradient(to top, #201f53 0%, #1f3382 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #201f53 0%, #1f3382 100%);
+  background: -webkit-linear-gradient(to top, #201f53 0%, #1f3382 100%);
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #201f53 0%, #1f3382 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -11865,9 +11857,9 @@ section.ex-section-3 main .col-sm-4:nth-child(2) .ex-wrapper span {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#20307b+0,0e74d5+100 */
   background: #20307b;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #20307b 0%, #0e74d5 100%);
+  background: -moz-linear-gradient(to top, #20307b 0%, #0e74d5 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #20307b 0%, #0e74d5 100%);
+  background: -webkit-linear-gradient(to top, #20307b 0%, #0e74d5 100%);
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #20307b 0%, #0e74d5 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -11925,9 +11917,9 @@ section.ex-section-3 main .col-sm-4:last-of-type .ex-wrapper span {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0063b0+0,00b1f3+100 */
   background: #0063b0;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #0063b0 0%, #00b1f3 100%);
+  background: -moz-linear-gradient(to top, #0063b0 0%, #00b1f3 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #0063b0 0%, #00b1f3 100%);
+  background: -webkit-linear-gradient(to top, #0063b0 0%, #00b1f3 100%);
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #0063b0 0%, #00b1f3 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -13461,3 +13453,26 @@ main.ex-receive.ex-bankingCard ul li:last-of-type {
 a {
   text-decoration: none !important;
 }
+input#i , input#o, input#f, input#feedback-name {
+    text-transform: capitalize !important;
+  }
+  .helpblock
+  {
+    margin-bottom: 5px;
+    margin-top: 2px;
+    font-size: 0.8em;
+    float: right !important;
+  }
+  input:invalid:not(:placeholder-shown) {border-color: red;}
+  input:valid:not(:placeholder-shown) {border-color: green;}
+  .help-block {
+    display: none !important;
+  }
+  .help-block2 {
+      display: none;
+      margin-bottom: 5px;
+      margin-top: 2px;
+      font-size: 0.8em;
+      float: left;
+      color: red !important;
+  }  

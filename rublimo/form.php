@@ -64,7 +64,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 }
 ?>
 	<div class="container">
-		<section class="steps">
+		<div class="steps">
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="form-steps-line">
@@ -72,17 +72,17 @@ if(isset($_SERVER['HTTP_REFERER'])){
 							<div class="row" role="tablist" id="form-steps">
 								<div class="col-xs-2 col-xs-offset-3 text-center" role="presentation">
 									<a href="#form1" aria-controls="form1" role="tab">
-										<span class="btn btn-circle" id="step1">1</span>
+										<span class="btn btn-circle" id="step1"></span>
 									</a>
 								</div>
 								<div class="col-xs-2 text-center" role="presentation">
 									<a href="#form2" aria-controls="form1" role="tab">
-										<span class="btn btn-circle off" id="step2">2</span>
+										<span class="btn btn-circle" id="step2">1</span>
 									</a>
 								</div>
 								<div class="col-xs-2 text-center" role="presentation">
 									<a href="#form3" aria-controls="form1" role="tab">
-										<span class="btn btn-circle off" id="step3">3</span>
+										<span class="btn btn-circle" id="step3"></span>
 									</a>
 								</div>
 							</div>
@@ -90,21 +90,19 @@ if(isset($_SERVER['HTTP_REFERER'])){
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 		<section>
 			<div class="row">
-				<div class="col-sm-12 col-xs-12">
-					<center>
-						<h3 id="htitle">
-							<b>Заполните свои личные данные</b>
-						</h3>
-					</center>
+				<div class="col-sm-12 col-xs-12 text-center"> 
+					<h3 id="htitle">
+						<b>Заполните свои личные данные</b>
+					</h3> 
 					<h3 class="hidden">Заполните свои паспортные данные</h3>
 					<h3 class="hidden">Заполните свои личные данные</h3>
 				</div>
 			</div>
 		</section>
-		<section class="hidden-sm hidden-xs">
+		<div class="hidden-sm hidden-xs">
 			<div class="row">
 				<div class="col-sm-12 col-xs-12 text-center">
 					<div class="secure">
@@ -124,8 +122,8 @@ if(isset($_SERVER['HTTP_REFERER'])){
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="form">
+		</div>
+		<div class="form">
 			<div class="row">
 				<div class="col-md-10 col-xs-12">
 					<form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
@@ -151,22 +149,23 @@ if(isset($_SERVER['HTTP_REFERER'])){
 								</div>
 								<div class="clearfix"></div>
 							</div>
-					</form>
-					<div role="tabpanel" class="tab-pane" id="form3">
-						<?php require('form3.php'); ?>
-						<div class="row">
-							<div class="col-sm-5 col-sm-offset-4 col-xs-12">
-								<div class="shadow">
-									<a class="btn btn-ok btn-block" id="form-send">Отправить заявку</a>
+					
+						<div role="tabpanel" class="tab-pane" id="form3">
+							<?php require('form3.php'); ?>
+							<div class="row">
+								<div class="col-sm-5 col-sm-offset-4 col-xs-12">
+									<div class="shadow">
+										<a class="btn btn-ok btn-block" id="form-send">Отправить заявку</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					</div>
+					</form>
 				</div>
 			</div>
-		</section>
-		<section class="triggers hidden-xs hidden-sm" id="display-none">
+		</div>
+		<div class="triggers hidden">
 			<div class="row">
 				<div class="col-sm-2 col-sm-offset-2">
 					<img src="/templates/rublimo/img/form/t1.png" alt="Удобное получение денег">
@@ -185,7 +184,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 					<p>Деньги Вас ждут прямо сейчас</p>
 				</div>
 			</div>
-		</section>
+		</div>
 	</div>
 	<div class="clearfix">&nbsp;</div>
 	<!-- Modal -->
@@ -196,8 +195,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h1 class="modal-title hidden-xs" id="tosModalLabel">Политика конфиденциальности</h1>
-					<h3 class="modal-title visible-xs-block" id="tosModalLabel">Политика конфиденциальности</h3>
+					<h2 class="modal-title hidden-xs" id="tosModalLabel">Политика конфиденциальности</h2> 
 					<p>Заполняя заявку на кредит Вы соглашаетесь с нашими правилами использования данных</p>
 				</div>
 				<div class="modal-body">

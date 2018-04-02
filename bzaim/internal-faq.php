@@ -1,189 +1,84 @@
-<section id="services">
-    <div class="container container-services text-center">
+<?php include "header.php"; ?>
+<div class="ex-bounds"></div>
+<div class="ex-main-faq">
+    <div class="container">
+        <h1 class="text-center">Вопросы - ответы</h1>
         <div class="row">
-            <h1 class="title">Вопрос-ответ</h1><br><br>
-            <div class="panel-group" id="accordion">
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                        <h4 class="panel-title pull-left">
-                            <a>Я зашел на сайт. Как получить заем?</a>
-                        </h4>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="pull-right">
-                            <div id="circle"></div>
-                        </a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div id="collapse1" class="panel-collapse collapse in">
-                        <div class="panel-body text-left">
-Для того чтобы получить заем необходимо на главном экране выбрать сумму и нажать кнопку получить деньги. После чего заполнить анкету, указав достоверные данные. Для большей вероятности положительного решения по поводу вашего займа рекомендуются заполнить анкеты во всех рекомендуемых организациях которые появляются после заполнения основной анкеты сайта.                        </div>                       
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="ex-faq-block">
+                    <h2 class="">Я прошёл регистрацию. Как получить заём?</h2>
+                    <p class="ex-text">Чтобы подать новую заявку на займ выберите желаемую сумму и срок.
+                        Затем заполните анкету и получите деньги.</p>
+                </div>
+                <div class="ex-faq-block">
+                    <h2 class="">Почему моя заявка отклонена? Как я могу подать
+                        заявку снова?</h2>
+                    <p class="ex-text">Ваша заявка обрабатывается полностью автоматизированной системой, учитывающей
+                        большой спектр данных. К сожалению, мы не можем ответить на вопрос, по какой именно причине
+                        система вынесла отрицательное решение. Тем не менее, если Вы уже брали займ в САЙТ ранее у Вас
+                        есть возможность подать заявку снова через 3 дня, а новых клиентов мы ждем через 7 дней.</p>
+                </div>
+                <div class="ex-faq-block">
+                    <h2 class="">Сколько времени рассматривается заявка на займ?</h2>
+                    <p class="ex-text">Для того, чтобы получить заем, Вам необходимо заполнить анкету на сайте и
+                        дождаться звонка менеджера, после чего получить деньги любым удобным вам способом.</p>
+                </div>
+                <div class="ex-faq-block">
+                    <h2 class="">Я погасил займ. Когда я смогу подать заявку на займ снова?</h2>
+                    <p class="ex-text">Чтобы подать новую заявку на займ, пройдите в ваш Личный кабинет, выберите
+                        желаемую сумму и оформите заявку.</p>
+                </div>
+                <div class="ex-faq-block">
+                    <h2 class="">Сколько я могу получить и на какой срок?</h2>
+                    <p class="ex-text">Минимальная сумма займа 1000 рублей, максимальная сумма 100000 рублей.
+                        Минимальный срок займа 61 день, максимальный срок 365 дней.</p>
+                </div>
+                <div class="ex-faq-block">
+                    <h2 class="">Как долго ждать перевода на карту/счет?</h2>
+                    <p class="ex-text">Компания, предоставляющая займ производит выплату средств в течение 15 минут
+                        после принятия решения по займу на Вашу банковскую карту
+                        или счет. Однако, все банки обрабатывают переводы с различной скоростью. В зависимости от
+                        специфики Вашего банка зачисление средств может занять до 2-3х дней. Особенно это касается того
+                        случая, когда Вы оформляете заявку на получение займа на выходных.</p>
+                </div>
+                <div class="ex-faq-block">
+                    <h2 class="">Какие документы, подтверждающие доход, я могу предоставить дополнительно?</h2>
+                    <p class="ex-text">Никаких дополнительных документов, подтверждающих наличие/отсутствие дохода, не
+                        требуется.</p>
+                </div>
+                <div class="ex-faq-block">
+                    <h2 class="">Я новый клиент. Сколько я могу занять?</h2>
+                    <p class="ex-text">Максимальная сумма займа для новых клиентов составляет 7500 руб.
+                        Для ответственных клиентов, пользующихся нашими услугами более одного раза, сумма возрастает: во
+                        второй раз - до 20000 руб, с третьего раза - до 100000 руб.</p>
+                </div>
+                <div class="ex-faq-block">
+                    <h2 class="">Я пенсионер/студент, могу ли я оформить у Вас заявку?</h2>
+                    <p class="ex-text">Да, Вы имеете возможность подать заявку в нашей компании.</p>
+                </div>
+                <div class="ex-faq-block">
+                    <h2 class="">Как я узнаю какое решение было вынесено по моей заявке?</h2>
+                    <p class="ex-text">После вынесения решения по Вашей заявке Вам будет осуществлен звонок или выслано
+                        соответствующее письмо на Вашу электронную почту.</p>
+                </div>
+                <div class="ex-faq-block">
+                    <h2 class="">Могу ли я подать заявку на еще один займ, если предыдущий займ не погашен?</h2>
+                    <p class="ex-text">Чтобы подать заявку еще на один займ, Вы должны погасить предыдущий. Данное
+                        условие необходимо для проверки статуса Вашей платежеспособности.</p>
+                </div>
+                <div class="ex-faq-foot">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h2>Не нашли ответ на свой вопрос?</h2>
+                            <p>Воспользуйтесь обратной связью на нашем сервисе</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="#" data-toggle="modal" data-target="#feedbackModal"><button class="ex-main-btn">Задать вопрос</button></a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                        <h4 class="panel-title pull-left">
-                            <a>Я погасил заем. Когда я смогу подать заявку на получения нового займа?</a>
-                        </h4>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="pull-right">
-                            <div id="circle"></div>
-                        </a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div id="collapse2" class="panel-collapse collapse">
-                        <div class="panel-body text-left">
-После того как займ оплачен можете повторно заполнять анкету на сайте онлайн сервиса «Быстрый займ», ответ получите в течение 15 минут после заполнения анкеты                        </div>                        
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                        <h4 class="panel-title pull-left">
-                            <a>Почему моя заявка отклонена? Как я могу подать заявку снова?</a>
-                        </h4>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="pull-right">
-                            <div id="circle"></div>
-                        </a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div id="collapse3" class="panel-collapse collapse">
-                        <div class="panel-body text-left">
-Ваша заявка обрабатывается полностью автоматизированной системой, учитывающей большой спектр данных. К сожалению, мы не можем ответить на вопрос, по какой именно причине система вынесла отрицательное решение. Тем не менее если Вы уже брали займ в "Быстрый займ" ранее у Вас есть возможность подать заявку снова через 3 дня, а новых клиентов мы ждем через 7 дней.                        
-                        </div>                        
-                    </div>
-                </div>                
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-                        <h4 class="panel-title pull-left">
-                            <a>Сколько времени рассматривается заявка на займ?</a>
-                        </h4>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="pull-right">
-                            <div id="circle"></div>
-                        </a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div id="collapse4" class="panel-collapse collapse">
-                        <div class="panel-body text-left">
-Для того, чтобы получить заем, Вам необходимо заполнить анкету на сайте и дождаться звонка менеджера, после чего получить деньги любым удобным вам способом.
-                        </div>                        
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-                        <h4 class="panel-title pull-left">
-                            <a>Сколько я могу получить и на какой срок?</a>
-                        </h4>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="pull-right">
-                            <div id="circle"></div>
-                        </a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div id="collapse5" class="panel-collapse collapse">
-                        <div class="panel-body text-left">
-Минимальная сумма займа 1000 рублей, максимальная сумма 100000 рублей. Минимальный срок займа 5 дней, максимальный срок 30 дней.                            
-                        </div>                        
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse6">
-                        <h4 class="panel-title pull-left">
-                            <a>Как долго ждать перевода на карту/счет?</a>
-                        </h4>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" class="pull-right">
-                            <div id="circle"></div>
-                        </a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div id="collapse6" class="panel-collapse collapse">
-                        <div class="panel-body text-left">
-Компания, предоставляющая займ производит выплату средств в течение 15 минут после принятия решения по займу на Вашу банковскую карту или счет. Однако, все банки обрабатывают переводы с различной скоростью. В зависимости от специфики Вашего банка зачисление средств может занять до 2-3х дней. Особенно это касается того случая, когда Вы оформляете заявку на получение займа на выходных.                            
-                        </div>                        
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse7">
-                        <h4 class="panel-title pull-left">
-                            <a>Какие документы, подтверждающие доход, я могу предоставить дополнительно?</a>
-                        </h4>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" class="pull-right">
-                            <div id="circle"></div>
-                        </a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div id="collapse7" class="panel-collapse collapse">
-                        <div class="panel-body text-left">
-Никаких дополнительных документов, подтверждающих наличие/отсутствие дохода, не требуется.
-                        </div>                       
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse8">
-                        <h4 class="panel-title pull-left">
-                            <a>Я новый клиент. Сколько я могу занять?</a>
-                        </h4>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" class="pull-right">
-                            <div id="circle"></div>
-                        </a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div id="collapse8" class="panel-collapse collapse">
-                        <div class="panel-body text-left">
-Максимальная сумма займа для новых клиентов составляет 7500 руб. Для ответственных клиентов, пользующихся нашими услугами более одного раза, сумма возрастает: во второй раз - до 20000 руб, с третьего раза - до 100000 руб.                        </div>                       
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse9">
-                        <h4 class="panel-title pull-left">
-                            <a>Я пенсионер/студент, могу ли я оформить у Вас заявку?</a>
-                        </h4>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse9" class="pull-right">
-                            <div id="circle"></div>
-                        </a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div id="collapse9" class="panel-collapse collapse">
-                        <div class="panel-body text-left">
-Да, Вы имете возможность подать заявку в нашей компании.
-                        </div>                       
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse10">
-                        <h4 class="panel-title pull-left">
-                            <a>Как я узнаю какое решение было вынесено по моей заявке?</a>
-                        </h4>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse10" class="pull-right">
-                            <div id="circle"></div>
-                        </a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div id="collapse10" class="panel-collapse collapse">
-                        <div class="panel-body text-left">
-                            После вынесения решения по Вашей заявке Вам будет осуществлен звонок или выслано соответствующее письмо на Вашу электронную почту.                            
-                        </div>                        
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse11">
-                        <h4 class="panel-title pull-left">
-                            <a>Могу ли я подать заявку на еще один займ, если предыдущий займ не погашен?</a>
-                        </h4>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse11" class="pull-right">
-                            <div id="circle"></div>
-                        </a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div id="collapse11" class="panel-collapse collapse">
-                        <div class="panel-body text-left">
-Чтобы подать заявку еще на один займ, Вы должны погасить предыдущий. Данное условие необходимо для проверки статуса Вашей платежеспособности.                            
-                        </div>                       
-                    </div>
-                </div>
-            </div>            
+            </div>
         </div>
     </div>
-</section>
+</div> 
+<?php include 'footer.php';?>

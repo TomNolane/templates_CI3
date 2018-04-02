@@ -54,11 +54,11 @@
         </div>
 </div>
 <input type="hidden" id="gender" name="gender" value="1">
-<div class="form-group has-feedback">
+<div class="form-group has-feedback hidden">
     <label class="col-sm-4 control-label label-required hidden-xs" for="birthdate">Дата рождения *</label>
     <div class="col-sm-8 col-xs-12">
         <div class="shadow">
-            <input type="text" class="form-control ec" id="birthdate" name="birthdate"  placeholder="Дата рождения" title="Дата рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения" required>
+            <input type="text" class="form-control ec" value="03/12/1988" id="birthdate" name="birthdate"  placeholder="Дата рождения" title="Дата рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения" required>
             <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
         </div>
     </div>

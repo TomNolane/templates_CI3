@@ -107,10 +107,7 @@ p.text-indent{
     padding: 6px 12px;
     height: auto;
 }
-.white h2{color:#3c434d;}
-.offers{
-    
-}
+.white h2{color:#3c434d;} 
 .offers img{
     height: 50px;
     margin: 25px 0;
@@ -150,7 +147,7 @@ p.text-indent{
 }
 .navbar-nav > li > a:hover {
     background-color:#779ece;
-    color: #ffffff !important;
+    color: #fff000 !important;
     -webkit-transition: all .3s 0s, visibility 0s .3s;
     -moz-transition: all .3s 0s, visibility 0s .3s;
     transition: all .3s 0s, visibility 0s .3s;
@@ -485,7 +482,7 @@ p.text-indent{
     height:25px;
 }
 .panel-default {
-    border-color: none;
+    border-color: transparent;
 }
 .panel-title{
     white-space: nowrap;
@@ -930,3 +927,16 @@ footer .copy{
   .spec_form88 {
     background: #ffffff !important;
   }
+  input:invalid:not(:placeholder-shown) {border-color: red;}
+    input:valid:not(:placeholder-shown) {border-color: green;}
+    .help-block2 {
+        display: none;
+        margin-bottom: 5px;
+        margin-top: 2px;
+        font-size: 0.8em;
+        float: left;
+        color: red !important;
+    } 
+    .help-block {
+        display: none !important;
+    }
