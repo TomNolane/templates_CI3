@@ -5,7 +5,6 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="IE=Edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <!--link href="/modules/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen" /-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <!--link href="css/bootstrap-responsive.css" rel="stylesheet"-->
