@@ -174,7 +174,7 @@
         <div class="col-sm-8 col-sm-offset-2">
             <div class="col-sm-8 col-xs-12 ex-agreement-check">
                 <label class="checkbox-inline">
-                    <span>Я согласен на обработку персональных данных и с публичной офертой</span>
+                    <span>Вы должны дать согласие на <a href="https://dengibystra.ru/agreement" target="_blank">обработку персональных данных</a> и согласиться с <a href="https://dengibystra.ru/oferta" target="_blank">публичной офертой</a></span>
                     <input type="checkbox" value="" id="agree" onclick="checkMee();" checked>
                     <i></i>
                 </label>

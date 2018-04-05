@@ -6,7 +6,15 @@
 
     if($this->uri->segment(1) != 'form')
     {
-        echo '';
+        echo '<!-- Zaimoking -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="1833795772"
+        data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     }
 ?>
 
@@ -73,7 +81,7 @@
     ?>
 
     <!--[if lt IE 10]>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
 
 <?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') 
@@ -211,17 +219,46 @@
     function Loading(flag) 
     {
         if (typeof flag == 'undefined') { 
-            $('#feedback-send').prop('disabled', true);
-            $('#feedback-send').html('Отправлено <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        } else if (!flag) {
-            $('#feedback-send').html('Отправить');
             $('#feedback-send').prop('disabled', false); 
+            $('#feedback-send').html('Отправляется <i class="fa fa-spinner fa-spin fa-pulse"></i>');
+        } else if (!flag) {
+            $('#feedback-send').html('Отправлено');
+            $('#feedback-send').prop('disabled', true);
         }
     } 
 
     $('#feedback-send').click(function () 
     {
+        var re_name2 = /^[а-яА-Яё,\W\.\s-]+$/i;
+        if($('#feedback-name').val().length < 2 || !re_name2.test($('#feedback-name').val()))
+        {
+            alert("Корректно заполните Ваше имя");
+            return;
+        }
+
+        var re_email2 = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+        if($('#feedback-email').val().length < 6 || !re_email2.test($('#feedback-email').val()))
+        {
+            alert("Корректно заполните Ваш email");
+            return;
+        }
+
+        if($('#feedback-comment').val().length < 4)
+        {
+            alert("Корректно заполните Ваше обращение");
+            return;
+        }
+        
         Loading();
+
+        if(!re_email.test($('#feedback-email').val()))
+        {
+            Loading(0);
+            alert('Пожалуйста, заполните поле "ваш емаил" корректно.');
+            $('#feedback-send').prop('disabled', false);
+            $('#feedback-send').html('Отправить');
+            return;
+        } 
         
         var data;
         if(window.location.pathname == '/form')
@@ -443,7 +480,7 @@
         }
         return c;
     } 
-    traffic("zaimoking.ru", "4");
+    //traffic("zaimoking.ru", "4");
     $(".ex-off-block ").hover(function () {
         $(".ex-off-block ").removeClass("ex-offers-active");
         $(this).addClass("ex-offers-active");
@@ -642,8 +679,27 @@ function traffic(site, page)
             }
     });
 }
-//traffic(window.location.hostname,window.location.pathname);
+
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1337253769702359'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" 
+src="https://www.facebook.com/tr?id=1337253769702359&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
 </body>
 </html>

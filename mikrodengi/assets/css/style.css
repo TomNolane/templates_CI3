@@ -13770,6 +13770,9 @@ main.ex-offerta .ex-offers-content {
   padding-top: 50px;
   padding-bottom: 60px;
 }
+div.ex-off-block {
+  margin-top: 20px;
+}
 /* line 16, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content .ex-off-block p {
   margin-bottom: 20px;
@@ -13822,7 +13825,7 @@ main.ex-offerta .ex-offers-content .ex-off-block figure table tr td {
 /* line 52, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content .ex-off-block figure table tr td:first-of-type {
   text-align: left;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 400;
   line-height: 14px;
   color: #4a4a4a;
@@ -13830,7 +13833,7 @@ main.ex-offerta .ex-offers-content .ex-off-block figure table tr td:first-of-typ
 /* line 60, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content .ex-off-block figure table tr td:last-of-type {
   text-align: left;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 18px;
   color: #4a4a4a;

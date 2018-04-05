@@ -6,17 +6,17 @@
 
     if($this->uri->segment(1) != 'form')
     {
-        echo '</script>
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Займомикс -->
-        <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-2169296404508755"
-        data-ad-slot="9029396493"
-        data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
+        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Zaimomix -->
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-4970738258373085"
+data-ad-slot="2907993624"
+data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+';
     }
 ?>
 <footer class="ex-main-footer ex-sticky-footer">

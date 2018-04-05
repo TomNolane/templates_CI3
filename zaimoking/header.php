@@ -17,9 +17,9 @@ if(!isset($description))
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="Zaimoking.ru" /> 
-	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Cache-control" content="no-cache"> 
-	<meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
+	
+	 
+	
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="Zaimoking - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
 	<meta property="og:image" content="https://zaimoking.ru/templates/zaimoking/assets/img/pic3.jpg"/>
@@ -211,9 +211,9 @@ if(!isset($description))
 				</div>
                 <div class="modal-body">
                     <div class="form-group has-feedback">
-                        <input type="text" class="form-control ec tip" name="feedback-name" title="Пожалуйста, введите свое имя"
+                        <input type="text" class="form-control ec tip" name="feedback-name" title="Введите свое имя"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                data-validation-error-msg="Пожалуйста, введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
+                                data-validation-error-msg="Введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
                     </div>
                     <div class="form-group">
                         <input type="hidden" class="form-control" id="feedback-phone" title="Тефелон" placeholder="Введите ваш телефон" value="79777777777" required>
