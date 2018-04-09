@@ -12228,6 +12228,7 @@ button.close {
 .ex-main-header .navbar-nav li a.ex-menu-item {
   padding: 0;
   line-height: 60px;
+      white-space: nowrap;
   background-color: transparent !important;
   color: #171d44;
   font-size: 14px;

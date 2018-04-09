@@ -8,8 +8,8 @@
 <h3 class="hidden-md hidden-lg visible-xs visible-sm text-center amm" id="amm" ></h3>
     <div class="col-sm-6 col-xs-12">
         <div class="ex-anketa-main"> 
-            <div class="form-group has-feedback">
-                <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
+            <div class="form-group has-feedback hidden">
+                <input type="text" value="Иванова" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
 			    required>
 			    <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -21,8 +21,8 @@
                 required>
                 <span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
-            <div class="form-group has-feedback">
-                <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
+            <div class="form-group has-feedback hidden">
+                <input type="text" value="Иванович" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
 			    required>
 			    <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -87,9 +87,9 @@
 			    title="Email" data-validation="email" required>
 		        <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> 
             </div>
-            <div class="form-group ex-arrow-on">
-                <select class="form-control ec" name="delays_type" id="delays_type" required>
-                    <option value="never">Никогда не брал(а) кредитов</option>
+            <div class="form-group ex-arrow-on hidden">
+                <select class="form-control ec" name="delays_type" id="delays_type">
+                    <option selected value="never">Никогда не брал(а) кредитов</option>
                     <option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
                     <option value="credit_open_no_delay">Кредиты есть, просрочек нет</option>
                     <option value="credit_closed_had_delay">Кредиты закрыты, просрочки были</option>
