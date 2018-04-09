@@ -89,7 +89,7 @@ require 'header.php';
                 </div>
             </div>
             <div class="row tab-content">
-                <form class="form-horizontal form-label form-css-label" id="anketa" action="/lk" method="post"   autocomplete="off" novalidate>
+                <form class="form-horizontal form-label form-css-label" id="anketa" action="/lk" method="post" autocomplete="off" novalidate>
                     <input type="hidden" name="display" id="display" value="0">
                     <input type="hidden" name="referer" value="<?=$referer?>">
                     <input type="hidden" name="id" value="">

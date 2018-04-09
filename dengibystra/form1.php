@@ -28,12 +28,12 @@
                 </div>
             </div>
             <!-- /слайдер -->
-            <div class="row">
+            <div class="row hidden">
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="f">Фамилия</label>
                         <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию" data-sanitize="capitalize"
-                            data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
+                            data-validation="custom" value="Иванова" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
                             required>
                         <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать фамилию</p>
@@ -54,12 +54,12 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row hidden">
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="o">Отчество</label>
                         <input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Укажите свое отчество"
-                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
+                            data-sanitize="capitalize" value="Ивановна" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
                             required>
                         <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать отчество</p> 
@@ -141,7 +141,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     <div class="form-group has-feedback">
                         <label class="label-required" for="email">Электронная почта</label>
                         <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Укажите свой email адрес"
@@ -152,7 +152,7 @@
                         <p class="text-muted helpblock">Пример: email@mail.ru</p>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 hidden">
                     <div class="form-group ex-arrow-on">
                         <label for="credit">Кредитная история</label>
                         <select class="form-control" id="credit">
@@ -174,7 +174,7 @@
         <div class="col-sm-8 col-sm-offset-2">
             <div class="col-sm-8 col-xs-12 ex-agreement-check">
                 <label class="checkbox-inline">
-                    <span>Я согласен на обработку персональных данных и с публичной офертой</span>
+                    <span>Вы должны дать согласие на <a href="https://dengibystra.ru/agreement" target="_blank">обработку персональных данных</a> и согласиться с <a href="https://dengibystra.ru/oferta" target="_blank">публичной офертой</a></span>
                     <input type="checkbox" value="" id="agree" onclick="checkMee();" checked>
                     <i></i>
                 </label>

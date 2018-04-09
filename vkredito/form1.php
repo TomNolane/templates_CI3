@@ -15,12 +15,12 @@
 <input type="hidden" id="period" name="period" value="<?php if(empty($_POST['period'])){echo'10';}else{echo $_POST['period'];} ?>"
 />
 
-<div class="form-group has-feedback dadata">
+<div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs">Фамилия</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow">
 			<input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию"
-			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свою фамилию"
+			    data-sanitize="capitalize"  value="Иванова" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свою фамилию"
 			    required>
 			<span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 		</div>
@@ -37,11 +37,11 @@
 		</div>
 	</div>
 </div>
-<div class="form-group has-feedback dadata">
+<div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs">Отчество</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow">
-			<input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество"
+			<input type="text" value="Иванович" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество"
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое отчество"
 			    required>
 			<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -122,11 +122,11 @@
 		</div>
 	</div>
 </div>
-<div class="form-group">
+<div class="form-group hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs">Кредитная история</label>
 	<div class="col-sm-8 col-xs-12">
-		<select class="form-control ec" name="delays_type" id="delays_type" required>
-			<option value="never">Никогда не брал(а) кредитов</option>
+		<select class="form-control ec" name="delays_type" id="delays_type">
+			<option selected value="never">Никогда не брал(а) кредитов</option>
 			<option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
 			<option value="credit_open_no_delay">Кредиты есть, просрочек нет</option>
 			<option value="credit_closed_had_delay">Кредиты закрыты, просрочки были</option>

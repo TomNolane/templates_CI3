@@ -26,11 +26,11 @@
 </div>
 <input type="hidden" class="form-control" id="p" name="period" value=" <?php echo $period; ?>"/>
    
-<div class="form-group has-feedback">
+<div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="f">Фамилия *</label>
 	<div class="col-sm-8 col-xs-12">
         <div class="shadow">
-            <input type="text" class="form-control ec" name="f" id="f" placeholder="Фамилия" title="Фамилия" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
+            <input type="text" class="form-control ec" value="Иванова" name="f" id="f" placeholder="Фамилия" title="Фамилия" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
             <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
         </div>
     </div>
@@ -44,11 +44,11 @@
             </div>
         </div>
 </div>
-<div class="form-group has-feedback">
+<div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="o">Отчество *</label>
 	<div class="col-sm-8 col-xs-12">
             <div class="shadow">
-                <input type="text" class="form-control ec" name="o" id="o" placeholder="Отчество" title="Отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество" required>
+                <input type="text" class="form-control ec" value="Иванович" name="o" id="o" placeholder="Отчество" title="Отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество" required>
                 <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             </div>
         </div>
@@ -79,11 +79,11 @@
         </div>
     </div>
 </div>
-<div class="form-group has-feedback">
+<div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="delays_type">Кредитная история</label>
 	<div class="col-sm-8 col-xs-12">
 		<select class="form-control ec" name="delays_type" id="delays_type" required>
-		<option value="never">Никогда не брал(а) кредитов</option>
+		<option selected value="never">Никогда не брал(а) кредитов</option>
 		<option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
 		<option value="credit_open_no_delay">Кредиты есть, просрочек нет</option>
 		<option value="credit_closed_had_delay">Кредиты закрыты, просрочки были</option>

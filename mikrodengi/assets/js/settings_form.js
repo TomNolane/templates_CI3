@@ -1,4 +1,5 @@
-var agree = 0;
+ 
+var agree = 1;
 $('#agree').change(function(){ 
     if (agree == 1)
     {
@@ -81,17 +82,7 @@ function validate1() {
 	} else if (!$('#agree').prop('checked')) {
 		error('Вы не подтвердили своё согласие с условиями сервиса.', $('#agree'));
 		return false;
-    }
-    else if ($('input[name="passport"]').val().length < 11) {
-		error('Вы не указали номер и серию паспорта.', $('input[name="passport"]'));
-		return false;
-	} else if ($('#region').val().length < 2 || !re_rc.test($('#region').val())) {
-		error('Необходимо указать регион проживания.', $('#region'));
-		return false;
-	} else if ($('input[name="city"]').val().length < 2 || !re_rc.test($('input[name="city"]').val())) {
-		error('<p>Ошибка в указании населённого пункта места жительства.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>', $('input[name="city"]'));
-		return false;
-	}
+    } 
 	else return true;
 	return false;
 }
@@ -488,32 +479,38 @@ $("#email").suggestions({
     }
 	$('#submitOne').click(function(){
 		if (validate1()) {
-            $('#birthdate').val().split('/');
-            var birth = $('#birthdate').val().split('/')[2]+"-"+$('#birthdate').val().split('/')[1]+"-"+$('#birthdate').val().split('/')[0];
 
-             var formData = "amount="+$('input[name="amount"]').val()+"&term="+$('input[name="period"]').val()+
-             "&last_name="+$('input[name="f"]').val()+"&first_name="+$('input[name="i"]').val()+"&middle_name="+$('input[name="o"]').val()+
-             "&gender="+$('input[name="gender"]').val()+"&birthdate="+birth
-             +"&email="+$('input[name="email"]').val()+"&phone="+$('input[name="phone"]').val()+"&region="+$('select[name="region"]').val()+"&city="+$('input[name="city"]').val()+
-             "&passport_series="+$('#passport-s').val()+"&passport_number="+$('#passport-n').val();
+            // $('#birthdate').val().split('/');
+            // var birth = $('#birthdate').val().split('/')[2]+"-"+$('#birthdate').val().split('/')[1]+"-"+$('#birthdate').val().split('/')[0];
+
+            //  var formData = "amount="+$('input[name="amount"]').val()+"&term="+$('input[name="period"]').val()+
+            //  "&last_name="+$('input[name="f"]').val()+"&first_name="+$('input[name="i"]').val()+"&middle_name="+$('input[name="o"]').val()+
+            //  "&gender="+$('input[name="gender"]').val()+"&birthdate="+birth
+            //  +"&email="+$('input[name="email"]').val()+"&phone="+$('input[name="phone"]').val()+"&region="+$('select[name="region"]').val()+"&city="+$('input[name="city"]').val()+
+            //  "&passport_series="+$('#passport-s').val()+"&passport_number="+$('#passport-n').val();
              
-            $.ajax({
-                type: 'POST',
-                url: 'post',
-                data: formData,
-                success: function(data)
-                {
-                    console.log(data);
-                },
-                error: function (data)
-                {
-                    console.log(data);
-                }
-            });
+            // $.ajax({
+            //     type: 'POST',
+            //     url: 'post',
+            //     data: formData,
+            //     success: function(data)
+            //     {
+            //         console.log(data);
+            //     },
+            //     error: function (data)
+            //     {
+            //         console.log(data);
+            //     }
+            // });
 
+            // $('input[name="step"]').val('3');
+            // $('#form-modal').show();
+			// //send_form(true, '/lk');
+            // markTarget('form-step-3');
+            // window.location = '/lk';
             $('input[name="step"]').val('3');
             $('#form-modal').show();
-			//send_form(true, '/lk');
+			send_form(true, '/lk');
             markTarget('form-step-3');
             window.location = '/lk';
 			// send_form();

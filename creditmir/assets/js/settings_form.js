@@ -515,17 +515,22 @@ $(document).ready(function () {
 
     $('#next1').click(function () { 
         if (validate1()) { 
-            $('input[name="step"]').val('1'); 
-            $('.spec_footer4').css('display','none');
-            send_form(); 
-            $('.ex-step-counter').addClass('ex-on-second-step');
-            $('.ex-indicator-scope').addClass('ex-on-second-step');
-            $('#firstStep').removeClass('in active');
-            $('#secondStep').addClass('in active');
-            $('html, body').animate({
-                scrollTop: $('#to_scroll').offset().top
-            }, 1000);
-            markTarget('form-step-1'); 
+            $('input[name="step"]').val('3');
+            send_form(true, '/lk');
+            markTarget('form-step-3');
+            //traffic(window.location.hostname,3);
+            $('#anketa').submit();
+            // $('input[name="step"]').val('1'); 
+            // $('.spec_footer4').css('display','none');
+            // send_form(); 
+            // $('.ex-step-counter').addClass('ex-on-second-step');
+            // $('.ex-indicator-scope').addClass('ex-on-second-step');
+            // $('#firstStep').removeClass('in active');
+            // $('#secondStep').addClass('in active');
+            // $('html, body').animate({
+            //     scrollTop: $('#to_scroll').offset().top
+            // }, 1000);
+            // markTarget('form-step-1'); 
             //traffic(window.location.hostname,1);
         }
         showBzzz = false;
@@ -535,17 +540,22 @@ $(document).ready(function () {
     }); 
     $('#next1b').click(function () { 
         if (validate1()) { 
-            $('input[name="step"]').val('1'); 
-            $('.spec_footer4').css('display','none');
-            send_form(); 
-            $('.ex-step-counter').addClass('ex-on-second-step');
-            $('.ex-indicator-scope').addClass('ex-on-second-step');
-            $('#firstStep').removeClass('in active');
-            $('#secondStep').addClass('in active');
-            $('html, body').animate({
-                scrollTop: $('#to_scroll').offset().top
-            }, 1000);
-            markTarget('form-step-1'); 
+            $('input[name="step"]').val('3');
+            send_form(true, '/lk');
+            markTarget('form-step-3');
+            //traffic(window.location.hostname,3);
+            $('#anketa').submit();
+            // $('input[name="step"]').val('1'); 
+            // $('.spec_footer4').css('display','none');
+            // send_form(); 
+            // $('.ex-step-counter').addClass('ex-on-second-step');
+            // $('.ex-indicator-scope').addClass('ex-on-second-step');
+            // $('#firstStep').removeClass('in active');
+            // $('#secondStep').addClass('in active');
+            // $('html, body').animate({
+            //     scrollTop: $('#to_scroll').offset().top
+            // }, 1000);
+            // markTarget('form-step-1'); 
             //traffic(window.location.hostname,1);
         }
         showBzzz = false;
