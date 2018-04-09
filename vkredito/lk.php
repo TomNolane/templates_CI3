@@ -28,7 +28,7 @@ $pixel = $this->pixel->stat('vkredito.ru');
     <div class="row">
         <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
         <?php
-           echo'<h1 class="title">Вам автоматически одобрен займ в следующих организациях:</h1>';
+           echo'<h1 class="title">Вам доступен займ в следующих организациях:</h1>';
             
             function plural_type($n) { 
                 return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 

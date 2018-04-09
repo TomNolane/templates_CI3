@@ -23,8 +23,7 @@ $this->load->model('pixel/pixel_model', 'pixel');
 $pixel = $this->pixel->stat('zaimcoin.ru');
 ?>
 <div class="container ex-spasibo">
-    <h1>Вам автоматически одобрен займ 
-        в следующих организациях:</h1>
+    <h1>Вам доступен займ в следующих организациях:</h1>
     <table class="hidden-xs hidden-sm">
         <thead><tr>
         <th scope="col">МФО</th>

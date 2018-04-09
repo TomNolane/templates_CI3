@@ -28,7 +28,7 @@ $pixel = $this->pixel->stat('rublimo.ru');
 <div class="container">
     <div class="row">		
         <div class="col-md-12 text-center">
-            <h1>Вам автоматически одобрен займ в следующих организациях:</h1>
+            <h1>Вам доступен займ в следующих организациях:</h1>
         </div>
     </div>
 </div>

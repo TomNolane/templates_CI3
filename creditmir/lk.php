@@ -24,7 +24,7 @@
 ?>
 <main class="ex-offers">
     <div class="container">
-        <h2 class="text-center">Вам автоматически одобрен займ в следующих организациях:</h2>
+        <h2 class="text-center">Вам доступен займ в следующих организациях:</h2>
     </div>
     <div class="ex-offers-content">
         <div class="container">

@@ -29,7 +29,7 @@ $pixel = $this->pixel->stat('edenga.ru');
                 <div class="review">
                     <div class="col-md-4 review-div" style="padding: 75px 0 135px;">
                         <div class="col-md-8">
-                            <p style="font-size: 16px;">Вам автоматически одобрен займ в следующих организациях:</p>
+                            <p style="font-size: 16px;">Вам доступен займ в следующих организациях:</p>
                         </div>
                         <div class="col-md-4">
                             <img src="/templates/edenga/img/lk/1.png" align="right" alt="1.png" style="max-width: 100px;"/>
@@ -56,7 +56,7 @@ $pixel = $this->pixel->stat('edenga.ru');
         </div>        
         <div class="row pixel">
             <div class="col-sm-12 text-center ">
-                <h3>Вам автоматически одобрен займ в следующих организациях:</h3>
+                <h3>Вам доступен займ в следующих организациях:</h3>
                 <div class="col-md-12 hidden-sm hidden-xs">
                     <?php
 

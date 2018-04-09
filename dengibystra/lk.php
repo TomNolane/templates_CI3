@@ -25,8 +25,7 @@
     <div class="ex-main-spasibo">
         <div class="container">
             <div class="row">
-                <h1 class="text-center">Вам автоматически одобрен
-                    <br> займ в следующих организациях:</h1>
+                <h1 class="text-center">Вам доступен займ в следующих организациях:</h1>
                 <table class="hidden-xs">
                     <?php
 $y = 0; $y1 = 'height: 80px; max-width: 240px;'; $y2 = 'height: 100px; max-width: 270px;';

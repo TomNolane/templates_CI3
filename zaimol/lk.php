@@ -25,8 +25,7 @@ $pixel = $this->pixel->stat('zaimol.ru');
 ?> 
 
 <section class="ex-spasibo">
-    <h1 class="text-center">Вам автоматически одобрен займ<br>
-        в следующих организациях:</h1>
+    <h1 class="text-center">Вам доступен займ в следующих организациях:</h1>
     <main>
         <div class="container">
             <div class="row">
