@@ -468,20 +468,25 @@ $("#email").suggestions({
     ); 
 	$('#submitOne').click(function(){
 		if (validate1()) {
-			send_form();
-			$('.ex-step-counter').removeClass('ex-step-active');
-            $('.ex-step-2').addClass('ex-step-active');
-            $('#firstStep').removeClass('in active');
-            $('#secondStep').addClass('in active');
-            $('.spec_footer4').css('visibility','hidden');
-            if($('.ex-calc-zaim').hasClass('ex-calc-zaim-open'))
-            {
-                $('.ex-calc-zaim').click();
-            }
-            //traffic(window.location.hostname,1);
-            $('.spec_footer5').css('visibility','hidden'); 
-			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
-			markTarget('form-step-1');
+			// send_form();
+			// $('.ex-step-counter').removeClass('ex-step-active');
+            // $('.ex-step-2').addClass('ex-step-active');
+            // $('#firstStep').removeClass('in active');
+            // $('#secondStep').addClass('in active');
+            // $('.spec_footer4').css('visibility','hidden');
+            // if($('.ex-calc-zaim').hasClass('ex-calc-zaim-open'))
+            // {
+            //     $('.ex-calc-zaim').click();
+            // }
+            // //traffic(window.location.hostname,1);
+            // $('.spec_footer5').css('visibility','hidden'); 
+			// $('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
+			// markTarget('form-step-1');
+             $('input[name="step"]').val('3');
+			$('#form-modal').show();
+			send_form(true, '/lk');
+            markTarget('form-step-3');
+            window.location = '/lk';
 		}
 		showBzzz = false;
 		$('.reg_same').change();

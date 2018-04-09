@@ -19,13 +19,18 @@ var re_int = /^\d+$/;
 var re_name = /^[а-яА-Яё,\W\.\s-]+$/i;
 var isWebvisor = new RegExp('^https?:\/\/([^/]+metrika.yandex\.(ru|ua|com|com\.tr|by|kz)|([^/]+\.)?webvisor\.com)').test(document.referrer); 
 
-function error(msg){
+function error(msg, elem) {
 	var title = 'Ошибка';
 	if ($('#message').length) $('#message').remove();
 	$('body').append('<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-    '<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' +
-    '<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">OK</button></div></div></div></div>');
-	$('#message').modal('show');
+		'<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' +
+        '<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">OK</button></div></div></div></div>');
+        $('html, body').animate({
+            scrollTop: elem.offset().top - 160
+        }, 1000);
+        elem.click();
+        elem.blur();
+        $('#message').modal('show');
 }
 
 function send_form(send, href) {
@@ -43,56 +48,110 @@ function send_form(send, href) {
 	});
 }
 
-function validate1(){
+function validate1() {
 	if (isWebvisor) return true;
-	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 100000) {error('Вы не указали сумму.'); return false;}
-	else if ($('input[name="period"]').val() < 5 || $('input[name="period"]').val() > 30) {error('Вы не указали срок займа.'); return false;}
-	else if ($('input[name="f"]').val().length < 2 || !re_name.test($('input[name="f"]').val())) {error('Необходимо указать фамилию.'); return false;}
-	else if ($('input[name="i"]').val().length < 2 || !re_name.test($('input[name="i"]').val())) {error('Необходимо указать имя.'); return false;}
-	else if ($('input[name="o"]').val().length < 2 || !re_name.test($('input[name="o"]').val())) {error('Необходимо указать отчество.'); return false;}
-	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {error('Вы не указали пол.'); return false;}
-	else if ($('input[name="phone"]').val().length != 16) {error('Номер телефона указан неверно.'); return false;}
-	else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {error('Email указан неверно.'); return false;}
-	else if (!$('#agree').prop('checked')) {error('Вы не подтвердили своё согласие с условиями сервиса.'); return false;}
+	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 100000) {
+		error('Вы не указали сумму.', $('input[name="amount"]'));
+		return false;
+	} else if ($('input[name="period"]').val() < 5 || $('input[name="period"]').val() > 30) {
+		error('Вы не указали срок займа.', $('input[name="period"]'));
+		return false;
+	} else if ($('input[name="f"]').val().length < 2 || !re_name.test($('input[name="f"]').val())) {
+		error('Необходимо указать фамилию.', $('input[name="f"]'));
+		return false;
+	} else if ($('input[name="i"]').val().length < 2 || !re_name.test($('input[name="i"]').val())) {
+		error('Необходимо указать имя.', $('input[name="i"]'));
+		return false;
+	} else if ($('input[name="o"]').val().length < 2 || !re_name.test($('input[name="o"]').val())) {
+		error('Необходимо указать отчество.', $('input[name="o"]'));
+		return false;
+	}
+	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
+		error('Вы не указали пол.', $('input[name="gender"]'));
+		return false;
+	} else if ($('input[name="phone"]').val().length != 16) {
+		error('Номер телефона указан неверно.', $('input[name="phone"]'));
+		return false;
+	} else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {
+		error('Email указан неверно.', $('input[name="email"]'));
+		return false;
+	} else if (!$('#agree').prop('checked')) {
+		error('Вы не подтвердили своё согласие с условиями сервиса.', $('#agree'));
+		return false;
+	}
 	else return true;
 	return false;
 }
 
-function validate2(){
+function validate2() {
 	if (isWebvisor) return true;
-    else if ($('input[name="passportdate"]').val().length != 10) {error('Вы не указали год выдачи паспорта.'); return false;}
-	else if ($('input[name="passport_who"]').val().length < 3) {error('Необходимо указать, кем выдан паспорт.'); return false;}
-	else if ($('input[name="passport_code"]').val().length < 7) {error('Необходимо указать, код подразделения, выдавшего паспорт.'); return false;}
-	else if ($('input[name="birthplace"]').val().length < 3) {error('Необходимо указать место рождения.'); return false;}
-	else if ($('#region').val().length < 2 || !re_rc.test($('#region').val())) {error('Необходимо указать регион проживания.'); return false;}
-	else if ($('input[name="city"]').val().length < 2 || !re_rc.test($('input[name="city"]').val())) {error('<p>Ошибка в указании населённого пункта места жительства.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>'); return false;}
-	else if ($('input[name="street"]').val().length < 2) {error('Необходимо указать улицу места жительства.'); return false;}
-	else if (!$('input[name="building"]').val().length || !re.test($('input[name="building"]').val())) {error('Ошибочно указан номер дома места жительства. Указывайте только номер дома и литеру, если она есть.'); return false;}
-	else if ($('input[name="housing"]').val().length && !re.test($('input[name="housing"]').val())) {error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.'); return false;}
-	else if ($('input[name="flat"]').val().length    && !re.test($('input[name="flat"]').val())) {error('Ошибочно указан номер квартиры места жительства. Указывайте только номер дома и литеру, если она есть.'); return false;}
-	else if ($('.reg_same:checked').val() == '0' && ($('#reg_region').val().length < 2 || !re_rc.test($('#reg_region').val()))) {error('Вы не указали регион регистрации.'); return false;}
-	else if ($('.reg_same:checked').val() == '0' && ($('input[name="reg_city"]').val().length < 2 || !re_rc.test($('input[name="reg_city"]').val()))) {error('<p>Ошибка в указании населённого пункта места регистрации.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>'); return false;}
-	else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_street"]').val().length < 2) {error('Необходимо указать улицу регистрации.'); return false;}
-	else if ($('.reg_same:checked').val() == '0' && !re.test($('input[name="reg_building"]').val())) {error('Ошибочно указан номер дома регистрации. Указывайте только номер дома и литеру, если она есть.'); return false;}
-	else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_housing"]').val().length && !re.test($('input[name="reg_housing"]').val())) {error('Ошибочно указан номер строения регистрации. Указывайте только номер дома и литеру, если она есть.'); return false;}
-	else if ($('.reg_same:checked').val() == '0' && $('input[name="reg_flat"]').val().length    && !re.test($('input[name="reg_flat"]').val())) {error('Ошибочно указан номер квартиры регистрации. Указывайте только номер дома и литеру, если она есть.'); return false;}
-	else return true;
+	if ($('input[name="passport"]').val().length < 11) {
+		error('Вы не указали номер и серию паспорта.', $('input[name="passport"]'));
+		return false;
+	}
+	else if ($('input[name="passport_who"]').val().length < 3) {
+		error('Необходимо указать, кем выдан паспорт.', $('input[name="passport_who"]'));
+		return false;
+	} else if ($('input[name="passport_code"]').val().length < 7) {
+		error('Необходимо указать, код подразделения, выдавшего паспорт.', $('input[name="passport_code"]'));
+		return false;
+	} else if ($('input[name="birthplace"]').val().length < 3) {
+		error('Необходимо указать место рождения.', $('input[name="birthplace"]'));
+		return false;
+	} else if ($('#region').val().length < 2 || !re_rc.test($('#region').val())) {
+		error('Необходимо указать регион проживания.', $('#region'));
+		return false;
+	} else if ($('input[name="city"]').val().length < 2 || !re_rc.test($('input[name="city"]').val())) {
+		error('<p>Ошибка в указании населённого пункта места жительства.</p><p>Данное поле может содержать только русские символы, символы пробела, запятую, точку или тире.</p>', $('input[name="city"]'));
+		return false;
+	} else if ($('input[name="street"]').val().length < 2) {
+		error('Необходимо указать улицу места жительства.', $('input[name="street"]'));
+		return false;
+	} else if (!$('input[name="building"]').val().length || !re.test($('input[name="building"]').val())) {
+		error('Ошибочно указан номер дома места жительства. Указывайте только номер дома и литеру, если она есть.', $('input[name="building"]'));
+		return false;
+	} else if ($('input[name="housing"]').val().length && !re.test($('input[name="housing"]').val())) {
+		error('Ошибочно указан номер строения места жительства. Указывайте только номер дома и литеру, если она есть.', $('input[name="housing"]'));
+		return false;
+	} else if ($('input[name="flat"]').val().length && !re.test($('input[name="flat"]').val())) {
+		error('Ошибочно указан номер квартиры места жительства. Указывайте только номер дома и литеру, если она есть.', $('input[name="flat"]'));
+		return false;
+	} else if ($('.reg_same:checked').val() == '0' && ($('#reg_region').val().length < 2 || !re_rc.test($('#reg_region').val()))) {
+		error('Вы не указали регион регистрации.', $('.reg_same:checked'));
+		return false;
+	} else return true;
 	return false;
 }
 
-function validate3(){
+function validate3() {
 	if (isWebvisor) return true;
-	if (!re_int.test($('input[name="work_experience"]').val())) {error('Вы не указали стаж работы.'); return false;}
-	else if (!re_int.test($('input[name="work_salary"]').val())) {error('Вы не указали доход.'); return false;}
-	else if ($('input[name="work_name"]').val().length < 2) {error('Вы не указали название места работы.'); return false;}
-	else if ($('input[name="work_occupation"]').val().length < 2) {error('Вы не указали вашу должность.'); return false;}
-	else if ($('input[name="work_region"]').val() == '0') {error('Вы не указали регион работы.'); return false;}
-	else if ($('input[name="work_city"]').val().length < 2) {error('Необходимо указать город работы.'); return false;}
-	else if ($('input[name="work_street"]').val().length < 2) {error('Необходимо указать улицу работы.'); return false;}
-	else if (!re.test($('input[name="work_house"]').val())) {error('Ошибочно указан номер дома работы. Указывайте только номер дома и литеру, если она есть.'); return false;}
-	else return true;
+	if (!re_int.test($('input[name="work_experience"]').val())) {
+		error('Вы не указали стаж работы.', $('input[name="work_experience"]'));
+		return false;
+	} else if (!re_int.test($('input[name="work_salary"]').val())) {
+		error('Вы не указали доход.', $('input[name="work_salary"]'));
+		return false;
+	} else if ($('input[name="work_name"]').val().length < 2) {
+		error('Вы не указали название места работы.', $('input[name="work_name"]'));
+		return false;
+	} else if ($('input[name="work_occupation"]').val().length < 2) {
+		error('Вы не указали вашу должность.', $('input[name="work_occupation"]'));
+		return false;
+	} else if ($('input[name="work_region"]').val() == '0') {
+		error('Вы не указали регион работы.', $('input[name="work_region"]'));
+		return false;
+	} else if ($('input[name="work_city"]').val().length < 2) {
+		error('Необходимо указать город работы.', $('input[name="work_city"]'));
+		return false;
+	} else if ($('input[name="work_street"]').val().length < 2) {
+		error('Необходимо указать улицу работы.', $('input[name="work_street"]'));
+		return false;
+	} else if (!re.test($('input[name="work_house"]').val())) {
+		error('Ошибочно указан номер дома работы. Указывайте только номер дома и литеру, если она есть.', $('input[name="work_house"]'));
+		return false;
+	} else return true;
 	return false;
-}
+} 
 
 function validate(){
 	if (isWebvisor) return true;
@@ -218,6 +277,14 @@ $("#email").suggestions({
     lang : 'ru',
     modules : 'date,sanitize'
   });
+  $('input').click(function () {
+    if ($(this).attr("type") == "checkbox" || $(this).attr("id") == "feedback-email" || $(this).attr("id") == "feedback-phone" || $(this).attr("id") == "feedback-name" || $(this).attr("id") == "feedback-email2" || $(this).attr("id") == "feedback-phone2" || $(this).attr("id") == "feedback-name2") {
+        return;
+    }
+    $('html, body').animate({
+        scrollTop: $(this).offset().top - 100
+    }, 1000);
+});
   $('input').on('validation', function(evt, valid) {
     if(valid){  
         $(this).parent().parent().prev().removeClass('label_er').addClass('label_true');
@@ -284,19 +351,12 @@ $("#email").suggestions({
             validator = JSON.parse(data);
             if(validator.status){
                 $('#passport_who').val(validator.who);
+                $('#phone').focus();
             }else{
             }
         }
     });
   });
-    var time = 0;
-    var time1 = 0;
-    var time2 = 0;
-    var time3 = 0;
-    var timer = setInterval(function() {
-        time++;
-    }, 2000);
-    
     var lang=0;
   
   $('#f, #i, #o, #passport_who, #birthplace, #city, #reg_city, #street, #reg_street, #work_occupation, #work_experience, #work_region, #work_city, #work_street, #feedback-name, #feedback-comment').on('keyup keypress', function(e) {
@@ -343,8 +403,20 @@ $("#email").suggestions({
             $(this).parent().removeClass('ex-error');
             $(this).next("span").text(' ');
         }
-    });
-    ;
+    });  
+    var JSdate = new Date();
+    var current_date = JSdate.getDate();
+    var current_month = JSdate.getMonth() + 1;
+    var current_year = JSdate.getFullYear();
+    var current_year_5 = JSdate.getFullYear() - 5;
+    var current_year_18 = JSdate.getFullYear() - 18;
+    var current_year_70 = JSdate.getFullYear() - 70;
+    var current_year_100 = JSdate.getFullYear() - 100;
+    var today_18  = current_date + "/" + current_month + "/" + current_year_18;
+    var today_70  = current_date + "/" + current_month + "/" + current_year_70;
+    var today_100  = current_date + "/" + current_month + "/" + current_year_100;
+    var today  = current_date + "/" + current_month + "/" + current_year;
+    var today_5  = current_date + "/" + current_month + "/" + current_year_5;
     $('#birthdate').pickmeup_twitter_bootstrap(
         pickmeup.defaults.locales['en'] = {
             days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
@@ -357,9 +429,12 @@ $("#email").suggestions({
             format	: 'd/m/Y',
             default_date : true,
             hide_on_select: true,
-            date: '1/1/1999',
-            min:  '1/1/1948',
-            max: '1/1/1999'
+            date: today_18,
+            min:  today_70,
+            max: today_18,
+            change : function (formatted_date) { 
+                if ($(this).val().indexOf("_") == -1) $('#phone').focus();
+            }
         })
     );
     $('#passportdate').pickmeup_twitter_bootstrap(
@@ -374,9 +449,9 @@ $("#email").suggestions({
             format	: 'd/m/Y',
             default_date : true,
             hide_on_select: true,
-            date: '1/1/2010',
-            min:  '1/1/1900',
-            max: '22/1/2018',
+            date: today_5,
+            min:  today_100,
+            max: today,
             change : function (formatted_date) { 
                 var birth = formatted_date.split('/');
                 $('select#passport_dd').append($("<option></option>").attr("value", birth[0]).text(birth[0]));
@@ -385,80 +460,39 @@ $("#email").suggestions({
                 $("select#passport_mm").val(birth[1]);
                 $('select#passport_yyyy').append($("<option></option>").attr("value", birth[2]).text(birth[2]));
                 $("select#passport_yyyy").val(birth[2]);
+
+                if ($(this).val().indexOf("_") == -1) 
+                $('#passport_code').focus();
              }
         })
-    );
-   
-    // $('#birthdate').datepicker({
-    //     dateFormat: "dd/mm/yy",
-    //     changeMonth: true,
-    //     changeYear: true,
-    //     monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-    //     dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-    //     firstDay: 1,
-    //     yearRange: "-72:-18",
-    //     defaultDate: "01/01/1999",
-    //     isRTL: false,
-    //     onSelect: function (date) {
-    //         $('#birthdate').focus();
-    //         $('#birthdate').blur();
-    //         $('#birthdate').datepicker("hide");
-    //         if ($(this).val().indexOf("_") == -1) {
-    //             $('#_birthdate').removeClass('lbl');
-    //             $('#_birthdate').addClass('lbl2');
-    //         } else {
-    //             $(this).attr("placeholder", "Выберите дату рождения");
-    //             $(this).addClass('your-class');
-    //             $(this).removeClass('your-class2');
-    //             $(this).addClass('your-class3');
-    //             $('#_birthdate').removeClass('lbl2');
-    //             $('#_birthdate').addClass('lbl');
-    //         }
-    //     }
-    // });
-    // $('#passportdate').datepicker({
-    //     dateFormat: "dd/mm/yy",
-    //     changeMonth: true,
-    //     changeYear: true,
-    //     monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-    //     dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-    //     firstDay: 1,
-    //     yearRange: "-100:+0",
-    //     defaultDate: "01/01/2015",
-    //     isRTL: false,
-    //     onSelect: function (date) {
-    //         $('#passportdate').focus();
-    //         $('#passportdate').blur();
-    //         $('#passportdate').datepicker("hide");
-    //         birth = date.split('/');
-    //         $('select#passport_dd').append($("<option></option>").attr("value", birth[0]).text(birth[0]));
-    //         $("select#passport_dd").val(birth[0]);
-    //         $('select#passport_mm').append($("<option></option>").attr("value", birth[1]).text(birth[1]));
-    //         $("select#passport_mm").val(birth[1]);
-    //         $('select#passport_yyyy').append($("<option></option>").attr("value", birth[2]).text(birth[2]));
-    //         $("select#passport_yyyy").val(birth[2]);
-    //     }
-    // });
+    ); 
 	$('#submitOne').click(function(){
 		if (validate1()) {
-			send_form();
-			$('.ex-step-counter').removeClass('ex-step-active');
-            $('.ex-step-2').addClass('ex-step-active');
-            $('#firstStep').removeClass('in active');
-            $('#secondStep').addClass('in active');
-            $('.spec_footer4').css('visibility','hidden');
-            //traffic(window.location.hostname,1);
-            $('.spec_footer5').css('visibility','hidden'); 
-			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
-			markTarget('form-step-1');
+			// send_form();
+			// $('.ex-step-counter').removeClass('ex-step-active');
+            // $('.ex-step-2').addClass('ex-step-active');
+            // $('#firstStep').removeClass('in active');
+            // $('#secondStep').addClass('in active');
+            // $('.spec_footer4').css('visibility','hidden');
+            // if($('.ex-calc-zaim').hasClass('ex-calc-zaim-open'))
+            // {
+            //     $('.ex-calc-zaim').click();
+            // }
+            // //traffic(window.location.hostname,1);
+            // $('.spec_footer5').css('visibility','hidden'); 
+			// $('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
+			// markTarget('form-step-1');
+             $('input[name="step"]').val('3');
+			$('#form-modal').show();
+			send_form(true, '/lk');
+            markTarget('form-step-3');
+            window.location = '/lk';
 		}
 		showBzzz = false;
 		$('.reg_same').change();
 		setcookies();
         setcookie('i', $('#i').val());
 		$('select[name="reg_type"]').change();
-        time1=time;
-        time=0;
        
 	});
 	$('#submitTwo').click(function(){
@@ -472,8 +506,6 @@ $("#email").suggestions({
             $('#thirdStep').addClass('in active');
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
 			markTarget('form-step-2');
-            time2=time;
-            time=0;
 		}
 		showBzzz = false;
 		setcookies();
@@ -481,23 +513,13 @@ $("#email").suggestions({
 	$('#form-send').click(function(){
 		if (validate()) {
             $('input[name="step"]').val('3');
-            //traffic(window.location.hostname,3);
 			$('#form-modal').show();
 			send_form(true, '/lk');
-			markTarget('form-step-3');
+            markTarget('form-step-3');
+            window.location = '/lk';
 		}
 		showBzzz = false;
 		setcookies();
-        time3=time;
-        $.ajax({
-            type: 'POST',
-            url: '/time/',
-            data: 'site=mikrodengi.su&time1='+time1+'&time2='+time2+'&time3='+time3,
-            success: function(data){
-                clearTimeout(timer);
-                window.location = '/lk';
-            }
-        });
 	});
 	$('select[name="reg_type"]').change(function(){
 		if ($(this).val() == '0') {
@@ -523,14 +545,6 @@ $("#email").suggestions({
         $('#passport-s').val(pass[0]);
         $('#passport-n').val(pass[1]);
     });
-    
-    $('#work').change(function(){
-        if($('#work').val() == 'ПЕНСИОНЕР' ){
-            $('#work_name_help').html('');
-        } else {
-            $('#work_name_help').html('');
-        }
-    });  
     var isMobile = false; //initiate as false
     // device detection
     if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 

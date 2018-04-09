@@ -2,12 +2,12 @@
     <div class="row">
         <div class="col-md-9">
             <div class="ex-pr">
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="f">Фамилия</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
-                                data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
+                                data-sanitize="capitalize" value="Иванова" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
                                 data-validation-error-msg="Введите свою фамилию" required>
                         </div>
                     </div>
@@ -22,11 +22,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="o">Отчество</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
-                            <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
+                            <input type="text" value="Валерьевна" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
                                 data-validation-error-msg="Введите свое отчество" required>
                         </div>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <!-- Скрываем старую форму даты рождения -->
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="birthdate">Дата рождения</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
@@ -105,12 +105,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="credit">Кредитная история</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper ex-arrow">
-                            <select class="form-control ec special_form99" name="delays_type" id="delays_type" required>
-                                <option value="never">Никогда не брал(а) кредитов</option>
+                            <select class="form-control ec special_form99" name="delays_type" id="delays_type">
+                                <option selected value="never">Никогда не брал(а) кредитов</option>
                                 <option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
                                 <option value="credit_open_no_delay">Кредиты есть, просрочек нет</option>
                                 <option value="credit_closed_had_delay">Кредиты закрыты, просрочки были</option>
@@ -134,16 +134,18 @@
                     </div>
                 </div>
                 <div class="form-group has-feedback">
-                    <div class="col-md-8 col-md-offset-4 text-center">
-                        <span id="next1" class="ex-btn-blue  hidden-sm hidden-xs">Далее</span>
-                    </div>
+                <div class="col-md-9 col-md-offset-3 text-center">
+                    <a id="next1" class="ex-btn-blue text-center" style="width: 100%;text-transform: uppercase; text-decoration: none;">
+                        Получить деньги
+                    </a>
+                </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 text-center">
-            <span id="next1b" class="ex-btn-blue hidden-md hidden-lg">Далее</span>
+            <span id="next1b" class="ex-btn-blue hidden-md hidden-lg">Получить деньги</span>
         </div>
     </div>
 </section>

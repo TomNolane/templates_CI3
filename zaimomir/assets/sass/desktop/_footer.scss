@@ -1,0 +1,23 @@
+footer.ex-main-footer {
+  padding: 28px 0;
+  background-color: #303847;
+  p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+}
+@media (max-width: 991px) {
+  footer.ex-main-footer {
+    text-align: center;
+    p {
+      margin-top: 20px;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      br {
+        display: none;
+      }
+    }
+  }
+}

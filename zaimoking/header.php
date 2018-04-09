@@ -18,8 +18,6 @@ if(!isset($description))
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="Zaimoking.ru" /> 
 	
-	 
-	
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="Zaimoking - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
 	<meta property="og:image" content="https://zaimoking.ru/templates/zaimoking/assets/img/pic3.jpg"/>

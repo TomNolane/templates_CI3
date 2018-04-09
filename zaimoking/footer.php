@@ -596,55 +596,7 @@
         }
     });
 </script>';
-}
-
-
-if ($this->uri->segment(1) == 'form') 
-{
-    require 'templates/common/switch_form.php';
-    require 'templates/common/js.php';
-    if(isset($_GET['popup']) and $_GET['popup']==1 ){
-        echo '    
-    <!-- Modal Popup-->
-    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-                <div class="modal-header text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-body text-center">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="templates/common/img/popup.jpg" alt="popup.jpg">
-                            <h2>'.$popup_text.'</h2>
-                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type= " text/javascript">
-        $(window).load(function(){
-            $("#popup").modal("show");
-        });
-    </script>';
-    }
-}
-
-if(isset($_GET['email']))
-{
-    //данные пользователя
-    $this->load->model('user/user_model', 'user');
-    $user_data = $this->user->get_user($_GET['email']);
-    $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
-    $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
-    foreach ($user_data as $name => $item)
-    {
-        echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
-    }
-    echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
-}
+} 
 ?>
 
 <!-- всплывающее окошко --> 
