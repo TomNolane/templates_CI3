@@ -13896,6 +13896,10 @@ main.ex-faq .ex-btn-blue {
   max-width: 295px;
 }
 
+.ex-off-block {
+  margin-bottom: 20px;
+}
+
 /* line 2, ../sass/desktop/offers.scss */
 main.ex-offers h2 {
   margin-top: 40px;
@@ -13967,7 +13971,7 @@ main.ex-offers .ex-off-block figure table tr td:first-of-type {
 main.ex-offers .ex-off-block figure table tr td:last-of-type {
   text-align: right;
   color: #333333;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 14px;
 }

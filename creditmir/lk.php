@@ -21,10 +21,10 @@
     //pixel stat
     $this->load->model('pixel/pixel_model', 'pixel');
     $pixel = $this->pixel->stat('creditmir.ru');
-?>
+?> 
 <main class="ex-offers">
     <div class="container">
-        <h2 class="text-center">Вам автоматически одобрен займ в следующих организациях:</h2>
+        <h2 class="text-center">Вам доступен займ в следующих организациях:</h2>
     </div>
     <div class="ex-offers-content">
         <div class="container">
@@ -38,12 +38,15 @@
                 $_plural_months = array('месяц', 'месяца', 'месяцев');
                 $_plural_days = array('день', 'дня', 'дней');
                 $_plural_times = array('раз', 'раза', 'раз');
-
+                $temp = 0;
+                echo '<div class="row">';
                 foreach($data as $item)
                 {
+                    $temp++;
                     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
                     $item['link'] = str_replace("#site", $domen, $item['link']);
-
+                    if($temp==5) echo '</div><div class="clearfix"></div>';
+                    if($temp==5) echo '<div class="row">';
                     echo '<div class="col-md-3">
                     <div class="ex-off-block">
                         <p class="text-right">
@@ -80,8 +83,9 @@
                             <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-btn-blue">Получить деньги</button></a>
                         </div>
                     </div>
-                </div>';
+                </div>'; 
                 }
+                echo '</div>';
                 ?> 
             </div>
         </div>

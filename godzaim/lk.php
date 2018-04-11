@@ -25,8 +25,7 @@ $pixel = $this->pixel->stat('godzaim.ru');
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<h1>Вам автоматически одобрен займ
-						<br>в следующих организациях:</h1>
+					<h1>Вам доступен займ в следующих организациях:</h1>
 					<p>Вероятность забрать
 						<span id="amount_lk" class="green">30000 рублей</span> сейчас
 						<span class="percent_top green"> 95%</span>

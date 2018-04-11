@@ -24,8 +24,7 @@
 ?>
 <main class="ex-offerta">
     <div class="container">
-        <h2 class="text-center">Вам автоматически одобрен займ<br>
-            в следующих организациях:</h2>
+        <h2 class="text-center">Вам доступен займ в следующих организациях:</h2>
         <div class="row"> 
         <?php 
         function plural_type($n) { 
@@ -41,7 +40,7 @@
             {
                 $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
                 $item['link'] = str_replace("#site", $domen, $item['link']);
-                echo '<div class="col-md-3">
+                echo '<div class="col-md-3" style="margin-bottom: 30px">
                 <figure class="text-center">
                     <div class="ex-wrapper text-center">
                         <p class="text-right">

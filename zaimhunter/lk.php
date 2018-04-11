@@ -25,8 +25,7 @@ $pixel = $this->pixel->stat('zaimhunter.ru');
 <main>
     <div class="container">
         <div class="ex-offerta">
-            <h1>Вам автоматически одобрен<br>
-                займ в следующих организациях:</h1>
+            <h1>Вам доступен займ в следующих организациях:</h1>
 <div class="row"> 
 <?php
 $arr = array(259,500,230,300,456,321);

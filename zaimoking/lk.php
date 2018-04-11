@@ -33,7 +33,7 @@ function plural_type($n) {
 </header>
 <main class="ex-offerta">
     <div class="container">
-        <h1 class="text-center">Вам автоматически одобрен займ в следующих организациях:</h1>
+        <h1 class="text-center">Вам доступен займ в следующих организациях:</h1>
         <div class="ex-offers-content">
                 <div class="row">
                 <?php  
@@ -41,7 +41,7 @@ function plural_type($n) {
                     {
                         $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
                         $item['link'] = str_replace("#site", $domen, $item['link']); 
-                        echo '<div class="col-md-3">
+                        echo '<div class="col-md-3" style="margin-bottom: 30px;">
                         <div class="ex-off-block ex-on-small-device ex-offers-active">
                         <p class="text-left">
                             <span class="fa fa-star fa-gradient"></span>

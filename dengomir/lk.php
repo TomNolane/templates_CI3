@@ -23,7 +23,7 @@
     $pixel = $this->pixel->stat('dengomir.ru');
 ?>
 <div class="container ex-offers">
-    <h1>Вам автоматически одобрен займ в следующих организациях:</h1>
+    <h1>Вам доступен займ в следующих организациях:</h1>
     <div id="default">
         <div id="kayan_arka"></div>
         <?php 
