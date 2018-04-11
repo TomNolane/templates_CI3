@@ -25,7 +25,8 @@ $pixel = $this->pixel->stat('zaimhunter.ru');
 <main>
     <div class="container">
         <div class="ex-offerta">
-            <h1>Вам доступен займ в следующих организациях:</h1>
+            <h1>Вам автоматически одобрен<br>
+                займ в следующих организациях:</h1>
 <div class="row"> 
 <?php
 $arr = array(259,500,230,300,456,321);
@@ -92,14 +93,14 @@ echo '<div class="col-md-3">
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
 Page -->
-<script type="text/javascript">
+<script >
 /* <![CDATA[ */
 var google_conversion_id = 827436364;
 var google_conversion_label = "oLu3COf5v3kQzNrGigM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
+<script   
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>

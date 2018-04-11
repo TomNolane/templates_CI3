@@ -1,4 +1,11 @@
-<?php 
+<?php
+if ($this->uri->segment(1) == 'robots.txt') 
+{
+	header("Content-type: text/plain");
+	require 'internal-robots.txt.php';
+} 
+else
+{
 $my_title = ''; $description = '';
 switch($this->uri->segment(1))
 {
@@ -163,7 +170,6 @@ require 'header.php';
 	elseif ($this->uri->segment(1) == 'zaim-yandex') {  require 'internal-zaim-yandex.php';  }
 	elseif ($this->uri->segment(1) == 'zaim-contact') {  require 'internal-zaim-contact.php';  }
 	elseif ($this->uri->segment(1) == 'zaim-bank') {  require 'internal-zaim-bank.php';  }
-	 
-	
-?>
-<?php require 'footer.php'; ?>
+	elseif($this->uri->segment(1) == '404') require 'internal-404.php';
+
+require 'footer.php'; }?>

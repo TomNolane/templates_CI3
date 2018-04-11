@@ -12,15 +12,24 @@ if($this->uri->segment(1) != 'form')
         echo '<!-- Мобайл --><div id="yandex_rtb_R-A-243982-1"></div>';
     }
     echo '</div>';
-	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Еденьга -->
-    <ins class="adsbygoogle text-center"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="7951350323"
-    data-ad-format="auto"></ins>
+	// echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    // <!-- Еденьга -->
+    // <ins class="adsbygoogle text-center"
+    // style="display:block"
+    // data-ad-client="ca-pub-4970738258373085"
+    // data-ad-slot="7951350323"
+    // data-ad-format="auto"></ins>
+    // <script>
+    // (adsbygoogle = window.adsbygoogle || []).push({});
+    // </script>
+    // ';
+
+    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9729149501728150",
+        enable_page_level_ads: true
+      });
     </script>';
 }
 ?>
@@ -62,11 +71,12 @@ echo '</script>';
 echo '<script>';
 require 'templates/edenga/js/coockie.js';
 echo '</script>';
-echo '<script>
-jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});</script>';
 echo '<script>';
-require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
-echo '</script>'; 
+require 'templates/edenga/js/jquery.pickmeup.twitter-bootstrap.js';
+echo '</script>';
+echo '<script>';
+require 'templates/edenga/js/pickmeup.min.js';
+echo '</script>';
 echo '<script>';
 require 'templates/edenga/js/validate.js';
 echo '</script>';
@@ -257,9 +267,50 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri-
             $("#work_office").val("");
         }
     }); 
-    </script>';  
-    echo '
-            <script type="text/javascript">
+    </script>';
+    require 'templates/common/js.php'; 
+    if(isset($_GET['popup']) and $_GET['popup']==1 ){
+        echo '
+    <!-- Modal Popup-->
+    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
+                </div>
+                <div class="modal-body text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="/templates/common/img/popup.jpg">
+                            <h2>'.$popup_text.'</h2>
+                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type= " text/javascript">
+        $(window).load(function(){
+            $("#popup").modal("show");
+        });
+    </script>';
+    } 
+     
+        if(isset($_GET['email'])){
+            //данные пользователя
+            $this->load->model('user/user_model', 'user');
+            $user_data = $this->user->get_user($_GET['email']);
+            $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
+            $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
+            foreach ($user_data as $name => $item){
+                echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
+            }
+            echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
+        }  
+        
+        echo '
+            <script >
                 $("#email").suggestions({
                     serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
                     token: "78fc76023580df0ec78566913b31a87d909f1ec0",
@@ -305,7 +356,7 @@ function traffic(site, page){
             }
     });
 }
-//traffic(window.location.hostname,window.location.pathname);
+
 function getcookie(name)
 {
     var cookie = " " + document.cookie;
@@ -335,18 +386,47 @@ function getcookie(name)
     return(setStr);
 }
     function Loading(flag){
-        if (typeof flag == 'undefined'){
-            $('#feedback-send').prop('disabled', true);
-            $('#feedback-send').html('Отправка <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        }
-        else if (!flag){
-            $('#feedback-send').html('Отправить');
+        if (typeof flag == 'undefined') { 
             $('#feedback-send').prop('disabled', false); 
-        } 
+            $('#feedback-send').html('Отправляется <i class="fa fa-spinner fa-spin fa-pulse"></i>');
+        } else if (!flag) {
+            $('#feedback-send').html('Отправлено');
+            $('#feedback-send').prop('disabled', true);
+        }
     }
     
 	$('#feedback-send').click(function(){
-		Loading();
+
+        var re_name2 = /^[а-яА-Яё,\W\.\s-]+$/i;
+        if($('#feedback-name').val().length < 2 || !re_name2.test($('#feedback-name').val()))
+        {
+            alert("Корректно заполните Ваше имя");
+            return;
+        }
+
+        var re_email2 = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+        if($('#feedback-email').val().length < 6 || !re_email2.test($('#feedback-email').val()))
+        {
+            alert("Корректно заполните Ваш email");
+            return;
+        }
+
+        if($('#feedback-comment').val().length < 4)
+        {
+            alert("Корректно заполните Ваше обращение");
+            return;
+        }
+
+        Loading();
+        
+        if(!re_email.test($('#feedback-email').val()))
+        {
+            Loading(0);
+            alert('Пожалуйста, заполните поле "ваш емаил" корректно.');
+            $('#feedback-send').prop('disabled', false);
+            $('#feedback-send').html('Отправить');
+            return;
+        } 
                 
 		var data;
         if(window.location.pathname == '/form')
@@ -948,7 +1028,8 @@ function clone(o) {
 		}
 	}
 	return c;
-} 
+}
+//traffic("edenga.ru", "4");
 </script>
 <?php } ?>
 <?php require 'yandex_metrika.php'; ?> 
@@ -968,10 +1049,10 @@ function markTarget(target,param,id){
         });
 }
 </script>
-<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=oUIrxEEED8qFrsbZJVRzG6duZ39T8*M4rPAzc85XgSNJGHvUfFFTr*9nZ58V0olTf5G3bB6OmSvKfhe0KKVpL59wDXvoeJKk6bhKowF8eH0ftUpimXiJQjVbz966t3x2pGl72xUo/MH3sCBkZn*ZLtslFpEET2fM*kev/d/iwPU-&pixel_id=1000099083';</script>
+<script >(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=oUIrxEEED8qFrsbZJVRzG6duZ39T8*M4rPAzc85XgSNJGHvUfFFTr*9nZ58V0olTf5G3bB6OmSvKfhe0KKVpL59wDXvoeJKk6bhKowF8eH0ftUpimXiJQjVbz966t3x2pGl72xUo/MH3sCBkZn*ZLtslFpEET2fM*kev/d/iwPU-&pixel_id=1000099083';</script>
 <!--Константин Гутлид-->
-<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=wqJ*K2aGdcpg2liN6EhsYyFiF/6V/WyeQDg3Fhe0LS0BD72zEww9dHFpCCZoPNfX5wX32Mp*ZUkoX15dQfo7LWYGZpJPbd10TICdApDxTC6EeiIgyRTsu8jBiK9Y1NV5KNux8UYE2rP10qeO297yIxm5gcl9RV2TyjnYnnP2EzU-&pixel_id=1000099729';</script>
-<script type="text/javascript">
+<script >(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=wqJ*K2aGdcpg2liN6EhsYyFiF/6V/WyeQDg3Fhe0LS0BD72zEww9dHFpCCZoPNfX5wX32Mp*ZUkoX15dQfo7LWYGZpJPbd10TICdApDxTC6EeiIgyRTsu8jBiK9Y1NV5KNux8UYE2rP10qeO297yIxm5gcl9RV2TyjnYnnP2EzU-&pixel_id=1000099729';</script>
+<script >
     var isMobile = false; //initiate as false
         // device detection
         if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -1015,10 +1096,10 @@ function markTarget(target,param,id){
 </script> 
 
 <!-- Код тега ремаркетинга Google -->
-<!-- ------------------------------------------------
+<!-- 
 С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
-------------------------------------------------- -->
-<script type="text/javascript">
+ -->
+<script >
 /* <![CDATA[ */
 var google_conversion_id = 843631316;
 var google_custom_params = window.google_tag_params;
@@ -1030,6 +1111,6 @@ var google_remarketing_only = true;
 <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/843631316/?guid=ON&amp;script=0"/>
 </div>
 </noscript>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<script  src="//www.googleadservices.com/pagead/conversion.js"></script>
 </body>
 </html>

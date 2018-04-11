@@ -596,7 +596,55 @@
         }
     });
 </script>';
-} 
+}
+
+
+if ($this->uri->segment(1) == 'form') 
+{
+    require 'templates/common/switch_form.php';
+    require 'templates/common/js.php';
+    if(isset($_GET['popup']) and $_GET['popup']==1 ){
+        echo '    
+    <!-- Modal Popup-->
+    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="templates/common/img/popup.jpg" alt="popup.jpg">
+                            <h2>'.$popup_text.'</h2>
+                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type= " text/javascript">
+        $(window).load(function(){
+            $("#popup").modal("show");
+        });
+    </script>';
+    }
+}
+
+if(isset($_GET['email']))
+{
+    //данные пользователя
+    $this->load->model('user/user_model', 'user');
+    $user_data = $this->user->get_user($_GET['email']);
+    $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
+    $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
+    foreach ($user_data as $name => $item)
+    {
+        echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
+    }
+    echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
+}
 ?>
 
 <!-- всплывающее окошко --> 
@@ -634,24 +682,5 @@ function traffic(site, page)
 
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1337253769702359'); 
-fbq('track', 'PageView');
-</script>
-<noscript>
-<img height="1" width="1" 
-src="https://www.facebook.com/tr?id=1337253769702359&ev=PageView
-&noscript=1"/>
-</noscript>
-<!-- End Facebook Pixel Code -->
 </body>
 </html>

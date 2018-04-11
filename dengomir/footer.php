@@ -38,7 +38,7 @@
                     <div class="col-md-9">
                         <p class="spec_footer7">Сервис по подбору выгодных онлайн займов Dengomir, находящийся по адресу
                             Россия, Ленинградская обл., г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
-                            <a href="mailto:support@dengomir.ru" class="special_footer99" target="_blank">| support@dengomir.ru</a></span> | +7(495) 006 19 61<br>
+                            <a href="mailto:support@dengomir.ru" class="special_footer99" target="_blank">| support@dengomir.ru</a> | +7(495) 006 19 61<br>
                             <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365
                             дней.
                             Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
@@ -89,7 +89,10 @@
     require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
     echo '</script>';
     echo '<script>';
-    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+    require 'templates/dengomir/assets/js/jquery.pickmeup.twitter-bootstrap.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/dengomir/assets/js/pickmeup.min.js';
     echo '</script>';
     echo '<script>';
     require 'templates/dengomir/assets/js/jquery.form-validator.js';
@@ -113,10 +116,13 @@
     echo '<script>';
     require 'templates/dengomir/assets/js/settings_form.js';
     echo '</script>';
+    echo '<script>';
+    require 'templates/dengomir/assets/js/modal.js';
+    echo '</script>';
     ?>
 
     <!--[if lt IE 10]>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
 
 <?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') 
@@ -255,132 +261,7 @@
     function GetMoney() 
     {
         $('form#anketa').submit();
-    }
-
-    function Loading(flag) 
-    {
-        if (typeof flag == 'undefined') { 
-            $('#feedback-send').prop('disabled', true);
-            $('#feedback-send').html('Отправлено <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        } else if (!flag) {
-            $('#feedback-send').html('Отправить');
-            $('#feedback-send').prop('disabled', false); 
-        }
     } 
-
-    $('#feedback-send').click(function () 
-    {
-        Loading();
-        
-        var data;
-        if(window.location.pathname == '/form')
-        {
-            var _input = $('#anketa').serialize();
-            _input = decodeURIComponent(_input);
-            _input = _input.replace(new RegExp("&step",'g'),"&Шаг");
-            _input = _input.replace(new RegExp("&period",'g'),"&Срок");
-            _input = _input.replace(new RegExp("display=0",'g'),"Декстоп версия");
-            _input = _input.replace(new RegExp("display=1",'g'),"Мобайл версия");
-            _input = _input.replace(new RegExp("referer",'g'),"Откуда пришли");
-            _input = _input.replace(new RegExp("&f=",'g'),"&Фамилия=");
-            _input = _input.replace(new RegExp("&i=",'g'),"&Имя=");
-            _input = _input.replace(new RegExp("&o=",'g'),"&Отчество=");
-            _input = _input.replace(new RegExp("gender=0",'g'),"Пол женский");
-            _input = _input.replace(new RegExp("gender=1",'g'),"Пол мужской");
-            _input = _input.replace(new RegExp("&birth_dd=0&birth_mm=0&birth_yyyy=0",'g'),"");
-            _input = _input.replace(new RegExp("birthdate",'g'),"Дата рождения");
-            _input = _input.replace(new RegExp("&phone=",'g'),"&Телефон=");
-            _input = _input.replace(new RegExp("&email",'g'),"&Емаил");
-            _input = _input.replace(new RegExp("&delays_type=never",'g'),"&Никогда не брал(а) кредитов");
-            _input = _input.replace(new RegExp("&delays_type=credit_closed_no_delay",'g'),"&Кредиты закрыты, просрочек не было");
-            _input = _input.replace(new RegExp("&delays_type=credit_open_no_delay",'g'),"&Кредиты есть, просрочек нет");
-            _input = _input.replace(new RegExp("&delays_type=credit_closed_had_delay",'g'),"&Кредиты закрыты, просрочки были");
-            _input = _input.replace(new RegExp("&delays_type=had_delay",'g'),"&Просрочки были, сейчас нет");
-            _input = _input.replace(new RegExp("&delays_type=had_delay",'g'),"&Просрочки сейчас есть");
-            _input = _input.replace(new RegExp("rangeSlider",'g'),"Сумма");
-            _input = _input.replace(new RegExp("ammount",'g'),"Сумма");
-            _input = _input.replace(new RegExp("amount",'g'),"Сумма");
-            _input = _input.replace(new RegExp("&passport=",'g'),"&Серия и номер паспорта=");
-            _input = _input.replace(new RegExp("passport_s",'g'),"Серия паспорта");
-            _input = _input.replace(new RegExp("passport_n",'g'),"Номер паспорта");
-            _input = _input.replace(new RegExp("passport_dd",'g'),"День выдачи");
-            _input = _input.replace(new RegExp("passport_mm",'g'),"Месяц выдачи");
-            _input = _input.replace(new RegExp("passport_yyyy",'g'),"Год выдачи");
-            _input = _input.replace(new RegExp("passportdate",'g'),"Дата выдачи");
-            _input = _input.replace(new RegExp("passport_code",'g'),"Код подразделения");
-            _input = _input.replace(new RegExp("passport_who",'g'),"Кем выдан");
-            _input = _input.replace(new RegExp("birthplace",'g'),"Место рождения");
-            _input = _input.replace(new RegExp("&region=",'g'),"&Регион=");
-            _input = _input.replace(new RegExp("&city=",'g'),"&Населённый пункт=");
-            _input = _input.replace(new RegExp("&street=",'g'),"&Улица проживания=");
-            _input = _input.replace(new RegExp("&building=",'g'),"&Дом=");
-            _input = _input.replace(new RegExp("&housing=",'g'),"&Корпус=");
-            _input = _input.replace(new RegExp("flat=",'g'),"Квартира=");
-            _input = _input.replace(new RegExp("reg_type=1",'g'),"Постоянная регистрация");
-            _input = _input.replace(new RegExp("reg_type=0",'g'),"Без регистрации");
-            _input = _input.replace(new RegExp("reg_type=2",'g'),"Временная регистрация");
-            _input = _input.replace(new RegExp("&reg_same=1",'g'),"");
-            _input = _input.replace(new RegExp("&work=",'g'),"&Вид трудоустройства=");
-            _input = _input.replace(new RegExp("work_name",'g'),"Место работы"); 
-            _input = _input.replace(new RegExp("work_occupation",'g'),"Должность");
-            _input = _input.replace(new RegExp("work_phone",'g'),"Рабочий телефон");
-            _input = _input.replace(new RegExp("work_experience",'g'),"Стаж");
-            _input = _input.replace(new RegExp("work_salary",'g'),"Зарплата");
-            _input = _input.replace(new RegExp("work_region",'g'),"Регион работы");
-            _input = _input.replace(new RegExp("work_city",'g'),"Город работы");
-            _input = _input.replace(new RegExp("work_street",'g'),"Улица работы");
-            _input = _input.replace(new RegExp("work_house",'g'),"Номер дома работы");
-            _input = _input.replace(new RegExp("work_office",'g'),"Офис работы");
-
-            _info = _info.replace(new RegExp("undefined",'g'),"неопределено");
-            data = {
-                name: $('#feedback-name').val(),
-                phone: $('#feedback-phone').val(),
-                email: $('#feedback-email').val(),
-                comment: 'Обращение: ' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size + "\n | Данные:" + _input
-            };
-        }
-        else
-        {
-            data = {
-                name: $('#feedback-name').val(),
-                phone: $('#feedback-phone').val(),
-                email: $('#feedback-email').val(),
-                comment: 'Обращение: ' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size
-            };
-        } 
-        
-        if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' && data
-                .email != '') && (typeof data.comment != 'undefined' && data.comment != '')) {
-            $.ajax({
-                url: '/feedback/',
-                type: 'POST',
-                dataType: 'json',
-                data: data
-            }).done(function (response) {
-                if (response != null) {
-                    if (typeof response.error != 'undefined') {
-                        alert('Ошибка. ' + response.error);
-                    } else {
-                        $('#askQuestion').modal('hide');
-                        Loading(0); 
-                        alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
-                        $('#feedback-send').prop("disabled", true);
-                    }
-                } else {
-                    alert('Не получилось отправить. Попробуйте ещё раз.');
-                    $('#askQuestion').modal('hide');
-                }
-            }).fail(function (jqxhr, textStatus, error) {
-                alert('Не получилось отправить. Попробуйте ещё раз.');
-            }).always(function () {
-                Loading(0);
-            });
-        } else {
-            Loading(0);
-            alert('Пожалуйста, заполните все поля.');
-        }
-    });
  
 </script>
 
@@ -523,7 +404,8 @@
             }
         }
         return c;
-    }  
+    } 
+    //traffic("dengomir.ru", "4");
 </script>';
 }
 ?>
@@ -736,9 +618,53 @@ if ($this->uri->segment(1) == 'form')
     }); 
 
     </script>';
-     
+    require 'templates/common/js.php';
+    if(isset($_GET['popup']) and $_GET['popup']==1 ){
+    echo '<!-- Modal Popup-->
+    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
+                </div>
+                <div class="modal-body text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="templates/common/img/popup.jpg" alt="popup.jpg">                                             
+                            <h2>'.$popup_text.'</h2>
+                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type= " text/javascript">
+        $(window).load(function(){
+            $("#popup").modal("show");
+        });
+    </script>';
+    }
 }
-  
+
+if(isset($_GET['email']))
+{
+    //данные пользователя
+    $this->load->model('user/user_model', 'user');
+    $user_data = $this->user->get_user($_GET['email']);
+    $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
+    $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
+    foreach ($user_data as $name => $item)
+    {
+        echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
+    }
+    echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
+}
+?>
+
+<!-- всплывающее окошко --> 
+<?php
  require 'yandexmetrika.php';
  require 'googleanalytics.php';
 ?>
@@ -769,7 +695,7 @@ function traffic(site, page)
             }
     });
 }
-//traffic(window.location.hostname,window.location.pathname);
+
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>

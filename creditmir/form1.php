@@ -2,13 +2,14 @@
     <div class="row">
         <div class="col-md-9">
             <div class="ex-pr">
-                <div class="form-group has-feedback hidden">
+                <div class="form-group has-feedback">
                     <label class="control-label col-md-4" for="f">Фамилия</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
-                                data-sanitize="capitalize" value="Иванова" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
+                                data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
                                 data-validation-error-msg="Введите свою фамилию" required>
+                            <p class="text-muted helpblock">Пример: Иванова</p>
                         </div>
                     </div>
                 </div>
@@ -19,26 +20,29 @@
                             <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize"
                                 data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя"
                                 required>
+                            <p class="text-muted helpblock">Пример: Лариса</p>
                         </div>
                     </div>
                 </div>
-                <div class="form-group has-feedback hidden">
+                <div class="form-group has-feedback">
                     <label class="control-label col-md-4" for="o">Отчество</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
-                            <input type="text" value="Валерьевна" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
+                            <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
                                 data-validation-error-msg="Введите свое отчество" required>
+                            <p class="text-muted helpblock">Пример: Ивановна</p>
                         </div>
                     </div>
                 </div>
-                <input type="hidden" id="gender" value="1" name="gender" required>
+                <input type="hidden" id="gender" value="1" name="gender">
                 <!-- Скрываем старую форму даты рождения -->
                 <div class="form-group hidden">
-                    <label class="col-sm-4 control-label label-required hidden-xs">Дата рождения*</label>
+                    <label class="col-sm-4 control-label label-required hidden-xs" for="birth_dd">Дата рождения*</label>
                     <div class="col-sm-2">
                         <div class="shadow">
-                            <select class="form-control ec" id="birth_dd" name="birth_dd" required>
+                            <select size="1" class="form-control ec" id="birth_dd" name="birth_dd">
+                                <option>выбери</option>
                                 <option value="0">День</option>
                                 <?php for($i=1;$i<=31;$i++) echo '<option value="'.(($i<10)? '0' : '').$i.'">'.$i.'</option>'; ?>
                             </select>
@@ -46,7 +50,9 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="shadow">
-                            <select class="form-control ec" id="birth_mm" name="birth_mm" required>
+                            <label class="col-sm-4 control-label label-required hidden-xs" for="birth_mm">Дата рождения</label>
+                            <select size="1" class="form-control ec" id="birth_mm" name="birth_mm">
+                                <option>выбери</option>
                                 <option value="0">Месяц</option>
                                 <option value="01">Январь</option>
                                 <option value="02">Февраль</option>
@@ -65,24 +71,27 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="shadow">
-                            <select class="form-control ec" id="birth_yyyy" name="birth_yyyy" required>
+                            <label class="col-sm-4 control-label label-required hidden-xs" for="birth_yyyy">Дата рождения</label>
+                            <select size="1" class="form-control ec" id="birth_yyyy" name="birth_yyyy">
+                                <option>выбери</option>
                                 <option value="0">Год</option>
                                 <?php
-				for($i=date('Y', strtotime('-80 years', time()));$i<=date('Y', strtotime('-18 years', time()));$i++)
-				echo '<option value="'.$i.'">'.$i.'</option>';
-				?>
+            for($i=date('Y', strtotime('-80 years', time()));$i<=date('Y', strtotime('-18 years', time()));$i++)
+            echo '<option value="'.$i.'">'.$i.'</option>';
+            ?>
                             </select>
                         </div>
                     </div>
                 </div>
                 <!-- Скрываем старую форму даты рождения -->
-                <div class="form-group has-feedback hidden">
+                <div class="form-group has-feedback">
                     <label class="control-label col-md-4" for="birthdate">Дата рождения</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
                                 data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
                                 required>
+                                <p class="text-muted helpblock">Пример: 06/02/2000</p>
                         </div>
                     </div>
                 </div>
@@ -93,6 +102,7 @@
                             <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Введите свой номер телефона"
                                 title="Введите свой номер телефона" data-validation-error-msg="Введите номер телефона" required>
                             <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
                         </div>
                     </div>
                 </div>
@@ -102,10 +112,11 @@
                         <div class="ex-wrapper">
                             <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Введите свой email адрес" placeholder="Email"
                                 data-validation="email" data-validation-error-msg="Введите свой email" required>
+                                <p class="text-muted helpblock">Пример: email@mail.ru</p>
                         </div>
                     </div>
                 </div>
-                <div class="form-group has-feedback hidden">
+                <div class="form-group has-feedback">
                     <label class="control-label col-md-4" for="credit">Кредитная история</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper ex-arrow">
@@ -134,18 +145,16 @@
                     </div>
                 </div>
                 <div class="form-group has-feedback">
-                <div class="col-md-9 col-md-offset-3 text-center">
-                    <a id="next1" class="ex-btn-blue text-center" style="width: 100%;text-transform: uppercase; text-decoration: none;">
-                        Получить деньги
-                    </a>
-                </div>
+                    <div class="col-md-8 col-md-offset-4 text-center">
+                        <span id="next1" class="ex-btn-blue  hidden-sm hidden-xs">Далее</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 text-center">
-            <span id="next1b" class="ex-btn-blue hidden-md hidden-lg">Получить деньги</span>
+            <span id="next1b" class="ex-btn-blue hidden-md hidden-lg">Далее</span>
         </div>
     </div>
 </section>

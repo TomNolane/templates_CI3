@@ -69,14 +69,14 @@ if(isset($_SERVER['HTTP_REFERER'])){
     </div>
     <div class="container-fluid ex-step-counter hidden-xs">
         <ul class="ex-step-indicator">
-            <li><span>всего 1 шаг</span></li>
-            <li><span></span></li>
-            <li><span></span></li>
+            <li><span>шаг 1  Личные данные</span></li>
+            <li><span>шаг 2  Паспортные данные</span></li>
+            <li><span>шаг 3   Данные о работе</span></li>
         </ul>
     </div>
     <section class="ex-main-form">
             <?php $period; ?>
-            <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off">
+            <form id="anketa" action="/lk" method="post" class="form-horizontal" onsubmit="return validate();" autocomplete="off">
                 <input type="hidden" name="display" id="display" value="0">
                 <input type="hidden" name="referer" value="<?=$referer?>">
                 <input type="hidden" name="id" value="">

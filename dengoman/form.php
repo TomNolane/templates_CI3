@@ -111,9 +111,9 @@ if(isset($_SERVER['HTTP_REFERER'])){
 	<div class="col-xs-12 text-center">
 		<div class="row" role="tablist" id="form-steps" role="presentation">
 			<span>
-                <a href="#form1" aria-controls="form1" role="tab"><span class="btn" id="step1">Всего<span class="hidden-xs"></span></span></a>
-                <a href="#form2" aria-controls="form1" role="tab"><span class="btn" id="step2">один <span class="hidden-xs"></span></span></a>
-                <a href="#form3" aria-controls="form1" role="tab"><span class="btn" id="step3">шаг </span></a>
+                <a href="#form1" aria-controls="form1" role="tab"><span class="btn" id="step1">Личные <span class="hidden-xs">данные</span></span></a>
+                <a href="#form2" aria-controls="form1" role="tab"><span class="btn off" id="step2">Паспорт<span class="hidden-xs">ные данные</span></span></a>
+                <a href="#form3" aria-controls="form1" role="tab"><span class="btn off" id="step3">Работа</span></a>
 			</span>
 		</div>
 	</div>
@@ -139,7 +139,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                         </div>
                     </div>
 					<?php require 'form1.php'; ?>
-					<div class="text-center"><a class="btn btn-ok btn-block" id="next">Отправить заявку&nbsp;&nbsp;&nbsp;</a></div>
+					<div class="text-center"><a class="btn btn-next" id="next">Далее&nbsp;&nbsp;&nbsp;<i class="fa fa-long-arrow-right"></i></a></div>
 					<div class="clearfix"></div>
 				</div>
 				<div role="tabpanel" class="tab-pane" id="form2">

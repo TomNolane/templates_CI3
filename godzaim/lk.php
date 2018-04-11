@@ -25,7 +25,8 @@ $pixel = $this->pixel->stat('godzaim.ru');
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<h1>Вам доступен займ в следующих организациях:</h1>
+					<h1>Вам автоматически одобрен займ
+						<br>в следующих организациях:</h1>
 					<p>Вероятность забрать
 						<span id="amount_lk" class="green">30000 рублей</span> сейчас
 						<span class="percent_top green"> 95%</span>
@@ -123,19 +124,20 @@ $pixel = $this->pixel->stat('godzaim.ru');
 				}
 			}
 			return c;
-		} 
+		}
+		//traffic("godzaim.ru", "4");
 	</script>
 	<!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
 Page -->
-	<script type="text/javascript">
+	<script >
 		/* <![CDATA[ */
 		var google_conversion_id = 830227331;
 		var google_conversion_label = "M_bzCPqNnHcQg4fxiwM";
 		var google_remarketing_only = false;
 		/* ]]> */
 	</script>
-	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+	<script  src="//www.googleadservices.com/pagead/conversion.js">
 	</script>
 	<noscript>
 		<div style="display:inline;">

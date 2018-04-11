@@ -11,8 +11,8 @@ header {
   padding-bottom: 28px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   background: #ffffff; /* Old browsers */
-  background: -moz-linear-gradient(top, #ffffff 0%, #f4f4f4 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #ffffff 0%, #f4f4f4 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -moz-linear-gradient(to top, #ffffff 0%, #f4f4f4 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(to top, #ffffff 0%, #f4f4f4 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #ffffff 0%, #f4f4f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f4f4f4', GradientType=0); /* IE6-9 */
   margin-bottom: 0;

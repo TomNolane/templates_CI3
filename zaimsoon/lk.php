@@ -24,7 +24,8 @@
 ?>
 <main class="ex-offerta">
     <div class="container">
-        <h2 class="text-center">Вам доступен займ в следующих организациях:</h2>
+        <h2 class="text-center">Вам автоматически одобрен займ<br>
+            в следующих организациях:</h2>
         <div class="row"> 
         <?php 
         function plural_type($n) { 
@@ -40,7 +41,7 @@
             {
                 $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
                 $item['link'] = str_replace("#site", $domen, $item['link']);
-                echo '<div class="col-md-3" style="margin-top: 33px;">
+                echo '<div class="col-md-3">
                 <figure class="text-center">
                     <div class="ex-wrapper text-center">
                         <p class="text-right">
@@ -83,14 +84,14 @@
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
 Page -->
-<script type="text/javascript">
+<script >
 /* <![CDATA[ */
 var google_conversion_id = 824209985;
 var google_conversion_label = "e0E8CJL1tHoQweSBiQM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
+<script   
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>

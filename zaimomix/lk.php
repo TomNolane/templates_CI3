@@ -35,7 +35,7 @@ function plural_type($n) {
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <h1>Вам доступен займ в следующих организациях:</h1>
+                <h1>Вам автоматически одобрен займ в следующих организациях:</h1>
             </div>
         </div>
     </div>

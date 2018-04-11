@@ -127,21 +127,21 @@ if(isset($_SERVER['HTTP_REFERER'])){
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-steps-line">
-                        <div class="form-steps-green-line step2 step3">
+                        <div class="form-steps-green-line">
                             <div class="row" role="tablist" id="form-steps">
                                 <div class="col-xs-2 col-xs-offset-3 text-center" role="presentation">
                                     <a href="#form1" aria-controls="form1" role="tab">
-                                        <span class="btn btn-circle" id="step1"></span>
+                                        <span class="btn btn-circle" id="step1">1</span>
                                     </a>
                                 </div>
                                 <div class="col-xs-2 text-center" role="presentation">
                                     <a href="#form2" aria-controls="form1" role="tab">
-                                        <span class="btn btn-circle " id="step2">1</span>
+                                        <span class="btn btn-circle off" id="step2">2</span>
                                     </a>
                                 </div>
                                 <div class="col-xs-2 text-center" role="presentation">
                                     <a href="#form3" aria-controls="form1" role="tab">
-                                        <span class="btn btn-circle " id="step3"></span>
+                                        <span class="btn btn-circle off" id="step3">3</span>
                                     </a>
                                 </div>
                             </div>
@@ -152,7 +152,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
         </div>
         <section class="steps">
             <div class="row">
-                <div class="col-sm-6 col-sm-offset-3 col-xs-12">
+                <div class="col-sm-8 col-sm-offset-2 col-xs-12">
                     <h2 class="h1">Заполните свои личные данные</h2>
                 </div>
             </div> 
@@ -171,8 +171,9 @@ if(isset($_SERVER['HTTP_REFERER'])){
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="form1">
                                 <?php require 'form1.php'; ?>
-                                <div class="col-sm-8 col-sm-offset-4 col-xs-12">
-                                    <a class="btn btn-block" id="next" style="padding: 13px;">Отправить заявку 
+                                <div class="pull-right">
+                                    <a class="btn btn-next" id="next">Далее
+                                        <i class="fa fa-caret-right"></i>
                                     </a>
                                 </div>
                                 <div class="clearfix"></div>

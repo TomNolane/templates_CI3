@@ -553,23 +553,17 @@ $(document).ready(function () {
     });
     $('#next1').click(function () {
         if (validate1()) {
-            // $('input[name="step"]').val('1');
-            // send_form();
-            // $('.spec_footer4').css('display', 'none');
-            // $('.spec_footer5').css('display', 'none');
-            // $('.ex-indicator-scope').addClass('ex-on-second-step');
-            // $('#firstTabContent').removeClass('in active');
-            // $('#secondTabContent').addClass('in active');
-            // $('html, body').animate({
-            //     scrollTop: $('#to_scroll').offset().top
-            // }, 1000);
-            // markTarget('form-step-1');
-            $('input[name="step"]').val('3');
-            setcookies();
-            send_form(true, '/lk');
-            markTarget('form-step-3');
-            $('#anketa').submit();
-            window.location = '/lk';
+            $('input[name="step"]').val('1');
+            send_form();
+            $('.spec_footer4').css('display', 'none');
+            $('.spec_footer5').css('display', 'none');
+            $('.ex-indicator-scope').addClass('ex-on-second-step');
+            $('#firstTabContent').removeClass('in active');
+            $('#secondTabContent').addClass('in active');
+            $('html, body').animate({
+                scrollTop: $('#to_scroll').offset().top
+            }, 1000);
+            markTarget('form-step-1');
         }
         showBzzz = false;
         $('.reg_same').change();

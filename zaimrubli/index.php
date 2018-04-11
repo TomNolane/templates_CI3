@@ -148,7 +148,7 @@
                 <div class="ex-email-wraper">
                     <div class="row"> 
                         <div class="col-md-4">
-                            <label for="email">Подпишись на рассылку*</label>
+                            <label>Подпишись на рассылку*</label>
                         </div>  
                             <div class="col-md-6"> 
                                 <div class="hidden">
@@ -156,8 +156,9 @@
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control index_specail2" id="feedback-email2" title="Email" placeholder="Введите ваш email" required> 
-                                </div></div> 
-                                <div class="col-md-2">
+                                </div>
+                            </div> 
+                            <div class="col-md-2">
                                 <div class="form-group">
                                  <!-- Hidde this block -->
                                  <div class="hidden">
@@ -175,6 +176,6 @@
                 <p class="ex-int">*На указанную электронную почту вам будут приходить оповещения с лучшими условиями кредитования.
                     Вы не пропустите интересные и выгодные предложения!</p></div>
         </div>
-    </section> 
+    </section>
 </main>
 <?php require 'footer.php'; ?>

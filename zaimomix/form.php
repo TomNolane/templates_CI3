@@ -64,14 +64,14 @@ if(isset($_SERVER['HTTP_REFERER'])){
 }
 ?>
 <main class="ex-form">
-    <h1 class="text-center" id="form-steps">До одобрения кредита вас отделяют всего 1 шаг</h1>
+    <h1 class="text-center" id="form-steps">До одобрения кредита вас отделяют всего 3 шага</h1>
     <div class="ex-tab-steps text-center">
         <p class="ex-step-counter ex-step-active">шаг 1 Заполните личные данные</p>
         <p class="ex-step-counter ex-step-2">шаг 2 Заполните паспортные данные</p>
         <p class="ex-step-counter ex-step-3">шаг 3 Заполните данные о работе</p>
     </div>
     <div class="container">
-    <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off"> 
+    <form id="anketa" action="/lk" method="post" class="form-horizontal" onsubmit="return validate();" autocomplete="off">
                 <input type="hidden" name="display" id="display" value="0">
                 <input type="hidden" name="referer" value="<?=$referer?>">
                 <input type="hidden" name="id" value="">

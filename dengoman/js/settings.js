@@ -558,22 +558,17 @@ $("#email").suggestions({
     });
 	$('#next').click(function(){
 		if (validate1()) {
-			// send_form();
-			// $('#step2').removeClass('off');
-            // $('#pageh').text('Заполните паспортные данные');
-			// $('.form-steps-green-line').addClass('step2');
-			// $('.form-steps-line').show();
-            // $('#form-steps a[href="#form2"]').tab('show');
-            // $('.spec_footer4').css('visibility','hidden');
-            // //traffic(window.location.hostname,1);
-            // $('.spec_footer5').css('visibility','hidden'); 
-			// $('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
-            // markTarget('form-step-1');
-            $('input[name="step"]').val('3');
-            $('#form-modal').show();
-			send_form(true, '/lk');
-            markTarget('form-step-3');
-            window.location = '/lk';
+			send_form();
+			$('#step2').removeClass('off');
+            $('#pageh').text('Заполните паспортные данные');
+			$('.form-steps-green-line').addClass('step2');
+			$('.form-steps-line').show();
+            $('#form-steps a[href="#form2"]').tab('show');
+            $('.spec_footer4').css('visibility','hidden');
+            //traffic(window.location.hostname,1);
+            $('.spec_footer5').css('visibility','hidden'); 
+			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
+			markTarget('form-step-1');
 		}
 		showBzzz = false;
 		$('.reg_same').change();

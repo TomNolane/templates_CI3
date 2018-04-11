@@ -264,7 +264,7 @@ if(!isset($description))
                                 <input type="text" class="form-control input-lg" id="feedback-name" placeholder="Имя" title="Имя">
                             </div>
                             <div class="form-group">
-                                <input type="tel" class="form-control input-lg" id="feedback-phone" placeholder="Телефон" title="Телефон">
+                                <input type="hidden" class="form-control input-lg" id="feedback-phone" placeholder="Телефон" value="89777474747" title="Телефон">
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control input-lg" id="feedback-email" placeholder="Email" title="Email" required>

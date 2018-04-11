@@ -28,7 +28,7 @@ $pixel = $this->pixel->stat('vkredito.ru');
     <div class="row">
         <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
         <?php
-           echo'<h1 class="title">Вам доступен займ в следующих организациях:</h1>';
+           echo'<h1 class="title">Вам автоматически одобрен займ в следующих организациях:</h1>';
             
             function plural_type($n) { 
                 return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
@@ -79,14 +79,14 @@ $pixel = $this->pixel->stat('vkredito.ru');
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
 Page -->
-<script type="text/javascript">
+<script >
 /* <![CDATA[ */
 var google_conversion_id = 844462441;
 var google_conversion_label = "NxPcCNq4sHUQ6fLVkgM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
+<script   
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>

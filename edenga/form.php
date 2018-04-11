@@ -169,18 +169,18 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     <div class="col-md-12 col-xs-12" id="to_scroll">
                         <h1 class="title text-center" id="htitle">Заполните свои личные данные</h1>
                         <ul class="nav nav-tabs text-center" id="form-steps">
-                            <li role="presentation" class="disabled">
-                                <a href="#form1" id="step1">
-                                    <span class="hidden-sm hidden-xs"></span>
+                            <li role="presentation" class="active">
+                                <a href="#form1" id="step1">Личные
+                                    <span class="hidden-sm hidden-xs">данные</span>
                                 </a>
                             </li>
-                            <li role="presentation" class="active">
-                                <a href="#form2" id="step2">Личные
+                            <li role="presentation" class="disabled">
+                                <a href="#form2" id="step2">Паспортные
                                     <span class="hidden-sm hidden-xs"> данные</span>
                                 </a>
                             </li>
                             <li role="presentation" class="disabled">
-                                <a href="#form3" id="step3"></a>
+                                <a href="#form3" id="step3">Работа</a>
                             </li>
                         </ul>
                         <div class="col-md-6 col-md-offset-2 col-sm-6 col-xs-11 form-body">
@@ -195,7 +195,8 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                     <div id="firstStep" class="tab-pane fade in active">
                                         <?php require 'form1.php'; ?>
                                         <div class="text-center">
-                                            <a class="btn btn-primary btn-next" id="next1">Оформить заявку 
+                                            <a class="btn btn-primary btn-next" id="next1">Далее
+                                                <i class="fa fa-arrow-right"></i>
                                             </a>
                                         </div>
                                         <div class="clearfix"></div>

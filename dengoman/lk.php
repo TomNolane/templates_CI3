@@ -24,7 +24,7 @@ $pixel = $this->pixel->stat('dengoman.ru');
 ?>
 
 <div class="container lk">
-	<h1>Вам доступен займ в следующих организациях:</h1>
+	<h1>Вам автоматически одобрен займ в следующих организациях:</h1>
 	<div class="row">
             <div class="col-md-12">
                 <div class="text-center hidden-xs">

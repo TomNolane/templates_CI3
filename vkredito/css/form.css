@@ -140,7 +140,7 @@ input[type="radio"], input[type="checkbox"] {
     font-size:16px;
 }
 .btn-default {
-    color: #ссс !important;
+    color: #ccc !important;
     background-color: #fff !important;
     border-color: #ccc !important;
 }
@@ -171,3 +171,10 @@ input[type="radio"], input[type="checkbox"] {
         font-size:20px;
     }
 }
+.helpblock
+{
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-size: 0.8em;
+  float: right;
+} 

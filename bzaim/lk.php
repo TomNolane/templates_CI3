@@ -25,7 +25,8 @@
     <div class="ex-main-spasibo">
         <div class="container">
             <div class="row">
-                <h1 class="text-center">Вам доступен займ в следующих организациях:</h1>
+                <h1 class="text-center">Вам автоматически одобрен
+                    <br> займ в следующих организациях:</h1>
                 <table class="hidden-xs">
                     <?php
 $y = 0; $y1 = 'height: 80px; max-width: 240px;'; $y2 = 'height: 100px; max-width: 270px;';
@@ -96,5 +97,23 @@ echo '
             </div>
         </div>
     </div>
-    <?php include "googleadservices.php"; ?>
+    <!-- Google Code for  
+&#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103;  
+(&#1073;&#1077;&#1079; &#1076;&#1086;&#1080;) Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 832752781;
+var google_conversion_label = "9no7CIzpqHgQjZmLjQM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript"  
+src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt=""  
+src="//www.googleadservices.com/pagead/conversion/832752781/?label=9no7CIzpqHgQjZmLjQM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
     <?php include "footer.php"; ?>

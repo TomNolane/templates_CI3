@@ -65,19 +65,19 @@ if(isset($_SERVER['HTTP_REFERER'])){
 ?>
 <main class="ex-form">
     <div class="container">
-        <h1 class="text-center" id="form-steps">До одобрения кредита вас отделяют всего 1 шаг</h1>
+        <h1 class="text-center" id="form-steps">До одобрения кредита вас отделяют всего 3 шага</h1>
         <div class="row justify-content-center text-center">
             <div class="col-lg-6">
                 <ul class="ex-tab-steps ">
-                    <li class="ex-step-counter ex-step-active" style="visibility: hidden;">
-                         <figure>шаг 2</figure>
-                        <p>Паспортные данные</p>
-                    </li>
-                    <li class="ex-step-counter ex-step-2 ex-step-active" > 
+                    <li class="ex-step-counter ex-step-active">
                         <figure>шаг 1</figure>
                         <p>Личные данные</p>
                     </li>
-                    <li class="ex-step-counter ex-step-3" style="visibility: hidden;">
+                    <li class="ex-step-counter ex-step-2">
+                        <figure>шаг 2</figure>
+                        <p>Паспортные данные</p>
+                    </li>
+                    <li class="ex-step-counter ex-step-3">
                         <figure>шаг 3</figure>
                         <p>Данные о работе</p>
                     </li>
@@ -118,7 +118,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
     </div>
     <div class="ex-bg-form">
         <div class="container">
-            <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off">
+            <form id="anketa" action="/lk" method="post" class="form-horizontal" onsubmit="return validate();" autocomplete="off">
                 <input type="hidden" name="display" id="display" value="0">
                 <input type="hidden" name="referer" value="<?=$referer?>">
                 <input type="hidden" name="id" value="">

@@ -30,7 +30,7 @@
 </nav>
 <main class="ex-offerta">
 <div class="container">
-    <h2 class="text-center">Вам доступен займ в следующих организациях:</h2>
+    <h2 class="text-center">Вам автоматически одобрен займ в следующих организациях:</h2>
     <div class="row">
     <?php
 
@@ -83,14 +83,14 @@ $_plural_times = array('раз', 'раза', 'раз');
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
 Page -->
-<script type="text/javascript">
+<script >
 /* <![CDATA[ */
 var google_conversion_id = 824879582;
 var google_conversion_label = "lw8uCLndhnoQ3tOqiQM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
+<script   
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>

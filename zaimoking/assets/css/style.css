@@ -11503,7 +11503,7 @@ button.close {
   display: inline-block;
   width: 79px;
   height: 68px;
-  background-image: url(/templates/zaimoking/assets/img/logo.png);
+  background-image: url(/templates/zaimoking/assets/img/logo.svg);
   background-repeat: no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
@@ -12460,11 +12460,11 @@ main.ex-form h1 {
 }
 /* line 18, ../sass/desktop/_form.scss */
 main.ex-form p {
-  text-align: left !important;
+  text-align: center;
   color: #4a4a4a;
   font-size: 18px;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 @media (max-width: 767px) {
   /* line 18, ../sass/desktop/_form.scss */

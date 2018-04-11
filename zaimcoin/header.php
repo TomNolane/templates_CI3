@@ -17,9 +17,6 @@ if(!isset($description))
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
 	<meta name="copyright" lang="ru" content="zaimcoin.ru" /> 
-	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Cache-control" content="no-cache"> 
-	<meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="Zaimcoin - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
 	<meta property="og:image" content="https://zaimcoin.ru/templates/zaimcoin/assets/img/rubles.png"/>
@@ -178,7 +175,7 @@ if(!isset($description))
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/" class="navbar-brand">
-                    <img src="templates/zaimcoin/assets/img/logo.png" alt="logo.png">
+                    <img src="/templates/zaimcoin/assets/img/logo.png" alt="logo.png">
                 </a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse">

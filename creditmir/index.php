@@ -2,6 +2,7 @@
 <input type="hidden" id="amount" name="amount" value="20000" />
 <input type="hidden" id="period" name="period" value="21" />
 <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
+<input type="hidden" id="is_credit" name="is_credit" value="0" />
 <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
 <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
         <div class="container ex-pr">
@@ -41,7 +42,12 @@
                                 <input id="rangeSlider2" name="rangeSlider2"/>
                             </div>
                             <div class="ex-action">
-                                <button onClick="goToForm();" class="ex-btn-blue">Получить деньги</button>
+                            <!-- <input type="button" class="ex-btn-blue" value="Получить деньги" onClick="goToForm();"> --> 
+                            <button type="button" class='myButt one' onClick="goToForm();">
+                                <div class='insider'></div>
+                                    Получить деньги
+                            </button>
+                                <!-- <button type="submit" class="ex-btn-blue">Получить деньги</button> -->
                             </div>
                         </div>
                     </div>
@@ -62,7 +68,12 @@
                                 <input id="rangeSlider4" name="rangeSlider2"/>
                             </div>
                             <div class="ex-action">
-                                <button onClick="goToForm();" class="ex-btn-aqua">Получить деньги</button>
+                                <button type="button" class='myButt one' onClick="goToForm();">
+                                    <div class='insider'></div>
+                                        Получить деньги
+                                </button>
+                                <!-- <input type="button" class="ex-btn-aqua" value="Получить деньги" onClick="goToForm();"> -->
+                                <!-- <button type="submit" class="ex-btn-aqua">Получить деньги</button> -->
                             </div>
                         </div>
                     </div>
@@ -131,7 +142,12 @@
             </div>
         </div>
         <div class="text-center">
-            <button onClick="goToForm();" class="ex-btn-blue">Получить деньги</button>
+            <button type="button" class='myButt one' onClick="goToForm();">
+                <div class='insider'></div>
+                    Получить деньги
+            </button>
+            <!-- <input type="button" class="ex-btn-blue" value="Получить деньги" onClick="goToForm();"> -->
+            <!-- <button type="submit" class="ex-btn-blue">Получить деньги</button> -->
         </div>
         <div class="row">
             <div class="col-xs-12">
@@ -187,7 +203,14 @@
         </article>
     </main>
     <div class="text-center">
-        <button onClick="goToForm();" class="ex-btn-blue">Получить деньги</button>
+        <br>
+        <button type="button" class='myButt one' onClick="goToForm();">
+            <div class='insider'></div>
+                Получить деньги
+        </button>
+        <br>
+        <!-- <input type="button" class="ex-btn-blue" value="Получить деньги" onClick="goToForm();"> -->
+        <!-- <button type="submit" class="ex-btn-blue">Получить деньги</button> -->
     </div>
 </section>
 </form>

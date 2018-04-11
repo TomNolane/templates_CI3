@@ -51,8 +51,10 @@ $(document).ready(function () {
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         if(homepageTabs.find('li:first-child').hasClass('active')) {
+            $("#is_credit").val(0);
             homepageSection1BG.css('background','#007aff')
         }else{
+            $("#is_credit").val(1);
             homepageSection1BG.css('background','#09cca0')
         }
     });

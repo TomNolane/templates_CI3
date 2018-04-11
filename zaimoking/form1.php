@@ -1,12 +1,12 @@
 <section class="ex-main-form">
     <div class="row">
         <div class="col-md-9">
-            <div class="form-group has-feedback hidden">
+            <div class="form-group has-feedback">
                 <label class="control-label col-md-4" for="f">Фамилия</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
-                            data-sanitize="capitalize" value="Иванова" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
+                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
                             required>
                             <p class="text-muted helpblock">Пример: Иванова</p>
                     </div>
@@ -23,12 +23,12 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback hidden">
+            <div class="form-group has-feedback">
                 <label class="control-label col-md-4" for="o">Отчество</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
-                            data-sanitize="capitalize" value="Ивановна" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
+                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
                             required>
                             <p class="text-muted helpblock">Пример: Ивановна</p>
                     </div>
@@ -83,12 +83,12 @@
                 </div>
             </div>
             <!-- Скрываем старую форму даты рождения -->
-            <div class="form-group has-feedback hidden">
+            <div class="form-group has-feedback">
                 <label class="control-label col-md-4" for="birthdate">Дата рождения</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
-                            data-validation="custom" value="06/02/2000" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
+                            data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
                             required>
                             <p class="text-muted helpblock">Пример: 06/02/2000</p>
                     </div>
@@ -115,7 +115,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback hidden">
+            <div class="form-group has-feedback">
                 <label class="control-label col-md-4" for="delays_type">Кредитная история</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper ex-arrow">
@@ -143,12 +143,12 @@
                     </label>
                 </div>
             </div>
-            <div class="form-group has-feedback"> 
+            <div class="form-group has-feedback">
                 <div class="col-md-8 col-md-offset-4">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <button class="ex-main-btn btn2 text-center" id="submitOne" type="button"> Получить деньги </button>
+                    <div class="col-md-8 col-md-offset-2">
+                        <button class="ex-main-btn btn2 text-center" id="submitOne" type="button"> Далее </button>
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
     </div>

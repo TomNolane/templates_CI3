@@ -6,6 +6,10 @@
 
     if($this->uri->segment(1) != 'form')
     {
+        echo '<!-- декстоп Yandex.RTB R-A-264025-1 -->
+        <div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-264025-1"></div> 
+        <!-- мобайл Yandex.RTB R-A-264025-2 -->
+        <div class="hidden-lg hidden-md visible-sm visible-xs" id="yandex_rtb_R-A-264025-2"></div>';
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Zaimrubli -->
         <ins class="adsbygoogle"
@@ -47,7 +51,7 @@
     require 'modules/jquery/jquery-1.11.3.min.js';
     echo '</script>';
     echo '<script>';
-    require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
+    require 'templates/zaimrubli/assets/js/bootstrap.js';
     echo '</script>';
     echo '<script>';
     require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
@@ -56,7 +60,10 @@
     require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
     echo '</script>';
     echo '<script>';
-    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
+    require 'templates/zaimrubli/assets/js/jquery.pickmeup.twitter-bootstrap.js';
+    echo '</script>';
+    echo '<script>';
+    require 'templates/zaimrubli/assets/js/pickmeup.min.js';
     echo '</script>';
     echo '<script>';
     require 'templates/zaimrubli/assets/js/jquery.form-validator.js';
@@ -83,7 +90,7 @@
     ?>
 
     <!--[if lt IE 10]>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
 
     <?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form' || $this->uri->segment(1) == 'money' || $this->uri->segment(1) == 'zaim-bank' || $this->uri->segment(1) == 'zaim-yandex' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-contact') 
@@ -337,7 +344,6 @@ if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
             $("#i").text(i);
         } 
     });
-
     function clone(o) {
         if (!o || "object" !== typeof o) return o;
 
@@ -354,8 +360,7 @@ if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
             }
         }
         return c;
-    } 
-    traffic("zaimrubli.ru", "4");
+    }
 </script>';
 }
 ?>
@@ -522,7 +527,49 @@ if ($this->uri->segment(1) == 'form')
             $("#work_office").val("");
         }
     }); 
-    </script>'; 
+    </script>';
+    require 'templates/common/js.php';
+    if(isset($_GET['popup']) and $_GET['popup']==1 ){
+        echo '    
+    <!-- Modal Popup-->
+    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
+                </div>
+                <div class="modal-body text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="templates/common/img/popup.jpg" alt="popup.jpg">
+                            <h2>'.$popup_text.'</h2>
+                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type= " text/javascript">
+        $(window).load(function(){
+            $("#popup").modal("show");
+        });
+    </script>';
+    }
+
+    if(isset($_GET['email']))
+    {
+        //данные пользователя
+        $this->load->model('user/user_model', 'user');
+        $user_data = $this->user->get_user($_GET['email']);
+        $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
+        $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
+        foreach ($user_data as $name => $item)
+        {
+            echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
+        }
+        echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
+    }
 }
 ?>
 
@@ -560,7 +607,7 @@ function traffic(site, page)
             }
     });
 }
-//traffic(window.location.hostname,window.location.pathname);
+
 </script>
 </body>
 </html>

@@ -151,7 +151,11 @@ function validate1() {
 	else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
 		error('Вы не указали пол.', $('input[name="gender"]'));
 		return false;
-	}  else if ($('input[name="phone"]').val().length != 16) {
+	} else if(!CheckTime())
+    {
+        error('Возраст должен быть от 18 до 70 лет', $('input[name="birthdate"]'));
+        return false;
+    } else if ($('input[name="phone"]').val().length != 16) {
 		error('Номер телефона указан неверно.', $('input[name="phone"]'));
 		return false;
 	} else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {
@@ -602,23 +606,19 @@ $(document).ready(function () {
             $(this).next("span").text(' ');
         }
     });
-    $('#submitOne').click(function () { 
+    $('#next1').click(function () { 
         if (validate1()) { 
-            // $('input[name="step"]').val('1'); 
-            // $('.spec_footer7').css('display','none');
-            // send_form(); 
-            // $('.ex-indicator-scope').addClass('ex-on-second-step');
-            // $('.ex-step-counter').addClass('ex-on-second-step');
-            // $('#firstStep').removeClass('in active');
-            // $('#secondStep').addClass('in active');
-            // $('html, body').animate({
-            //     scrollTop: $('#to_scroll').offset().top
-            // }, 1000);
-            // markTarget('form-step-1');
-            $('input[name="step"]').val('3');
-            send_form(true, '/lk');
-            markTarget('form-step-3');
-            $('#anketa').submit();
+            $('input[name="step"]').val('1'); 
+            $('.spec_footer7').css('display','none');
+            send_form(); 
+            $('.ex-indicator-scope').addClass('ex-on-second-step');
+            $('.ex-step-counter').addClass('ex-on-second-step');
+            $('#firstStep').removeClass('in active');
+            $('#secondStep').addClass('in active');
+            $('html, body').animate({
+                scrollTop: $('#to_scroll').offset().top
+            }, 1000);
+            markTarget('form-step-1');
         }
         showBzzz = false;
         $('.reg_same').change();
@@ -626,23 +626,19 @@ $(document).ready(function () {
         $('select[name="reg_type"]').change();
     });
 
-    $('#submitOneSecond').click(function () { 
+    $('#next1b').click(function () { 
         if (validate1()) { 
-            // $('input[name="step"]').val('1'); 
-            // $('.spec_footer7').css('display','none');
-            // $('.ex-step-counter').addClass('ex-on-second-step');
-            // send_form(); 
-            // $('.ex-indicator-scope').addClass('ex-on-second-step');
-            // $('#firstStep').removeClass('in active');
-            // $('#secondStep').addClass('in active');
-            // $('html, body').animate({
-            //     scrollTop: $('#to_scroll').offset().top
-            // }, 1000);
-            // markTarget('form-step-1');
-            $('input[name="step"]').val('3');
-            send_form(true, '/lk');
-            markTarget('form-step-3');
-            $('#anketa').submit();
+            $('input[name="step"]').val('1'); 
+            $('.spec_footer7').css('display','none');
+            $('.ex-step-counter').addClass('ex-on-second-step');
+            send_form(); 
+            $('.ex-indicator-scope').addClass('ex-on-second-step');
+            $('#firstStep').removeClass('in active');
+            $('#secondStep').addClass('in active');
+            $('html, body').animate({
+                scrollTop: $('#to_scroll').offset().top
+            }, 1000);
+            markTarget('form-step-1');
         }
         showBzzz = false;
         $('.reg_same').change();

@@ -23,7 +23,7 @@
     $pixel = $this->pixel->stat('dengomir.ru');
 ?>
 <div class="container ex-offers">
-    <h1>Вам доступен займ в следующих организациях:</h1>
+    <h1>Вам автоматически одобрен займ в следующих организациях:</h1>
     <div id="default">
         <div id="kayan_arka"></div>
         <?php 
@@ -86,14 +86,14 @@
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
 Page -->
-<script type="text/javascript">
+<script >
 /* <![CDATA[ */
 var google_conversion_id = 823384433;
 var google_conversion_label = "GUrSCJuU2HoQ8bLPiAM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
+<script   
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>

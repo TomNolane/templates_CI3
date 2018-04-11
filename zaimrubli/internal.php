@@ -1,4 +1,11 @@
-<?php 
+<?php
+if ($this->uri->segment(1) == 'robots.txt') 
+{
+	header("Content-type: text/plain");
+	require 'internal-robots.txt.php';
+} 
+else
+{
 $my_title = ''; $description = ''; 
 switch($this->uri->segment(1))
 {
@@ -102,4 +109,6 @@ switch($this->uri->segment(1))
 	elseif ($this->uri->segment(1) == 'term-loans') require 'internal-term-loans.php';
 	elseif ($this->uri->segment(1) == 'allarticles') require 'internal-allarticles.php';
 	elseif ($this->uri->segment(1) == 'interaction') require 'internal-interaction.php';
+	elseif($this->uri->segment(1) == '404') require 'internal-404.php';
+}
 ?>

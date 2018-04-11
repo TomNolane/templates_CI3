@@ -32,7 +32,7 @@ function plural_type($n) {
 ?>
 <main class="ex-offerta">
     <div class="container">
-        <h1 class="text-center">Вам доступен займ в следующих организациях:</h1>
+        <h1 class="text-center">Вам автоматически одобрен займ в следующих организациях:</h1>
         <div class="ex-offers-content">
             <div class="row">
                 <?php  foreach($data as $item)
@@ -67,7 +67,7 @@ function plural_type($n) {
                                             </tr>
                                             <tr>
                                                 <td>Основная ставка</td>
-                                                <td> '.$item['percent'].'%</td>
+                                                <td>'.$item['percent'].'%</td>
                                             </tr>
                                             </tbody>
                                         </table>

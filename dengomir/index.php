@@ -242,7 +242,7 @@
                             </figcaption>
                             <h3>Эльмира Закирова, 28 лет, г. Нижнекамск</h3>
                         </figure>
-                    </div> 
+                    </div>
                     <div class="item">
                         <figure>
                             <figcaption>

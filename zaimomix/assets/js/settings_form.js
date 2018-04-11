@@ -22,8 +22,8 @@ var isWebvisor = new RegExp('^https?:\/\/([^/]+metrika.yandex\.(ru|ua|com|com\.t
 function error(msg, elem) {
 	var title = 'Ошибка';
 	if ($('#message').length) $('#message').remove();
-	$('body').append('<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-		'<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' +
+	$('body').append('<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header">' +
+		'<h4 class="modal-title" id="messageLabel">' + title + '</h4><button type="button" class="close float-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>' +
         '<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">OK</button></div></div></div></div>');
         $('html, body').animate({
             scrollTop: elem.offset().top - 160
@@ -469,20 +469,15 @@ $("#email").suggestions({
     ); 
 	$('#submitOne').click(function(){
 		if (validate1()) {
-			// send_form();
-			// $('.ex-step-counter').removeClass('ex-step-active');
-            // $('.ex-step-2').addClass('ex-step-active');
-            // $('#firstStep').removeClass('in active');
-            // $('#secondStep').addClass('in active');
-            // $('.spec_footer4').css('visibility','hidden');
-            // $('.spec_footer5').css('visibility','hidden'); 
-			// $('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
-			// markTarget('form-step-1');
-            $('input[name="step"]').val('3'); 
-			$('#form-modal').show();
-			send_form(true, '/lk');
-            markTarget('form-step-3');
-            window.location = '/lk'; 
+			send_form();
+			$('.ex-step-counter').removeClass('ex-step-active');
+            $('.ex-step-2').addClass('ex-step-active');
+            $('#firstStep').removeClass('in active');
+            $('#secondStep').addClass('in active');
+            $('.spec_footer4').css('visibility','hidden');
+            $('.spec_footer5').css('visibility','hidden'); 
+			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
+			markTarget('form-step-1');
 		}
 		showBzzz = false;
 		$('.reg_same').change();

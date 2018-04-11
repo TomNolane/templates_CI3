@@ -75,52 +75,29 @@
 
 .er:-moz-placeholder {
   color: #ff0000 !important;
-  font-size: 0.8em;
 }
 
 .er::-moz-placeholder {
   color: #ff0000 !important;
-  font-size: 0.8em;
 }
 
 .er::placeholder {
   color: #ff0000 !important;
-  font-size: 0.8em;
 }
 
 .er:-ms-input-placeholder {
   color: #ff0000 !important;
-  font-size: 0.8em;
 }
 
 .er::-webkit-input-placeholder {
   color: #ff0000 !important;
+}
+
+.helpblock
+{
+  margin-bottom: 0;
+  margin-top: 0px;
   font-size: 0.8em;
-}
-
-input:-moz-placeholder {
-  /* color: #000000   !important;
-  opacity: .8; */
-}
-
-input::-moz-placeholder {
-  /* color: #000000   !important; */
-  /* opacity: .8; */
-}
-
-input::placeholder {
-  /* color: #000000   !important;
-   opacity: .8; */
-}
-
-input:-ms-input-placeholder {
-  /* color: #000000   !important;
-   opacity: .8; */
-}
-
-input:-webkit-input-placeholder {
-  /* color: #000000   !important;
-   opacity: .8; */
 }
 
 .label_er {
@@ -147,3 +124,10 @@ input#i , input#o, input#f, input#feedback-name {
 .spec_foot {
   color: #c0c0c0 !important;
 }
+.helpblock
+{
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-size: 0.8em;
+  float: right;
+} 

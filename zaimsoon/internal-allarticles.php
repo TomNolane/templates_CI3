@@ -3,7 +3,7 @@
 <div class="container">
     <h1 class="text-center">Статьи о займах</h1>
     <div class="ex-art-block">
-    <a href="/credits-history">
+    <a href="/credit-history">
         <div class="row">
             <div class="col-md-5">
                 <h2>Как получить микрозайм<br>

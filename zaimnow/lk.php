@@ -32,7 +32,7 @@ function plural_type($n) {
 ?>
 <div class="ex-offerta">
 <div class="container ">
-    <h1>Вам доступен займ в следующих организациях:</h1>
+    <h1>Вам автоматически одобрен займ в следующих организациях:</h1>
 </div>
 <div class="ex-offerta-bg">
     <div class="container">

@@ -82,21 +82,21 @@ if(isset($_SERVER['HTTP_REFERER'])){
                         <i class="fa fa-lock fa-lg"></i>
                     </p>
                     <ul class="nav nav-tabs text-center" id="form-steps">
-                        <li role="presentation" class="disabled">
-                            <a href="#form1" id="step1"></a>
-                        </li>
                         <li role="presentation" class="active">
-                            <a href="#form2" id="step2">Личные данные</a>
+                            <a href="#form1" id="step1">Личные данные</a>
                         </li>
                         <li role="presentation" class="disabled">
-                            <a href="#form3" id="step3"></a>
+                            <a href="#form2" id="step2">Паспортные данные</a>
+                        </li>
+                        <li role="presentation" class="disabled">
+                            <a href="#form3" id="step3">Работа</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-9 col-xs-12">
-                    <form class="form-horizontal" id="anketa" action="/add" method="post" novalidate autocomplete="off">
+                    <form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
                         <input type="hidden" name="display" id="display" value="0">
 
                         <input type="hidden" name="referer" value="<?=$referer?>">
@@ -109,7 +109,8 @@ if(isset($_SERVER['HTTP_REFERER'])){
                                 <?php require 'form1.php'; ?>
                                 <div class="col-sm-offset-4 col-sm-8">
                                     <div class="text-center">
-                                        <a class="btn btn-primary btn-next" id="next">Оформить заявку 
+                                        <a class="btn btn-primary btn-next" id="next">Далее
+                                            <i class="fa fa-chevron-right"></i>
                                         </a>
                                     </div>
                                 </div>

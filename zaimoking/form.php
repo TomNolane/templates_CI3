@@ -69,11 +69,11 @@ if(isset($_SERVER['HTTP_REFERER'])){
     <p>для оформления потребуется паспорт</p>
     <ul class="ex-tab-steps text-center" id="form-steps">
         <li class="ex-step-counter ex-step-active">Заполните личные данные</li>
-        <li class="ex-step-counter ex-step-2" style="visibility: hidden"></li>
-        <li class="ex-step-counter" style="visibility: hidden"></li>
+        <li class="ex-step-counter ex-step-2">Заполните паспортные данные</li>
+        <li class="ex-step-counter">Заполните данные о работе</li>
     </ul>
     <div class="container">
-        <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off">
+        <form id="anketa" action="/lk" method="post" class="form-horizontal" onsubmit="return validate();" autocomplete="off">
                 <input type="hidden" name="display" id="display" value="0">
                 <input type="hidden" name="referer" value="<?=$referer?>">
                 <input type="hidden" name="id" value="">

@@ -23,7 +23,8 @@ $this->load->model('pixel/pixel_model', 'pixel');
 $pixel = $this->pixel->stat('zaimcoin.ru');
 ?>
 <div class="container ex-spasibo">
-    <h1>Вам доступен займ в следующих организациях:</h1>
+    <h1>Вам автоматически одобрен займ 
+        в следующих организациях:</h1>
     <table class="hidden-xs hidden-sm">
         <thead><tr>
         <th scope="col">МФО</th>
@@ -94,14 +95,14 @@ $pixel = $this->pixel->stat('zaimcoin.ru');
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
 Page -->
-<script type="text/javascript">
+<script >
 /* <![CDATA[ */
 var google_conversion_id = 827428872;
 var google_conversion_label = "xmjJCLrypHkQiKDGigM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
+<script   
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>

@@ -1,6 +1,6 @@
 <div class="ex-anketa-head">
     <p class="text-conf text-center">
-        Личные данные (всего 1 шаг)
+        Личные данные (шаг 1 из 3)
     </p>
 </div>
 <div class="ex-anketa-main">
@@ -28,12 +28,12 @@
                 </div>
             </div>
             <!-- /слайдер -->
-            <div class="row hidden">
+            <div class="row">
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="f">Фамилия</label>
                         <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию" data-sanitize="capitalize"
-                            data-validation="custom" value="Иванова" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
+                            data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
                             required>
                         <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать фамилию</p>
@@ -54,12 +54,12 @@
                     </div>
                 </div>
             </div>
-            <div class="row hidden">
+            <div class="row">
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="o">Отчество</label>
                         <input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Укажите свое отчество"
-                            data-sanitize="capitalize" value="Ивановна" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
+                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
                             required>
                         <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать отчество</p> 
@@ -69,7 +69,7 @@
             </div>
             <input type="hidden" id="gender" value="1" name="gender">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-6">
                     <div class="form-group has-feedback">
                         <label class="label-required" for="phone">Номер телефона</label>
                         <input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон" title="Укажите свой телефон"
@@ -128,11 +128,11 @@
                     </div>
                 </div>
                 <!-- Скрываем старую форму даты рождения -->
-                <div class="col-sm-6 hidden">
+                <div class="col-sm-6">
                     <div class="form-group has-feedback">
                         <label class="label-required" for="birthdate">Дата рождения</label>
                         <input type="tel" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Укажите свою дату рождения"
-                            data-validation="custom" value="06/02/2000" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Укажите дату рождения"
+                            data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Укажите дату рождения"
                             required>
                         <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2"></p>
@@ -141,7 +141,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12"> 
+                <div class="col-sm-6">
                     <div class="form-group has-feedback">
                         <label class="label-required" for="email">Электронная почта</label>
                         <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Укажите свой email адрес"
@@ -152,7 +152,7 @@
                         <p class="text-muted helpblock">Пример: email@mail.ru</p>
                     </div>
                 </div>
-                <div class="col-sm-6 hidden">
+                <div class="col-sm-6">
                     <div class="form-group ex-arrow-on">
                         <label for="credit">Кредитная история</label>
                         <select class="form-control" id="credit">
@@ -184,7 +184,7 @@
                 </label>
             </div>
             <div class="col-sm-4 col-xs-12">
-                <button class="ex-main-btn" id="next1" type="button"> Получить займ </button>
+                <button class="ex-main-btn" id="next1" type="button"> Далее </button>
             </div>
         </div>
     </div>

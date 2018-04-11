@@ -129,4 +129,14 @@ color: #3c763d !important;
 }
 input#i , input#o, input#f, input#feedback-name {
   text-transform: capitalize !important;
-} 
+}
+.helpblock
+{
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-size: 0.8em;
+  float: right;
+}
+.special-padd{
+  height: 20px;
+}

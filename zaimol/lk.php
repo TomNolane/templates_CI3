@@ -25,7 +25,8 @@ $pixel = $this->pixel->stat('zaimol.ru');
 ?> 
 
 <section class="ex-spasibo">
-    <h1 class="text-center">Вам доступен займ в следующих организациях:</h1>
+    <h1 class="text-center">Вам автоматически одобрен займ<br>
+        в следующих организациях:</h1>
     <main>
         <div class="container">
             <div class="row">
@@ -88,14 +89,14 @@ $pixel = $this->pixel->stat('zaimol.ru');
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
 Page -->
-<script type="text/javascript">
+<script >
 /* <![CDATA[ */
 var google_conversion_id = 826360846;
 var google_conversion_label = "tDGuCMWP13kQjoiFigM";
 var google_remarketing_only = false;
 /* ]]> */
 </script>
-<script type="text/javascript"  
+<script   
 src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
