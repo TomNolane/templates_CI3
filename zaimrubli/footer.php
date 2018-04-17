@@ -13,10 +13,10 @@
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Zaimrubli -->
         <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="4313892605"
-        data-ad-format="auto"></ins>
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="4313892605"
+            data-ad-format="auto"></ins>
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
