@@ -898,7 +898,26 @@ if($this->uri->segment(1) == 'reviews'){
       });
     });
     </script>";
-}elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2'){?>
+}elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3'){?>
+<!-- Google Code for  
+&#1056;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1080;  
+Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 845982081;
+var google_conversion_label = "qy42CPmIk3YQgdOykwM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript"  
+src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt=""  
+src="//www.googleadservices.com/pagead/conversion/845982081/?label=qy42CPmIk3YQgdOykwM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
 <script>
 var offers = <?php echo json_encode($data); ?>;
 var by_reg = null;

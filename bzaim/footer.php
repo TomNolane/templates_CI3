@@ -87,8 +87,9 @@ echo '<footer class="ex-start-footer">
     </div>
 </footer>';
 }
-else if($this->uri->segment(1) == 'confirm' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'spasibo' || $this->uri->segment(1) == 'lk2')
+else if($this->uri->segment(1) == 'lk' ||  $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {
+    include "googleadservices.php"; 
     echo '<footer class="ex-footer">
         <div class="container">
             <div class="row">

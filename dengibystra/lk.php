@@ -96,5 +96,4 @@ echo '
             </div>
         </div>
     </div>
-    <?php include "googleadservices.php"; ?>
     <?php include "footer.php"; ?>

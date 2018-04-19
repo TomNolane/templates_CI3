@@ -125,7 +125,7 @@ if(!isset($description))
      }';
      echo '</style>';
 
-     if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') 
+     if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') 
      {
          echo '<style>';
          require "templates/creditmir/assets/css/style_lk.css";

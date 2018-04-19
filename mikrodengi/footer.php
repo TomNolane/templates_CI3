@@ -500,8 +500,27 @@
         }
     }, 50);
 });</script>
-<?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
+<?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {  
+    echo '<!-- Google Code for  
+    &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
+    Page -->
+    <script >
+    /* <![CDATA[ */
+    var google_conversion_id = 820672461;
+    var google_conversion_label = "mo6fCJOfuHsQze-phwM";
+    var google_remarketing_only = false;
+    /* ]]> */
+    </script>
+    <script   
+    src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+    <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt=""  
+    src="//www.googleadservices.com/pagead/conversion/820672461/?label=mo6fCJOfuHsQze-phwM&amp;guid=ON&amp;script=0"/>
+    </div>
+    </noscript>';
     echo '<script> 
     var offers = '.json_encode($data).'
     var by_reg = null;

@@ -633,8 +633,27 @@ function traffic(site, page){
 
 <?php
 
-if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
+if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
     { 
+        echo '<!-- Google Code for  
+        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
+        Page -->
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 827436364;
+        var google_conversion_label = "oLu3COf5v3kQzNrGigM";
+        var google_remarketing_only = false;
+        /* ]]> */
+        </script>
+        <script type="text/javascript"  
+        src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""  
+        src="//www.googleadservices.com/pagead/conversion/827436364/?label=oLu3COf5v3kQzNrGigM&amp;guid=ON&amp;script=0"/>
+        </div>
+        </noscript>';
         echo '<script>
         var offers = '.json_encode($data).'
         var by_reg = null;

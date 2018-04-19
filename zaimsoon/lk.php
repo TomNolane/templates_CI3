@@ -78,25 +78,5 @@
             }
             ?>  
         </div>
-    </div>
-<div class="ex-adds"></div> 
-<!-- Google Code for  
-&#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
-Page -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 824209985;
-var google_conversion_label = "e0E8CJL1tHoQweSBiQM";
-var google_remarketing_only = false;
-/* ]]> */
-</script>
-<script type="text/javascript"  
-src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt=""  
-src="//www.googleadservices.com/pagead/conversion/824209985/?label=e0E8CJL1tHoQweSBiQM&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
+    </div> 
 <?php require 'footer.php'; ?>

@@ -12,8 +12,27 @@ echo '</script>';
 if ($this->uri->segment(1) != 'form')
 {
     echo '<!-- Декстоп --><div id="ya-rtb"><div id="yandex_rtb_R-A-249178-2"></div>';
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') {
+    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') {
         echo '<!-- Мобайл --><div id="yandex_rtb_R-A-249178-1"></div>';?>
+        <!-- Google Code for  
+        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
+        Page -->
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 844462441;
+        var google_conversion_label = "NxPcCNq4sHUQ6fLVkgM";
+        var google_remarketing_only = false;
+        /* ]]> */
+        </script>
+        <script type="text/javascript"  
+        src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""  
+        src="//www.googleadservices.com/pagead/conversion/844462441/?label=NxPcCNq4sHUQ6fLVkgM&amp;guid=ON&amp;script=0"/>
+        </div>
+        </noscript>
         <script>
         var offers = <?php echo json_encode($data); ?>;
         var by_reg = null;
