@@ -56,7 +56,7 @@
 <h4 class="text-center">Место работы</h4>
 
 <div class="form-group">
-	<label class="label-required">Регион работы</label>
+	<label class="label-required">Регион</label>
 	<select class="form-control" name="work_region" autocomplete="off" required>
 		<option value="">-- Выберите регион --</option>
 		<?php
