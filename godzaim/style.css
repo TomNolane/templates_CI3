@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,800,500|Roboto:400,300,700&subset=latin,cyrillic-ext,cyrillic);
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,800,500|Roboto:400,300,700&subset=latin,cyrillic-ext,cyrillic); */
 
 html, body{
     height: 100%;
@@ -1367,6 +1367,6 @@ footer .copy{
   {
     background-color: #fff;
   }
-  input#i , input#o, input#f {
+  input#i , input#o, input#f, input#feedback-name {
     text-transform: capitalize !important;
-  } 
+  }

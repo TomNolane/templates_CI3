@@ -48,18 +48,18 @@
                     </select>
                 </div>
                 <div class="col-sm-3">
-                    <label class="col-sm-4 control-label label-required" for="passport_yyyy">Дата выдачи*</label>
-                    <select size="41" class="form-control ec" id="passport_yyyy" name="passport_yyyy" required>
-                        <option selected value="2000">&nbsp;</option>
+<<<<<<< HEAD
+                    <select class="form-control ec" id="passport_yyyy" name="passport_yyyy" required>
                         <option value="0">Год</option>
+                        <option selected value="2000"></option>
                         <?php
                         for($i=1980;$i<=date('Y');$i++)
                         echo '<option value="'.$i.'">'.$i.'</option>';
                         ?>
+>>>>>>> backup
                     </select>
                 </div>
             </div>
-            <div class="form-group has-feedback ">
                 <label class="control-label col-md-4" for="passportdate">Дата выдачи</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">

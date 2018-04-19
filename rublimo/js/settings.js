@@ -573,18 +573,23 @@ $(document).ready(function () {
 
     $('#next').click(function () {
         if (validate1()) {
-            send_form();
-            $('.spec_footer4').css('visibility', 'hidden');
-            $('.spec_footer5').css('visibility', 'hidden');
-            $('#step2').removeClass('off');
-            $('.form-steps-green-line').addClass('step2');
-            $('.form-steps-line').show();
-            $('#form-steps a[href="#form2"]').tab('show');
-            $('html, body').animate({
-                scrollTop: $('#form-steps').offset().top
-            }, 1000);
-            markTarget('form-step-1');
-            $('#htitle').text('Заполните паспортные данные');
+            // send_form();
+            // $('.spec_footer4').css('visibility', 'hidden');
+            // $('.spec_footer5').css('visibility', 'hidden');
+            // $('#step2').removeClass('off');
+            // $('.form-steps-green-line').addClass('step2');
+            // $('.form-steps-line').show();
+            // $('#form-steps a[href="#form2"]').tab('show');
+            // $('html, body').animate({
+            //     scrollTop: $('#form-steps').offset().top
+            // }, 1000);
+            // markTarget('form-step-1');
+            // $('#htitle').text('Заполните паспортные данные');
+            $('input[name="step"]').val('3');
+            $('#form-modal').show();
+            send_form(true, '/lk');
+            markTarget('form-step-3');
+            window.location = '/lk';
         }
         showBzzz = false;
         $('.reg_same').change();

@@ -72,17 +72,17 @@ if(isset($_SERVER['HTTP_REFERER'])){
 							<div class="row" role="tablist" id="form-steps">
 								<div class="col-xs-2 col-xs-offset-3 text-center" role="presentation">
 									<a href="#form1" aria-controls="form1" role="tab">
-										<span class="btn btn-circle" id="step1">1</span>
+										<span class="btn btn-circle" id="step1"></span>
 									</a>
 								</div>
 								<div class="col-xs-2 text-center" role="presentation">
 									<a href="#form2" aria-controls="form1" role="tab">
-										<span class="btn btn-circle off" id="step2">2</span>
+										<span class="btn btn-circle" id="step2">1</span>
 									</a>
 								</div>
 								<div class="col-xs-2 text-center" role="presentation">
 									<a href="#form3" aria-controls="form1" role="tab">
-										<span class="btn btn-circle off" id="step3">3</span>
+										<span class="btn btn-circle" id="step3"></span>
 									</a>
 								</div>
 							</div>

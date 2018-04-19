@@ -59,8 +59,7 @@ if ($this->uri->segment(1) != 'form')
                 }
             }
             return c;
-        }
-        //traffic("vkredito.ru", "4");
+        } 
         </script>
     <?php }
     echo '</div>';
@@ -129,16 +128,13 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 	require "templates/vkredito/js/jquery.form-validator.js"; 
     echo '</script>';
     echo '<!--[if lt IE 10]>
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->';
     echo '<script>'; 
 	require "templates/vkredito/js/jquery.suggestions.min.js"; 
     echo '</script>';
-    echo '<script>';
-    require 'templates/vkredito/js/jquery.pickmeup.twitter-bootstrap.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/vkredito/js/pickmeup.min.js';
+    echo '<script>'; 
+	require "modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js"; 
     echo '</script>';
     echo '<script>'; 
 	require "templates/vkredito/js/settings.js"; 
@@ -152,7 +148,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     }});
     </script>';
 if ($this->uri->segment(1) == '') { ?>
-    <script >
+    <script type="text/javascript">
         var amount = 15000;
         var day = 10;
         $('.amount').ionRangeSlider({
@@ -326,35 +322,7 @@ if ($this->uri->segment(1) == '') { ?>
     </script>
     <?php } 
     if ($this->uri->segment(1) == 'form') 
-    {
-    require 'templates/common/js.php'; 
-    if(isset($_GET['popup']) and $_GET['popup']==1 )
-    {
-    echo '<!-- Modal Popup-->
-        <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <img src="/templates/common/img/popup.jpg" alt="popup.jpg">
-                                <h2>'.$popup_text.'</h2>
-                                <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script type= " text/javascript">
-            $(window).load(function(){
-                $("#popup").modal("show");
-            });
-        </script>';
-    }
+    { 
     echo ' <script>$("#work").change(function(){
         if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
         { 
@@ -492,18 +460,7 @@ if ($this->uri->segment(1) == '') { ?>
             $("#work_office").val("");
         }
     }); 
-    </script>';
-    if(isset($_GET['email'])){
-        //данные пользователя
-        $this->load->model('user/user_model', 'user');
-        $user_data = $this->user->get_user($_GET['email']);
-        $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
-        $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
-        foreach ($user_data as $name => $item){
-            echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
-        }
-        echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
-    }
+    </script>'; 
 }
 ?> 
 <script>
@@ -547,7 +504,7 @@ if ($this->uri->segment(1) == '') { ?>
             }
         });
     }
-    
+    //traffic(window.location.hostname,window.location.pathname);
     function getcookie(name) {
         var cookie = " " + document.cookie;
         var search = " " + name + "=";
@@ -650,46 +607,16 @@ if ($this->uri->segment(1) == '') { ?>
     });
 
     function Loading(flag) {
-        if (typeof flag == 'undefined') { 
-            $('#feedback-send').prop('disabled', false); 
-            $('#feedback-send').html('Отправляется <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        } else if (!flag) {
-            $('#feedback-send').html('Отправлено');
+        if (typeof flag == 'undefined') {
             $('#feedback-send').prop('disabled', true);
+            $('#feedback-send').html('Отправка <i class="fa fa-spinner fa-spin fa-pulse"></i>');
+        } else if (!flag) {
+            $('#feedback-send').html('Отправить');
+            $('#feedback-send').prop('disabled', false);
         }
     }
     $('#feedback-send').click(function () {
-
-        var re_name2 = /^[а-яА-Яё,\W\.\s-]+$/i;
-        if($('#feedback-name').val().length < 2 || !re_name2.test($('#feedback-name').val()))
-        {
-            alert("Корректно заполните Ваше имя");
-            return;
-        }
-
-        var re_email2 = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
-        if($('#feedback-email').val().length < 6 || !re_email2.test($('#feedback-email').val()))
-        {
-            alert("Корректно заполните Ваш email");
-            return;
-        }
-
-        if($('#feedback-comment').val().length < 4)
-        {
-            alert("Корректно заполните Ваше обращение");
-            return;
-        }
-
         Loading();
-
-        if(!re_email.test($('#feedback-email').val()))
-        {
-            Loading(0);
-            alert('Пожалуйста, заполните поле "ваш емаил" корректно.');
-            $('#feedback-send').prop('disabled', false);
-            $('#feedback-send').html('Отправить');
-            return;
-        } 
         
         var data;
         if(window.location.pathname == '/form')
@@ -800,7 +727,7 @@ if ($this->uri->segment(1) == '') { ?>
     });
 </script>
 <!-- Yandex.Metrika counter -->
-<script >
+<script type="text/javascript">
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function () {
             try {
@@ -849,17 +776,17 @@ if ($this->uri->segment(1) == '') { ?>
         });
     }
 </script> 
-<script >
+<script type="text/javascript">
     (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
         '//vk.com/rtrg?r=RRRhvxA7nvURG7xAUtL1b2tM0X6dhz4tDAGsjmC3XYdu0hMp4G5M1qB0DwX9x5CjKiwuRfUUCPeTFJgPM96VEJMDEF2kd2TqnCHkwMhTMLKMsje7SOydhyYmYfpnJZCNZHLFjJlRoiPU4bCFDyrAjhJufuYNkPM30caOVnC7B/8-&pixel_id=1000099082';
 </script>
 <!--Константин Гутлид-->
-<script >
+<script type="text/javascript">
     (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
         '//vk.com/rtrg?r=Z7pk5C4xjqokU5G*QALWNq2pkJhzPOom99yo3Qxf9oIeFlECprDRQgjZP9SEA86kYiMHFgew1rs3AF6e*l8tUryFp/Fl495P7rPnkWnSEnGPEQiabdvpee/7*npmHm33ovO1TSw3ulRHBDU7ITWvhsLgKc4jAIpbdw4C7HeMV/s-&pixel_id=1000099730';
 </script>
 <?php require 'google-analytics.php';?>
-<script >
+<script type="text/javascript">
     var isMobile = false; //initiate as false
     // device detection
     if (
@@ -905,17 +832,17 @@ if ($this->uri->segment(1) == '') { ?>
     }
 </script> 
 <!-- Код тега ремаркетинга Google -->
-<!-- 
+<!-- ------------------------------------------------
 С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
- -->
-<script >
+------------------------------------------------- -->
+<script type="text/javascript">
     /* <![CDATA[ */
     var google_conversion_id = 844462441;
     var google_custom_params = window.google_tag_params;
     var google_remarketing_only = true;
     /* ]]> */
 </script>
-<script  src="//www.googleadservices.com/pagead/conversion.js">
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
     <div style="display:inline;">

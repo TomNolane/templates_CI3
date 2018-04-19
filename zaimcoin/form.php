@@ -67,7 +67,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
     <div class="row">
         <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
             <?php $period; ?>
-            <form id="anketa" action="/lk" method="post" onsubmit="return validate();" autocomplete="off">
+            <form id="anketa" action="/lk" method="post" novalidate autocomplete="off">
                 <input type="hidden" name="display" id="display" value="0">
                 <input type="hidden" name="referer" value="<?=$referer?>">
                 <input type="hidden" name="id" value="">

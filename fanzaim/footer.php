@@ -48,7 +48,16 @@ if($this->uri->segment(1) != 'form')
     t.parentNode.insertBefore(s, t);
     })(this, this.document, "yandexContextAsyncCallbacks");
     </script>';
-    echo '';
+    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Fanzaim -->
+    <ins class="adsbygoogle text-center"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="9262887402"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
 }
 ?> 
 
@@ -56,7 +65,7 @@ if($this->uri->segment(1) != 'form')
         <div class="container text-center">
             <div class="ex-wrapper"><a href="/"><img src="/templates/fanzaim/assets/img/icons/Fanzaim-logo-footer.png"  alt="Image"></a></div>
             <p class="spec_footer7">
-                Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <a href="mailto:support@fanzaim.ru" target="_blank">support@fanzaim.ru</a> <span class="hidden-xs hidden-sm">|  +7 (495) 006 19 61</span>
+                Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <a href="mailto:support@fanzaim" target="_blank">support@fanzaim</a> <span class="hidden-xs hidden-sm">|  +7 (495) 006 19 61</span>
                 <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
                 Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.
                 Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span>

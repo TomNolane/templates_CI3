@@ -18,12 +18,12 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback row">
+            <div class="form-group has-feedback row hidden">
                 <label class="col-md-3  d-flex align-items-center justify-content-md-end" for="f">Фамилия</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
-                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
+                            data-sanitize="capitalize" value="Иванова" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
                             required>
                             <p class="text-muted helpblock">Пример: Иванова</p>
                     </div>
@@ -40,12 +40,12 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback row">
+            <div class="form-group has-feedback row hidden">
                 <label class="col-md-3 d-flex align-items-center justify-content-md-end" for="o">Отчество</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
-                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
+                            data-sanitize="capitalize" value="Ивановна" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
                             required>
                             <p class="text-muted helpblock">Пример: Ивановна</p>
                     </div>
@@ -100,12 +100,12 @@
                 </div>
             </div>
             <!-- Скрываем старую форму даты рождения -->
-            <div class="form-group has-feedback row">
+            <div class="form-group has-feedback row hidden">
                 <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="birthdate">Дата рождения</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
-                            data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
+                            data-validation="custom" value="06/02/2000" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
                             required>
                             <p class="text-muted helpblock">Пример: 06/02/2000</p>
                     </div>
@@ -132,7 +132,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback row">
+            <div class="form-group has-feedback row hidden"> 
                 <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="delays_type">Кредитная история</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper ex-arrow">
@@ -164,7 +164,7 @@
                 <div class="col-md-9 offset-md-3">
                     <div class="row justify-content-center">
                         <div class="col-md-10">
-                            <button type="button" id="submitOne" class="nav nav-tabs ex-orange-btn text-center"> Далее </button>
+                            <button type="button" id="submitOne" class="nav nav-tabs ex-orange-btn text-center"> Получить деньги </button>
                         </div>
                     </div>
                 </div>

@@ -394,9 +394,9 @@ $(document).ready(function () {
         modules: 'date,sanitize'
     });
     $('input').click(function () {
-        if ($(this).attr("type") == "checkbox" || $(this).attr("id") == "feedback-email" || $(this).attr("id") == "feedback-phone" || $(this).attr("id") == "feedback-name" || $(this).attr("id") == "feedback-email2" || $(this).attr("id") == "feedback-phone2" || $(this).attr("id") == "feedback-name2") {
+        if ($(this).attr("type") == "checkbox") {
             return;
-    }
+        }
         $('html, body').animate({
             scrollTop: $(this).offset().top - 100
         }, 1000);
@@ -588,17 +588,21 @@ $(document).ready(function () {
     });  
     $('#next1').click(function () { 
         if (validate1()) { 
-            $('input[name="step"]').val('1');
-            send_form();
-            $('.spec_footer4').css('visibility','hidden'); 
-            $('.ex-indicator-scope').addClass('ex-on-second-step');
-            $('#firstTabContent').removeClass('in active');
-            $('#secondTabContent').addClass('in active');
-            traffic("bzaim5.ru",2);
-            $('html, body').animate({
-                scrollTop: $('#to_scroll').offset().top
-            }, 1000);
-            markTarget('form-step-1');
+            // $('input[name="step"]').val('1');
+            // send_form();
+            // $('.spec_footer4').css('visibility','hidden'); 
+            // $('.ex-indicator-scope').addClass('ex-on-second-step');
+            // $('#firstTabContent').removeClass('in active');
+            // $('#secondTabContent').addClass('in active');
+            // traffic("bzaim5.ru",2);
+            // $('html, body').animate({
+            //     scrollTop: $('#to_scroll').offset().top
+            // }, 1000);
+            // markTarget('form-step-1');
+            $('input[name="step"]').val('3');
+            send_form(true, '/lk');
+            markTarget('form-step-3');
+            window.location = '/lk';
         }
         showBzzz = false;
         $('.reg_same').change();

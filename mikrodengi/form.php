@@ -78,8 +78,8 @@ if(isset($_SERVER['HTTP_REFERER'])){
             <div class="tab-content">
                 <ul class="ex-tab-steps">
                     <li class="ex-step-counter ex-step-active">Заполните личные данные</li>
-                    <li class="ex-step-counter ex-step-2">Заполните паспортные данные</li>
-                    <li class="ex-step-counter ex-step-3">Заполните данные о работе</li>
+                    <li class="ex-step-counter ex-step-2" style="visibility:  hidden;">Заполните паспортные данные</li>
+                    <li class="ex-step-counter ex-step-3" style="visibility:  hidden;">Заполните данные о работе</li>
                 </ul>
                 <div id="firstStep" class="tab-pane fade in active">
                     <?php require 'form1.php'; ?>

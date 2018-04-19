@@ -58,10 +58,7 @@
     require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
     echo '</script>';
     echo '<script>';
-    require 'templates/creditmir/assets/js/jquery.pickmeup.twitter-bootstrap.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/creditmir/assets/js/pickmeup.min.js';
+    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
     echo '</script>';
     echo '<script>';
     require 'templates/creditmir/assets/js/jquery.form-validator.js';
@@ -80,25 +77,15 @@
     echo '</script>'; 
     echo '<script>';
     require 'templates/creditmir/assets/js/owl.carousel.min.js';
-    echo '</script>'; 
-    if((isset($_GET['is_credit']) || isset($_POST['is_credit'])) && $this->uri->segment(1) == 'form') {
-        echo '<script>';
-        if(isset($_GET['is_credit']) && $_GET['is_credit'] == "1") require 'templates/creditmir/assets/js/settings_form2.js';
-        elseif(isset($_POST['is_credit']) && $_POST['is_credit'] == "1") require 'templates/creditmir/assets/js/settings_form2.js';
-        else require 'templates/creditmir/assets/js/settings_form.js';
-        echo '</script>';
-    }
-    else
-    {
-        echo '<script>';
-        require 'templates/creditmir/assets/js/settings_form.js';
-        echo '</script>';
-    } 
+    echo '</script>';
+    echo '<script>';
+    require 'templates/creditmir/assets/js/settings_form.js';
+    echo '</script>';
     require 'templates/common/detect.min.php';
     ?>
 
     <!--[if lt IE 10]>
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
 
     <?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form' || $this->uri->segment(1) == 'money' || $this->uri->segment(1) == 'zaim-bank' || $this->uri->segment(1) == 'zaim-yandex' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-contact') 
@@ -417,7 +404,7 @@ $(document).ready(function () {
         }
     }, 50);
 });</script>
-<?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+<?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
 {   
     echo '<script> 
     var offers = '.json_encode($data).'
@@ -643,28 +630,30 @@ if ($this->uri->segment(1) == 'form')
         echo '    
     <!-- Modal Popup-->
     <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
-                </div>
-                <div class="modal-body text-center">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="templates/common/img/popup.jpg" alt="popup.jpg">
-                            <h2>'.$popup_text.'</h2>
-                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                                <div class="modal-header text-center">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                                   
+                                </div>
+                                <div class="modal-body text-center">
+                                        <div class="row">
+                                                <div class="col-md-12">
+                                                    <img src="templates/common/img/popup.jpg" alt="popup.jpg">
+                                                    <h2>'.$popup_text.'</h2>
+                                                    <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>    
+                                                </div>
+                                        </div>
+                                </div>
                         </div>
-                    </div>
                 </div>
-            </div>
-        </div>
     </div>
-    <script type= " text/javascript">
-        $(window).load(function(){
-            $("#popup").modal("show");
-        });
-    </script>';
+
+            <script type= " text/javascript">
+                $(window).load(function(){
+                    $("#popup").modal("show");
+                });
+               
+            </script>';
     }
 }
 
@@ -717,7 +706,7 @@ function traffic(site, page)
             }
     });
 }
- 
+//traffic(window.location.hostname,window.location.pathname);
 </script>
 </body>
 </html>

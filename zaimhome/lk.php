@@ -63,7 +63,8 @@ $pixel = $this->pixel->stat('zaimhome.ru');
             </div>
             <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" style="text-decoration: none; color: white;" target="_blank"><button class="ex-main-btn">получить деньги</button></a>
         </div></a>
-';$ii++;}
+';$ii++;
+}
 ?>
     </div>
 </div>
@@ -73,7 +74,7 @@ $pixel = $this->pixel->stat('zaimhome.ru');
 </div> -->
 
  
-<?php require 'footer.php';?> 
+<?php require 'footer.php';?>
 <!-- Google Code for  
 &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
 Page -->

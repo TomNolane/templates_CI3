@@ -41,7 +41,7 @@ function plural_type($n) {
                     {
                         $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
                         $item['link'] = str_replace("#site", $domen, $item['link']); 
-                        echo '<div class="col-md-3" style="margin-bottom: 30px;">
+                        echo '<div class="col-md-3">
                         <div class="ex-off-block ex-on-small-device ex-offers-active">
                         <p class="text-left">
                             <span class="fa fa-star fa-gradient"></span>

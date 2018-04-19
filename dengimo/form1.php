@@ -26,12 +26,12 @@
 		</div>
 	</div>
 </div>
-<div class="form-group has-feedback">
+<div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="f">Фамилия</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow">
 			<input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
-			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
+			    data-sanitize="capitalize" data-validation="custom" value="Иванова" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
 			    autofocus required>
 			<span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2">Нужно указать фамилию</p>
@@ -52,12 +52,12 @@
 		</div>
 	</div>
 </div>
-<div class="form-group has-feedback">
+<div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="o">Отчество</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow">
 			<input type="text" class="form-control ec tip" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
-			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
+			    data-sanitize="capitalize" data-validation="custom" value="Ивановна" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
 			    required>
 			<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2">Нужно указать отчество</p> 
@@ -114,12 +114,12 @@
 	</div>
 </div>
 <!-- Скрываем старую форму даты рождения -->
-<div class="form-group has-feedback">
+<div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="birthdate">Дата рождения</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow dadata">
 			<input type="tel" class="form-control ec tip" name="birthdate" id="birthdate" placeholder="День рождения" title="Выберете свою дату рождения"
-			    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
+			    data-validation="custom" value="06/02/2000" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
 			    required>
 			<span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2"></p>
@@ -151,10 +151,9 @@
 			<p class="text-muted helpblock">Пример: email@mail.ru</p>
 		</div>
 	</div>
-</div>
-<div class="clearfix">&nbsp;</div>
+</div> 
 
-<div class="form-group">
+<div class="form-group hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="delays_type">Кредитная история</label>
 	<div class="col-sm-8 col-xs-12">
 		<select size="1" class="form-control ec" name="delays_type" id="delays_type">

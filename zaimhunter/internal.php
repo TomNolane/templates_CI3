@@ -1,11 +1,4 @@
-<?php
-if ($this->uri->segment(1) == 'robots.txt') 
-{
-	header("Content-type: text/plain");
-	require 'internal-robots.txt.php';
-} 
-else
-{
+<?php 
 $my_title = ''; $description = '';
 switch($this->uri->segment(1))
 {
@@ -92,7 +85,10 @@ switch($this->uri->segment(1))
 	default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'Zaimhunter - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
 }
 
-require 'header.php';
+require 'header.php';  
+?> 
+
+<?php
 
 	if ($this->uri->segment(1) == 'about') 
 	{ 
@@ -153,8 +149,6 @@ require 'header.php';
 	elseif ($this->uri->segment(1) == 'money')
 	{ 
 		require 'internal-money.php'; 
-	}
-	elseif($this->uri->segment(1) == '404') require 'internal-404.php';
-
-require 'footer.php'; }
+	} 
 ?>
+<?php require 'footer.php'; ?>

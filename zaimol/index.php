@@ -357,7 +357,7 @@
 								<i></i>
 							</div>
 							<!-- <a onclick="index_spec21"><button class="ex-main-btn">Получить деньги</button></a> -->
-							<a href="/form/?amount=5000"><button class="ex-main-btn">Получить деньги</button></a>
+							<a href="/form/?amount=5000"><button type="button" class="ex-main-btn">Получить деньги</button></a>
 						</div>
 						<div class="ex-draft">
 							<div class="ex-wrapper">
@@ -404,7 +404,7 @@
 								<i></i>
 							</div>
 							<!-- <a onclick="index_spec22"><button class="ex-main-btn">Получить деньги</button></a> -->
-							<a href="/form?amount=30000"><button class="ex-main-btn">Получить деньги</button></a>
+							<a href="/form?amount=30000"><button type="button" class="ex-main-btn">Получить деньги</button></a>
 						</div>
 						<div class="ex-draft">
 							<div class="ex-wrapper">

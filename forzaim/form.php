@@ -68,30 +68,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
             <i class="ex-hamburger"></i>
             <a class="ex-brand" href="/">Forzaim</a>
         </div>
-    </nav>
-    <div class="container-fluid ex-step-counter hidden-xs">
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-                <ul class="ex-step-indicator">
-                    <li>
-                        <span>1
-                            <br>Шаг </span>
-                    </li>
-                    <li>
-                        <span>2
-                            <br>Шаг </span>
-                    </li>
-                    <li>
-                        <span>3
-                            <br>Шаг </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    </nav> 
     <main class="container ex-form">
         <?php $period; ?>
-        <form id="anketa" action="/lk" method="post" class="form-horizontal" onsubmit="return validate();" autocomplete="off">
+        <form id="anketa" action="/lk" method="post" class="form-horizontal" autocomplete="off" novalidate>
             <input type="hidden" name="display" id="display" value="0">
             <input type="hidden" name="referer" value="<?=$referer?>">
             <input type="hidden" name="id" value="">

@@ -8,7 +8,6 @@
 <!--link href="/modules/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen" /-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <!--link href="css/bootstrap-responsive.css" rel="stylesheet"-->
-
 <link href="/modules/fancybox/jquery.fancybox.css" rel="stylesheet" media="screen" />
 
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />

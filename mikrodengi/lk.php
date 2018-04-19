@@ -67,7 +67,7 @@ function plural_type($n) {
                                             </tr>
                                             <tr>
                                                 <td>Основная ставка</td>
-                                                <td>'.$item['percent'].'%</td>
+                                                <td> '.$item['percent'].'%</td>
                                             </tr>
                                             </tbody>
                                         </table>

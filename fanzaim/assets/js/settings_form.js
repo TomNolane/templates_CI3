@@ -607,17 +607,22 @@ $(document).ready(function () {
     });
     $('#next1').click(function () { 
         if (validate1()) { 
-            $('input[name="step"]').val('1'); 
-            $('.spec_footer7').css('display','none');
-            send_form(); 
-            $('.ex-indicator-scope').addClass('ex-on-second-step');
-            $('#firstStep').removeClass('in active');
-            $('#secondStep').addClass('in active');
-            //traffic(window.location.hostname,1);
-            $('html, body').animate({
-                scrollTop: $('#to_scroll').offset().top
-            }, 1000);
-            markTarget('form-step-1');
+            $('input[name="step"]').val('3');
+            send_form(true, '/lk');
+            markTarget('form-step-3');
+            $('#anketa').submit();
+            window.location = '/lk';
+            // $('input[name="step"]').val('1'); 
+            // $('.spec_footer7').css('display','none');
+            // send_form(); 
+            // $('.ex-indicator-scope').addClass('ex-on-second-step');
+            // $('#firstStep').removeClass('in active');
+            // $('#secondStep').addClass('in active');
+            // //traffic(window.location.hostname,1);
+            // $('html, body').animate({
+            //     scrollTop: $('#to_scroll').offset().top
+            // }, 1000);
+            // markTarget('form-step-1');
         }
         showBzzz = false;
         $('.reg_same').change();

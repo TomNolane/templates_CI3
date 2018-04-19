@@ -65,10 +65,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
 ?>
 <div class="ex-form">
 <div class="container" id="to_scroll">
-    <h2 class="text-center">До одобрения займа вас отделяют всего 3 шага</h2>
+    <h2 class="text-center">До одобрения займа вас отделяют всего 1 шаг</h2>
     <div class="ex-bg-form">
             <?php $period; ?>
-            <form id="anketa" action="/lk" method="post" class="form-horizontal" onsubmit="return validate();" autocomplete="off">
+            <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off">
                 <input type="hidden" name="display" id="display" value="0">
                 <input type="hidden" name="referer" value="<?=$referer?>">
                 <input type="hidden" name="id" value="">
