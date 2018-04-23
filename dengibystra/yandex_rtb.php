@@ -37,3 +37,18 @@
         t.parentNode.insertBefore(s, t);
     })(this, this.document, "yandexContextAsyncCallbacks");
 </script>
+<script>
+function markTarget(target,param, id){
+    if (typeof yaCounter35589670 == 'undefined') return;
+	if (typeof param == 'undefined') yaCounter35589670.reachGoal(target);
+	else yaCounter35589670.reachGoal(target,param);
+        
+        $.ajax({
+            type: 'POST',
+            url: '/pixel/',
+            data: 'id='+id+'&pixel='+param,
+            success: function(data){
+            }
+        });
+} 
+</script>

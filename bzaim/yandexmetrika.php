@@ -46,15 +46,5 @@ function markTarget(target,param, id){
             success: function(data){
             }
         });
-}
-function traffic(site, page){
-    $.ajax({
-        type: 'POST',
-        url: '/traffic/',
-        data: 'site='+site+'&page='+page,
-            success: function(data){
-            }
-    });
-}
- 
+} 
 </script>

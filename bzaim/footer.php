@@ -1,31 +1,27 @@
 <?php $from = '15'; 
 if($this->uri->segment(1) != 'form')
 {
-    echo '<!-- Декстоп --><div class="text-center" id="ya-rtb"><div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-243981-3"></div>';
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
-    echo '<!-- мобайл --><div class="visible-xs visible-sm hidden-md hidden-lg" id="yandex_rtb_R-A-243981-1"></div>';
-    } 
+    echo '<div class="text-center" id="ya-rtb">
+            <!-- Декстоп --><div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-243981-3"></div>';
+    echo    '<!-- мобайл --><div class="visible-xs visible-sm hidden-md hidden-lg" id="yandex_rtb_R-A-243981-1"></div>';
     echo '</div>';
-	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Бзайм5 -->
-    <ins class="adsbygoogle text-center"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="6411748383"
-    data-ad-format="auto"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>';
+	// echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    // <!-- Бзайм5 -->
+    // <ins class="adsbygoogle text-center"
+    // style="display:block"
+    // data-ad-client="ca-pub-4970738258373085"
+    // data-ad-slot="6411748383"
+    // data-ad-format="auto"></ins>
+    // <script>
+    // (adsbygoogle = window.adsbygoogle || []).push({});
+    // </script>';
 }
-?>
 
-<?php
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles' || $this->uri->segment(1) == 'faq')
 {
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-?>
-<?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2') {
+if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') {
 echo '<footer class="ex-start-footer">
     <div class="container">
         <div class="row">
@@ -87,9 +83,8 @@ echo '<footer class="ex-start-footer">
     </div>
 </footer>';
 }
-else if($this->uri->segment(1) == 'lk' ||  $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {
-    include "googleadservices.php"; 
     echo '<footer class="ex-footer">
         <div class="container">
             <div class="row">
@@ -103,78 +98,45 @@ else if($this->uri->segment(1) == 'lk' ||  $this->uri->segment(1) == 'lk2' || $t
             </div>
         </div>
     </footer>';
-} 
-
-    require 'templates/common/get_display_size.php';
-    echo '<script>';
-    require 'modules/jquery/jquery-1.11.3.min.js';
-    echo '</script>'; 
-    echo '<script>';
-    require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
-    echo '</script>'; 
-    echo '<script>';
-    require 'templates/bzaim/assets/js/jquery.form-validator.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/bzaim/assets/js/jquery.suggestions.min.js';
-    echo '</script>'; 
-    echo '<script>';
-    require 'templates/bzaim/assets/js/coockie.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/bzaim/assets/js/modal.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/bzaim/assets/js/custom.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/bzaim/assets/js/settings_main.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/bzaim/assets/js/settings_form.js';
-    echo '</script>';
-    echo '<!-- backtotop -->
-    <script>
-    jQuery(document).ready(function (o) {
-        var l = 300,
-            s = 1200,
-            c = 700,
-            d = o(".cd-top");
-        o(window).scroll(function () {
-            o(this).scrollTop() > l ? d.addClass("cd-is-visible") : d.removeClass(
-                "cd-is-visible cd-fade-out"), o(this).scrollTop() > s && d.addClass("cd-fade-out")
-        }), d.on("click", function (l) {
-            l.preventDefault(), o("body,html").animate({
-                scrollTop: 0
-            }, c)
-        })
-    });</script>'; 
-    echo '<script>';
-    require 'templates/bzaim/assets/js/get_parameter.js';
-    echo '</script>';
-    require 'templates/common/detect.min.php';
-?> 
+}
+else if($this->uri->segment(1) == 'form' )
+{
+    echo '<footer class="ex-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="text-center">
+                        <a href="/"><img src="/templates/bzaim/assets/img/logo-2.png" alt="logo-2.png"></a>
+                        <p class="spec_footer4">Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
+                            <a href="mailto:support@bzaim5.ru" target="_blank">support@bzaim5.ru</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>';
+}
+?>
 <!-- [if lt IE 10]>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif] --> 
-<?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') { ?>
-        <script>
+
+<!-- common JS -->
+<?php
+    echo '<script>'; 
+    echo 'try{';
+    require 'footer_common_js.php';
+    echo '/* private JS */';
+    require 'templates/bzaim/assets/js/main.js'; 
+
+if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
+ 
         $("#rangeSlider").ionRangeSlider({
         hide_min_max: false, 
         keyboard: true, 
         from: <?php 
-        if(isset($_GET['amount'])) 
+        if(!empty($this->input->get('amount', TRUE))) 
         {  
-            switch($_GET['amount'])
+            switch($this->input->get('amount', TRUE))
             {
                 case '1000': $from = '0' ; break;
                 case '2000': $from = '1' ; break;
@@ -198,14 +160,34 @@ else if($this->uri->segment(1) == 'lk' ||  $this->uri->segment(1) == 'lk2' || $t
                 case '50000': $from = '19' ; break;
                 case '80000': $from = '20' ; break;
                 case '100000': $from = '21' ; break;
+                case '110000': $from = '22' ; break;
+                case '120000': $from = '23' ; break;
+                case '130000': $from = '24' ; break;
+                case '140000': $from = '25' ; break;
+                case '150000': $from = '26' ; break;
+                case '160000': $from = '27' ; break; 
+                case '170000': $from = '28' ; break;
+                case '180000': $from = '29' ; break;
+                case '190000': $from = '30' ; break;
+                case '200000': $from = '31' ; break;
+                case '250000': $from = '32' ; break;
+                case '300000': $from = '33' ; break;
+                case '400000': $from = '34' ; break;
+                case '500000': $from = '35' ; break;
+                case '600000': $from = '36' ; break;
+                case '700000': $from = '37' ; break;
+                case '800000': $from = '38' ; break;
+                case '900000': $from = '39' ; break;
+                case '1000000': $from = '40' ; break;
             }
             echo $from; 
         }
-        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
+        elseif(empty($this->input->post('form_slrd', TRUE))) echo '15'; else echo $this->input->post('form_slrd', TRUE); 
         ?>,
-        values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
+        values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000, 110000, 120000, 130000, 140000, 150000, 160000, 170000, 180000, 190000, 200000, 250000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000],
         onChange: function (range3) {
-                if (range3.from_value <= 10000) {
+
+                 if (range3.from_value <= 10000) {
                     $("#period").val("7");
                     $("#period2").val("От 61 до 130 дней");
                     $('#percent').val('95');
@@ -225,20 +207,29 @@ else if($this->uri->segment(1) == 'lk' ||  $this->uri->segment(1) == 'lk2' || $t
                     $("#period").val("30");
                     $("#period2").val("От 130 до 250 дней");
                     $('#percent').val('77');
-                } else {
+                } else  if (range3.from_value <= 200000 && range3.from_value > 50000) {
                     $("#period").val("30");
                     $("#period2").val("От 250 до 365 дней");
                     $('#percent').val('65');
+                } else  if (range3.from_value <= 500000 && range3.from_value > 200000) {
+                    $("#period").val("30");
+                    $("#period2").val("От 1 до 3 лет");
+                    $('#percent').val('58');
+                } else {
+                    $("#period").val("30");
+                    $("#period2").val("От 1 до 5 лет");
+                    $('#percent').val('52');
                 }
 
                 $("#amount").val(range3.from_value);
+                $("#form_slrd").val(range3.from);
                 $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
             },
             onFinish: function (range3) {
                 $('.irs-single').text('').append("<span>&nbsp;&nbsp;"+ range3.from_value+"&nbsp;&nbsp;рублей&nbsp;&nbsp;</span>");
             }
-        });
-<?php require 'templates/bzaim/assets/js/loanCalculator.js';?>
+        }); 
+        <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {?>
         var slider = $('#rangeSlider').data('ionRangeSlider');
         var slider_plus = true;
         var n = 10;
@@ -286,109 +277,51 @@ else if($this->uri->segment(1) == 'lk' ||  $this->uri->segment(1) == 'lk2' || $t
                 $('#percent').val('65');
             }
             $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
-        }, 50);
-        function traffic(site, page){
-        $.ajax({
-            type: 'POST',
-            url: '/traffic/',
-            data: 'site='+site+'&page='+page,
-                success: function(data){
-                }
-        });
-    }
+            $("#form_slrd").val(slider.result.from);
+        }, 50); 
         traffic("bzaim5.ru",0);
-        </script>
-<?php
-} 
-elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
+<?php }
+}
+elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {
-echo '<script>
-var offers = '.json_encode($data).'
- var by_reg = null;
-$(document).ready(function () {
-    $(".offer-type").change(function () {
-        update_offers();
-    });
-    function update_offers() {
-        var str = ".results tbody tr";
-        //var curr = clone(by_reg.length? by_reg : offers);
-        var ot_card = $(".offer-type[data-id=\'card\']").prop("checked");
-        var ot_qiwi = $(".offer-type[data-id=\'qiwi\']").prop("checked");
-        var ot_yandex = $(".offer-type[data-id=\'yandex\']").prop("checked");
-        var ot_contact = $(".offer-type[data-id=\'contact\']").prop("checked");
-        // Прячем всё
-        $(str).hide();
-        // Пробегаемся по списку офферов
-        ((by_reg !== null) ? by_reg : offers).forEach(function (offer, i) {
-            var $tr = $(str + "[data-id=\'" + offer.id + "\']");
-            if ($tr.data("amount") >= amount) {
-                if (ot_card && !!$tr.data(\'card\') == ot_card) $tr.show();
-                else if (ot_qiwi && !!$tr.data(\'qiwi\') == ot_qiwi) $tr.show();
-                else if (ot_yandex && !!$tr.data(\'yandex\') == ot_yandex) $tr.show();
-                else if (ot_contact && !!$tr.data(\'contact\') == ot_contact) $tr.show();
-            }
-        });
-    }
-    if (getcookie("i")) {
-        var i = getcookie("i");
-        $("#i").text(i);
-    }
-});
-function clone(o) {
-    if (!o || "object" !== typeof o) return o;
+    include "templates/common/new2/js/lk.js";      
+    echo 'traffic("bzaim5.ru",4);'; 
 
-    var c = "function" === typeof o.pop ? [] : {};
-    var p, v;
-    for (p in o) {
-        if (o.hasOwnProperty(p)) {
-            v = o[p];
-            if (v && "object" === typeof v) {
-                c[p] = clone(v);
-            } else {
-                c[p] = v;
-            }
-        }
-    }
-    return c;
-}
-function traffic(site, page){
-    $.ajax({
-        type: \'POST\',
-        url: \'/traffic/\',
-        data: \'site=\'+site+\'&page=\'+page,
-            success: function(data){
-            }
-    });
-}
-traffic("bzaim5.ru",4);
-</script>';
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo '<script>
-    function traffic(site, page){
-        $.ajax({
-            type: \'POST\',
-            url: \'/traffic/\',
-            data: \'site=\'+site+\'&page=\'+page,
-                success: function(data){
-                }
-        });
-    }
-    traffic("bzaim5.ru",9);
-    </script>';
+    echo 'traffic("bzaim5.ru",9);'; 
 }
-include "googleadservices_all.php"; 
-include "yandexmetrika.php"; 
-include "yandex_rtb.php";
-echo '<!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104386531-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag(\'js\', new Date());
-        gtag(\'config\', \'UA-104386531-1\');
-        </script>';
+else if($this->uri->segment(1) == 'form')
+{ } 
+echo "}catch(e){console.log('Ошибка ' + e.name + \":\" + e.message + \"\\n\" + e.stack);}";?>
+</script>
+<?php
+    include "google.php";
+    include "yandexmetrika.php"; 
+    include "yandex_rtb.php";
+    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+    {     
+        echo '<!-- Google Code for  
+        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103;  
+        (&#1073;&#1077;&#1079; &#1076;&#1086;&#1080;) Conversion Page -->
+        <script >
+        /* <![CDATA[ */
+        var google_conversion_id = 832752781;
+        var google_conversion_label = "9no7CIzpqHgQjZmLjQM";
+        var google_remarketing_only = false;
+        /* ]]> */
+        </script>
+        <script   
+        src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""  
+        src="//www.googleadservices.com/pagead/conversion/832752781/?label=9no7CIzpqHgQjZmLjQM&amp;guid=ON&amp;script=0"/>
+        </div>
+        </noscript>'; 
+    }
 ?>
 </body>
 </html>

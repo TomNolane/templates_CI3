@@ -34,7 +34,6 @@
                 <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>"> 
                 <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?> 
                     <input type="hidden" class="amount" id="amount" name="amount" value="20000" />
-                    <input type="hidden" class="sldr" id="sldr" name="sldr" value="15" />
                     <input type="hidden" class="percent" id="percent" name="percent" value="95" />
                     <div class="col-sm-7">
                         <div id="ex-main-slider-range">

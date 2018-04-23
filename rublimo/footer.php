@@ -11,16 +11,19 @@ if($this->uri->segment(1) != 'form')
         echo '<!-- Мобайл --><div id="yandex_rtb_R-A-244327-1"></div>';
     }
     echo '</div>';
-    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Рублимо -->
-    <ins class="adsbygoogle text-center"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="5040571366"
-    data-ad-format="auto"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>';
+    if($this->uri->segment(1) != 'lk3')
+    {
+        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Рублимо -->
+        <ins class="adsbygoogle text-center"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="5040571366"
+        data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
+    } 
 }
 ?> 
     <footer>

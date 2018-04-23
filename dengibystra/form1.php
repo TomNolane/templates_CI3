@@ -141,7 +141,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12"> 
                     <div class="form-group has-feedback">
                         <label class="label-required" for="email">Электронная почта</label>
                         <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Укажите свой email адрес"
@@ -174,7 +174,7 @@
         <div class="col-sm-8 col-sm-offset-2">
             <div class="col-sm-8 col-xs-12 ex-agreement-check">
                 <label class="checkbox-inline">
-                    <span>Вы должны дать согласие на <a href="https://dengibystra.ru/agreement" target="_blank">обработку персональных данных</a> и согласиться с <a href="https://dengibystra.ru/oferta" target="_blank">публичной офертой</a></span>
+                    <span>Я согласен на обработку персональных данных и с публичной офертой</span>
                     <input type="checkbox" value="" id="agree" onclick="checkMee();" checked>
                     <i></i>
                 </label>

@@ -73,7 +73,7 @@
                             <p>Воспользуйтесь обратной связью на нашем сервисе</p>
                         </div>
                         <div class="col-sm-4">
-                            <a data-toggle="modal" data-target="#helpModal" style="text-decoration: none; color: #000000;"><button class="ex-main-btn">Задать вопрос</button></a>
+                            <a href="#" data-toggle="modal" class="btn ex-main-btn" data-target="#feedbackModal">Задать вопрос</a>
                         </div>
                     </div>
                 </div>

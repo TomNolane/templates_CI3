@@ -10,7 +10,7 @@ function markTarget(target,param, id){
             type: 'POST',
             url: '/pixel/',
             data: 'id='+id+'&pixel='+param,
-            success: function(data){
+				success: function(data){
             }
         });
 }
@@ -19,9 +19,8 @@ function traffic(site, page){
         type: 'POST',
         url: '/traffic/',
         data: 'site='+site+'&page='+page,
-            success: function(data){
-            }
+			success: function(data){
+		}
     });
-} 
-
+}
 </script>
