@@ -32,7 +32,7 @@ $pixel = $this->pixel->stat('dengoman.ru');
   <div class="row">
   <div class="col-md-4 text-center">
 	<div class="contacts-item"> 
-	  <div class="contacts-head"><img src="/templates/dengoman/img/offers/zaymer1.png"></div>
+	  <div class="contacts-head"><img src="/templates/dengoman/assets/img/offers/zaymer1.png"></div>
 	  <div class="contacts-body">
 		<span>ЗАЙМЕР</span><br>
     ООО «Займер»<br>
@@ -45,7 +45,7 @@ $pixel = $this->pixel->stat('dengoman.ru');
   </div>
   <div class="col-md-4 text-center">
 	<div class="contacts-item">
-	  <div class="contacts-head"><img src="/templates/dengoman/img/offers/turbozaim.png"></div>
+	  <div class="contacts-head"><img src="/templates/dengoman/assets/img/offers/turbozaim.png"></div>
 	  <div class="contacts-body">
 		<span>ТУРБОЗАЙМ</span><br>
     ООО «Турбозайм»<br>
@@ -57,7 +57,7 @@ $pixel = $this->pixel->stat('dengoman.ru');
   </div>
   <div class="col-md-4 text-center">
 	<div class="contacts-item">
-	  <div class="contacts-head"><img src="/templates/dengoman/img/offers/migcredit.png"></div>
+	  <div class="contacts-head"><img src="/templates/dengoman/assets/img/offers/migcredit.png"></div>
 	  <div class="contacts-body">
 		<span>МИГ КРЕДИТ</span><br>
 ООО «МигКредит»<br>
@@ -71,7 +71,7 @@ $pixel = $this->pixel->stat('dengoman.ru');
 <div class="row">
   <div class="col-md-4 text-center">
 	<div class="contacts-item">
-	  <div class="contacts-head"><img src="/templates/dengoman/img/offers/greenmoney.png"></div>
+	  <div class="contacts-head"><img src="/templates/dengoman/assets/img/offers/greenmoney.png"></div>
 	  <div class="contacts-body">
 		<span>GREENMONEY</span><br>
 ООО МФО «ГРИНМАНИ»<br>
@@ -83,7 +83,7 @@ $pixel = $this->pixel->stat('dengoman.ru');
   </div>
   <div class="col-md-4 text-center">
 	<div class="contacts-item">
-	  <div class="contacts-head"><img src="/templates/dengoman/img/offers/bistrodengi.png"></div>
+	  <div class="contacts-head"><img src="/templates/dengoman/assets/img/offers/bistrodengi.png"></div>
 	  <div class="contacts-body">
 		<span>БЫСТРОДЕНЬГИ</span><br>
 ООО «Магазин Малого Кредитования»<br>
@@ -95,7 +95,7 @@ $pixel = $this->pixel->stat('dengoman.ru');
   </div>
   <div class="col-md-4 text-center">
 	<div class="contacts-item">
-	  <div class="contacts-head"><img src="/templates/dengoman/img/offers/denga.png"></div>
+	  <div class="contacts-head"><img src="/templates/dengoman/assets/img/offers/denga.png"></div>
 	  <div class="contacts-body">
 		<span>ДЕНЬГА</span><br>
 ООО «УК Деньга»<br>
@@ -109,24 +109,24 @@ $pixel = $this->pixel->stat('dengoman.ru');
 </div>
 <div class="row hidden-xs">
   <div class="col-sm-6">
-    <img class="img-responsive" src="/templates/dengoman/img/lk/1.png" alt="1.png">
+    <img class="img-responsive" src="/templates/dengoman/assets/img/lk/1.png" alt="1.png">
     <h4>Первый заём</h4>
     <p class="special_contact">до 10 000 рублей выдается по ставке 0% в случае своевременного погашения</p>
   </div>
   <div class="col-sm-6">
-    <img class="img-responsive" src="/templates/dengoman/img/lk/3.png" alt="3.png">
+    <img class="img-responsive" src="/templates/dengoman/assets/img/lk/3.png" alt="3.png">
     <h4>Процентная ставка за день</h4>
     <p class="special_contact">Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%</p>
   </div>
 </div>
 <div class="row hidden-xs">
   <div class="col-sm-6">
-    <img class="img-responsive" src="/templates/dengoman/img/lk/2.png" alt="2.png">
+    <img class="img-responsive" src="/templates/dengoman/assets/img/lk/2.png" alt="2.png">
     <h4>На территории всей России</h4>
     <p class="special_contact">Займ можно оформить, находясь в любой точке России</p>
   </div>
   <div class="col-sm-6">
-    <img class="img-responsive" src="/templates/dengoman/img/lk/4.png" alt="4.png">
+    <img class="img-responsive" src="/templates/dengoman/assets/img/lk/4.png" alt="4.png">
     <h4>Различные варианты получения займов</h4>
     <p class="special_contact">На карту VISA, MAESTRO, QIWI кошелёк, Яндекс.Деньги, через систему CONTACT, банковский счёт</p>
   </div>

@@ -1,44 +1,64 @@
 <?php 
-$sum = '20000'; 
-$period = '21';
-
-if(isset($_GET['amount'])) 
+$sum = '20000'; $period = '21';
+if($this->input->get('amount', TRUE) != '') 
 { 
-    $sum = $_GET['amount'];
-    switch($_GET['amount']) 
-    { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; }
+    $sum = $this->input->get('amount', TRUE);
+    if($this->input->get('amount', TRUE) >= 1000 && $this->input->get('amount', TRUE) <= 1000000)
+    $sum = $this->input->get('amount', TRUE);
     
     if ($sum <= 10000) 
     { $period = '7'; } 
-    else if ($sum <= 15000) 
+    else if ($sum <= 15000)
     { $period = '14'; } 
-    else if ($sum <= 20000) 
+    else if ($sum <= 20000)
     { $period = '21'; } 
     else if ($sum <= 30000)
     { $period = '21'; } 
-    else if ($sum <= 50000) 
+    else if ($sum <= 50000)
     { $period = '30'; } 
-    else { $period = '30'; } 
+    else { $period = '30'; }
 } 
-
-if(isset($_POST['amount']))
+if($this->input->post('amount', TRUE) != '')
 { 
-    $sum = $_POST['amount'];
-    switch($_POST['amount']) 
-    { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; }
+    if($this->input->post('amount', TRUE) >= 1000 && $this->input->post('amount', TRUE) <= 1000000)
+        $sum = $this->input->post('amount', TRUE);
     
     if ($sum <= 10000) 
     { $period = '7'; } 
-    else if ($sum <= 15000) 
+    else if ($sum <= 15000)
     { $period = '14'; } 
-    else if ($sum <= 20000) 
+    else if ($sum <= 20000)
     { $period = '21'; } 
     else if ($sum <= 30000)
     { $period = '21'; } 
-    else if ($sum <= 50000) 
+    else if ($sum <= 50000)
     { $period = '30'; } 
-    else { $period = '30'; } 
+    else { $period = '30'; }
 } 
+if(!isset($my_title))
+{
+    $my_title = 'Заполните анкету!';
+}  
+if($this->input->get('amount', TRUE) != '') 
+{  
+    if ($this->input->get('amount', TRUE) <= '10000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '15000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '20000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '30000') { 
+        $percent = 85;
+    } else if ($this->input->get('amount', TRUE) <= '50000') { 
+        $percent = 77;
+    } else  if ($this->input->get('amount', TRUE) <= '200000' && $this->input->get('amount', TRUE) > '50000') { 
+        $percent = 65;
+    } else  if ($this->input->get('amount', TRUE) <= '500000' && $this->input->get('amount', TRUE) > '200000') { 
+        $percent = 58;
+    } else { 
+        $percent = 52;
+    } 
+}
 
 if(!isset($my_title))
 {
@@ -122,7 +142,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 <section class="white">
 <div class="row">
 	<div class="col-sm-9">
-		<form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
+		<form class="form-horizontal" id="anketa"  method="post" autocomplete="off">
         <input type="hidden" name="referer" value="<?=$referer?>">
         <input type="hidden" name="id" value="">
         <input type="hidden" name="step" value="1">
@@ -139,7 +159,13 @@ if(isset($_SERVER['HTTP_REFERER'])){
                         </div>
                     </div>
 					<?php require 'form1.php'; ?>
-					<div class="text-center"><a class="btn btn-ok btn-block" id="next">Отправить заявку&nbsp;&nbsp;&nbsp;</a></div>
+                    <div class="row">
+                    <br>
+                    <div class="col-md-4"></div>
+                    <div class="text-center col-md-4"><a class="btn btn-ok btn-block" id="next1">Отправить заявку</a></div>
+                    <div class="col-md-4"></div>
+                    </div>
+					
 					<div class="clearfix"></div>
 				</div>
 				<div role="tabpanel" class="tab-pane" id="form2">
@@ -175,19 +201,19 @@ if(isset($_SERVER['HTTP_REFERER'])){
 	</div>
 	<div class="col-sm-3 hidden-xs text-center triggers">
 		<div>
-			<img src="/templates/dengoman/img/form/1.png" alt="1.png">
+			<img src="/templates/dengoman/assets/img/form/1.png" alt="1.png">
 			<p>Ваши персональные<br>данные надёжно<br>защищены</p>
 		</div>
 		<div>
-			<img src="/templates/dengoman/img/form/2.png" alt="2.png">
+			<img src="/templates/dengoman/assets/img/form/2.png" alt="2.png">
 			<p>Удобное получение<br>денег</p>
 		</div>
 		<div>
-			<img src="/templates/dengoman/img/form/3.png" alt="3.png">
+			<img src="/templates/dengoman/assets/img/form/3.png" alt="3.png">
 			<p>Круглосуточная<br>работа</p>
 		</div>
 		<div>
-			<img src="/templates/dengoman/img/form/4.png" alt="4.png">
+			<img src="/templates/dengoman/assets/img/form/4.png" alt="4.png">
 			<p>Деньги ждут<br>вас</p>
 		</div>
 	</div>

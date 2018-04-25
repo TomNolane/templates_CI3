@@ -103,8 +103,8 @@ ins {
 }
 .container3 {
     background-color: #ffffff;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 0;
+    padding-right: 0;
 }
 @media screen and (max-width: 440px) {
     .container3 {
@@ -121,4 +121,12 @@ ins {
 } 
 .fa-star {
     visibility: hidden;
+}
+.row {
+	margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+.col-md-12 {
+	padding-right: 0 !important;
+    padding-left: 0 !important;
 }

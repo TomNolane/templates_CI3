@@ -8,9 +8,6 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 
 if($this->uri->segment(1) != 'form')
 { 
-    echo '<!-- Декстоп Yandex.RTB R-A-259325-1 -->
-    <div class="hidden-xs hidden-sm">
-    <div id="yandex_rtb_R-A-259325-1"></div></div>';
     echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Займкоин -->
     <ins class="adsbygoogle text-center"
@@ -43,9 +40,6 @@ if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->
     src="//www.googleadservices.com/pagead/conversion/827428872/?label=xmjJCLrypHkQiKDGigM&amp;guid=ON&amp;script=0"/>
     </div>
     </noscript>';
-echo '<!-- мобайл Yandex.RTB R-A-259325-2 -->
-    <div class="hidden-lg hidden-md">
-    <div id="yandex_rtb_R-A-259325-2"></div></div>';
 }
 
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') 

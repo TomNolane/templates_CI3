@@ -94,7 +94,7 @@ require 'header.php';
 
 <style>
 body{
-	background-image:url(/templates/dengoman/img/bg-small.png);
+	background-image:url(/templates/dengoman/assets/img/bg-small.png);
 }
 </style>
 <div class="clearfix">&nbsp;</div>

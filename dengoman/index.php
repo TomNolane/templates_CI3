@@ -49,13 +49,13 @@
 							</div>
 						</div>
 						<div class="col-md-12 hidden-xs hidden-sm">
-							<img id="ps" src="/templates/dengoman/img/index/ps.png" alt="ps.png">
+							<img id="ps" src="/templates/dengoman/assets/img/index/ps.png" alt="ps.png">
 						</div>
 						<button type="submit" class="btn">Получить деньги</button>
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-5 hidden-xs">
-					<img src="/templates/dengoman/img/index/man.png" alt="man.png">
+					<img src="/templates/dengoman/assets/img/index/man.png" alt="man.png">
 				</div> 
 			</div>
 		</div>
@@ -76,21 +76,21 @@
 					<div class="item active" id="slide-0">
 						<div class="row">
 							<div class="col-sm-4 text-center">
-								<img src="/templates/dengoman/img/index/1.png" alt="1.png">
+								<img src="/templates/dengoman/assets/img/index/1.png" alt="1.png">
 								<p>Сайт доступен с любого
 									<br>устройства</p>
 								<p>Получите деньги со смартфона,
 									<br>планшета или компьютера</p>
 							</div>
 							<div class="col-sm-4 text-center">
-								<img src="/templates/dengoman/img/index/2.png" alt="2.png">
+								<img src="/templates/dengoman/assets/img/index/2.png" alt="2.png">
 								<p>Круглосуточная работа
 									<br>&nbsp;</p>
 								<p>Сервис работает 24x7, включая
 									<br>праздники и выходные</p>
 							</div>
 							<div class="col-sm-4 text-center">
-								<img src="/templates/dengoman/img/index/3.png" alt="3.png">
+								<img src="/templates/dengoman/assets/img/index/3.png" alt="3.png">
 								<p>Безопасность и
 									<br>конфиденциальность</p>
 								<p>Все ваши личные данные хранятся в
@@ -101,7 +101,7 @@
 					<div class="item" id="slide-1">
 						<div class="row">
 							<div class="col-sm-4 text-center">
-								<img src="/templates/dengoman/img/index/4.png" alt="4.png">
+								<img src="/templates/dengoman/assets/img/index/4.png" alt="4.png">
 								<p>Перечисление на любой
 									<br>счёт</p>
 								<p>VISA, MASTER CARD, QIWI,
@@ -109,7 +109,7 @@
 									<br>CONTACT</p>
 							</div>
 							<div class="col-sm-4 text-center">
-								<img src="/templates/dengoman/img/index/5.png" alt="5.png">
+								<img src="/templates/dengoman/assets/img/index/5.png" alt="5.png">
 								<p>Доверие к нашим
 									<br>клиентам</p>
 								<p>Для постоянных клиентов
@@ -117,7 +117,7 @@
 									<br>увеличивается</p>
 							</div>
 							<div class="col-sm-4 text-center">
-								<img src="/templates/dengoman/img/index/6.png" alt="6.png">
+								<img src="/templates/dengoman/assets/img/index/6.png" alt="6.png">
 								<p>Займы доступны по всей
 									<br>России</p>
 								<p>Вы можете получить займ в любой
@@ -142,7 +142,7 @@
 						<div class="item active" id="slide-0">
 							<div class="row">
 								<div class="col-sm-4 col-sm-offset-1 text-center">
-									<img src="/templates/dengoman/img/reviews/1.jpg" alt="1.jpg">
+									<img src="/templates/dengoman/assets/img/reviews/1.jpg" alt="1.jpg">
 								</div>
 								<div class="col-sm-5 col-md-offset-1">
 									<h3>Светлана Бондарчик</h3>
@@ -159,7 +159,7 @@
 						<div class="item" id="slide-1">
 							<div class="row">
 								<div class="col-sm-4 col-sm-offset-1 text-center">
-									<img src="/templates/dengoman/img/reviews/2.jpg" alt="2.jpg">
+									<img src="/templates/dengoman/assets/img/reviews/2.jpg" alt="2.jpg">
 								</div>
 								<div class="col-sm-5 col-md-offset-1">
 									<h3>Олег Ефимов</h3>
@@ -174,7 +174,7 @@
 						<div class="item" id="slide-2">
 							<div class="row">
 								<div class="col-sm-4 col-sm-offset-1 text-center">
-									<img src="/templates/dengoman/img/reviews/3.jpg" alt="3.jpg">
+									<img src="/templates/dengoman/assets/img/reviews/3.jpg" alt="3.jpg">
 								</div>
 								<div class="col-sm-5 col-md-offset-1">
 									<h3>Валентина Никитина</h3>
@@ -189,7 +189,7 @@
 						<div class="item" id="slide-3">
 							<div class="row">
 								<div class="col-sm-4 col-sm-offset-1 text-center">
-									<img src="/templates/dengoman/img/reviews/4.jpg" alt="4.jpg">
+									<img src="/templates/dengoman/assets/img/reviews/4.jpg" alt="4.jpg">
 								</div>
 								<div class="col-sm-5 col-md-offset-1">
 									<h3>Александр Готфрид</h3>
@@ -204,7 +204,7 @@
 						<div class="item" id="slide-4">
 							<div class="row">
 								<div class="col-sm-4 col-sm-offset-1 text-center">
-									<img src="/templates/dengoman/img/reviews/5.jpg" alt="5.jpg">
+									<img src="/templates/dengoman/assets/img/reviews/5.jpg" alt="5.jpg">
 								</div>
 								<div class="col-sm-5 col-md-offset-1">
 									<h3>Антон Казанцев</h3>
@@ -219,7 +219,7 @@
 						<div class="item" id="slide-5">
 							<div class="row">
 								<div class="col-sm-4 col-sm-offset-1 text-center">
-									<img src="/templates/dengoman/img/reviews/6.jpg" alt="6.jpg">
+									<img src="/templates/dengoman/assets/img/reviews/6.jpg" alt="6.jpg">
 								</div>
 								<div class="col-sm-5 col-md-offset-1">
 									<h3>Василий Шаров</h3>
@@ -247,22 +247,22 @@
 				<div class="col-sm-8 col-sm-offset-2 text-center">
 					<div class="row carousel-indicators">
 						<div class="col-sm-2 text-center active" data-target="#carousel-reviews" data-slide-to="0">
-							<img src="/templates/dengoman/img/reviews/tmb_1.png" alt="1.png">
+							<img src="/templates/dengoman/assets/img/reviews/tmb_1.png" alt="1.png">
 						</div>
 						<div class="col-sm-2 text-center" data-target="#carousel-reviews" data-slide-to="1">
-							<img src="/templates/dengoman/img/reviews/tmb_2.png" alt="2.png">
+							<img src="/templates/dengoman/assets/img/reviews/tmb_2.png" alt="2.png">
 						</div>
 						<div class="col-sm-2 text-center" data-target="#carousel-reviews" data-slide-to="2">
-							<img src="/templates/dengoman/img/reviews/tmb_3.png" alt="3.png">
+							<img src="/templates/dengoman/assets/img/reviews/tmb_3.png" alt="3.png">
 						</div>
 						<div class="col-sm-2 text-center" data-target="#carousel-reviews" data-slide-to="3">
-							<img src="/templates/dengoman/img/reviews/tmb_4.png" alt="4.png">
+							<img src="/templates/dengoman/assets/img/reviews/tmb_4.png" alt="4.png">
 						</div>
 						<div class="col-sm-2 text-center" data-target="#carousel-reviews" data-slide-to="4">
-							<img src="/templates/dengoman/img/reviews/tmb_5.png" alt="5.png">
+							<img src="/templates/dengoman/assets/img/reviews/tmb_5.png" alt="5.png">
 						</div>
 						<div class="col-sm-2 text-center" data-target="#carousel-reviews" data-slide-to="5">
-							<img src="/templates/dengoman/img/reviews/tmb_6.png" alt="6.png">
+							<img src="/templates/dengoman/assets/img/reviews/tmb_6.png" alt="6.png">
 						</div>
 					</div>
 				</div>
@@ -275,7 +275,7 @@
 		<h1>Займ до зарплаты</h1>
 		<div class="row">
 			<div class="col-sm-5">
-				<img src="/templates/dengoman/img/index/where.png" class="visible-lg" alt="where.png">
+				<img src="/templates/dengoman/assets/img/index/where.png" class="visible-lg" alt="where.png">
 			</div>
 			<div class="col-md-7 col-xs-12">
 				<div class="text">

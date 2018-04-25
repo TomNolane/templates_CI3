@@ -1,20 +1,16 @@
 <?php $from = '15'; 
 if($this->uri->segment(1) != 'form')
 {
-    echo '<div class="text-center" id="ya-rtb">
-            <!-- Декстоп --><div class="hidden-xs hidden-sm visible-md visible-lg" id="yandex_rtb_R-A-243981-3"></div>';
-    echo    '<!-- мобайл --><div class="visible-xs visible-sm hidden-md hidden-lg" id="yandex_rtb_R-A-243981-1"></div>';
-    echo '</div>';
-	// echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    // <!-- Бзайм5 -->
-    // <ins class="adsbygoogle text-center"
-    // style="display:block"
-    // data-ad-client="ca-pub-4970738258373085"
-    // data-ad-slot="6411748383"
-    // data-ad-format="auto"></ins>
-    // <script>
-    // (adsbygoogle = window.adsbygoogle || []).push({});
-    // </script>';
+	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Бзайм5 -->
+    <ins class="adsbygoogle text-center"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="6411748383"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
 }
 
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles' || $this->uri->segment(1) == 'faq')
@@ -25,19 +21,14 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
 echo '<footer class="ex-start-footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-5">
+            <div class="col-sm-8">
                 <div class="ex-footer-logo">
                     <a href="/">
-                        <img src="templates/bzaim/assets/img/logo-foot.png" alt="logo-foot.png">
+                        <img src="templates/bzaim/assets/img/logo-foot.png" alt="logo-foot.png"> 
                     </a>
                 </div>
                 <p class="ex-text spec_footer4">
-                    <span class="hidden">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная
-                    ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём
-                    20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб.
-                    Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного
-                    погашения. ООО МК "Берлин" ОГРН 5167746335961, ИНН 9705080932, КПП 770501001 лицензия ЦБ №1703045008133</span>
-                    Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: support@bzaim5.ru  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+                    Займы предоставляются на сумму от 1 000 до 1 000 000 рублей включительно на срок от 61 дня до 5 лет. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: support@bzaim5.ru  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
                     <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001
                 </p>
             </div>
@@ -61,24 +52,7 @@ echo '<footer class="ex-start-footer">
                         <a href="/rules">Правила предоставления займов</a>
                     </li>
                 </ul>
-            </div>
-            <div class="col-sm-3 hidden-xs hidden-sm spec_footer6">
-                <p class="ex-list-title">Получение денег</p>
-                <ul>
-                    <li>
-                        <a href="/money">Займ на банковскую карту</a>
-                    </li>
-                    <li>
-                        <a href="/money">Займ на QIWI кошелёк</a>
-                    </li>
-                    <li>
-                        <a href="/money">Займ через Contact</a>
-                    </li>
-                    <li>
-                        <a href="/money">Займ на Яндекс.Деньги</a>
-                    </li>
-                </ul>
-            </div>
+            </div> 
         </div>
     </div>
 </footer>';
@@ -134,9 +108,9 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
         hide_min_max: false, 
         keyboard: true, 
         from: <?php 
-        if(!empty($this->input->get('amount', TRUE))) 
+        if($this->input->get('amount') != '')
         {  
-            switch($this->input->get('amount', TRUE))
+            switch($this->input->get('amount'))
             {
                 case '1000': $from = '0' ; break;
                 case '2000': $from = '1' ; break;
@@ -182,11 +156,9 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
             }
             echo $from; 
         }
-        elseif(empty($this->input->post('form_slrd', TRUE))) echo '15'; else echo $this->input->post('form_slrd', TRUE); 
-        ?>,
+        elseif($this->input->post('form_slrd') == '') echo '15'; else echo $this->input->post('form_slrd'); ?>,
         values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000, 110000, 120000, 130000, 140000, 150000, 160000, 170000, 180000, 190000, 200000, 250000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000],
         onChange: function (range3) {
-
                  if (range3.from_value <= 10000) {
                     $("#period").val("7");
                     $("#period2").val("От 61 до 130 дней");

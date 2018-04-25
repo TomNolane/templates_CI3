@@ -3,6 +3,7 @@
     if($site == 'bzaim5') $site = 'bzaim';
     else if($site == 'www.mikrodengi') $site = 'mikrodengi';
     else if($site == 'bzaim.tomnolane') $site = 'bzaim';
+	else if($site == 'test.zaimhome') $site = 'test';
     require realpath(__DIR__ . '/..').'/'.$site.'/header.php';
     $this->load->model('offers/offers_model', 'offers');
     

@@ -26,6 +26,7 @@
 		</div>
 	</div>
 </div>
+<div><br/></div>
 <input type="hidden" id="period" name="period" value="<?php echo $period; ?>" />
 <div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs hidden-xs">Фамилия</label>
@@ -166,7 +167,7 @@
 	<label class="col-sm-4 control-label"></label>
 	<div class="col-sm-8 col-xs-12">
 		<label>
-			<input type="checkbox" id="agree" value="1" checked>
+			<input type="checkbox" id="agree" value="1" onclick="checkMee();" checked>
 			<b>Я согласен на обработку персональных данных и с
 				<a href="#" data-toggle="modal" data-target="#tosModal">публичной офертой</a>
 			</b>

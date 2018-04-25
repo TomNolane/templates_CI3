@@ -80,15 +80,15 @@
 	  <div class="col-xs-8 col-xs-offset-2">
 	    <div class="row">
 	      <div class="col-xs-4 text-center">
-		    <img src="/templates/dengoman/img/about/1.png" alt="1.png">
+		    <img src="/templates/dengoman/assets/img/about/1.png" alt="1.png">
 		    <p>1. Выберите сумму и срок</p>
 		  </div>
 		  <div class="col-xs-4 text-center">
-		    <img src="/templates/dengoman/img/about/2.png" alt="2.png">
+		    <img src="/templates/dengoman/assets/img/about/2.png" alt="2.png">
 		    <p>2. Заполните анкету</p>
 		  </div>
 		  <div class="col-xs-4 text-center">
-		    <img src="/templates/dengoman/img/about/3.png" alt="3.png">
+		    <img src="/templates/dengoman/assets/img/about/3.png" alt="3.png">
 			<p>3. Получите деньги</p>
 		  </div>
 		</div>

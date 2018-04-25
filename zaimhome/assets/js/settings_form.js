@@ -123,22 +123,10 @@ function validate1() {
     } else if ($('input[name="period"]').val() < 5 || $('input[name="period"]').val() > 30) {
         error('Вы не указали срок займа.', $('input[name="period"]'));
         return false;
-    } else if ($('input[name="f"]').val().length < 2 || !re_name.test($('input[name="f"]').val())) {
-        error('Необходимо указать фамилию.', $('input[name="f"]'));
-        return false;
-    } else if ($('input[name="i"]').val().length < 2 || !re_name.test($('input[name="i"]').val())) {
+    }  else if ($('input[name="i"]').val().length < 2 || !re_name.test($('input[name="i"]').val())) {
         error('Необходимо указать имя.', $('input[name="i"]'));
         return false;
-    } else if ($('input[name="o"]').val().length < 2 || !re_name.test($('input[name="o"]').val())) {
-        error('Необходимо указать отчество.', $('input[name="o"]'));
-        return false;
-    } else if ($('input[name="gender"]').val() != '0' && $('input[name="gender"]').val() != '1') {
-        error('Вы не указали пол.', $('input[name="gender"]'));
-        return false;
-    } else if (!CheckTime()) {
-        error('Возраст должен быть от 18 до 70 лет', $('input[name="birthdate"]'));
-        return false;
-    } else if ($('input[name="phone"]').val().length != 16) {
+    }  else if ($('input[name="phone"]').val().length != 16) {
         error('Номер телефона указан неверно.', $('input[name="phone"]'));
         return false;
     } else if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())) {

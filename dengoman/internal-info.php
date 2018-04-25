@@ -5,7 +5,7 @@
 	<a name="card"></a>
     <div class="panel-heading green" role="tab" id="heading1">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#card-panel" aria-expanded="true" aria-controls="card-panel">
-          <h4 class="panel-title">Займ на банковскую карту <img src="/templates/dengoman/img/info/card.png" class="pull-right hidden-xs"></h4>
+          <h4 class="panel-title">Займ на банковскую карту <img src="/templates/dengoman/assets/img/info/card.png" class="pull-right hidden-xs"></h4>
         </a>
     </div>
     <div id="card-panel" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
@@ -22,7 +22,7 @@
 	<a name="qiwi"></a>
     <div class="panel-heading" role="tab" id="heading2">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#qiwi-panel" aria-expanded="false" aria-controls="qiwi-panel">
-          <h4 class="panel-title">Займ на QIWI-кошелек <img src="/templates/dengoman/img/info/qiwi.png" class="pull-right hidden-xs"></h4>
+          <h4 class="panel-title">Займ на QIWI-кошелек <img src="/templates/dengoman/assets/img/info/qiwi.png" class="pull-right hidden-xs"></h4>
         </a>
     </div>
     <div id="qiwi-panel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
@@ -38,7 +38,7 @@
 	<a name="contact"></a>
     <div class="panel-heading" role="tab" id="heading3">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#contact-panel" aria-expanded="false" aria-controls="contact-panel">
-          <h4 class="panel-title">Займ через CONTACT <img src="/templates/dengoman/img/info/contact.png" class="pull-right hidden-xs"></h4>
+          <h4 class="panel-title">Займ через CONTACT <img src="/templates/dengoman/assets/img/info/contact.png" class="pull-right hidden-xs"></h4>
         </a>
     </div>
     <div id="contact-panel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
@@ -59,7 +59,7 @@
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="heading4">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#yandex-panel" aria-expanded="false" aria-controls="yandex-panel">
-          <h4 class="panel-title">Займ на Яндекс.Деньги <img src="/templates/dengoman/img/info/yandex.png" class="pull-right hidden-xs"></h4>
+          <h4 class="panel-title">Займ на Яндекс.Деньги <img src="/templates/dengoman/assets/img/info/yandex.png" class="pull-right hidden-xs"></h4>
         </a>
     </div>
 	<a name="yandex"></a>

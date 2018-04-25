@@ -3,12 +3,6 @@
 $from = '15';
 if($this->uri->segment(1) != 'form')
 { 
-	echo '<!--декстоп версия Yandex.RTB R-A-258704-1 -->
-    <div class="hidden-sm hidden-xs text-center"><div id="yandex_rtb_R-A-258704-1"></div></div>';
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
-        echo'<!-- мобильная версия Yandex.RTB R-A-258704-2 -->
-        <div class="hidden-md hidden-lg text-center"><div id="yandex_rtb_R-A-258704-2"></div></div>';
-    }
     echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Займхантер -->
     <ins class="adsbygoogle text-center"

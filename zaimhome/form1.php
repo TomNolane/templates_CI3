@@ -19,7 +19,7 @@
     <label class="control-label col-md-4 label-required" for="f">Фамилия</label>
     <div class="col-md-6">
         <div class="ex-wrapper"> 
-            <input type="text" value="Иванова" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
+            <input type="text" value="Иванова" class="form-control ec tip"  name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
             <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <div> <p class="help-block2">Нужно указать фамилию</p>
             <p class="text-muted text-right">Пример: Иванова</p></div>

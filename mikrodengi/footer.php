@@ -4,11 +4,6 @@
         echo '<a href="#0" class="cd-top">Наверх</a>';
     } 
 
-    if($this->uri->segment(1) != 'form')
-    {
-        
-    }
-
     echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Микроденьги -->
         <ins class="adsbygoogle text-center"

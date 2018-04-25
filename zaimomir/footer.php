@@ -1,10 +1,4 @@
-<?php $from = '15';
-
-    if($this->uri->segment(1) != 'form')
-    {
-        echo '';
-    }
-?>
+<?php $from = '15';?>
 
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">

@@ -11,9 +11,7 @@ require "modules/bootstrap/3.3.6/js/bootstrap.min.js";
 echo '</script>';
 if ($this->uri->segment(1) != 'form')
 {
-    echo '<!-- Декстоп --><div id="ya-rtb"><div id="yandex_rtb_R-A-249178-2"></div>';
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') {
-        echo '<!-- Мобайл --><div id="yandex_rtb_R-A-249178-1"></div>';?>
+    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
         <!-- Google Code for  
         &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
         Page -->

@@ -6,11 +6,6 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 }
 if($this->uri->segment(1) != 'form')
 {
-    echo '<!-- Декстоп --><div class="buffer"></div><div id="ya-rtb"><div id="yandex_rtb_R-A-244327-2"></div>';
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
-        echo '<!-- Мобайл --><div id="yandex_rtb_R-A-244327-1"></div>';
-    }
-    echo '</div>';
     if($this->uri->segment(1) != 'lk3')
     {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

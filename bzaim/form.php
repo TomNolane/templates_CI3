@@ -1,6 +1,6 @@
 <?php 
 $sum = '20000'; $period = '21';$percent = '95';
-if(!empty($this->input->get('amount', TRUE))) 
+if($this->input->get('amount', TRUE) != '') 
 { 
     $sum = $this->input->get('amount', TRUE);
     if($this->input->get('amount', TRUE) >= 1000 && $this->input->get('amount', TRUE) <= 1000000)
@@ -18,7 +18,7 @@ if(!empty($this->input->get('amount', TRUE)))
     { $period = '30'; } 
     else { $period = '30'; }
 } 
-if(!empty($this->input->post('amount', TRUE)))
+if($this->input->post('amount', TRUE) != '')
 { 
     if($this->input->post('amount', TRUE) >= 1000 && $this->input->post('amount', TRUE) <= 1000000)
         $sum = $this->input->post('amount', TRUE);
@@ -39,7 +39,7 @@ if(!isset($my_title))
 {
     $my_title = 'Заполните анкету!';
 }  
-if(!empty($this->input->get('amount', TRUE))) 
+if($this->input->get('amount', TRUE) != '') 
 {  
     if ($this->input->get('amount', TRUE) <= '10000') { 
         $percent = 95;
@@ -59,7 +59,7 @@ if(!empty($this->input->get('amount', TRUE)))
         $percent = 52;
     } 
 }
-elseif(!empty($this->input->post('percent', TRUE)))
+elseif($this->input->post('percent', TRUE) != '')
     $percent = $this->input->post('percent', TRUE);
 
 if(!isset($my_title))

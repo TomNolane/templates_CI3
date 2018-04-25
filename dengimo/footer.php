@@ -8,11 +8,6 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 
 if($this->uri->segment(1) != 'form')
 {
-    echo '<!-- Декстоп --><div id="ya-rtb"><div id="yandex_rtb_R-A-232716-8"></div>';
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
-        echo '<!-- Мобайл --><div id="yandex_rtb_R-A-232716-7"></div>';
-    }
-    echo '</div>';
     echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Деньгимо -->
     <ins class="adsbygoogle text-center"

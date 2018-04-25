@@ -422,6 +422,9 @@ $(document).ready(function () {
         if ($(this).attr("type") == "checkbox") {
             return;
         }
+		if ($(this).attr("name") == "feedback-name" || $(this).attr("name") == "feedback-email" || $(this).attr("name") == "feedback-comment") {
+            return;
+        }
         $('html, body').animate({
             scrollTop: $(this).offset().top - 100
         }, 1000);

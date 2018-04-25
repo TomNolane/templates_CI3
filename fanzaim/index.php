@@ -1,9 +1,9 @@
 <?php require 'header.php'; ?>
 <section class="ex-section-1">
     <form id="anketa" action="/form" method="post">
-        <input type="hidden" id="amount" name="amount" value="20000" />
-        <input type="hidden" id="period" name="period" value="21" />
-        <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
+        <input type="hidden" id="amount" class="amount" name="amount" value="20000" />
+        <input type="hidden" id="period" class="period" name="period" value="21" />
+        <input type="hidden" id="form_slrd" class="form_slrd" name="form_slrd" value="15" />
         <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
         <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
         <div class="container">
@@ -316,7 +316,6 @@
                         <p class="col-md-5">Подпишись на рассылку*</p>
                         <form action="">
                             <div class="col-md-5">
-                            
                             <div class="hidden">
                                 <input type="text" id="feedback-name2" placeholder="Имя" title="Имя" value="хочу подписаться" required>
                             </div>
@@ -325,7 +324,7 @@
                             </div></div> 
                             <div class="col-md-2">
                             <div class="form-group">
-                                <input class="ex-main-btn text-center" id="feedback-send2" value="подписаться"/>
+                                <input class="ex-main-btn2 text-center" id="feedback-send2" value="подписаться"/>
                             </div> 
                             <!-- Hidde this block -->
                             <div class="hidden">

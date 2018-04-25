@@ -133,8 +133,8 @@
                                         echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
                                         if($tempp == 0) 
                                         {
-                                            echo '<option value="Республика Карелия" data-id="51" selected>Республика Карелия</option>';
-                                            break;
+                                            // echo '<option value="Республика Карелия" data-id="51" selected>Республика Карелия</option>';
+                                            // break;
                                         }
                                     } 
                                 }

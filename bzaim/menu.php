@@ -14,46 +14,8 @@
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right"> 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">О проекте
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="/about" class="hov">О нас</a>
-                            </li>
-                            <li>
-                                <a href="/money" class="hov">Виды займов</a>
-                            </li> 
-                        </ul>
-                    </li>
+                   <li><a href="/about" class="hov">О нас</a></li>
                     <li><a href="/faq">Вопросы-ответы</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
-                            Новости
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="/news1" >Где взять займ на карту Сбербанка?</a>
-                            </li>
-                            <li>
-                                <a href="/news2" >Как получить кредит на Яндекс.Деньги?</a>
-                            </li> 
-                            <li>
-                                <a href="/news3" >Мгновенные займы – доступная и удобная услуга</a>
-                            </li>
-                            <li>
-                                <a href="/news4" >Очистить кредитную историю</a>
-                            </li>
-                            <li>
-                                <a href="/news5" >Как получить займ на QIWI кошелек</a>
-                            </li>
-                            <li>
-                                <a href="/news6" >Как получить займ через систему Contact без отказа</a>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Информация
                             <span class="caret"></span>

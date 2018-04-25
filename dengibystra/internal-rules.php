@@ -46,11 +46,11 @@
                         <tbody>
                             <tr>
                                 <td>max</td>
-                                <td>365 день</td>
+                                <td>5 лет</td>
                             </tr>
                             <tr>
                                 <td>min</td>
-                                <td>61 дней</td>
+                                <td>61 день</td>
                             </tr>
                         </tbody>
                     </table>

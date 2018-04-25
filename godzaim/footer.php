@@ -7,12 +7,6 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 ?>
     <?php
         if ($this->uri->segment(1) != 'form') {
-            echo '<!-- Декстоп Yandex.RTB R-A-257495-1 -->
-            <center><div id="ya-rtb" class="text-center spec_ind_foot"><div class="hidden-xs hidden-sm rtb text-center" id="yandex_rtb_R-A-257495-1"></div>';
-            if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') { 
-                echo '<!-- Мобильная Yandex.RTB R-A-257495-2 --> <div class="hidden-md hidden-lg rtb text-center" id="yandex_rtb_R-A-257495-2"></div>';
-            }
-            echo '</div></center>';
             echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- Годзайм -->
             <ins class="adsbygoogle text-center"
