@@ -4,6 +4,8 @@
 <meta name="Description" content="<?php echo $description;?>" />
 <meta name="Keywords" content="моментальный заем, займы, онлайн деньги" />
 <meta name="robots" content="all" />
+<meta name="yandex-verification" content="cfc2bbd73e556b4d" />
+<meta name="yandex-verification" content="27ee832e82f19e9a" />
 <meta name="copyright" lang="ru" content="bzaim5.ru" />  
 <meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 <meta property="og:description" content="Bzaim5 - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
