@@ -3,7 +3,64 @@ if(!isset($my_title))
 {
 	$my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Rublimo';
 	$description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
-}  
+}
+$sum = '20000'; $period = '21';
+if($this->input->get('amount', TRUE) != '') 
+{ 
+    $sum = $this->input->get('amount', TRUE);
+    if($this->input->get('amount', TRUE) >= 1000 && $this->input->get('amount', TRUE) <= 1000000)
+    $sum = $this->input->get('amount', TRUE);
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000)
+    { $period = '14'; } 
+    else if ($sum <= 20000)
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000)
+    { $period = '30'; } 
+    else { $period = '30'; }
+} 
+if($this->input->post('amount', TRUE) != '')
+{ 
+    if($this->input->post('amount', TRUE) >= 1000 && $this->input->post('amount', TRUE) <= 1000000)
+        $sum = $this->input->post('amount', TRUE);
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000)
+    { $period = '14'; } 
+    else if ($sum <= 20000)
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000)
+    { $period = '30'; } 
+    else { $period = '30'; }
+}
+
+if($this->input->get('amount', TRUE) != '') 
+{  
+    if ($this->input->get('amount', TRUE) <= '10000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '15000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '20000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '30000') { 
+        $percent = 85;
+    } else if ($this->input->get('amount', TRUE) <= '50000') { 
+        $percent = 77;
+    } else  if ($this->input->get('amount', TRUE) <= '200000' && $this->input->get('amount', TRUE) > '50000') { 
+        $percent = 65;
+    } else  if ($this->input->get('amount', TRUE) <= '500000' && $this->input->get('amount', TRUE) > '200000') { 
+        $percent = 58;
+    } else { 
+        $percent = 52;
+    } 
+}
 require 'header.php'; ?>
 <?php
 // IP
@@ -77,7 +134,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 								</div>
 								<div class="col-xs-2 text-center" role="presentation">
 									<a href="#form2" aria-controls="form1" role="tab">
-										<span class="btn btn-circle" id="step2">1</span>
+										<span class="btn btn-circle" id="step2"></span>
 									</a>
 								</div>
 								<div class="col-xs-2 text-center" role="presentation">
@@ -126,11 +183,11 @@ if(isset($_SERVER['HTTP_REFERER'])){
 		<div class="form">
 			<div class="row">
 				<div class="col-md-10 col-xs-12">
-					<form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
+					<form class="form-horizontal" id="anketa"  method="post" autocomplete="off">
 						<input type="hidden" name="referer" value="<?=$referer?>">
 						<input type="hidden" name="id" value="">
 						<input type="hidden" name="step" value="1">
-						<input type="hidden" name="ad_id" value="<?=$ad_id?>">
+						<input type="hidden" name="ad_id" value="<?=$ad_id?>"> 
 						<input type="hidden" name="display" value="1" class="visible-xs">
 						<div class="tab-content">
 							<div role="tabpanel" class="tab-pane active" id="form1">

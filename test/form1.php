@@ -4,7 +4,7 @@
 		<div class="">
 			<div>Сумма</div>
 			<div class="font40">
-				<?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?> рублей</div>
+				<?php echo $sum;?> рублей</div>
 			<div id="form-4">Срок до 130 дней</div>
 		</div>
 	</div>
@@ -13,7 +13,7 @@
 	<label class="col-sm-4 control-label label-required hidden-xs">Сумма</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="form-slider green irs2">
-			<input type="text" class="amount2" name="amount" value="<?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>"
+			<input type="text" class="amount2" name="amount" value="<?php echo $sum;?>"
 			/>
 		</div>
 	</div>
@@ -27,7 +27,8 @@
 		</div>
 	</div>
 </div>
-<input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 21 : $_POST['period']; ?>"/>
+<br>
+<input type="hidden" id="period" name="period" value="<?php echo $period;?>"/>
 <div class="form-group has-feedback hidden"> 
 	<label class="col-sm-4 control-label label-required hidden-xs">Фамилия</label>
 	<div class="col-sm-8 col-xs-12"> 
@@ -127,7 +128,7 @@
 	<label class="col-sm-4 control-label label-required hidden-xs">Телефон</label>
 	<div class="col-sm-8 col-xs-12">
 		<input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон" title="Укажите свой телефон"
-		data-validation-error-msg="Укажите номер телефона"   required>
+		data-validation-error-msg="Укажите номер телефона" value="8 (977) 777 7777" required>
 		<span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 		<p class="help-block2">Нужно указать номер телефона</p>
 		<p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
@@ -136,8 +137,7 @@
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs">Почта</label>
 	<div class="col-sm-8 col-xs-12"> 
-		<input type="email" class="form-control ec tip" name="email" id="email" title="Укажите свой email адрес" placeholder="Email"
-			  data-validation="email" required>
+		<input type="email" class="form-control ec tip" name="email" id="email" title="Укажите свой email адрес" placeholder="Email" data-validation="email" required>
 		<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 		<p class="help-block2"></p>
 		<p class="text-muted helpblock">Пример: email@mail.ru</p>
@@ -161,21 +161,22 @@
 	<label class="col-sm-4 control-label"></label>
 	<div class="col-sm-8 col-xs-12">
 		<label>
-			<input type="checkbox" id="agree" value="1" checked>
+			<input type="checkbox" id="agree" onclick="checkMee();"  value="1" checked>
 			<b>Я согласен на обработку персональных данных и с
 				<a href="#" data-toggle="modal" data-target="#tosModal">публичной офертой</a>
 			</b>
 		</label>
 	</div>
 	<label class="hidden">
-		<input type="checkbox" id="marketing" value="1" checked>
+		<input type="checkbox" id="marketing" mvalue="1" checked>
 		<b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
 	</label>
 
 </div>
 <div class="clearfix"></div>
 <div class="col-sm-7 col-sm-offset-4 col-xs-12">
-<div class="shadow">
-<a class="btn btn-ok btn-block" id="next">Отправить заявку</a>
+<div class="shadow" id="my_btn">
+<br>
+<a class="btn btn-ok btn-block" id="next1">Отправить заявку</a>
 </div>
 </div> 

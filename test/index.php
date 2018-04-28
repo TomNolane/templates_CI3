@@ -474,5 +474,4 @@
 		</div>
 	</div>
 </div>
-<link href="/modules/3dgallery/css/style.css" rel="stylesheet" media="screen">
 <?php require 'footer.php'; ?>

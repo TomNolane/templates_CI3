@@ -98,40 +98,38 @@
         </div>
     </nav> 
 </div>  
-<!-- Modal Window -->
-<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h1 class="modal-title" id="feedbackModalLabel">Остались вопросы?</h1>
-                    <p>Просто заполните форму и наш специалист свяжется с Вами</p>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1 col-sm-12 modal-body-form">
-                            <div class="form-group">
-                                <input type="text" class="form-control input-lg" id="feedback-name" placeholder="Имя" title="Имя" required>
-                            </div>
-                            <div class="form-group hidden">
-                                <input type="tel" class="form-control input-lg" id="feedback-phone" placeholder="Телефон" title="Телефон" value="79777777736">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control input-lg" id="feedback-email" placeholder="Email" title="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control input-lg" id="feedback-comment" rows="3" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"
-                                    required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <button type="button" class="btn btn-success btn-lg btn-block" id="feedback-send">Отправить</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
 <!-- Modal -->
+<div id="askQuestion" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header text-center">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<h2>
+				Заполните форму <br> и наш менеджер свяжется с вами
+			</h2>
+		</div>
+		<div class="modal-body">
+			<div class="form-group has-feedback">
+				<input type="text" class="form-control ec tip" name="feedback-name" title="Пожалуйста, введите свое имя"
+						data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
+						data-validation-error-msg="Пожалуйста, введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
+                        <br/></div>
+			<div class="form-group hidden">
+				<input type="tel" class="form-control" name="feedback-phone" value="79777474747" id="feedback-phone" title="Тефелон" placeholder="Введите ваш телефон" required>
+			<br/></div>
+			<div class="form-group">
+				<input type="email" class="form-control" name="feedback-email" id="feedback-email" title="Email" placeholder="Введите ваш email" required>
+                <br/></div>
+			<div class="form-group">
+				<textarea id="feedback-comment" name="feedback-comment" rows="3" class="form-control" title="Текст вашего сообщения" placeholder="Введите текст сообщения" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Введите текст сообщения" required></textarea><br>
+				<br/><div class=" text-center">
+				<button type="button" id="feedback-send" class="btn">Отправить</button>
+			</div>
+			</div> 
+		</div>
+	</div>
+</div>
+</div>
+<!-- /Modal -->

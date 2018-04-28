@@ -17,7 +17,7 @@ if(!isset($description)) $description='Kreditker - лучший онлайн с�
     <link rel="shortcut icon" type="image/x-icon" href="/templates/kreditker/assets/favicon/favicon.ico" >
     <link rel="icon" type="image/png" href="/templates/kreditker/assets/favicon/favicon.png">
     <!-- CSS -->
-    <?php echo '<style>'; require '/templates/kreditker/assets/css/style.css'; echo '</style>'; ?> 
+    <?php echo '<style>'; require 'templates/kreditker/assets/css/style.css'; echo '</style>'; ?> 
 </head>
 <body>
 <header class="ex-main-header">

@@ -37,7 +37,7 @@ if($this->input->post('amount', TRUE) != '')
 } 
 if(!isset($my_title))
 {
-    $my_title = 'Заполните анкету!';
+    $my_title = 'Подача Заявки на Получение Займа Онлайн';
 }  
 if($this->input->get('amount', TRUE) != '') 
 {  
@@ -59,7 +59,7 @@ if($this->input->get('amount', TRUE) != '')
         $percent = 52;
     } 
 }
-elseif($this->input->post('percent', TRUE) != '')
+if($this->input->post('percent', TRUE) != '')
     $percent = $this->input->post('percent', TRUE);
 
 if(!isset($my_title))

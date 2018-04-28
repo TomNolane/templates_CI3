@@ -37,7 +37,7 @@ if($this->input->post('amount', TRUE) != '')
 } 
 if(!isset($my_title))
 {
-    $my_title = 'Заполните анкету!';
+    $my_title = 'Подача Заявки на Получение Займа Онлайн';
 }  
 if($this->input->get('amount', TRUE) != '') 
 {  

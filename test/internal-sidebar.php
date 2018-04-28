@@ -8,7 +8,7 @@ if ($this->uri->segment(1) == 'about' || $this->uri->segment(1) == 'contacts' ||
 	<a href="/contacts" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'contacts') echo ' active'; ?>"><span class="pull-left">Контакты</span><i class="fa fa-user fa-fw fa-lg pull-right"></i><div class="clearfix"></div></a>
 	<a href="/info" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'info') echo ' active'; ?>"><span class="pull-left">Статьи о займах</span><i class="fa fa-file-text fa-fw fa-lg pull-right"></i><div class="clearfix"></div></a>
 	<!-- <a href="/history2" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'history2') echo ' active'; ?>"><span class="pull-left">Улучшение кредитной<br>истории</span><i class="fa fa-file-text fa-fw fa-lg pull-right"></i><div class="clearfix"></div></a> -->
-	<a href="/zaim-card" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'zaim-card') echo ' active'; ?>">Займ на банковскую карту</a>
+	<a href="/zaim-card" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'zaim-card') echo ' active'; ?>">Займ на карту</a>
 	<a href="/zaim-qiwi" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'zaim-qiwi') echo ' active'; ?>">Займ на QIWI кошелёк</a>
 	<a href="/zaim-yandex" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'zaim-yandex') echo ' active'; ?>">Займ на Яндекс.Деньги</a>
 	<a href="/zaim-contact" class="btn btn-menu btn-block<?php if ($this->uri->segment(1) == 'zaim-contact') echo ' active'; ?>">Займ через CONTACT</a>

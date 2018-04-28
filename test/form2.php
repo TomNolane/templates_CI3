@@ -2,16 +2,16 @@
 	<label class="col-sm-4 control-label label-required hidden-xs">Серия и номер паспорта</label>
 	<div class="col-sm-8 col-xs-12">
 		<input type="tel" class="form-control ec tip" id="passport" name="passport" placeholder="Серия и номер паспорта" title="Укажите серию и номер паспорта"
-		        data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Укажите номер и серию паспорта"
+		        data-validation="custom" value="4510 123456" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Укажите номер и серию паспорта"
 		        required>
 		<span id="passportstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 		<p class="help-block2">Укажите номер и серию паспорта</p>
 		<p class="text-muted helpblock">Пример: 4510 123456</p>
 	</div>
 </div>
-<input type="hidden" class="form-control ec" id="passport-s" name="passport_s" title="Серия паспорта" data-validation="number"
+<input type="hidden" class="form-control ec" value="4510" id="passport-s" name="passport_s" title="Серия паспорта" data-validation="number"
         data-validation-allowing="range[1;9999]" data-validation-error-msg="Укажите серию паспорта">
-<input type="hidden" class="form-control ec" id="passport-n" name="passport_n" title="Номер паспорта" data-validation="number"
+<input type="hidden" class="form-control ec" value="123456" id="passport-n" name="passport_n" title="Номер паспорта" data-validation="number"
         data-validation-allowing="range[1;999999]" data-validation-error-msg="Укажите номер паспорта">
 <div class="form-group hidden">
 	<div class="col-sm-2">

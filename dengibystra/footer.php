@@ -1,6 +1,7 @@
 <?php $from = '15'; 
 if($this->uri->segment(1) != 'form')
 {
+    
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Деньгибыстра -->
     <ins class="adsbygoogle text-center"
@@ -309,7 +310,27 @@ echo "}catch(e){console.log('Ошибка ' + e.name + \":\" + e.message + \"\\n
         <img height="1" width="1" style="border-style:none;" alt=""  
         src="//www.googleadservices.com/pagead/conversion/828633180/?label=pxx8CJTupXgQ3OCPiwM&amp;guid=ON&amp;script=0"/>
         </div>
-        </noscript>';  
+        </noscript>
+		<!-- Google Code for  
+		&#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
+		Page -->
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 828633180;
+		var google_conversion_label = "pxx8CJTupXgQ3OCPiwM";
+		var google_remarketing_only = false;
+		/* ]]> */
+		</script>
+		<script type="text/javascript"  
+		src="//www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt=""  
+		src="//www.googleadservices.com/pagead/conversion/828633180/?label=pxx8CJTupXgQ3OCPiwM&amp;guid=ON&amp;script=0"/>
+		</div>
+		</noscript>
+';  
     }
 ?>
 </body>
