@@ -34,7 +34,7 @@
                     'joymoney' => 'https://pxl.leads.su/click/0d0fe90392e40473a476c86e9b489d33?source=mikrodengi',
                     'webbankir' => 'https://pxl.leads.su/click/72c0cb6b29fa68ebdaa08ecc50e1cbfa?source=mikrodengi',
                     'greenmoney' => 'https://pxl.leads.su/click/992fa3d6c63846e37a1d642fc7c767f9?source=mikrodengi',
-                    'zaymer' => 'https://pxl.leads.su/click/3600bcf6ad0b0a189706ecce1ae85aeb?source=mikrodengi',
+                    'zaymer' => 'https://pxl.leads.su/click/762f05fbbdde479f81315e58b8557785?source=mikrodengi',
                     'moneyman' => 'https://pxl.leads.su/click/808b2dfdcd439ebcb3aa4befe32b3059?source=mikrodengi',
                     'ekapusta' => 'https://pxl.leads.su/click/275eb3748505c14ffaa39c3c88a25c0f?source=mikrodengi'
                 );
