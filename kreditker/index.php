@@ -202,17 +202,17 @@
             <div class="row justify-content-center text-center">
                 <div class="col-lg-4">
                     <div class="ex-adv-box">
-                        <img src="/templates/kreditker/assets/img/adver.png" alt="adver.png">
+                        <img src="/templates/kreditker/assets/img/img99.png" alt="img99.png">
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="ex-adv-box">
-                        <img src="/templates/kreditker/assets/img/adver.png" alt="adver.png">
+                        <img src="/templates/kreditker/assets/img/img99.png" alt="img99.png">
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="ex-adv-box">
-                        <img src="/templates/kreditker/assets/img/adver.png" alt="adver.png">
+                        <img src="/templates/kreditker/assets/img/img99.png" alt="img99.png">
                     </div>
                 </div>
             </div>

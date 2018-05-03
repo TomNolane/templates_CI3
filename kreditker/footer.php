@@ -15,8 +15,8 @@
 <!-- JS -->
 <?php
     echo '<script>';
-    require '/templates/kreditker/assets/js/jquery.min.js';
-    require '/templates/kreditker/assets/js/bootstrap.min.js';
+    require 'templates/kreditker/assets/js/jquery.min.js';
+    require 'templates/kreditker/assets/js/bootstrap.min.js';
     echo '</script>';
 ?> 
 <script>

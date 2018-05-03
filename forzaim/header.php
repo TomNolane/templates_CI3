@@ -28,6 +28,7 @@ if(!isset($description))
 	<meta name="twitter:image:src" content="https://forzaim.ru/templates/forzaim/assets/img/art1.png"/>
 	<meta name="twitter:url" content="https://forzaim.ru/"/>
 	<meta name="twitter:domain" content="forzaim.ru"/>
+    <meta name="yandex-verification" content="378fd704fda9a62b" />
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="/templates/forzaim/favicon/favicon-16x16.png" type="image/png">

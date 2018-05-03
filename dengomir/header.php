@@ -31,6 +31,7 @@ if(!isset($description))
 	<meta name="twitter:image:src" content="https://dengomir.ru/templates/dengomir/assets/img/credit-card.png"/>
 	<meta name="twitter:url" content="https://dengomir.ru/"/>
 	<meta name="twitter:domain" content="dengomir.ru"/>
+    <meta name="yandex-verification" content="1389c98e774042b0" />
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="/templates/dengomir/favicon/favicon-16x16.png" type="image/png">

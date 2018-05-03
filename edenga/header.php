@@ -31,6 +31,7 @@ if(!isset($description))
 	<meta name="twitter:image:src" content="https://edenga.ru/templates/edenga/img/atmo.png" />
 	<meta name="twitter:url" content="https://edenga.ru/" />
 	<meta name="twitter:domain" content="edenga.ru" />
+	<meta name="yandex-verification" content="d280fffdcc4852a0" />
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="/templates/edenga/img/favicon.png" />
 

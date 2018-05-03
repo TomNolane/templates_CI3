@@ -28,6 +28,7 @@ if(!isset($description))
 <meta name="twitter:image:src" content="https://dengimo.ru/templates/dengimo/img/atmo.png"/>
 <meta name="twitter:url" content="https://dengimo.ru/"/>
 <meta name="twitter:domain" content="Dengimo.ru"/>
+<meta name="yandex-verification" content="6556cbcbeadce0e2" />
 
 <link rel="shortcut icon" type="image/png" href="/templates/dengimo/img/favicon.png">
 

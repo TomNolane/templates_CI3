@@ -28,6 +28,7 @@ if(!isset($description))
 	<meta name="twitter:image:src" content="https://mikrodengi.su/templates/mikrodengi/assets/img/credit-card.png"/>
 	<meta name="twitter:url" content="https://mikrodengi.su/"/>
 	<meta name="twitter:domain" content="Mikrodengi.su"/>
+    <meta name="yandex-verification" content="0a05c88b0b9b6980" />
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="/templates/mikrodengi/favicon/favicon-16x16.png" type="image/png">

@@ -16,3 +16,4 @@
 <meta name="twitter:image:src" content="https://dengibystra.ru/templates/dengibystra/assets/img/calc.png"/>
 <meta name="twitter:url" content="https://dengibystra.ru/"/>
 <meta name="twitter:domain" content="dengibystra.ru"/>
+<meta name="yandex-verification" content="aaec40ccd9c68a2b" />

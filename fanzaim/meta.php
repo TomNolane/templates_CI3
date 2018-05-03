@@ -17,3 +17,4 @@
 <meta name="twitter:image:src" content="https://fanzaim.ru/templates/fanzaim/assets/img/pic.png"/>
 <meta name="twitter:url" content="https://fanzaim.ru/"/>
 <meta name="twitter:domain" content="fanzaim.ru"/>
+<meta name="yandex-verification" content="1fd641cc40dbe219" />

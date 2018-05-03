@@ -13,11 +13,12 @@ if(!isset($description)) $description='Kreditker - лучший онлайн с�
     <meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
     <meta name="robots" content="all" />
     <meta name="copyright" lang="ru" content="Kreditker.ru" />
+    <meta name="yandex-verification" content="bf3922ba64611aed" />
     <!-- Favicons -->
     <link rel="shortcut icon" type="image/x-icon" href="/templates/kreditker/assets/favicon/favicon.ico" >
     <link rel="icon" type="image/png" href="/templates/kreditker/assets/favicon/favicon.png">
     <!-- CSS -->
-    <?php echo '<style>'; require 'templates/kreditker/assets/css/style.css'; echo '</style>'; ?> 
+    <?php echo '<style>'; require 'templates/kreditker/assets/css/style.min.css'; echo '</style>'; ?> 
 </head>
 <body>
 <header class="ex-main-header">

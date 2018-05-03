@@ -31,6 +31,7 @@ if(!isset($description))
 	<meta name="twitter:image:src" content="https://creditmir.ru/templates/creditmir/assets/img/pic.png"/>
 	<meta name="twitter:url" content="https://creditmir.ru/"/>
 	<meta name="twitter:domain" content="creditmir.ru"/>
+    <meta name="yandex-verification" content="cdd71c62eed446b1" />
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="/templates/creditmir/favicon/favicon-16x16.png" type="image/png">

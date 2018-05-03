@@ -16,3 +16,4 @@
 <meta name="twitter:image:src" content="https://dengoman.ru/templates/dengoman/assets/img/bg.jpg"/>
 <meta name="twitter:url" content="https://dengoman.ru/"/>
 <meta name="twitter:domain" content="dengoman.ru"/>
+<meta name="yandex-verification" content="b7ba27d876a1553c" />
