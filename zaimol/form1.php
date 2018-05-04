@@ -145,7 +145,7 @@
                 <div class="form-group">
 
             <div class="col-md-6 col-md-offset-4 text-right">
-                 <a  id="next1"><button class="ex-main-btn">Получить деньги</button></a>
+                <button class="ex-main-btn" id="next1" type="button">Получить деньги</button> 
             </div> 
             
                 </div>

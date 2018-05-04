@@ -1,0 +1,13 @@
+.spec_footer4 {
+    display: none;
+}
+
+.spec_footer5 {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 1170px;
+    }
+}
