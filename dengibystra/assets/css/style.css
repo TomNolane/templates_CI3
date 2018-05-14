@@ -1,11 +1,4 @@
 @charset "UTF-8";
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/*@@@@@@ Helper files import here @@@@@@*/
-/*@@@@@@ Core files import here @@@@@@*/
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,400,700&subset=cyrillic");
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url("/templates/dengibystra/assets/fonts/glyphicons-halflings-regular.eot");
@@ -122,7 +115,7 @@ ul li {
 @media (max-width: 991px) {
   /* line 85, sass/core/_global.scss */
   .ex-agreement-check label span {
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 4px;
   }
 }
@@ -3259,7 +3252,7 @@ th {
 
 /* line 1079, sass/library/_bootstrap.scss */
 html {
-  font-size: 10px;
+  font-size: 12px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -11655,8 +11648,8 @@ button.close {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
-  line-height: 9px;
+   font-size: 12px;
+  line-height: 14px;
   padding: 0 3px;
   color: #000;
 }
@@ -12128,14 +12121,14 @@ header .navbar-default {
 }
 /* line 219, sass/desktop/_start.scss */
 .ex-doc-block .ex-info-block p {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 19px;
   letter-spacing: 0.21px;
 }
 /* line 226, sass/desktop/_start.scss */
 .ex-doc-block .ex-condition p {
   padding-right: 15px;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 19px;
   letter-spacing: 0.21px;
   border-right: 1px solid rgba(51, 51, 51, 0.3);
@@ -12178,7 +12171,7 @@ header .navbar-default {
 /* line 264, sass/desktop/_start.scss */
 .ex-start-footer .ex-text {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 8px;
+  font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.21px;
 }
@@ -12563,7 +12556,7 @@ header .navbar-default {
 /* line 80, sass/desktop/_anketa1.scss */
 .ex-main-anketa-step1 .ex-anketa1-block .ex-anketa-foot label {
   padding-top: 35px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
 }
 
@@ -12821,7 +12814,7 @@ header .navbar-default {
 }
 /* line 34, sass/desktop/_zaim.scss */
 .ex-main-zaim .ex-info-block p {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 19px;
   letter-spacing: 0.3px;
   text-align: left;
@@ -12861,7 +12854,7 @@ header .navbar-default {
 @media (max-width: 992px) {
   /* line 59, sass/desktop/_zaim.scss */
   .ex-button-footer .ex-phone span {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 /* line 69, sass/desktop/_zaim.scss */
@@ -13320,7 +13313,7 @@ header .navbar-default {
 }
 /* line 172, sass/desktop/_form.scss */
 .ex-form .ex-anketa-foot label {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
 }
 
@@ -13445,7 +13438,7 @@ header .navbar-default {
     }
   }
   .special_form7 {
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
   .special_text_decor {
     text-decoration: none !important;
