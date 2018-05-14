@@ -111,7 +111,7 @@ ul li {
 @media (max-width: 991px) {
   /* line 85, sass/core/_global.scss */
   .ex-agreement-check label span {
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 4px;
   }
 }
@@ -3234,7 +3234,7 @@ th {
 
 /* line 1079, sass/library/_bootstrap.scss */
 html {
-  font-size: 10px;
+  font-size: 12px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -11621,8 +11621,8 @@ button.close {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
-  line-height: 9px;
+  font-size: 12px;
+  line-height: 12px;
   padding: 0 3px;
   color: #000;
 }
@@ -12096,14 +12096,14 @@ header .navbar-default {
 }
 /* line 219, sass/desktop/_start.scss */
 .ex-doc-block .ex-info-block p {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 19px;
   letter-spacing: 0.21px;
 }
 /* line 226, sass/desktop/_start.scss */
 .ex-doc-block .ex-condition p {
   padding-right: 15px;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 19px;
   letter-spacing: 0.21px;
   border-right: 1px solid rgba(51, 51, 51, 0.3);
@@ -12146,7 +12146,7 @@ header .navbar-default {
 }
 /* line 264, sass/desktop/_start.scss */
 .ex-start-footer .ex-text { 
-  font-size: 8px;
+  font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.21px;
 }
@@ -12531,7 +12531,7 @@ header .navbar-default {
 /* line 80, sass/desktop/_anketa1.scss */
 .ex-main-anketa-step1 .ex-anketa1-block .ex-anketa-foot label {
   padding-top: 35px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
 }
 

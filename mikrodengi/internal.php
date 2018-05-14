@@ -4,6 +4,11 @@ if ($this->uri->segment(1) == 'robots.txt')
 	header("Content-type: text/plain");
 	require 'internal-robots.txt.php';
 } 
+else if ($this->uri->segment(1) == 'yandex_0a05c88b0b9b6980.html') 
+{
+	header("Content-type: text/html");
+	require 'internal-yandex_0a05c88b0b9b6980.html.php';
+} 
 else
 {
 $my_title = ''; $description = ''; 

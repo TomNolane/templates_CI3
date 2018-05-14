@@ -9,14 +9,13 @@
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Zaimomix -->
 <ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-4970738258373085"
-data-ad-slot="2907993624"
-data-ad-format="auto"></ins>
+     style="display:block"
+     data-ad-client="ca-pub-9509439067407055"
+     data-ad-slot="9550526589"
+     data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-';
+</script>';
     }
 ?>
 <footer class="ex-main-footer ex-sticky-footer">

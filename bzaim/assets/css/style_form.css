@@ -24,13 +24,13 @@
     padding-bottom: 0px !important;
 }
 #passport_code::placeholder , #passportdate::placeholder{
-    font-size: 10px !important; 
+    font-size: 12px !important; 
 }
 #passport_code::-moz-placeholder, #passportdate::-moz-placeholder {
-    font-size: 10px !important; 
+    font-size: 12px !important; 
 }
 #passport_code::-webkit-input-placeholder, #passportdate::-webkit-input-placeholder {
-    font-size: 10px !important; 
+    font-size: 12px !important; 
 }
 .irs-single { 
      margin-left: -32px !important; 

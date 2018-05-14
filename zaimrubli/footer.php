@@ -7,15 +7,15 @@
     if($this->uri->segment(1) != 'form')
     {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Zaimrubli -->
-        <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="4313892605"
-        data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
+		<!-- Zaimrubli -->
+		<ins class="adsbygoogle"
+			 style="display:block"
+			 data-ad-client="ca-pub-9509439067407055"
+			 data-ad-slot="3879397504"
+			 data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>';
     }
 ?>
 

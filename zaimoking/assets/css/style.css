@@ -13638,3 +13638,6 @@ main.ex-offerta .ex-offers-content .ex-off-block.ex-offers-active figure {
     text-indent: 0;
   }
 }
+.adsbygoogle {
+	text-align: center !important;
+}
