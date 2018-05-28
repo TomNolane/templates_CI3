@@ -1,10 +1,11 @@
-<script type="text/javascript">
+<!-- Yandex.RTB R-A-243981-1 мобильная версия-->
+<script >
     (function(w, d, n, s, t) {
         w[n] = w[n] || [];
         w[n].push(function() {
             Ya.Context.AdvManager.render({
-                blockId: "R-A-257494-1",
-                renderTo: "yandex_rtb_R-A-257494-1",
+                blockId: "R-A-243981-1",
+                renderTo: "yandex_rtb_R-A-243981-1", 
                 async: true
             });
         });
@@ -16,13 +17,15 @@
         t.parentNode.insertBefore(s, t);
     })(this, this.document, "yandexContextAsyncCallbacks");
 </script>
-<script type="text/javascript">
+
+<!-- Yandex.RTB R-A-243981-3 декстоп версия-->
+<script >
     (function(w, d, n, s, t) {
         w[n] = w[n] || [];
         w[n].push(function() {
             Ya.Context.AdvManager.render({
-                blockId: "R-A-257494-3",
-                renderTo: "yandex_rtb_R-A-257494-3",
+                blockId: "R-A-243981-3",
+                renderTo: "yandex_rtb_R-A-243981-3",
                 async: true
             });
         });

@@ -28,156 +28,203 @@
     //pixel stat
     $this->load->model('pixel/pixel_model', 'pixel');
     $pixel = $this->pixel->stat('forzaim.ru');
+	echo '<style>';
+	require 'new2/css/lk.php';
+	echo '</style>';
 ?> 
 <div class="row container3"><div class="col-md-12">
     <h2 class="text-center hh">Вам доступен займ в следующих организациях:</h2>
     <div class="row"><br>
-    <?php
+    <?php 
+        function plural_type($n) { 
+            return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
+        } 
 
-                function plural_type($n) { 
-                    return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
-                } 
+        $_plural_years = array('год', 'года', 'лет');
+        $_plural_months = array('месяц', 'месяца', 'месяцев');
+        $_plural_days = array('дня', 'дня', 'дней');
+        $_plural_times = array('раз', 'раза', 'раз');
+        $temp = 0;
+        echo '<div class="row"><div class="col-md-12">';
 
-                $_plural_years = array('год', 'года', 'лет');
-                $_plural_months = array('месяц', 'месяца', 'месяцев');
-                $_plural_days = array('дня', 'дня', 'дней');
-                $_plural_times = array('раз', 'раза', 'раз');
-                $temp = 0;
-                echo '<div class="row"><div class="col-md-12">';
-                foreach($data as $item)
-                {
-                    $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-                    $item['link'] = str_replace("#site", $domen, $item['link']);
-                    $temp++;  
+        if($site == 'www.mikrodengi' || $site == 'zaimrubli' || $site == 'zaimoking' || $site == 'mikrodengi')
+        { 
+            $data =
+            array(
+                array(
+                    "title" => "Joymoney",
+                    "img" => "joymoney",
+                    "link" => "https://pxl.leads.su/click/78c807326632d9d7f3a349d8deb274da",
+                    "amount" => "15000",
+                    "percent" => "2.17",
+                    "min_year" => "23",
+                    "max_year" => "60"
+                ),
+                array(
+                    "title" => "Turbozaim",
+                    "img" => "turbozaim",
+                    "link" => "https://pxl.leads.su/click/6ba7ae168c5ee3ab53249ea0f1e49639",
+                    "amount" => "15000",
+                    "percent" => "2.24",
+                    "min_year" => "21",
+                    "max_year" => "65"
+                ),
+                array(
+                    "title" => "Webbankir",
+                    "img" => "webbankir",
+                    "link" => "https://pxl.leads.su/click/38fbd5462215ebee706341e37d676de9",
+                    "amount" => "15000",
+                    "percent" => "1.2",
+                    "min_year" => "19",
+                    "max_year" => "100"
+                ),
+                array(
+                    "title" => "Zaymer",
+                    "img" => "zaymer",
+                    "link" => "https://pxl.leads.su/click/42beacd5c7e1821bd686e859764a3038",
+                    "amount" => "30000",
+                    "percent" => "0.63",
+                    "min_year" => "18",
+                    "max_year" => "75"
+                ),
+                array(
+                    "title" => "Moneyman",
+                    "img" => "moneyman",
+                    "link" => "https://pxl.leads.su/click/d8cd8d3c0609d6a1d64224cc5f34794c",
+                    "amount" => "70000",
+                    "percent" => "1.2",
+                    "min_year" => "18",
+                    "max_year" => "75"
+                ),
+                array(
+                    "title" => "Greenmoney",
+                    "img" => "greenmoney",
+                    "link" => "https://pxl.leads.su/click/eb65403ecfc4a0942f39b36b385b7ec6",
+                    "amount" => "24000",
+                    "percent" => "0.95",
+                    "min_year" => "20",
+                    "max_year" => "86"
+                ),
+                array(
+                    "title" => "Ekapusta",
+                    "img" => "ekapusta",
+                    "link" => "https://pxl.leads.su/click/525a5dc7fe8996ea2b16b29a88aa9a62",
+                    "amount" => "30000",
+                    "percent" => "0.00",
+                    "min_year" => "18",
+                    "max_year" => "100"
+                ),
+                array(
+                    "title" => "Payps",
+                    "img" => "payps",
+                    "link" => "https://pxl.leads.su/click/cdf9ddc320b369b2f0b2747fee736f0a",
+                    "amount" => "10000",
+                    "percent" => "1.9",
+                    "min_year" => "18",
+                    "max_year" => "80"
+                )
+            ); 
+        } 
 
-                    if($temp==5)
-                    {
-                        echo '</div></div><div class="row"><div class="col-md-12">';
-                        // echo '<div class="col-md-4 offers" >
-                        // <figure class="text-center hh2"><br> 
-                        //     <div> 
 
-                        //     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        //     <!-- Блок пикселя рублимо -->
-                        //     <ins class="adsbygoogle"
-                        //         style="display:inline-block;width:250px;height:290px"
-                        //         data-ad-client="ca-pub-4970738258373085"
-                        //         data-ad-slot="3833536790"></ins>
-                        //     <script>
-                        //     (adsbygoogle = window.adsbygoogle || []).push({});
-                        //     </script> 
-                            
-                        //     </div> 
-                        //     <br></figure>
-                        // </div>';
-                        // echo '<div class="col-md-4 offers" >
-                        // <figure class="text-center hh2"><br> 
-                        //     <div> 
+        foreach($data as $item)
+        {
+            
 
-                        //     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        //     <!-- Блок пикселя рублимо -->
-                        //     <ins class="adsbygoogle"
-                        //         style="display:inline-block;width:250px;height:290px"
-                        //         data-ad-client="ca-pub-4970738258373085"
-                        //         data-ad-slot="3833536790"></ins>
-                        //     <script>
-                        //     (adsbygoogle = window.adsbygoogle || []).push({});
-                        //     </script> 
-                            
-                        //     </div> 
-                        //     <br></figure>
-                        // </div>';
-                        // echo '<div class="col-md-4 offers" >
-                        // <figure class="text-center hh2"><br> 
-                        //     <div> 
+            $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
+            $item['link'] = str_replace("#site1", ucfirst($domen), $item['link']);
+            $item['link'] = str_replace("#site", $domen, $item['link']);
+            $temp++;  
 
-                        //     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        //     <!-- Блок пикселя рублимо -->
-                        //     <ins class="adsbygoogle"
-                        //         style="display:inline-block;width:250px;height:290px"
-                        //         data-ad-client="ca-pub-4970738258373085"
-                        //         data-ad-slot="3833536790"></ins>
-                        //     <script>
-                        //     (adsbygoogle = window.adsbygoogle || []).push({});
-                        //     </script> 
-                            
-                        //     </div> 
-                        //     <br></figure>
-                        // </div></div></div><div class="col-md-12">';
-                    }
+            if($temp==5)
+            {
+                echo '</div></div><div class="row"><div class="col-md-12">';
+                // echo '<div class="col-md-4 offers" >
+                // <figure class="text-center hh2"><br> 
+                //     <div> 
 
-                    echo '<div class="col-md-3 offers" ><br>
-                        <figure class="text-center hh1">
-                            <span class="fa fa-star ex-checked-stars"></span>
-                            <span class="fa fa-star ex-checked-stars"></span>
-                            <span class="fa fa-star ex-checked-stars"></span>
-                            <span class="fa fa-star ex-checked-stars"></span>
-                            <div class="ex-wrapper"><br><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
-                            <img class="lk-img img-responsive" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
-                        </a></div> 
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td class="wordwrap">Макс. сумма:</td>
-                                    <td class="wordwrap">'.number_format($item['amount'],0,'',' ').'<i></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="wordwrap">Основная ставка</td>
-                                    <td class="wordwrap">'.$item['percent'].'%</td>
-                                </tr>
-                                <tr>
-                                    <td>Возраст</td>
-                                    <td class="wordwrap">от '.$item['min_year'].' до '.$item['max_year'].'</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn">Получить деньги</button></a>
-                        </figure><br>
-                        </div>'; 
+                //     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                //     <!-- Блок пикселя рублимо -->
+                //     <ins class="adsbygoogle"
+                //         style="display:inline-block;width:250px;height:290px"
+                //         data-ad-client="ca-pub-4970738258373085"
+                //         data-ad-slot="3833536790"></ins>
+                //     <script>
+                //     (adsbygoogle = window.adsbygoogle || []).push({});
+                //     </script> 
                     
-                }
-                echo '</div></div>';
-                echo '<div class="row"><div class="col-md-12">';
-                        echo '<div class="col-md-4 offers" >
-                        <figure class="text-center hh2"> 
+                //     </div> 
+                //     <br></figure>
+                // </div>';
+                // echo '<div class="col-md-4 offers" >
+                // <figure class="text-center hh2"><br> 
+                //     <div> 
 
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- Блок пикселя рублимо -->
-                            <ins class="adsbygoogle"
-                                style="display: block; width: 450px; margin: 0px 0px 15px 1px; overflow: hidden; border-radius: 5px; background-color: rgb(250, 250, 250); box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 5px; max-height: 149px; height: 149px;"
-                                data-ad-client="ca-pub-4970738258373085"
-                                data-ad-slot="3833536790"></ins>
-                            <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>  
-                            <br></figure>
-                        </div>';
-                        echo '<div class="col-md-4   offers" >
-                        <figure class="text-center hh2"> 
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- Блок пикселя рублимо -->
-                            <ins class="adsbygoogle"
-                                style="display: block; width: 450px; margin: 0px 0px 15px 1px; overflow: hidden; border-radius: 5px; background-color: rgb(250, 250, 250); box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 5px; max-height: 149px; height: 149px;"
-                                data-ad-client="ca-pub-4970738258373085"
-                                data-ad-slot="3833536790"></ins>
-                            <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>  
-                            <br></figure>
-                        </div>';
-                        echo '<div class="col-md-4   offers" >
-                        <figure class="text-center hh2"> 
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- Блок пикселя рублимо -->
-                            <ins class="adsbygoogle"
-                                style="display: block; width: 450px; margin: 0px 0px 15px 1px; overflow: hidden; border-radius: 5px; background-color: rgb(250, 250, 250); box-shadow: rgba(255, 255, 255, 0.7) 0px 0px 5px; max-height: 149px; height: 149px;"
-                                data-ad-client="ca-pub-4970738258373085"
-                                data-ad-slot="3833536790"></ins>
-                            <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>  
-                            <br></figure>
-                        </div></div>';
+                //     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                //     <!-- Блок пикселя рублимо -->
+                //     <ins class="adsbygoogle"
+                //         style="display:inline-block;width:250px;height:290px"
+                //         data-ad-client="ca-pub-4970738258373085"
+                //         data-ad-slot="3833536790"></ins>
+                //     <script>
+                //     (adsbygoogle = window.adsbygoogle || []).push({});
+                //     </script> 
+                    
+                //     </div> 
+                //     <br></figure>
+                // </div>';
+                // echo '<div class="col-md-4 offers" >
+                // <figure class="text-center hh2"><br> 
+                //     <div> 
+
+                //     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                //     <!-- Блок пикселя рублимо -->
+                //     <ins class="adsbygoogle"
+                //         style="display:inline-block;width:250px;height:290px"
+                //         data-ad-client="ca-pub-4970738258373085"
+                //         data-ad-slot="3833536790"></ins>
+                //     <script>
+                //     (adsbygoogle = window.adsbygoogle || []).push({});
+                //     </script> 
+                    
+                //     </div> 
+                //     <br></figure>
+                // </div></div></div><div class="col-md-12">';
+            }
+
+            echo '<div class="col-md-3 offers" ><br>
+                <figure class="text-center hh1">
+                    <span class="fa fa-star ex-checked-stars"></span>
+                    <span class="fa fa-star ex-checked-stars"></span>
+                    <span class="fa fa-star ex-checked-stars"></span>
+                    <span class="fa fa-star ex-checked-stars"></span>
+                    <div class="ex-wrapper"><br><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
+                    <img class="lk-img img-responsive" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
+                </a></div> 
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td class="wordwrap">Макс. сумма:</td>
+                            <td class="wordwrap">'.number_format($item['amount'],0,'',' ').'<i></i></td>
+                        </tr>
+                        <tr>
+                            <td class="wordwrap">Основная ставка</td>
+                            <td class="wordwrap">'.$item['percent'].'%</td>
+                        </tr>
+                        <tr>
+                            <td>Возраст</td>
+                            <td class="wordwrap">от '.$item['min_year'].' до '.$item['max_year'].'</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn">Получить деньги</button></a>
+                </figure><br>
+                </div>'; 
+            
+        }
+        echo '</div></div>';
+        echo '<div class="row"><div class="col-md-12">';
+        echo '</div></div>'; 
             ?>
     </div></div>
 </div>

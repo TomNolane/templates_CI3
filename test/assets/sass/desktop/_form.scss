@@ -1,261 +1,205 @@
-.ex-form{
-  padding-top: 65px;
-  padding-bottom: 60px;
-  h1{
-    margin-top: 0;
-    margin-bottom: 65px;
+.ex-form-page-nav{
+  border-bottom: 1px solid rgba(#333333, 0.3);
+}
+
+.ex-form {
+  margin-bottom: 100px;
+  h1 {
+    margin-bottom: 40px;
   }
-  .ex-indicator-scope{
-    margin-bottom: 110px;
-    &.nav-tabs{
-      border-bottom: none;
+  .ex-calc-wraper{
+    padding-top: 45px;
+    margin-bottom: 15px;
+  }
+  .form-horizontal {
+    .form-group {
+      margin-right: 0!important;
+      margin-left: 0!important;
+      padding-bottom:  0!important;
     }
-    figure{
+  }
+  .ex-anketa-head {
+    box-shadow: 0 2px 0 #f0f2f7;
+    border-radius: 4px 4px 0 0;
+    background-color: #122a4a;
+    p {
+      padding: 35px;
+      color: #ffffff;
+      font-family: $roboto;
+      font-size: 18px;
+      font-weight: 900;
+      a {
+        color: #fff;
+      }
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+  }
+  .ex-anketa-main {
+    margin-top: -10px;
+    .col-xs-8 {
+      padding-top: 18px;
+    }
+    padding-bottom: 30px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    .ex-range-scope{
+      margin-top: 25px;
+      @media (max-width: 767px) {
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+    }
+    #ex-slider-val {
       position: relative;
-      display: inline-block;
-      &.ex-first-step{
-        cursor: pointer;
-        width: 28px;
-        height: 28px;
-        border: 2px solid $indicatorBlue;
-        margin-right: 8px;
-        @include prefix(border-radius, 50%);
-        &:after{
-          content: '';
-          position: absolute;
-          width: 6px;
-          height: 6px;
-          background-color: $indicatorBlue;
-          top: 50%;
-          margin-top: -3px;
-          left: 50%;
-          margin-left: -3px;
-          @include prefix(border-radius, 50%);
-        }
-        p{
-          left: -100%;
-        }
+      padding-left: 45px;
+      height: 50px;
+      margin-top: 35px;
+      border-radius: 4px;
+      border: none;
+      background-color: #eef2f7;
+      color: #000000;
+      font-size: 32px;
+      font-weight: 100;
+      line-height: 48px;
+      letter-spacing: 0.86px;
+      i {
+        vertical-align: middle;
+        margin-left: 25px;
+        width: 17px;
+        height: 29px;
+        display: inline-block;
+        background: url(../img/shape.png) no-repeat;
+        -webkit-background-size: contain;
       }
-      &.ex-second-step{
-        text-align: center;
-        width: calc(100% - 80px);
-        &:before{
-          content: '';
-          position: absolute;
-          height: 2px;
-          left: 0;
-          top: 50%;
-          margin-top: -3px;
-          width: 50%;
-          z-index: -1;
-          background-color: $font;
-        }
-        &:after{
-          content: '';
-          position: absolute;
-          height: 2px;
-          right: 0;
-          top: 50%;
-          margin-top: -3px;
-          width: 50%;
-          z-index: -1;
-          background-color: $font;
-        }
-        div{
-          position: relative;
-          display: inline-block;
-          width: 44px;
-          background-color: $white;
-          span{
-            cursor: pointer;
-            position: relative;
-            display: inline-block;
-            width: 28px;
-            height: 28px;
-            border: 2px solid $indicatorPassive;
-            @include prefix(border-radius, 50%);
-            &:after{
-              content: '';
-              position: absolute;
-              width: 6px;
-              height: 6px;
-              background-color: $font;
-              top: 50%;
-              margin-top: -3px;
-              left: 50%;
-              margin-left: -3px;
-              @include prefix(border-radius, 50%);
-            }
-          }
-        }
-        p{
-          width: 100%;
-          bottom: -59px;
-        }
+      @media (max-width: 991px) {
+        padding: 0;
+
       }
-      &.ex-last-step{
-        cursor: pointer;
-        width: 28px;
-        height: 28px;
-        border: 2px solid $indicatorPassive;
-        margin-left: 8px;
-        @include prefix(border-radius, 50%);
-        &:after{
-          content: '';
-          position: absolute;
-          width: 6px;
-          height: 6px;
-          background-color: $font;
-          top: 50%;
-          margin-top: -3px;
-          left: 50%;
-          margin-left: -3px;
-          @include prefix(border-radius, 50%);
-        }
-        p{
-          width: 72px;
-          left: -100%;
-        }
-      }
-      p{
-        position: absolute;
-        text-transform: uppercase;
-        font-weight: 700;
-        bottom: -66px;
-        text-align: center;
-        @media (max-width: 414px) {
-          display: none;
-        }
-        @media (max-width: 767px) {
-          font-size: 13px;
-        }
+      @media (max-width: 767px) {
+        padding: 0;
+        margin-bottom: 20px;
+        margin-top: 0;
+        font-size: 22px;
       }
     }
 
-    &.ex-on-second-step{
-      .ex-second-step{
-        &:before{
-          background-color: $indicatorBlue;
-        }
-        div{
-          span{
-            border: 2px solid $indicatorBlue;
-            &:after{
-              background-color: $indicatorBlue;
-            }
-          }
-        }
-      }
+    @media (max-width: 767px) {
+      padding: 5px 30px;
     }
-    &.ex-on-last-step{
-      .ex-second-step{
-        &:before{
-            background-color: $indicatorBlue;
-        }
-        &:after{
-          background-color: $indicatorBlue;
-        }
-        div{
-          span{
-            border: 2px solid $indicatorBlue;
-            &:after{
-              background-color: $indicatorBlue;
-            }
-          }
-        }
-      }
-      .ex-last-step{
-        border: 2px solid $indicatorBlue;
-        &:after{
-          background-color: $indicatorBlue;
-        }
-      }
-    }
-  }
-  form{
-    #ex-main-slider-range{
-      .ex-range-slider{
-        padding-top: 15px;
-        background-color: $white;
-      }
-      .ex-slider-info{
-        margin-top: initial;
-        padding-top: 6px;
-      }
-      .irs{
-        bottom: 6px!important;
-      }
-    }
-    .form-group{
-      margin-bottom: 20px;
-      label{
-        padding-top: 15px;
-        color: $label;
-        font-weight: 700;
-      }
-      .ex-wrapper{
-        position: relative;
+    .form-group {
+      padding-bottom: 18px;
+      &.ex-error{
         input{
-          font-weight: 700;
-          height: 50px;
+          border: 1px solid #d0021b;
+          background-color: #e6e5e6;
           @include placeholder{
+            color: #c30016;
+            font-size: 14px;
             font-weight: 400;
           }
         }
       }
-      select{
-        height: 50px;
-        font-weight: 700;
-      }
-      &.ex-error{
-        .ex-wrapper{
-          input{
-            box-shadow: none;
-            outline: none;
-            padding-right: 30px;
-            color: $error;
-            @include placeholder{
-              color: $error;
-            }
-            &:focus{
-              border: 1px solid #ccc;
-              outline: none;
-            }
-          }
-          &:before{
-            content: '';
-            position: absolute;
-            top: 50%;
-            margin-top: -6px;
-            right: 15px;
-            width: 7px;
-            height: 13px;
-            background: url(../img/question-icon.png) no-repeat;
-          }
-        }
-        p{
-          font-size: 12px;
-          margin-top: 6px;
-          margin-bottom: 0;
-          color: $error;
+      &.ex-arrow-on{
+        position: relative;
+        &:before{
+          z-index: 0;
+          content: '';
+          position: absolute;
+          top: 45px;
+          right: 20px;
+          width: 12px;
+          height: 9px;
+          background-image: url(../img/unqiue-arrow.png);
+          background-repeat: no-repeat;
         }
       }
-    }
-    .ex-agreement-check{
-      label{
-        padding-top: 0;
+      label {
+        display: block;
+        color: #a3a9b1;
+        font-family: $roboto;
+        font-size: 12px;
+        font-weight: 300;
       }
-    }
-    .ex-main-btn{
-      float: right;
-      width: initial;
-      text-transform: capitalize;
-      padding: 15px 45px;
-      margin-top: 25px;
-      @media (max-width: 600px) {
+      input {
         width: 100%;
-        padding: 15px 0;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #eef2f7;
+        outline: none;
+        border: none;
+        padding: 15px 5px 15px 35px;
+        color: #000000;
+        font-family: $roboto;
+        font-size: 18px;
+        font-weight: 300;
+        &:focus {
+          border: 1px solid #eef2f7;
+          background-color: #fff;
+          display: block;
+        }
+      }
+      select {
+        width: 100%;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #eef2f7;
+        outline: none;
+        border: none;
+        padding: 15px 45px 15px 35px;
+        color: #000000;
+        font-size: 18px;
+        font-weight: 300;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
       }
     }
+  }
+  .ex-anketa-foot {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    background-color: #f7f9fb;
+    border-top: 2px solid #eef1f6;
+    .ex-main-btn {
+      font-size: 14px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-weight: 300;
+      color: #000;
+    }
+    label {
+      font-size: 10px;
+      font-weight: 300;
+
+    }
+  }
+
+}
+
+#secondTabContent{
+  .ex-anketa-main{
+    padding-top: 45px;
+  }
+  .ex-main-btn{
+    @media (max-width: 767px) {
+      width: 90%;
+      margin: 15px auto;
+      display: block;
+    }
+  }
+}
+
+#lastTabContent{
+  .ex-anketa-main{
+    padding-top: 45px;
+  }
+  .ex-main-btn{
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    text-transform: uppercase;
+    font-size: 18px!important;
   }
 }

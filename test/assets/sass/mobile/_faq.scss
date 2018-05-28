@@ -1,0 +1,35 @@
+.ex-mob-faq {
+  margin: 0 10px 31px 10px ;
+  h1 {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 100;
+  }
+  .ex-mob-faq-block {
+    margin-bottom: 24px;
+    padding: 14px 8px 13px 16px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border-left: 22px solid $yellowBtn;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 100;
+      line-height: 24px;
+      letter-spacing: 0.76px;
+    }
+    p{
+      color: #242424;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 24px;
+      letter-spacing: 0.1px;
+    }
+  }
+
+}

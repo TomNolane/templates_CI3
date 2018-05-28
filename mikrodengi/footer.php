@@ -4,16 +4,22 @@
         echo '<a href="#0" class="cd-top">Наверх</a>';
     } 
 
+    if($this->uri->segment(1) != 'form')
+    {
+        
+    }
+
     echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Микроденьги -->
-        <ins class="adsbygoogle text-center"
-             style="display:block"
-             data-ad-client="ca-pub-2018999784099007"
-             data-ad-slot="1587330252"
-             data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+		<!-- Mikrodengi -->
+		<ins class="adsbygoogle"
+		style="display:block"
+		data-ad-client="ca-pub-2169296404508755"
+		data-ad-slot="2651789746"
+		data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
         ';
 ?>
 
@@ -793,9 +799,9 @@ if ($this->uri->segment(1) == 'form')
 <script>
 function markTarget(target,param, id) 
 {
-    if (typeof yaCounter47337993 == 'undefined') return;
-	if (typeof param == 'undefined') yaCounter47337993.reachGoal(target);
-	else yaCounter47337993.reachGoal(target,param);
+    if (typeof yaCounter49039169 == 'undefined') return;
+	if (typeof param == 'undefined') yaCounter49039169.reachGoal(target);
+	else yaCounter49039169.reachGoal(target,param);
         
         $.ajax({
             type: 'POST',

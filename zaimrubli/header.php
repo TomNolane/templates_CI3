@@ -31,6 +31,7 @@ if(!isset($description))
 	<meta name="twitter:image:src" content="https://zaimrubli.ru/templates/zaimrubli/assets/img/rubles.png"/>
 	<meta name="twitter:url" content="https://zaimrubli.ru/"/>
 	<meta name="twitter:domain" content="zaimrubli.ru"/>
+	<meta name="mailru-verification" content="f0c5e62cb4eabad4" />
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="/templates/zaimrubli/favicon/favicon-16x16.png" type="image/png">

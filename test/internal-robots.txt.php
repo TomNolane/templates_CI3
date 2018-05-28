@@ -1,5 +1,5 @@
 User-agent: *
 Disallow: /addnew/
 Disallow: /validate/phone/
-sitemap: https://zaimhome.ru/sitemap_zaimhome.xml
-Host: https://zaimhome.ru
+sitemap: https://bzaim5.ru/sitemap_bzaim5.xml
+Host: https://bzaim5.ru

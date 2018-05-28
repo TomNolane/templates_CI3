@@ -6,15 +6,17 @@
 
     if($this->uri->segment(1) != 'form')
     {
-        echo '<!-- Zaimoking -->
-        <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="1833795772"
-        data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
+        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- Zaimoking -->
+		<ins class="adsbygoogle"
+		style="display:block"
+		data-ad-client="ca-pub-2169296404508755"
+		data-ad-slot="6316413023"
+		data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+';
     }
 ?>
 
@@ -627,9 +629,9 @@
 <script>
 function markTarget(target,param, id) 
 {
-    if (typeof yaCounter47410882 == 'undefined') return;
-	if (typeof param == 'undefined') yaCounter47410882.reachGoal(target);
-	else yaCounter47410882.reachGoal(target,param);
+    if (typeof yaCounter49039196 == 'undefined') return;
+	if (typeof param == 'undefined') yaCounter49039196.reachGoal(target);
+	else yaCounter49039196.reachGoal(target,param);
         
         $.ajax({
             type: 'POST',

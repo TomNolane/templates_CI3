@@ -16,6 +16,7 @@ if(!isset($description))
 	<meta name="Description" content="<?php echo $description;?>" />
 	<meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 	<meta name="robots" content="all" />
+	<meta name="mailru-verification" content="4d2b3c2a9b422d39" />
 	<meta name="copyright" lang="ru" content="Mikrodengi.su" /> 
 	<meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 	<meta property="og:description" content="mikrodengi - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
@@ -29,6 +30,7 @@ if(!isset($description))
 	<meta name="twitter:url" content="https://mikrodengi.su/"/>
 	<meta name="twitter:domain" content="Mikrodengi.su"/>
     <meta name="yandex-verification" content="0a05c88b0b9b6980" />
+	<meta name="mailru-verification" content="4d2b3c2a9b422d39" />
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="/templates/mikrodengi/favicon/favicon-16x16.png" type="image/png">

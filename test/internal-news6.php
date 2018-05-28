@@ -8,7 +8,7 @@
         <b>Как получить займ через систему Contact без отказа?</b>
     </h3>
     <center>
-        <img src="/templates/zaimhome/assets/img/contact-zaim.png" alt="contact-zaim.png" class="img-responsive special_news">
+        <img src="/templates/test/assets/img/contact-zaim.png" alt="contact-zaim.png" class="img-responsive special_news">
 </div>
 </center>
 <p>Жизнь сегодня течет куда быстрее, чем 100, 50 и даже 10 лет назад. Человечество постоянно куда-то очень торопится и почему-то всегда опаздывает. Темп, задаваемый миром, требует все более быстрого принятия решений в любой ситуации.</p>

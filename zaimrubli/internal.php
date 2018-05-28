@@ -1,4 +1,10 @@
 <?php 
+if ($this->uri->segment(1) == 'mailru-verificationf0c5e62cb4eabad4.html') 
+{
+	header("Content-type: text/html");
+	require 'internal-mailru-verificationf0c5e62cb4eabad4.html.php';
+	return;
+} 
 $my_title = ''; $description = ''; 
 switch($this->uri->segment(1))
 {

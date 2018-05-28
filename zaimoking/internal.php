@@ -4,6 +4,11 @@ if ($this->uri->segment(1) == 'robots.txt')
 	header("Content-type: text/plain");
 	require 'internal-robots.txt.php';
 } 
+else  if ($this->uri->segment(1) == 'mailru-verification3f714b7beeabd383.html') 
+{
+	header("Content-type: text/html");
+	require 'internal-mailru-verification3f714b7beeabd383.html.php';
+} 
 else
 {
 $my_title = ''; $description = ''; 

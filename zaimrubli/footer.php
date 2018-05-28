@@ -9,13 +9,14 @@
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<!-- Zaimrubli -->
 		<ins class="adsbygoogle"
-			 style="display:block"
-			 data-ad-client="ca-pub-9509439067407055"
-			 data-ad-slot="3879397504"
-			 data-ad-format="auto"></ins>
+		style="display:block"
+		data-ad-client="ca-pub-2169296404508755"
+		data-ad-slot="1510098464"
+		data-ad-format="auto"></ins>
 		<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>';
+		</script>
+';
     }
 ?>
 
@@ -556,9 +557,9 @@ echo '</script>';
 
 <script>
     function markTarget(target, param, id) {
-        if (typeof yaCounter47142942 == 'undefined') return;
-        if (typeof param == 'undefined') yaCounter47142942.reachGoal(target);
-        else yaCounter47142942.reachGoal(target, param);
+        if (typeof yaCounter49039130 == 'undefined') return;
+        if (typeof param == 'undefined') yaCounter49039130.reachGoal(target);
+        else yaCounter49039130.reachGoal(target, param);
 
         $.ajax({
             type: 'POST',

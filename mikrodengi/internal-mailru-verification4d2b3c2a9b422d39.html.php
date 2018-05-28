@@ -1,0 +1,1 @@
+<?php echo 'mailru-verification: 4d2b3c2a9b422d39';?>

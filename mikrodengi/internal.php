@@ -8,6 +8,11 @@ else if ($this->uri->segment(1) == 'yandex_0a05c88b0b9b6980.html')
 {
 	header("Content-type: text/html");
 	require 'internal-yandex_0a05c88b0b9b6980.html.php';
+}
+else if ($this->uri->segment(1) == 'mailru-verification4d2b3c2a9b422d39.html') 
+{
+	header("Content-type: text/html");
+	require 'internal-mailru-verification4d2b3c2a9b422d39.html.php';
 } 
 else
 {
