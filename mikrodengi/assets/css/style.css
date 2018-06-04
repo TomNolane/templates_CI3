@@ -14015,3 +14015,6 @@ main.ex-offerta .ex-offers-content .ex-off-block .ex-main-btn {
 .ex-article .ex-article-bg p:last-of-type {
   margin-bottom: 0;
 }
+.adsbygoogle {
+	text-align: center !important;
+}

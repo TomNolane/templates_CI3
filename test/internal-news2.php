@@ -8,7 +8,7 @@
         <b>Как получить онлайн-кредит на кошелек Яндекс.Деньги?</b>
     </h3>
     <center>
-        <img src="/templates/test/assets/img/yandex.jpg" alt="yandex.jpg" class="img-responsive special_news">
+        <img src="/templates/zaimhome/assets/img/yandex.jpg" alt="yandex.jpg" class="img-responsive special_news">
 </div>
 </center>
 <p>Оформление займа на Яндекс.Кошелек - самый быстрый способ получить нужную сумму. Перевод осуществляется буквально в течение

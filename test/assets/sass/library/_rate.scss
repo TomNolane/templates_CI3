@@ -9,6 +9,12 @@
   display: inline-block;
 }
 
+.j-rating .top {
+  white-space: nowrap;
+  overflow: hidden;
+  color: $stars;
+}
+
 .j-rating .bottom {
   position: absolute;
   top: 0;

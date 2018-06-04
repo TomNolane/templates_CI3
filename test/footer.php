@@ -1,12 +1,12 @@
-<?php $from = '15'; 
+<?php $from = '15'; $px = '63.974'; 
 if($this->uri->segment(1) != 'form')
 {
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Бзайм5 -->
+    <!-- Займхоум -->
     <ins class="adsbygoogle text-center"
     style="display:block"
     data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="6411748383"
+    data-ad-slot="4797028786"
     data-ad-format="auto"></ins>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
@@ -17,86 +17,34 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
 {
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') {
-echo 'Hello World, <b id="who">?</b>!<footer class="ex-start-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8">
-                <div class="ex-footer-logo">
-                    <a href="/">
-                        <img src="templates/test/assets/img/logo-foot.png" alt="logo-foot.png"> 
-                    </a>
-                </div>
-                <p class="ex-text spec_footer4">
-                    Займы предоставляются на сумму от 1 000 до 1 000 000 рублей включительно на срок от 61 дня до 5 лет. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: support@bzaim5.ru  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
-                    <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001. Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
-                </p>
-            </div>
-            <div class="col-sm-1"></div>
-            <div class="col-sm-3 hidden-xs hidden-sm spec_footer5">
-                <p class="ex-list-title">Документы</p>
-                <ul>
-                    <li>
-                        <a href="/documents">Правовые документы</a>
-                    </li>
-                    <li>
-                        <a href="/oferta">Публичная оферта</a>
-                    </li>
-                    <li>
-                        <a href="/contract">Пользовательское соглашение</a>
-                    </li>
-                    <li>
-                        <a href="/agreement">Согласие на обработку данных</a>
-                    </li>
-                    <li>
-                        <a href="/rules">Правила предоставления займов</a>
-                    </li>
-                </ul>
-            </div> 
-        </div>
-    </div>
-</footer>';
-}
-else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
-{
-    echo '<footer class="ex-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="text-center">
-                        <a href="/"><img src="templates/test/assets/img/logo-2.png" alt="logo-2"></a>
-                        <p class="spec_footer4">Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
-                           support@bzaim5.ru <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>';
-}
-else if($this->uri->segment(1) == 'form' )
-{
-    echo '<footer class="ex-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="text-center">
-                        <a href="/"><img src="/templates/test/assets/img/logo-2.png" alt="logo-2.png"></a>
-                        <p class="spec_footer4">Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
-                            <a href="mailto:support@bzaim5.ru" target="_blank">support@bzaim5.ru</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>';
-}
+
 ?>
+<footer class="ex-main-footer">
+<div class="container" style="width: 100%">
+    <div class="col-sm-3 text-center">
+        <div class="ex-footer-logo">
+            <a href="/"><img src="/templates/zaimhome/assets/img/header-logo.png" alt="Missing image" class="special_foot22"></a>
+        </div> 
+        <p class="special_footer3 ">Сервис выгодного онлайн займа</p>
+    </div>
+    <div class="col-sm-3 small spec_footer4 ">
+        <p>Сервис по подбору выгодных онлайн займов
+            <br>находящийся по адресу
+            <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
+            <br><a href="mailto:support@zaimhome.ru" target="_blank">support@zaimhome.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
+    </div>
+    <div class="col-sm-6 hidden-xs hidden-sm spec_footer5">
+        <p style="font-size: 85%;">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</p>
+    </div>
+</div>
+</footer>
 <!-- [if lt IE 10]>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif] --> 
 
 <!-- common JS -->
+<script>
 <?php
-    echo '<script>'; 
     echo 'try{';
     require 'footer_common_js.php';
     echo '/* private JS */';
@@ -105,8 +53,10 @@ else if($this->uri->segment(1) == 'form' )
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
  
         $("#rangeSlider").ionRangeSlider({
-        hide_min_max: false, 
-        keyboard: true, 
+        hide_min_max: true,
+        hide_from_to: true,
+        keyboard: true,
+        grid: false,
         from: <?php 
         if($this->input->get('amount') != '')
         {  
@@ -157,7 +107,7 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
             echo $from; 
         }
         elseif($this->input->post('form_slrd') == '') echo '15'; else echo $this->input->post('form_slrd'); ?>,
-        values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000, 110000, 120000, 130000, 140000, 150000, 160000, 170000, 180000, 190000, 200000, 250000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000],
+        values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
         onChange: function (range3) {
                  if (range3.from_value <= 10000) {
                     $("#period").val("7");
@@ -195,10 +145,6 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
 
                 $("#amount").val(range3.from_value);
                 $("#form_slrd").val(range3.from);
-                $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
-            },
-            onFinish: function (range3) {
-                $('.irs-single').text('').append("<span>&nbsp;&nbsp;"+ range3.from_value+"&nbsp;&nbsp;рублей&nbsp;&nbsp;</span>");
             }
         }); 
         <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {?>
@@ -248,21 +194,21 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
                 $('#period2').val('От 250 до 365 дней');
                 $('#percent').val('65');
             }
-            $('.irs-single').text('вероятность ' + $('#percent').val() + '%');
+            $('#amount').val(slider.result.from_value);
             $("#form_slrd").val(slider.result.from);
         }, 50); 
-        traffic("bzaim5.ru",0);
+        traffic("zaimhome.ru",0);
 <?php }
 }
 elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {
     include "templates/common/new2/js/lk.js";      
-    echo 'traffic("bzaim5.ru",4);'; 
+    echo 'traffic("zaimhome.ru",4);'; 
 
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic("bzaim5.ru",9);'; 
+    echo 'traffic("zaimhome.ru",9);'; 
 }
 else if($this->uri->segment(1) == 'form')
 { } 
@@ -275,53 +221,25 @@ echo "}catch(e){console.log('Ошибка ' + e.name + \":\" + e.message + \"\\n
     if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
     {     
         echo '<!-- Google Code for  
-        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103;  
-        (&#1073;&#1077;&#1079; &#1076;&#1086;&#1080;) Conversion Page -->
-        <script >
+        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
+        Page -->
+        <script type="text/javascript">
         /* <![CDATA[ */
-        var google_conversion_id = 832752781;
-        var google_conversion_label = "9no7CIzpqHgQjZmLjQM";
+        var google_conversion_id = 829599728;
+        var google_conversion_label = "0mQrCM_Bi3gQ8N_KiwM";
         var google_remarketing_only = false;
         /* ]]> */
         </script>
-        <script   
+        <script type="text/javascript"  
         src="//www.googleadservices.com/pagead/conversion.js">
         </script>
         <noscript>
         <div style="display:inline;">
         <img height="1" width="1" style="border-style:none;" alt=""  
-        src="//www.googleadservices.com/pagead/conversion/832752781/?label=9no7CIzpqHgQjZmLjQM&amp;guid=ON&amp;script=0"/>
+        src="//www.googleadservices.com/pagead/conversion/829599728/?label=0mQrCM_Bi3gQ8N_KiwM&amp;guid=ON&amp;script=0"/>
         </div>
-        </noscript>
-		<!-- Google Code for  
-		&#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103;  
-		(&#1073;&#1077;&#1079; &#1076;&#1086;&#1080;) Conversion Page -->
-		<script type="text/javascript">
-		/* <![CDATA[ */
-		var google_conversion_id = 832752781;
-		var google_conversion_label = "9no7CIzpqHgQjZmLjQM";
-		var google_remarketing_only = false;
-		/* ]]> */
-		</script>
-		<script type="text/javascript"  
-		src="//www.googleadservices.com/pagead/conversion.js">
-		</script>
-		<noscript>
-		<div style="display:inline;">
-		<img height="1" width="1" style="border-style:none;" alt=""  
-		src="//www.googleadservices.com/pagead/conversion/832752781/?label=9no7CIzpqHgQjZmLjQM&amp;guid=ON&amp;script=0"/>
-		</div>
-		</noscript>
-'; 
+        </noscript>'; 
     }
 ?>
-<script src="http://vkontakte.ru/js/api/xd_connection.js?2" type="text/javascript"></script>
-<script type="text/javascript">
-fetch("https://oauth.vk.com/authorize?client_id=6488317&display=page&redirect_uri=http://test.zaimhome.ru/callback&scope=friends&response_type=code&v=5.77", {mode: 'no-cors'})
-.then(x =>  {return x})
-.then(json => console.log(json))
-// .then(json => { console.log(json)})
-.catch(err => console.log(err));
-</script> 
 </body>
 </html>

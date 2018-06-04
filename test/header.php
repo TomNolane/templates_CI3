@@ -1,12 +1,9 @@
 <?php 
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST, GET, PUT, DELETE, OPTIONS');
-header('Access-Control-Allow-Headers: X-Requested-With, content-type');
 if(!isset($my_title)) 
 	$my_title = 'Срочные займы круглосуточно без проверок Онлайн';
 
 if(!isset($description))
-	$description = 'Bzaim5 - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории. Только у нас лучшие кредитные предложения!';
+	$description = 'Zaimhome - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории. Только у нас лучшие кредитные предложения!';
 ?>
 <!doctype html>
 <html lang="ru">

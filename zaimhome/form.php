@@ -64,6 +64,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 
 require 'header.php';
 ?>
+
 <div class="container ex-form">
     <h1 class="text-center" id="to_scroll">Как получить деньги?</h1>
     <div class="row">

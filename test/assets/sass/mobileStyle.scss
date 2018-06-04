@@ -5,7 +5,6 @@
   @import "core/fonts";
   @import "core/variables";
   @import "core/glyphicons";
-  @import "mobile/global";
 
 /*@@@@@@ Lib files import here @@@@@@*/
 //@import "compass/reset";
@@ -16,16 +15,17 @@
   @import "library/owlCarousel";
 
 /*@@@@@@ Mobile Site part files import here @@@@@@*/
-  @import "mobile/zaimOnline";
-  @import "mobile/userAcess";
-  @import "mobile/faq";
-  @import "mobile/moneyOn";
-  @import "mobile/start";
+  @import "mobile/modal";
+  @import "mobile/agreement";
   @import "mobile/header";
-  @import "mobile/footer";
   @import "mobile/asideMenu";
+  @import "mobile/footer";
+  @import "mobile/documents";
+  @import "mobile/homepage";
   @import "mobile/form";
-  @import "mobile/onlineZaim";
-  @import "mobile/doc";
-  @import "mobile/emailAccess";
   @import "mobile/about";
+  @import "mobile/onlineZaim";
+  @import "mobile/email";
+  @import "mobile/moneyOn";
+  @import "mobile/zaimOnline";
+  @import "mobile/global";

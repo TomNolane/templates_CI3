@@ -3,38 +3,20 @@ footer.ex-main-footer{
   width:100%;
   bottom:0;
   left:0;
-  padding: 23px;
-  min-height: 130px;
-  background-color: $footer;
-  color: #BBC2CB;
-  div{
-    float: left;
-    &:first-of-type{
-      width: calc(100% - 80px);
-      a{
-        font-size: 12px;
-        color: #BBC2CB;
-        display: block;
-        &:first-of-type{
-          margin-bottom: 11px;
-        }
-        &:last-of-type{
-          margin-bottom: 18px;
-        }
-      }
-      p{
-        font-size: 8px;
-        margin-bottom: 0;
-      }
-    }
-    &:last-of-type{
-      width: 80px;
-      height: 57px;
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
+  padding: 17px 0;
+  color: $white;
+  background-color: $mobFooter;
+  h3{
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 12px;
+    letter-spacing: 0.16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #69829c;
+  }
+  p{
+    font-size: 8px;
+    font-weight: 300;
+    margin: 0;
   }
 }
