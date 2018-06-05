@@ -1,10 +1,5 @@
 <?php 
-    if(!isset($my_title))
-    {
-        $my_title = 'Zaimhome.ru - Сервис по подбору выгодных онлайн займов';
-    } 
-
-    require 'header.php';
+require 'header.php';
 ?>
 <div class="ex-home-bg"></div>
 <div class="container">
@@ -36,7 +31,7 @@
                                                 <span>100 тыс.</span>
                                             </div>
                                         </div>
-                                        <button type="button" class="btn btn-primary" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">получить деньги</button>
+                                        <button type="submit" class="btn btn-primary">получить деньги</button>
 
 
                                     </form>
@@ -107,5 +102,3 @@
     </div>
 </div>
 <?php require 'footer.php';?>
-</body>
-</html>

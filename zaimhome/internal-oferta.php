@@ -33,12 +33,9 @@
     </div>
     <div class="row ex-mb">
         <div class="col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-        <div><button id="my_btn" class="ex-main-btn" ><a href="form" style="text-decoration: none; color: white;">получить деньги</a></button></div>
+        <div><a href="/form"><button class="ex-main-btn">получить займ</button></a></div>
         </div>
     </div>
 
 </div>
-<?php require 'footer.php';?>
-
-</body>
-</html>
+<?php require 'footer.php';?> 

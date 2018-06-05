@@ -7,7 +7,7 @@
         <figure class="ex-range-slider">
             <p id="ex-slider-val"></p>
             <i></i>
-            <input type="text" id="rangeSlider" name="rangeSlider" value="<?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?>" /> 
+            <input type="text" id="rangeSlider" name="rangeSlider" value="<?=$sum;?>" /> 
         </figure>
         <div class="ex-slider-info">
             <span>1 тыс.</span>
@@ -21,7 +21,6 @@
         <div class="ex-wrapper"> 
             <input type="text" value="Иванова" class="form-control ec tip"  name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
             <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-            <div> <p class="help-block2">Нужно указать фамилию</p>
             <p class="text-muted text-right">Пример: Иванова</p></div>
         </div> 
     </div>
@@ -32,7 +31,6 @@
         <div class="ex-wrapper">
             <input type="text" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя" required>
             <span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-            <div><p class="help-block2">Нужно указать имя</p> 
             <p class="text-muted text-right">Пример: Лариса</p></div>
         </div>
     </div>
@@ -43,7 +41,6 @@
         <div class="ex-wrapper"> 
             <input type="text" value="Ивановна" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Введите свое отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество" required>
             <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-            <p class="help-block2">Нужно указать отчество</p> 
             <p class="text-muted text-right">Пример: Ивановна</p>
         </div>
     </div>
@@ -102,7 +99,7 @@
     <div class="col-md-6">
         <div class="ex-wrapper">
             <input type="tel" class="form-control ec tip" value="06/02/2000" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Укажите свою дату рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Укажите дату рождения" required>
-            <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <span id="birthdazaimhomeatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <p class="help-block2"></p>
             <p class="text-muted text-right">Пример: 06/02/2000</p>
         </div>

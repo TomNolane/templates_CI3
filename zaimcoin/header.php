@@ -151,6 +151,9 @@ if(!isset($description))
         .lk-img {
             padding-left: 10px;
         }
+		.ins {
+			margin: 20px;
+		}
     </style>
 
     <!-- Adsense -->

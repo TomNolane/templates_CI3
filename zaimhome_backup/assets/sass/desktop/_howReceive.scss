@@ -1,0 +1,46 @@
+#ex-how-receive{
+  margin-top: 40px;
+  margin-bottom: 70px;
+  .col-md-4{
+    div{
+      padding-top: 80px;
+      padding-bottom: 30px;
+      background-color: $white;
+      -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0, 0.09);
+      -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0, 0.09);
+      box-shadow: 0 2px 4px 0 rgba(0,0,0, 0.09);
+      @include prefix(border-radius,15px);
+      i{
+        display: inline-block;
+        &.ex-notebook-icon{
+          width: 137px;
+          height: 131px;
+          background: url(../img/notebook.png) no-repeat;
+        }
+        &.ex-signature-icon{
+          width: 212px;
+          height: 126px;
+          background: url(../img/signature.png) no-repeat;
+        }
+        &.ex-card-icon{
+          width: 173px;
+          height: 123px;
+          background: url(../img/master-card.png) no-repeat;
+        }
+      }
+      span{
+        margin-top: 35px;
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+    p{
+      margin-top: 25px;
+    }
+    @media (max-width: 991px) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
