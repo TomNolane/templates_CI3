@@ -100,11 +100,10 @@
                     </div>
                 </div>
                 <div class="form-group has-feedback">
-                    <label class="control-label col-md-4" id="spec_form2" for="phone">Телефон</label>
+                    <label class="control-label col-md-4" for="phone">Телефон</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
-                            <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Укажите свой номер телефона"
-                                title="Укажите свой номер телефона" data-validation-error-msg="Укажите номер телефона" required>
+                            <input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Укажите № телефона" title="Введите свой телефон" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Укажите № телефона" required="">
                             <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             <p class="help-block2">Нужно указать номер телефона</p>
                             <p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
@@ -141,7 +140,7 @@
                     <div class="col-md-8 col-md-offset-4 ex-agreement-check">
                         <label class="checkbox-inline">
                             <span>Я согласен на обработку персональных данных и с публичной офертой</span>
-                            <input type="checkbox" onClick="checkme_form();" id="agree" value="1" checked>
+                            <input type="checkbox" onClick="checkMee();" id="agree" value="1" checked>
                             <i></i>
                         </label>
                         <label class="hidden">
@@ -153,7 +152,7 @@
                 <div class="form-group">
                     <a id="next1">
                         <div class="col-md-8 col-md-offset-4 text-right">
-                            <span id="submitOne" class="ex-main-btn hidden-sm hidden-xs">Получить деньги</span>
+                            <span id="getmoney" class="ex-main-btn hidden-sm hidden-xs">Получить деньги</span>
                         </div>
                     </a>
                 </div>
@@ -163,7 +162,7 @@
     <div class="row">
         <a id="next1b">
             <div class="col-xs-12 text-center">
-                <span id="submitOneSecond" class="ex-main-btn hidden-md hidden-lg">Получить деньги</span>
+                <span id="getmoneyb" class="ex-main-btn hidden-md hidden-lg">Получить деньги</span>
             </div>
         </a>
     </div>

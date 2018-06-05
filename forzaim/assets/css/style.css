@@ -1,17 +1,7 @@
-@charset "UTF-8";
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/*@@@@@@ Helper files import here @@@@@@*/
-/*@@@@@@ Core files import here @@@@@@*/
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,900&subset=cyrillic,cyrillic-ext");
-@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
 @font-face {
   font-family: 'Dosis';
-  src: url("/templates/forzaim/assets/fonts/Dosis-Regular.eot");
-  src: url("/templates/forzaim/assets/fonts/Dosis-Regular.eot?#iefix") format("embedded-opentype"), url("/templates/forzaim/assets/fonts/Dosis-Regular.woff") format("woff"), url("/templates/forzaim/assets/fonts/Dosis-Regular.ttf") format("truetype");
+  src: url("/templates/common/new2/fonts/Dosis-Regular.eot");
+  src: url("/templates/common/new2/fonts/Dosis-Regular.eot?#iefix") format("embedded-opentype"), url("/templates/common/new2/fonts/Dosis-Regular.woff") format("woff"), url("/templates/common/new2/fonts/Dosis-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -21,6 +11,7 @@ body {
   color: #333333 !important;
   font-family: "Lato", sans-serif !important;
   font-weight: 400;
+  padding: 0 !important;
 }
 
 /* line 7, ../sass/core/_global.scss */
@@ -647,8 +638,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("/templates/forzaim/assets/fonts/glyphicons-halflings-regular.eot");
-  src: url("/templates/forzaim/assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/templates/forzaim/assets/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/templates/forzaim/assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/templates/forzaim/assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/templates/forzaim/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("/templates/common/new2/fonts/glyphicons-halflings-regular.eot");
+  src: url("/templates/common/new2/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/templates/common/new2/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/templates/common/new2/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/templates/common/new2/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/templates/common/new2/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 /* line 269, ../sass/library/_bootstrap.scss */
 .glyphicon {
@@ -13055,4 +13046,189 @@ input#i , input#o, input#f {
 /* line 37, ../sass/core/_animate.scss */
 .fadeInRight {
   animation-name: fadeInRight;
+}
+.cd-container {
+  width: 90%;
+  max-width: 768px;
+  margin: 2em auto;
+}
+
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+.cd-top {
+  z-index: 16;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  border-radius: 9px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url(/templates/common/new2/img/cd-top-arrow.png) center 50% no-repeat #111111;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+.cd-top.cd-is-visible,
+.cd-top.cd-fade-out,
+.no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+.er:-moz-placeholder {
+  color: #ff0000 !important;
+  font-size: 0.8em;
+}
+.er::-moz-placeholder {
+  color: #ff0000 !important;
+  font-size: 0.8em;
+}
+.er::placeholder {
+  color: #ff0000 !important;
+  font-size: 0.8em;
+}
+.er:-ms-input-placeholder {
+  color: #ff0000 !important;
+  font-size: 0.8em;
+}
+.er::-webkit-input-placeholder {
+  color: #ff0000 !important;
+  font-size: 0.8em;
+}
+.label_er {
+  color: #b94a48 !important;
+}
+
+.label_true {
+  color: #3c763d !important;
+}
+
+.special_form99 {
+  color: #000000 !important;
+}
+a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+aside.ex-aside-menu main ul li a {
+  color: #333333 !important;
+  text-decoration: none !important;
+}
+
+main.ex-money .nav-tabs li a {
+  color: #333333 !important;
+}
+
+aside.ex-aside-menu main ul li a:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+main.ex-money .nav-tabs li a:active {
+  color: #ffffff !important;
+}
+
+aside.ex-aside-menu main ul li a:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+main.ex-money .nav-tabs li a:active {
+  color: #ffffff !important;
+}
+
+#phonestatus {
+  padding-top: 10px;
+}
+
+aside.ex-aside-menu main .ex-ask-question:hover {
+  background-color: #FF9543;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ex-main-header a.ex-brand {
+  color: #000000 !important;
+}
+
+main.ex-faq .col-sm-3 button:last-of-type:hover {
+  background-color: #FF9543;
+  color: #fff;
+  cursor: pointer;
+}
+
+.panel-title>a {
+  color: #333333 !important;
+}
+.spec_lk3 {
+  margin-top: 15px;
+}
+.helpblock
+{
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-size: 0.8em;
+  float: right !important;
+}
+input:invalid:not(:placeholder-shown) {border-color: red !important;}
+input:valid:not(:placeholder-shown) {border-color: green !important;}
+.help-block {
+  display: none !important;
+}
+.help-block2 {
+    display: none;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    font-size: 0.8em;
+    float: left;
+    color: red !important;
+}
+ins {
+  text-align: center !important;
 }

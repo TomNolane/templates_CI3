@@ -1,4 +1,4 @@
-<?php $from = '15'; $px = '63.974'; 
+<?php $from = '15';
 if($this->uri->segment(1) != 'form')
 {
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -11,33 +11,19 @@ if($this->uri->segment(1) != 'form')
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
-}
-
-if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles' || $this->uri->segment(1) == 'faq')
-{
     echo '<a href="#0" class="cd-top">Наверх</a>';
-}
-
-?>
+}?>
 <footer class="ex-main-footer">
-<div class="container" style="width: 100%">
-    <div class="col-sm-3 text-center">
-        <div class="ex-footer-logo">
-            <a href="/"><img src="/templates/zaimhome/assets/img/header-logo.png" alt="Missing image" class="special_foot22"></a>
-        </div> 
-        <p class="special_footer3 ">Сервис выгодного онлайн займа</p>
+    <div class="container">
+        <a href="/"><h2>Forzaim</h2></a>
+        <p class="spec_footer7">
+            Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <a href="mailto:support@forzaim.ru" target="_blank">support@forzaim.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+            <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
+            Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.</span>
+            Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001
+        </p>
     </div>
-    <div class="col-sm-3 small spec_footer4 ">
-        <p>Сервис по подбору выгодных онлайн займов
-            <br>находящийся по адресу
-            <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
-            <br><a href="mailto:support@zaimhome.ru" target="_blank">support@zaimhome.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
-    </div>
-    <div class="col-sm-6 hidden-xs hidden-sm spec_footer5">
-        <p style="font-size: 85%;">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</p>
-    </div>
-</div>
-</footer>
+</footer> 
 <!-- [if lt IE 10]>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif] --> 
@@ -48,10 +34,10 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     echo 'try{';
     require 'footer_common_js.php';
     echo '/* private JS */';
-    require 'templates/test/assets/js/main.js'; 
-
-if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
- 
+    require 'templates/forzaim/assets/js/main.js'; 
+?>
+        $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
+        $('[data-toggle="popover"]').popover();
         $("#rangeSlider").ionRangeSlider({
         hide_min_max: true,
         hide_from_to: true,
@@ -148,6 +134,33 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
             }
         }); 
         <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {?>
+            $( ".button1" ).click(function() {
+                $( "#amount" ).val('5000');
+                $( "#period" ).val('7');
+                $( "#form_slrd" ).val('4'); 
+                $( "#anketa" ).submit();
+            });
+            $( ".button2" ).click(function() {
+                $( "#amount" ).val('15000');
+                $( "#period" ).val('14');
+                $( "#form_slrd" ).val('14'); 
+                $( "#anketa" ).submit();
+            });
+            $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                items: 1,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: true
+            });
+            $(".ex-fast-start").click(function(){
+                $(".ex-fast-start").toggleClass("ex-fast-active");
+            }); 
+        }); 
         var slider = $('#rangeSlider').data('ionRangeSlider');
         var slider_plus = true;
         var n = 10;
@@ -197,18 +210,16 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
             $('#amount').val(slider.result.from_value);
             $("#form_slrd").val(slider.result.from);
         }, 50); 
-        traffic("zaimhome.ru",0);
+        traffic("forzaim.ru",0);
 <?php }
-}
-elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {
     include "templates/common/new2/js/lk.js";      
-    echo 'traffic("zaimhome.ru",4);'; 
-
+    echo 'traffic("forzaim.ru",4);'; 
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic("zaimhome.ru",9);'; 
+    echo 'traffic("forzaim.ru",9);'; 
 }
 else if($this->uri->segment(1) == 'form')
 { } 
@@ -221,12 +232,12 @@ echo "}catch(e){console.log('Ошибка ' + e.name + \":\" + e.message + \"\\n
     if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
     {     
         echo '<!-- Google Code for  
-        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
+        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
         Page -->
         <script >
         /* <![CDATA[ */
-        var google_conversion_id = 829599728;
-        var google_conversion_label = "0mQrCM_Bi3gQ8N_KiwM";
+        var google_conversion_id = 824879582;
+        var google_conversion_label = "lw8uCLndhnoQ3tOqiQM";
         var google_remarketing_only = false;
         /* ]]> */
         </script>
@@ -236,7 +247,7 @@ echo "}catch(e){console.log('Ошибка ' + e.name + \":\" + e.message + \"\\n
         <noscript>
         <div style="display:inline;">
         <img height="1" width="1" style="border-style:none;" alt=""  
-        src="//www.googleadservices.com/pagead/conversion/829599728/?label=0mQrCM_Bi3gQ8N_KiwM&amp;guid=ON&amp;script=0"/>
+        src="//www.googleadservices.com/pagead/conversion/824879582/?label=lw8uCLndhnoQ3tOqiQM&amp;guid=ON&amp;script=0"/>
         </div>
         </noscript>'; 
     }

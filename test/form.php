@@ -64,62 +64,78 @@ if($this->input->post('percent', TRUE) != '')
 
 if(!isset($my_title))
 {
-    $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Zaimhome';
+    $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Forzaim';
     $description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }
 include "templates/common/new2/php/form_header.php";
 include "header.php";
 ?>
-<div class="container ex-form">
-    <h1 class="text-center" id="to_scroll">Как получить деньги?</h1>
-    <div class="row">
-        <div class="col-md-12 col-md-offset-0 col-xs-10 col-xs-offset-1">
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <div class="ex-indicator-scope ex-on-second-step ex-on-last-step nav nav-tabs" role="tablist">
-                        <figure class="ex-first-step">
-                            <p>
-                                <br> </p>
-                        </figure>
-                        <figure class="ex-second-step">
-                            <div>
-                                <span></span>
+<nav class="ex-main-header">
+    <div class="container">
+        <i class="ex-hamburger"></i>
+        <a class="ex-brand" href="/">Forzaim</a>
+    </div>
+</nav> 
+<main class="container ex-form">
+    <?php $period; ?>
+    <form id="anketa" action="/lk" method="post" class="form-horizontal" autocomplete="off" novalidate>
+        <input type="hidden" name="display" id="display" value="0">
+        <input type="hidden" name="referer" value="<?=$referer?>">
+        <input type="hidden" name="id" value="">
+        <input type="hidden" name="step" value="1">
+        <input type="hidden" name="ad_id" value="<?=$ad_id?>">
+        <input type="hidden" id="amount" name="amount" value="<?=$sum;?>"/>
+        <input type="hidden" id="period" name="period" value="<?=$period;?>"/>
+        <div class="tab-content" id="to_scroll">
+            <div id="firstStep" class="tab-pane fade in active">
+                <h2 class="text-center">Заполните личные данные</h2>
+                <div class="ex-calc-wraper">
+                    <div class="row">
+                        <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2  col-sm-10 col-sm-offset-1">
+                            <div class="ex-range-scope">
+                                <div id="ex-main-slider-range">
+                                    <figure class="ex-range-slider">
+                                        <input type="text" id="rangeSlider" name="rangeSlider" value="0" />
+                                    </figure>
+                                </div>
                             </div>
-                            <p>Личные данные 
-                                <br> (всего 1 шаг)</p>
-                        </figure>
-                        <figure class="ex-last-step">
-                            <p style="width: 105px; left: -130%;"></p>
-                        </figure>
+                            <div class="ex-tab-section">
+                                <ul class="ex-calc-block ">
+                                    <li>
+                                        <div class="ex-val-block">
+                                            <span class="ex-unique">Сумма займа (в рублях)</span>
+                                            <span class="ex-slider-val ex-result-style"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ex-crumbs">
+                                            <span class="ex-unique">Срок займа (в днях)</span>
+                                            <span class="ex-ot">от</span>
+                                            <span class="ex-time ex-result-style"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ex-crumbs">
+                                            <span class="ex-unique">К возврату (в рублях)</span>
+                                            <span class="ex-total ex-result-style"></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <?php require 'form1.php'?>
             </div>
-            <div class="row tab-content">
-                <form class="form-horizontal form-label form-css-label" id="anketa" action="/lk" method="post" autocomplete="off" novalidate>
-                    <input type="hidden" name="display" id="display" value="0">
-                    <input type="hidden" name="referer" value="<?=$referer?>">
-                    <input type="hidden" name="id" value="">
-                    <input type="hidden" name="step" value="1">
-                    <input type="hidden" name="ad_id" value="<?=$ad_id?>">
-                    <input type="hidden" id="amount" name="amount" value="<?=$sum;?>"/>
-                    <input type="hidden" id="period" name="period" value="<?=$period;?>" />
-                    <div class="row tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active col-xs-12" id="firstTabContent">
-                            <?php  require 'form1.php'; ?>
-                        </div>
-                    </div>
-                    <div class="row tab-content">
-                        <div role="tabpanel" class="tab-pane col-xs-12" id="secondTabContent"> 
-                        </div>
-                    </div>
-                    <div class="row tab-content">
-                        <div role="tabpanel" class="tab-pane col-xs-12" id="lastTabContent"> 
-                        </div>
-                    </div>
-                </form>
+            <div id="secondStep" class="tab-pane fade">
+                <h2 class="text-center">Заполните паспортные данные</h2>
+                <?php require 'form2.php'?>
+            </div>
+            <div id="thirdStep" class="tab-pane fade">
+                <h2 class="text-center">Заполните данные о работе</h2>
+                <?php require 'form3.php'?>
             </div>
         </div>
-    </div>
-</div>
-<br><br>
+    </form>
+</main>
 <?php include 'footer.php';?>

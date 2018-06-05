@@ -1,0 +1,127 @@
+main.ex-offerta{
+  padding-top: 90px;
+  background-image: url(../img/sky-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: left 40%;
+  background-size: contain;
+  h2{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
+  .col-md-3{
+    figure{
+      padding: 15px 15px 25px;
+      background-color: #ffffff;
+      cursor: default;
+      border: 1px solid #88e2ea;
+      @include prefix(transition,all 0.5s ease-out);
+      @include prefix(border-radius, 5px);
+      @media (min-width: 992px) {
+        &:hover{
+          border: none;
+          -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+          background-color: #f7f7f7;
+        }
+      }
+      .fa-star{
+        font-size: 11px;
+        color: #e7e7e7;
+      }
+      .ex-wrapper{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-around;
+        height: 52px;
+        margin-top: 5px;
+        img{
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+      }
+      p{
+        margin-top: 15px;
+        font-family: $dosis;
+        font-size: 48px;
+        font-weight: 700;
+        i{
+          position: relative;
+          margin-left: 15px;
+          display: inline-block;
+          top: -3px;
+          width: 21px;
+          height: 30px;
+          background-image: url(../img/icons/ruble_offerta.png);
+          background-repeat: no-repeat;
+        }
+      }
+      table{
+        width: 100%;
+        tr{
+          td{
+            padding: 8px 0;
+            &:first-of-type{
+              text-align: left;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 14px;
+              letter-spacing: 0.26px;
+            }
+            &:last-of-type{
+              text-align: right;
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 14px;
+              letter-spacing: 0.34px;
+            }
+          }
+        }
+      }
+      button{
+        padding: 19px 0 16px;
+        margin-top: 18px;
+        font-size: 18px;
+        font-weight: 900;
+      }
+      @media screen and (max-width: 1199px) and (min-width: 992px) {
+          p{
+            font-size: 40px;
+          }
+        table{
+          width: 100%;
+          tr{
+            td{
+              &:first-of-type{
+                font-size: 12px;
+              }
+              &:last-of-type{
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .ex-adds{
+    margin-top: 120px;
+  }
+  @media (max-width: 991px) {
+    background-image: none;
+    .col-md-3{
+      figure{
+        max-width: 80%;
+        margin: 0 auto 40px;
+        button{
+
+        }
+      }
+    }
+  }
+}

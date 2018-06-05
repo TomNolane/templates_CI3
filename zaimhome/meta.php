@@ -19,3 +19,4 @@
 <meta name="twitter:image:src" content="https://zaimhome.ru/templates/zaimhome/assets/img/header-logo.png"/>
 <meta name="twitter:url" content="https://zaimhome.ru/"/>
 <meta name="twitter:domain" content="zaimhome.ru"/>
+<meta name="yandex-verification" content="9e95213a45315a5f" />

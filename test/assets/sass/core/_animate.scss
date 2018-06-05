@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.animated-1 {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+.animated-2 {
+  animation-duration: 0.4s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+.animated-3 {
+  animation-duration: 0.4s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+.animated-4 {
+  animation-duration: 0.3s;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}

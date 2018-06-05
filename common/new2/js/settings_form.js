@@ -667,6 +667,16 @@ $(document).ready(function () {
         showBzzz = false;
         setcookies();
     });
+	$('#getmoneyb').click(function () {
+        if (validate()) { 
+            $('input[name="step"]').val('3');
+            send_form(true, '/lk');
+            markTarget('form-step-3');
+            window.location = '/lk';
+        }
+        showBzzz = false;
+        setcookies();
+    });
     $('select[name="reg_type"]').change(function () {
         if ($(this).val() == '0') {
             $('.reg_same[value="1"]').prop('checked', true);
