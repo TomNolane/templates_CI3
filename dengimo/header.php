@@ -21,7 +21,6 @@ if(!isset($description))
 <meta property="og:image" content="https://dengimo.ru/templates/dengimo/img/atmo.png"/>
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://dengimo.ru/" />
-
 <meta name="twitter:card" content="https://dengimo.ru/templates/dengimo/img/atmo.png"/>
 <meta name="twitter:title" content="Срочные займы круглосуточно без проверок Онлайн"/>
 <meta name="twitter:description" content="Dengimo - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
