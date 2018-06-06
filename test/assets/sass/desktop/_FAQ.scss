@@ -1,106 +1,63 @@
-main.ex-faq{
-  padding-bottom: 70px;
-  h2{
-    text-align: center;
-    font-size: 36px;
-    font-weight: 800;
-    line-height: 42px;
-    text-transform: uppercase;
-    margin-top: 68px;
-    margin-bottom: 50px;
-    @media (max-width: 480px) {
-      font-size: 25px;
-      line-height: 33px;
-    }
-  }
-  .col-sm-3{
-    button{
-      padding: 20px 5px 15px;
-      font-size: 18px;
-      font-weight: 900;
-      &:first-of-type{
-        margin-bottom: 23px;
-      }
-      &:last-of-type{
-        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
-        background-color: #e7e7e7;
-        @media (max-width: 767px) {
-          margin-bottom: 70px;
-        }
-      }
-    }
-  }
-  .nav-tabs{
-    border-bottom: none;
-    margin-bottom: 25px;
-    li{
-      float: none;
-      margin-bottom: 24px;
-      &:last-of-type{
-        margin-bottom: 0;
-      }
-      a{
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: 400;
-        color: #333333;
-        padding: 12px 30px;
-        @include prefix(border-radius, 20px);
-        @media screen and (max-width: 991px) and (min-width: 768px) {
-          padding: 12px 15px;
-          font-size: 15px;
-        }
-      }
-      &.active{
-        a{
-          color: #ffffff;
-          background-color: #33c7d5;
-          border: none;
-        }
-      }
-    }
-    @media (max-width: 767px) {
-      text-align: center;
-      margin-bottom: 50px;
-    }
+#ex-faq{
+  h1{
+    margin-bottom: 40px;
   }
   .panel-group{
     .panel{
-      box-shadow: none;
-      border: none;
+      margin-bottom: 20px;
+      border-radius: 0;
+      border: 2px solid $accordionBorder;
+      background-color: $accordionBg;
       .panel-heading{
-        position: relative;
-        padding: 10px 15px 10px 0;
-        background-color: transparent;
-        border-bottom: 1px solid rgba(#333333,0.3);
-        &:after{
-          position: relative;
-          top: 10px;
-          content: '';
-          display: inline-block;
-          float: right;
-          width: 7px;
-          height: 4px;
-          background-image: url(../img/icons/icon-arrow.png);
-        }
+        padding: 12px 30px 12px 15px;
+        background-color: $accordionBg;
         h4{
-          display: inline-block;
-          position: relative;
-          max-width: 95%;
           a{
             text-decoration: none;
-            font-size: 18px;
             font-weight: 700;
-            line-height: 20px;
-            letter-spacing: 0.34px;
+            &.collapsed{
+              font-weight: 400;
+            }
+          }
+        }
+        i{
+          &.ex-plus-icon{
+            margin-top: 3px;
+            display: inline-block;
+            float: right;
+            width: 12px;
+            height: 12px;
+            background: url(../img/plus-icon.png) no-repeat;
+          }
+          &.ex-minus-icon{
+            margin-top: 5px;
+            display: inline-block;
+            float: right;
+            width: 13px;
+            height: 3px;
+            background: url(../img/minus-icon.png) no-repeat;
+          }
+
+          @media (max-width: 767px) {
+            display: none!important;
           }
         }
       }
-      .panel-body{
-        padding: 15px 15px 15px 0;
-        border-top: none;
+      .panel-collapse{
+        .panel-body{
+          border-top: none;
+        }
       }
+    }
+  }
+  footer{
+    margin-top: 30px;
+    padding: 23px 0 27px;
+    background-color: $accordionBg;
+    h3{
+      font-size: 20px;
+      color: $black;
+      margin-bottom: 25px;
     }
   }
 }

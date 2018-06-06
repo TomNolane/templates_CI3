@@ -6,10 +6,9 @@
 					<h1 class="title title-header">Займы онлайн</h1>
 					<div class="form">
 						<h2>Выберите сумму и срок займа</h2>
-						<form id="anketa" action="/form/" method="post">
+						<form id="anketa" action="/form" method="post">
 							<span class="form-sum-label">Сумма</span>
 							<span class="form-sum-value"></span>
-							<!-- <input type="text" id="amount" class="amount" name="amount" value="" /> -->
 							<input type="hidden" id="amount" class="amount" name="amount" value="20000" />
 							<input type="hidden" id="period" name="period" value="21" />
 							<input type="hidden" id="form_slrd" name="form_slrd" value="15" /> 
@@ -48,7 +47,7 @@
 				<div class="row">
 					<div class=" kri1 col-lg-4  col-md-6 col-sm-6 col-xs-12">
 						<div class="service-item services-third">
-							<img class="imggg1" src="/templates/godzaim/img/img1.png" alt="img1.png">
+							<img class="imggg1" src="/templates/godzaim/assets/img/img1.png" alt="img1.png">
 						</div>
 						<div class="service-text">
 							<div class="service-num pull-left">1</div>
@@ -60,13 +59,13 @@
 							</div>
 							<div class="clearfix"></div>
 						</div>
-						<img src="/templates/godzaim/img/index/arrow.png" class="service-arrow" alt="arrow.png">
+						<img src="/templates/godzaim/assets/img/index/arrow.png" class="service-arrow" alt="arrow.png">
 					</div> 
 
 
 						<div class=" kri2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
 						<div class="service-item services-third">
-							<img class="imggg1" src="/templates/godzaim/img/img3.png" alt="img3.png">
+							<img class="imggg1" src="/templates/godzaim/assets/img/img3.png" alt="img3.png">
 						</div>
 						<div class="service-text">
 							<div class="service-num pull-left">2</div>
@@ -80,13 +79,13 @@
 							</div>
 							<div class="clearfix"></div>
 						</div>
-						<img  src="/templates/godzaim/img/index/arrow.png" class="service-arrow" alt="arrow.png">
+						<img  src="/templates/godzaim/assets/img/index/arrow.png" class="service-arrow" alt="arrow.png">
 					</div>
 
 	
 					<div class=" kri3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
 						<div class="service-item services-third">
-							<img class="imggg1" src="/templates/godzaim/img/img4.png" alt="img4.png">
+							<img class="imggg1" src="/templates/godzaim/assets/img/img4.png" alt="img4.png">
 						</div>
 						<div class="service-text">
 							<div class="service-num pull-left">3</div>

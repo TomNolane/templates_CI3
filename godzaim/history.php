@@ -1,9 +1,7 @@
 <?php require 'header.php'; ?>
-
 <style>
 body{background:#e2e7e9;}
 </style>
-
 <section class="page">
 <div class="container">
 	<div class="row">
@@ -13,12 +11,11 @@ body{background:#e2e7e9;}
 	</div>
 </div>
 </section>
-
 <section class="page-history">
 <div class="container a4">
 	<div class="row">
 		<div class="col-sm-12 text-center">
-			<img src="/templates/godzaim/img/history/steps.png">
+			<img src="/templates/godzaim/assets/img/history/steps.png">
 		</div>
 	</div>
 	
@@ -60,6 +57,4 @@ body{background:#e2e7e9;}
 	</div>
 </div>
 </section>
-<div class="clearfix">&nbsp;</div>
-
 <?php require 'footer.php'; ?>

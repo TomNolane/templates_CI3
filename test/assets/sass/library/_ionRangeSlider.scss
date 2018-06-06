@@ -190,7 +190,7 @@
 .irs-bar-edge {
   height: 10px; top: 33px;
   width: 14px;
-  //border: 1px solid #428bca;
+  border: 1px solid #428bca;
   border-right: 0;
   background: #428bca;
   background: linear-gradient(to top, rgba(66,139,202,1) 0%,rgba(127,195,232,1) 100%); /* W3C */
@@ -275,42 +275,70 @@
 
 
 /*@@@@@@@ Random style used in website @@@@@@@*/
-.irs{
-  position: relative;
-  z-index: 1000;
-  bottom: 11px;
-  height: 25px;
-  .irs-line{
-    background: transparent;
-    border: none;
+#ex-main-slider-range{
+  .ex-range-slider{
+    position: relative;
+    border: 1px solid #e6ecf2;
+    padding-top: 22px;
+    margin-top: 20px;
+    height: 85px;
+    #ex-slider-val{
+      margin: 0;
+      font-size: 28px;
+      padding-left: 30px;
+    }
+    i{
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      width: 17px;
+      height: 29px;
+      display: inline-block;
+      background: url(../img/ruble-icon.png) no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+    .irs{
+      height: 0;
+      bottom: 13px;
+      .irs-line{
+        background: transparent;
+        border: none;
+      }
+      .irs-bar{
+        height: 4px;
+        background-color: $slider;
+        background-image: none;
+      }
+      .irs-bar-edge{
+        height: 4px;
+        background-color: $slider;
+        background-image: none;
+      }
+      .irs-slider{
+        width: 20px;
+        height: 20px;
+        background: $slider;
+        background-image: none;
+        cursor: pointer;
+        box-shadow: none;
+        border: none;
+      }
+    }
   }
-  .irs-bar{
-    height: 8px;
-    background: $slider!important;
-    background-image: none;
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.23);
-    border-radius: 16px;
-  }
-  .irs-bar-edge{
-    width: 20px;
-    height: 8px;
-    background-color: $slider;
-    background-image: none;
-    //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.23);
-    -moz-border-radius-topleft: 16px;
-    -moz-border-radius-bottomleft: 16px;
-  }
-  .irs-slider{
-    top: 20px;
-    width: 30px;
-    height: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    border: 1px solid #ffffff;
-    background: $slider;
-    background-image: none;
-    cursor: pointer;
-    border-radius: 50%;
+  .ex-slider-info{
+    overflow: hidden;
+    margin-top: 6px;
+    span{
+      display: inline-block;
+      &:first-of-type{
+        float: left;
+      }
+      &:last-of-type{
+        float: right;
+      }
+    }
   }
 }
 /*@@@@@@@ End of random style used in website @@@@@@@*/
+

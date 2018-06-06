@@ -1,3 +1,4 @@
+<?php require 'header.php'; ?>
 <style>
 	.buffer{
 		height: 0px !important;
@@ -28,3 +29,4 @@
 		</div>
 	</div>
 </div>
+<?php require 'footer.php'; ?>

@@ -1,3 +1,4 @@
+<?php require 'header.php'; ?>
 <style>
 body{background-color:#e3e3e3;}
 h1{
@@ -9,8 +10,10 @@ h1{
     border-radius:5px;
     padding-bottom:35px;
 }
+.panel-default > .panel-heading {
+    background-color: #cccccc;
+}
 </style>
-
 <section>
     <div class="container text-center">
         <div class="row">
@@ -206,3 +209,4 @@ h1{
         </div>
     </div>
 </section>
+<?php require 'footer.php'; ?>

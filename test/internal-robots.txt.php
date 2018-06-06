@@ -1,5 +1,5 @@
 User-agent: *
 Disallow: /addnew/
 Disallow: /validate/phone/
-sitemap: https://forzaim.ru/sitemap_forzaim.xml
-Host: https://forzaim.ru
+sitemap: https://zaimhome.ru/sitemap_zaimhome.xml
+Host: https://zaimhome.ru

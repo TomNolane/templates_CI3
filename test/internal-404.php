@@ -1,9 +1,5 @@
 <?php require 'header.php';?>
-<style>
-	.buffer{
-		height: 0px !important;
-	}
-</style> 
+<div class="container">
 	<div class="row">
 		<div class="col-sm-2"></div>
 		<div class="col-sm-7">
@@ -26,6 +22,8 @@
 		<div class="col-sm-3 text-left">
 			<img height="170px" src="/templates/rublimo/img/404.PNG" alt="404 Rublimo.ru">
 		</div>
-		<br><br>
-	</div> 
+	</div>
+	<br>
+	<br>
+</div>
 <?php require 'footer.php';?>

@@ -1,12 +1,10 @@
-<link href="/templates/godzaim/css/service.css" rel="stylesheet" media="screen">
-
+<?php require 'header.php'; ?>
 <style>
 h1{
 	font-size:20px;
 	margin:50px auto;
 }
 </style>
-
 <div class="about-wrap">
 	<div class="about">
 		<h2><span>«Godzaim»</span> — это онлайн сервис по подбору выгодных онлайн займов. Сервис помогает людям в круглосуточном режиме, семь дней в неделю.</h2>
@@ -16,18 +14,18 @@ h1{
 		<div class="three-block">
 			<div class="block1 mar1">
 				<h4>Выберите нужную сумму</h4>
-				<img class="img1" src="/templates/godzaim/img/block1.png" alt="">
+				<img class="img1" src="/templates/godzaim/assets/img/block1.png" alt="">
 			</div>
 			<div class="block1 mar2">
 				<h4>Заполните анкету</h4>
-				<img class="img2" src="/templates/godzaim/img/block2.png" alt="">
+				<img class="img2" src="/templates/godzaim/assets/img/block2.png" alt="">
 			</div>
 			<div class="block1">
 				<h4>Получите деньги</h4>
-				<img class="img3" src="/templates/godzaim/img/block3.png" alt="">
+				<img class="img3" src="/templates/godzaim/assets/img/block3.png" alt="">
 			</div>
-			<img class="arrow1" src="/templates/godzaim/img/arrow.png" alt="">
-			<img class="arrow2" src="/templates/godzaim/img/arrow.png" alt="">
+			<img class="arrow1" src="/templates/godzaim/assets/img/arrow.png" alt="">
+			<img class="arrow2" src="/templates/godzaim/assets/img/arrow.png" alt="">
 		</div>
 		<p>
 Решение о выдачи займа микрофинансовыми организациями принимается на основе кредитной истории заемщика. В большинстве случаев компании принимают положительные решение о выдачи займов. Выдача займа осуществляется на основе ежедневного начисления процентов, с максимально возможным сроком оформления займа от 61 до 365 дней. Для постоянных клиентов нашего сервиса есть возможность получить большую сумму и на более выгодных условиях. Если вы впервые воспользовались нашими услугами, то вам необходимо взять первый займ на сумму не более 7500 рублей и во время погасить его. После этого для вас начнут действовать специальные условия сервиса Godzaim.</p>
@@ -51,15 +49,16 @@ h1{
 	<div class="info">
 		<h6>Информация о кредиторах с которыми мы сотрудничаем:</h6>
 		<div class="info-top">
-			<img class="kre1" src="/templates/godzaim/img/info1.png" alt="">
-			<img class="kre2" src="/templates/godzaim/img/info2.png" alt="">
-			<img class="kre3" src="/templates/godzaim/img/info3.png" alt="">
+			<img class="kre1" src="/templates/godzaim/assets/img/info1.png" alt="">
+			<img class="kre2" src="/templates/godzaim/assets/img/info2.png" alt="">
+			<img class="kre3" src="/templates/godzaim/assets/img/info3.png" alt="">
 		</div>
 		<div class="info-bot">
-			<img class="kre4" src="/templates/godzaim/img/info4.png" alt="">
-			<img class="kre5" src="/templates/godzaim/img/info5.png" alt="">
-			<img class="kre6" src="/templates/godzaim/img/info6.png" alt="">
+			<img class="kre4" src="/templates/godzaim/assets/img/info4.png" alt="">
+			<img class="kre5" src="/templates/godzaim/assets/img/info5.png" alt="">
+			<img class="kre6" src="/templates/godzaim/assets/img/info6.png" alt="">
 		</div>
 	</div>
 	</div>
 </div>
+<?php require 'footer.php'; ?>

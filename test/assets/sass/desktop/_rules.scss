@@ -1,0 +1,66 @@
+#ex-rules{
+  padding-top: 65px;
+  padding-bottom: 105px;
+  h2{
+    margin-top: 0;
+    margin-bottom: 60px;
+    font-weight: 700;
+  }
+  .row{
+    margin-bottom: 75px;
+    .col-md-3{
+      p{
+        min-height: 60px;
+        color: #909090;
+        text-align: center;
+        span{
+          display: block;
+          font-size: 11px;
+        }
+        @media (max-width: 991px) {
+          br{
+            display: none;
+          }
+        }
+      }
+      div{
+        line-height: 26px;
+        text-align: center;
+        height: 100px;
+        overflow: hidden;
+        background-color: $white;
+        padding: 25px 10px;
+        @include prefix (border-radius, 10px);
+        table{
+          max-width: 180px;
+          margin: 0 auto 0;
+          tr{
+            td{
+              padding: 3px 0;
+              border: none;
+            }
+          }
+          @media (max-width: 414px) {
+            max-width: 140px;
+          }
+        }
+        @media (max-width: 991px) {
+          margin-bottom: 30px;
+        }
+        @media (max-width: 767px) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .ex-info-scope{
+    p{
+      text-align: justify;
+    }
+  }
+  h3{
+    font-size: 30px;
+    margin: 65px 0;
+    font-weight: 700;
+  }
+}

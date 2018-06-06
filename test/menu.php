@@ -1,57 +1,123 @@
-<aside class="ex-aside-menu">
-    <div>
-        <i class="ex-close-menu"></i>
-    </div>
-    <main>
-        <a href="/form"><button class="ex-main-btn" type="button">Получить деньги</button></a>
-        <button class="ex-main-btn ex-ask-question" data-toggle="modal" data-target="#askQuestion">Задать вопрос</button> 
-        <!-- <button class="ex-main-btn ex-ask-question" type="button">Задать вопрос</button> -->
-        <ul>
-            <li class="ex-larger">Как работает сервис</li>
-            <li><a href="/about">О сервисе Forzaim</a></li>
-            <li><a href="/allarticles">Статьи о займах</a></li>
-            <li><a href="/faq">Вопрос - Ответ</a></li>
-            <li class="ex-larger">Документация</li>
-            <li><a href="/oferta">Публичная оферта</a></li>
-            <li><a href="/soglasie">Согласие на обработку данных</a></li>
-            <li><a href="/rules">Правила предоставления займов</a></li>
-            <li class="ex-larger">Способы получения займа</li>
-            <li><a href="/zaim-card">Банковская карта</a></li>
-            <li><a href="/zaim-yandex">Яндекс.Деньги</a></li>
-            <li><a href="/zaim-contact">Contact</a></li>
-            <li><a href="/zaim-qiwi">QIWI VISA кошелек</a></li>
-            <li><a href="/zaim-bank">Счет в банке</a></li>
-        </ul>
-    </main>
-</aside>
-    <div id="askQuestion" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					<h2>
-                        Заполните форму <br> и наш менеджер свяжется с вами
-                    </h2>
-				</div>
-                <div class="modal-body">
-                    <div class="form-group has-feedback">
-                        <input type="text" class="form-control ec tip" name="feedback-name" title="Введите свое имя"
-                                data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                data-validation-error-msg="Введите свое имя" id="feedback-name" placeholder="Введите ваше имя">
-                    </div>
-                    <div class="form-group">
-                        <input type="hidden" class="form-control" id="feedback-phone" title="Тефелон" value="8(999)9876543">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="feedback-email" title="Email" placeholder="Введите ваш email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="feedback-comment"  title="Текст вашего сообщения" placeholder="Введите текст сообщения" required></textarea>
-                    </div>
-                    <button type="button" id="feedback-send" class="ex-main-btn">Отправить</button>
-                </div>
+<nav class="navbar navbar-default ex-main-header">
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="navbar-header">
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">
+                    <img src="/templates/zaimhome/assets/img/zaimhome_logo.png" alt="Image missing">
+                </a>
+            </div>
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">О сервисе
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/about" class="hov">О сервисе</a>
+                            </li>
+                            <li>
+                                <a href="/money" class="hov">Виды займов</a>
+                            </li>
+                            <li>
+                                <a href="/oferta" class="hov">Публичная оферта</a>
+                            </li> 
+                            <li>
+                                <a href="/rules" class="hov">Правила предоставления займов</a>
+                            </li>
+                            <li>
+                                <a href="/agreement" class="hov">Согласие на обработку данных</a>
+                            </li>
+                            <li>
+                                <a href="/documents" class="hov">Правовые документы</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/form">Получить деньги</a> 
+                    </li>
+                    <li class="dropdown">
+                            <a  href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Новости
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a  href="/news1" class="hov" >Где взять займ на карту Сбербанка?</a>
+                                </li>
+                                <li>
+                                    <a  href="/news2" class="hov" >Как получить кредит на Яндекс.Деньги?</a>
+                                </li> 
+                                <li>
+                                    <a  href="/news3" class="hov" >Мгновенные займы – доступная и удобная услуга</a>
+                                </li>
+                                <li>
+                                    <a  href="/news4" class="hov" >Очистить кредитную историю</a>
+                                </li>
+                                <li>
+                                    <a  href="/news5" class="hov" >Как получить займ на QIWI кошелек</a>
+                                </li>
+                                <li>
+                                    <a  href="/news6" class="hov" >Как получить займ через систему Contact без отказа</a>
+                                </li>
+                            </ul>
+                        </li>
+                    <li> 
+                        <a href="/faq">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="" data-toggle="modal" data-target="#helpModal">Обратная связь</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
+</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header text-center">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+                    <h4 class="text-center">Остались вопросы?</h4>
+                    <p class="text-center">Просто заполните форму и наш специалист свяжется с Вами</p>
+				</div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="feedback-name" placeholder="Имя" title="Имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="hidden" class="form-control" id="feedback-phone" title="Телефон">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="feedback-email" placeholder="Email" title="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="feedback-comment" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"
+                                    required></textarea>
+                            </div>
+                            <div class="ex-actions">
+                                <button class="ex-main-btn" id="feedback-send">Отправить</button>
+                                <button class="ex-main-btn" data-dismiss="modal" aria-label="Close">Закрыть</button>
+                            </div>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>

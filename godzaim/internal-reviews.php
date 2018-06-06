@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="/modules/owl/owl.carousel.css">
-<link rel="stylesheet" href="/modules/owl/owl.theme.css">
+<?php require 'header.php'; ?>
 <section id="reviews">
         <div class="row">
             <h1 class="title">Отзывы</h1>
@@ -67,26 +66,7 @@
                         </div>
                     </div>        
                 </div>   
-            </div>            
-            
+            </div>  
         </div>
-
-</section>
-
-<!-- Include js plugin -->
-<script src="/modules/owl/owl.carousel.js"></script>
-<script>
-$(document).ready(function() {
- 
-  $("#owl-demo").owlCarousel({
- 
-      autoPlay: 5000, //Set AutoPlay to 3 seconds
- 
-      items : 2,
-      itemsDesktop : [1199,3],
-      itemsDesktopSmall : [979,3],
-      navigation : false
-  });
- 
-});
-</script>
+</section> 
+<?php require 'footer.php'; ?>
