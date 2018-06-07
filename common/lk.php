@@ -32,8 +32,18 @@
 	require 'new2/css/lk.php';
 	echo '</style>';
 ?> 
+<style>
+ins {
+	text-align: center !important;
+}
+</style>
 <div class="row container3"><div class="col-md-12">
-    <h2 class="text-center hh">Вам доступен займ в следующих организациях:</h2>
+<?php if($site == 'www.mikrodengi' || $site == 'zaimrubli' || $site == 'zaimoking' || $site == 'mikrodengi') { ?>
+<h2 class="text-center hh" style="font-size: 26px;">Мы подобрали для Вас лучшие условия по микрозаймам! <br>
+Чтобы увеличить свои шансы на получение денег, заполните анкеты в нескольких организациях!</h2>
+	<?php } else { ?>
+	<h2 class="text-center hh">Вам доступен займ в следующих организациях:</h2>
+	<?php }?> 
     <div class="row"><br>
     <?php 
         function plural_type($n) { 
@@ -47,7 +57,7 @@
         $temp = 0;
         echo '<div class="row"><div class="col-md-12">';
 
-        if($site == 'www.mikrodengi' || $site == 'zaimrubli' || $site == 'zaimoking' || $site == 'mikrodengi')
+        if($site == '111www.mikrodengi' || $site == '111zaimrubli' || $site == '111zaimoking' || $site == '111mikrodengi')
         { 
             $data =
             array(
