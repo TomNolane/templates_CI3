@@ -8,6 +8,7 @@
     $st_promotion = strtotime('-55 days');
     $st_targets = strtotime('-39 days');
 ?>
+<?php require 'header.php'; ?>
 <div class="container">
     <div class="ex-all-articles">
     <a href="/borrow"><div class="ex-articles-block">
@@ -116,3 +117,4 @@
         </a>
     </div>
 </div>
+<?php require 'footer.php'; ?>

@@ -1,0 +1,223 @@
+body {
+  font-family: $helvetica !important;
+  font-weight: 400 !important;
+  position: relative;
+  width: 100%;
+  color: #333333 !important;
+  float: left;
+  min-height: 100vh;
+  padding-right: 0 !important;
+}
+
+.ex-main-btn {
+  width: 100%;
+  padding: 25px 5px 21px;
+  border: none;
+  outline: none;
+  background-color: #6781e7;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include prefix(border-radius, 100px);
+}
+
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ex-adds {
+  height: 220px;
+  background-color: #edeeef;
+}
+
+.ex-sticky {
+  position: relative;
+  width: 100%;
+  float: left;
+  padding-bottom: 250px;
+  min-height: 100vh;
+  .ex-sticky-footer {
+    position: absolute;
+    width: 100%;
+    min-height: 133px;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.ex-agreement-check {
+  label {
+    margin-top: 25px !important;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-weight: 700;
+    padding-top: 3px !important;
+    &:hover input ~ i {
+      background: #f8f8f8;
+    }
+    &:focus input ~ i {
+      background: #f8f8f8;
+    }
+    span {
+      display: inline-block;
+      margin-left: 15px;
+      margin-top: 2px;
+      color: #333333;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      left: 0;
+      margin-left: 0 !important;
+      &:checked ~ i {
+        background: transparent;
+        &:after {
+          display: block;
+        }
+      }
+
+    }
+    i {
+      display: inline-block;
+      position: absolute;
+      top: 7px;
+      left: 0;
+      height: 24px;
+      width: 24px;
+      border: 1px solid #5d4889;
+      background-color: #ffffff;
+      @include prefix(border-radius, 5px);
+      &:after {
+        content: '';
+        position: absolute;
+        display: none;
+        left: 8px;
+        top: 4px;
+        width: 5px;
+        height: 10px;
+        border: solid #5d4889;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        @include prefix(border-radius, 4px);
+      }
+    }
+  }
+  button {
+    margin-top: 28px;
+  }
+}
+
+.ex-dn {
+  display: none !important;
+}
+
+.ex-checked-stars {
+  color: #f8e71c !important;
+}
+
+.ex-transparent {
+  background-color: transparent !important;
+}
+
+.ex-ot {
+  padding-right: 5px;
+}
+.ex-bg-head {
+  background-color: transparent!important;
+  a {
+    color: #333333!important;
+  }
+}
+.ex-fl {
+  float: right;
+}
+
+.ex-range-slider-block {
+  .ex-slider-val {
+    span {
+      margin-bottom: 0;
+      color: #754fa0;
+      font-weight: 700;
+      font-size: 54px;
+      &:last-child {
+        font-size: 36px;
+      }
+    }
+  }
+  .ex-calc-wraper {
+    padding: 32px 0 33px 38px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(103, 129, 231, 0.73);
+    border-radius: 0 0 10px 10px;
+    background-color: #ffffff;
+    .ex-tab-section {
+      .ex-calc-block {
+        background-color: #ffffff;
+        padding: 0;
+        .ex-icon-bg {
+          margin: 0 auto;
+          position: relative;
+          width: 60px;
+          height: 60px;
+          border-radius: 100px;
+          background-image: linear-gradient(180deg, #754fa0 0%, #6781e7 100%);
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+        .ex-unique {
+          margin-top: 4px;
+          margin-bottom: 5px;
+          color: #30323e;
+          font-size: 12px;
+          font-weight: 300;
+          display: block;
+        }
+        .ex-result-style {
+          span {
+            color: #30323e;
+            font-weight: 300;
+            line-height: 22px;
+            font-size: 16px;
+          }
+
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 991px) {
+  .ex-range-slider-block {
+    .ex-mb {
+      margin-bottom: 20px;
+    }
+    .ex-center {
+      text-align: center;
+    }
+    .ex-calc-wraper {
+      padding: 33px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(103, 129, 231, 0.73);
+      border-radius: 0 0 10px 10px;
+      background-color: #ffffff;
+    }
+  }
+}

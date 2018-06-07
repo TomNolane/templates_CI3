@@ -57,7 +57,7 @@
                         </ul>
                     </div>
                     <div class="col-md-4 ex-for-button text-center" style=" margin-top: 30px;"> 
-                        <a class="ex-orange-btn" style="cursor: pointer;" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">&nbsp;&nbsp;&nbsp;Получить деньги&nbsp;&nbsp;&nbsp;</a> 
+                        <a class="ex-orange-btn" style="cursor: pointer;" onclick="GetMoney()">&nbsp;&nbsp;&nbsp;Получить деньги&nbsp;&nbsp;&nbsp;</a> 
                     </div>
                 </div>
             </div>

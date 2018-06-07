@@ -641,6 +641,7 @@ $(document).ready(function () {
         setcookies();
         $('select[name="reg_type"]').change();
     });
+
     $('#next2').click(function () {
         if (validate2()) {
             $('input[name="step"]').val('2');
@@ -658,6 +659,26 @@ $(document).ready(function () {
         setcookies();
     });
     $('#getmoney').click(function () {
+        if (validate()) { 
+            $('input[name="step"]').val('3');
+            send_form(true, '/lk');
+            markTarget('form-step-3');
+            window.location = '/lk';
+        }
+        showBzzz = false;
+        setcookies();
+    });
+	$('#submitOne').click(function () {
+        if (validate()) { 
+            $('input[name="step"]').val('3');
+            send_form(true, '/lk');
+            markTarget('form-step-3');
+            window.location = '/lk';
+        }
+        showBzzz = false;
+        setcookies();
+    });
+	$('#submitOneb').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
             send_form(true, '/lk');

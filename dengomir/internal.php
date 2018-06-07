@@ -1,8 +1,15 @@
-<?php 
-$my_title = ''; $description = ''; 
-switch($this->uri->segment(1))
+<?php
+if ($this->uri->segment(1) == 'robots.txt') 
 {
-	case 'about': 
+	header("Content-type: text/plain");
+	require 'internal-robots.txt.php';
+}
+else
+{
+	$my_title = ''; $description = '';
+	switch($this->uri->segment(1))
+	{
+		case 'about': 
 		$my_title = 'Лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
 		$description = 'Dengomir осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
 		break;
@@ -84,8 +91,10 @@ switch($this->uri->segment(1))
 
 
 	default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'Dengomir - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
-} 
-    if ($this->uri->segment(1) == 'about') require 'internal-about.php';
+
+	}
+
+	if ($this->uri->segment(1) == 'about') require 'internal-about.php';
     elseif ($this->uri->segment(1) == 'faq') require 'internal-faq.php';
     elseif ($this->uri->segment(1) == 'rules') require 'internal-rules.php';
 	elseif ($this->uri->segment(1) == 'oferta') require 'internal-oferta.php';
@@ -100,4 +109,6 @@ switch($this->uri->segment(1))
 	elseif ($this->uri->segment(1) == 'repay') require 'internal-repay.php';
 	elseif ($this->uri->segment(1) == 'allarticles') require 'internal-allarticles.php';
 	elseif ($this->uri->segment(1) == 'refinancing') require 'internal-refinancing.php';
-?>
+}
+?> 
+   

@@ -26,7 +26,7 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <a href="/">
-                    <img src="/templates/dengimo/img/logo-footer.png" class="logo" alt="logo-footer.png">
+                    <img src="/templates/dengimo/assets/img/logo-footer.png" class="logo" alt="logo-footer.png">
                 </a>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12 spec_footer4">

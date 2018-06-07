@@ -1,0 +1,384 @@
+.spec_footer7 { 
+    display: none;
+} 
+.ex-adds {
+    visibility: hidden;
+}
+
+/* line 1, ../sass/desktop/_offers.scss */
+.ex-offers {
+    padding-bottom: 59px;
+    padding-top: 58px;
+  }
+  /* line 4, ../sass/desktop/_offers.scss */
+  .ex-offers h1 {
+    text-align: center;
+    color: #1f1c09;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-top: 0;
+    margin-bottom: 39px;
+  }
+  /* line 13, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  /* line 16, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block:hover {
+    cursor: pointer;
+  }
+  /* line 18, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block:hover table {
+    margin: 0 auto;
+  }
+  /* line 20, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block:hover table tr {
+    height: 120px;
+  }
+  /* line 22, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block:hover table tr td {
+    border-bottom: 1px solid transparent;
+  }
+  /* line 24, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block:hover table tr td:first-child {
+    width: 300px;
+  }
+  /* line 27, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block:hover table tr td:first-child p .fa-star {
+    font-size: 11px;
+    color: #f8e71c;
+  }
+  /* line 31, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block:hover table tr td:first-child p .fa-star-o {
+    font-size: 11px;
+    color: #979797;
+  }
+  /* line 36, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block:hover table tr td:first-child .ex-offers-img1 {
+    -webkit-filter: initial;
+    filter: initial;
+  }
+  /* line 40, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block:hover table tr td:first-child .ex-offers-img2 {
+    -webkit-filter: initial;
+    filter: initial;
+  }
+  /* line 44, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block:hover table tr td:first-child .ex-offers-img3 {
+    -webkit-filter: initial;
+    filter: initial;
+  }
+  /* line 48, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block:hover table tr td:first-child .ex-offers-img4 {
+    -webkit-filter: initial;
+    filter: initial;
+  }
+  /* line 54, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block:hover table tr .ex-main-btn {
+    background-color: #5d4889;
+  }
+  /* line 60, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    table-layout: fixed;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  /* line 68, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table tr {
+    height: 120px;
+  }
+  /* line 70, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table tr td {
+    text-align: center;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  /* line 76, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table tr td div {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.26px;
+    z-index: 45;
+  }
+  /* line 83, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table tr td div p {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.34px;
+    margin-bottom: 0;
+    padding-top: 10px;
+  }
+  /* line 91, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table tr td:first-child {
+    width: 300px;
+    background-color: #5d4889;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  /* line 97, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table tr td:first-child p .fa-star {
+    font-size: 11px;
+    color: #FFFFFF;
+  }
+  /* line 101, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table tr td:first-child p .fa-star-o {
+    font-size: 11px;
+    color: #979797;
+  }
+  /* line 106, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table tr td:first-child .ex-offers-img1 {
+    width: 234px;
+    height: 55px;
+    background-image: url("/templates/dengomir/assets/img/kredito24-300x70.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+  @media (max-width: 480px) {
+    /* line 106, ../sass/desktop/_offers.scss */
+    .ex-offers .ex-offers-block table tr td:first-child .ex-offers-img1 {
+      width: 100%;
+    }
+  }
+  @media (min-width: 992px) {
+    /* line 106, ../sass/desktop/_offers.scss */
+    .ex-offers .ex-offers-block table tr td:first-child .ex-offers-img1 {
+      -webkit-filter: grayscale(100%);
+      /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+    }
+  }
+  /* line 125, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table tr td:first-child .ex-offers-img2 {
+    width: 209px;
+    height: 55px;
+    background-image: url("/templates/dengomir/assets/img/Turbozaim.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+  @media (max-width: 480px) {
+    /* line 125, ../sass/desktop/_offers.scss */
+    .ex-offers .ex-offers-block table tr td:first-child .ex-offers-img2 {
+      width: 100%;
+    }
+  }
+  @media (min-width: 992px) {
+    /* line 125, ../sass/desktop/_offers.scss */
+    .ex-offers .ex-offers-block table tr td:first-child .ex-offers-img2 {
+      -webkit-filter: grayscale(100%);
+      /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+    }
+  }
+  /* line 144, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table tr td:first-child .ex-offers-img3 {
+    width: 223px;
+    height: 52px;
+    background-image: url("/templates/dengomir/assets/img/Moneyman.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+  @media (max-width: 480px) {
+    /* line 144, ../sass/desktop/_offers.scss */
+    .ex-offers .ex-offers-block table tr td:first-child .ex-offers-img3 {
+      width: 100%;
+    }
+  }
+  @media (min-width: 992px) {
+    /* line 144, ../sass/desktop/_offers.scss */
+    .ex-offers .ex-offers-block table tr td:first-child .ex-offers-img3 {
+      -webkit-filter: grayscale(100%);
+      /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+    }
+  }
+  /* line 163, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table tr td:first-child .ex-offers-img4 {
+    width: 218px;
+    height: 51px;
+    background-image: url("/templates/dengomir/assets/img/Zaimer.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+  @media (max-width: 480px) {
+    /* line 163, ../sass/desktop/_offers.scss */
+    .ex-offers .ex-offers-block table tr td:first-child .ex-offers-img4 {
+      width: 100%;
+    }
+  }
+  @media (min-width: 992px) {
+    /* line 163, ../sass/desktop/_offers.scss */
+    .ex-offers .ex-offers-block table tr td:first-child .ex-offers-img4 {
+      -webkit-filter: grayscale(100%);
+      /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+    }
+  }
+  @media (max-width: 991px) {
+    /* line 91, ../sass/desktop/_offers.scss */
+    .ex-offers .ex-offers-block table tr td:first-child {
+      background: none;
+    }
+  }
+  /* line 186, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table tr td:last-child {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  /* line 190, ../sass/desktop/_offers.scss */
+  .ex-offers .ex-offers-block table tr td .ex-main-btn {
+    margin-top: 0;
+    margin-bottom: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 16px;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+  @media (max-width: 1199px) {
+    /* line 190, ../sass/desktop/_offers.scss */
+    .ex-offers .ex-offers-block table tr td .ex-main-btn {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 991px) and (min-width: 768px) {
+    /* line 216, ../sass/desktop/_offers.scss */
+    tr td div p {
+      font-size: 14px !important;
+    }
+    /* line 220, ../sass/desktop/_offers.scss */
+    tr td:last-child {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    /* line 225, ../sass/desktop/_offers.scss */
+    tr td:first-child {
+      width: 260px !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+    /* line 229, ../sass/desktop/_offers.scss */
+    tr td:first-child figure {
+      margin-top: 10px !important;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    /* line 238, ../sass/desktop/_offers.scss */
+    .ex-offers-block {
+      margin-bottom: 50px;
+    }
+  
+    /* line 241, ../sass/desktop/_offers.scss */
+    table {
+      height: 470px;
+      border: 0;
+    }
+    /* line 244, ../sass/desktop/_offers.scss */
+    table td {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    /* line 247, ../sass/desktop/_offers.scss */
+    table td:first-child {
+      width: auto !important;
+    }
+    /* line 249, ../sass/desktop/_offers.scss */
+    table td:first-child figure {
+      margin: 10px auto;
+    }
+    /* line 253, ../sass/desktop/_offers.scss */
+    table td:first-child div p {
+      padding-top: 0 !important;
+    }
+  
+    /* line 260, ../sass/desktop/_offers.scss */
+    table tr {
+      height: auto;
+      display: block;
+    }
+  
+    /* line 264, ../sass/desktop/_offers.scss */
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: 16px !important;
+      text-align: right;
+    }
+  
+    /* line 270, ../sass/desktop/_offers.scss */
+    table td:last-child {
+      padding-right: 10px;
+      padding-left: 10px;
+      border-bottom: 0;
+    }
+    /* line 274, ../sass/desktop/_offers.scss */
+    table td:last-child .ex-main-btn {
+      width: 70%;
+    }
+  }
+  /* line 279, ../sass/desktop/_offers.scss */
+  #default {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 5px;
+  }
+  
+  /* line 284, ../sass/desktop/_offers.scss */
+  #kayan_arka {
+    top: -40%;
+    width: 100%;
+    height: 127px;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    background: none repeat scroll 0 0 #FFDC00;
+    display: inline-block;
+    margin-top: -3px;
+    padding: 0;
+    position: absolute;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    background-color: #f5f5f5;
+    z-index: 45;
+  }
+  @media (max-width: 991px) {
+    /* line 284, ../sass/desktop/_offers.scss */
+    #kayan_arka {
+      display: none;
+    }
+  }

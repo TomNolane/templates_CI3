@@ -1,14 +1,7 @@
-<?php 
-$from = '15';
-
-if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
-{
-    echo '<a href="#0" class="cd-top">Наверх</a>';
-}
-
+<?php $from = '15';
 if($this->uri->segment(1) != 'form')
-{ 
-    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+{
+	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Займкоин -->
     <ins class="adsbygoogle text-center"
     style="display:block"
@@ -18,30 +11,8 @@ if($this->uri->segment(1) != 'form')
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
+    echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-
-if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-    echo '<!-- Google Code for  
-    &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
-    Page -->
-    <script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 827428872;
-    var google_conversion_label = "xmjJCLrypHkQiKDGigM";
-    var google_remarketing_only = false;
-    /* ]]> */
-    </script>
-    <script type="text/javascript"  
-    src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-    <div style="display:inline;">
-    <img height="1" width="1" style="border-style:none;" alt=""  
-    src="//www.googleadservices.com/pagead/conversion/827428872/?label=xmjJCLrypHkQiKDGigM&amp;guid=ON&amp;script=0"/>
-    </div>
-    </noscript>';
-}
-
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') 
 {
 echo '<footer class="ex-main-footer">
@@ -150,112 +121,68 @@ else
         </div>
     </footer>';
 }
-    require 'templates/common/get_display_size.php';
-    echo '<script>';
-    require 'modules/jquery/jquery-1.11.3.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimcoin/assets/js/jquery.form-validator.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimcoin/assets/js/jquery.suggestions.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimcoin/assets/js/coockie.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimcoin/assets/js/custom.js';
-    echo '</script>';
-    require 'templates/common/detect.min.php';
-    echo '<script>';
-    require 'templates/zaimcoin/assets/js/settings_main.js';
-    echo '</script>'; 
-    echo '<script>';
-    require 'templates/zaimcoin/assets/js/owl.carousel.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimcoin/assets/js/settings_form.js';
-    echo '</script>';
-    echo '<!--[if lt IE 10]>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-    <![endif]-->';
-
- if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form' || $this->uri->segment(1) == 'money' || $this->uri->segment(1) == 'zaim-bank' || $this->uri->segment(1) == 'zaim-yandex' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-contact') 
-{ 
-    echo '<script>';
-    require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimcoin/assets/js/loanCalculator.js';
-    echo '</script>';
-}
 ?>
+<!-- [if lt IE 10]>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+<![endif] --> 
+
+<!-- common JS -->
 <script>
-    //backtotop
-    jQuery(document).ready(function (o) {
-            var l = 300,
-                s = 1200,
-                c = 700,
-                d = o(".cd-top");
-            o(window).scroll(function () {
-                o(this).scrollTop() > l ? d.addClass("cd-is-visible") : d.removeClass(
-                    "cd-is-visible cd-fade-out"), o(this).scrollTop() > s && d.addClass("cd-fade-out")
-            }), d.on("click", function (l) {
-                l.preventDefault(), o("body,html").animate({
-                    scrollTop: 0
-                }, c)
-            })
-        });
-    function goToForm() {
-        var tt = $('#ex-slider-val').text();
-        tt = tt.split(" ").join("");
-        setcookie('sldr', tt, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
-        var slider = $("#rangeSlider").data("ionRangeSlider");
-        var from2 = slider.result.from;
-        $('#from_slrd').val(from2);
-        setcookie('sldr2', from2, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
-        var days = $('#period').val();
-        if (days === '') days = 21;
-        setcookie('per', days, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
-        var days2 = $('#period2').val();
-        setcookie('per2', days2, (new Date).getTime() + (365 * 24 * 60 * 60 * 1000), '/');
-        $('#anketa').submit();
-    };
-
-    function goToLk() {
-        window.location.href = window.location.origin + '/lk';
-    };
-
-    function goToUp() {
-        $('html, body').animate({
-            scrollTop: $('.toUp').offset().top
+<?php
+    echo 'try{';
+    require 'footer_common_js.php';
+    echo '/* private JS */';
+    require 'templates/zaimcoin/assets/js/main.js'; 
+    echo 'function goToUp() {
+        $(\'html, body\').animate({
+            scrollTop: $(\'.toUp\').offset().top
         }, 1000);
+    }';
+if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
+
+    <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {?>
+    function GetMoney() {
+        $('form#anketa').submit();
     }
-    $(document).ready(function () {
-        $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
-        $('[data-toggle="popover"]').popover();
-        <?php if( $this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
-        $("#rangeSlider").ionRangeSlider({
-            hide_min_max: true,
-            hide_from_to: true,
-            keyboard: true,
-            grid: false,
-            from: <?php
-        if(isset($_GET['amount'])) 
+    jQuery.fn.swap = function(b) 
+    {
+        b = jQuery(b)[0];
+        var a = this[0],
+            a2 = a.cloneNode(true),
+            b2 = b.cloneNode(true),
+            stack = this;
+
+        a.parentNode.replaceChild(b2, a);
+        b.parentNode.replaceChild(a2, b);
+
+        stack[0] = a2;
+        return this.pushStack( stack );
+    }; 
+    var client_w = screen.width; 
+    var pathname = window.location.pathname,  substring = "/", substring2 = "index", substring4 = "lk";
+        
+    if(pathname.indexOf(substring) !== -1 || pathname.indexOf(substring2) !== -1)
+    {
+        if(Number(client_w) > 767)
+        {
+            
+        } 
+        else
+        {
+            $("#specialIndex").swap("#specialIndex2");
+            $("#ex-slider-val").css("margin-top","0");
+        }
+    };
+    <?php } ?>
+    $("#rangeSlider").ionRangeSlider({
+        hide_min_max: true,
+        hide_from_to: true,
+        keyboard: true,
+        grid: false,
+        from: <?php 
+        if($this->input->get('amount') != '')
         {  
-            switch($_GET['amount'])
+            switch($this->input->get('amount'))
             {
                 case '1000': $from = '0' ; break;
                 case '2000': $from = '1' ; break;
@@ -279,532 +206,173 @@ else
                 case '50000': $from = '19' ; break;
                 case '80000': $from = '20' ; break;
                 case '100000': $from = '21' ; break;
+                case '110000': $from = '22' ; break;
+                case '120000': $from = '23' ; break;
+                case '130000': $from = '24' ; break;
+                case '140000': $from = '25' ; break;
+                case '150000': $from = '26' ; break;
+                case '160000': $from = '27' ; break; 
+                case '170000': $from = '28' ; break;
+                case '180000': $from = '29' ; break;
+                case '190000': $from = '30' ; break;
+                case '200000': $from = '31' ; break;
+                case '250000': $from = '32' ; break;
+                case '300000': $from = '33' ; break;
+                case '400000': $from = '34' ; break;
+                case '500000': $from = '35' ; break;
+                case '600000': $from = '36' ; break;
+                case '700000': $from = '37' ; break;
+                case '800000': $from = '38' ; break;
+                case '900000': $from = '39' ; break;
+                case '1000000': $from = '40' ; break;
             }
-            echo $from;
+            echo $from; 
         }
-        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd'];?>,
-            values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000,
-                14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000
-            ],
-            onFinish: function (data) {
-                $('#amount').val(data.from_value);
-                $('#form_slrd').val(data.from);
-            },
-            onLoad: function (data) {
-                $('#amount').val(data.from_value);
-                $('#form_slrd').val(data.from);
-            },
-            onChange: function (range) {
-                if (range.from_value <= 10000) {
-                    $('#period').val('7');
-                    $('#period2').val('От 61 до 130 дней');
-                } else if (range.from_value <= 15000) {
-                    $('#period').val('14');
-                    $('#period2').val('От 61 до 130 дней');
-                } else if (range.from_value <= 20000) {
-                    $('#period').val('21');
-                    $('#period2').val('От 61 до 130 дней');
-                } else if (range.from_value <= 30000) {
-                    $('#period').val('21');
-                    $('#period2').val('От 61 до 130 дней');
-                } else if (range.from_value <= 50000) {
-                    $('#period').val('30');
-                    $('#period2').val('От 130 до 250 дней');
+        elseif($this->input->post('form_slrd') == '') echo '15'; else echo $this->input->post('form_slrd'); ?>,
+        values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
+        onFinish: function (data) {
+            $('#amount').val(data.from_value);
+            $('#form_slrd').val(data.from);
+        },
+        onLoad: function (data) {
+            $('#amount').val(data.from_value);
+            $('#form_slrd').val(data.from);
+        },
+        onChange: function (range3) {
+                 if (range3.from_value <= 10000) {
+                    $("#period").val("7");
+                    $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
+                } else if (range3.from_value <= 15000) {
+                    $("#period").val("14");
+                    $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
+                } else if (range3.from_value <= 20000) {
+                    $("#period").val("21");
+                    $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
+                } else if (range3.from_value <= 30000) {
+                    $("#period").val("21");
+                    $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('85');
+                } else if (range3.from_value <= 50000) {
+                    $("#period").val("30");
+                    $("#period2").val("От 130 до 250 дней");
+                    $('#percent').val('77');
+                } else  if (range3.from_value <= 200000 && range3.from_value > 50000) {
+                    $("#period").val("30");
+                    $("#period2").val("От 250 до 365 дней");
+                    $('#percent').val('65');
+                } else  if (range3.from_value <= 500000 && range3.from_value > 200000) {
+                    $("#period").val("30");
+                    $("#period2").val("От 1 до 3 лет");
+                    $('#percent').val('58');
                 } else {
-                    $('#period').val('30');
-                    $('#period2').val('От 250 до 365 дней');
-                }
-                $('#amount').val(range.from_value);
-                $('#form_slrd').val(range.from);
-            },
-        });
-    <?php } ?>
-    });
-
-    function getcookie(name) {
-        var cookie = " " + document.cookie;
-        var search = " " + name + "=";
-        var setStr = null;
-        var offset = 0;
-        var end = 0;
-
-        if (cookie.length > 0) {
-            offset = cookie.indexOf(search);
-
-            if (offset != -1) {
-                offset += search.length;
-                end = cookie.indexOf(";", offset)
-
-                if (end == -1) {
-                    end = cookie.length;
+                    $("#period").val("30");
+                    $("#period2").val("От 1 до 5 лет");
+                    $('#percent').val('52');
                 }
 
-                setStr = unescape(cookie.substring(offset, end));
+                $("#amount").val(range3.from_value);
+                $("#form_slrd").val(range3.from);
             }
-        }
-
-        return (setStr);
-    }
-
-    function GetMoney() {
-        $('form#anketa').submit();
-    }
-
-    function Loading(flag) {
-        if (typeof flag == 'undefined') {
-            $('#feedback-send').prop('disabled', true);
-            $('#feedback-send').html('Отправка <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        } else if (!flag) {
-            $('#feedback-send').html('Отправить');
-            $('#feedback-send').prop('disabled', false);
-        }
-    }
-    $('#feedback-send').click(function () {
-        Loading();
-
-        var data;
-        if (window.location.pathname == '/form') {
-            var _input = $('#anketa').serialize();
-            _input = decodeURIComponent(_input);
-            _input = _input.replace(new RegExp("&step", 'g'), "&Шаг");
-            _input = _input.replace(new RegExp("&period", 'g'), "&Срок");
-            _input = _input.replace(new RegExp("display=0", 'g'), "Декстоп версия");
-            _input = _input.replace(new RegExp("display=1", 'g'), "Мобайл версия");
-            _input = _input.replace(new RegExp("referer", 'g'), "Откуда пришли");
-            _input = _input.replace(new RegExp("&f=", 'g'), "&Фамилия=");
-            _input = _input.replace(new RegExp("&i=", 'g'), "&Имя=");
-            _input = _input.replace(new RegExp("&o=", 'g'), "&Отчество=");
-            _input = _input.replace(new RegExp("gender=0", 'g'), "Пол женский");
-            _input = _input.replace(new RegExp("gender=1", 'g'), "Пол мужской");
-            _input = _input.replace(new RegExp("&birth_dd=0&birth_mm=0&birth_yyyy=0", 'g'), "");
-            _input = _input.replace(new RegExp("birthdate", 'g'), "Дата рождения");
-            _input = _input.replace(new RegExp("&phone=", 'g'), "&Телефон=");
-            _input = _input.replace(new RegExp("&email", 'g'), "&Емаил");
-            _input = _input.replace(new RegExp("&delays_type=never", 'g'), "&Никогда не брал(а) кредитов");
-            _input = _input.replace(new RegExp("&delays_type=credit_closed_no_delay", 'g'),
-                "&Кредиты закрыты, просрочек не было");
-            _input = _input.replace(new RegExp("&delays_type=credit_open_no_delay", 'g'),
-                "&Кредиты есть, просрочек нет");
-            _input = _input.replace(new RegExp("&delays_type=credit_closed_had_delay", 'g'),
-                "&Кредиты закрыты, просрочки были");
-            _input = _input.replace(new RegExp("&delays_type=had_delay", 'g'), "&Просрочки были, сейчас нет");
-            _input = _input.replace(new RegExp("&delays_type=had_delay", 'g'), "&Просрочки сейчас есть");
-            _input = _input.replace(new RegExp("rangeSlider", 'g'), "Сумма");
-            _input = _input.replace(new RegExp("ammount", 'g'), "Сумма");
-            _input = _input.replace(new RegExp("amount", 'g'), "Сумма");
-            _input = _input.replace(new RegExp("&passport=", 'g'), "&Серия и номер паспорта=");
-            _input = _input.replace(new RegExp("passport_s", 'g'), "Серия паспорта");
-            _input = _input.replace(new RegExp("passport_n", 'g'), "Номер паспорта");
-            _input = _input.replace(new RegExp("passport_dd", 'g'), "День выдачи");
-            _input = _input.replace(new RegExp("passport_mm", 'g'), "Месяц выдачи");
-            _input = _input.replace(new RegExp("passport_yyyy", 'g'), "Год выдачи");
-            _input = _input.replace(new RegExp("passportdate", 'g'), "Дата выдачи");
-            _input = _input.replace(new RegExp("passport_code", 'g'), "Код подразделения");
-            _input = _input.replace(new RegExp("passport_who", 'g'), "Кем выдан");
-            _input = _input.replace(new RegExp("birthplace", 'g'), "Место рождения");
-            _input = _input.replace(new RegExp("&region=", 'g'), "&Регион=");
-            _input = _input.replace(new RegExp("&city=", 'g'), "&Населённый пункт=");
-            _input = _input.replace(new RegExp("&street=", 'g'), "&Улица проживания=");
-            _input = _input.replace(new RegExp("&building=", 'g'), "&Дом=");
-            _input = _input.replace(new RegExp("&housing=", 'g'), "&Корпус=");
-            _input = _input.replace(new RegExp("flat=", 'g'), "Квартира=");
-            _input = _input.replace(new RegExp("reg_type=1", 'g'), "Постоянная регистрация");
-            _input = _input.replace(new RegExp("reg_type=0", 'g'), "Без регистрации");
-            _input = _input.replace(new RegExp("reg_type=2", 'g'), "Временная регистрация");
-            _input = _input.replace(new RegExp("&reg_same=1", 'g'), "");
-            _input = _input.replace(new RegExp("&work=", 'g'), "&Вид трудоустройства=");
-            _input = _input.replace(new RegExp("work_name", 'g'), "Место работы");
-            _input = _input.replace(new RegExp("work_occupation", 'g'), "Должность");
-            _input = _input.replace(new RegExp("work_phone", 'g'), "Рабочий телефон");
-            _input = _input.replace(new RegExp("work_experience", 'g'), "Стаж");
-            _input = _input.replace(new RegExp("work_salary", 'g'), "Зарплата");
-            _input = _input.replace(new RegExp("work_region", 'g'), "Регион работы");
-            _input = _input.replace(new RegExp("work_city", 'g'), "Город работы");
-            _input = _input.replace(new RegExp("work_street", 'g'), "Улица работы");
-            _input = _input.replace(new RegExp("work_house", 'g'), "Номер дома работы");
-            _input = _input.replace(new RegExp("work_office", 'g'), "Офис работы");
-
-            _info = _info.replace(new RegExp("undefined", 'g'), "неопределено");
-            data = {
-                name: $('#feedback-name').val(),
-                phone: $('#feedback-phone').val(),
-                email: $('#feedback-email').val(),
-                comment: 'Обращение: ' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " +
-                    x_size + " x " + y_size + "\n | Данные:" + _input
-            };
-        } else {
-            data = {
-                name: $('#feedback-name').val(),
-                phone: $('#feedback-phone').val(),
-                email: $('#feedback-email').val(),
-                comment: 'Обращение: ' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " +
-                    x_size + " x " + y_size
-            };
-        }
-
-        if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' && data
-                .email != '') && (typeof data.comment != 'undefined' && data.comment != '')) {
-            $.ajax({
-                url: '/feedback/',
-                type: 'POST',
-                dataType: 'json',
-                data: data
-            }).done(function (response) {
-                if (response != null) {
-                    if (typeof response.error != 'undefined') {
-                        alert('Ошибка. ' + response.error);
-                    } else {
-                        $('#feedbackModal').modal('hide');
-                        Loading(0);
-                        $('#helpModal').modal('hide');
-                        alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
-                    }
-                } else {
-                    alert('Не получилось отправить. Попробуйте ещё раз.');
-                }
-            }).fail(function (jqxhr, textStatus, error) {
-                alert('Не получилось отправить. Попробуйте ещё раз.');
-            }).always(function () {
-                Loading(0);
-            });
-        } else {
-            Loading(0);
-            alert('Пожалуйста, заполните все поля.');
-        }
-    });
-</script>
-
-<?php
-if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index')
-{ 
-echo '<script>jQuery.fn.swap = function(b) {
-    b = jQuery(b)[0];
-    var a = this[0],
-        a2 = a.cloneNode(true),
-        b2 = b.cloneNode(true),
-        stack = this;
-
-    a.parentNode.replaceChild(b2, a);
-    b.parentNode.replaceChild(a2, b);
-
-    stack[0] = a2;
-    return this.pushStack( stack );
-    }; 
-    var client_w = screen.width; 
-    var pathname = window.location.pathname,  substring = "/", substring2 = "index", substring4 = "lk";
-        
-    if(pathname.indexOf(substring) !== -1 || pathname.indexOf(substring2) !== -1)
-    {
-        if(Number(client_w) > 767)
-        {
-             
-        } 
-        else
-        {
-            $("#specialIndex").swap("#specialIndex2");
-            $("#ex-slider-val").css("margin-top","0");
-        }
-    }
-    </script>';
-echo '<script>';
-require 'templates/zaimcoin/assets/js/loanCalculator.js';
-echo '</script>';
-echo "<script>$(document).ready(function () {
-    var slider3 = $('#rangeSlider').data('ionRangeSlider');
-    var slider_plus = true;
-    var n = 10;
-    var slider_init = setInterval(function () {
-        if (slider_plus) {
-            n++;
-        } else {
-            n--;
-        }
-
-        if (n == 21 && n != ".$from.") {
-            slider_plus = false;
-        }else if (n == ".$from." && slider_plus == false) {
-            clearInterval(slider_init);
-        }else if (n == 21 && n == ".$from.") {
-            clearInterval(slider_init);
-        }
- 
-        slider3.update({
-            from: n
         }); 
- 
-        if (n <= 9) {
-            $('#period').val('7'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 14 && n > 9) {
-            $('#period').val('14'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 15 && n > 14) {
-            $('#period').val('21'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 17 && n > 15) {
-            $('#period').val('21'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 19 && n > 17) {
-            $('#period').val('30'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n > 19) {
-            $('#period').val('30'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } 
-
-    }, 50);
-});</script>";
-}
-
-if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
-{ 
-    echo '<script>
-    var offers = '.json_encode($data).'
-    var by_reg = null;
-    $(document).ready(function () {
-        $(".offer-type").change(function () {
-            update_offers();
-        });
-        function update_offers() {
-            var str = ".results tbody tr";
-            //var curr = clone(by_reg.length? by_reg : offers);
-            var ot_card = $(".offer-type[data-id=\'card\']").prop("checked");
-            var ot_qiwi = $(".offer-type[data-id=\'qiwi\']").prop("checked");
-            var ot_yandex = $(".offer-type[data-id=\'yandex\']").prop("checked");
-            var ot_contact = $(".offer-type[data-id=\'contact\']").prop("checked");
-            // Прячем всё
-            $(str).hide();
-            // Пробегаемся по списку офферов
-            ((by_reg !== null) ? by_reg : offers).forEach(function (offer, i) {
-                var $tr = $(str + "[data-id=\'" + offer.id + "\']");
-                if ($tr.data("amount") >= amount) {
-                    if (ot_card && !!$tr.data(\'card\') == ot_card) $tr.show();
-                    else if (ot_qiwi && !!$tr.data(\'qiwi\') == ot_qiwi) $tr.show();
-                    else if (ot_yandex && !!$tr.data(\'yandex\') == ot_yandex) $tr.show();
-                    else if (ot_contact && !!$tr.data(\'contact\') == ot_contact) $tr.show();
-                }
-            });
-        }
-        if (getcookie("i")) {
-            var i = getcookie("i");
-            $("#i").text(i);
-        } 
-    });
-    function clone(o) {
-        if (!o || "object" !== typeof o) return o;
-
-        var c = "function" === typeof o.pop ? [] : {};
-        var p, v;
-        for (p in o) {
-            if (o.hasOwnProperty(p)) {
-                v = o[p];
-                if (v && "object" === typeof v) {
-                    c[p] = clone(v);
-                } else {
-                    c[p] = v;
-                }
+        <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {?>
+       
+        $(document).ready(function () {
+        var slider = $('#rangeSlider').data('ionRangeSlider');
+        var slider_plus = true;
+        var n = 10;
+        var slider_init = setInterval(function () {
+            if (slider_plus) {
+                n++;
+            } else {
+                n--;
             }
-        }
-        return c;
-    }  
-</script>';
+            if (n == 21 && n != <?php echo $from; ?>) {
+                slider_plus = false;
+            }else if (n == <?php echo $from; ?> && slider_plus == false) {
+                clearInterval(slider_init);
+            }else if (n == 21 && n == <?php echo $from; ?>) {
+                clearInterval(slider_init);
+            }
+
+            slider.update({
+                from: n
+            });
+
+            if (n <= 9) {
+            $('#period').val('7');
+            $('#period2').val('От 61 до 130 дней');
+            $('#percent').val('95');
+            } else if (n <= 14 && n > 9) {
+                $('#period').val('14');
+                $('#period2').val('От 61 до 130 дней');
+                $('#percent').val('95');
+            } else if (n <= 15 && n > 14) {
+                $('#period').val('21');
+                $('#period2').val('От 61 до 130 дней');
+                $('#percent').val('95');
+            } else if (n <= 17 && n > 15) {
+                $('#period').val('21');
+                $('#period2').val('От 61 до 130 дней');
+                $('#percent').val('85');
+            } else if (n <= 19 && n > 17) {
+                $('#period').val('30');
+                $('#period2').val('От 130 до 250 дней');
+                $('#percent').val('77');
+            } else if (n > 19) {
+                $('#period').val('30');
+                $('#period2').val('От 250 до 365 дней');
+                $('#percent').val('65');
+            }
+            $('#amount').val(slider.result.from_value);
+            $("#form_slrd").val(slider.result.from);
+        }, 50); 
+        traffic("zaimcoin.ru",0);
+    });
+<?php }
 }
+elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+{
+    include "templates/common/new2/js/lk.js";      
+    echo 'traffic("zaimcoin.ru",4);'; 
 
-if ($this->uri->segment(1) == 'form') 
-{ 
-    echo '<script>
-    $("#work").change(function(){
-        if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
-        { 
-            $("#work_name").addClass("valid");
-            $("#work_name").parent().parent().parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_name").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_name").removeClass("er");
-            $("#work_namestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_occupation").addClass("valid");
-            $("#work_occupation").parent().parent().parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_occupation").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_occupation").removeClass("er");
-            $("#work_occupationstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_phone").addClass("valid");
-            $("#work_phone").parent().parent().parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_phone").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_phone").removeClass("er");
-            $("#work_phonestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
-
-            $("#work_experience").addClass("valid");
-            $("#work_experience").parent().parent().parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_experience").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_experience").removeClass("er");
-            $("#work_experiencestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
-
-            $("#work_salary").removeClass("valid");
-            $("#work_salary").parent().parent().parent().addClass("ex-error").removeClass("ex-success");
-            $("#work_salary").parent().parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_salary").addClass("er");
-            $("#work_salary").focus();
-            $("#work_salarystatus").addClass("glyphicon-remove");
-
-            $("#work_region").addClass("valid");
-            $("#work_region").parent().parent().parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_region").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_region").removeClass("er");
-
-            $("#work_city").addClass("valid");
-            $("#work_city").parent().parent().parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_city").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_city").removeClass("er");
-            $("#work_citystatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_street").addClass("valid");
-            $("#work_street").parent().parent().parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_street").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_street").removeClass("er");
-            $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_house").addClass("valid");
-            $("#work_house").parent().parent().parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_house").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_house").removeClass("er");
-            $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_office").addClass("valid");
-            $("#work_office").parent().parent().parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_office").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_office").removeClass("er");
-            $("#work_officestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-            
-            if($(this).val().toLowerCase() == "пенсионер")
-            $("#work_name").val("пенсионер");
-            else  $("#work_name").val("безработный");
-            if($(this).val().toLowerCase() == "пенсионер")
-            $("#work_occupation").val("пенсионер");
-            else  $("#work_occupation").val("безработный");
-            var teemp = $("#phone").val();
-            $("#work_phone").val(teemp);
-            $("#work_experience").val(100);
-            $("#work_salary").val("");
-
-            var teemp2 = Number($("#region").find(":selected").index());
-            $("#work_region option").eq(teemp2).prop("selected", true);
-            var teemp3 = $("#city").val();
-            $("#work_city").val(teemp3);
-            var teemp4 = $("#street").val();
-            $("#work_street").val(teemp4);
-            var teemp5 = $("#building").val();
-            $("#work_house").val(teemp5);
-            $("#work_building").val(" ");
-            var teemp6 = $("#flat").val();
-            $("#work_office").val(teemp6);
-        }
-        else { 
-
-            $("#work_name").val("");
-            $("#work_name").removeClass("valid");
-            $("#work_name").parent().parent().parent().removeClass("ex-success");
-            $("#work_name").parent().parent().prev().removeClass("label_true"); 
-            $("#work_namestatus").removeClass("glyphicon-ok");
-
-            $("#work_occupation").val("");
-            $("#work_occupation").removeClass("valid");
-            $("#work_occupation").parent().parent().parent().removeClass("ex-success");
-            $("#work_occupation").parent().parent().prev().removeClass("label_true"); 
-            $("#work_occupationstatus").removeClass("glyphicon-ok"); 
-
-            $("#work_phone").val("");
-            $("#work_phone").removeClass("valid");
-            $("#work_phone").parent().parent().parent().removeClass("ex-success");
-            $("#work_phone").parent().parent().prev().removeClass("label_true"); 
-            $("#work_phonestatus").removeClass("glyphicon-ok");
-
-            $("#work_experience").val("");
-            $("#work_experience").removeClass("valid");
-            $("#work_experience").parent().parent().parent().removeClass("ex-success");
-            $("#work_experience").parent().parent().prev().removeClass("label_true"); 
-            $("#work_experiencestatus").removeClass("glyphicon-ok");
-
-            $("#work_salary").val("");
-            $("#work_salary").removeClass("valid");
-            $("#work_salary").parent().parent().parent().removeClass("ex-success");
-            $("#work_salary").parent().parent().prev().removeClass("label_true"); 
-            $("#work_salarystatus").removeClass("glyphicon-ok");
- 
-            $("#work_region").removeClass("valid");
-            $("#work_region").parent().parent().parent().removeClass("ex-success");
-            $("#work_region").parent().parent().prev().removeClass("label_true");
-
-            $("#work_city").val("");
-            $("#work_city").removeClass("valid");
-            $("#work_city").parent().parent().parent().removeClass("ex-success");
-            $("#work_city").parent().parent().prev().removeClass("label_true"); 
-            $("#work_citystatus").removeClass("glyphicon-ok"); 
-
-            $("#work_street").val("");
-            $("#work_street").removeClass("valid");
-            $("#work_street").parent().parent().parent().removeClass("ex-success");
-            $("#work_street").parent().parent().prev().removeClass("label_true"); 
-            $("#work_streetstatus").removeClass("glyphicon-ok"); 
-
-            $("#work_house").val("");
-            $("#work_house").removeClass("valid");
-            $("#work_house").parent().parent().parent().removeClass("ex-success");
-            $("#work_house").parent().parent().prev().removeClass("label_true"); 
-            $("#work_housestatus").removeClass("glyphicon-ok");
-
-            $("#work_office").val("");
-            $("#work_office").removeClass("valid");
-            $("#work_office").parent().parent().parent().removeClass("ex-success");
-            $("#work_office").parent().parent().prev().removeClass("label_true"); 
-            $("#work_officestatus").removeClass("glyphicon-ok");
-            $("#work_name").val(""); 
-             $("#work_occupation").val(""); 
-            $("#work_phone").val("");
-            $("#work_experience").val(""); 
-            $("#work_salary").val("");
-            $("#work_region option").eq(0, true).prop("selected", true);
-            $("#work_city").val("");
-            $("#work_street").val("");
-            $("#work_house").val("");
-            $("#work_building").val("");
-            $("#work_office").val("");
-        }
-    }); 
-    </script>';
 }
-require 'yandexmetrika.php';
-require 'googleanalytics.php';
+elseif($this->uri->segment(1) == '404')
+{
+    echo 'traffic("zaimcoin.ru",9);'; 
+}
+else if($this->uri->segment(1) == 'form')
+{ } 
+echo "}catch(e){console.log('Ошибка ' + e.name + \":\" + e.message + \"\\n\" + e.stack);}";?>
+</script>
+<?php
+    include "google.php";
+    include "yandexmetrika.php"; 
+    include "yandex_rtb.php";
+    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+    {     
+        echo '<!-- Google Code for  
+        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
+        Page -->
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 827428872;
+        var google_conversion_label = "xmjJCLrypHkQiKDGigM";
+        var google_remarketing_only = false;
+        /* ]]> */
+        </script>
+        <script type="text/javascript"  
+        src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""  
+        src="//www.googleadservices.com/pagead/conversion/827428872/?label=xmjJCLrypHkQiKDGigM&amp;guid=ON&amp;script=0"/>
+        </div>
+        </noscript>'; 
+    }
 ?>
-    <script>
-        function markTarget(target, param, id) {
-            if (typeof yaCounter46652025 == 'undefined') return;
-            if (typeof param == 'undefined') yaCounter46652025.reachGoal(target);
-            else yaCounter46652025.reachGoal(target, param);
-
-            $.ajax({
-                type: 'POST',
-                url: '/pixel/',
-                data: 'id=' + id + '&pixel=' + param,
-                success: function (data) {}
-            });
-        }
-        function traffic(site, page) {
-            $.ajax({
-                type: 'POST',
-                url: '/traffic/',
-                data: 'site=' + site + '&page=' + page,
-                success: function (data) {
-                }
-            });
-        }
-        //traffic(window.location.hostname,window.location.pathname);
-    </script>
-    </body>
-    </html>
+</body>
+</html>

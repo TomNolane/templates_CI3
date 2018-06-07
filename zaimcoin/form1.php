@@ -11,7 +11,7 @@
                     <div class="hidden-xs hidden-sm">
                     <div id="ex-main-slider-range ">
                         <figure class="ex-range-slider">
-                            <input type="text" id="rangeSlider" name="rangeSlider" value="0" />
+                            <input type="text" id="rangeSlider" name="rangeSlider" value="<?=$sum;?>" />
                         </figure>
                         <div class="ex-slider-info">
                             <span>1 000</span>
@@ -148,7 +148,7 @@
             <div class="col-md-8 col-md-offset-2 ex-agreement-check">
                 <label class="checkbox-inline">
                     <span>Я согласен на обработку персональных данных и с публичной офертой</span>
-                    <input type="checkbox" onClick="checkme_form();" id="agree" value="1" checked>
+                    <input type="checkbox" onClick="checkMee();" id="agree" value="1" checked>
                     <i></i>
                 </label>
                 <label id="display-none">

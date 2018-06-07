@@ -1,6 +1,7 @@
 <?php
     $date = strtotime('-17 days');
 ?>
+<?php require 'header.php'; ?>
 <main>
     <div class="ex-article">
         <div class="container ">
@@ -50,8 +51,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
-                    <div class="text-center">
-                        <!-- <button class="ex-orange-btn">Получить деньги</button> -->
+                    <div class="text-center"> 
                         <button class="ex-orange-btn" onClick="window.location.href = window.location.origin + '/form'; return false;">Получить деньги</button>
                     </div>
                 </div>
@@ -59,3 +59,4 @@
         </div>
     </div>
 </main>
+<?php require 'footer.php'; ?>
