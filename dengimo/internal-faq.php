@@ -1,11 +1,11 @@
+<?php require 'header.php';?>
+<div class="container">
+<div class="row">
 <h1>Вопросы-ответы</h1>
 <div class="clearfix">&nbsp;</div>
 <div class="clearfix">&nbsp;</div>
-
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  
   <div class="col-md-6">
-      
   <div class="panel panel-default"> 
     <div class="panel-heading green" role="tab" id="heading1">
       <a class="btn btn-default btn-panel pull-left" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">+</a>  
@@ -185,7 +185,6 @@
       </div>
     </div>
   </div>
-      
   </div>     
-      
-</div>
+</div></div></div>
+<?php require 'footer.php';?>

@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <h1>Получение займа</h1>
 <div class="clearfix">&nbsp;</div>
 <div class="clearfix">&nbsp;</div>
@@ -98,3 +99,4 @@
     </div>
   </div>
 </div>
+<?php require 'footer.php';?>

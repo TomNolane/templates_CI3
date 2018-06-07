@@ -1,13 +1,9 @@
 <?php 
-if(!isset($my_title))
-{
-	$my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Dengimo';
-	$description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
-}  
+$sum = '20000'; $period = '21';
 $days = 'От 130 до 200 дней'; $days2 = 'Срок до 200 дней';
-if(isset($_GET['amount'])) 
+if($this->input->get('amount', TRUE) != '') 
 {  
-    switch($_GET['amount'])
+    switch($this->input->get('amount', TRUE))
     {
         case '1000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
         case '2000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
@@ -33,10 +29,10 @@ if(isset($_GET['amount']))
         case '100000': $days = 'От 250 до 365 дней' ; $days2 = 'Срок до 365 дней'; break;
     } 
 }
-elseif(!isset($_POST['period2'])) { $days = 'От 130 до 200 дней'; $days2 = 'Срок до 200 дней'; } 
+elseif(!$this->input->post('period2', TRUE) != '') { $days = 'От 130 до 200 дней'; $days2 = 'Срок до 200 дней'; } 
 else 
 { 
-    switch($_POST['period2'])
+    switch($this->input->post('period2', TRUE))
     {
         case '1000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
         case '2000': $days = 'От 61 до 100 дней' ; $days2 = 'Срок до 100 дней'; break;
@@ -62,67 +58,77 @@ else
         case '100000': $days = 'От 250 до 365 дней' ; $days2 = 'Срок до 365 дней'; break;
     } 
 }
-require 'header.php'; ?>
-
-<?php
-// IP
-$this->load->helper('ip');
-// GEO
-require_once FCPATH.'modules/ipgeobase/ipgeobase.php';
-$gb = new IPGeoBase();
-$geo = $gb->getRecord(IP::$ip);
-if ($geo)
-    {
-        if (isset($geo['region'])){
-            $region_name = $geo['region'];
-        }else{
-            $region_name = 'Владимир';
-        }
-        if (isset($geo['city'])){
-            $city_name = $geo['city'];
-        }else{
-            $city_name = 'Владимир';
-        }
-    }else{
-        $region_name = 'Владимир';
-        $city_name = 'Владимир';
-    }
-// Список регионов
-$this->load->model('geo/geo_model', 'geo');
-$regions = $this->geo->regions();
-if(isset($_SERVER['HTTP_REFERER'])){
-    $referer = $_SERVER['HTTP_REFERER'];
-    parse_str($_SERVER['HTTP_REFERER'], $output);
-        if(isset($output['utm_source'])){
-            switch ($output['utm_source']) {
-                case 'vk':
-                    $utm = '1';
-                    break;
-                case 'direct':
-                    $utm = '2';
-                    break;
-                case 'mytarget':
-                    $utm = '3';
-                    break;
-                case 'google':
-                    $utm = '4';
-                    break;   
-                case 'google_cms':
-                    $utm = '5';
-                    break;
-                default:
-                    $utm = '0';
-            }
-        }else{
-            $utm = ''; 
-        }
-    $ad_id = '1'.$utm;
-} else {
-    $referer = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-    $ad_id = '1';
+if($this->input->get('amount', TRUE) != '') 
+{ 
+    $sum = $this->input->get('amount', TRUE);
+    if($this->input->get('amount', TRUE) >= 1000 && $this->input->get('amount', TRUE) <= 1000000)
+    $sum = $this->input->get('amount', TRUE);
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000)
+    { $period = '14'; } 
+    else if ($sum <= 20000)
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000)
+    { $period = '30'; } 
+    else { $period = '30'; }
+} 
+if($this->input->post('amount', TRUE) != '')
+{ 
+    if($this->input->post('amount', TRUE) >= 1000 && $this->input->post('amount', TRUE) <= 1000000)
+        $sum = $this->input->post('amount', TRUE);
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000)
+    { $period = '14'; } 
+    else if ($sum <= 20000)
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000)
+    { $period = '30'; } 
+    else { $period = '30'; }
+} 
+if(!isset($my_title))
+{
+    $my_title = 'Подача Заявки на Получение Займа Онлайн';
+}  
+if($this->input->get('amount', TRUE) != '') 
+{  
+    if ($this->input->get('amount', TRUE) <= '10000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '15000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '20000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '30000') { 
+        $percent = 85;
+    } else if ($this->input->get('amount', TRUE) <= '50000') { 
+        $percent = 77;
+    } else  if ($this->input->get('amount', TRUE) <= '200000' && $this->input->get('amount', TRUE) > '50000') { 
+        $percent = 65;
+    } else  if ($this->input->get('amount', TRUE) <= '500000' && $this->input->get('amount', TRUE) > '200000') { 
+        $percent = 58;
+    } else { 
+        $percent = 52;
+    } 
 }
+if($this->input->post('percent', TRUE) != '')
+    $percent = $this->input->post('percent', TRUE);
+
+if(!isset($my_title))
+{
+    $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Dengimo';
+    $description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
+}
+include "templates/common/new2/php/form_header.php";
+include "header.php";
 ?>
-    <div class="container">
+<div class="container">
         <div class="steps">
             <div class="row">
                 <div class="col-xs-12">
@@ -166,13 +172,13 @@ if(isset($_SERVER['HTTP_REFERER'])){
                         <input type="hidden" name="id" value="">
                         <input type="hidden" name="step" value="1">
                         <input type="hidden" name="ad_id" value="<?=$ad_id?>">
-                        <input type="hidden" id="amount" name="amount" value="<?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['period2'])) echo '20000'; else echo $_POST['period2'];  ?>" />
-                        <input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 21 : $_POST['period']; ?>" />
+                        <input type="hidden" id="amount" name="amount" value="<?=$sum;?>" />
+                        <input type="hidden" id="period" name="period" value="<?=$period;?>" />
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="form1">
                                 <?php require 'form1.php'; ?>
                                 <div class="col-sm-8 col-sm-offset-4 col-xs-12">
-                                    <a class="btn btn-block" id="next" style="padding: 13px;">Отправить заявку 
+                                    <a class="btn btn-block" id="next1" style="padding: 13px;">Отправить заявку 
                                     </a>
                                 </div>
                                 <div class="clearfix"></div>
@@ -206,19 +212,19 @@ if(isset($_SERVER['HTTP_REFERER'])){
         <div class="triggers hidden-xs hidden-sm">
             <div class="row">
                 <div class="col-sm-2 col-sm-offset-2">
-                    <img src="/templates/dengimo/img/form/t1.png" alt="t1.png">
+                    <img src="/templates/dengimo/assets/img/form/t1.png" alt="t1.png">
                     <p>Ваши персональные данные надёжно защищены</p>
                 </div>
                 <div class="col-sm-2">
-                    <img src="/templates/dengimo/img/form/t2.png" alt="t2.png">
+                    <img src="/templates/dengimo/assets/img/form/t2.png" alt="t2.png">
                     <p>Удобное получение денег</p>
                 </div>
                 <div class="col-sm-2">
-                    <img src="/templates/dengimo/img/form/t3.png" alt="t3.png">
+                    <img src="/templates/dengimo/assets/img/form/t3.png" alt="t3.png">
                     <p>Принимаем заявки с любой кредитной историей</p>
                 </div>
                 <div class="col-sm-2">
-                    <img src="/templates/dengimo/img/form/t4.png" alt="t4.png">
+                    <img src="/templates/dengimo/assets/img/form/t4.png" alt="t4.png">
                     <p>Деньги Вас ждут прямо сейчас</p>
                 </div>
             </div>
@@ -271,4 +277,4 @@ if(isset($_SERVER['HTTP_REFERER'])){
             </div>
         </div>
     </div>
-<?php require 'footer.php'; ?>
+<?php include 'footer.php';?>

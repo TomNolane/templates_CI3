@@ -59,7 +59,7 @@
     <div>
     <div class="col-sm-8 col-xs-12">
         <input type="tel" class="form-control ec tip" name="passportdate" id="passportdate" placeholder="Дата выдачи паспорта" title="Выберете дату выдачи паспорта" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату выдачи паспорта" required>
-        <span id="passportdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        <span id="passportdadengimoatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 		<p class="help-block2">Укажите дату выдачи паспорта</p>
 		<p class="text-muted helpblock">Пример: 4510 123456</p>
     </div></div>

@@ -1,4 +1,4 @@
-
+<?php require 'header.php';?> 
 <div class="panel panel-default">
   <div class="panel-body">
     <h2 id="rules">Правила предоставления займов</h2>
@@ -15,3 +15,4 @@
     </ol>
   </div>
 </div>
+<?php require 'footer.php';?>
