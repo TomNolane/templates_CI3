@@ -3,7 +3,7 @@
         <b>«Эх, дал бы кто взаймы»: Как получить займ на Qiwi-кошелёк без отказа</b>
     </h3>
     <center>
-        <img src="/templates/rublimo/img/contact-zaim.png" alt="contact-zaim.png" class="img-responsive special_news">
+        <img src="/templates/rublimo/assets/img/contact-zaim.png" alt="contact-zaim.png" class="img-responsive special_news">
 </div>
 </center>
 <p>Предположим, у вас чрезвычайная ситуация в жизни: надо купить медикаменты, ребёнка срочно собрать в школу, подарить супруге ирисы небесно-синего цвета на годовщину или заказать на «АлиЭксперсс» по ограниченной акции шикарнейший гироскутер (безусловно, перспективное вложение).</p>

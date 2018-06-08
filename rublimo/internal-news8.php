@@ -3,7 +3,7 @@
         <b>«Есть Контакт!»: Как получить заём через CONTACT без лишней головной боли</b>
     </h3>
     <center>
-        <img src="/templates/rublimo/img/zaim/contact.png" alt="contact.png" class="img-responsive special_news">
+        <img src="/templates/rublimo/assets/img/zaim/contact.png" alt="contact.png" class="img-responsive special_news">
 </div>
 </center>
 <p>Ситуации, когда деньги нужны позарез, бывали, пожалуй, у каждого из нас. Это может быть счёт за ремонт прорванных труб, необходимость поставить зимнюю резину – да хоть прикупить очки <del>Ray Ban со стразами</del> для коррекции зрения. Причин может быть множество. </p>

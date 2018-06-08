@@ -39,12 +39,12 @@ elseif ($this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim
 
 echo '<div id="faq" class="hidden-xs">';
 
-if ($this->uri->segment(1) == 'faq') echo '<img src="/templates/rublimo/img/faq.png" alt="rublimo.ru">';
-elseif ($this->uri->segment(1) == 'zaim-card') echo '<img src="/templates/rublimo/img/zaim/card.png" alt="rublimo.ru">';
-elseif ($this->uri->segment(1) == 'zaim-qiwi') echo '<img src="/templates/rublimo/img/zaim/qiwi.png" alt="rublimo.ru">';
-elseif ($this->uri->segment(1) == 'zaim-yandex') echo '<img src="/templates/rublimo/img/zaim/yandex.png" alt="rublimo.ru">';
-elseif ($this->uri->segment(1) == 'zaim-contact') echo '<img src="/templates/rublimo/img/zaim/contact.png" alt="rublimo.ru">';
-elseif ($this->uri->segment(1) == 'zaim-bank') echo '<img src="/templates/rublimo/img/zaim/bank.png" alt="rublimo.ru">';
+if ($this->uri->segment(1) == 'faq') echo '<img src="/templates/rublimo/assets/img/faq.png" alt="rublimo.ru">';
+elseif ($this->uri->segment(1) == 'zaim-card') echo '<img src="/templates/rublimo/assets/img/zaim/card.png" alt="rublimo.ru">';
+elseif ($this->uri->segment(1) == 'zaim-qiwi') echo '<img src="/templates/rublimo/assets/img/zaim/qiwi.png" alt="rublimo.ru">';
+elseif ($this->uri->segment(1) == 'zaim-yandex') echo '<img src="/templates/rublimo/assets/img/zaim/yandex.png" alt="rublimo.ru">';
+elseif ($this->uri->segment(1) == 'zaim-contact') echo '<img src="/templates/rublimo/assets/img/zaim/contact.png" alt="rublimo.ru">';
+elseif ($this->uri->segment(1) == 'zaim-bank') echo '<img src="/templates/rublimo/assets/img/zaim/bank.png" alt="rublimo.ru">';
 
 echo '</div>';
 ?>

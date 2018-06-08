@@ -49,7 +49,7 @@
 						</div>
 						<button type="submit" class="btn form-button">Оформить</button>
 				</div>
-				<img src="/templates/rublimo/img/bank2.png" alt="rublimo.ru" id="bank">
+				<img src="/templates/rublimo/assets/img/bank2.png" alt="rublimo.ru" id="bank">
 			</div>
 			<div class="col-xs-12 visible-xs visible-sm text-center">
 				<div itemscope itemtype="http://schema.org/Offer">
@@ -108,7 +108,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<a href="#calc">
-							<img src="/templates/rublimo/img/howto.png" alt="rublimo.ru">
+							<img src="/templates/rublimo/assets/img/howto.png" alt="rublimo.ru">
 						</a>
 						<div class="shadow">
 							<a href="/form" class="btn btn-get">Получить деньги</a>
@@ -127,7 +127,7 @@
 						<div class="middle-cover">
 							<div class="middle">
 								<span>1. Заполните анкету</span>
-								<img src="/templates/rublimo/img/howto/1.png" alt="Заполните анкету" class="pull-right">
+								<img src="/templates/rublimo/assets/img/howto/1.png" alt="Заполните анкету" class="pull-right">
 							</div>
 						</div>
 					</div>
@@ -142,7 +142,7 @@
 							<div class="middle">
 								<div class="pull-left">2. Выберите сумму
 									<br>и срок займа</div>
-								<img src="/templates/rublimo/img/howto/2.png" alt="Выберите сумму" class="pull-right">
+								<img src="/templates/rublimo/assets/img/howto/2.png" alt="Выберите сумму" class="pull-right">
 							</div>
 						</div>
 					</div>
@@ -156,7 +156,7 @@
 						<div class="middle-cover">
 							<div class="middle">
 								<span>3. Получите деньги</span>
-								<img src="/templates/rublimo/img/howto/3.png" alt="Получите деньги" class="pull-right">
+								<img src="/templates/rublimo/assets/img/howto/3.png" alt="Получите деньги" class="pull-right">
 							</div>
 						</div>
 					</div>
@@ -197,7 +197,7 @@
 					</div>
 				</div>
 				<div class="col-sm-5">
-					<img src="/templates/rublimo/img/man.png" alt="man">
+					<img src="/templates/rublimo/assets/img/man.png" alt="man">
 				</div>
 			</div>
 		</div>
@@ -473,6 +473,5 @@
 			</div>
 		</div>
 	</div>
-</div>
-<link href="/modules/3dgallery/css/style.css" rel="stylesheet" media="screen">
+</div> 
 <?php require 'footer.php'; ?>

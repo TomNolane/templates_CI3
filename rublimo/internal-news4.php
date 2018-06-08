@@ -3,7 +3,7 @@
         <b>Можно ли самостоятельно улучшить или очистить (исправить) кредитную историю</b>
     </h3>
     <center>
-        <img src="/templates/rublimo/img/news4.png" alt="yandex.jpg" class="img-responsive special_news">
+        <img src="/templates/rublimo/assets/img/news4.png" alt="yandex.jpg" class="img-responsive special_news">
 </div>
 </center>
 <p>Выражение – кредитная история слышали многие люди, обратившиеся к банковским структурам, у которых возникли финансовые затруднения. Но далеко не все из них знают, что под этими словами скрывается. </p>

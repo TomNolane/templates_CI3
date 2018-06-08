@@ -8,7 +8,7 @@
   <p>Как получить онлайн займ с помощью RUBLIMO?</p>
 </div>
 
-<div class="about-steps"><img src="/templates/rublimo/img/steps.png" alt="rublimo.ru"></div>
+<div class="about-steps"><img src="/templates/rublimo/assets/img/steps.png" alt="rublimo.ru"></div>
 
 <div class="about">
   <p>Решение о выдачи займа микрофинансовыми организациями принимается на основе кредитной истории заемщика. В большинстве случаев компании принимают положительные решение о выдачи займов.

@@ -1,69 +1,76 @@
 <?php 
+$sum = '20000'; $period = '21'; 
+if($this->input->get('amount', TRUE) != '') 
+{ 
+    $sum = $this->input->get('amount', TRUE);
+    if($this->input->get('amount', TRUE) >= 1000 && $this->input->get('amount', TRUE) <= 1000000)
+    $sum = $this->input->get('amount', TRUE);
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000)
+    { $period = '14'; } 
+    else if ($sum <= 20000)
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000)
+    { $period = '30'; } 
+    else { $period = '30'; }
+} 
+if($this->input->post('amount', TRUE) != '')
+{ 
+    if($this->input->post('amount', TRUE) >= 1000 && $this->input->post('amount', TRUE) <= 1000000)
+        $sum = $this->input->post('amount', TRUE);
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000)
+    { $period = '14'; } 
+    else if ($sum <= 20000)
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000)
+    { $period = '30'; } 
+    else { $period = '30'; }
+} 
 if(!isset($my_title))
 {
-	$my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Rublimo';
-	$description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
+    $my_title = 'Подача Заявки на Получение Займа Онлайн';
 }  
-require 'header.php'; ?>
-<?php
-// IP
-$this->load->helper('ip');
-// GEO
-require_once FCPATH.'modules/ipgeobase/ipgeobase.php';
-$gb = new IPGeoBase();
-$geo = $gb->getRecord(IP::$ip);
-if ($geo)
-    {
-        if (isset($geo['region'])){
-            $region_name = $geo['region'];
-        }else{
-            $region_name = 'Владимир';
-        }
-        if (isset($geo['city'])){
-            $city_name = $geo['city'];
-        }else{
-            $city_name = 'Владимир';
-        }
-    }else{
-        $region_name = 'Владимир';
-        $city_name = 'Владимир';
-    }
-// Список регионов
-$this->load->model('geo/geo_model', 'geo');
-$regions = $this->geo->regions();
-if(isset($_SERVER['HTTP_REFERER'])){
-    $referer = $_SERVER['HTTP_REFERER'];
-    parse_str($_SERVER['HTTP_REFERER'], $output);
-        if(isset($output['utm_source'])){
-            switch ($output['utm_source']) {
-                case 'vk':
-                    $utm = '1';
-                    break;
-                case 'direct':
-                    $utm = '2';
-                    break;
-                case 'mytarget':
-                    $utm = '3';
-                    break;
-                case 'google':
-                    $utm = '4';
-                    break;    
-                case 'google_cms':
-                    $utm = '5';
-                    break;
-                default:
-                    $utm = '0';
-            }
-        }else{
-            $utm = ''; 
-        }
-    $ad_id = '4'.$utm;
-} else {
-    $referer = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-    $ad_id = '4';
+if($this->input->get('amount', TRUE) != '') 
+{  
+    if ($this->input->get('amount', TRUE) <= '10000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '15000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '20000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '30000') { 
+        $percent = 85;
+    } else if ($this->input->get('amount', TRUE) <= '50000') { 
+        $percent = 77;
+    } else  if ($this->input->get('amount', TRUE) <= '200000' && $this->input->get('amount', TRUE) > '50000') { 
+        $percent = 65;
+    } else  if ($this->input->get('amount', TRUE) <= '500000' && $this->input->get('amount', TRUE) > '200000') { 
+        $percent = 58;
+    } else { 
+        $percent = 52;
+    } 
 }
+if($this->input->post('percent', TRUE) != '')
+    $percent = $this->input->post('percent', TRUE);
+
+if(!isset($my_title))
+{
+    $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Rublimo';
+    $description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
+}
+include "templates/common/new2/php/form_header.php";
+include "header.php";
 ?>
-	<div class="container">
+<div class="container">
 		<div class="steps">
 			<div class="row">
 				<div class="col-xs-12">
@@ -108,7 +115,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 					<div class="secure">
 						<div class="secure-body">
 							<div class="secure-item">
-								<img src="/templates/rublimo/img/form/lock.png" alt="lock" id="form-1">
+								<img src="/templates/rublimo/assets/img/form/lock.png" alt="lock" id="form-1">
 							</div>
 							<div class="secure-item">
 								<span id="form-2">
@@ -126,7 +133,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 		<div class="form">
 			<div class="row">
 				<div class="col-md-10 col-xs-12">
-					<form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
+					<form class="form-horizontal" id="anketa" action="/lk" method="post" autocomplete="off">
 						<input type="hidden" name="referer" value="<?=$referer?>">
 						<input type="hidden" name="id" value="">
 						<input type="hidden" name="step" value="1">
@@ -168,19 +175,19 @@ if(isset($_SERVER['HTTP_REFERER'])){
 		<div class="triggers hidden">
 			<div class="row">
 				<div class="col-sm-2 col-sm-offset-2">
-					<img src="/templates/rublimo/img/form/t1.png" alt="Удобное получение денег">
+					<img src="/templates/rublimo/assets/img/form/t1.png" alt="Удобное получение денег">
 					<p>Удобное получение денег</p>
 				</div>
 				<div class="col-sm-2">
-					<img src="/templates/rublimo/img/form/t2.png" alt="Принимаем заявки с любой кредитной историей">
+					<img src="/templates/rublimo/assets/img/form/t2.png" alt="Принимаем заявки с любой кредитной историей">
 					<p>Принимаем заявки с любой кредитной историей</p>
 				</div>
 				<div class="col-sm-2">
-					<img src="/templates/rublimo/img/form/t3.png" alt="Получение займа онлайн">
+					<img src="/templates/rublimo/assets/img/form/t3.png" alt="Получение займа онлайн">
 					<p>Получение займа онлайн</p>
 				</div>
 				<div class="col-sm-2">
-					<img src="/templates/rublimo/img/form/t4.png" alt="Деньги Вас ждут прямо сейчас">
+					<img src="/templates/rublimo/assets/img/form/t4.png" alt="Деньги Вас ждут прямо сейчас">
 					<p>Деньги Вас ждут прямо сейчас</p>
 				</div>
 			</div>
@@ -229,4 +236,4 @@ if(isset($_SERVER['HTTP_REFERER'])){
 			</div>
 		</div>
 	</div>
-	<?php require 'footer.php'; ?>
+<?php include 'footer.php';?>

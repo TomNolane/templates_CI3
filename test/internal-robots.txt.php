@@ -1,5 +1,5 @@
 User-agent: *
 Disallow: /addnew/
 Disallow: /validate/phone/
-sitemap: https://zaimcoin.ru/sitemap_zaimcoin.xml
-Host: https://zaimcoin.ru
+sitemap: https://rublimo.ru/sitemap_rublimo.xml
+Host: https://rublimo.ru

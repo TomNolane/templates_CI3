@@ -1,7 +1,7 @@
 <div class="panel-body">
 	<h3 class="text-center"><b>Где взять займ на карту Сбербанка?</b></h3>
-   <center><img src="/templates/rublimo/img/sber-1.jpg" alt="sber-1.jpg" class="img-responsive special_news hidden-xs hidden-sm"></div></center>
-   <center><img src="/templates/rublimo/img/sber-1.jpg" alt="sber-1.jpg" class="img-responsive hidden-lg hidden-md"></center>
+   <center><img src="/templates/rublimo/assets/img/sber-1.jpg" alt="sber-1.jpg" class="img-responsive special_news hidden-xs hidden-sm"></div></center>
+   <center><img src="/templates/rublimo/assets/img/sber-1.jpg" alt="sber-1.jpg" class="img-responsive hidden-lg hidden-md"></center>
 	<p>Сбербанк - самое популярное финучреждение у россиян. Обладателями его карт являются более 80% граждан РФ. Широкий спектр услуг и карточных продуктов Сбербанка в совокупности с его высоким уровнем надежности делают его таким распространенным. Не удивительно, что люди, которым по каким-то причинам понадобился займ, предпочитают самый удобный способ его получения. На карту Сбербанка. Быстрый и легкий перевод позволит не прилагать лишних усилий для получения средств. Но как взять займ на карту Сбербанка? Из каких вариантов можно выбрать и что лучше? Обо всех тонкостях этого деликатного дела мы и расскажем в нашей статье.</p>
     <h3>Места, где можно взять займ на карту Сбербанка</h3>
     <p>Ссуду можно взять в самом Сбербанке. Это достаточно удобно и выгодно, но подходит такой способ не всем. 
