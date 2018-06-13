@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <section class="ex-documents">
     <main class="container">
         <h1 class="text-center">Документы</h1>
@@ -83,3 +84,4 @@
         </div>
     </main>
 </section>
+<?php require 'footer.php';?>

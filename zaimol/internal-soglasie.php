@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <div class="panel-body">
 	<h2 id="agree"><b>Согласие на обработку персональных данных</b></h2>
 
@@ -48,3 +49,4 @@
 	</ol>
 </div>
 <br><br>
+<?php require 'footer.php';?>

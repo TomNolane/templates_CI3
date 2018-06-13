@@ -1,9 +1,14 @@
+<?php include "header.php"; ?>
+<div class="panel-body">
+<div class="row">
+<div class="col-sm-10 col-sm-offset-1">
+<div class="ex-bounds"></div>
 <div class="panel-body">
     <h3 class="text-center">
         <b>Как получить займ на QIWI кошелек?</b>
     </h3>
     <center>
-        <img src="/templates/test/assets/img/qiwi-zaim.png" alt="qiwi-zaim.png" class="img-responsive special_news special_news2">
+        <img src="/templates/zaimhome/assets/img/qiwi-zaim.png" alt="qiwi-zaim.png" class="img-responsive special_news special_news2">
 </div>
 </center>
 <p>Ситуация, когда срочно нужны деньги, знакома каждому из нас. Для некоторых подобный форс-мажор наступает перед самой зарплатой, в особенности, когда ее задерживают на денек другой, для других появляется неожиданная возможность сделать выгодное приобретение. Также нередко траты возникают из-за болезни или прочих неприятных ситуаций. В любом случае, получение срочного займа является наиболее удобным и быстрым способом решения проблем.</p>
@@ -35,3 +40,8 @@
 </div>
 <br>
 <br>
+</div>
+</div>
+</div>
+</div>
+<?php include "footer.php"; ?>

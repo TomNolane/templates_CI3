@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <section class="ex-money-receive">
     <h1 class="text-center">Способы получения займа</h1>
     <div class="container">
@@ -80,3 +81,4 @@
         </article>
     </div>
 </section>
+<?php require 'footer.php';?>

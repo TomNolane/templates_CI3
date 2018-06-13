@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <section class="ex-faq">
 <main class="container">
     <h1 class="text-center">Ответы на часто задаваемые вопросы</h1>
@@ -422,3 +423,4 @@
     </div>
 </main>
 </section>
+<?php require 'footer.php';?>

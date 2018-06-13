@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <section class="ex-single-article">
     <div class="container">
         <h1>Почему выгодно быть постоянным клиентом МФО</h1>
@@ -100,3 +101,4 @@
         </div>
     </div>
 </section>
+<?php require 'footer.php';?>

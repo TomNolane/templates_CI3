@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <section class="ex-about">
 <h1 class="text-center">О сервисе Zaimol</h1>
 <div class="ex-about-bg-wrapper"></div>
@@ -23,3 +24,4 @@
     </div>
 </div>
 </section>
+<?php require 'footer.php';?>

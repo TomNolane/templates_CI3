@@ -1,15 +1,55 @@
-@charset "UTF-8";
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/*@@@@@@ Helper files import here @@@@@@*/
-/*@@@@@@ Core files import here @@@@@@*/
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic,cyrillic-ext");
+.irs{position:relative;display:block;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.irs-line{position:relative;display:block;overflow:hidden;outline:none !important;}
+.irs-line-left, .irs-line-mid, .irs-line-right{position:absolute;display:block;top:0;}
+.irs-line-left{left:0;width:11%;}
+.irs-line-mid{left:9%;width:82%;}
+.irs-line-right{right:0;width:11%;}
+.irs-bar{position:absolute;display:block;left:0;width:0;}
+.irs-bar-edge{position:absolute;display:block;top:0;left:0;}
+.irs-shadow{position:absolute;display:none;left:0;width:0;}
+.irs-slider{position:absolute;display:block;cursor:default;z-index:1;}
+.irs-slider.single{}
+.irs-slider.from{}
+.irs-slider.to{}
+.irs-slider.type_last{z-index:2;}
+.irs-min{position:absolute;display:block;left:0;cursor:default;}
+.irs-max{position:absolute;display:block;right:0;cursor:default;}
+.irs-from, .irs-to, .irs-single{position:absolute;display:block;top:0;left:0;cursor:default;white-space:nowrap;}
+.irs-grid{position:absolute;display:none;bottom:0;left:0;width:100%;height:20px;}
+.irs-with-grid .irs-grid{display:block;}
+.irs-grid-pol{position:absolute;top:0;left:0;width:1px;height:8px;background:#000;}
+.irs-grid-pol.small{height:4px;}
+.irs-grid-text{position:absolute;bottom:0;left:0;white-space:nowrap;text-align:center;font-size:9px;line-height:9px;padding:0 3px;color:#000;}
+.irs-disable-mask{position:absolute;display:block;top:0;left:-1%;width:102%;height:100%;cursor:default;background:rgba(0,0,0,0.0);z-index:2;}
+.irs-disabled{opacity:0.4;}
+.lt-ie9 .irs-disabled{filter:alpha(opacity=40);}
+.irs-hidden-input{position:absolute !important;display:block !important;top:0 !important;left:0 !important;width:0 !important;height:0 !important;font-size:0 !important;line-height:0 !important;padding:0 !important;margin:0 !important;outline:none !important;z-index:-9999 !important;background:none !important;border-style:solid !important;border-color:transparent !important;}
+.irs{height:55px;}
+.irs-with-grid{height:75px;}
+.irs-line{height:10px;top:33px;background:#EEE;background:linear-gradient(to bottom, #DDD -50%, #FFF 150%);border:1px solid #CCC;border-radius:16px;-moz-border-radius:16px;}
+.irs-line-left{height:8px;}
+.irs-line-mid{height:8px;}
+.irs-line-right{height:8px;}
+.irs-bar{height:10px;top:33px;border-top:1px solid #428bca;border-bottom:1px solid #428bca;background:#428bca;background:linear-gradient(to top, rgba(66,139,202,1) 0%,rgba(127,195,232,1) 100%);}
+.irs-bar-edge{height:10px;top:33px;width:14px;border:1px solid #428bca;border-right:0;background:#428bca;background:linear-gradient(to top, rgba(66,139,202,1) 0%,rgba(127,195,232,1) 100%);border-radius:16px 0 0 16px;-moz-border-radius:16px 0 0 16px;}
+.irs-shadow{height:2px;top:38px;background:#000;opacity:0.3;border-radius:5px;-moz-border-radius:5px;}
+.lt-ie9 .irs-shadow{filter:alpha(opacity=30);}
+.irs-slider{top:25px;width:27px;height:27px;border:1px solid #AAA;background:#DDD;background:linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(220,220,220,1) 20%,rgba(255,255,255,1) 100%);border-radius:27px;-moz-border-radius:27px;box-shadow:1px 1px 3px rgba(0,0,0,0.3);cursor:pointer;}
+.irs-slider.state_hover, .irs-slider:hover{background:#FFF;}
+.irs-min, .irs-max{color:#333;font-size:12px;line-height:1.333;text-shadow:none;top:0;padding:1px 5px;background:rgba(0,0,0,0.1);border-radius:3px;-moz-border-radius:3px;}
+.lt-ie9 .irs-min, .lt-ie9 .irs-max{background:#ccc;}
+.irs-from, .irs-to, .irs-single{color:#fff;font-size:14px;line-height:1.333;text-shadow:none;padding:1px 5px;background:#428bca;border-radius:3px;-moz-border-radius:3px;}
+.lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single{background:#999;}
+.irs-grid{height:27px;}
+.irs-grid-pol{opacity:0.5;background:#428bca;}
+.irs-grid-pol.small{background:#999;}
+.irs-grid-text{bottom:5px;color:#99a4ac;}
+.irs-disabled{}
+
 @font-face {
   font-family: 'Terminal';
-  src: url("/templates/zaimol/assets/fonts/Terminal.eot");
-  src: url("/templates/zaimol/assets/fonts/Terminal.eot?#iefix") format("embedded-opentype"), url("/templates/zaimol/assets/fonts/Terminal.woff") format("woff"), url("/templates/zaimol/assets/fonts/Terminal.ttf") format("truetype");
+  src: url("/templates/common/new2/fonts/Terminal.eot");
+  src: url("/templates/common/new2/fonts/Terminal.eot?#iefix") format("embedded-opentype"), url("/templates/common/new2/fonts/Terminal.woff") format("woff"), url("/templates/common/new2/fonts/Terminal.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
@@ -745,8 +785,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("..//templates/zaimol/assets/fonts/glyphicons-halflings-regular.eot");
-  src: url("..//templates/zaimol/assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("..//templates/zaimol/assets/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("..//templates/zaimol/assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("..//templates/zaimol/assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("..//templates/zaimol/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("..//templates/common/new2/fonts/glyphicons-halflings-regular.eot");
+  src: url("..//templates/common/new2/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("..//templates/common/new2/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("..//templates/common/new2/fonts/glyphicons-halflings-regular.woff") format("woff"), url("..//templates/common/new2/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("..//templates/common/new2/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 /* line 269, ../sass/library/_bootstrap.scss */
 .glyphicon {
@@ -11514,8 +11554,17 @@ main.ex-main-counter .ex-draft .ex-wrapper p {
 @media (max-width: 500px) {
   /* line 9, ../sass/desktop/_homepage.scss */
   .ex-section-1 h1 {
-    font-size: 20px;
+    font-size: 17px;
     line-height: 30px;
+  }
+  div.modal-header.text-center>h2 {
+    font-size: 26px !important;
+  }
+  #askQuestion .modal-dialog .modal-content .modal-body textarea {
+    min-height: auto !important;
+  }
+  #askQuestion .modal-dialog {
+    margin: 10px auto !important;
   }
 }
 /* line 30, ../sass/desktop/_homepage.scss */
@@ -13849,3 +13898,135 @@ section.ex-spasibo .ex-hidden-div {
 a {
   text-decoration: none !important;
 }
+.cd-container {
+    width: 90%;
+    max-width: 768px;
+    margin: 2em auto;
+  }
+  .cd-container::after {
+    /* clearfix */
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .cd-top {
+    z-index: 16;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    border-radius: 9px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: url(/templates/common/new2/img/cd-top-arrow.png) center 50% no-repeat #f0cc45;;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+  }
+  .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+  }
+  .cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+  }
+  .cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+  }
+  .no-touch .cd-top:hover {
+    background-color: #e86256;
+    opacity: 1;
+  }
+  @media only screen and (min-width: 768px) {
+    .cd-top {
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .cd-top {
+      height: 60px;
+      width: 60px;
+      right: 30px;
+      bottom: 30px;
+    }
+  }
+  .er:-moz-placeholder {
+    color: #ff0000  !important;
+    font-size: 0.8em;
+}
+
+.er::-moz-placeholder {
+    color: #ff0000  !important;
+    font-size: 0.8em;
+}
+
+.er::placeholder {
+    color: #ff0000  !important;
+    font-size: 0.8em;
+}
+
+.er:-ms-input-placeholder {
+    color: #ff0000  !important;
+    font-size: 0.8em;
+}
+
+.er::-webkit-input-placeholder {
+    color: #ff0000  !important;
+    font-size: 0.8em;
+}
+input:-moz-placeholder {
+  /* color: #000000   !important;
+  opacity: .8; */
+}
+input::-moz-placeholder {
+  /* color: #000000   !important; */
+  /* opacity: .8; */
+}
+input::placeholder {
+  /* color: #000000   !important;
+   opacity: .8; */
+}
+input:-ms-input-placeholder {
+  /* color: #000000   !important;
+   opacity: .8; */
+}
+input:-webkit-input-placeholder {
+  /* color: #000000   !important;
+   opacity: .8; */
+}
+.label_er {
+color: #b94a48 !important;
+}
+.label_true {
+color: #3c763d !important;
+}
+#phonestatus {
+  margin-right: 4px;
+}
+.index-ava {
+  border-radius: 50% !important;
+}
+.spec_index3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #b0b0b0;
+}
+.special_form99 {
+  color: #000000 !important;
+}
+input#i , input#o, input#f, input#feedback-name {
+  text-transform: capitalize !important;
+} 

@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <section class="ex-single-article">
     <div class="container">
         <h1>Преимущества сервиса <br>
@@ -87,3 +88,4 @@
         </div>
     </div>
 </section>
+<?php require 'footer.php';?>

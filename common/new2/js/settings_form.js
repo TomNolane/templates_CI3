@@ -615,7 +615,9 @@ $(document).ready(function () {
         }
     });   
     $('#next1').click(function () { 
+	console.log(1);
         if (validate0()) { 
+		
             // $('input[name="step"]').val('1');
             // send_form();
             // $('.spec_footer4').css('visibility','hidden'); 
@@ -641,7 +643,35 @@ $(document).ready(function () {
         setcookies();
         $('select[name="reg_type"]').change();
     });
-
+	$('#next1b').click(function () { 
+		console.log(1);
+			if (validate0()) { 
+			
+				// $('input[name="step"]').val('1');
+				// send_form();
+				// $('.spec_footer4').css('visibility','hidden'); 
+				// $('.ex-indicator-scope').addClass('ex-on-second-step');
+				// $('#firstTabContent').removeClass('in active');
+				// $('#secondTabContent').addClass('in active');
+				// traffic("bzaim5.ru",2);
+				// $('html, body').animate({
+				//     scrollTop: $('#to_scroll').offset().top
+				// }, 1000);
+				// markTarget('form-step-1');
+				var loans = 0;
+				if($('#amount').val() > 100000)
+				loans = 1;
+				
+				$('input[name="step"]').val('3');
+				send_form(true, '/lk?loan='+loans);
+				markTarget('form-step-3');
+				window.location = '/lk?loan='+loans;
+			}
+			showBzzz = false;
+			$('.reg_same').change();
+			setcookies();
+			$('select[name="reg_type"]').change();
+		});
     $('#next2').click(function () {
         if (validate2()) {
             $('input[name="step"]').val('2');

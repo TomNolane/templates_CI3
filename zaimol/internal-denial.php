@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <section class="ex-single-article">
     <div class="container">
         <h1>В заеме отказано</h1>
@@ -75,3 +76,4 @@
         </div>
     </div>
 </section>
+<?php require 'footer.php';?>

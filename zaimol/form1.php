@@ -3,7 +3,7 @@
     <div class="for_swap"></div>
         <div class="col-lg-9 col-md-8"> 
             <div class="ex-pr">
-            <h3 class="hidden-lg hidden-md text-center"><?php if(isset($_GET['amount'])) { $sum = '20000'; switch($_GET['amount']) { case '1000': $sum = '1000' ; break; case '2000': $sum = '2000' ; break; case '3000': $sum = '3000' ; break; case '4000': $sum = '4000' ; break; case '5000': $sum = '5000' ; break; case '6000': $sum = '6000' ; break; case '7000': $sum = '7000' ; break; case '8000': $sum = '8000' ; break; case '9000': $sum = '9000' ; break; case '10000': $sum = '10000' ; break; case '11000': $sum = '11000' ; break; case '12000': $sum = '12000' ; break; case '13000': $sum = '13000' ; break; case '14000': $sum = '14000' ; break; case '15000': $sum = '15000' ; break; case '20000': $sum = '20000' ; break; case '25000': $sum = '25000' ; break; case '30000': $sum = '30000' ; break; case '40000': $sum = '40000' ; break; case '50000': $sum = '50000' ; break; case '80000': $sum = '80000' ; break; case '100000': $sum = '100000' ; break; } echo $sum; if ($sum <= 10000) { $period = '7'; } else if ($sum <= 15000) { $period = '14'; } else if ($sum <= 20000) { $period = '21'; } else if ($sum <= 30000) { $period = '21'; } else if ($sum <= 50000) { $period = '30'; } else { $period = '30'; } } elseif(!isset($_POST['amount'])) echo '20000'; else echo $_POST['amount'];  ?> рублей</h3>
+            <h3 class="hidden-lg hidden-md text-center"><?=$sum;?> рублей</h3>
                 <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="f">Фамилия</label>
                     <div class="col-md-8">
@@ -89,7 +89,7 @@
                             <input type="text" class="form-control ec tip" value="06/12/1988" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Пожалуйста, выберете свою дату рождения"
                                 data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения"
                                 required>
-                            <!-- <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> -->
+                            <!-- <span id="birthdazaimolatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> -->
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                     <div class="col-md-8 col-md-offset-4 ex-agreement-check">
                         <label class="checkbox-inline">
                             <span>Я согласен на обработку персональных данных и с публичной офертой</span>
-                            <input type="checkbox" onClick="checkme_form();" id="agree" value="1" checked>
+                            <input type="checkbox" onClick="checkMee();" id="agree" value="1" checked>
                             <i></i>
                         </label>
                         <label class="hidden">
@@ -155,7 +155,7 @@
             <div class="ex-display">
                 <div class="ex-slider-val"></div>
             </div>
-            <div class="hidden-xs hidden-sm"><input type="text" id="rangeSlider" name="rangeSlider" value="0" /></div>
+            <div class="hidden-xs hidden-sm"><input type="text" id="rangeSlider" name="rangeSlider" value="<?=$sum;?>" /></div>
             <main class="ex-main-counter hidden-xs hidden-sm">
                 <div class="ex-draft">
                     <div class="ex-wrapper">
@@ -203,11 +203,4 @@
             </main>
         </aside>
     </div>
-    <!-- <div class="row">
-    <div class="form-group">
-        <div class="col-xs-12 text-center">
-        <a id="next1"><span id="submitOneSecond" class="ex-main-btn hidden-md hidden-lg" >Далее</span></a></a>
-        </div>
-    </div> 
-    </div> -->
 </section>

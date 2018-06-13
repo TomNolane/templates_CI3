@@ -1,3 +1,4 @@
+<?php require 'header.php';?> 
 <div class="panel-body">
 	<h2><b>Пользовательское соглашение</b></h2>
 
@@ -63,3 +64,4 @@
 		Клиент обязан выполнять.</p>
 </div>
 <br><br>
+<?php require 'footer.php';?>

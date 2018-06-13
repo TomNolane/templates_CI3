@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <section class="ex-single-article">
    <div class="container">
        <h1>Микрозаймы vs кредиты: <br>
@@ -82,3 +83,4 @@
        </div>
    </div>
 </section>
+<?php require 'footer.php';?>

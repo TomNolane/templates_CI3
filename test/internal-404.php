@@ -1,12 +1,13 @@
+<?php require 'header.php';?>
 <div class="container">
 	<div class="row">
 		<div class="col-sm-2"></div>
 		<div class="col-sm-7">
 			<div class="error-template">
 				<h1>Упс!</h1>
-				<h2>404 страница не найдена</h2>
+				<h2>Ошибка 404.<br>Страница не существует.</h2>
 				<div class="error-details text-center">
-					Извините, данная страница не найдена!
+					Воспользуйтесь нашими подсказками:
 					<br>
 					<br>
 				</div>
@@ -24,5 +25,5 @@
 	</div>
 	<br>
 	<br>
-	<div class="rectangl"></div>
 </div>
+<?php require 'footer.php';?>
