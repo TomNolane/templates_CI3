@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <section id="services">
     <div class="container container-services text-center">
         <div class="row">
@@ -12,7 +13,7 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="pull-right">
                             <div id="circle"></div>
                         </a>
-                        <img class="pull-right" src="/templates/edenga/img/zaim/1.png">
+                        <img class="pull-right" src="/templates/edenga/assets/img/zaim/1.png">
                         <div class="clearfix"></div>
                     </div>
                     <div id="collapse1" class="panel-collapse collapse in">
@@ -35,7 +36,7 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="pull-right">
                             <div id="circle"></div>
                         </a>
-                        <img class="pull-right" src="/templates/edenga/img/zaim/2.png">
+                        <img class="pull-right" src="/templates/edenga/assets/img/zaim/2.png">
                         <div class="clearfix"></div>                        
                     </div>
                     <div id="collapse2" class="panel-collapse collapse">
@@ -57,7 +58,7 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="pull-right">
                             <div id="circle"></div>
                         </a>
-                        <img class="pull-right" src="/templates/edenga/img/zaim/3.png">
+                        <img class="pull-right" src="/templates/edenga/assets/img/zaim/3.png">
                         <div class="clearfix"></div>                        
                     </div>
                     <div id="collapse3" class="panel-collapse collapse">
@@ -83,7 +84,7 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="pull-right">
                             <div id="circle"></div>
                         </a>
-                        <img class="pull-right" src="/templates/edenga/img/zaim/4.png">
+                        <img class="pull-right" src="/templates/edenga/assets/img/zaim/4.png">
                         <div class="clearfix"></div>                        
                     </div>
                     <div id="collapse4" class="panel-collapse collapse">
@@ -112,7 +113,7 @@
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="pull-right">
                             <div id="circle"></div>
                         </a>
-                        <img class="pull-right" src="/templates/edenga/img/zaim/1.png">
+                        <img class="pull-right" src="/templates/edenga/assets/img/zaim/1.png">
                         <div class="clearfix"></div>                        
                     </div>
                     <div id="collapse5" class="panel-collapse collapse">
@@ -132,3 +133,4 @@
         </div>
     </div>
 </section>
+<?php require 'footer.php';?>

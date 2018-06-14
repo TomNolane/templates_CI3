@@ -27,7 +27,7 @@
 		<input type="text" class="form-control ec" name="passportdate" id="passportdate" placeholder="Дата выдачи паспорта" title="Дата выдачи"
 		    data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату выдачи паспорта"
 		    required>
-		<span id="passportdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<span id="passportdaedengaatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 	</div></div>
 </div>
 <div class="form-group has-feedback">

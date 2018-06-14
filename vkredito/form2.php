@@ -66,7 +66,7 @@
 		<input type="text" class="form-control ec tip" name="passportdate" id="passportdate" placeholder="Дата выдачи паспорта" title="Пожалуйста, выберете дату выдачи паспорта"
 		        data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату выдачи паспорта"
 		        required>
-		<span id="passportdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<span id="passportdavkreditoatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 	</div>
 </div>
 <div class="form-group has-feedback">

@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <section id="services">
     <div class="container container-services text-center">
         <div class="row">
@@ -303,3 +304,4 @@
         </div>
     </div>
 </section>
+<?php require 'footer.php';?>

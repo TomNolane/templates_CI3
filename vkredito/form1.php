@@ -34,6 +34,8 @@
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое имя"
 			    required>
 			<span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="help-block2">Нужно указать имя</p> 
+            <p class="text-muted helpblock">Пример: Лариса</p>
 		</div>
 	</div>
 </div>
@@ -99,7 +101,7 @@
 			<input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Пожалуйста, выберете свою дату рождения"
 			    data-validation="custom" value="06/12/1988" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения"
 			    required>
-			<span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+			<span id="birthdavkreditoatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 		</div>
 	</div>
 </div>
@@ -110,6 +112,8 @@
 		    data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Пожалуйста, введите телефон"
 		    required>
 		<span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        <p class="help-block2">Нужно указать номер телефона</p>
+        <p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
 	</div>
 </div>
 <div class="form-group has-feedback dadata">
@@ -119,6 +123,8 @@
 			<input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Пожалуйста, введите свой email адрес"
 			    placeholder="Email" title="Email" data-validation="email" required>
 			<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="help-block2"></p>
+            <p class="text-muted helpblock">Пример: email@mail.ru</p>
 		</div>
 	</div>
 </div>
@@ -139,7 +145,7 @@
 	<label class="col-sm-4 control-label hidden-xs"></label>
 	<div class="col-sm-8 col-xs-12">
 		<label>
-			<input type="checkbox" id="agree" value="1" checked>
+			<input type="checkbox" id="agree" onClick="checkMee();" value="1" checked>
 			<b>Я согласен на обработку персональных данных и с
 				<a href="#" data-toggle="modal" data-target="#tosModal">публичной офертой</a>
 			</b>

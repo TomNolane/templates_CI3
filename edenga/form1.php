@@ -3,7 +3,7 @@
 	<div class="col-sm-7 col-xs-12 am">
             <div class="shadow">
                 <div>Сумма</div>
-                <div style="font-size: 40px;"><?php if(empty($_POST['amount'])){if(empty($_GET['amount'])){echo'6000';}else{echo $_GET['amount'];}}else{echo $_POST['amount'];} ?> рублей</div>
+                <div style="font-size: 40px;"><?=$sum;?> рублей</div>
                 <div style="padding: 5px; color: #ccc">Срок до 130 дней</div>
             </div>
         </div>
@@ -12,7 +12,7 @@
     <label class="col-sm-4 control-label label-required hidden-xs">Сумма</label>
     <div class="col-sm-8 col-xs-12">
         <div class="form-slider white">
-            <input type="text" class="amount" name="amount" value="<?php echo $sum; ?>" />
+            <input type="text" class="amount" id="spec_ind" name="amount" value="<?=$sum;?>" />
         </div>
     </div>
 </div>
@@ -20,18 +20,20 @@
     <label class="col-sm-4 control-label label-required hidden-xs hidden-xs">Срок</label>
     <div class="col-sm-8 col-xs-12">
         <div class="form-slider">
-            <input type="text" class="form-control" id="period2" value="<?php echo $days2; ?>" readonly/>
+            <input type="text" class="form-control" id="period2" value="<?=$days;?>" readonly/>
         </div>
     </div>
 </div>
-<input type="hidden" class="form-control" id="p" name="period" value=" <?php echo $period; ?>"/>
-   
+<input type="hidden" class="form-control" id="p" name="period" value=" <?=$period;?>"/>
+<br>
 <div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="f">Фамилия *</label>
 	<div class="col-sm-8 col-xs-12">
         <div class="shadow">
             <input type="text" class="form-control ec" value="Иванова" name="f" id="f" placeholder="Фамилия" title="Фамилия" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
             <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="help-block2">Нужно указать фамилию</p>
+            <p class="text-muted helpblock">Пример: Иванова</p>
         </div>
     </div>
 </div>
@@ -41,6 +43,8 @@
             <div class="shadow">
                 <input type="text" class="form-control ec" name="i" id="i" placeholder="Имя" title="Имя" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя" required>
                 <span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                <p class="help-block2">Нужно указать имя</p> 
+                <p class="text-muted helpblock">Пример: Лариса</p>
             </div>
         </div>
 </div>
@@ -50,6 +54,8 @@
             <div class="shadow">
                 <input type="text" class="form-control ec" value="Иванович" name="o" id="o" placeholder="Отчество" title="Отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество" required>
                 <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                <p class="help-block2">Нужно указать отчество</p> 
+                <p class="text-muted helpblock">Пример: Ивановна</p>
             </div>
         </div>
 </div>
@@ -59,7 +65,9 @@
     <div class="col-sm-8 col-xs-12">
         <div class="shadow">
             <input type="text" class="form-control ec" value="03/12/1988" id="birthdate" name="birthdate"  placeholder="Дата рождения" title="Дата рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения" required>
-            <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <span id="birthdaedengaatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="help-block2"></p>
+            <p class="text-muted helpblock">Пример: 06/02/2000</p>
         </div>
     </div>
 </div>
@@ -68,6 +76,8 @@
 	<div class="col-sm-8 col-xs-12">
         <input type="tel" class="form-control ec" name="phone" id="phone" placeholder="Телефон" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Введите телефон" required>
         <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+        <p class="help-block2">Нужно указать номер телефона</p>
+        <p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
     </div>
 </div>
 <div class="form-group has-feedback">
@@ -76,13 +86,15 @@
         <div class="shadow">
             <input type="email" class="form-control ec" name="email" id="email" placeholder="Email" title="Email" data-validation="email" data-validation-error-msg="Введите свой email" required>
             <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="help-block2"></p>
+            <p class="text-muted helpblock">Пример: email@mail.ru</p>
         </div>
     </div>
 </div>
 <div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="delays_type">Кредитная история</label>
 	<div class="col-sm-8 col-xs-12">
-		<select class="form-control ec" name="delays_type" id="delays_type" required>
+		<select class="form-control ec" name="delays_type" id="delays_type">
 		<option selected value="never">Никогда не брал(а) кредитов</option>
 		<option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
 		<option value="credit_open_no_delay">Кредиты есть, просрочек нет</option>
@@ -97,7 +109,7 @@
 	<label class="col-sm-4 control-label"></label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="checkbox checkbox-primary">
-			<input class="styled" type="checkbox" onClick="checkme_form();" id="agree" value="1" checked>
+			<input class="styled" type="checkbox" onClick="checkMee();" id="agree" value="1" checked>
 			<label for="agree">
 				<b>Я согласен на обработку персональных данных и с <a href="#" data-toggle="modal" data-target="#tosModal">публичной офертой</a></b>
 			</label>

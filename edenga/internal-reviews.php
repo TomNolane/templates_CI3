@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <section id="reviews">
         <div class="row">
             <h1 class="title">Отзывы</h1>
@@ -12,7 +13,7 @@
                     </div>
                     <div class="user text-center">
                         <div class="col-md-4">
-                            <img src="/templates/edenga/img/reviews/1.png" alt="1.png" class="img-circle">
+                            <img src="/templates/edenga/assets/img/reviews/1.png" alt="1.png" class="img-circle">
                         </div>
                         <div class="col-md-4">
                             <div class="name">Журавлева Алевтина</div>
@@ -27,7 +28,7 @@
                     </div>
                     <div class="user text-center">
                         <div class="col-md-4">
-                            <img src="/templates/edenga/img/reviews/2.png" alt="2.png" class="img-circle">
+                            <img src="/templates/edenga/assets/img/reviews/2.png" alt="2.png" class="img-circle">
                         </div>
                         <div class="col-md-4">
                             <div class="name">Карпов Иван</div>
@@ -42,7 +43,7 @@
                     </div>
                     <div class="user text-center">
                         <div class="col-md-4">
-                            <img src="/templates/edenga/img/reviews/3.png" alt="3.png" class="img-circle">
+                            <img src="/templates/edenga/assets/img/reviews/3.png" alt="3.png" class="img-circle">
                         </div>
                         <div class="col-md-4">
                             <div class="name">Елизавета Дарова</div>
@@ -57,7 +58,7 @@
                     </div>
                     <div class="user text-center">
                         <div class="col-md-4">
-                            <img src="/templates/edenga/img/reviews/4.png" alt="4.png" class="img-circle">
+                            <img src="/templates/edenga/assets/img/reviews/4.png" alt="4.png" class="img-circle">
                         </div>
                         <div class="col-md-4">
                             <div class="name">Михаил Терентьев</div>
@@ -70,3 +71,4 @@
                 <button type="button" class="btn btn-primary btn-lg button-get" data-toggle="modal" data-target="#feedbackModal">Оставить отзыв</button>
             </div>
 </section>
+<?php require 'footer.php';?>

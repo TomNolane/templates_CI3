@@ -12,7 +12,7 @@
     <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
         <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
         <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
-        <input type="hidden" id="p" name="period" value="7" />
+        <input type="hidden" id="period" name="period" value="7" />
         <input type="hidden" id="period2" name="period2" value="7" />
         <input type="hidden" id="amount" name="amount" value="20000" />
         <div class="container">
@@ -36,10 +36,10 @@
                                             <i class="fa fa-calendar"></i>
                                         </div>
                                         <div class="clearfix"></div>
-                                        <input type="text" id="period" value="21" />
+                                        <input type="text" id="ionRangeSlider" value="21" />
                                         <div class="clearfix"></div>
                                     </div>
-                                    <img src="/templates/edenga/img/ps.png" alt="ps.png">
+                                    <img src="/templates/edenga/assets/img/ps.png" alt="ps.png">
                                 </div>
                             </div>
                             <button type="submit" class="btn form-button">Получить деньги</button>

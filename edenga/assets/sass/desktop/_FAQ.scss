@@ -1,0 +1,63 @@
+#ex-faq{
+  h1{
+    margin-bottom: 40px;
+  }
+  .panel-group{
+    .panel{
+      margin-bottom: 20px;
+      border-radius: 0;
+      border: 2px solid $accordionBorder;
+      background-color: $accordionBg;
+      .panel-heading{
+        padding: 12px 30px 12px 15px;
+        background-color: $accordionBg;
+        h4{
+          a{
+            text-decoration: none;
+            font-weight: 700;
+            &.collapsed{
+              font-weight: 400;
+            }
+          }
+        }
+        i{
+          &.ex-plus-icon{
+            margin-top: 3px;
+            display: inline-block;
+            float: right;
+            width: 12px;
+            height: 12px;
+            background: url(../img/plus-icon.png) no-repeat;
+          }
+          &.ex-minus-icon{
+            margin-top: 5px;
+            display: inline-block;
+            float: right;
+            width: 13px;
+            height: 3px;
+            background: url(../img/minus-icon.png) no-repeat;
+          }
+
+          @media (max-width: 767px) {
+            display: none!important;
+          }
+        }
+      }
+      .panel-collapse{
+        .panel-body{
+          border-top: none;
+        }
+      }
+    }
+  }
+  footer{
+    margin-top: 30px;
+    padding: 23px 0 27px;
+    background-color: $accordionBg;
+    h3{
+      font-size: 20px;
+      color: $black;
+      margin-bottom: 25px;
+    }
+  }
+}

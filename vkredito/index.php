@@ -66,7 +66,7 @@
             <div class="col-md-2 col-sm-2 col-md-offset-1 col-sm-offset-1">
                 <div class="algo-item">
                     <a href="/form">
-                        <img src="/templates/vkredito/img/steps/1.png" alt="1.png">
+                        <img src="/templates/vkredito/assets/img/steps/1.png" alt="1.png">
                     </a>
                 </div>
                 <p>Зайдите на сайт</p>
@@ -76,7 +76,7 @@
             <div class="col-md-2 col-sm-2 text-center">
                 <div class="algo-item">
                     <a href="/form">
-                        <img src="/templates/vkredito/img/steps/2.png" alt="2.png">
+                        <img src="/templates/vkredito/assets/img/steps/2.png" alt="2.png">
                     </a>
                 </div>
                 <p>Заполните короткую анкету</p>
@@ -86,7 +86,7 @@
             <div class="col-md-2 col-sm-2 text-center">
                 <div class="algo-item">
                     <a href="/form">
-                        <img src="/templates/vkredito/img/steps/3.png" alt="3.png">
+                        <img src="/templates/vkredito/assets/img/steps/3.png" alt="3.png">
                     </a>
                 </div>
                 <p>Получите деньги</p>
@@ -134,7 +134,7 @@
                     <div class="col-md-2 col-sm-6 col-xs-6">
                         <div class="algo-item">
                             <a href="/form">
-                                <img src="/templates/vkredito/img/advantage/1.png" alt="1.png">
+                                <img src="/templates/vkredito/assets/img/advantage/1.png" alt="1.png">
                             </a>
                         </div>
                         <h3>Быстрое кредитование</h3>
@@ -143,7 +143,7 @@
                     <div class="col-md-2 col-sm-6 col-xs-6">
                         <div class="algo-item">
                             <a href="/form">
-                                <img src="/templates/vkredito/img/advantage/2.png" alt="2.png">
+                                <img src="/templates/vkredito/assets/img/advantage/2.png" alt="2.png">
                             </a>
                         </div>
                         <h3>Гибкость</h3>
@@ -152,7 +152,7 @@
                     <div class="col-md-2 col-sm-6 col-xs-6">
                         <div class="algo-item">
                             <a href="/form">
-                                <img src="/templates/vkredito/img/advantage/3.png" alt="3.png">
+                                <img src="/templates/vkredito/assets/img/advantage/3.png" alt="3.png">
                             </a>
                         </div>
                         <h3>Выгодная процентная ставка</h3>
@@ -161,7 +161,7 @@
                     <div class="col-md-2 col-sm-6 col-xs-6">
                         <div class="algo-item">
                             <a href="/form">
-                                <img src="/templates/vkredito/img/advantage/4.png" alt="4.png">
+                                <img src="/templates/vkredito/assets/img/advantage/4.png" alt="4.png">
                             </a>
                         </div>
                         <h3>Конфиденциальность</h3>
@@ -170,7 +170,7 @@
                     <div class="col-md-2 col-sm-6 col-xs-6">
                         <div class="algo-item">
                             <a href="/form">
-                                <img src="/templates/vkredito/img/advantage/5.png" alt="5.png">
+                                <img src="/templates/vkredito/assets/img/advantage/5.png" alt="5.png">
                             </a>
                         </div>
                         <h3>Большие суммы</h3>
@@ -190,7 +190,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="algo-item">
-                            <img src="/templates/vkredito/img/reviews/1.png" alt="1.png">
+                            <img src="/templates/vkredito/assets/img/reviews/1.png" alt="1.png">
                         </div>
                         <h3>Александра Иванова</h3>
                         <p>"Вкредито", конечно, красавцы. Обратилась в трудной ситуации, когда не хватало денег на ремонт машины.
@@ -198,7 +198,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="algo-item">
-                            <img src="/templates/vkredito/img/reviews/2.png" alt="2.png">
+                            <img src="/templates/vkredito/assets/img/reviews/2.png" alt="2.png">
                         </div>
                         <h3>Ольга Золотова</h3>
                         <p>Хочу поблагодарить Вкредито за доверие и своевременно оказанную материальную помощь! Очень удобный
@@ -207,7 +207,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="algo-item">
-                            <img src="/templates/vkredito/img/reviews/3.png" alt="3.png">
+                            <img src="/templates/vkredito/assets/img/reviews/3.png" alt="3.png">
                         </div>
                         <h3>Михаил Светлаков</h3>
                         <p>Я очень хочу, чтобы вы успешно пережили кризис, побольше вам добросовестных плательщиков и успешных

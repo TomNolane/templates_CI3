@@ -13,8 +13,8 @@
         <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="pull-right">
             <div id="circle"></div>
         </a>
-        <img src="/templates/vkredito/img/info/visa.png" class="pull-right hidden-xs">  
-        <img src="/templates/vkredito/img/info/mastercard.png" class="pull-right hidden-xs">  
+        <img src="/templates/vkredito/assets/img/info/visa.png" class="pull-right hidden-xs">  
+        <img src="/templates/vkredito/assets/img/info/mastercard.png" class="pull-right hidden-xs">  
       </h4>
     </div>
     <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
@@ -38,7 +38,7 @@
         <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="pull-right">
             <div id="circle"></div>
         </a>  
-		<img src="/templates/vkredito/img/info/qiwi.png" class="pull-right hidden-xs">
+		<img src="/templates/vkredito/assets/img/info/qiwi.png" class="pull-right hidden-xs">
       </h4>
     </div>
     <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
@@ -61,7 +61,7 @@
         <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="pull-right">
             <div id="circle"></div>
         </a>  
-		<img src="/templates/vkredito/img/info/contact.png" class="pull-right hidden-xs">
+		<img src="/templates/vkredito/assets/img/info/contact.png" class="pull-right hidden-xs">
       </h4>
     </div>
     <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
@@ -90,7 +90,7 @@
         <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="pull-right">
             <div id="circle"></div>
         </a>  
-		<img src="/templates/vkredito/img/info/yandex.png" class="pull-right hidden-xs">
+		<img src="/templates/vkredito/assets/img/info/yandex.png" class="pull-right hidden-xs">
       </h4>
     </div>
     <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
