@@ -37,7 +37,7 @@ if($this->input->post('amount', TRUE) != '')
 } 
 if(!isset($my_title))
 {
-    $my_title = 'Подача Заявки на Получение Займа Онлайн';
+    $my_title = 'Заполните анкету!';
 }  
 if($this->input->get('amount', TRUE) != '') 
 {  
@@ -82,6 +82,7 @@ include "header.php";
         <input type="hidden" name="display" id="display" value="0">
         <input type="hidden" id="amount" class="amount" name="amount" value="<?= $sum; ?>" />
         <input type="hidden" id="period" name="period" value="<?= $period; ?>" />
+        <input type="hidden" name="fingerprint" id="fingerprint" value="">
         <div role="tabpanel" class="ex-anketa1-block tab-pane fade in active col-xs-12" id="firstTabContent">
             <?php require 'form1.php'; ?>
         </div>

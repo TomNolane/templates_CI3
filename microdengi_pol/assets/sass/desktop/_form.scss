@@ -1,0 +1,52 @@
+.ex-anketa{
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .ex-main-form {
+    padding:116px 0;
+    .ex-wrapper {
+      position: relative;
+      input {
+        height: 50px;
+        color: #262626;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 12px 19px;
+        box-shadow: inset 0 0 10px #e5e5e5;
+        border: 1px solid #9b9b9b;
+        background-color: #ffffff;
+        @include prefix(border-radius, 5px);
+        &:focus {
+          border: 1px solid #9b9b9b;
+          background-color: #ffffff;
+        }
+        @include placeholder {
+          color: #c0c0c0;
+          font-size: 14px;
+          font-weight: 400;
+        }
+        @media (max-width: 414px) {
+          font-size: 14px;
+          @include placeholder {
+            color: #9b9b9b;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+      .ex-main-btn {
+        margin-top: 10px;
+      }
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin: 0;
+    }
+    @media (max-width: 991px) {
+      padding: 0 10px 30px;
+    }
+  }
+}

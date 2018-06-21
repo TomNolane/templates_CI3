@@ -1,0 +1,96 @@
+.ex-main-zaim {
+  margin-bottom: 54px;
+  h1 {
+    margin: 33px auto;
+  }
+  .ex-info-block {
+    padding: 25px 39px 24px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+    background-color: #eef2f7;
+    @include prefix(border-radius, 5px);
+    &:first-of-type{
+      margin-bottom: 30px;
+    }
+    .ex-card {
+      position: relative;
+      h2 {
+        color: #1589ee;
+        font-size: 18px;
+        line-height: 35px;
+        letter-spacing: 0.35px;
+        margin-top: 0;
+      }
+      img{
+        position: absolute;
+        top: 10px;
+        right: 0;
+        @media (max-width: 991px) {
+          position: relative;
+          margin-bottom: 15px;
+          top: initial;
+        }
+      }
+    }
+    p {
+      font-size: 10px;
+      line-height: 19px;
+      letter-spacing: 0.3px;
+      text-align: left;
+      color: lighten(#000, 20%);
+    }
+  }
+}
+
+.ex-button-footer {
+  margin-top: 30px;
+  background-color: #3e4757;
+  .ex-phone {
+    padding-top: 34px;
+    p {
+      font-size: 36px;
+      font-weight: 100;
+      letter-spacing: 0.53px;
+      margin-bottom: 0;
+      color: #fff;
+      @media (max-width: 992px) {
+        font-size: 22px;
+      }
+    }
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.74px;
+      color: #fff;
+      @media (max-width: 992px) {
+        font-size: 10px;
+      }
+    }
+  }
+  .ex-main-btn {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-bottom: 34px;
+    @media (max-width: 768px) {
+      width: 70%;
+      margin: 20px auto;
+    }
+  }
+  .ex-dropdown {
+    position: relative;
+    .ex-dropdown-menu {
+      width: 300px;
+      height: 170px;
+      position: absolute;
+      top: -153px;
+    }
+  }
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
+}

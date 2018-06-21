@@ -1,0 +1,43 @@
+.ex-zaim {
+  h1 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 100;
+  }
+  .ex-mob-zaim-block {
+    margin:24px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    h2 {
+      padding: 12px 15px;
+      color: #242424;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 16px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    p {
+      padding: 20px 15px;
+      background-color: $darkblue;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .ex-zaim-btn {
+      background-color: $lightgray;
+      padding: 26px 11px 13px 111px;
+      .ex-main-btn {
+        margin-top: 0;
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+  }
+}

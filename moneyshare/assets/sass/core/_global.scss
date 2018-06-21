@@ -1,0 +1,116 @@
+body {
+  font-family: $roboto!important;
+  font-weight: 400 !important;
+  position: relative;
+  width: 100%;
+  color: #0e0e0e!important;
+  float: left;
+  min-height: 100vh;
+  padding-right: 0 !important;
+}
+
+.ex-orange-border {
+  border: 2px solid $orange;
+}
+.ex-green-border {
+  border: 2px solid $green;
+}
+h2 {
+  font-size: 36px;
+  font-family: Roboto-Light ,sans-serif;
+}
+.ex-main-btn {
+  width: 100%;
+  padding: 15px 5px;
+  border: none;
+  background-color: $green;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  outline: none;
+  @include prefix(border-radius, 100px);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  transition: all .3s ease;
+  &:hover {
+    color: #000;
+    background-color: #fff;
+  }
+
+}
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ex-sticky {
+  position: relative;
+  width: 100%;
+  float: left;
+  padding-bottom: 250px;
+  min-height: 100vh;
+  .ex-sticky-footer {
+    position: absolute;
+    width: 100%;
+    min-height: 133px;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+#ex-up-button {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 74px;
+  width: 50px;
+  height: 50px;
+  @include prefix(border-radius, 10px);
+  background-color: rgba($green , .9);
+  z-index: 999;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    background-image: url("../img/icons/cd-top-arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.ex-advertising {
+  p {
+    font-size: 14px;
+  }
+  .ex-advertising-form {
+    padding: 24px;
+    background-color: $grey;
+    input {
+      height: 50px;
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 5px 10px;
+      @media (max-width: 991px) {
+        margin-bottom: 20px;
+      }
+    }
+    .ex-main-btn {
+      border-radius: 0;
+      height: 50px;
+    }
+  }
+}
+

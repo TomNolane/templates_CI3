@@ -138,6 +138,7 @@ include "header.php";
 						<input type="hidden" name="id" value="">
 						<input type="hidden" name="step" value="1">
 						<input type="hidden" name="ad_id" value="<?=$ad_id?>">
+						<input type="hidden" name="fingerprint" id="fingerprint" value="">
 						<input type="hidden" name="display" value="1" class="visible-xs">
 						<div class="tab-content">
 							<div role="tabpanel" class="tab-pane active" id="form1">

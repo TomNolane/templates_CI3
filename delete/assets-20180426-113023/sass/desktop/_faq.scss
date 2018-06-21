@@ -1,0 +1,95 @@
+.ex-faq {
+  padding-top: 78px;
+  padding-bottom: 60px;
+  .ex-faq-content {
+    margin-bottom: 40px;
+    h1 {
+      color: #1f1c09;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 50px;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 46px;
+    }
+    .panel {
+      border: none;
+      margin-bottom: 30px;
+      .panel-heading {
+        padding: 13px 10px 13px 30px;
+        border-radius: 5px;
+        background-color: #171d44;
+        h4 {
+          position: relative;
+          a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 0.26px;
+            position: relative;
+            padding: 13px 20px 13px 5px;
+          }
+          i {
+            position: absolute;
+            right: 0;
+
+            &.ex-plus {
+              top: 2px;
+              width: 15px;
+              height: 15px;
+              background-image: url(../img/icons/plus.png);
+            }
+            &.ex-minus {
+              width: 15px;
+              height: 3px;
+              top: 9px;
+              background-image: url(../img/icons/minus.png);
+            }
+            @media (max-width: 767px) {
+              display: none;
+            }
+          }
+
+        }
+      }
+      .panel-body {
+        padding: 13px 30px;
+        background-color: #f5f5f5;
+        border: none !important;
+        @include prefix(border-radius, 5px);
+        .ex-money-img {
+          text-align: center;
+        }
+        p {
+          color: #333333;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0.26px
+        }
+      }
+    }
+
+  }
+  .ex-for-buttons {
+    padding-top: 30px;
+    .ex-question {
+      background-color: #171d44;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      @media (max-width: 991px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .ex-bg-head {
+    padding-left: 0 !important;
+    background-color: transparent !important;
+    a {
+      color: #333333 !important;
+    }
+  }
+}

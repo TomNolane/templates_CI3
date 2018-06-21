@@ -89,5 +89,23 @@ echo '<div class="col-md-3">
 
 <div class="special_box hidden-xs hidden-sm"></div>
 <br><br><br>
-
+<!-- Google Code for  
+&#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
+Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 827436364;
+var google_conversion_label = "oLu3COf5v3kQzNrGigM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript"  
+src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt=""  
+src="//www.googleadservices.com/pagead/conversion/827436364/?label=oLu3COf5v3kQzNrGigM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
 <?php require 'footer.php'; ?>

@@ -1,0 +1,123 @@
+body{
+  position: relative;
+  color: $main!important;
+  font-family: $roboto!important;
+  font-weight: 400;
+}
+.ex-main-btn{
+  width: 100%;
+  padding: 20px 5px;
+  border: none;
+  outline: none;
+  background-color: #5d9d58;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  @include prefix(border-radius, 5px);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ex-adds{
+  height: 220px;
+  background-color: #d8d8d8;
+}
+
+.ex-sticky{
+  position: relative;
+  width: 100%;
+  float: left;
+  padding-bottom: 200px;
+  min-height: 100vh;
+  .ex-sticky-footer{
+    position:absolute;
+    width:100%;
+    min-height: 200px;
+    bottom:0;
+    left:0;
+  }
+}
+.ex-agreement-check {
+  label {
+    margin-top: 14px !important;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-weight: 700;
+    //padding-top: 3px !important;
+    color: #333333;
+    font-size: 14px;
+    text-align: left!important;
+    &:hover input ~ i {
+      background: #f8f8f8;
+    }
+    &:focus input ~ i {
+      background: #f8f8f8;
+    }
+    span {
+      display: inline-block;
+      margin-left: 30px;
+      color: #9b9b9b;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      @media (max-width: 767px) {
+        font-size: 12px;
+      }
+    }
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      left: 0;
+      margin-left: 0 !important;
+      &:checked ~ i {
+        background: #fff;
+        &:after {
+          display: block;
+        }
+      }
+
+    }
+    i {
+      display: inline-block;
+      position: absolute;
+      top: 4px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      @include prefix(border-radius, 5px);
+      box-shadow: inset 0 0 10px #e5e5e5;
+      border-radius: 3px;
+      border: 1px solid #9b9b9b;
+      background-color: #ffffff;
+      &:after {
+        content: '';
+        position: absolute;
+        display: none;
+        left: 8px;
+        top: 3px;
+        width: 5px;
+        height: 10px;
+        border: solid #9b9b9b;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        @include prefix(border-radius, 4px);
+      }
+    }
+  }
+}

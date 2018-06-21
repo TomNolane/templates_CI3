@@ -1,0 +1,312 @@
+.ex-section-1 {
+  background-image: url("../img/bg-start.png");
+  background-repeat: no-repeat;
+  margin-top: 90px;
+  h1 {
+    margin-top: 0;
+    margin-bottom: 38px;
+    color: #30323e;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 50px;
+  }
+  p {
+    text-align: center;
+    color: #333333;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+    margin-bottom: 38px;
+  }
+  .ex-range-slider-block {
+    margin-bottom: 142px;
+    .ex-main-btn {
+      margin-top: 24px;
+    }
+  }
+
+}
+
+.ex-section-2 {
+  padding-top: 77px;
+  padding-bottom: 69px;
+  background-color: #5d4889;
+  h2 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+    margin-top: 0;
+  }
+  p {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 50px;
+  }
+  .ex-main-btn {
+    transition: background-color 0.5s ease;
+    &:hover {
+      background-color: #ffffff;
+      color: #5d4889;
+    }
+  }
+  .ex-white-btn {
+    width: 100%;
+    padding: 25px 0 21px;
+    border: 1px solid #ffffff;
+    outline: none;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include prefix(border-radius, 100px);
+  }
+  .ex-white-btn:hover {
+    -webkit-animation: onmouse .8s;
+    -moz-animation: onmouse .8s;
+    -o-animation: onmouse .8s;
+    animation: onmouse .8s;
+    @include prefix(border-radius, 100px);
+    background-color: #ffffff;
+    color: #5d4889;
+  }
+  .ex-white-btn:not(:hover ) {
+    -webkit-animation: onmouseout .8s;
+    -moz-animation: onmouseout .8s;
+    -o-animation: onmouseout .8s;
+    animation: onmouseout .8s;
+    @include prefix(border-radius, 100px);
+    background-color: transparent;
+    color: #ffffff;
+  }
+  @-webkit-keyframes onmouse {
+    0% {
+      @include prefix(border-radius, 8px);
+    }
+    100% {
+      @include prefix(border-radius, 100px);
+    }
+  }
+
+  @keyframes onmouse {
+    0% {
+      @include prefix(border-radius, 8px);
+    }
+    100% {
+      @include prefix(border-radius, 100px);
+    }
+  }
+
+  @-webkit-keyframes onmouseout {
+    0% {
+      @include prefix(border-radius, 100px);
+    }
+    50% {
+      @include prefix(border-radius, 6px);
+    }
+    100% {
+      @include prefix(border-radius, 100px);
+    }
+  }
+  @keyframes onmouseout {
+    0% {
+      @include prefix(border-radius, 6px);
+    }
+    100% {
+      @include prefix(border-radius, 100px);
+    }
+  }
+  .ex-for-img {
+    margin-top: 20px;
+    height: 331px;
+    min-height: 331px;
+    background-image: url("../img/credit-card.png");
+    background-size: contain;
+    background-repeat: no-repeat ;
+    background-position: center center;
+  }
+
+}
+
+
+.ex-section-3 {
+  padding-top: 92px;
+  padding-bottom: 67px;
+  .ex-rus-map {
+    position: relative;
+    background-image: url("../img/map.png");
+    background-repeat: no-repeat;
+    background-position: 8px 132px;
+    min-height: 739px;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 30px;
+      color: #1f1c09;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 50px;
+    }
+    .ex-why-work {
+      padding-left: 20px;
+      padding-right: 40px;
+      .ex-steps {
+        h3 {
+          margin-top: 0;
+          margin-bottom: 0;
+          color: #4a3476;
+          font-size: 20px;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+        p {
+          color: #1f1c09;
+          font-size: 16px;
+          font-weight: 700;
+          margin-bottom: 24px;
+        }
+        .ex-work-block {
+          width: 300px;
+          padding: 14px 13px 19px 13px;
+          @include prefix(border-radius, 5px);
+          background-color: #5d4889;
+          .ex-number-img {
+            vertical-align: top;
+            min-height: 87px;;
+            display: inline-block;
+            img {
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+          p {
+            padding-left: 13px;
+            display: inline-block;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin-bottom: 0;
+          }
+        }
+      }
+      .ex-for-button {
+        margin-top: 432px;
+      }
+    }
+  }
+}
+.ex-section-4 {
+  padding-bottom: 59px;
+  h2 {
+    color: #1f1c09;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-top: 0;
+    margin-bottom: 57px;
+  }
+  .item {
+    height: 185px;;
+    padding: 27px 30px;
+    @include prefix(border-radius, 5px);
+    background-color: #f5f5f5;
+    figcaption {
+      color: #1f1c09;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 20px;
+      margin-bottom: 14px;
+    }
+    h3 {
+      color: #1f1c09;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+  .owl-dots {
+    margin-top: 29px !important;
+  }
+  .owl-dot {
+    span {
+      background: #ffffff;
+      border: 1px solid #8b8b8b;
+    }
+
+  }
+}
+
+@media (max-width: 767px) {
+  .ex-section-1 {
+    .ex-range-slider-block {
+      margin-bottom: 50px;
+    }
+  }
+
+  .ex-section-4 {
+    .item {
+      height: auto;
+    }
+  }
+
+}
+
+
+@media (max-width: 991px) {
+  .ex-section-2 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h2 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .ex-main-btn {
+      margin-bottom: 40px;
+    }
+  }
+  .ex-section-3 {
+    .ex-rus-map {
+      background-image: none;
+      .ex-why-work {
+        padding-left: 0;
+        padding-right: 0;
+        .ex-fl {
+          float: none;
+        }
+        .ex-steps {
+          margin-bottom: 40px;
+          text-align: center;
+          .ex-work-block {
+            width: 100%;
+            .ex-number-img {
+              display: block;
+              text-align: center;
+              margin-bottom: 20px;
+              img {
+                width: auto;
+              }
+            }
+            p {
+              display: block;
+              br {
+                display: none;
+              }
+            }
+          }
+        }
+        .ex-for-button {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}

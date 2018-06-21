@@ -113,7 +113,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
         <input type="hidden" name="ad_id" value="<?=$ad_id?>"> 
 		<input type="hidden" id="amount" name="amount" value="<?php echo $sum;?>"/>
         <input type="hidden" id="period" name="period" value="<?php echo $period; ?>" />
-
+        <input type="hidden" name="fingerprint" id="fingerprint" value="">
         <div role="tabpanel" class="ex-anketa1-block tab-pane fade in active col-xs-12" id="firstTabContent">
             <?php require 'form1.php';?>
         </div>

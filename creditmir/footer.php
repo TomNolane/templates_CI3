@@ -80,6 +80,7 @@
     echo '</script>';
     echo '<script>';
     require 'templates/creditmir/assets/js/settings_form.js';
+    require 'templates/common/new2/js/fingerprintjs2.js'; 
     echo '</script>';
     require 'templates/common/detect.min.php';
     ?>

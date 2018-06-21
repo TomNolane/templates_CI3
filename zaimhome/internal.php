@@ -3,7 +3,7 @@ if ($this->uri->segment(1) == 'robots.txt')
 {
 	header("Content-type: text/plain");
 	require 'internal-robots.txt.php';
-}
+} 
 else
 {
 	$my_title = ''; $description = '';

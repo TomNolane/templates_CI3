@@ -1,0 +1,276 @@
+.ex-main {
+  padding-top: 40px;
+  padding-bottom: 124px;
+  &:before {
+    content: "";
+    height: 720px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+    span {
+      color: #5d9d58;
+      font-size: 42px;
+    }
+    @media (min-width: 1200px) {
+      padding-top: 77px;
+    }
+    @media (max-width: 991px) {
+      font-size: 32px;
+      line-height: 40px;
+      br {
+        display: none;
+      }
+    }
+    @media (max-width: 767px) {
+      font-size: 28px;
+      br {
+        display: none;
+      }
+    }
+    @media (max-width: 500px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  p {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .ex-for-img {
+    width: 100%;
+    height: 301px;
+    background-repeat: no-repeat;
+    background-image: url("../img/pic.png");
+    background-size: contain;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  .ex-calc-block {
+    .ex-wrapper {
+      padding: 23px 60px;
+      box-shadow: 0 2px 4px rgba(155, 155, 155, 0.18);
+      border-radius: 5px;
+      border: 1px solid rgba(151, 151, 151, 0.3);
+      background-color: rgba(#ffffff, 0.5);
+      .ex-range-slider-ruble, .ex-range-slider-time {
+        position: relative;
+        margin-bottom: 25px;
+        span.ex-small-cost {
+          top: 44px;
+          position: absolute;
+          color: #5d9d58;
+          font-size: 16px;
+          font-weight: 500;
+          &.ex-left {
+            left: 0;
+          }
+          &.ex-right {
+            right: 0;
+          }
+        }
+        .ex-info {
+          font-size: 0;
+          span {
+            color: #427674;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+          }
+        }
+      }
+      @media (max-width: 991px) {
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+    }
+    .ex-slider-block {
+      box-shadow: 0 2px 4px rgba(155, 155, 155, 0.18);
+      border-radius: 5px;
+      border: 1px solid rgba(151, 151, 151, 0.3);
+      background-color: #ffffff;
+      .ex-val-style {
+        text-align: center;
+        padding: 16px 0;
+        color: #427674;
+        font-size: 42px;
+        font-weight: 900;
+        line-height: 50px;
+        margin: 23px 0;
+        @media (max-width: 991px) {
+          margin: 0;
+        }
+      }
+      .ex-slider-val-1 {
+        border-right: 1px solid rgba(#979797, .3);
+        @media (max-width: 767px) {
+          border-right: none;
+        }
+      }
+      .ex-main-btn {
+        border-radius: 0 0 5px 5px;
+        background-color: #5d9d58;
+      }
+    }
+  }
+}
+.ex-section-art {
+  padding-bottom: 102px;
+  padding-top: 102px;
+  background-color: #f9f9f9;
+  @media (max-width: 991px) {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  h2 {
+    color: #427674;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+  .ex-art-block {
+    margin-bottom: 20px;
+    @include prefix(border-radius, 5px);
+    border: 1px solid #9b9b9b;
+    background-color: #ffffff;
+    color: #9b9b9b;
+    -webkit-transition: all 0.3s ease;
+    overflow: hidden;
+    @media (max-width: 1191px) and (min-width: 991px) {
+      min-height: 530px;
+    }
+    .ex-art-img {
+      width: 360px;
+      height: 150px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+    .ex-art-img1 {
+      background-image: url("../img/art1.png");
+    }
+    .ex-art-img2 {
+      background-image: url("../img/art2.png");
+    }
+    .ex-art-img3 {
+      background-image: url("../img/art3.png");
+    }
+    .ex-art-cont {
+      padding: 26px;
+      h3 {
+        height: 72px;
+        margin: 0;
+        font-size: 20px;
+        font-weight: 400;
+        @media (max-width: 991px) {
+          height: auto;
+        }
+      }
+      p {
+        height: 208px;
+        margin: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        @media (max-width: 1199px) {
+          height: 240px;
+        }
+        @media (max-width: 991px) {
+          height: auto;
+        }
+      }
+      a {
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration: underline;
+        color: #9b9b9b;
+      }
+    }
+
+  }
+  .ex-art-block.ex-art-active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    border: 1px solid #5d9d58;
+    color: #333333;
+    a {
+      color: #333333;
+    }
+  }
+  .ex-art-block.ex-on-small-devices {
+    @media (max-width: 991px) {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+      border: 1px solid #5d9d58;
+      color: #333333;
+      a {
+        color: #333333;
+      }
+    }
+  }
+}
+.ex-about-section {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 70px;
+    color: #427674;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .item {
+    margin-bottom: 52px;
+    text-align: center;
+    height: 200px;
+    padding: 30px 21px;
+    @include prefix(border-radius, 5px);
+    border: 1px solid #9b9b9b;
+    background-color: #ffffff;
+    @media (max-width: 767px) {
+      height: 270px;
+    }
+    @media (max-width: 500px) {
+      height: 320px;
+    }
+    @media (max-width: 380px) {
+      height: 400px;
+    }
+    figcaption {
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    h3 {
+      color: #9b9b9b;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+  }
+  .owl-dots .owl-dot span {
+    background-color: #ffffff !important;
+    border: 1px solid #5d9d58;
+  }
+  .owl-dots .owl-dot.active span {
+    background-color: #5d9d58 !important;
+  }
+}
+

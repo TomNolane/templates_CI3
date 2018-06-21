@@ -1,0 +1,87 @@
+.ex-money{
+  padding-top: 62px;
+  padding-bottom: 64px;
+  .nav-tabs {
+    li {
+      width: 210px;
+      margin-right: 10px;
+      text-align: center;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      a {
+        padding: 3px 25px;
+        cursor: pointer;
+        color: #2d3e4f;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 40px;
+        border-radius: 10px 10px 0 0;
+        background-color: #ecf0f1;
+        white-space: nowrap;
+        margin-right: 0;
+      }
+      &.active {
+        a {
+          padding: 3px 25px;
+          background-color: #2f81b7;
+          color: #ffffff;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 40px;
+          white-space: nowrap;
+        }
+      }
+      @media (max-width: 1200px) {
+        width: 180px;
+        a {
+          padding: 2px 20px;
+          font-size: 16px;
+        }
+        &.active {
+          a {
+            padding: 2px 20px;
+            font-size: 20px;
+          }
+        }
+      }
+      @media (max-width: 991px) {
+        width: 100% !important;
+        margin-bottom: 2px;
+        margin-right: 0;
+        a {
+          border-radius: 0;
+        }
+      }
+    }
+    @media (max-width: 1200px) {
+     border-bottom: 0;
+    }
+
+  }
+  .tab-pane {
+    padding-top: 69px;
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.3px;
+    }
+    ul {
+      padding-left: 20px;
+      li {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.3px;
+      }
+    }
+    .ex-main-btn {
+      margin-top: 56px;
+    }
+    @media (max-width: 1200px) {
+      padding-top: 30px;
+    }
+  }
+
+}

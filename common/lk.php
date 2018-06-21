@@ -144,6 +144,12 @@ ins {
             $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
             $item['link'] = str_replace("#site1", ucfirst($domen), $item['link']);
             $item['link'] = str_replace("#site", $domen, $item['link']);
+
+
+            if(strpos($item['link'], "aff_sub1=") == true) $item['link'] = str_replace("aff_sub1=".ucfirst($domen), "aff_sub1=".$domen."&aff_sub2=".$this->input->get('keyword', TRUE)."&aff_sub3=".$this->input->get('campaign_id', TRUE)."&aff_sub4=".$this->input->get('utm_source', TRUE), $item['link']);
+            if(strpos($item['link'], "aff_sub1=") == true && strpos($item['link'],"aff_sub3=") == false) $item['link'] = str_replace("aff_sub1=".$domen, "aff_sub1=".$domen."&aff_sub2=".$this->input->get('keyword', TRUE)."&aff_sub3=".$this->input->get('campaign_id', TRUE)."&aff_sub4=".$this->input->get('utm_source', TRUE), $item['link']);
+            else if(strpos($item['link'], "aff_sub=") == true) $item['link'] = str_replace( "aff_sub=bzaim5.ru" , "aff_sub=bzaim5.ru&aff_sub2=".$domen."&aff_sub3=".$this->input->get('keyword', TRUE)."&aff_sub4=".$this->input->get('campaign_id', TRUE)."&aff_sub5=".$this->input->get('utm_source', TRUE) , $item['link']);
+
             $temp++;  
 
             if($temp==5)

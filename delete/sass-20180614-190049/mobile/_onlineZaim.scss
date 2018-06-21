@@ -1,0 +1,33 @@
+.ex-conditions{
+  padding-bottom: 25px;
+  h1{
+    @media (min-width: 500px) {
+      br{
+        display: none;
+      }
+    }
+  }
+  ul{
+    list-style-type: none;
+    padding: 15px 30px 20px;
+    border-bottom: 2px solid #EEF0F2;
+    margin: 0;
+    &:first-of-type{
+      padding-top: 0;
+    }
+    &:last-of-type{
+      border-bottom: none;
+    }
+    li{
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.21px;
+      margin-bottom: 5px;
+    }
+  }
+  p{
+    padding: 0 30px;
+    text-align: justify;
+    margin-bottom: 0;
+  }
+}

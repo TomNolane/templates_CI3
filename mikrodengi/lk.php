@@ -32,7 +32,7 @@ function plural_type($n) {
 ?>
 <main class="ex-offerta">
     <div class="container">
-        <h1 class="text-center">Вам доступен займ в следующих организациях:</h1>
+        <h1 class="text-center">Вам1 доступен займ в следующих организациях:</h1>
         <div class="ex-offers-content">
             <div class="row">
                 <?php  foreach($data as $item)
@@ -51,7 +51,7 @@ function plural_type($n) {
                                     </p>
                                     <figure>
                                         <div class="ex-img-offerta">
-                                        <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
+                                        <a target="_blank" href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
                                             <img class="lk-img '.$item['img'].'" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
                                         </a> 
                                         </div>
@@ -73,7 +73,7 @@ function plural_type($n) {
                                         </table>
                                     </figure>
                                     <div class="ex-offers-footer">
-                                        <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn">Получить деньги</button></a> 
+                                        <a target="_blank" href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn">Получить деньги</button></a> 
                                     </div>
                                 </div>
                             </div>';
@@ -84,4 +84,24 @@ function plural_type($n) {
     </div>
     <div class="buffer2"></div>
 </main>
+
+<!-- Google Code for  
+&#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
+Page -->
+<script >
+/* <![CDATA[ */
+var google_conversion_id = 820672461;
+var google_conversion_label = "mo6fCJOfuHsQze-phwM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script   
+src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt=""  
+src="//www.googleadservices.com/pagead/conversion/820672461/?label=mo6fCJOfuHsQze-phwM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
 <?php require 'footer.php'; ?>

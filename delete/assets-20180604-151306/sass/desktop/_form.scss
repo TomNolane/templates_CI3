@@ -1,0 +1,205 @@
+.ex-form-page-nav{
+  border-bottom: 1px solid rgba(#333333, 0.3);
+}
+
+.ex-form {
+  margin-bottom: 100px;
+  h1 {
+    margin-bottom: 40px;
+  }
+  .ex-calc-wraper{
+    padding-top: 45px;
+    margin-bottom: 15px;
+  }
+  .form-horizontal {
+    .form-group {
+      margin-right: 0!important;
+      margin-left: 0!important;
+      padding-bottom:  0!important;
+    }
+  }
+  .ex-anketa-head {
+    box-shadow: 0 2px 0 #f0f2f7;
+    border-radius: 4px 4px 0 0;
+    background-color: #122a4a;
+    p {
+      padding: 35px;
+      color: #ffffff;
+      font-family: $roboto;
+      font-size: 18px;
+      font-weight: 900;
+      a {
+        color: #fff;
+      }
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+  }
+  .ex-anketa-main {
+    margin-top: -10px;
+    .col-xs-8 {
+      padding-top: 18px;
+    }
+    padding-bottom: 30px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    .ex-range-scope{
+      margin-top: 25px;
+      @media (max-width: 767px) {
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+    }
+    #ex-slider-val {
+      position: relative;
+      padding-left: 45px;
+      height: 50px;
+      margin-top: 35px;
+      border-radius: 4px;
+      border: none;
+      background-color: #eef2f7;
+      color: #000000;
+      font-size: 32px;
+      font-weight: 100;
+      line-height: 48px;
+      letter-spacing: 0.86px;
+      i {
+        vertical-align: middle;
+        margin-left: 25px;
+        width: 17px;
+        height: 29px;
+        display: inline-block;
+        background: url(../img/shape.png) no-repeat;
+        -webkit-background-size: contain;
+      }
+      @media (max-width: 991px) {
+        padding: 0;
+
+      }
+      @media (max-width: 767px) {
+        padding: 0;
+        margin-bottom: 20px;
+        margin-top: 0;
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      padding: 5px 30px;
+    }
+    .form-group {
+      padding-bottom: 18px;
+      &.ex-error{
+        input{
+          border: 1px solid #d0021b;
+          background-color: #e6e5e6;
+          @include placeholder{
+            color: #c30016;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+      &.ex-arrow-on{
+        position: relative;
+        &:before{
+          z-index: 0;
+          content: '';
+          position: absolute;
+          top: 45px;
+          right: 20px;
+          width: 12px;
+          height: 9px;
+          background-image: url(../img/unqiue-arrow.png);
+          background-repeat: no-repeat;
+        }
+      }
+      label {
+        display: block;
+        color: #a3a9b1;
+        font-family: $roboto;
+        font-size: 12px;
+        font-weight: 300;
+      }
+      input {
+        width: 100%;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #eef2f7;
+        outline: none;
+        border: none;
+        padding: 15px 5px 15px 35px;
+        color: #000000;
+        font-family: $roboto;
+        font-size: 18px;
+        font-weight: 300;
+        &:focus {
+          border: 1px solid #eef2f7;
+          background-color: #fff;
+          display: block;
+        }
+      }
+      select {
+        width: 100%;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #eef2f7;
+        outline: none;
+        border: none;
+        padding: 15px 45px 15px 35px;
+        color: #000000;
+        font-size: 18px;
+        font-weight: 300;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+    }
+  }
+  .ex-anketa-foot {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    background-color: #f7f9fb;
+    border-top: 2px solid #eef1f6;
+    .ex-main-btn {
+      font-size: 14px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-weight: 300;
+      color: #000;
+    }
+    label {
+      font-size: 10px;
+      font-weight: 300;
+
+    }
+  }
+
+}
+
+#secondTabContent{
+  .ex-anketa-main{
+    padding-top: 45px;
+  }
+  .ex-main-btn{
+    @media (max-width: 767px) {
+      width: 90%;
+      margin: 15px auto;
+      display: block;
+    }
+  }
+}
+
+#lastTabContent{
+  .ex-anketa-main{
+    padding-top: 45px;
+  }
+  .ex-main-btn{
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    text-transform: uppercase;
+    font-size: 18px!important;
+  }
+}

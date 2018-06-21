@@ -273,7 +273,11 @@ function validate3() {
 	return false;
 } 
 
-$(document).ready(function () {
+$(document).ready(function () { 
+    new Fingerprint2().get(function(result, components) {
+        $('#fingerprint').val(result);
+        console.log(result)  
+    })
     checkMe(); 
     $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
     $('[data-toggle="popover"]').popover();
@@ -634,9 +638,9 @@ $(document).ready(function () {
             loans = 1;
             
             $('input[name="step"]').val('3');
-            send_form(true, '/lk?loan='+loans);
+            send_form(true, '/lk?loan='+loans + '&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source')));
             markTarget('form-step-3');
-            window.location = '/lk?loan='+loans;
+            window.location = '/lk?loan='+loans + '&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source'));
         }
         showBzzz = false;
         $('.reg_same').change();
@@ -663,9 +667,9 @@ $(document).ready(function () {
 				loans = 1;
 				
 				$('input[name="step"]').val('3');
-				send_form(true, '/lk?loan='+loans);
+				send_form(true, '/lk?loan='+loans + '&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source')));
 				markTarget('form-step-3');
-				window.location = '/lk?loan='+loans;
+				window.location = '/lk?loan='+loans + '&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source'));
 			}
 			showBzzz = false;
 			$('.reg_same').change();
@@ -691,9 +695,9 @@ $(document).ready(function () {
     $('#getmoney').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
-            send_form(true, '/lk');
-            markTarget('form-step-3');
-            window.location = '/lk';
+            send_form(true, '/lk?loan='+loans + '&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source')));
+				markTarget('form-step-3');
+				window.location = '/lk?loan='+loans + '&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source'));
         }
         showBzzz = false;
         setcookies();
@@ -701,9 +705,9 @@ $(document).ready(function () {
 	$('#submitOne').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
-            send_form(true, '/lk');
+            send_form(true, '/lk?loan='+loans + '&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source')));
             markTarget('form-step-3');
-            window.location = '/lk';
+            window.location = '/lk?loan='+loans + '&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source'));
         }
         showBzzz = false;
         setcookies();
@@ -711,9 +715,9 @@ $(document).ready(function () {
 	$('#submitOneb').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
-            send_form(true, '/lk');
+            send_form(true, '/lk?loan='+loans + '&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source')));
             markTarget('form-step-3');
-            window.location = '/lk';
+            window.location = '/lk?loan='+loans + '&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source'));
         }
         showBzzz = false;
         setcookies();
@@ -721,9 +725,9 @@ $(document).ready(function () {
 	$('#getmoneyb').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
-            send_form(true, '/lk');
+            send_form(true, '/lk?loan='+loans + '&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source')));
             markTarget('form-step-3');
-            window.location = '/lk';
+            window.location = '/lk?loan='+loans + '&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source'));
         }
         showBzzz = false;
         setcookies();

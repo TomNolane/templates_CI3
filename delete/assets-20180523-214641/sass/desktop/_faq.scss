@@ -1,0 +1,151 @@
+.ex-main-faq {
+  margin-bottom: 62px;
+  h1 {
+    margin: 34px auto;
+  }
+  .ex-faq-block {
+    padding: 7px 22px;
+    border-left: 4px solid #ffdd2d;
+    margin-bottom: 42px;
+    h2 {
+      margin-top: 9px;
+      color:  lighten(#3e4757, 15%);
+      font-size: 20px;
+      letter-spacing: 1.09px;
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      color: lighten(#000, 20%);
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+
+  }
+  .ex-faq-foot {
+    border-radius: 4px;
+    background-color: #eef2f7;
+    padding-left: 21px;
+    padding-right: 21px;
+    .ex-main-btn {
+      margin-top: 24px;
+      margin-bottom: 26px;
+      font-size: 14px;
+      font-weight: 300;
+    }
+    h2{
+      //padding-left: 21px;
+      color: #222222;
+      font-size: 18px;
+      font-weight: 100;
+      line-height: 28px;
+      letter-spacing: 0.34px;
+    }
+    p {
+      //padding-left: 21px;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 100;
+      line-height: 19px;
+      letter-spacing: 0.26px;
+    }
+  }
+}
+
+.ex-button-footer {
+  margin-top: 30px;
+  background-color: #3e4757;
+  .ex-phone {
+    padding-top: 34px;
+    p {
+      font-size: 36px;
+      font-weight: 100;
+      letter-spacing: 0.53px;
+      margin-bottom: 0;
+      color: #fff;
+      @media (max-width: 992px) {
+        font-size: 22px;
+      }
+    }
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.74px;
+      color: #fff;
+      @media (max-width: 992px) {
+        font-size: 12px;
+      }
+    }
+  }
+  .ex-dropdown {
+    position: relative;
+    .ex-dropdown-menu {
+      bottom: 70px;
+      top: initial;
+      height: initial;
+      width: initial;
+    }
+    .dropdown-toggle {
+      margin-top: 36px;
+      text-align: left;
+      color: #fff;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: transparent;
+      border: 1px solid #fff;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      text-transform: uppercase;
+      margin-bottom: 34px;
+      cursor: pointer;
+      @include prefix(border-radius, 4px);
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .ex-wrapper{
+        padding-right: 30px;
+        display: inline-block;
+        width: 77%;
+        float: right;
+        &:after{
+          content: '';
+          display: block;
+          clear: both;
+        }
+        span{
+          margin-top: 5px;
+          float: right;
+          border-top: 7px solid;
+          border-right: 5px solid transparent;
+          border-left: 5px solid transparent;
+          @include prefix(transform, rotate(180deg))
+        }
+        @media (max-width: 991px) {
+          padding-right: 0;
+          width: 100%;
+          float: none;
+        }
+      }
+      @media (max-width: 768px) {
+        width: 70%;
+        margin: 20px auto;
+      }
+      @media (max-width: 991px) {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
+}

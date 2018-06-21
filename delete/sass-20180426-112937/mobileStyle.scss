@@ -1,0 +1,31 @@
+/*@@@@@@ Helper files import here @@@@@@*/
+  @import "library/mixins";
+
+/*@@@@@@ Core files import here @@@@@@*/
+  @import "core/fonts";
+  @import "core/variables";
+  @import "core/glyphicons";
+  @import "mobile/global";
+
+/*@@@@@@ Lib files import here @@@@@@*/
+//@import "compass/reset";
+  @import "library/bootstrap";
+  @import "library/fancybox";
+  @import "library/ionRangeSlider";
+  @import "library/datepicker";
+  @import "library/owlCarousel";
+
+/*@@@@@@ Mobile Site part files import here @@@@@@*/
+  @import "mobile/zaimOnline";
+  @import "mobile/userAcess";
+  @import "mobile/faq";
+  @import "mobile/moneyOn";
+  @import "mobile/start";
+  @import "mobile/header";
+  @import "mobile/footer";
+  @import "mobile/asideMenu";
+  @import "mobile/form";
+  @import "mobile/onlineZaim";
+  @import "mobile/doc";
+  @import "mobile/emailAccess";
+  @import "mobile/about";

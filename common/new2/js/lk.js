@@ -1,4 +1,4 @@
-var offers = '.json_encode($data).'
+var offers = <?php echo json_encode($data);?>;
  var by_reg = null;
 $(document).ready(function () {
     $(".offer-type").change(function () {

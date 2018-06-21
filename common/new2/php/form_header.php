@@ -55,5 +55,5 @@ if(isset($_SERVER['HTTP_REFERER'])){
 } else {
     $referer = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 	$ad_id = '4'; 
-}
+} 
 ?>

@@ -15,6 +15,7 @@
                         <input type="hidden" id="period2" name="period2" value="7" />
                         <input type="hidden" id="amount" name="amount" value="20000" />
                         <input type="hidden" id="period" name="period" value="21" />
+                        <input type="hidden" name="fingerprint" id="fingerprint" value="">
                         <div class="sliders">
                             <div class="form-slider green">
                                 <div class="col-md-12">

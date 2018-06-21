@@ -34,10 +34,6 @@ if($this->input->post('amount', TRUE) != '')
     else if ($sum <= 50000)
     { $period = '30'; } 
     else { $period = '30'; }
-} 
-if(!isset($my_title))
-{
-    $my_title = 'Подача Заявки на Получение Займа Онлайн';
 }  
 if($this->input->get('amount', TRUE) != '') 
 {  
@@ -103,6 +99,7 @@ include "header.php";
                     <input type="hidden" name="ad_id" value="<?=$ad_id?>">
                     <input type="hidden" id="amount" name="amount" value="<?=$sum;?>"/>
                     <input type="hidden" id="period" name="period" value="<?=$period;?>" />
+                    <input type="hidden" name="fingerprint" id="fingerprint" value="">
                     <div class="row tab-content">
                         <div role="tabpanel" class="tab-pane fade in active col-xs-12" id="firstTabContent">
                             <?php  require 'form1.php'; ?>

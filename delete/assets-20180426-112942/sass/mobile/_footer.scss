@@ -1,0 +1,40 @@
+footer.ex-main-footer{
+  position:absolute;
+  width:100%;
+  bottom:0;
+  left:0;
+  padding: 23px;
+  min-height: 130px;
+  background-color: $footer;
+  color: #BBC2CB;
+  div{
+    float: left;
+    &:first-of-type{
+      width: calc(100% - 80px);
+      a{
+        font-size: 12px;
+        color: #BBC2CB;
+        display: block;
+        &:first-of-type{
+          margin-bottom: 11px;
+        }
+        &:last-of-type{
+          margin-bottom: 18px;
+        }
+      }
+      p{
+        font-size: 8px;
+        margin-bottom: 0;
+      }
+    }
+    &:last-of-type{
+      width: 80px;
+      height: 57px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

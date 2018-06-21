@@ -2,6 +2,7 @@
 <input type="hidden" id="amount" name="amount" value="20000" />
 <input type="hidden" id="period" name="period" value="21" />
 <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
+<input type="hidden" name="fingerprint" id="fingerprint" value="">
 <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
 <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
         <div class="container ex-pr">

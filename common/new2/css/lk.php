@@ -2,9 +2,6 @@ table {
     margin-top: 20px;
     width: 100%; 
 }
-#ya-rtb{
-    display: none !important;
-}
 td {
     text-align: right;
 }
@@ -23,18 +20,11 @@ figure.hh1 {
     padding-top:30px;
     padding-bottom:40px;
     border: 1px solid #FFDD2D;
-    -moz-transition: all 0.5s ease-out;
-    -webkit-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -ms-border-radius: 5px;
     border-radius: 5px;
 }
 figure.hh2:hover {
     border: none;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     background-color: #f7f7f7;
 }
@@ -45,18 +35,11 @@ figure.hh2 {
     height: 150px !important; 
     margin: 0 !important;
     padding: 0 !important;
-    -moz-transition: all 0.5s ease-out;
-    -webkit-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -ms-border-radius: 5px;
     border-radius: 5px;
 }
 figure.hh1:hover {
     border: none;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     background-color: #f7f7f7;
 }
@@ -76,9 +59,6 @@ ins {
     <?php } ?>
     padding-left: 20px;
     padding-right: 20px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -ms-border-radius: 4px;
     border-radius: 4px;
 }
 .ex-main-btn {
@@ -92,9 +72,6 @@ ins {
     border: none;
     background: #FFDD2D;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -ms-border-radius: 4px;
     border-radius: 4px;
 }
 

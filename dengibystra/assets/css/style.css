@@ -1,8 +1,7 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("/templates/dengibystra/assets/fonts/glyphicons-halflings-regular.eot");
-  src: url("/templates/dengibystra/assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/templates/dengibystra/assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/templates/dengibystra/assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/templates/dengibystra/assets/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format("svg");
+  src: url("/templates/common/new2/fonts/glyphicons-halflings-regular.eot");
+  src: url("/templates/common/new2/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/templates/common/new2/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/templates/common/new2/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/templates/common/new2/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format("svg");
 }
 /* line 1, sass/core/_global.scss */
 body {
@@ -1908,8 +1907,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("/templates/dengibystra/assets/fonts/glyphicons-halflings-regular.eot");
-  src: url("/templates/dengibystra/assets/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/templates/dengibystra/assets/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/templates/dengibystra/assets/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/templates/dengibystra/assets/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/templates/dengibystra/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("/templates/common/new2/fonts/glyphicons-halflings-regular.eot");
+  src: url("/templates/common/new2/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/templates/common/new2/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/templates/common/new2/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/templates/common/new2/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("/templates/common/new2/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 /* line 269, sass/library/_bootstrap.scss */
 .glyphicon {

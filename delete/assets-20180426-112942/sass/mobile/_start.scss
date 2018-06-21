@@ -1,0 +1,185 @@
+section.ex-range-scope {
+  background-color: #122a4a;
+  padding: 26px 10px;
+  main {
+    overflow: hidden;
+    padding-top: 30px;
+    background: $white;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+    @include prefix(border-radius, 6px);
+    h2 {
+      font-size: 24px;
+      font-weight: 100;
+      text-align: center;
+      margin: 0;
+    }
+    .ex-loan-info {
+      padding: 0 13px;
+      p {
+        @include prefix(border-radius, 4px);
+        padding-right: 12px;
+        border: 1px solid #eef2f7;
+        font-size: 32px;
+        text-align: right;
+        letter-spacing: 0.86px;
+        font-weight: 100;
+        color: #242424;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        i {
+          margin-left: 8px;
+          width: 18px;
+          height: 24px;
+          display: inline-block;
+          background-image: url(../img/mobile/ruble-mobile.png);
+        }
+      }
+      ul {
+        padding: 14px;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.09);
+        border: 1px solid #50e3c2;
+        @include prefix(border-radius, 3px);
+        li {
+          margin-bottom: 13px;
+          &:after {
+            content: '';
+            clear: both;
+            display: block;
+          }
+          div {
+            position: relative;
+            &:first-of-type {
+              color: #a3a9b1;
+              font-size: 12px;
+              float: left;
+            }
+            &:last-of-type {
+              float: left;
+              text-align: right;
+              color: #242424;
+              font-size: 16px;
+              &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 6px;
+                border-bottom: 1px dotted #a3a9b1;
+              }
+              span {
+                position: relative;
+                display: inline-block;
+                z-index: 999;
+                &:before {
+                  content: '';
+                  position: absolute;
+                  width: 100%;
+                  height: 2px;
+                  bottom: 5px;
+                  z-index: -1;
+                  left: -2px;
+                  background: $white;
+                }
+              }
+            }
+          }
+          &:first-of-type {
+            div {
+              &:first-child {
+                width: 66px;
+              }
+              &:last-child {
+                width: calc(100% - 66px);
+              }
+            }
+          }
+          &:nth-child(2) {
+            div {
+              &:first-child {
+                width: 57px;
+              }
+              &:last-child {
+                width: calc(100% - 57px);
+              }
+            }
+          }
+          &:nth-child(3) {
+            div {
+              &:first-child {
+                width: 63px;
+              }
+              &:last-child {
+                width: calc(100% - 63px);
+              }
+            }
+          }
+          &:last-child {
+            margin-bottom: 0;
+            div {
+              &:first-child {
+                width: 73px;
+              }
+              &:last-child {
+                width: calc(100% - 73px);
+              }
+            }
+          }
+        }
+      }
+    }
+    footer {
+      margin-top: 15px;
+      background-color: #f4f7fa;
+      padding: 25px;
+      button {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.ex-start-main {
+  padding: 26px 10px;
+  h1 {
+    color: #242424;
+    font-size: 24px;
+    font-weight: 100;
+  }
+  .ex-start-block {
+    padding: 14px;
+    h2 {
+      color: #122a4a;
+      font-size: 18px;
+      font-weight: 100;
+      line-height: 35px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      span {
+        font-size: 24px;
+        font-weight: 400;
+      }
+    }
+    .ex-img-block {
+      margin-bottom: 16px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background-color: #ffffff;
+      text-align: center;
+      padding-left: 8px;
+      padding-right: 7px;
+      img {
+      }
+    }
+    p {
+      padding-left: 26px;
+      padding-right: 40px;
+      color: #8b8b8b;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 19px;
+      letter-spacing: 0.36px;
+    }
+  }
+}

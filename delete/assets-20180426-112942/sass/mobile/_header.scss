@@ -1,0 +1,51 @@
+.ex-main-header {
+  min-height: 81px;
+  background-color: $white;
+  padding: 22px;
+  span.ex-hamburger {
+    position: relative;
+    display: inline-block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    border: 1px solid $black;
+    @include prefix(border-radius, 50%);
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -8px;
+      margin-top: -9px;
+      height: auto;
+      width: 16px;
+      border-bottom: 2px solid $black;
+      transition: all .5s ease;
+      z-index: 2;
+      &:before {
+        content: "";
+        padding-top: 6px;
+        border-top: 2px solid $black;
+        display: block;
+        transition: all .5s ease;
+      }
+      &:after {
+        content: "";
+        padding-top: 6px;
+        border-top: 2px solid $black;
+        display: block;
+        opacity: 1;
+        transition: all .5s ease .2s;
+      }
+    }
+  }
+  a.ex-brand {
+    display: inline-block;
+    width: 135px;
+    height: 36px;
+    background-image: url(../img/mobile/mob-logo-2.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+}

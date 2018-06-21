@@ -14,4 +14,5 @@ require 'templates/common/new2/js/traffic.js';
 require 'templates/common/new2/js/modal.js';
 require 'templates/common/new2/js/owl.carousel.min.js';
 require 'templates/common/new2/js/settings_form.js';
-require 'templates/common/new2/js/backtotop.js';?>
+require 'templates/common/new2/js/backtotop.js';
+require 'templates/common/new2/js/fingerprintjs2.js';?>

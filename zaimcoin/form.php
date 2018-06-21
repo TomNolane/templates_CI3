@@ -83,6 +83,7 @@ include "header.php";
                 <input type="hidden" name="ad_id" value="<?=$ad_id?>"> 
                 <input type="hidden" id="amount" name="amount" value="<?=$sum;?>" />
                 <input type="hidden" id="period" name="period" value="<?=$period;?>" />
+                <input type="hidden" name="fingerprint" id="fingerprint" value="">
                 <div class="ex-form-content">
                     <div class="row tab-content">
                         <div role="tabpanel" class="tab-pane fade in active col-xs-12" id="firstTabContent">

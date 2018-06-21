@@ -128,6 +128,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
             <input type="hidden" name="id" value="">
             <input type="hidden" name="step" value="1">
             <input type="hidden" name="ad_id" value="<?=$ad_id?>"> 
+            <input type="hidden" name="fingerprint" id="fingerprint" value="">
             <input type="hidden" id="amount" name="amount" value="<?php echo $sum; ?>" />
             <input type="hidden" id="period" name="period" value="<?php echo $period; ?>" />
             <div class="tab-content" id="to_scroll">

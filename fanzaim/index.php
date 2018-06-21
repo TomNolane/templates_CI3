@@ -6,6 +6,7 @@
         <input type="hidden" id="form_slrd" class="form_slrd" name="form_slrd" value="15" />
         <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
         <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
+        <input type="hidden" name="fingerprint" id="fingerprint" value="">
         <div class="container">
             <span class="ex-green-cover"></span>
             <main>

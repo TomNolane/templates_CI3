@@ -1,0 +1,100 @@
+header {
+  .ex-green-head {
+    height: 15px;
+    background: #82aa37;
+  }
+  .ex-head {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .navbar-brand {
+      width: 168px;
+      height: 42px;
+      background-image: url(../img/logo.png);
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+    h1 {
+      text-align: center;
+      color: #2d2d2d;
+      font-size: 30px;
+      font-weight: 900;
+      margin-bottom: 0;
+      @media (max-width: 991px) {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+  .ex-head-section {
+    position: relative;
+    height: 570px;
+    width: 100%;
+    background-image: url("../img/header-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: rgba(#000, 0.5);
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+    .ex-head-text {
+      position: relative;
+      z-index: 2;
+      font-family: Roboto-Light ,sans-serif;
+      color: #fff;
+      font-size: 56px;
+      text-transform: uppercase;
+      padding-top: 180px;
+      span {
+        color: $green;
+      }
+      @media (max-width: 991px) {
+        font-size: 28px;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 235px;
+        height: 5px;
+        left: 0;
+        top: 160px;
+        background-image: url("../img/figure.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+    .ex-arrow-down {
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 80%;
+      transform: translate(-50%);
+      z-index: 2;
+      figure {
+        width: 40px;
+        height: 40px;
+        background-image: url("../img/play.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+      }
+      span {
+        margin: 4px auto;
+        display: block;
+        width: 3px;
+        height: 3px;
+        background-color: $green;
+        cursor: pointer;
+        @include prefix(border-radius, 1px)
+      }
+    }
+  }
+}

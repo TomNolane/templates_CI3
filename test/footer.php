@@ -1,42 +1,47 @@
-<?php $from = '15'; $px = '63.974'; 
+</div><?php $from = '15'; $px = '63.974'; 
 if($this->uri->segment(1) != 'form')
 {
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Займхоум -->
-    <ins class="adsbygoogle text-center"
+    <!-- Вкредито -->
+    <div class="text-center"><ins class="adsbygoogle text-center"
     style="display:block"
     data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="4797028786"
-    data-ad-format="auto"></ins>
+    data-ad-slot="8024212958"
+    data-ad-format="auto"></ins></div>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
-}
-
-if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles' || $this->uri->segment(1) == 'faq')
-{
     echo '<a href="#0" class="cd-top">Наверх</a>';
-}
-
+} 
 ?>
-<footer class="ex-main-footer">
-<div class="container" style="width: 100%">
-    <div class="col-sm-3 text-center">
-        <div class="ex-footer-logo">
-            <a href="/"><img src="/templates/zaimhome/assets/img/header-logo.png" alt="Missing image" class="special_foot22"></a>
-        </div> 
-        <p class="special_footer3 ">Сервис выгодного онлайн займа</p>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-sm-4 col-xs-12">
+                <a href="/">
+                    <img src="/templates/test/assets/img/logo.png" class="logo" alt="logo.png">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 spec_footer4">
+                <div style="font-size: 11px;">
+                    <p>Сервис по подбору выгодных онлайн займов находящийся по адресу
+                        <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
+                        <br><a href="mailto:support@vkredito.ru" target="_blank">support@vkredito.ru</a>
+                        <span class="hidden-xs hidden-sm"> | +7(495) 006 19 61</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 hidden-xs hidden-sm spec_footer5">
+                <p style="font-size:12px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная
+                    процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости
+                    займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят
+                    11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае
+                    своевременного погашения.
+                    <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001.</p>
+            </div>
+        </div>
+        <div class="clearfix">&nbsp;</div>
     </div>
-    <div class="col-sm-3 small spec_footer4 ">
-        <p>Сервис по подбору выгодных онлайн займов
-            <br>находящийся по адресу
-            <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
-            <br><a href="mailto:support@zaimhome.ru" target="_blank">support@zaimhome.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
-    </div>
-    <div class="col-sm-6 hidden-xs hidden-sm spec_footer5">
-        <p style="font-size: 85%;">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</p>
-    </div>
-</div>
 </footer>
 <!-- [if lt IE 10]>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
@@ -48,15 +53,57 @@ if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->
     echo 'try{';
     require 'footer_common_js.php';
     echo '/* private JS */';
-    require 'templates/zaimhome/assets/js/main.js'; 
+    require 'templates/test/assets/js/main.js'; 
 
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
- 
-        $("#rangeSlider").ionRangeSlider({
-        hide_min_max: true,
-        hide_from_to: true,
-        keyboard: true,
-        grid: false,
+    var amount = 15000;
+    var day = 10;
+    var updateComm = function () {
+            if (amount <= 30000) {
+                percent = 1.3;
+                comm1 = Math.ceil((amount / 100) * percent) * day;
+                comm2 = 0;
+            }
+            if (amount > 30000) {
+                percent = 0.2;
+                comm1 = 390 * day;
+                comm2 = Math.ceil(((amount - 30000) / 100) * percent) * day;
+            }
+            comm = comm1 + comm2;
+            summ = amount + comm;
+            $('.current_amount').text(String(amount).split(/(?=(?:\d{3})+$)/).join(' '));
+            $('.current_percent').text(percent);
+            $('.current_summ').text(String(summ).split(/(?=(?:\d{3})+$)/).join(' '));
+            $('#amount').val(amount);
+
+            var slider9 = $('.amount').data('ionRangeSlider');
+
+            if (slider9.result.from_value <= 10000) {
+                $('#period').val('7');
+                $('#period2').val('От 61 до 130 дней');
+            } else if (slider9.result.from_value <= 15000) {
+                $('#period').val('14');
+                $('#period2').val('От 61 до 130 дней');
+            } else if (slider9.result.from_value <= 20000) {
+                $('#period').val('21');
+                $('#period2').val('От 61 до 130 дней');
+            } else if (slider9.result.from_value <= 30000) {
+                $('#period').val('21');
+                $('#period2').val('От 61 до 130 дней');
+            } else if (slider9.result.from_value <= 50000) {
+                $('#period').val('30');
+                $('#period2').val('От 130 до 250 дней');
+            } else {
+                $('#period').val('30');
+                $('#period2').val('От 250 до 365 дней');
+            }
+            $('#form_slrd').val(slider9.result.from);
+        };
+    $(".amount").ionRangeSlider({
+        postfix: ' Р',
+        min: 1000,
+        max: 100000,
+        prettify_enabled: true,
         from: <?php 
         if($this->input->get('amount') != '')
         {  
@@ -143,12 +190,26 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
                     $('#percent').val('52');
                 }
 
+                $('.srok').text($("#period2").val());
+                amount = range3.from_value;  
+
                 $("#amount").val(range3.from_value);
                 $("#form_slrd").val(range3.from);
+                updateComm();
             }
         }); 
         <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {?>
-        var slider = $('#rangeSlider').data('ionRangeSlider');
+        $('.period').ionRangeSlider({
+            min: 1,
+            max: 30,
+            from: <?php echo empty($_POST['period'])? 10 : $_POST['period']; ?>,
+            postfix: ' дней',
+            onChange: function (range) {
+                day = range.from;
+                updateComm();
+            }
+        });
+        var slider = $('.amount').data('ionRangeSlider');
         var slider_plus = true;
         var n = 10;
         var slider_init = setInterval(function () {
@@ -196,19 +257,30 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
             }
             $('#amount').val(slider.result.from_value);
             $("#form_slrd").val(slider.result.from);
+            $('.srok').text($('#period2').val());
+            updateComm();
         }, 50); 
-        traffic("zaimhome.ru",0);
+        traffic("vkredito.ru",0);
+<?php } ?>
+$('.docs, .info').click(function () {
+    var href = $(this).attr("href");
+    var hash = href.substr(href.indexOf("#"));
+    $('.collapse').collapse('hide');
+    $(hash + '.collapse').collapse('show');
+    $('html, body').animate({
+        scrollTop: $($(hash)).offset().top - 100
+    }, 1000);
+});
 <?php }
-}
 elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {
     include "templates/common/new2/js/lk.js";      
-    echo 'traffic("zaimhome.ru",4);'; 
+    echo 'traffic("vkredito.ru",4);'; 
 
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic("zaimhome.ru",9);'; 
+    echo 'traffic("vkredito.ru",9);'; 
 }
 else if($this->uri->segment(1) == 'form')
 { } 
@@ -223,20 +295,20 @@ echo "}catch(e){console.log('Ошибка ' + e.name + \":\" + e.message + \"\\n
         echo '<!-- Google Code for  
         &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
         Page -->
-        <script >
+        <script type="text/javascript">
         /* <![CDATA[ */
-        var google_conversion_id = 829599728;
-        var google_conversion_label = "0mQrCM_Bi3gQ8N_KiwM";
+        var google_conversion_id = 844462441;
+        var google_conversion_label = "NxPcCNq4sHUQ6fLVkgM";
         var google_remarketing_only = false;
         /* ]]> */
         </script>
-        <script   
+        <script type="text/javascript"  
         src="//www.googleadservices.com/pagead/conversion.js">
         </script>
         <noscript>
         <div style="display:inline;">
         <img height="1" width="1" style="border-style:none;" alt=""  
-        src="//www.googleadservices.com/pagead/conversion/829599728/?label=0mQrCM_Bi3gQ8N_KiwM&amp;guid=ON&amp;script=0"/>
+        src="//www.googleadservices.com/pagead/conversion/844462441/?label=NxPcCNq4sHUQ6fLVkgM&amp;guid=ON&amp;script=0"/>
         </div>
         </noscript>'; 
     }

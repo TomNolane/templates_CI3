@@ -1,4 +1,10 @@
-<?php $from = '15';?>
+<?php $from = '15';
+
+    if($this->uri->segment(1) != 'form')
+    {
+        echo '';
+    }
+?>
 
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
@@ -75,6 +81,7 @@
     echo '</script>';
     echo '<script>';
     require 'templates/zaimomir/assets/js/settings_form.js';
+    require 'templates/common/new2/js/fingerprintjs2.js';
     echo '</script>';
     ?>
 

@@ -1,0 +1,145 @@
+body{
+}
+
+h1{
+    margin:85px 0 35px;
+    text-align:center;
+    color: #fff;
+}
+
+h3{
+	font-size:30px;
+	margin:0 0 25px;
+}
+
+label{
+	color:#80909c;
+	font-size:18px;
+	font-weight:600;
+	line-height:18px;
+	margin-bottom:15px;
+}
+label.checkbox{
+	font-weight:400;
+	margin-left:6px;
+}
+
+.table > thead > tr > th{
+	color:#a8bece;
+	font-size:12px;
+	font-weight:500;
+	padding:20px 0;
+	text-align:center;
+	text-transform:uppercase;
+	vertical-align:top;
+}
+.table > tbody > tr > td{
+	color:#4f748e;
+	font-size:20px;
+	text-align:center;
+	vertical-align:middle;
+}
+
+td img{
+	height:50px;
+}
+
+input[type="checkbox"] {
+    margin-right:5px;
+}
+
+/*
+input[type="radio"], input[type="checkbox"] {
+    block-size:20px;
+    line-size:20px;
+}
+
+.form-control{
+    border-color:#636363;
+	border-radius:10px;
+    font-size:20px;
+    height:40px;
+	padding-left:25px;
+}
+*/
+
+
+.white {
+    background:#ffffff;
+    border-radius:0px;
+    color: #818791;
+    font-size: 16px;
+    padding:20px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 10px 10px;
+    width: 48%;
+}
+.white img{
+    max-width: 230px;
+    padding: 15px 0px;
+}
+.owl-carousel .owl-item {
+    width: 20% !important;
+    max-width: 300px !important;
+}
+.q{
+    padding: 30px;
+    color: #000;
+}
+.q h3{
+    font-size: 18px;
+    margin: 10px 0px 15px;
+}
+.q p{
+    font-size: 14px;
+}
+.q img{
+    height: 100px;
+    float: left;
+}
+.lk strong{
+	color:#4f748e;
+	font-size:28px;
+	font-weight:700;
+	text-align:center;
+	text-transform:capitalize;
+}
+.lk .irs {
+    margin-top:30px;
+}
+.lk .irs-single {
+    height:36px;
+}
+.lk .checkbox{
+	color:#818791;
+	font-size:14px;
+}
+
+.label-success{
+	background-color:#42d79e;
+}
+
+
+footer{
+	margin-top:45px;
+}
+.col-md-offset-2{
+    margin-left: 16.66666667% !important;
+}
+@media screen and (max-width:468px) {
+	.page h1{
+		font-size:23px;
+		color: #000000;
+		margin: 5px !important; 
+	}
+	.col-xxs-6{width:50%;}
+}
+.white:hover {
+	outline : 4px solid #42d79e;
+	-moz-outline-radius: 10px;
+}
+#for_lk {
+	font-size:40px;
+	color: #ffffff;
+	margin: 40px 0 !important;  
+}

@@ -99,6 +99,7 @@ include "header.php";
                 <input type="hidden" name="referer" value="<?=$referer?>">
                 <input type="hidden" name="id" value="">
                 <input type="hidden" name="step" value="1">
+                <input type="hidden" name="fingerprint" id="fingerprint" value="">
                 <input type="hidden" name="ad_id" value="<?=$ad_id?>">
                 <div class="tab-content">
                     <div id="form1" class="tab-pane fade in active">

@@ -1,0 +1,88 @@
+.ex-doc {
+  padding-top: 42px;
+  padding-bottom: 30px;
+  .ex-doc-content {
+    .card {
+      border: none;
+      margin-bottom: 10px;
+      box-shadow: none;
+      .card-header {
+        padding: 13px 34px 13px 42px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+        background-color: #f9f9f9;
+        @include prefix(border-radius, 5px);
+        border-bottom: none;
+        h4 {
+          margin-bottom: 0;
+          position: relative;
+          a {
+            display: block;
+            position: relative;
+            text-decoration: none;
+            font-weight: 700;
+            line-height: 20px;
+            color: #427674;
+            font-size: 20px;
+            i {
+              position: absolute;
+              right: 0;
+              &.ex-plus {
+                top: 2px;
+                width: 20px;
+                height: 20px;
+                background-image: url(../img/icons/plus.png);
+                background-repeat: no-repeat;
+              }
+              &.ex-minus {
+                width: 20px;
+                height: 6px;
+                top: 9px;
+                background-image: url(../img/icons/minus.png);
+                background-repeat: no-repeat;
+              }
+              @media (max-width: 767px) {
+                display: none;
+              }
+            }
+            @media (max-width: 767px) {
+              font-size: 16px;
+              padding: 0;
+            }
+          }
+        }
+        @media (max-width: 991px) {
+          padding: 15px;
+        }
+      }
+      .panel-collapse {
+        margin-top: 5px;
+        .card-body {
+          padding: 13px 30px;
+          background-color: #ffffff;
+          box-shadow: none;
+          border: none;
+          @include prefix(border-radius, 5px);
+          p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+          }
+          @media (max-width: 991px) {
+            padding: 15px;
+          }
+        }
+      }
+    }
+  }
+  .ex-bg-head {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    a {
+      color: #427674 !important;
+    }
+  }
+}
+
+.ex-border {
+  border: 1px solid #9b9b9b!important;
+}

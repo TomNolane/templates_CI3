@@ -1,0 +1,216 @@
+.ex-offerta {
+  padding-bottom: 30px;
+  padding-top: 40px;
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .ex-offers-block {
+    padding-left: 70px;
+    padding-right: 40px;
+    -moz-transition:all .3s ease;
+    -ms-transition:all .3s ease;
+    -webkit-transition:all .3s ease;
+    transition:all .3s ease;
+    margin-bottom: 33px;
+    @media (max-width: 992px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      width: 100%;
+      table-layout: fixed;
+      border: 1px solid transparent;
+      margin: 0 auto;
+      @include prefix(border-radius , 5px);
+      background-color: #f9f9f9;
+      tr {
+        height: 100px;
+        td {
+          text-align: center;
+          div {
+            letter-spacing: 0.26px;
+            color: #4a90e2;
+            font-size: 18px;
+            font-weight: 900;
+            line-height: 24px;
+           span {
+             font-weight: 400;
+           }
+            p {
+              margin-bottom: 0;
+              color: #333333;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 24px;
+              @media (max-width: 1199px) and (min-width: 992px){
+                font-size: 10px;
+              }
+            }
+          }
+          &:first-child {
+            @media (min-width: 1200px) {
+              padding-left: 57px;
+            }
+            padding-left: 15px;
+            padding-right: 5px;
+            .ex-offers-img1 {
+              width: 128px;
+              height: 25px;
+              background: url("../img/moneyman-300x70.png") no-repeat;
+              -webkit-background-size: contain;
+              background-size: contain;
+              -webkit-filter: grayscale(100%);
+              filter: grayscale(100%);
+            }
+            @media (max-width: 991px) {
+              background: none;
+            }
+          }
+          &:last-child {
+            width: 260px;
+            padding-right: 24px;
+            padding-left: 10px;
+          }
+          .ex-main-btn {
+            margin-top: 0;
+            margin-bottom: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 14px;
+            -moz-transition:all .3s linear;
+            -ms-transition:all .3s linear;
+            -webkit-transition:all .3s linear;
+            transition:all .3s linear;
+            background-color: #9b9b9b;
+            @media (max-width: 1199px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    &.ex-off-active {
+      cursor: pointer;
+      table {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+        border: 1px solid #427674;
+        background-color: #f9f9f9;
+        tr {
+          td {
+            &:first-child {
+              .ex-offers-img1 {
+                -webkit-filter: initial;
+                filter: initial;
+              }
+            }
+            div {
+              color: #427674;
+            }
+          }
+          .ex-main-btn {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+            background-color: #5d9d58;
+          }
+        }
+      }
+    }
+    &.ex-on-small-devices{
+      @media (max-width: 991px) {
+        table {
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+          border: 1px solid #427674;
+          background-color: #f9f9f9;
+          tr {
+            td {
+              &:first-child {
+                .ex-offers-img1 {
+                  -webkit-filter: initial;
+                  filter: initial;
+                }
+              }
+              div {
+                color: #427674;
+              }
+            }
+            .ex-main-btn {
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+              background-color: #5d9d58;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  tr {
+    td {
+      div {
+        p {
+          font-size: 14px !important;
+        }
+      }
+      &:last-child {
+        padding-left: 5px;
+        padding-right: 5px;
+
+      }
+      &:first-child {
+        width: 260px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        figure {
+          margin-top: 10px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .ex-offers-block {
+    margin-bottom: 50px;
+  }
+  table {
+    height: 470px;
+    border: 0;
+    td {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      &:first-child {
+        width: auto !important;
+        figure {
+          margin: 10px auto;
+        }
+        div {
+          p {
+            padding-top: 0 !important;
+          }
+        }
+      }
+    }
+  }
+  table tr {
+    height: auto;
+    display: block;
+  }
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 16px !important;
+    text-align: right;
+  }
+  table td:last-child {
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom: 0;
+    width: auto!important;
+    .ex-main-btn{
+      width: 70%;
+    }
+  }
+}

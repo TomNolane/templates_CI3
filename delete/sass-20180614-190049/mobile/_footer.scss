@@ -1,0 +1,22 @@
+footer.ex-main-footer{
+  position:absolute;
+  width:100%;
+  bottom:0;
+  left:0;
+  padding: 17px 0;
+  color: $white;
+  background-color: $mobFooter;
+  h3{
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 12px;
+    letter-spacing: 0.16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #69829c;
+  }
+  p{
+    font-size: 8px;
+    font-weight: 300;
+    margin: 0;
+  }
+}
