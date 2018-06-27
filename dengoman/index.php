@@ -1,6 +1,6 @@
 <?php require 'header.php'; ?>
 <section class="calc" id="calc">
-	<form action="/form" method="post">
+	<form action="/form<?=$utm;?>" method="post">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7 col-sm-12">

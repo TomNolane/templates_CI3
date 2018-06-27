@@ -10,6 +10,10 @@ else yaCounter46854456.reachGoal(target,param);
         url: '/pixel/',
         data: 'id='+id+'&pixel='+param,
         success: function(data){
+            console.log(22);
+        }
+        ,error: function(data){
+            console.log(33);
         }
     });
 } 

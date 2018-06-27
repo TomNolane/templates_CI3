@@ -12,12 +12,9 @@ if($this->uri->segment(1) != 'form')
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
-}
-
-if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles' || $this->uri->segment(1) == 'faq')
-{
     echo '<a href="#0" class="cd-top">Наверх</a>';
-}
+} 
+
 if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') {
 echo '<footer class="ex-start-footer">
     <div class="container">
@@ -113,8 +110,8 @@ else if($this->uri->segment(1) == 'form' )
 <![endif] --> 
 
 <!-- common JS -->
-<?php
-    echo '<script>'; 
+<script>
+<?php 
     echo 'try{';
     require 'footer_common_js.php';
     echo '/* private JS */';

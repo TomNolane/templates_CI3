@@ -1,7 +1,5 @@
 <?php 
 $sum = '20000'; $period = '21'; $days = 'Срок до 130 дней';
-
-
 if($this->input->get('amount', TRUE) != '') 
 { 
     if($this->input->get('amount', TRUE) >= 1000 && $this->input->get('amount', TRUE) <= 1000000)

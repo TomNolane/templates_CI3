@@ -1,5 +1,5 @@
 <!-- Yandex.Metrika counter -->
-<script >
+<script type="text/javascript">
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function () {
             try {
@@ -39,12 +39,16 @@ function markTarget(target,param, id){
 	if (typeof param == 'undefined') yaCounter35589670.reachGoal(target);
 	else yaCounter35589670.reachGoal(target,param);
         
-        $.ajax({
-            type: 'POST',
-            url: '/pixel/',
-            data: 'id='+id+'&pixel='+param,
-            success: function(data){
-            }
-        });
-} 
+    $.ajax({
+        type: 'POST',
+        url: '/pixel/',
+        data: 'id='+id+'&pixel='+param,
+        success: function(data){
+            console.log(22);
+        }
+        ,error: function(data){
+            console.log(33);
+        }
+    });
+}
 </script>

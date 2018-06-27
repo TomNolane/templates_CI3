@@ -11,12 +11,8 @@ if($this->uri->segment(1) != 'form')
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
-}
-
-if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles' || $this->uri->segment(1) == 'faq')
-{
     echo '<a href="#0" class="cd-top">Наверх</a>';
-}
+} 
 if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') {
 echo '<footer class="ex-start-footer">
     <div class="container">
@@ -55,7 +51,7 @@ echo '<footer class="ex-start-footer">
             </div> 
         </div>
     </div>
-</footer>';
+</footer>'; 
 }
 else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {
@@ -95,8 +91,8 @@ else if($this->uri->segment(1) == 'form' )
 <![endif] --> 
 
 <!-- common JS -->
-<?php
-    echo '<script>'; 
+<script>
+<?php 
     echo 'try{';
     require 'footer_common_js.php';
     echo '/* private JS */';
@@ -311,8 +307,7 @@ echo "}catch(e){console.log('Ошибка ' + e.name + \":\" + e.message + \"\\n
 		<img height="1" width="1" style="border-style:none;" alt=""  
 		src="//www.googleadservices.com/pagead/conversion/832752781/?label=9no7CIzpqHgQjZmLjQM&amp;guid=ON&amp;script=0"/>
 		</div>
-		</noscript>
-'; 
+		</noscript>'; 
     }
 ?>
 </body>

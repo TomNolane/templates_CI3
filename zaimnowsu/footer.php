@@ -1,21 +1,17 @@
-<?php $from = '53';
-    if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'faq')
-    {
-        echo '<a href="#0" class="cd-top">Наверх</a>';
-    } 
-
-    if($this->uri->segment(1) != 'form')
-    {
-        echo '<!-- Zaimnow -->
-        <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="1314921028"
-        data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-    }
+<?php $from = '53'; 
+if($this->uri->segment(1) != 'form')
+{
+    echo '<!-- Zaimnow -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="1314921028"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
+    echo '<a href="#0" class="cd-top">Наверх</a>';
+}
 ?>
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
@@ -34,8 +30,7 @@
             </div>
             <div class="col-lg-4">
                 <ul class="ex-foot-menu">
-                    <li><a href="/oferta">Политика конфиденциальности</a></li>
-                    <!-- <li><a href="/soglasie">Согласие на обработку данных</a></li> -->
+                    <li><a href="/oferta">Политика конфиденциальности</a></li> 
                     <li><a href="/rules">Правила предоставления займов</a></li>
                 </ul>
             </div>
@@ -104,7 +99,6 @@
     <script> 
     //backtotop
     jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});
-   
 
     function getParameterByName(name, url) 
     {
@@ -628,13 +622,11 @@ if(isset($_GET['email']))
     echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
 }
 ?>
-
 <!-- всплывающее окошко --> 
 <?php
  require 'yandexmetrika.php';
  require 'googleanalytics.php';
 ?>
-
 <script>
 function markTarget(target,param, id) 
 {
@@ -646,11 +638,14 @@ function markTarget(target,param, id)
             type: 'POST',
             url: '/pixel/',
             data: 'id='+id+'&pixel='+param,
-            success: function(data){ 
+            success: function(data){
+                console.log(22);
+            }
+            ,error: function(data){
+                console.log(33);
             }
         });
 }
-
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>

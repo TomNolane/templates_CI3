@@ -1,28 +1,19 @@
 <?php $from = '15';
-    if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
-    {
-        echo '<a href="#0" class="cd-top">Наверх</a>';
-    } 
-
-    if($this->uri->segment(1) != 'form')
-    {
-        
-    }
-
+if($this->uri->segment(1) != 'form')
+{
     echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- Mikrodengi -->
-		<ins class="adsbygoogle"
-		style="display:block"
-		data-ad-client="ca-pub-2169296404508755"
-		data-ad-slot="2651789746"
-		data-ad-format="auto"></ins>
-		<script>
-		(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
-
-        ';
+    <!-- Mikrodengi -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-2169296404508755"
+    data-ad-slot="2651789746"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
+    echo '<a href="#0" class="cd-top">Наверх</a>';
+} 
 ?>
-
 <footer class="ex-main-footer">
     <div class="container">
         <div class="row">
@@ -788,15 +779,10 @@ if ($this->uri->segment(1) == 'form')
 
     </script>';
  
-} 
-?>
-
-<!-- всплывающее окошко --> 
-<?php
+}
  require 'yandexmetrika.php';
  require 'googleanalytics.php';
 ?>
-
 <script>
 function markTarget(target,param, id) 
 {
@@ -808,7 +794,11 @@ function markTarget(target,param, id)
             type: 'POST',
             url: '/pixel/',
             data: 'id='+id+'&pixel='+param,
-            success: function(data){ 
+            success: function(data){
+                console.log(22);
+            }
+            ,error: function(data){
+                console.log(33);
             }
         });
 }

@@ -1,21 +1,17 @@
-<?php $from = '15';
-    if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'faq')
-    {
-        echo '<a href="#0" class="cd-top">Наверх</a>';
-    } 
-
+<?php $from = '15'; 
     if($this->uri->segment(1) != 'form')
     {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Zaimomix -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9509439067407055"
-     data-ad-slot="9550526589"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>';
+        <!-- Zaimomix -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-9509439067407055"
+            data-ad-slot="9550526589"
+            data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
+        echo '<a href="#0" class="cd-top">Наверх</a>';
     }
 ?>
 <footer class="ex-main-footer ex-sticky-footer">
@@ -580,7 +576,6 @@ if ($this->uri->segment(1) == 'form')
  require 'yandexmetrika.php';
  require 'googleanalytics.php';
 ?>
-
 <script>
 function markTarget(target,param, id) 
 {
@@ -592,11 +587,14 @@ function markTarget(target,param, id)
             type: 'POST',
             url: '/pixel/',
             data: 'id='+id+'&pixel='+param,
-            success: function(data){ 
+            success: function(data){
+                console.log(22);
+            }
+            ,error: function(data){
+                console.log(33);
             }
         });
 }
-
 </script> 
 <!-- Facebook Pixel Code -->
 <script>

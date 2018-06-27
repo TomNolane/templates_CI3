@@ -27,7 +27,7 @@
                             <p class="ex-time"></p>
                             <p>
                                 <span class="ex-unique"></span>
-                                    <center><a class="btn ex-main-btn ex-total special_index5 hidden-xs hidden-sm visible-md visible-lg" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>"></a></center>
+                                    <center><button type="submit" class="btn ex-main-btn ex-total special_index5 hidden-xs hidden-sm visible-md visible-lg"></button></center>
                                     <a class="ex-total hidden-lg hidden-md visible-xs visible-sm" style="width: 100%;margin-top:-30px; color: #000000 !important;" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>"></a>
                             </p>
                         </div>

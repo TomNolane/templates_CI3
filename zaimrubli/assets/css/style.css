@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/* @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700"); */
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url("/templates/zaimrubli/assets/fonts/glyphicons-halflings-regular.eot");
@@ -14327,3 +14325,4 @@ main.ex-offers .ex-offers-content .ex-off-block .ex-offers-foot .ex-main-btn {
 .ex-faq .ex-bg-head a div {
   color: #333333 !important;
 }
+.adsbygoogle{text-align:center !important;}

@@ -13,12 +13,9 @@ if($this->uri->segment(1) != 'form')
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
-}
-
-if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles' || $this->uri->segment(1) == 'faq')
-{
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
+
 ?>
 <footer>
 <div class="container">

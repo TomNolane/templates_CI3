@@ -1,5 +1,5 @@
 <?php require 'header.php'; ?>
-<form id="anketa" action="/form" method="post">
+<form id="anketa" action="/form<?=$utm;?>" method="post">
 <section class="calc" id="calc">
 	<div class="container">
 		<div class="row">

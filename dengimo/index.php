@@ -6,7 +6,7 @@
                 <div class="col-lg-12 hidden-xs">
                     <h2 class="h1">Моментальные займы онлайн</h2>
                 </div>
-                <form id="anketa" action="/form" method="post">
+                <form id="anketa" action="/form<?=$utm;?>" method="post">
                 <div class="col-lg-7 col-md-8 col-sm-10 col-xs-12 hidden-xs">
                     <div class="form">
                         <h2>Выберите сумму и срок займа</h2>

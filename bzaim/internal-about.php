@@ -1,4 +1,4 @@
-<?php include "header.php"; ?>
+<?php include "header.php";?>
 <div class="ex-bounds"></div>
     <div class="container ">
     <div class="row">

@@ -276,7 +276,7 @@ function validate3() {
 $(document).ready(function () { 
     new Fingerprint2().get(function(result, components) {
         $('#fingerprint').val(result);
-        console.log(result)  
+        console.log(result);
     })
     checkMe(); 
     $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";

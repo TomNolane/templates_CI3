@@ -35,10 +35,7 @@ if($this->input->post('amount', TRUE) != '')
     { $period = '30'; } 
     else { $period = '30'; }
 } 
-if(!isset($my_title))
-{
-    $my_title = 'Подача Заявки на Получение Займа Онлайн';
-}  
+
 if($this->input->get('amount', TRUE) != '') 
 {  
     if ($this->input->get('amount', TRUE) <= '10000') { 

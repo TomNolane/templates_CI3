@@ -4,7 +4,7 @@
         <div class="container">
             <h1 class="hidden-xs">Если деньги нужны срочно,<br> есть проверенное и надежное решение</h1>
             <h2>Zaimcoin - скорая финансовая помощь</h2>
-            <form id="anketa" action="/form" method="post">
+            <form id="anketa" action="/form<?=$utm;?>" method="post">
             <input type="hidden" id="amount" name="amount" value="20000" />
             <input type="hidden" id="period" name="period" value="21" />
             <input type="hidden" id="form_slrd" name="form_slrd" value="15" /> 
@@ -58,7 +58,7 @@
                         </ul>
                     </div>
                     <div class="col-md-4 ex-for-button text-center" style=" margin-top: 30px;"> 
-                        <a class="ex-orange-btn" style="cursor: pointer;" onclick="GetMoney()">&nbsp;&nbsp;&nbsp;Получить деньги&nbsp;&nbsp;&nbsp;</a> 
+                        <button class="ex-orange-btn"  type="submit" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;Получить деньги&nbsp;&nbsp;&nbsp;</button> 
                     </div>
                 </div>
             </div>

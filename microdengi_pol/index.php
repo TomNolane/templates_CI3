@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-        <form id="anketa" action="/form" method="post">
+        <form id="anketa" action="/form<?=$utm;?>" method="post">
             <input type="hidden" id="amount" name="amount" value="8000" />
             <input type="hidden" id="period" name="period" value="16" />
             <input type="hidden" id="form_slrd" name="form_slrd" value="15" />

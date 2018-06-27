@@ -4,6 +4,7 @@ function traffic(site, page){
         url: '/traffic/',
         data: 'site='+site+'&page='+page,
             success: function(data){
+                console.log(1);
             }
     });
 }

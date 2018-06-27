@@ -27,7 +27,10 @@
     
     //pixel stat
     $this->load->model('pixel/pixel_model', 'pixel');
-    $pixel = $this->pixel->stat('forzaim.ru');
+    $base_url = str_replace("/","",base_url());
+    $base_url = str_replace("https:","",$base_url);
+    $base_url = str_replace("http:","",$base_url);
+    $pixel = $this->pixel->stat($base_url);
 	echo '<style>';
 	require 'new2/css/lk.php';
 	echo '</style>';
@@ -233,7 +236,7 @@ ins {
                         </tr>
                         </tbody>
                     </table>
-                    <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button class="ex-main-btn">Получить деньги</button></a>
+                    <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button type="button" class="ex-main-btn">Получить деньги</button></a>
                 </figure><br>
                 </div>'; 
             

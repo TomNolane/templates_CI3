@@ -1,9 +1,4 @@
-<?php $from = '15';
-    if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
-    {
-        echo '<a href="#0" class="cd-top">Наверх</a>';
-    } 
-
+<?php $from = '15'; 
     if($this->uri->segment(1) != 'form')
     {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -16,10 +11,10 @@
 		<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
-';
+        ';
+        echo '<a href="#0" class="cd-top">Наверх</a>';
     }
 ?>
-
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
         <div class="row">
@@ -544,11 +539,7 @@ if ($this->uri->segment(1) == 'form')
         }
     }); 
     </script>'; 
-}
-?>
-
-<!-- всплывающее окошко --> 
-<?php
+} 
  require 'yandexmetrika.php';
  require 'googleanalytics.php';
  echo '<script>';
@@ -566,7 +557,11 @@ echo '</script>';
             type: 'POST',
             url: '/pixel/',
             data: 'id=' + id + '&pixel=' + param,
-            success: function (data) { 
+            success: function(data){
+                console.log(22);
+            }
+            ,error: function(data){
+                console.log(33);
             }
         });
     }

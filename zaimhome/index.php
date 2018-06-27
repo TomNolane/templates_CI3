@@ -12,7 +12,7 @@ require 'header.php';
                             <div class="col-md-7">
                                 <div class="ex-range-scope">
 
-                                    <form id="anketa" action="/form" method="post">
+                                    <form id="anketa" action="/form<?=$utm;?>" method="post">
 
                                         <h2>Какую сумму займа вы хотите получить?</h2>
                                         <div id="ex-main-slider-range">
@@ -33,8 +33,6 @@ require 'header.php';
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary">получить деньги</button>
-
-
                                     </form>
                                 </div>
                             </div>

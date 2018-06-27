@@ -360,7 +360,7 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
             updateComm();
 
         }, 50); 
-        traffic(".ru",0);
+        traffic("rublimo.ru".ru,0);
 <?php }
 }
 elseif($this->uri->segment(1) == 'faq')
@@ -376,16 +376,17 @@ elseif($this->uri->segment(1) == 'faq')
 elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {
     include "templates/common/new2/js/lk.js";      
-    echo 'traffic(".ru",4);'; 
+    echo 'traffic("rublimo.ru",4);'; 
 
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic(".ru",9);'; 
+    echo 'traffic("rublimo.ru",9);'; 
 }
 else if($this->uri->segment(1) == 'form')
 { } 
-echo "}catch(e){console.log('Ошибка ' + e.name + \":\" + e.message + \"\\n\" + e.stack);}";?>
+echo "}catch(e){console.log('Ошибка ' + e.name + ':' + e.message + ' ' + e.stack);}";
+?>
 </script>
 <?php
     include "google.php";

@@ -8,7 +8,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                 <div class="form">
-                    <form id="anketa" action="/form" method="post">
+                    <form id="anketa" action="/form<?=$utm;?>" method="post">
                         <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
                         <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
                         <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>

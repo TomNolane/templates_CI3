@@ -8,9 +8,6 @@
 .irs-bar-edge{position:absolute;display:block;top:0;left:0;}
 .irs-shadow{position:absolute;display:none;left:0;width:0;}
 .irs-slider{position:absolute;display:block;cursor:default;z-index:1;}
-.irs-slider.single{}
-.irs-slider.from{}
-.irs-slider.to{}
 .irs-slider.type_last{z-index:2;}
 .irs-min{position:absolute;display:block;left:0;cursor:default;}
 .irs-max{position:absolute;display:block;right:0;cursor:default;}
@@ -54,16 +51,13 @@ body{
     color:#444444;
     font-family:'Open Sans', sans-serif;
 }
-
 h1, h2{
     color:#444444;
     font-family: 'Raleway', sans-serif;
     font-weight:800;
     text-align:center;
 }
-
 a, a:hover, a:visited, a:focus{
-    /*color:#ffffff;*/
     outline:none;
     text-decoration:none;
 }
@@ -132,10 +126,8 @@ a, a:hover, a:visited, a:focus{
     height:100%;
 }
 .navbar-brand {
-    float: left;
-    /*font-size: 18px;*/
-    height:100%;
-    /*line-height:85px;*/
+    float: left; 
+    height:100%; 
     max-height:90px;
     padding:8px 0;
 }
@@ -619,11 +611,6 @@ a, a:hover, a:visited, a:focus{
     margin:10px auto;
     max-width:440px;
 }
-.lk-img{
-    /* height: 65px;
-    width: 300px; */
-}
-
 .media-heading{
     font-weight:bold;
 }
@@ -748,9 +735,6 @@ footer .copy{
 .dadata{
   margin-bottom: -20px;
 }
-.zaymer, .moneyman{
-    /* height: 85px; */
-}
 @media screen and (max-width:1170px) {
     .calc {
         background-position:47% 100%;
@@ -762,7 +746,6 @@ footer .copy{
         margin:15px 0 30px -35px;
     }
 }
-
 @media screen and (max-width:992px) {
     .navbar, .navbar-header, .navbar-brand, .navbar-btn{
         height:58px;
@@ -1236,3 +1219,6 @@ input:valid:not(:placeholder-shown) {border-color: green !important;}
     display: none !important;
 }
 a {text-decoration: none !important;}
+.dropdown-menu {
+    left: -45% !important;
+}

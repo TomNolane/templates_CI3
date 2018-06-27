@@ -3,10 +3,7 @@
 <div class="buffer"></div>
 <?php 
 $from = '15';
-if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index')
-{
-    echo '<a href="#0" class="cd-top">Наверх</a>';
-} 
+
 if($this->uri->segment(1) != 'form')
 {
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -19,6 +16,7 @@ if($this->uri->segment(1) != 'form')
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
+    echo '<a href="#0" class="cd-top">Наверх</a>';
 }
 ?>
 <footer>

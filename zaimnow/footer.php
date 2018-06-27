@@ -1,21 +1,17 @@
-<?php $from = '15';
-    if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'faq')
-    {
-        echo '<a href="#0" class="cd-top">Наверх</a>';
-    } 
-
-    if($this->uri->segment(1) != 'form')
-    {
-        echo '<!-- Zaimnow -->
-        <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="1314921028"
-        data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-    }
+<?php $from = '15'; 
+if($this->uri->segment(1) != 'form')
+{
+    echo '<!-- Zaimnow -->
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="1314921028"
+    data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
+    echo '<a href="#0" class="cd-top">Наверх</a>';
+}
 ?>
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
@@ -51,49 +47,48 @@
         </p>
     </div>
 </footer>
+<?php
+require 'templates/common/get_display_size.php';
+echo '<script>';
+require 'modules/jquery/jquery-1.11.3.min.js';
+echo '</script>';
+echo '<script>';
+require 'templates/zaimnow/assets/js/bootstrap.min.js';
+echo '</script>';
+echo '<script>';
+require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
+echo '</script>';
+echo '<script>';
+require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
+echo '</script>';
+echo '<script>';
+require 'templates/zaimnow/assets/js/jquery.pickmeup.twitter-bootstrap.js';
+echo '</script>';
+echo '<script>';
+require 'templates/zaimnow/assets/js/pickmeup.min.js';
+echo '</script>';
+echo '<script>';
+require 'templates/zaimnow/assets/js/jquery.form-validator.js';
+echo '</script>';
+echo '<script>';
+require 'templates/zaimnow/assets/js/jquery.suggestions.min.js';
+echo '</script>';
+echo '<script>';
+require 'templates/zaimnow/assets/js/coockie.js';
+echo '</script>';
+require 'templates/common/detect.min.php';
+echo '<script>';
+require 'templates/zaimnow/assets/js/custom.js';
+echo '</script>';
+echo '<script>';
+require 'templates/zaimnow/assets/js/settings_form.js';
+require 'templates/common/new2/js/fingerprintjs2.js';
+echo '</script>';
+?>
 
-    <?php
-    require 'templates/common/get_display_size.php';
-    echo '<script>';
-    require 'modules/jquery/jquery-1.11.3.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimnow/assets/js/bootstrap.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimnow/assets/js/jquery.pickmeup.twitter-bootstrap.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimnow/assets/js/pickmeup.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimnow/assets/js/jquery.form-validator.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimnow/assets/js/jquery.suggestions.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimnow/assets/js/coockie.js';
-    echo '</script>';
-    require 'templates/common/detect.min.php';
-    echo '<script>';
-    require 'templates/zaimnow/assets/js/custom.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimnow/assets/js/settings_form.js';
-    require 'templates/common/new2/js/fingerprintjs2.js';
-    echo '</script>';
-    ?>
-
-    <!--[if lt IE 10]>
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-    <![endif]-->
+<!--[if lt IE 10]>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+<![endif]-->
 
 <?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') 
 { 
@@ -108,7 +103,6 @@
     <script> 
     //backtotop
     jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});
-   
 
     function getParameterByName(name, url) 
     {
@@ -443,31 +437,30 @@
     }, 50);
 });
 <?php require 'templates/zaimnow/assets/js/owl.carousel.min.js';?>
-    $('.owl-carousel').owlCarousel({
-        stagePadding: 40,
-        center: true,
-        loop: true,
-        margin: 120,
-        nav: false,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplaySpeed: 1000,
-        autoplayHoverPause: true,
-        dots: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            1000: {
-                items: 2
-            }
+$('.owl-carousel').owlCarousel({
+    stagePadding: 40,
+    center: true,
+    loop: true,
+    margin: 120,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplaySpeed: 1000,
+    autoplayHoverPause: true,
+    dots: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        1000: {
+            items: 2
         }
-    });
-    </script>
+    }
+});
+</script>
 <?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
 {  
     echo '<script> 
-     
     function traffic(site, page)
     {
         $.ajax({
@@ -542,9 +535,7 @@ if ($this->uri->segment(1) == 'form')
     $('.ex-calc-zaim').click();
     </script>";
     require 'templates/common/switch_form.php';
-     
 }
-
 if ($this->uri->segment(1) == 'money') 
 {
     echo "<script>
@@ -555,13 +546,11 @@ if ($this->uri->segment(1) == 'money')
     </script>";
 } 
 ?>
-
 <!-- всплывающее окошко --> 
 <?php
  require 'yandexmetrika.php';
  require 'googleanalytics.php';
 ?>
-
 <script>
 function markTarget(target,param, id) 
 {
@@ -577,7 +566,6 @@ function markTarget(target,param, id)
             }
         });
 }
-
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Facebook Pixel Code -->
