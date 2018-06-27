@@ -1,5 +1,5 @@
 <?php 
-$sum = '20000'; $period = '21';
+$sum = '20000'; $period = '21';$percent = '95';
 if($this->input->get('amount', TRUE) != '') 
 { 
     $sum = $this->input->get('amount', TRUE);
@@ -34,121 +34,91 @@ if($this->input->post('amount', TRUE) != '')
     else if ($sum <= 50000)
     { $period = '30'; } 
     else { $period = '30'; }
-} 
+}  
+if($this->input->get('amount', TRUE) != '') 
+{  
+    if ($this->input->get('amount', TRUE) <= '10000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '15000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '20000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '30000') { 
+        $percent = 85;
+    } else if ($this->input->get('amount', TRUE) <= '50000') { 
+        $percent = 77;
+    } else  if ($this->input->get('amount', TRUE) <= '200000' && $this->input->get('amount', TRUE) > '50000') { 
+        $percent = 65;
+    } else  if ($this->input->get('amount', TRUE) <= '500000' && $this->input->get('amount', TRUE) > '200000') { 
+        $percent = 58;
+    } else { 
+        $percent = 52;
+    } 
+}
+if($this->input->post('percent', TRUE) != '')
+    $percent = $this->input->post('percent', TRUE);
 
 if(!isset($my_title))
 {
-    $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Vkredito';
+    $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Zaimhome';
     $description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }
 include "templates/common/new2/php/form_header.php";
 include "header.php";
 ?>
-<div class="container">
-    <section class="form">
-        <div class="row">
-            <div class="col-md-12 col-xs-12">
-                <h1 class="title">Заполните свои личные данные</h1>
-                <div class="col-md-8 col-xs-12">
-                    <form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
-                        <input type="hidden" name="display" id="display" value="0">
-                        <input type="hidden" name="referer" value="<?=$referer?>">
-                        <input type="hidden" name="id" value="">
-                        <input type="hidden" name="step" value="1">
-                        <input type="hidden" name="ad_id" value="<?=$ad_id?>">
-                        <div class="tab-content">
-                            <div id="form1" class="tab-pane fade in active">
-                                <?php require 'form1.php'; ?>
-                                <div class="col-sm-8 col-sm-offset-4 col-xs-12">
-                                    <div class="text-center">
-                                        <a class="btn btn-primary btn-next" id="next1">Оформить заявку 
-                                        </a>
-                                    </div>
-                                </div>
+<div class="container ex-form">
+    <h1 class="text-center" id="to_scroll">Как получить деньги?</h1>
+    <div class="row">
+        <div class="col-md-12 col-md-offset-0 col-xs-10 col-xs-offset-1">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="ex-indicator-scope ex-on-second-step ex-on-last-step nav nav-tabs" role="tablist">
+                        <figure class="ex-first-step">
+                            <p>
+                                <br> </p>
+                        </figure>
+                        <figure class="ex-second-step">
+                            <div>
+                                <span></span>
                             </div>
-                            <div id="form2" class="tab-pane fade">
-                                <?php require('form2.php'); ?>
-                                <div class="form-group">
-                                    <div class="col-sm-8 col-sm-offset-4 col-xs-12">
-                                        <div class="text-center">
-                                            <a class="btn btn-primary btn-next" id="next2">Далее
-                                                <i class="fa fa-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div id="form3" class="tab-pane fade">
-                                <?php require('form3.php'); ?>
-                                <div class="row">
-                                    <div class="col-sm-8 col-sm-offset-4 col-xs-12">
-                                        <a class="btn btn-primary btn-header" id="form-send">Оформить заявку</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <p>Личные данные 
+                                <br> (всего 1 шаг)</p>
+                        </figure>
+                        <figure class="ex-last-step">
+                            <p style="width: 105px; left: -130%;"></p>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="row tab-content">
+                <form class="form-horizontal form-label form-css-label" id="anketa" action="/lk" method="post" autocomplete="off" novalidate>
+                    <input type="hidden" name="display" id="display" value="0">
+                    <input type="hidden" name="referer" value="<?=$referer?>">
+                    <input type="hidden" name="id" value="">
+                    <input type="hidden" name="step" value="1">
+                    <input type="hidden" name="ad_id" value="<?=$ad_id?>">
+                    <input type="hidden" id="amount" name="amount" value="<?=$sum;?>"/>
+                    <input type="hidden" id="period" name="period" value="<?=$period;?>" />
+                    <input type="hidden" name="fingerprint" id="fingerprint" value="">
+                    <div class="row tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active col-xs-12" id="firstTabContent">
+                            <?php  require 'form1.php'; ?>
                         </div>
-                    </form>
-                </div>
-                <div class="col-md-4 text-center icon hidden-xs">
-                    <div class="text-center icon-text col-md-12 col-sm-4 col-xs-4">
-                        <img src="/templates/test/assets/img/advantage/4.png" alt="Ваши персональные данные надёжно защищены" class="img-rounded">
-                        <p class="hidden-xs">Ваши персональные данные надежно защищены</p>
                     </div>
-                    <div class="text-center icon-text col-md-12 col-sm-4 col-xs-4" style="padding: 25px;">
-                        <img src="/templates/test/assets/img/steps/1.png" alt="Удобное получение денег" class="img-rounded">
-                        <p class="hidden-xs">Удобное получение денег</p>
+                    <div class="row tab-content">
+                        <div role="tabpanel" class="tab-pane col-xs-12" id="secondTabContent"> 
+                        <?php  require 'form2.php'; ?>
+                        </div>
                     </div>
-                    <div class="text-center icon-text col-md-12 col-sm-4 col-xs-4" style="padding: 45px;">
-                        <img src="/templates/test/assets/img/steps/3.png" alt="Принимаем заявки с любой кредитной историей" class="img-rounded">
-                        <p class="hidden-xs">Деньги ждут вас</p>
+                    <div class="row tab-content">
+                        <div role="tabpanel" class="tab-pane col-xs-12" id="lastTabContent"> 
+                        <?php  require 'form3.php'; ?>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="clearfix visible-sm visible-xs">&nbsp;</div>
-</div>
-<!-- Modal -->
-<div class="modal fade" id="tosModal" tabindex="-1" role="dialog" aria-labelledby="tosModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h1 class="modal-title hidden-xs" id="tosModalLabel">Политика конфиденциальности</h1>
-                <h2 class="modal-title visible-xs-block" id="tosModalLabel">Политика конфиденциальности</h2>
-                <p>Заполняя заявку на кредит Вы соглашаетесь с нашими правилами использования данных</p>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <ol>
-                        <li>Я даю свое согласие на регистрацию в проекте vkredito.ru и получение новостей проекта. Я уведомлен(а) о том, что информация,
-                            переданная мною по сети Интернет, может стать доступной третьим лицам, и я освобождаю администрацию vkredito.ru от
-                            ответственности, в случае, если указанные мною сведения станут доступными третьим лицам.</li>
-                        <li>В целях принятия одним из МФО-партнеров vkredito.ru решения о заключении договора займа я даю им свое согласие на:
-                            <ul>
-                                <li>обработку в полном объеме моих персональных данных, изложенных в заявке на займ, а именно на сбор и проверку достоверности
-                                    представленной информации путем обращения к третьим лицам. Я даю свое согласие на обработку моих персональных данных
-                                    в целях продвижения услуг vkredito.ru на рынке с помощью средств связи, равно как продвижение услуг vkredito.ru
-                                    и/или услуг (товаров, работ) третьих лиц-партнеров vkredito.ru.</li>
-                                <li>получение информации о моей кредитной истории на основании Федерального закона от 30.12.2004 г. № 218-ФЗ "О кредитных
-                                    историях" от любых организаций, осуществляющих в соответствии с действующим законодательством формирование, обработку
-                                    и хранение такой информации. Полученная информация предназначена для внутреннего использования МФО-партнеров vkredito.ru.
-                                    Настоящие согласия даны мной на неопределенный срок.</li>
-                            </ul>
-                            <li>Я подтверждаю, что сведения, содержащиеся в заявке, являются верными и точными на указанную дату и обязуюсь незамедлительно
-                                уведомить vkredito.ru в случае изменения указанных мной сведений, а также о любых обстоятельствах, способных повлиять
-                                на выполнение мной или МФО-партнеров vkredito.ru обязательств по займу, который может быть предоставлен на основании
-                                заявки.</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal"> Закрыть </button>
+                </form>
             </div>
         </div>
     </div>
 </div>
+<br><br>
 <?php include 'footer.php';?>
