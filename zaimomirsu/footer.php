@@ -95,6 +95,9 @@
     echo '</script>';
     echo '<script>';
     require 'templates/zaimomirsu/assets/js/loanCalculator.js';
+    if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') {
+        require 'templates/common/new2/js/for_index.js';
+    }
     echo '</script>';
 ?>
 

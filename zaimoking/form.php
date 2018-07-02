@@ -65,8 +65,8 @@ if(isset($_SERVER['HTTP_REFERER'])){
 ?>
 </header>
 <main class="ex-form">
-    <h1 class="text-center">До одобрения кредита вас отделяют всего 3 шага</h1>
-    <p>для оформления потребуется паспорт</p>
+    <h1 class="text-center">До одобрения кредита вас отделяют всего 1 шаг</h1>
+    <p></p>
     <ul class="ex-tab-steps text-center" id="form-steps">
         <li class="ex-step-counter ex-step-active">Заполните личные данные</li>
         <li class="ex-step-counter ex-step-2" style="visibility: hidden"></li>

@@ -174,7 +174,7 @@
 <div class="ex-for-buttons">
     <div class="row justify-content-center">
         <div class="col-lg-5">
-            <a href="/form"><button class="ex-main-btn">Получить деньги</button></a>
+            <a href="/form"><button type="button" class="ex-main-btn">Получить деньги</button></a>
         </div>
     </div>
 </div>

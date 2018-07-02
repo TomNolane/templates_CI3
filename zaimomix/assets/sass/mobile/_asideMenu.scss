@@ -1,0 +1,46 @@
+aside.ex-aside-menu{
+    display: block;
+    background-color: $mobAsideMenu;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    @include prefix(transform, translateX(-100%));
+    z-index: 99999;
+    padding: 25px;
+    color: $white;
+    @include prefix(transition, all 0.4s ease);
+    &.ex-is-open{
+        @include prefix(transform, translateX(0));
+        @include prefix(transition, all 0.4s ease);
+    }
+
+    div{
+        padding-bottom: 25px;
+        text-align: center;
+        border-bottom: 1px solid $white;
+        i{
+            cursor: pointer;
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            background-image: url(../img/mobile/close.svg);
+            background-repeat: no-repeat;
+        }
+    }
+    ul{
+        list-style-type: none;
+        padding-left: 0;
+        padding-top: 35px;
+        li{
+            margin-bottom: 15px;
+            text-align: center;
+            a{
+                font-size: 18px;
+                line-height: 24px;
+                color: $white;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

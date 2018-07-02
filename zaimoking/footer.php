@@ -1,9 +1,4 @@
 <?php $from = '15';
-    if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
-    {
-        echo '<a href="#0" class="cd-top">Наверх</a>';
-    } 
-
     if($this->uri->segment(1) != 'form')
     {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -15,11 +10,10 @@
 		data-ad-format="auto"></ins>
 		<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
-';
+		</script>';
+        echo '<a href="#0" class="cd-top">Наверх</a>';
     }
 ?>
-
 <footer class="ex-main-footer">
     <div class="container">
         <div class="row">
@@ -79,7 +73,9 @@
     echo '</script>';
     echo '<script>';
     require 'templates/zaimoking/assets/js/settings_form.js';
-    require 'templates/common/new2/js/fingerprintjs2.js';
+    if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') {
+        require 'templates/common/new2/js/for_index.js';
+    }
     echo '</script>';
     ?>
 
@@ -618,15 +614,10 @@
         }
     });
 </script>';
-} 
-?>
-
-<!-- всплывающее окошко --> 
-<?php
+}  
  require 'yandexmetrika.php';
  require 'googleanalytics.php';
 ?>
-
 <script>
 function markTarget(target,param, id) 
 {
@@ -638,8 +629,12 @@ function markTarget(target,param, id)
             type: 'POST',
             url: '/pixel/',
             data: 'id='+id+'&pixel='+param,
-            success: function(data){ 
+            success: function(data){
+                console.log(22);
             }
+            ,error: function(data){
+                console.log(33);
+            } 
         });
 }
 

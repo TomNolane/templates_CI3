@@ -1,0 +1,121 @@
+body{
+  position: relative;
+  width: 100%;
+  float: left;
+  min-height: 100vh;
+  font-family: $lato;
+  background-color: $mainBg;
+  color: $mobFont;
+  padding-bottom: 112px;
+}
+
+h1{
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+}
+
+p{
+  font-size: 10px;
+  line-height: 19px;
+  letter-spacing: 0.21px;
+  font-weight: 300;
+}
+
+.ex-main-btn{
+  width: 100%;
+  text-transform: uppercase;
+  margin-top: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 700;
+  color: $white;
+  background-color: $mainBtn;
+  outline: none;
+  border: none;
+  @include prefix(border-radius, 3px);
+}
+
+.ex-agreement-check{
+  label{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-weight: 700;
+    &:hover input ~ i{
+      background: #ccc;
+    }
+    &:focus input ~ i{
+      background: #ccc;
+    }
+    span{
+      display: inline-block;
+      margin-left: 15px;
+      margin-top: 2px;
+      @media (max-width: 991px) {
+        font-size: 12px;
+        margin-top: 4px;
+      }
+    }
+    input{
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      left: 0;
+      margin-left: 0!important;
+      &:checked ~ i{
+        background: $mainBtn;
+        &:after{
+          display: block;
+        }
+      }
+      &:disabled ~ i{
+        background: #0e647d;
+        &:after{
+          border-color: #7b7b7b;
+        }
+      }
+    }
+    i{
+      display: inline-block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 24px;
+      width: 24px;
+      background: #e6e6e6;
+      @include prefix(border-radius, 4px);
+      &:after{
+        content: '';
+        position: absolute;
+        display: none;
+        left: 6px;
+        top: 7px;
+        width: 13px;
+        height: 9px;
+        background-image: url(../img/mobile/ok.png);
+      }
+    }
+  }
+  button{
+    margin-top: 28px;
+  }
+}
+
+#ex-main-slider-range .ex-range-slider {
+  height: 50px;
+  .irs{
+    bottom: -5px;
+    .irs-slider{
+      border: 3px solid #ffffff;
+      width: 32px !important;
+      height: 32px !important;
+      top: 20px !important;
+    }
+    .irs-bar-edge{
+      width: 16px;
+    }
+  }
+}

@@ -225,7 +225,7 @@
                                 <input  class="ex-ask-question ex-main-btn ex-question-btn text-center" value="задать вопрос"/> 
                             </div>
                             <div class="col-md-8">
-                                <a href="/form"><button class="ex-main-btn">Получить деньги</button></a>
+                                <a href="/form"><button type="button" class="ex-main-btn">Получить деньги</button></a>
                             </div>
                         </div>
                     </div>

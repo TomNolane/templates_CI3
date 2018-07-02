@@ -60,86 +60,6 @@ ins {
         $temp = 0;
         echo '<div class="row"><div class="col-md-12">';
 
-        if($site == '111www.mikrodengi' || $site == '111zaimrubli' || $site == '111zaimoking' || $site == '111mikrodengi')
-        { 
-            $data =
-            array(
-                array(
-                    "title" => "Joymoney",
-                    "img" => "joymoney",
-                    "link" => "https://pxl.leads.su/click/78c807326632d9d7f3a349d8deb274da",
-                    "amount" => "15000",
-                    "percent" => "2.17",
-                    "min_year" => "23",
-                    "max_year" => "60"
-                ),
-                array(
-                    "title" => "Turbozaim",
-                    "img" => "turbozaim",
-                    "link" => "https://pxl.leads.su/click/6ba7ae168c5ee3ab53249ea0f1e49639",
-                    "amount" => "15000",
-                    "percent" => "2.24",
-                    "min_year" => "21",
-                    "max_year" => "65"
-                ),
-                array(
-                    "title" => "Webbankir",
-                    "img" => "webbankir",
-                    "link" => "https://pxl.leads.su/click/38fbd5462215ebee706341e37d676de9",
-                    "amount" => "15000",
-                    "percent" => "1.2",
-                    "min_year" => "19",
-                    "max_year" => "100"
-                ),
-                array(
-                    "title" => "Zaymer",
-                    "img" => "zaymer",
-                    "link" => "https://pxl.leads.su/click/42beacd5c7e1821bd686e859764a3038",
-                    "amount" => "30000",
-                    "percent" => "0.63",
-                    "min_year" => "18",
-                    "max_year" => "75"
-                ),
-                array(
-                    "title" => "Moneyman",
-                    "img" => "moneyman",
-                    "link" => "https://pxl.leads.su/click/d8cd8d3c0609d6a1d64224cc5f34794c",
-                    "amount" => "70000",
-                    "percent" => "1.2",
-                    "min_year" => "18",
-                    "max_year" => "75"
-                ),
-                array(
-                    "title" => "Greenmoney",
-                    "img" => "greenmoney",
-                    "link" => "https://pxl.leads.su/click/eb65403ecfc4a0942f39b36b385b7ec6",
-                    "amount" => "24000",
-                    "percent" => "0.95",
-                    "min_year" => "20",
-                    "max_year" => "86"
-                ),
-                array(
-                    "title" => "Ekapusta",
-                    "img" => "ekapusta",
-                    "link" => "https://pxl.leads.su/click/525a5dc7fe8996ea2b16b29a88aa9a62",
-                    "amount" => "30000",
-                    "percent" => "0.00",
-                    "min_year" => "18",
-                    "max_year" => "100"
-                ),
-                array(
-                    "title" => "Payps",
-                    "img" => "payps",
-                    "link" => "https://pxl.leads.su/click/cdf9ddc320b369b2f0b2747fee736f0a",
-                    "amount" => "10000",
-                    "percent" => "1.9",
-                    "min_year" => "18",
-                    "max_year" => "80"
-                )
-            ); 
-        } 
-
-
         foreach($data as $item)
         {
             
@@ -148,7 +68,16 @@ ins {
             $item['link'] = str_replace("#site1", ucfirst($domen), $item['link']);
             $item['link'] = str_replace("#site", $domen, $item['link']);
 
-
+            if ( $domen == 'zaimhome.ru' ){
+                $item['link'] = str_replace("https://kviku.ru/cards/?promo=nb&utm_source=bzaim5", 'https://kviku.ru/cards/?promo=nb&utm_source=zaimhome', $item['link']);
+            }
+            if ( $domen == 'dengoman.ru' ){
+                $item['link'] = str_replace("https://kviku.ru/cards/?promo=nb&utm_source=bzaim5", 'https://kviku.ru/cards/?promo=nb&utm_source=dengoman', $item['link']);
+            }            
+            if ( $domen == 'dengibystra.ru' ){
+                $item['link'] = str_replace("https://kviku.ru/cards/?promo=nb&utm_source=bzaim5", 'https://kviku.ru/cards/?promo=nb&utm_source=dengibystra', $item['link']);
+            }            
+            
             if(strpos($item['link'], "aff_sub1=") == true) $item['link'] = str_replace("aff_sub1=".ucfirst($domen), "aff_sub1=".$domen."&aff_sub2=".$this->input->get('keyword', TRUE)."&aff_sub3=".$this->input->get('campaign_id', TRUE)."&aff_sub4=".$this->input->get('utm_source', TRUE), $item['link']);
             if(strpos($item['link'], "aff_sub1=") == true && strpos($item['link'],"aff_sub3=") == false) $item['link'] = str_replace("aff_sub1=".$domen, "aff_sub1=".$domen."&aff_sub2=".$this->input->get('keyword', TRUE)."&aff_sub3=".$this->input->get('campaign_id', TRUE)."&aff_sub4=".$this->input->get('utm_source', TRUE), $item['link']);
             else if(strpos($item['link'], "aff_sub=") == true) $item['link'] = str_replace( "aff_sub=bzaim5.ru" , "aff_sub=bzaim5.ru&aff_sub2=".$domen."&aff_sub3=".$this->input->get('keyword', TRUE)."&aff_sub4=".$this->input->get('campaign_id', TRUE)."&aff_sub5=".$this->input->get('utm_source', TRUE) , $item['link']);

@@ -1,9 +1,4 @@
-<?php $from = '15';
-
-    if($this->uri->segment(1) != 'form')
-    {
-        echo '';
-    }
+<?php $from = '15'; 
 ?>
 
 <footer class="ex-main-footer ex-sticky-footer">
@@ -96,6 +91,9 @@
     echo '</script>';
     echo '<script>';
     require 'templates/zaimomir/assets/js/loanCalculator.js';
+    if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') {
+        require 'templates/common/new2/js/for_index.js';
+    }
     echo '</script>';
 ?>
 

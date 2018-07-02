@@ -1,14 +1,7 @@
-@charset "UTF-8";
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/*@@@@@@ Helper files import here @@@@@@*/
-/*@@@@@@ Core files import here @@@@@@*/
 @font-face {
   font-family: 'HelveticaRegular';
-  src: url("/templates/zaimomix/assets/fonts/HelveticaRegular.eot");
-  src: url("/templates/zaimomix/assets/fonts/HelveticaRegular.eot?#iefix") format("embedded-opentype"), url("/templates/zaimomix/assets/fonts/HelveticaRegular.woff") format("woff"), url("/templates/zaimomix/assets/fonts/HelveticaRegular.ttf") format("truetype");
+  src: url("/templates/common/new2/fonts/HelveticaRegular.eot");
+  src: url("/templates/common/new2/fonts/HelveticaRegular.eot?#iefix") format("embedded-opentype"), url("/templates/common/new2/fonts/HelveticaRegular.woff") format("woff"), url("/templates/common/new2/fonts/HelveticaRegular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -85,7 +78,7 @@ body {
 }
 /* line 61, ../sass/core/_global.scss */
 .ex-sticky .ex-sticky-footer {
-  position: absolute;
+  position: inherit;
   width: 100%;
   min-height: 133px;
   bottom: 0;
@@ -3899,17 +3892,15 @@ pre code {
 
 /* line 6, ../sass/library/_bootstrap.scss */
 .form-control {
-  display: block;
-  width: 100%;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  height: 60px;
+  color: #262626;
+  font-size: 16px;
+  font-weight: 400;
+  box-shadow: none;
+  border: 1px solid #c8cfce;
+  background-color: #ffffff;
+  padding: 6px 28px; 
+  border-radius: 12px;
 }
 
 /* line 6, ../sass/library/_bootstrap.scss */
@@ -12382,7 +12373,7 @@ a.text-dark:focus, a.text-dark:hover {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 9px;
   padding: 0 3px;
   color: #000;
@@ -12614,9 +12605,6 @@ a.text-dark:focus, a.text-dark:hover {
 /* line 16, ../sass/library/_owlCarousel.scss */
 .owl-carousel .owl-stage {
   position: relative;
-  -ms-touch-action: pan-Y;
-  -moz-backface-visibility: hidden;
-  /* fix firefox animation glitch */
 }
 
 /* line 21, ../sass/library/_owlCarousel.scss */
@@ -12633,19 +12621,14 @@ a.text-dark:focus, a.text-dark:hover {
 .owl-carousel .owl-stage-outer {
   position: relative;
   overflow: hidden;
-  /* fix for flashing background */
-  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
 }
 
 /* line 33, ../sass/library/_owlCarousel.scss */
 .owl-carousel .owl-wrapper,
 .owl-carousel .owl-item {
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 
 /* line 41, ../sass/library/_owlCarousel.scss */
@@ -12653,9 +12636,7 @@ a.text-dark:focus, a.text-dark:hover {
   position: relative;
   min-height: 1px;
   float: left;
-  -webkit-backface-visibility: hidden;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
+  backface-visibility: hidden;
 }
 
 /* line 48, ../sass/library/_owlCarousel.scss */
@@ -12810,7 +12791,7 @@ a.text-dark:focus, a.text-dark:hover {
   background: url("owl.video.play.png") no-repeat;
   cursor: pointer;
   z-index: 1;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: transform 100ms ease;
 }
 
@@ -12909,7 +12890,7 @@ a.text-dark:focus, a.text-dark:hover {
   height: 10px;
   margin: 5px 7px;
   display: block;
-  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
   transition: opacity 200ms ease;
   border-radius: 30px;
 }
@@ -14135,7 +14116,7 @@ main.ex-form #secondStep .media .media-left .ex-coincidence-check li label {
   padding: 3px 25px 0 35px;
   z-index: 9;
   cursor: pointer;
-  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
 }
 /* line 305, ../sass/desktop/_form.scss */
 main.ex-form #secondStep .media .media-left .ex-coincidence-check li .check {
@@ -14867,4 +14848,98 @@ main.ex-form .nav {
 }
 .hidden {
   display: none !important;
+}
+.helpblock
+{
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-size: 1.3em;
+  float: right;
+}
+body {
+  padding-bottom: 0 !important;
+}
+ins {
+  text-align: center !important;
+}
+#ex-homepage-header .navbar-right li a, .ex-main-header .navbar-right li a:hover {
+  color: #000;
+}
+.cd-container {
+  width: 90%;
+  max-width: 768px;
+  margin: 2em auto;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+.cd-top {
+  z-index: 16;
+  display: inline-block;
+  height: 40px;
+  border-radius: 15px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url(/templates/common/new2/img/cd-top-arrow.png) center 50% no-repeat #000;
+  border-radius: 15px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+input:invalid:not(:placeholder-shown) {border-color: red !important;}
+input:valid:not(:placeholder-shown) {border-color: green !important;}
+.help-block2 {
+    display: none;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    font-size: 0.8em;
+    float: left;
+    color: red !important;
+}  
+.help-block {
+    display: none !important;
 }

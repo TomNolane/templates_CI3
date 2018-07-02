@@ -1,67 +1,70 @@
 <?php 
+$sum = '20000'; $period = '21';$percent = '95';
+if($this->input->get('amount', TRUE) != '') 
+{ 
+    $sum = $this->input->get('amount', TRUE);
+    if($this->input->get('amount', TRUE) >= 1000 && $this->input->get('amount', TRUE) <= 1000000)
+    $sum = $this->input->get('amount', TRUE);
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000)
+    { $period = '14'; } 
+    else if ($sum <= 20000)
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000)
+    { $period = '30'; } 
+    else { $period = '30'; }
+} 
+if($this->input->post('amount', TRUE) != '')
+{ 
+    if($this->input->post('amount', TRUE) >= 1000 && $this->input->post('amount', TRUE) <= 1000000)
+        $sum = $this->input->post('amount', TRUE);
+    
+    if ($sum <= 10000) 
+    { $period = '7'; } 
+    else if ($sum <= 15000)
+    { $period = '14'; } 
+    else if ($sum <= 20000)
+    { $period = '21'; } 
+    else if ($sum <= 30000)
+    { $period = '21'; } 
+    else if ($sum <= 50000)
+    { $period = '30'; } 
+    else { $period = '30'; }
+}  
+if($this->input->get('amount', TRUE) != '') 
+{  
+    if ($this->input->get('amount', TRUE) <= '10000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '15000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '20000') { 
+        $percent = 95;
+    } else if ($this->input->get('amount', TRUE) <= '30000') { 
+        $percent = 85;
+    } else if ($this->input->get('amount', TRUE) <= '50000') { 
+        $percent = 77;
+    } else  if ($this->input->get('amount', TRUE) <= '200000' && $this->input->get('amount', TRUE) > '50000') { 
+        $percent = 65;
+    } else  if ($this->input->get('amount', TRUE) <= '500000' && $this->input->get('amount', TRUE) > '200000') { 
+        $percent = 58;
+    } else { 
+        $percent = 52;
+    } 
+}
+if($this->input->post('percent', TRUE) != '')
+    $percent = $this->input->post('percent', TRUE);
+
 if(!isset($my_title))
 {
-	$my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис zaimomix.ru';
-	$description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
-}  
-require 'header.php'; 
-
-// IP
-$this->load->helper('ip');
-// GEO
-require_once FCPATH.'modules/ipgeobase/ipgeobase.php';
-$gb = new IPGeoBase();
-$geo = $gb->getRecord(IP::$ip);
-if ($geo)
-    {
-        if (isset($geo['region'])){
-            $region_name = $geo['region'];
-        }else{
-            $region_name = 'Владимир';
-        }
-        if (isset($geo['city'])){
-            $city_name = $geo['city'];
-        }else{
-            $city_name = 'Владимир';
-        }
-    }else{
-        $region_name = 'Владимир';
-        $city_name = 'Владимир';
-    }
-// Список регионов
-$this->load->model('geo/geo_model', 'geo');
-$regions = $this->geo->regions();
-if(isset($_SERVER['HTTP_REFERER'])){
-    $referer = $_SERVER['HTTP_REFERER'];
-    parse_str($_SERVER['HTTP_REFERER'], $output);
-        if(isset($output['utm_source'])){
-            switch ($output['utm_source']) {
-                case 'vk':
-                    $utm = '1';
-                    break;
-                case 'direct':
-                    $utm = '2';
-                    break;
-                case 'mytarget':
-                    $utm = '3';
-                    break;
-                case 'google':
-                    $utm = '4';
-                    break;    
-                case 'google_cms':
-                    $utm = '5';
-                    break;
-                default:
-                    $utm = '0';
-            }
-        }else{
-            $utm = ''; 
-        }
-    $ad_id = '4'.$utm;
-} else {
-    $referer = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-    $ad_id = '4';
+    $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Zaimomix';
+    $description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }
+include "templates/common/new2/php/form_header.php";
+include "header.php";
 ?>
 <main class="ex-form">
     <h1 class="text-center" id="form-steps">До одобрения кредита вас отделяют всего 1 шаг</h1>
@@ -82,10 +85,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
                 <input type="hidden" name="fingerprint" id="fingerprint" value="">
             <div class="tab-content">
                 <div id="firstStep"  class="tab-pane active">
-                <?php require 'form1.php'; ?>
+                    <?php require 'form1.php'; ?>
                 </div>
                 <div id="secondStep"  class="tab-pane">
-                <?php require 'form2.php'; ?>
+                    <?php require 'form2.php'; ?>
                 </div>
                 <div id="thirdStep"  class="tab-pane" >
                     <?php require 'form3.php'; ?>
@@ -94,4 +97,4 @@ if(isset($_SERVER['HTTP_REFERER'])){
         </form>
     </div>
 </main>
-<?php require 'footer.php';?>
+<?php include 'footer.php';?>

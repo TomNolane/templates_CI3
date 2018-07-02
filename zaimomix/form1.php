@@ -92,9 +92,9 @@
                             <option>выбери</option>
                             <option value="0">Год</option>
                             <?php
-				for($i=date('Y', strtotime('-80 years', time()));$i<=date('Y', strtotime('-18 years', time()));$i++)
-				echo '<option value="'.$i.'">'.$i.'</option>';
-				?>
+                                for($i=date('Y', strtotime('-80 years', time()));$i<=date('Y', strtotime('-18 years', time()));$i++)
+                                echo '<option value="'.$i.'">'.$i.'</option>';
+                            ?>
                         </select>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
                 <div class="col-md-9  offset-md-3  ex-agreement-check">
                     <label class="checkbox-inline">
                         <span>Я согласен на обработку персональных данных и с публичной офертой</span>
-                        <input type="checkbox" id="agree" value="1" checked>
+                        <input type="checkbox" id="agree" value="1" onclick="checkMee();" checked>
                         <i></i>
                     </label>
                     <label class="hidden">
