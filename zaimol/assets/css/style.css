@@ -14030,3 +14030,6 @@ color: #3c763d !important;
 input#i , input#o, input#f, input#feedback-name {
   text-transform: capitalize !important;
 } 
+a {
+  color: #ececec; 
+}

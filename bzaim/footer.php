@@ -47,8 +47,18 @@ echo '<footer class="ex-start-footer">
                     <li>
                         <a href="/rules">Правила предоставления займов</a>
                     </li>
+                </ul>OK
+            </div>
+            <div class="col-sm-12">
+                <hr/>
+                <ul class="list-inline">
+                    <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
                 </ul>
-            </div> 
+            </div>
         </div>
     </div>
 </footer>'; 
@@ -65,6 +75,16 @@ else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $th
                            support@bzaim5.ru <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
                     </div>
                 </div>
+                <div class="col-sm-12">
+                <hr/>
+                <ul class="list-inline">
+                    <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
+                </ul>
+            </div>
             </div>
         </div>
     </footer>';
@@ -81,6 +101,16 @@ else if($this->uri->segment(1) == 'form' )
                             <a href="mailto:support@bzaim5.ru" target="_blank">support@bzaim5.ru</a></p>
                     </div>
                 </div>
+                <div class="col-sm-12">
+                <hr/>
+                <ul class="list-inline">
+                    <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
+                </ul>
+            </div>
             </div>
         </div>
     </footer>';
@@ -98,8 +128,7 @@ else if($this->uri->segment(1) == 'form' )
     echo '/* private JS */';
     require 'templates/bzaim/assets/js/main.js'; 
 
-if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
- 
+if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') {  ?>
         $("#rangeSlider").ionRangeSlider({
         hide_min_max: false, 
         keyboard: true, 
@@ -153,7 +182,7 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
             echo $from; 
         }
         elseif($this->input->post('form_slrd') == '') echo '15'; else echo $this->input->post('form_slrd'); ?>,
-        values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000, 110000, 120000, 130000, 140000, 150000, 160000, 170000, 180000, 190000, 200000, 250000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000],
+        values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
         onChange: function (range3) {
                  if (range3.from_value <= 10000) {
                     $("#period").val("7");
@@ -262,7 +291,9 @@ elseif($this->uri->segment(1) == '404')
 }
 else if($this->uri->segment(1) == 'form')
 { } 
-echo "}catch(e){console.log('Ошибка ' + e.name + \":\" + e.message + \"\\n\" + e.stack);}";?>
+echo "}";
+require 'templates/common/new2/js/exeption.js';
+?>
 </script>
 <?php
     include "google.php";

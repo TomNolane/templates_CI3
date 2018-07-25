@@ -7,9 +7,9 @@
     require realpath(__DIR__ . '/..').'/'.$site.'/header.php';
     $this->load->model('offers/offers_model', 'offers');
     
-    (isset($_GET['loan']) && $_GET['loan']) ? $loan = 1 : $loan = 0;
+    (isset($_GET['loan']) && $_GET['loan']) ? $loan = 0 : $loan = 0;
     
-    $data = $this->offers->all(8, $loan);
+    $data = $this->offers->all(8, 0);
     
     // IP
     $this->load->helper('ip');

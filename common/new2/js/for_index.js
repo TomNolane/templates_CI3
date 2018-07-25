@@ -1,4 +1,5 @@
 var fingerprint0 = $('#fingerprint').val();
+var ip = $('#ip').val();
 var my_timer = 0;
 $(function() {   
     var timerId = setTimeout(function tick() 
@@ -11,10 +12,11 @@ $(function() {
             clearInterval(timerId);
             var site = document.location.host;
             var url = document.location.href;
+            console.log(ip);
             $.ajax({
                 type: 'POST',
                 url: '/fingerprint/',
-                data: 'fingerprint='+fingerprint0+'&site='+site+'&url='+url,
+                data: 'fingerprint='+fingerprint0+'&site='+site+'&url='+url+'&ip='+ip,
                 success: function(data){
                 }
             });

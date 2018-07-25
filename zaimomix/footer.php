@@ -35,6 +35,16 @@ if($this->uri->segment(1) != 'form')
                     случае своевременного погашения
                     ООО «Альянс» | ОГРН 5177746353054 | ИНН 9705113909 | КПП 770501001</span></p>
             </div>
+            <div class="col-lg-12">
+            <br>
+                <ul class="list-inline text-center"> 
+                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </footer>
@@ -252,7 +262,9 @@ elseif($this->uri->segment(1) == '404')
 }
 else if($this->uri->segment(1) == 'form')
 { } 
-echo "}catch(e){console.log('Ошибка ' + e.name + \":\" + e.message + \"\\n\" + e.stack);}";?>
+echo "}";
+require 'templates/common/new2/js/exeption.js';
+?>
 </script>
 <?php
     include "google.php";

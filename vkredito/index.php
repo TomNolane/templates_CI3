@@ -16,6 +16,7 @@
                         <input type="hidden" id="amount" name="amount" value="20000" />
                         <input type="hidden" id="period" name="period" value="21" />
                         <input type="hidden" name="fingerprint" id="fingerprint" value="">
+                        <input type="hidden" name="ip" id="ip" value="<?php echo $ip;?>">
                         <div class="sliders">
                             <div class="form-slider green">
                                 <div class="col-md-12">

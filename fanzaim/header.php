@@ -1,4 +1,11 @@
-<?php  
+<?php
+/*
+$BlackListIp = file('templates/common/BlackListIp.txt', FILE_IGNORE_NEW_LINES);
+if( in_array($_SERVER['REMOTE_ADDR'], $BlackListIp) ){
+    header('HTTP/1.0 403 Forbidden'); //ip is in ban list
+    exit();
+}
+*/
 if(!isset($my_title)) 
 	$my_title = 'Срочные займы круглосуточно без проверок Онлайн';
 
