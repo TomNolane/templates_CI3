@@ -135,14 +135,14 @@ h2 {
   display: inline-block;
   letter-spacing: 0.81px;
   color: #354052;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 21px;
 }
 @media (max-width: 991px) {
   /* line 101, ../sass/core/_global.scss */
   .ex-agreement-check label span {
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 4px;
   }
 }
@@ -3276,7 +3276,7 @@ th {
 
 /* line 1079, ../sass/library/_bootstrap.scss */
 html {
-  font-size: 10px;
+  font-size: 12px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -11685,7 +11685,7 @@ button.close {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 9px;
   padding: 0 3px;
   color: #000;
@@ -12292,7 +12292,7 @@ header {
 /* line 23, ../sass/desktop/_footer.scss */
 .ex-start-footer .ex-main-footer p {
   color: #929292;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 12px;
   letter-spacing: 0.21px;
@@ -12983,7 +12983,7 @@ header .navbar-default {
 }
 /* line 98, ../sass/desktop/_form.scss */
 .ex-form .ex-anketa-main .form-group.ex-error p {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.21px;
   margin-top: 6px;
   margin-bottom: 0;
@@ -13954,7 +13954,7 @@ header .navbar-default {
 }
 /* line 55, ../sass/desktop/_offerta.scss */
 .ex-offerta .ex-offerta-block .ex-wrapper .ex-table-scope table tr td {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 19px;
   letter-spacing: 0.19px;

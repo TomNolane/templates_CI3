@@ -129,7 +129,7 @@
 	<label class="col-sm-4 control-label label-required hidden-xs">Город проживания</label>
 	<div class="col-sm-8 col-xs-12">
 		<input type="text" class="form-control ec tip" name="city" id="city" placeholder="Город" title="Укажите город в котором вы живете"
-		        value="<?php echo isset($city_name)? $city_name : 'г. Новосибирск'; ?>" pattern="^[А-Яа-яЁё\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$"
+		        value="<?php echo isset($city_name)? $city_name : 'г. Новосибирск'; ?>" pattern="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$"
 		        data-validation-error-msg="Укажите, населенный пункт">
 		<span id="citystatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 		<p class="text-muted helpblock">Пример: г. Новосибирск</p>

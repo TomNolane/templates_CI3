@@ -12192,7 +12192,7 @@ header .navbar-default {
 /* line 283, sass/desktop/_start.scss */
 .ex-start-footer ul li a {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 100;
   line-height: 24px;
   text-decoration: none;
@@ -13250,8 +13250,6 @@ header .navbar-default {
   right: 20px;
   width: 12px;
   height: 9px;
-  background-image: url(/templates/dengibystra/assets/img/unqiue-arrow.png);
-  background-repeat: no-repeat;
 }
 /* line 118, sass/desktop/_form.scss */
 .ex-form .ex-anketa-main .form-group label {

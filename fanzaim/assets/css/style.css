@@ -1889,7 +1889,7 @@ th {
 
 /* line 1079, ../sass/library/_bootstrap.scss */
 html {
-  font-size: 10px;
+  font-size: 12px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -9928,7 +9928,7 @@ button.close {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 9px;
   padding: 0 3px;
   color: #000;
@@ -11049,7 +11049,7 @@ section.ex-section-1 .container main .ex-counter-block .ex-wrapper table tbody t
 @media (max-width: 480px) {
   /* line 156, ../sass/desktop/_homepage.scss */
   section.ex-section-1 .container main .ex-counter-block .ex-wrapper table tbody tr td {
-    font-size: 10px;
+    font-size: 12px;
   }
   /* line 168, ../sass/desktop/_homepage.scss */
   section.ex-section-1 .container main .ex-counter-block .ex-wrapper table tbody tr td strong {
@@ -11608,7 +11608,7 @@ section.ex-section-3 main .col-sm-4 .ex-wrapper h3 {
 }
 /* line 594, ../sass/desktop/_homepage.scss */
 section.ex-section-3 main .col-sm-4 .ex-wrapper p {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 19px;
   color: #16192a;
   font-weight: 300;
@@ -11618,7 +11618,7 @@ section.ex-section-3 main .col-sm-4 .ex-wrapper p {
 @media screen and (max-width: 1199px) and (min-width: 992px) {
   /* line 594, ../sass/desktop/_homepage.scss */
   section.ex-section-3 main .col-sm-4 .ex-wrapper p {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 /* line 605, ../sass/desktop/_homepage.scss */

@@ -1,3 +1,4 @@
+var loans = 0;
 function addDate(numberOfYears)
 {
     var startDate = new Date();
@@ -617,23 +618,77 @@ $(document).ready(function () {
             $(this).parent().removeClass('ex-error');
             $(this).next("span").text(' ');
         }
-    });   
+    });
+    $('#next1f').click(function () {
+        if (validate1()) { 
+        
+            $('input[name="step"]').val('1');
+            send_form(); 
+
+            $('#form1').removeClass('in').removeClass('active');
+            $('#form2').addClass('in').addClass('active');
+            $('.ex-indicator-scope').addClass('ex-on-second-step');
+            $('#firstTabContent').removeClass('in active');
+            $('#secondTabContent').addClass('in active');
+            $('#step2').removeClass('off');
+            $('.form-steps-green-line').addClass('step2');
+            $('.form-steps-line').show();
+            $('#form-steps a[href="#form2"]').tab('show');
+            $('#firstStep').removeClass('in active');
+            $('#secondStep').addClass('in active');
+            $('.ex-step-counter').addClass('ex-on-second-step'); 
+            
+            traffic(document.location.host,2);
+            $('html, body').animate({
+                scrollTop: $('#to_scroll').offset().top
+            }, 1000);
+            markTarget('form-step-1');
+            
+            if($('#amount').val() > 100000)
+            loans = 1; 
+        }
+        showBzzz = false;
+        $('.reg_same').change();
+        setcookies();
+        $('select[name="reg_type"]').change();
+    });
+    $('#next1ff').click(function () {
+        if (validate1()) { 
+        
+            $('input[name="step"]').val('1');
+            send_form(); 
+
+            $('#form1').removeClass('in').removeClass('active');
+            $('#form2').addClass('in').addClass('active');
+            $('.ex-indicator-scope').addClass('ex-on-second-step');
+            $('#firstTabContent').removeClass('in active');
+            $('#secondTabContent').addClass('in active');
+            $('#step2').removeClass('off');
+            $('.form-steps-green-line').addClass('step2');
+            $('.form-steps-line').show();
+            $('#form-steps a[href="#form2"]').tab('show');
+            $('#firstStep').removeClass('in active');
+            $('#secondStep').addClass('in active');
+            $('.ex-step-counter').addClass('ex-on-second-step'); 
+            
+            traffic(document.location.host,2);
+            $('html, body').animate({
+                scrollTop: $('#to_scroll').offset().top
+            }, 1000);
+            markTarget('form-step-1');
+            
+            if($('#amount').val() > 100000)
+            loans = 1; 
+        }
+        showBzzz = false;
+        $('.reg_same').change();
+        setcookies();
+        $('select[name="reg_type"]').change();
+    });
     $('#next1').click(function () { 
 	console.log(1);
-        if (validate0()) { 
-		
-            // $('input[name="step"]').val('1');
-            // send_form();
-            // $('.spec_footer4').css('visibility','hidden'); 
-            // $('.ex-indicator-scope').addClass('ex-on-second-step');
-            // $('#firstTabContent').removeClass('in active');
-            // $('#secondTabContent').addClass('in active');
-            // traffic("bzaim5.ru",2);
-            // $('html, body').animate({
-            //     scrollTop: $('#to_scroll').offset().top
-            // }, 1000);
-            // markTarget('form-step-1');
-            var loans = 0;
+        if (validate0()) {  
+            
             if($('#amount').val() > 100000)
             loans = 1;
             
@@ -649,20 +704,8 @@ $(document).ready(function () {
     });
 	$('#next1b').click(function () { 
 		console.log(1);
-			if (validate0()) { 
-			
-				// $('input[name="step"]').val('1');
-				// send_form();
-				// $('.spec_footer4').css('visibility','hidden'); 
-				// $('.ex-indicator-scope').addClass('ex-on-second-step');
-				// $('#firstTabContent').removeClass('in active');
-				// $('#secondTabContent').addClass('in active');
-				// traffic("bzaim5.ru",2);
-				// $('html, body').animate({
-				//     scrollTop: $('#to_scroll').offset().top
-				// }, 1000);
-				// markTarget('form-step-1');
-				var loans = 0;
+			if (validate0()) {  
+				
 				if($('#amount').val() > 100000)
 				loans = 1;
 				
@@ -683,7 +726,21 @@ $(document).ready(function () {
             $('.ex-indicator-scope').removeClass('ex-on-second-step').addClass('ex-on-last-step');
             $('#secondTabContent').removeClass('in active');
             $('#lastTabContent').addClass('in active');
-            traffic("bzaim5.ru",3);
+
+
+            $('#form2').removeClass('in').removeClass('active');
+            $('#form3').addClass('in').addClass('active');
+            $('#step3').removeClass('off');
+            $('.form-steps-green-line').addClass('step3');
+            $('.form-steps-line').show();
+            $('#form-steps a[href="#form3"]').tab('show');
+            $('#secondStep').removeClass('in active');
+            $('#thirdStep').addClass('in active');
+            $('#secondTabContent').removeClass('in active');
+            $('#lastTabContent').addClass('in active');
+            $('.ex-step-counter').removeClass('ex-on-second-step').addClass('ex-on-last-step');
+            
+            traffic(document.location.host,3);
             $('html, body').animate({
                 scrollTop: $('#to_scroll').offset().top
             }, 1000);
@@ -722,6 +779,7 @@ $(document).ready(function () {
         showBzzz = false;
         setcookies();
     });
+    
 	$('#getmoneyb').click(function () {
         if (validate()) { 
             $('input[name="step"]').val('3');
@@ -773,4 +831,153 @@ $(document).ready(function () {
             slide: false
         });
     }
+    $("#work").change(function(){
+        if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
+        { 
+            $("#work").addClass("valid");
+            $("#work").parent().addClass("has-success").removeClass("has-error");
+            $("#work").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work").removeClass("er").removeClass("error");
+            $("#work_name").addClass("valid");
+            $("#work_name").parent().addClass("has-success").removeClass("has-error");
+            $("#work_name").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_name").removeClass("er").removeClass("error");
+            $("#work_namestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+            $("#work_occupation").addClass("valid");
+            $("#work_occupation").parent().addClass("has-success").removeClass("has-error");
+            $("#work_occupation").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_occupation").removeClass("er").removeClass("error");
+            $("#work_occupationstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+            $("#work_phone").addClass("valid");
+            $("#work_phone").parent().addClass("has-success").removeClass("has-error");
+            $("#work_phone").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_phone").removeClass("er").removeClass("error");
+            $("#work_phonestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+            $("#work_experience").addClass("valid");
+            $("#work_experience").parent().addClass("has-success").removeClass("has-error");
+            $("#work_experience").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_experience").removeClass("er").removeClass("error");
+            $("#work_experiencestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
+            $("#work_salary").removeClass("valid");
+            $("#work_salary").parent().addClass("has-error").removeClass("has-success");
+            $("#work_salary").parent().prev().removeClass("label_true").addClass("label_er");
+            $("#work_salary").addClass("er");
+            $("#work_salary").focus();
+            $("#work_salarystatus").addClass("glyphicon-remove");
+            
+            $("#work_region").addClass("valid");
+            $("#work_region").parent().addClass("has-success").removeClass("has-error");
+            $("#work_region").parent().parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_region").removeClass("er").removeClass("error"); 
+            $("#work_city").addClass("valid");
+            $("#work_city").parent().addClass("has-success").removeClass("has-error");
+            $("#work_city").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_city").removeClass("er").removeClass("error");
+            $("#work_citystatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+            $("#work_street").addClass("valid");
+            $("#work_street").parent().addClass("has-success").removeClass("has-error");
+            $("#work_street").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_street").removeClass("er").removeClass("error");
+            $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+            $("#work_house").addClass("valid");
+            $("#work_house").parent().addClass("has-success").removeClass("has-error");
+            $("#work_house").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_house").removeClass("er").removeClass("error");
+            $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+            $("#work_office").addClass("valid");
+            $("#work_office").parent().addClass("has-success").removeClass("has-error");
+            $("#work_office").parent().prev().removeClass("label_er").addClass("label_true");
+            $("#work_office").removeClass("er").removeClass("error");
+            $("#work_officestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+            
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_name").val("пенсионер");
+            else  $("#work_name").val("безработный");
+            if($(this).val().toLowerCase() == "пенсионер")
+            $("#work_occupation").val("пенсионер");
+            else  $("#work_occupation").val("безработный");
+            var teemp = $("#phone").val();
+            $("#work_phone").val(teemp);
+            $("#work_experience").val(100);
+            $("#work_salary").val("");
+            var teemp2 = Number($("#region").find(":selected").index());
+            $("#work_region option").eq(teemp2).prop("selected", true);
+            var teemp3 = $("#city").val();
+            $("#work_city").val(teemp3);
+            var teemp4 = $("#street").val();
+            $("#work_street").val(teemp4);
+            var teemp5 = $("#building").val();
+            $("#work_house").val(teemp5);
+            $("#work_building").val(" ");
+            var teemp6 = $("#flat").val();
+            $("#work_office").val(teemp6);
+        }
+        else {
+
+            $("#work").removeClass("valid");
+            $("#work").parent().parent().removeClass("has-success");
+            $("#work").parent().parent().prev().removeClass("label_true");
+            $("#work_name").val("");
+            $("#work_name").focus();
+            $("#work_name").removeClass("valid");
+            $("#work_name").parent().removeClass("has-success");
+            $("#work_name").parent().prev().removeClass("label_true"); 
+            $("#work_namestatus").removeClass("glyphicon-ok");
+            $("#work_occupation").val("");
+            $("#work_occupation").removeClass("valid");
+            $("#work_occupation").parent().removeClass("has-success");
+            $("#work_occupation").parent().prev().removeClass("label_true"); 
+            $("#work_occupationstatus").removeClass("glyphicon-ok"); 
+            $("#work_phone").val("");
+            $("#work_phone").removeClass("valid");
+            $("#work_phone").parent().removeClass("has-success");
+            $("#work_phone").parent().prev().removeClass("label_true"); 
+            $("#work_phonestatus").removeClass("glyphicon-ok");
+            $("#work_experience").val("");
+            $("#work_experience").removeClass("valid");
+            $("#work_experience").parent().removeClass("has-success");
+            $("#work_experience").parent().prev().removeClass("label_true"); 
+            $("#work_experiencestatus").removeClass("glyphicon-ok");
+            $("#work_salary").val("");
+            $("#work_salary").removeClass("valid");
+            $("#work_salary").parent().removeClass("has-success");
+            $("#work_salary").parent().prev().removeClass("label_true"); 
+            $("#work_salarystatus").removeClass("glyphicon-ok");
+
+            $("#work_region").removeClass("valid");
+            $("#work_region").parent().parent().removeClass("has-success");
+            $("#work_region").parent().parent().prev().removeClass("label_true"); 
+            $("#work_city").val("");
+            $("#work_city").removeClass("valid");
+            $("#work_city").parent().removeClass("has-success");
+            $("#work_city").parent().prev().removeClass("label_true"); 
+            $("#work_citystatus").removeClass("glyphicon-ok"); 
+            $("#work_street").val("");
+            $("#work_street").removeClass("valid");
+            $("#work_street").parent().removeClass("has-success");
+            $("#work_street").parent().prev().removeClass("label_true"); 
+            $("#work_streetstatus").removeClass("glyphicon-ok"); 
+            $("#work_house").val("");
+            $("#work_house").removeClass("valid");
+            $("#work_house").parent().removeClass("has-success");
+            $("#work_house").parent().prev().removeClass("label_true"); 
+            $("#work_housestatus").removeClass("glyphicon-ok");
+            $("#work_office").val("");
+            $("#work_office").removeClass("valid");
+            $("#work_office").parent().removeClass("has-success");
+            $("#work_office").parent().prev().removeClass("label_true"); 
+            $("#work_officestatus").removeClass("glyphicon-ok");
+            $("#work_name").val(""); 
+            $("#work_occupation").val(""); 
+            $("#work_phone").val("");
+            $("#work_experience").val(""); 
+            $("#work_salary").val("");
+            $("#work_region option").eq(0, true).prop("selected", true);
+            $("#work_city").val("");
+            $("#work_street").val("");
+            $("#work_house").val("");
+            $("#work_building").val("");
+            $("#work_office").val("");
+        }
+    });  
 });

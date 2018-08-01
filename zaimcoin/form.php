@@ -83,13 +83,13 @@ include "header.php";
                 <div class="ex-form-content">
                     <div class="row tab-content">
                         <div role="tabpanel" class="tab-pane fade in active col-xs-12" id="firstTabContent">
-                            <?php require 'form1.php'; ?>
+                            <?php require 'full/form1.php'; ?>
                         </div>
                         <div role="tabpanel" class="tab-pane col-xs-12" id="secondTabContent">
-                            <?php require 'form2.php'; ?>
+                            <?php require 'full/form2.php'; ?>
                         </div>
                         <div role="tabpanel" class="tab-pane col-xs-12" id="lastTabContent">
-                            <?php require 'form3.php'; ?>
+                            <?php require 'full/form3.php'; ?>
                         </div>
                     </div>
                 </div> 

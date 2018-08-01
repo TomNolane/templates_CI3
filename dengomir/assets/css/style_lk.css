@@ -47,12 +47,12 @@
   }
   /* line 27, ../sass/desktop/_offers.scss */
   .ex-offers .ex-offers-block:hover table tr td:first-child p .fa-star {
-    font-size: 11px;
+    font-size: 12px;
     color: #f8e71c;
   }
   /* line 31, ../sass/desktop/_offers.scss */
   .ex-offers .ex-offers-block:hover table tr td:first-child p .fa-star-o {
-    font-size: 11px;
+    font-size: 12px;
     color: #979797;
   }
   /* line 36, ../sass/desktop/_offers.scss */
@@ -127,12 +127,12 @@
   }
   /* line 97, ../sass/desktop/_offers.scss */
   .ex-offers .ex-offers-block table tr td:first-child p .fa-star {
-    font-size: 11px;
+    font-size: 12px;
     color: #FFFFFF;
   }
   /* line 101, ../sass/desktop/_offers.scss */
   .ex-offers .ex-offers-block table tr td:first-child p .fa-star-o {
-    font-size: 11px;
+    font-size: 12px;
     color: #979797;
   }
   /* line 106, ../sass/desktop/_offers.scss */

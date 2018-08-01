@@ -14,9 +14,9 @@ function checkme_form() {
     var y = document.getElementById('agree');
     if (y != null) {
         if (y.checked) {  
-            $('#next1').css("display", "block");
+            $('#next1f').css("display", "block");
         } else { 
-            $('#next1').css("display", "none");
+            $('#next1f').css("display", "none");
         }
     }
 }

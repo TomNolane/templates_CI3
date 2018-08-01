@@ -65,7 +65,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 ?>
 </header>
 <main class="ex-form">
-    <h1 class="text-center">До одобрения кредита вас отделяют всего 1 шаг</h1>
+    <h1 class="text-center">До одобрения кредита вас отделяют всего 3 шага</h1>
     <p></p>
     <ul class="ex-tab-steps text-center" id="form-steps">
         <li class="ex-step-counter ex-step-active">Заполните личные данные</li>
@@ -84,13 +84,13 @@ if(isset($_SERVER['HTTP_REFERER'])){
                 <input type="hidden" id="period" name="period" value="<?php if(isset($period)) { echo $period; } else echo empty($_POST['period'])? 21 : $_POST['period']; ?>"/>
             <div class="tab-content">
                 <div id="firstStep" class="tab-pane fade in active">
-                    <?php require 'form1.php'; ?>
+                    <?php require 'full/form1.php'; ?>
                 </div>
                 <div id="secondStep" class="tab-pane fade">
-                    <?php require 'form2.php'; ?>
+                    <?php require 'full/form2.php'; ?>
                 </div>
                 <div id="thirdStep" class="tab-pane fade">
-                    <?php require 'form3.php'; ?>
+                    <?php require 'full/form3.php'; ?>
                 </div>
             </div>
         </form>

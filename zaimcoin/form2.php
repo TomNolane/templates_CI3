@@ -90,7 +90,7 @@
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="city" id="city" title="Пожалуйста, укажите город в котором вы живете"
-                        value="<?php echo isset($city_name)? $city_name : ''; ?>" pattern="^[А-Яа-яЁё\s]+$" data-validation="custom"
+                        value="<?php echo isset($city_name)? $city_name : ''; ?>" pattern="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation="custom"
                         data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, населенный пункт">
                     <span id="citystatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>

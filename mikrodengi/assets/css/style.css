@@ -3207,7 +3207,7 @@ th {
 
 /* line 1079, ../sass/library/_bootstrap.scss */
 html {
-  font-size: 10px;
+  font-size: 12px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -11628,7 +11628,7 @@ button.close {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 9px;
   padding: 0 3px;
   color: #000;
@@ -12215,7 +12215,7 @@ button.close {
   padding: 0;
   line-height: 36px;
   background-color: transparent !important;
-  color: #9b9b9b;
+  color: #9b9b9b  !important;
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
@@ -12991,12 +12991,12 @@ footer.ex-main-footer p {
 }
 /* line 317, ../sass/desktop/_homepage.scss */
 .ex-home .ex-about .ex-about-block .ex-review .ex-stars .fa-star {
-  font-size: 11px;
+  font-size: 12px;
   color: #4a90e2;
 }
 /* line 321, ../sass/desktop/_homepage.scss */
 .ex-home .ex-about .ex-about-block .ex-review .ex-stars .fa-star-o {
-  font-size: 11px;
+  font-size: 12px;
   color: #979797;
 }
 @media (max-width: 767px) {
@@ -13825,7 +13825,7 @@ main.ex-offerta .ex-offers-content .ex-off-block figure table tr td {
 /* line 52, ../sass/desktop/_offerta.scss */
 main.ex-offerta .ex-offers-content .ex-off-block figure table tr td:first-of-type {
   text-align: left;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 14px;
   color: #4a4a4a;
@@ -14017,4 +14017,7 @@ main.ex-offerta .ex-offers-content .ex-off-block .ex-main-btn {
 }
 .adsbygoogle {
 	text-align: center !important;
+}
+li>a {
+  color: #fff !important;
 }

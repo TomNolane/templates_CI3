@@ -13,9 +13,9 @@ function checkMee() {
     var y2 = document.getElementById('agree');
     if (y2 != null) {
         if (y2.checked) {
-            $('#next1').css("visibility", "visible");
+            $('#next1f').css("visibility", "visible");
         } else {
-            $('#next1').css("visibility", "hidden");
+            $('#next1f').css("visibility", "hidden");
         }
     }
 }

@@ -1,6 +1,7 @@
 <?php $from = '15';
 if($this->uri->segment(1) != 'form')
 {
+    require 'googlesyndication.php';
     echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Mikrodengi -->
     <ins class="adsbygoogle"

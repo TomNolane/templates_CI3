@@ -12167,7 +12167,7 @@ header .navbar-default {
 }
 /* line 283, sass/desktop/_start.scss */
 .ex-start-footer ul li a { 
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 100;
   line-height: 24px;
   text-decoration: none;
@@ -12789,7 +12789,7 @@ header .navbar-default {
 }
 /* line 34, sass/desktop/_zaim.scss */
 .ex-main-zaim .ex-info-block p {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 19px;
   letter-spacing: 0.3px;
   text-align: left;
@@ -12829,7 +12829,7 @@ header .navbar-default {
 @media (max-width: 992px) {
   /* line 59, sass/desktop/_zaim.scss */
   .ex-button-footer .ex-phone span {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 /* line 69, sass/desktop/_zaim.scss */
@@ -13225,8 +13225,6 @@ header .navbar-default {
   right: 20px;
   width: 12px;
   height: 9px;
-  background-image: url(/templates/bzaim/assets/img/unqiue-arrow.png);
-  background-repeat: no-repeat;
 }
 /* line 118, sass/desktop/_form.scss */
 .ex-form .ex-anketa-main .form-group label {
@@ -13287,7 +13285,7 @@ header .navbar-default {
 }
 /* line 172, sass/desktop/_form.scss */
 .ex-form .ex-anketa-foot label {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
 }
 
@@ -13412,7 +13410,7 @@ header .navbar-default {
     }
   }
   .special_form7 {
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
   .special_text_decor {
     text-decoration: none !important;

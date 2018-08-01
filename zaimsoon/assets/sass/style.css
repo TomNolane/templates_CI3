@@ -1997,7 +1997,7 @@ th {
   box-sizing: border-box; }
 
 html {
-  font-size: 10px;
+  font-size: 12px;
   -webkit-tap-highlight-color: transparent; }
 
 body {
@@ -7956,7 +7956,7 @@ button.close {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 9px;
   padding: 0 3px;
   color: #000; }
@@ -8892,10 +8892,10 @@ main.ex-offerta {
       main.ex-offerta .col-md-3 figure .ex-wrapper p {
         margin-bottom: 0; }
         main.ex-offerta .col-md-3 figure .ex-wrapper p .fa-star {
-          font-size: 11px;
+          font-size: 12px;
           color: #a8a8a8; }
         main.ex-offerta .col-md-3 figure .ex-wrapper p .fa-star.ex-checked-stars {
-          font-size: 11px;
+          font-size: 12px;
           color: #e54d42; }
       main.ex-offerta .col-md-3 figure .ex-wrapper .ex-img-offerta {
         display: -webkit-box;

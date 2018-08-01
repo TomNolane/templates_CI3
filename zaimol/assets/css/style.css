@@ -19,7 +19,7 @@
 .irs-with-grid .irs-grid{display:block;}
 .irs-grid-pol{position:absolute;top:0;left:0;width:1px;height:8px;background:#000;}
 .irs-grid-pol.small{height:4px;}
-.irs-grid-text{position:absolute;bottom:0;left:0;white-space:nowrap;text-align:center;font-size:9px;line-height:9px;padding:0 3px;color:#000;}
+.irs-grid-text{position:absolute;bottom:0;left:0;white-space:nowrap;text-align:center;font-size: 12px;line-height:9px;padding:0 3px;color:#000;}
 .irs-disable-mask{position:absolute;display:block;top:0;left:-1%;width:102%;height:100%;cursor:default;background:rgba(0,0,0,0.0);z-index:2;}
 .irs-disabled{opacity:0.4;}
 .lt-ie9 .irs-disabled{filter:alpha(opacity=40);}
@@ -2129,7 +2129,7 @@ th {
 
 /* line 1079, ../sass/library/_bootstrap.scss */
 html {
-  font-size: 10px;
+  font-size: 12px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -10527,7 +10527,7 @@ button.close {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 9px;
   padding: 0 3px;
   color: #000;
@@ -13812,7 +13812,7 @@ section.ex-spasibo .ex-draft .ex-wrapper table:last-of-type td:last-of-type {
 /* line 182, ../sass/desktop/_spasibo.scss */
 section.ex-spasibo .ex-draft .ex-wrapper table tr td {
   padding-top: 5px;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.23px;
 }
 /* line 186, ../sass/desktop/_spasibo.scss */
@@ -14032,4 +14032,8 @@ input#i , input#o, input#f, input#feedback-name {
 } 
 a {
   color: #ececec; 
+}
+ul.list-inline.text-center>li.list-inline-item>a{
+  font-size: 12px;
+  color: #b0b0b0;
 }

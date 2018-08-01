@@ -135,7 +135,7 @@
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip" name="city" id="city" title="Укажите город в котором вы живете"
-                    value="<?php echo isset($city_name)? $city_name : 'г. Новосибирск'; ?>" pattern="^[А-Яа-яЁё\s]+$" data-validation="custom"
+                    value="<?php echo isset($city_name)? $city_name : 'г. Новосибирск'; ?>" pattern="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation="custom"
                     data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Укажите, населенный пункт">
                     <p class="help-block2">Укажите город своего проживания</p>
                     <p class="text-muted helpblock">Пример: г. Новосибирск</p>

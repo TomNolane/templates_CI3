@@ -164,7 +164,7 @@ section.ex-section-1{
                     font-weight: 900;
                   }
                   @media (max-width: 480px) {
-                    font-size: 10px;
+                    font-size: 12px;
                     strong{
                       font-size: 12px;
                     }
@@ -592,14 +592,14 @@ section.ex-section-3{
           overflow: hidden;
         }
         p{
-          font-size: 11px;
+          font-size: 12px;
           line-height: 19px;
           color: #16192a;
           font-weight: 300;
           margin-bottom: 0;
           overflow: hidden;
           @media screen and (max-width: 1199px) and (min-width: 992px) {
-            font-size: 10px;
+            font-size: 12px;
           }
         }
         span{

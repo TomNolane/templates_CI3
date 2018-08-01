@@ -3360,7 +3360,7 @@ th {
 
 /* line 1079, ../sass/library/_bootstrap.scss */
 html {
-  font-size: 10px;
+  font-size: 12px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -11734,7 +11734,7 @@ button.close {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 9px;
   padding: 0 3px;
   color: #000;
@@ -12980,7 +12980,7 @@ section.ex-receive-money .ex-equal .ex-shadow .media .media-body h4 {
 /* line 305, ../sass/desktop/_homepage.scss */
 section.ex-receive-money .ex-equal .ex-shadow .media .media-body p {
   color: #333333;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 14px;
 }

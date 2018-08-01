@@ -67,6 +67,7 @@ body {
   min-height: 133px;
   bottom: 0;
   left: 0;
+  font-size: 12px;
 }
 
 /* line 58, ../sass/core/_global.scss */
@@ -3272,7 +3273,7 @@ th {
 
 /* line 1079, ../sass/library/_bootstrap.scss */
 html {
-  font-size: 10px;
+  font-size: 12px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -11646,7 +11647,7 @@ button.close {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 9px;
   padding: 0 3px;
   color: #000;
@@ -12916,7 +12917,7 @@ footer.ex-main-footer p {
 .ex-home .ex-section-1 .ex-calc-wraper .ex-tab-section .ex-calc-block .ex-crumbs .ex-unique {
   padding-right: 3px;
   color: #171d44;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
   vertical-align: top;
 }
@@ -13297,7 +13298,7 @@ main.ex-offers .ex-offers-content .ex-off-block figure table tr td:first-of-type
 main.ex-offers .ex-offers-content .ex-off-block figure table tr td:last-of-type {
   text-align: right;
   color: #333333;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   line-height: 12px;
 }

@@ -625,6 +625,10 @@
     });
 </script>';
 }  
+if ($this->uri->segment(1) == 'form') 
+{
+    require 'templates/common/switch_form.php';
+}
  require 'yandexmetrika.php';
  require 'googleanalytics.php';
 ?>

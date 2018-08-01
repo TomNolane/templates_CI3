@@ -89,6 +89,7 @@ body {
   min-height: 133px;
   bottom: 0;
   left: 0;
+  font-size: 12px;
 }
 
 /* line 69, ../sass/core/_global.scss */
@@ -12427,7 +12428,7 @@ a.text-dark:focus, a.text-dark:hover {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 9px;
   padding: 0 3px;
   color: #000;

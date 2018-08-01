@@ -23,7 +23,7 @@ if($this->uri->segment(1) != 'form')
                 </a>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12 spec_footer4">
-                <div style="font-size: 11px;">
+                <div style="font-size: 12px;">
                     <p>Сервис по подбору выгодных онлайн займов находящийся по адресу
                         <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
                         <br><a href="mailto:support@vkredito.ru" target="_blank">support@vkredito.ru</a>

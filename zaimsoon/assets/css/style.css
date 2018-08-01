@@ -3200,7 +3200,7 @@ th {
 
 /* line 1079, ../sass/library/_bootstrap.scss */
 html {
-  font-size: 10px;
+  font-size: 12px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -11214,7 +11214,7 @@ button.close {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 9px;
   padding: 0 3px;
   color: #000;
@@ -12588,12 +12588,12 @@ main.ex-offerta .col-md-3 figure .ex-wrapper p {
 }
 /* line 31, ../sass/desktop/_offerta.scss */
 main.ex-offerta .col-md-3 figure .ex-wrapper p .fa-star {
-  font-size: 11px;
+  font-size: 12px;
   color: #a8a8a8;
 }
 /* line 35, ../sass/desktop/_offerta.scss */
 main.ex-offerta .col-md-3 figure .ex-wrapper p .fa-star.ex-checked-stars {
-  font-size: 11px;
+  font-size: 12px;
   color: #e54d42;
 }
 /* line 40, ../sass/desktop/_offerta.scss */

@@ -2,12 +2,12 @@ var agree = 0;
 $('#agree').change(function(){ 
     if (agree == 1)
     {
-        $('#submitOne').css("visibility","visible");
+        $('#next1f').css("visibility","visible");
         agree = 0;
     }
     else
     {
-        $('#submitOne').css("visibility","hidden");
+        $('#next1f').css("visibility","hidden");
         agree = 1;
     }
 });
@@ -466,27 +466,27 @@ $("#email").suggestions({
              }
         })
     ); 
-	$('#submitOne').click(function(){
+	$('#next1f').click(function(){
 		if (validate1()) {
-			// send_form();
-			// $('.ex-step-counter').removeClass('ex-step-active');
-            // $('.ex-step-2').addClass('ex-step-active');
-            // $('#firstStep').removeClass('in active');
-            // $('#secondStep').addClass('in active');
-            // $('.spec_footer4').css('visibility','hidden');
-            // if($('.ex-calc-zaim').hasClass('ex-calc-zaim-open'))
-            // {
-            //     $('.ex-calc-zaim').click();
-            // }
-            // //traffic(window.location.hostname,1);
-            // $('.spec_footer5').css('visibility','hidden'); 
-			// $('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
-			// markTarget('form-step-1');
-             $('input[name="step"]').val('3');
-			$('#form-modal').show();
-			send_form(true, '/lk');
-            markTarget('form-step-3');
-            window.location = '/lk';
+			send_form();
+			$('.ex-step-counter').removeClass('ex-step-active');
+            $('.ex-step-2').addClass('ex-step-active');
+            $('#firstStep').removeClass('in active');
+            $('#secondStep').addClass('in active');
+            $('.spec_footer4').css('visibility','hidden');
+            if($('.ex-calc-zaim').hasClass('ex-calc-zaim-open'))
+            {
+                $('.ex-calc-zaim').click();
+            }
+            //traffic(window.location.hostname,1);
+            $('.spec_footer5').css('visibility','hidden'); 
+			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
+			markTarget('form-step-1');
+            //  $('input[name="step"]').val('3');
+			// $('#form-modal').show();
+			// send_form(true, '/lk');
+            // markTarget('form-step-3');
+            // window.location = '/lk';
 		}
 		showBzzz = false;
 		$('.reg_same').change();
@@ -495,7 +495,7 @@ $("#email").suggestions({
 		$('select[name="reg_type"]').change();
        
 	});
-	$('#submitTwo').click(function(){
+	$('#next2').click(function(){
 		if (validate2()) {
             $('input[name="step"]').val('2');
 			send_form();
@@ -510,7 +510,7 @@ $("#email").suggestions({
 		showBzzz = false;
 		setcookies();
 	});
-	$('#form-send').click(function(){
+	$('#getmoney').click(function(){
 		if (validate()) {
             $('input[name="step"]').val('3');
 			$('#form-modal').show();

@@ -16,7 +16,7 @@
 .irs-with-grid .irs-grid{display:block;}
 .irs-grid-pol{position:absolute;top:0;left:0;width:1px;height:8px;background:#000;}
 .irs-grid-pol.small{height:4px;}
-.irs-grid-text{position:absolute;bottom:0;left:0;white-space:nowrap;text-align:center;font-size:9px;line-height:9px;padding:0 3px;color:#000;}
+.irs-grid-text{position:absolute;bottom:0;left:0;white-space:nowrap;text-align:center;font-size: 12px;line-height:9px;padding:0 3px;color:#000;}
 .irs-disable-mask{position:absolute;display:block;top:0;left:-1%;width:102%;height:100%;cursor:default;background:rgba(0,0,0,0.0);z-index:2;}
 .irs-disabled{opacity:0.4;}
 .lt-ie9 .irs-disabled{filter:alpha(opacity=40);}
@@ -309,7 +309,7 @@ a, a:hover, a:visited, a:focus{
 }
 .form-info-title{
     float: left;
-    font-size: 10px;
+    font-size: 12px;
 }
 .form-info-data{
     float: right;   
@@ -322,7 +322,7 @@ a, a:hover, a:visited, a:focus{
 
 .calc .form .form-button .probability{
     float:left;
-    font-size:10px;
+    font-size:12px;
     font-weight:bold;
     line-height:10px;
     margin:6px;
@@ -701,6 +701,7 @@ footer .logo{
 }
 footer a, footer a:hover, footer a:visited{
     color:#ffffff;
+    font-size: 12px;
     text-decoration:none;
 }
 footer .menu a{
@@ -720,7 +721,7 @@ footer .social{
     margin-top:30px;
 }
 footer .disclimer{
-    font-size:10px;
+    font-size:12px;
     margin-top:27px;
     text-align:justify;
     text-indent:0px;
@@ -913,7 +914,7 @@ footer .copy{
     color:#ccc !important;
 }
 .font10 {
-    font-size: 10px !important;
+    font-size: 12px !important;
 }
 .font40 {
     font-size: 40px !important;

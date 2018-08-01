@@ -82,7 +82,7 @@ include "header.php";
                                 <span></span>
                             </div>
                             <p>Личные данные 
-                                <br> (всего 1 шаг)</p>
+                                <br> (всего 3 шага)</p>
                         </figure>
                         <figure class="ex-last-step">
                             <p style="width: 105px; left: -130%;"></p>
@@ -102,17 +102,17 @@ include "header.php";
                     <input type="hidden" name="fingerprint" id="fingerprint" value="">
                     <div class="row tab-content">
                         <div role="tabpanel" class="tab-pane fade in active col-xs-12" id="firstTabContent">
-                            <?php  require 'form1.php'; ?>
+                            <?php  require 'full/form1.php'; ?>
                         </div>
                     </div>
                     <div class="row tab-content">
                         <div role="tabpanel" class="tab-pane col-xs-12" id="secondTabContent"> 
-                        <?php  require 'form2.php'; ?>
+                        <?php  require 'full/form2.php'; ?>
                         </div>
                     </div>
                     <div class="row tab-content">
                         <div role="tabpanel" class="tab-pane col-xs-12" id="lastTabContent"> 
-                        <?php  require 'form3.php'; ?>
+                        <?php  require 'full/form3.php'; ?>
                         </div>
                     </div>
                 </form>

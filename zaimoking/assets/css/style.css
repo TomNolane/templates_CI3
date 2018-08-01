@@ -3208,7 +3208,7 @@ th {
 
 /* line 1079, ../sass/library/_bootstrap.scss */
 html {
-  font-size: 10px;
+  font-size: 12px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -11272,7 +11272,7 @@ button.close {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 9px;
   padding: 0 3px;
   color: #000;
@@ -13640,4 +13640,7 @@ main.ex-offerta .ex-offers-content .ex-off-block.ex-offers-active figure {
 }
 .adsbygoogle {
 	text-align: center !important;
+}
+ul.list-inline.text-center>li.list-inline-item>a{
+  font-size: 12px;
 }

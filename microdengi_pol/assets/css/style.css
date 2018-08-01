@@ -11368,7 +11368,7 @@ a.text-dark:focus, a.text-dark:hover {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 9px;
   padding: 0 3px;
   color: #000;
@@ -12629,7 +12629,7 @@ main.ex-faq .ex-bg-head a {
 @media (max-width: 1199px) and (min-width: 992px) {
   /* line 41, /templates/microdengi_pol/assets/sass/desktop/_offerta.scss */
   .ex-offerta .ex-offers-block table tr td div p {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 /* line 52, /templates/microdengi_pol/assets/sass/desktop/_offerta.scss */

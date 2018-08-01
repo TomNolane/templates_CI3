@@ -94,7 +94,7 @@
         </div>
     </div>
 </div>
-
+<br>
 <div class="form-group has-feedback">
     <label class="col-sm-4 control-label label-required hidden-xs">Населённый пункт</label>
     <div class="col-sm-8 col-xs-12">

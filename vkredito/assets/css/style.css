@@ -29,7 +29,6 @@
 }
 html, body{height:100%;margin:0;padding:0;}
 body{background-color:#f3f8fd;color:#80909c;font-size:18px;font-family:'Myriad Pro';font-weight:400;}
-.amm{}
 .am{border:2px double #ccc;padding:5px;color:#333;border-radius:5px;background:#fff;left:15px;width:62.8%;}
 .page{margin-bottom:0px;min-height:100%;}
 .buffer{height:65px;}
@@ -45,7 +44,7 @@ p.text-indent{text-align:justify;text-indent:35px;}
 .controls{text-transform:uppercase;}
 .extra-controls{background-color:white;color:black;padding:0px;border-radius:10px;border:2px double #000;}
 .summary{background-color:white;padding:0px;border-radius:10px;border:1px double #000;text-align:center;}
-.summary div, .summary .hidden-xs{font-size:11px;}
+.summary div, .summary .hidden-xs{font-size:12px;}
 .summary span{font-size:22px;}
 .form-control{border-width:2px;font-size:20px;height:44px;}
 .middle-cover{display:table;}
@@ -150,7 +149,7 @@ h4.panel-title a.collapsed{color:#7acaf6;}
 #hey .btn{font-size:13px;height:38px;padding:9px 14px;text-transform:uppercase;}
 footer{background:#7acaf6;color:#ffffff;padding-top:25px;}
 footer .logo{margin:3px 0;max-width:259px;min-width:110px;width:100%;}
-footer a, footer a:hover, footer a:visited{color:#ffffff;text-decoration:none;}
+footer a, footer a:hover, footer a:visited{color:#ffffff;text-decoration:none;font-size:12px;}
 footer .menu-header a{font-size:15px;font-family:'Myriad Pro';font-weight:600;line-height:25px;}
 footer .menu a{font-size:14px;font-family:'Myriad Pro';font-weight:400;line-height:25px;}
 .dadata{}
@@ -398,4 +397,7 @@ input:valid:not(:placeholder-shown) {border-color: green !important;}
 }  
 .help-block {
     display: none !important;
+}
+label {
+  font-size: 18px !important;
 }

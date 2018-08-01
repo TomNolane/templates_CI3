@@ -3,12 +3,12 @@ var agree = 1;
 $('#agree').change(function(){ 
     if (agree == 1)
     {
-        $('#submitOne').removeClass('btn3').addClass('btn2');
+        $('#next1f').removeClass('btn3').addClass('btn2');
         agree = 0;
     }
     else
     {
-        $('#submitOne').removeClass('btn2').addClass('btn3')
+        $('#next1f').removeClass('btn2').addClass('btn3')
         agree = 1;
     }
 });
@@ -477,51 +477,17 @@ $("#email").suggestions({
     else {
         
     }
-	$('#submitOne').click(function(){
+    $('#next1f').click(function(){
 		if (validate1()) {
-
-            // $('#birthdate').val().split('/');
-            // var birth = $('#birthdate').val().split('/')[2]+"-"+$('#birthdate').val().split('/')[1]+"-"+$('#birthdate').val().split('/')[0];
-
-            //  var formData = "amount="+$('input[name="amount"]').val()+"&term="+$('input[name="period"]').val()+
-            //  "&last_name="+$('input[name="f"]').val()+"&first_name="+$('input[name="i"]').val()+"&middle_name="+$('input[name="o"]').val()+
-            //  "&gender="+$('input[name="gender"]').val()+"&birthdate="+birth
-            //  +"&email="+$('input[name="email"]').val()+"&phone="+$('input[name="phone"]').val()+"&region="+$('select[name="region"]').val()+"&city="+$('input[name="city"]').val()+
-            //  "&passport_series="+$('#passport-s').val()+"&passport_number="+$('#passport-n').val();
-             
-            // $.ajax({
-            //     type: 'POST',
-            //     url: 'post',
-            //     data: formData,
-            //     success: function(data)
-            //     {
-            //         console.log(data);
-            //     },
-            //     error: function (data)
-            //     {
-            //         console.log(data);
-            //     }
-            // });
-
-            // $('input[name="step"]').val('3');
-            // $('#form-modal').show();
-			// //send_form(true, '/lk');
-            // markTarget('form-step-3');
-            // window.location = '/lk';
-            $('input[name="step"]').val('3');
-            $('#form-modal').show();
-			send_form(true, '/lk');
-            markTarget('form-step-3');
-            window.location = '/lk';
-			// send_form();
-			// $('.ex-step-counter').removeClass('ex-step-active');
-            // $('.ex-step-2').addClass('ex-step-active');
-            // $('#firstStep').removeClass('in active');
-            // $('#secondStep').addClass('in active');
-            // $('.spec_footer4').css('visibility','hidden');
-            // $('.spec_footer5').css('visibility','hidden'); 
-			// $('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
-			// markTarget('form-step-1');
+			send_form();
+			$('.ex-step-counter').removeClass('ex-step-active');
+            $('.ex-step-2').addClass('ex-step-active');
+            $('#firstStep').removeClass('in active');
+            $('#secondStep').addClass('in active');
+            $('.spec_footer4').css('visibility','hidden');
+            $('.spec_footer5').css('visibility','hidden'); 
+			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
+			markTarget('form-step-1');
 		}
 		showBzzz = false;
 		$('.reg_same').change();
@@ -530,7 +496,7 @@ $("#email").suggestions({
 		$('select[name="reg_type"]').change();
        
 	});
-	$('#submitTwo').click(function(){
+	$('#next2').click(function(){
 		if (validate2()) {
             $('input[name="step"]').val('2');
             send_form();
@@ -544,7 +510,7 @@ $("#email").suggestions({
 		showBzzz = false;
 		setcookies();
 	});
-	$('#form-send').click(function(){
+	$('#getmoney').click(function(){
 		if (validate()) {
             $('input[name="step"]').val('3');
             $('#form-modal').show();

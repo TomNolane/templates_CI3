@@ -69,7 +69,7 @@ include "header.php";
 ?>
 <div class="ex-form">
 <div class="container" id="to_scroll">
-    <h2 class="text-center">До одобрения займа вас отделяют всего 1 шаг</h2>
+    <h2 class="text-center">До одобрения займа вас отделяют всего 3 шага</h2>
     <div class="ex-bg-form">
             <?php $period; ?>
             <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off">
@@ -83,13 +83,13 @@ include "header.php";
                 <input type="hidden" id="period" name="period" value="<?=$period;?>"/>
             <div class="tab-content">
                 <div id="firstStep" class="tab-pane fade in active">
-                    <?php require 'form1.php';?>
+                    <?php require 'full/form1.php';?>
                 </div>
                 <div id="secondStep" class="tab-pane fade">
-                    <?php require 'form2.php';?>
+                    <?php require 'full/form2.php';?>
                 </div>
                 <div id="thirdStep" class="tab-pane fade">
-                    <?php require 'form3.php';?>
+                    <?php require 'full/form3.php';?>
                 </div>
             </div>
         </form>

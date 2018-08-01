@@ -18,6 +18,7 @@ if(!isset($description))
         }
         echo '<!-- Сендпульс Sendpulse -->';
         require 'sendpuls.php';
+        require 'templates/common/new2/php/utm.php';
     ?>
     <!--[if lte IE 9]>
     <script src="/modules/html5shiv/html5shiv.js"></script>

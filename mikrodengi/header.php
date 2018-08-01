@@ -140,7 +140,7 @@ if(!isset($description))
 	<?php
 		require 'sendpuls.php';
         require 'google_tag_manager.php';
-        require 'googlesyndication.php';
+        
         require 'templates/common/new2/php/utm.php';
     ?>
 </head>

@@ -152,7 +152,7 @@
                         <p class="text-muted helpblock">Пример: email@mail.ru</p>
                     </div>
                 </div>
-                <div class="col-sm-6 hidden">
+                <div class="col-sm-12 hidden">
                     <div class="form-group ex-arrow-on">
                         <label for="credit">Кредитная история</label>
                         <select class="form-control" id="credit">

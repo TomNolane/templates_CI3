@@ -12382,7 +12382,7 @@ a.text-dark:focus, a.text-dark:hover {
   left: 0;
   white-space: nowrap;
   text-align: center;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 9px;
   padding: 0 3px;
   color: #000;
@@ -13664,7 +13664,7 @@ footer.ex-main-footer p {
   display: block;
   text-align: right;
   color: #9b9b9b;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
 }
 @media (max-width: 991px) {
@@ -15235,4 +15235,7 @@ main.ex-form .nav {
 /* line 33, ../sass/desktop/_articles.scss */
 .ex-art3-bg {
   background-image: url("/templates/zaimnow/assets/img/art3.png");
+}
+ul.list-inline.text-center>li.list-inline-item>a{
+  font-size: 12px;
 }

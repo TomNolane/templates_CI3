@@ -49,11 +49,11 @@ function checkMee()
     {
         if(y2.checked)
         { 
-            $('#next1').css("visibility", "visible");  
+            $('#next1f').css("visibility", "visible");  
         }
         else
         {
-            $('#next1').css("visibility", "hidden");
+            $('#next1f').css("visibility", "hidden");
         } 
     } 
 }
