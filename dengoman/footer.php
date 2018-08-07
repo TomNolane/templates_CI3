@@ -7,15 +7,17 @@ $from = '15';
 if($this->uri->segment(1) != 'form')
 {
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Деньгомэн -->
-    <ins class="adsbygoogle text-center"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="9017730427"
-    data-ad-format="auto"></ins>
+    <!-- Dengoman -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9509439067407055"
+         data-ad-slot="3200680896"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>';
+    </script>
+    ';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
 ?>

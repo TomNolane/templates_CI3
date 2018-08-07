@@ -85,9 +85,7 @@ include "header.php";
                         Для оформления потребуется паспорт
                     </h2>
                     <ul class="ex-step-indicator">
-                        <li class="ex-current" title="Личные данные"><span>Всего</span></li>
-                        <li class="ex-current"><span>Три</span></li>
-                        <li class="ex-current"><span>Шага</span></li>
+                        <li class="ex-current" title="Личные данные"><span>Шаг 1. Личные данные</span></li>
                     </ul>
                    <?php require 'full/form1.php'; ?>
                 </div>

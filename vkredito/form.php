@@ -70,7 +70,7 @@ include "header.php";
                             <div id="form2" class="tab-pane fade">
                                 <?php require('full/form2.php'); ?>
                                 <div class="form-group">
-                                    <div class="col-sm-8 col-sm-offset-4 col-xs-12">
+                                    <div class="col-sm-10 col-sm-offset-2 col-xs-12">
                                         <div class="text-center">
                                             <a class="btn btn-primary btn-next" id="next2">Далее
                                                 <i class="fa fa-arrow-right"></i>

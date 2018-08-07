@@ -102,7 +102,7 @@
 <section class="ex-section-2 hidden-xs hidden-sm">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="ex-actions">
                     <p class="noSelect">Статьи
                         <br> о займах</p>

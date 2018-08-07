@@ -100,8 +100,13 @@ ins {
     visibility: hidden;
 }
 .row {
-	margin-right: 0 !important;
-    margin-left: 0 !important;
+    <?php if($site == "zaimol") {?>
+        margin-right: 15px !important;
+        margin-left: 5px !important;
+    <?php }else {?>
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    <?php }?>
 }
 .col-md-12 {
 	padding-right: 0 !important;

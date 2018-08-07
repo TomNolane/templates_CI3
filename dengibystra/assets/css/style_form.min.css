@@ -1,0 +1,55 @@
+.has-error .help-block {
+    display : none;
+}
+.ex-form .ex-anketa-main .form-group input {
+    padding: 15px 5px 15px 15px;
+} 
+::placeholder {
+    font-size: 13px !important;
+}
+::-webkit-input-placeholder {
+    font-size: 13px !important;
+}
+::-moz-placeholder {
+    font-size: 13px !important;
+}
+.ex-form .ex-anketa-main .form-group select {
+    font-size: 14px;
+    padding: 15px 35px 15px 5px;
+}
+.ex-wrapper {
+    margin-bottom: 20px;
+}
+.ex-form .ex-anketa-main .form-group {
+    padding-bottom: 0px !important;
+}
+#passport_code::placeholder , #passportdate::placeholder{
+    font-size: 12px !important; 
+}
+#passport_code::-moz-placeholder, #passportdate::-moz-placeholder {
+    font-size: 12px !important; 
+}
+#passport_code::-webkit-input-placeholder, #passportdate::-webkit-input-placeholder {
+    font-size: 12px !important; 
+}
+.irs-single { 
+     margin-left: -32px !important; 
+}
+.form-group input[type="radio"]{
+width: 15px !important;
+height: 15px !important;
+
+}
+.reg_same {
+display: inline-block !important;
+vertical-align: middle !important;
+margin-bottom: 0 !important;
+}
+.asd {
+display: inline-block !important ;
+vertical-align: middle !important;
+margin-bottom: 0 !important;
+}
+.help-block {
+    display: none !important; 
+}
