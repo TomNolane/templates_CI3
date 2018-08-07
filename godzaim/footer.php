@@ -61,12 +61,13 @@ $px = ($px - 3.5) . '%';
 if($this->uri->segment(1) != 'form')
 {
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Годзайм -->
-    <ins class="adsbygoogle text-center"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="6493253837"
-    data-ad-format="auto"></ins>
+    <!-- Godzaim -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9509439067407055"
+         data-ad-slot="9238958715"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';

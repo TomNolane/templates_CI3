@@ -2,15 +2,16 @@
     if($this->uri->segment(1) != 'form')
     {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- Zaimoking -->
-		<ins class="adsbygoogle"
-		style="display:block"
-		data-ad-client="ca-pub-2169296404508755"
-		data-ad-slot="6316413023"
-		data-ad-format="auto"></ins>
-		<script>
-		(adsbygoogle = window.adsbygoogle || []).push({});
-		</script>';
+        <!-- Zaimoking -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9509439067407055"
+             data-ad-slot="4673544662"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
         echo '<a href="#0" class="cd-top">Наверх</a>';
     }
 ?>

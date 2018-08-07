@@ -1,24 +1,20 @@
 <?php $from = '15';
-if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'allarticles')
-{
-    echo '<a href="#0" class="cd-top">Наверх</a>';
-} 
-
 if($this->uri->segment(1) != 'form')
 {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Fanzaim -->
-        <ins class="adsbygoogle text-center"
-        style="display:block"
-        data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="9262887402"
-        data-ad-format="auto"></ins>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9509439067407055"
+             data-ad-slot="5024898450"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
+        echo '<a href="#0" class="cd-top">Наверх</a>';
 }
 ?> 
-
 <footer class="ex-main-footer">
         <div class="container text-center">
             <div class="ex-wrapper"><a href="/"><img src="/templates/fanzaim/assets/img/icons/Fanzaim-logo-footer.png"  alt="Image"></a></div>
