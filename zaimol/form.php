@@ -81,13 +81,15 @@ include "header.php";
             <div class="tab-content">
                 <div id="firstStep" class="tab-pane fade in active">
                     <h2>
-                        До одобрения кредита вас отделяют всего 3 шага
+                        До одобрения кредита вас отделяют всего 1 шаг
                         Для оформления потребуется паспорт
                     </h2>
                     <ul class="ex-step-indicator">
-                        <li class="ex-current" title="Личные данные"><span>Шаг 1. Личные данные</span></li>
+                        <li class="ex-current" title="Личные данные"><span>Всего</span></li>
+                        <li class="ex-current"><span>Один</span></li>
+                        <li class="ex-current"><span>Шаг</span></li>
                     </ul>
-                   <?php require 'full/form1.php'; ?>
+                   <?php require 'form1.php'; ?>
                 </div>
                 <div id="secondStep" class="tab-pane fade">
                     <ul class="ex-step-indicator">
@@ -95,7 +97,7 @@ include "header.php";
                         <li class="ex-current" title="Паспортные данные"><span>Шаг 2. Паспортные данные</span></li>
                         <li><span>Шаг 3</span></li>
                     </ul>
-                    <?php require 'full/form2.php'; ?>
+                    <?php require 'form2.php'; ?>
                 </div>
                 <div id="thirdStep" class="tab-pane fade">
                     <ul class="ex-step-indicator">
@@ -103,7 +105,7 @@ include "header.php";
                         <li class="ex-current" title="Паспортные данные"><span>Шаг 2. Паспортные данные</span></li>
                         <li class="ex-current" title="Данные о работе"><span>Шаг 3. Данные о работе</span></li>
                     </ul>
-                    <?php require 'full/form3.php'; ?>
+                    <?php require 'form3.php'; ?>
                 </div>
         </div>
     </form>

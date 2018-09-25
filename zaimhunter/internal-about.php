@@ -1,5 +1,5 @@
-
-<main class="">
+<?php require 'header.php';?>
+<main>
     <div class="ex-about-info">
         <div class="container">
             <h1>Займы онлайн: мгновенная финансовая помощь</h1>
@@ -123,3 +123,4 @@
         </section>
     </div>
 </main>
+<?php require 'footer.php';?>

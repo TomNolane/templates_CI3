@@ -94,15 +94,15 @@ include "header.php";
                             </div>
                         </div>
                     </div>
-                    <?php require 'full/form1.php'?>
+                    <?php require 'form1.php'?>
                 </div>
                 <div id="secondStep" class="tab-pane fade">
                     <h2 class="text-center">Заполните паспортные данные</h2>
-                    <?php require 'full/form2.php'?>
+                    <?php require 'form2.php'?>
                 </div>
                 <div id="thirdStep" class="tab-pane fade">
                     <h2 class="text-center">Заполните данные о работе</h2>
-                    <?php require 'full/form3.php'?>
+                    <?php require 'form3.php'?>
                 </div>
             </div>
         </form>

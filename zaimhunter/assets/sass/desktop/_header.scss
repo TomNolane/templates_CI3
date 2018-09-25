@@ -1,47 +1,37 @@
-header {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.18);
-}
-#ex-homepage-header {
+#ex-homepage-header{
   border-radius: 0;
   padding-top: 52px;
   background-color: transparent;
   border: none;
   padding-bottom: 50px;
   margin-bottom: 0;
-  .navbar-brand {
-    width: 200px;
-    height: 45px;
+  .navbar-brand{
+    width: 140px;
+    height: 40px;
     padding: 0;
-    img {
+    img{
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
   }
-  .navbar-right {
-    li {
-      a {
+  .navbar-right{
+    li{
+      a{
         text-decoration: none;
-        padding: 5px 25px;
+        padding-top: 12px;
+        padding-bottom: 15px;
         outline: none;
         color: #ffffff;
-        font-size: 18px;
-        font-weight: 500;
-        @media screen and (max-width: 991px) and (min-width: 768px) {
-          padding: 5px 12px;
-        }
       }
     }
   }
-  .icon-bar {
-    background-color: #1589ee !important;
+  .icon-bar{
+    background-color: $white!important;
   }
 }
 
-.ex-main-header {
-  background-color: #268FFB;
+.ex-main-header{
+  background-color: $mainHeader;
   @extend #ex-homepage-header;
-.navbar-toggle{
-padding: 11px;
-}
 }

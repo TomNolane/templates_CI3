@@ -1,27 +1,34 @@
-.ex-documents {
-  margin-bottom: 85px;
-  h1 {
-    color: #333333;
-    font-size: 36px;
+#ex-documents{
+  padding-top: 65px;
+  padding-bottom: 50px;
+  h2{
     font-weight: 700;
-    line-height: 42px;
-    margin-top: 60px;
-    margin-bottom: 70px;
+    margin-top: 0;
+    margin-bottom: 65px;
   }
- p {
-    color: #262626;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0.2px;
+  .row{
+    figure{
+      margin-bottom: 30px;
+      height: 330px;
+      overflow: hidden;
+      @include prefix(border-radius, 10px);
+      img{
+        width: 100%;
+        height: 100%;
+      }
+      @media (max-width: 991px) {
+        height: 465px;
+      }
+      @media (max-width: 580px) {
+        height: 400px;
+      }
+      @media (max-width: 414px) {
+        height: 300px;
+      }
+    }
   }
-  span {
-    display: block;
-    text-indent: 50px;
-  }
-  .ex-new-style-paragraph {
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 0.18px;
+  p{
+    margin-bottom: 20px;
+    text-align: justify;
   }
 }

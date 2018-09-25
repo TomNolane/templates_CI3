@@ -1,0 +1,76 @@
+section.ex-email{
+  padding: 0 10px 35px;
+  .ex-mail {
+    padding-top: 45px;
+     div{
+      display: inline-block;
+      position: relative;
+      span {
+        position: absolute;
+        width: 24px;
+        height: 23px;
+        top: -11px;
+        right: -11px;
+        background-color: #d0021b;
+        @include prefix(border-radius, 50%);
+        color: #fff;
+        z-index: 1;
+        padding: 5px 7px;
+      }
+    }
+  }
+  h2 {
+    color: #242424;
+    font-family: $lato;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.18px;
+    margin-top: 34px;
+    margin-bottom: 34px;
+    @media (min-width: 500px) {
+      text-align: center;
+    }
+  }
+  p {
+    color: #242424;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-bottom: 38px;
+    b {
+      font-weight: 700;
+    }
+  }
+  .ex-actions {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    justify-content: space-between;
+    button{
+      height: 42px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1.71px;
+    }
+    button[type=button] {
+      width: 47.5%;
+      border: 1px solid #dddddd;
+      background-color: #ffffff;
+      color: #dddddd;
+      @include prefix(border-radius, 3px);
+    }
+    button[type=submit] {
+      width: 49%;
+      background-color: #258df7;
+      color: #ffffff;
+      border: none;
+      @include prefix(border-radius, 3px);
+    }
+  }
+}

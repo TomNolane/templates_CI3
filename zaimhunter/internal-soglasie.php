@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <main>
     <div class="container">
         <div class="row ex-documents2">
@@ -69,3 +70,4 @@
         </div>
     </div>
 </main>
+<?php require 'footer.php';?>

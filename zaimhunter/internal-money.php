@@ -1,3 +1,4 @@
+<?php require 'header.php';?>
 <main>
     <div class="container">
         <div class="ex-money">
@@ -78,3 +79,4 @@
         </div>
     </div>
 </main>
+<?php require 'footer.php';?>

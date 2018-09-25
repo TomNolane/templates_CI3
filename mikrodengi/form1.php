@@ -145,7 +145,7 @@
             </div>
             <div class="form-group has-feedback">
                 <div class="col-md-8 col-md-offset-4">
-                    <a id="submitOne" class="ex-main-btn btn3 text-center">Получить деньги</a>
+                    <a id="next1f" class="ex-main-btn btn3 text-center" style="margin-top:  20px; position:  relative; display:  block;">Получить деньги</a>
                 </div>
             </div>
         </div>

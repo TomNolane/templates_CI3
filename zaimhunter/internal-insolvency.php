@@ -1,4 +1,5 @@
-<main class="">
+<?php require 'header.php';?>
+<main>
     <div class="ex-info">
         <div class="container">
             <h1>Банкротство физических лиц</h1>
@@ -71,3 +72,4 @@
         </section> 
     </div>
 </main>
+<?php require 'footer.php';?>

@@ -515,6 +515,7 @@ $(document).ready(function () {
     });
 
     $('#next1f').click(function () { 
+		/*
         if (validate1()) { 
                 // $('input[name="step"]').val('3');
                 // send_form(true, '/lk');
@@ -538,6 +539,16 @@ $(document).ready(function () {
         $('.reg_same').change();
         setcookies();
         $('select[name="reg_type"]').change();
+		*/
+		if (validate()) { 
+            $('input[name="step"]').val('3');
+            send_form(true, '/lk');
+            //traffic(window.location.hostname,3);
+            markTarget('form-step-3');
+            $('#anketa').submit();
+        }
+        showBzzz = false;
+        setcookies();
     }); 
     $('#next2').click(function () {
         if (validate2()) {

@@ -1,38 +1,45 @@
+<br><br>
 <?php $from = '15'; $px = '63.974'; 
 if($this->uri->segment(1) != 'form')
 {
-	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Займхоум -->
-    <ins class="adsbygoogle text-center"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="4797028786"
-    data-ad-format="auto"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>';
+	echo '';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 } 
 ?>
-<footer class="ex-main-footer">
-<div class="container" style="width: 100%">
-    <div class="col-sm-3 text-center">
-        <div class="ex-footer-logo">
-            <a href="/"><img src="/templates/zaimhome/assets/img/header-logo.png" alt="Missing image" class="special_foot22"></a>
-        </div> 
-        <p class="special_footer3 ">Сервис выгодного онлайн займа</p>
-    </div>
-    <div class="col-sm-3 small spec_footer4 ">
-        <p>Сервис по подбору выгодных онлайн займов
-            <br>находящийся по адресу
-            <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
-            <br><a href="mailto:support@zaimhome.ru" target="_blank">support@zaimhome.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span></p>
-    </div>
-    <div class="col-sm-6 hidden-xs hidden-sm spec_footer5">
-        <p style="font-size: 85%;">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</p>
-    </div>
-</div>
-</footer>
+<footer class="ex-start-footer">
+    <div class="container">
+        <div class="row ex-main-footer">
+            <div class="col-md-2">
+                <div class="ex-footer-logo">
+                    <a rel="nofollow" href="/"> <img src="/templates/test/assets/img/footer-logo-zaimhunter.png" alt="logo-zaimhunter"></a>
+                </div>
+            </div>
+            <div class="col-md-10 spec_footer4">
+                <p>Сервис по подбору выгодных онлайн займов
+                    находящийся по адресу Россия, Ленинградская обл.
+                    г. Санкт-Петербург, ул. Осипенко, 12, оф 201
+                    <a rel="nofollow" href="mailto:support@zaimhunter.ru">support@zaimhunter.ru</a> <span class="hidden-xs hidden-sm">| +7 (495) 006 19 61</span><br>
+                    <span id="special_footer" class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
+                    Максимальная процентная ставка по займу составляет
+                    0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок
+                    пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате
+                    31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
+                    <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span>
+                </p>
+            </div>
+            <div class="col-sm-12">
+                <hr/>
+                <ul class="list-inline text-center">
+                    <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
+                    <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+</footer>  
 <!-- [if lt IE 10]>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif] --> 
@@ -43,15 +50,17 @@ if($this->uri->segment(1) != 'form')
     echo 'try{';
     require 'footer_common_js.php';
     echo '/* private JS */';
-    require 'templates/zaimhome/assets/js/main.js'; 
+    require 'templates/test/assets/js/main.js'; 
 
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
  
-        $("#rangeSlider").ionRangeSlider({
+    $("#rangeSlider").ionRangeSlider
+    (
+        {
+        navigation: true,
+        navigationText: ["<img src='myprevimage.png'>","<img src='mynextimage.png'>"],
         hide_min_max: true,
-        hide_from_to: true,
         keyboard: true,
-        grid: false,
         from: <?php 
         if($this->input->get('amount') != '')
         {  
@@ -192,22 +201,133 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
             $('#amount').val(slider.result.from_value);
             $("#form_slrd").val(slider.result.from);
         }, 50); 
-        traffic("zaimhome.ru",0);
+        traffic("zaimhunter.ru",0);
+
+        $(document).ready(function () 
+        {
+            $('.owl-carousel').owlCarousel({
+                stagePadding: 40,
+                center: true,
+                loop: true,
+                margin: 74,
+                items: 1.5,
+                nav: false,
+                responsive: {
+                    1200: {
+                        items: 1.5
+                    },
+                    // breakpoint from 480 up
+                    480: {
+                        items: 1
+                    }
+                }
+            })
+        });
+        $(document).ready(function () 
+        {
+            var amount = 20000;
+            $("#special").on({
+                mouseenter: function () {
+                    $(this).addClass("ex-active");
+                },
+                mouseleave: function () {
+                    $(this).removeClass("ex-active");
+                }
+            });
+            $("#special2").on({
+                mouseenter: function () {
+                    $(this).addClass("ex-active");
+                },
+                mouseleave: function () {
+                    $(this).removeClass("ex-active");
+                }
+            });
+            $("#special3").on({
+                mouseenter: function () {
+                    $(this).addClass("ex-active");
+                },
+                mouseleave: function () {
+                    $(this).removeClass("ex-active");
+                }
+            });
+            $("#special4").on({
+                mouseenter: function () {
+                    $(this).addClass("ex-active");
+                },
+                mouseleave: function () {
+                    $(this).removeClass("ex-active");
+                }
+            });
+
+        });
 <?php }
 }
 elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {
     include "templates/common/new2/js/lk.js";      
-    echo 'traffic("zaimhome.ru",4);'; 
+    echo 'traffic("zaimhunter.ru",4);'; 
 
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic("zaimhome.ru",9);'; 
+    echo 'traffic("zaimhunter.ru",9);'; 
 }
 else if($this->uri->segment(1) == 'form')
-{ } 
-echo "}catch(e){console.log('Ошибка ' + e.name + \":\" + e.message + \"\\n\" + e.stack);}";?>
+{ }
+else if($this->uri->segment(1) == 'faq')
+{
+    echo '$(".my_select").change(function() {
+            $("#output_text0").addClass("hidden");
+            $("#output_text1").addClass("hidden");
+            $("#output_text2").addClass("hidden");
+            $("#output_text3").addClass("hidden");
+            $("#output_text4").addClass("hidden");
+            $("#output_text5").addClass("hidden");
+            $("#output_text6").addClass("hidden");
+            $("#output_text7").addClass("hidden");
+            $("#output_text8").addClass("hidden");
+            $("#output_text9").addClass("hidden");
+            $("#output_text10").addClass("hidden");
+        
+            var val = $(".my_select option:selected").val(); 
+            switch(val)
+            {
+                case "0":  $("#output_text0").removeClass("hidden"); break;
+                case "1":  $("#output_text1").removeClass("hidden"); break;
+                case "2":  $("#output_text2").removeClass("hidden"); break;
+                case "3":  $("#output_text3").removeClass("hidden"); break;
+                case "4":  $("#output_text4").removeClass("hidden"); break;
+                case "5":  $("#output_text5").removeClass("hidden"); break;
+                case "6":  $("#output_text6").removeClass("hidden"); break;
+                case "7":  $("#output_text7").removeClass("hidden"); break;
+                case "8":  $("#output_text8").removeClass("hidden"); break;
+                case "9":  $("#output_text9").removeClass("hidden"); break;
+                case "10":  $("#output_text10").removeClass("hidden"); break;
+            }
+        });';
+}
+else if($this->uri->segment(1) == 'money')
+{ 
+    echo '$(".my_select2").change(function() {
+    
+        $("#money_text0").addClass("hidden");
+        $("#money_text1").addClass("hidden");
+        $("#money_text2").addClass("hidden");
+        $("#money_text3").addClass("hidden");
+    
+        var val = $(".my_select2 option:selected").val(); 
+        switch(val)
+        {
+            case "0":  $("#money_text0").removeClass("hidden"); break;
+            case "1":  $("#money_text1").removeClass("hidden"); break;
+            case "2":  $("#money_text2").removeClass("hidden"); break;
+            case "3":  $("#money_text3").removeClass("hidden"); break;
+        }
+    });';
+} 
+echo "}";
+require 'templates/common/new2/js/exeption.js';
+?>
 </script>
 <?php
     include "google.php";
@@ -215,25 +335,7 @@ echo "}catch(e){console.log('Ошибка ' + e.name + \":\" + e.message + \"\\n
     include "yandex_rtb.php";
     if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
     {     
-        echo '<!-- Google Code for  
-        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
-        Page -->
-        <script >
-        /* <![CDATA[ */
-        var google_conversion_id = 829599728;
-        var google_conversion_label = "0mQrCM_Bi3gQ8N_KiwM";
-        var google_remarketing_only = false;
-        /* ]]> */
-        </script>
-        <script   
-        src="//www.googleadservices.com/pagead/conversion.js">
-        </script>
-        <noscript>
-        <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt=""  
-        src="//www.googleadservices.com/pagead/conversion/829599728/?label=0mQrCM_Bi3gQ8N_KiwM&amp;guid=ON&amp;script=0"/>
-        </div>
-        </noscript>'; 
+        echo ''; 
     }
 ?>
 </body>

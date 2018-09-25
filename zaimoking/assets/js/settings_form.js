@@ -467,6 +467,7 @@ $("#email").suggestions({
         })
     ); 
 	$('#next1f').click(function(){
+        /*
 		if (validate1()) {
 			send_form();
 			$('.ex-step-counter').removeClass('ex-step-active');
@@ -477,23 +478,26 @@ $("#email").suggestions({
             if($('.ex-calc-zaim').hasClass('ex-calc-zaim-open'))
             {
                 $('.ex-calc-zaim').click();
-            }
-            //traffic(window.location.hostname,1);
+            } 
             $('.spec_footer5').css('visibility','hidden'); 
 			$('html, body').animate({scrollTop:$('#form-steps').offset().top}, 1000);
-			markTarget('form-step-1');
-            //  $('input[name="step"]').val('3');
-			// $('#form-modal').show();
-			// send_form(true, '/lk');
-            // markTarget('form-step-3');
-            // window.location = '/lk';
+			markTarget('form-step-1'); 
 		}
 		showBzzz = false;
 		$('.reg_same').change();
 		setcookies();
         setcookie('i', $('#i').val());
 		$('select[name="reg_type"]').change();
-       
+        */
+       if (validate()) {
+            $('input[name="step"]').val('3');
+			$('#form-modal').show();
+			send_form(true, '/lk');
+            markTarget('form-step-3');
+            window.location = '/lk';
+		}
+		showBzzz = false;
+		setcookies();
 	});
 	$('#next2').click(function(){
 		if (validate2()) {

@@ -69,7 +69,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
     </div>
     <div class="container-fluid ex-step-counter hidden-xs">
         <ul class="ex-step-indicator">
-            <li><span>всего 3 шага</span></li>
+            <li><span>всего 1 шаг</span></li>
             <li><span></span></li>
             <li><span></span></li>
         </ul>
@@ -87,13 +87,13 @@ if(isset($_SERVER['HTTP_REFERER'])){
                 <input type="hidden" name="fingerprint" id="fingerprint" value="">
             <div class="tab-content">
                 <div id="firstStep" class="tab-pane fade in active">
-                    <?php require 'full/form1.php'; ?>
+                    <?php require 'form1.php'; ?>
                 </div>
                 <div id="secondStep" class="tab-pane fade">
-                    <?php require 'full/form2.php'; ?>
+                    <?php require 'form2.php'; ?>
                 </div>
                 <div id="thirdStep" class="tab-pane fade">
-                    <?php require 'full/form3.php'; ?>
+                    <?php require 'form3.php'; ?>
                 </div>
             </div>
         </form>

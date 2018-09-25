@@ -1,5 +1,7 @@
-<?php require 'header.php'; ?>
-<main class="">
+<?php 
+require 'header.php';
+?>
+<main>
     <section class="ex-start-head">
         <div class="container ">
             <div class="row">
@@ -27,7 +29,7 @@
                             <p class="ex-time"></p>
                             <p>
                                 <span class="ex-unique"></span>
-                                    <center><button type="submit" class="btn ex-main-btn ex-total special_index5 hidden-xs hidden-sm visible-md visible-lg"></button></center>
+                                    <button type="submit" class="btn ex-main-btn ex-total special_index5 hidden-xs hidden-sm visible-md visible-lg"></button>
                                     <a class="ex-total hidden-lg hidden-md visible-xs visible-sm" style="width: 100%;margin-top:-30px; color: #000000 !important;" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>"></a>
                             </p>
                         </div>
@@ -56,15 +58,15 @@
                         <p id="ex-slider-val" class="text-center hidden-xs hidden-sm"></p>
                         <p id="ex-slider-val" class="val2 text-left hidden-md hidden-lg"></p>
                     </figure> 
-                    <center><a class="btn ex-main-btn hidden-lg hidden-md visible-xs visible-sm" style="width: 100%;" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">Получить деньги</a>
-                    <p class="font23 hidden-lg hidden-md visible-sm visible-xs" style="margin-top:10px;"><b>Срок займа (в днях)</b></p></center>
+                    <a class="btn ex-main-btn hidden-lg hidden-md visible-xs visible-sm" style="width: 100%;" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">Получить деньги</a>
+                    <p class="font23 hidden-lg hidden-md visible-sm visible-xs" style="margin-top:10px;"><b>Срок займа (в днях)</b></p>
                         <ul class="ex-zaim-time ex-zaim-time2 visible-xs visible-sm hidden-md hidden-lg" id="index_special" style="margin-bottom: 20px;"> 
                             <li class="ex-active-time" id="ex-active-time"><span>61</span></li>
                             <li><span>130</span></li>
                             <li><span>365</span></li> 
                         </ul>
                     <div class="text-center">
-                        <center><a class="btn ex-main-btn hidden-xs hidden-sm visible-md visible-lg" style="width: 65%;" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">Получить деньги</a></center>
+                        <a class="btn ex-main-btn hidden-xs hidden-sm visible-md visible-lg" style="width: 65%;" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">Получить деньги</a>
                     </div>
                     </form>
                     </div>
@@ -262,4 +264,4 @@
         </div>
     </section>
 </main>
-<?php require 'footer.php'; ?>
+<?php require 'footer.php';?>

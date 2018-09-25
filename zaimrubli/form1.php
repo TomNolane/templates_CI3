@@ -163,7 +163,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="row">
                 <div class="col-md-4 col-md-offset-8 ">
-                    <a id="next1" class="ex-main-btn text-center" style="width: 100%;text-transform: uppercase; text-decoration: none;">
+                    <a id="next1f" class="ex-main-btn text-center" style="width: 100%;text-transform: uppercase; text-decoration: none;">
                         получить займ
                     </a>
                 </div>

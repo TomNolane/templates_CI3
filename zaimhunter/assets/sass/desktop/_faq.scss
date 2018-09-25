@@ -1,62 +1,63 @@
-.ex-faq {
-  h1 {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 42px;
-    text-align: center;
-    margin-top: 59px;
-    margin-bottom: 31px;
+#ex-faq{
+  h1{
+    margin-bottom: 40px;
   }
-  .ex-select-block {
-    position: relative;
-    .form-control {
-      height: 60px;
-    }
-    select {
-      -webkit-appearance:  none;
+  .panel-group{
+    .panel{
+      margin-bottom: 20px;
+      border-radius: 0;
+      border: 2px solid $accordionBorder;
+      background-color: $accordionBg;
+      .panel-heading{
+        padding: 12px 30px 12px 15px;
+        background-color: $accordionBg;
+        h4{
+          a{
+            text-decoration: none;
+            font-weight: 700;
+            &.collapsed{
+              font-weight: 400;
+            }
+          }
+        }
+        i{
+          &.ex-plus-icon{
+            margin-top: 3px;
+            display: inline-block;
+            float: right;
+            width: 12px;
+            height: 12px;
+            background: url(../img/plus-icon.png) no-repeat;
+          }
+          &.ex-minus-icon{
+            margin-top: 5px;
+            display: inline-block;
+            float: right;
+            width: 13px;
+            height: 3px;
+            background: url(../img/minus-icon.png) no-repeat;
+          }
 
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f2f3f7+100 */
-      background: #ffffff; /* Old browsers */
-      background: -moz-linear-gradient(top,  #ffffff 0%, #f2f3f7 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(top,  #ffffff 0%,#f2f3f7 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom,  #ffffff 0%,#f2f3f7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f3f7',GradientType=0 ); /* IE6-9 */
-
+          @media (max-width: 767px) {
+            display: none!important;
+          }
+        }
+      }
+      .panel-collapse{
+        .panel-body{
+          border-top: none;
+        }
+      }
     }
-    i {
-      width: 98px;
-      height: 19px;
-      position: absolute;
-      top: 20px;
-      right: 55px;
-      background-image: url(../img/yandex.png);
-    }
-    span {
-      position: absolute;
-      right: 30px;
-      top: 22px;
-      width: 8px;
-      height: 10px;
-      border: solid #dce0eb;
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
-      @include prefix(border-radius, 0);
-    }
-
   }
-  .ex-faq-block {
+  footer{
     margin-top: 30px;
-    padding: 32px 118px 30px 35px;
-    border-radius: 5px;
-    border: 1px solid #dedede;
-    p {
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 30px;
-      letter-spacing: 0.12px;
+    padding: 23px 0 27px;
+    background-color: $accordionBg;
+    h3{
+      font-size: 20px;
+      color: $black;
+      margin-bottom: 25px;
     }
   }
 }
-
-
-

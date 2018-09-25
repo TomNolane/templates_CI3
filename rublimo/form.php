@@ -72,21 +72,21 @@ include "header.php";
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="form-steps-line">
-						<div class="form-steps-green-line" id="to_scroll">
+						<div class="form-steps-green-line">
 							<div class="row" role="tablist" id="form-steps">
 								<div class="col-xs-2 col-xs-offset-3 text-center" role="presentation">
 									<a href="#form1" aria-controls="form1" role="tab">
-										<span class="btn btn-circle" id="step1f">1</span>
+										<span class="btn btn-circle" id="step1"></span>
 									</a>
 								</div>
 								<div class="col-xs-2 text-center" role="presentation">
 									<a href="#form2" aria-controls="form1" role="tab">
-										<span class="btn btn-circle off" id="step2">2</span>
+										<span class="btn btn-circle" id="step2">1</span>
 									</a>
 								</div>
 								<div class="col-xs-2 text-center" role="presentation">
 									<a href="#form3" aria-controls="form1" role="tab">
-										<span class="btn btn-circle off" id="step3">3</span>
+										<span class="btn btn-circle" id="step3"></span>
 									</a>
 								</div>
 							</div>
@@ -139,11 +139,11 @@ include "header.php";
 						<input type="hidden" name="display" value="1" class="visible-xs">
 						<div class="tab-content">
 							<div role="tabpanel" class="tab-pane active" id="form1">
-								<?php require 'full/form1.php'; ?>
+								<?php require 'form1.php'; ?>
 								<div class="clearfix"></div>
 							</div>
 							<div role="tabpanel" class="tab-pane" id="form2">
-								<?php require('full/form2.php'); ?>
+								<?php require('form2.php'); ?>
 								<div class="clearfix">&nbsp;</div>
 								<div class="col-sm-6 col-sm-offset-6 col-xs-12">
 									<div class="shadow">
@@ -156,11 +156,11 @@ include "header.php";
 							</div>
 					
 						<div role="tabpanel" class="tab-pane" id="form3">
-							<?php require('full/form3.php'); ?>
+							<?php require('form3.php'); ?>
 							<div class="row">
 								<div class="col-sm-5 col-sm-offset-4 col-xs-12">
 									<div class="shadow">
-										<a class="btn btn-ok btn-block" id="getmoney">Отправить заявку</a>
+										<a class="btn btn-ok btn-block" id="form-send">Отправить заявку</a>
 									</div>
 								</div>
 							</div>

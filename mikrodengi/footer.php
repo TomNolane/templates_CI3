@@ -104,7 +104,7 @@ if($this->uri->segment(1) != 'form')
     echo '<script>';
     require 'templates/mikrodengi/assets/js/loanCalculator.js';
     if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') {
-        require 'templates/common/new2/js/for_index.js';
+        //require 'templates/common/new2/js/for_index.js';
     }
     echo '</script>';
 ?>

@@ -1,180 +1,261 @@
-.ex-form {
-  h1 {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 42px;
-    padding-top: 40px;
-    padding-bottom: 30px;
+.ex-form{
+  padding-top: 65px;
+  padding-bottom: 60px;
+  h1{
+    margin-top: 0;
+    margin-bottom: 65px;
   }
-  .ex-form-image {
-    text-align: right;
-    padding-top: 94px;
-  }
-  .ex-anketa3-block {
-    .ex-main-btn {
-      margin-top: 30px;
-      background-color: #00c247;
-      border: none;
-      padding-top: 20px;
-      padding-bottom: 20px;
+  .ex-indicator-scope{
+    margin-bottom: 110px;
+    &.nav-tabs{
+      border-bottom: none;
     }
-
-  }
-  .ex-anketa-head {
-    h2 {
-      margin-top: 0 !important;
-      margin-bottom: 44px !important;
-      padding-left: 100px;
-      font-weight: 400 !important;
-    }
-    img {
-      position: absolute;
-      vertical-align: text-bottom;
-    }
-  }
-  .ex-anketa-main {
-    margin-bottom: 28px;
-    padding: 30px;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    border: 1px solid #dedede;
-    background-color: #ffffff;
-    .form-group {
-      margin-bottom: 20px;
-      input {
-          padding: 10px 13px;
-          width: 100%;
-          height: 36px;
-          border-radius: 10px;
-          border: 1px solid #e2e3e4;
-          background-color: #ffffff;
-          outline: none;
-        @include placeholder {
-          font-weight: 400;
-        }
-        &:focus {
-          border: 1px solid #1991eb;
-        }
-      }
-      select {
-        padding: 8px 13px;
-        width: 100%;
-        height: 36px;
-        border-radius: 10px;
-        border: 1px solid #e2e3e4;
-        background-color: #ffffff;
-        outline: none;
-        &:focus {
-          border: 1px solid #1991eb;
-        }
-      }
-      &.ex-error {
-        input {
-          box-shadow: none;
-          outline: none;
-          padding-right: 30px;
-          border: 1px solid #f40000;
-          @include placeholder {
-            color: red;
-            font-weight: 700;
-            letter-spacing: 0.81px;
-          }
-          &:focus {
-            border: 1px solid #1991eb;
-            outline: none;
-          }
-        }
-        &:before {
+    figure{
+      position: relative;
+      display: inline-block;
+      &.ex-first-step{
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        border: 2px solid $indicatorBlue;
+        margin-right: 8px;
+        @include prefix(border-radius, 50%);
+        &:after{
           content: '';
           position: absolute;
+          width: 6px;
+          height: 6px;
+          background-color: $indicatorBlue;
           top: 50%;
-          margin-top: -6px;
-          right: 15px;
-          width: 7px;
-          height: 13px;
-          background: url(../img/question-icon.png) no-repeat;
+          margin-top: -3px;
+          left: 50%;
+          margin-left: -3px;
+          @include prefix(border-radius, 50%);
         }
+        p{
+          left: -100%;
+        }
+      }
+      &.ex-second-step{
+        text-align: center;
+        width: calc(100% - 80px);
+        &:before{
+          content: '';
+          position: absolute;
+          height: 2px;
+          left: 0;
+          top: 50%;
+          margin-top: -3px;
+          width: 50%;
+          z-index: -1;
+          background-color: $font;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          height: 2px;
+          right: 0;
+          top: 50%;
+          margin-top: -3px;
+          width: 50%;
+          z-index: -1;
+          background-color: $font;
+        }
+        div{
+          position: relative;
+          display: inline-block;
+          width: 44px;
+          background-color: $white;
+          span{
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            border: 2px solid $indicatorPassive;
+            @include prefix(border-radius, 50%);
+            &:after{
+              content: '';
+              position: absolute;
+              width: 6px;
+              height: 6px;
+              background-color: $font;
+              top: 50%;
+              margin-top: -3px;
+              left: 50%;
+              margin-left: -3px;
+              @include prefix(border-radius, 50%);
+            }
+          }
+        }
+        p{
+          width: 100%;
+          bottom: -59px;
+        }
+      }
+      &.ex-last-step{
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        border: 2px solid $indicatorPassive;
+        margin-left: 8px;
+        @include prefix(border-radius, 50%);
+        &:after{
+          content: '';
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          background-color: $font;
+          top: 50%;
+          margin-top: -3px;
+          left: 50%;
+          margin-left: -3px;
+          @include prefix(border-radius, 50%);
+        }
+        p{
+          width: 72px;
+          left: -100%;
+        }
+      }
+      p{
+        position: absolute;
+        text-transform: uppercase;
+        font-weight: 700;
+        bottom: -66px;
+        text-align: center;
+        @media (max-width: 414px) {
+          display: none;
+        }
+        @media (max-width: 767px) {
+          font-size: 13px;
+        }
+      }
+    }
 
-        p {
+    &.ex-on-second-step{
+      .ex-second-step{
+        &:before{
+          background-color: $indicatorBlue;
+        }
+        div{
+          span{
+            border: 2px solid $indicatorBlue;
+            &:after{
+              background-color: $indicatorBlue;
+            }
+          }
+        }
+      }
+    }
+    &.ex-on-last-step{
+      .ex-second-step{
+        &:before{
+            background-color: $indicatorBlue;
+        }
+        &:after{
+          background-color: $indicatorBlue;
+        }
+        div{
+          span{
+            border: 2px solid $indicatorBlue;
+            &:after{
+              background-color: $indicatorBlue;
+            }
+          }
+        }
+      }
+      .ex-last-step{
+        border: 2px solid $indicatorBlue;
+        &:after{
+          background-color: $indicatorBlue;
+        }
+      }
+    }
+  }
+  form{
+    #ex-main-slider-range{
+      .ex-range-slider{
+        padding-top: 15px;
+        background-color: $white;
+      }
+      .ex-slider-info{
+        margin-top: initial;
+        padding-top: 6px;
+      }
+      .irs{
+        bottom: 6px!important;
+      }
+    }
+    .form-group{
+      margin-bottom: 20px;
+      label{
+        padding-top: 15px;
+        color: $label;
+        font-weight: 700;
+      }
+      .ex-wrapper{
+        position: relative;
+        input{
+          font-weight: 700;
+          height: 50px;
+          @include placeholder{
+            font-weight: 400;
+          }
+        }
+      }
+      select{
+        height: 50px;
+        font-weight: 700;
+      }
+      &.ex-error{
+        .ex-wrapper{
+          input{
+            box-shadow: none;
+            outline: none;
+            padding-right: 30px;
+            color: $error;
+            @include placeholder{
+              color: $error;
+            }
+            &:focus{
+              border: 1px solid #ccc;
+              outline: none;
+            }
+          }
+          &:before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -6px;
+            right: 15px;
+            width: 7px;
+            height: 13px;
+            background: url(../img/question-icon.png) no-repeat;
+          }
+        }
+        p{
           font-size: 12px;
-          letter-spacing: 0.21px;
           margin-top: 6px;
           margin-bottom: 0;
-          color: red;
+          color: $error;
         }
       }
     }
-  }
-  .ex-calc-wraper {
-    padding-left: 13px;
-    padding-bottom: 17px;
-    .ex-val-block {
-      border-bottom: 1px solid rgba(#979797, 0.3);
-      #ex-slider-val {
-        font-size: 48px;
-        font-weight: 900;
-        line-height: 48px;
-        i {
-          vertical-align: middle;
-          margin-left: 43px;
-          width: 117px;
-          height: 36px;
-          display: inline-block;
-          background: url(../img/rub.png) no-repeat;
-          -webkit-background-size: contain;
-        }
+    .ex-agreement-check{
+      label{
+        padding-top: 0;
       }
     }
-    .ex-zaim-time {
-      padding-left: 0;
-      text-align: center;
-      border-radius: 15px;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      background-color: #f9fafc;
-      li {
-        width: 60px;
-        display: inline-block;
-        padding: 21px;
-      }
-      .ex-active-time {
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
-        border-radius: 15px;
-        background-color: #1991eb;
-        color: #fff;
+    .ex-main-btn{
+      float: right;
+      width: initial;
+      text-transform: capitalize;
+      padding: 15px 45px;
+      margin-top: 25px;
+      @media (max-width: 600px) {
+        width: 100%;
+        padding: 15px 0;
       }
     }
-    .ex-range-scope {
-      height: 380px;
-      padding-top: 16px;
-
-      .irs-single {
-        display: none;
-      }
-      &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 101px;
-        right: 0;
-        width: 513px;
-        height: 358px;
-        opacity: 0.91;
-        background-image: url('../img/creditcard-pic.png');
-        background-repeat: no-repeat;
-        z-index: -1;
-      }
-    }
-
-  }
-  p {
-    text-align: right;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 20px;
-  }
-  .ex-input-error {
-    border: 1px solid red;
-    border-radius: 10px;
-
   }
 }

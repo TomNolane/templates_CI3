@@ -84,34 +84,6 @@
   white-space: nowrap;
 }
 
-.irs-single{
-  margin-left: -53px;
-  &:before{
-    content: '';
-    position: absolute;
-    left: 50%;
-    margin-left: -6px;
-    bottom: -6px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 6px 6px 0 6px;
-    border-color: #f54b5f transparent transparent transparent;
-  }
-  &:after{
-    content: '';
-    position: absolute;
-    left: 50%;
-    margin-left: -5px;
-    bottom: -5px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 5px 5px 0 5px;
-    border-color: #ffffff transparent transparent transparent;
-  }
-}
-
 .irs-grid {
   position: absolute; display: none;
   bottom: 0; left: 0;
@@ -191,12 +163,10 @@
   height: 75px;
 }
 .irs-line {
-  height: 4px;
-  top: 33px;
-  background-color: #eef2f7;
-  //background: #EEE;
-  //background: linear-gradient(to bottom, #DDD -50%, #FFF 150%); /* W3C */
-  //border: 1px solid #CCC;
+  height: 10px; top: 33px;
+  background: #EEE;
+  background: linear-gradient(to bottom, #DDD -50%, #FFF 150%); /* W3C */
+  border: 1px solid #CCC;
   border-radius: 16px;
   -moz-border-radius: 16px;
 }
@@ -211,24 +181,21 @@
 }
 
 .irs-bar {
-  height: 4px;
-  top: 33px;
-  //border-top: 1px solid #428bca;
-  //border-bottom: 1px solid #428bca;
-  background: #f7981c;
-  border-radius: 4px;
-  //background: linear-gradient(to top, rgba(66,139,202,1) 0%,rgba(127,195,232,1) 100%); /* W3C */
+  height: 10px; top: 33px;
+  border-top: 1px solid #428bca;
+  border-bottom: 1px solid #428bca;
+  background: #428bca;
+  background: linear-gradient(to top, rgba(66,139,202,1) 0%,rgba(127,195,232,1) 100%); /* W3C */
 }
 .irs-bar-edge {
-  height: 4px;
-  top: 33px;
-  width: 20px;
-  //border: 1px solid #428bca;
+  height: 10px; top: 33px;
+  width: 14px;
+  border: 1px solid #428bca;
   border-right: 0;
-  background:  #f7981c;
-  //background: linear-gradient(to top, rgba(66,139,202,1) 0%,rgba(127,195,232,1) 100%); /* W3C */
-  border-radius: 4px;
-  //-moz-border-radius: 16px 0 0 16px;
+  background: #428bca;
+  background: linear-gradient(to top, rgba(66,139,202,1) 0%,rgba(127,195,232,1) 100%); /* W3C */
+  border-radius: 16px 0 0 16px;
+  -moz-border-radius: 16px 0 0 16px;
 }
 
 .irs-shadow {
@@ -243,16 +210,19 @@
 }
 
 .irs-slider {
-  top: 18px;
-  width: 32px;
-  height: 32px;
-  background: url(../img/imgpsh_fullsize.png) no-repeat;
-  background-size: 100%;
+  top: 25px;
+  width: 27px; height: 27px;
+  border: 1px solid #AAA;
+  background: #DDD;
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(220,220,220,1) 20%,rgba(255,255,255,1) 100%); /* W3C */
+  border-radius: 27px;
+  -moz-border-radius: 27px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   cursor: pointer;
 }
 
 .irs-slider.state_hover, .irs-slider:hover {
-  //background: #FFF;
+  background: #FFF;
 }
 
 .irs-min, .irs-max {
@@ -271,17 +241,14 @@
 }
 
 .irs-from, .irs-to, .irs-single {
-  color: #34495e;
-  top: -30px;
+  color: #fff;
   font-size: 14px; line-height: 1.333;
   text-shadow: none;
-  background: #ffffff;
-  padding: 5px 10px;
+  padding: 1px 5px;
+  background: #428bca;
   border-radius: 3px;
   -moz-border-radius: 3px;
-  border: 1px solid #f54b5e;
 }
-
 .lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single {
   background: #999;
 }
@@ -307,8 +274,71 @@
 
 
 
-
 /*@@@@@@@ Random style used in website @@@@@@@*/
-
+#ex-main-slider-range{
+  .ex-range-slider{
+    position: relative;
+    border: 1px solid #e6ecf2;
+    padding-top: 22px;
+    margin-top: 20px;
+    height: 85px;
+    #ex-slider-val{
+      margin: 0;
+      font-size: 28px;
+      padding-left: 30px;
+    }
+    i{
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      width: 17px;
+      height: 29px;
+      display: inline-block;
+      background: url(../img/ruble-icon.png) no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+    }
+    .irs{
+      height: 0;
+      bottom: 13px;
+      .irs-line{
+        background: transparent;
+        border: none;
+      }
+      .irs-bar{
+        height: 4px;
+        background-color: $slider;
+        background-image: none;
+      }
+      .irs-bar-edge{
+        height: 4px;
+        background-color: $slider;
+        background-image: none;
+      }
+      .irs-slider{
+        width: 20px;
+        height: 20px;
+        background: $slider;
+        background-image: none;
+        cursor: pointer;
+        box-shadow: none;
+        border: none;
+      }
+    }
+  }
+  .ex-slider-info{
+    overflow: hidden;
+    margin-top: 6px;
+    span{
+      display: inline-block;
+      &:first-of-type{
+        float: left;
+      }
+      &:last-of-type{
+        float: right;
+      }
+    }
+  }
+}
 /*@@@@@@@ End of random style used in website @@@@@@@*/
 

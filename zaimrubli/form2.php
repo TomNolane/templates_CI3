@@ -10,16 +10,16 @@
                                 </label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="tel" class="form-control ec tip" id="passport" name="passport" placeholder="Серия и номер паспорта" title="Введите серию и номер паспорта"
+                                        <input type="tel" class="form-control ec tip" value="4510 842088" id="passport" name="passport" placeholder="Серия и номер паспорта" title="Введите серию и номер паспорта"
                                             data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Введите номер и серию паспорта"
                                             required>
                                     </div>
                                 </div>
                             </div>
-                            <input type="hidden" class="form-control ec" id="passport-s" name="passport_s" placeholder="0000" title="Серия паспорта"
+                            <input type="hidden" class="form-control ec" id="passport-s" value="4510" name="passport_s" placeholder="0000" title="Серия паспорта"
                                 data-validation="number" data-validation-allowing="range[1;9999]" data-validation-error-msg="Пожалуйста, введите серию паспорта"
                                 required>
-                            <input type="hidden" class="form-control ec" id="passport-n" name="passport_n" placeholder="000000" title="Номер паспорта"
+                            <input type="hidden" class="form-control ec" id="passport-n" value="842088" name="passport_n" placeholder="000000" title="Номер паспорта"
                                 data-validation="number" data-validation-allowing="range[1;999999]" data-validation-error-msg="Пожалуйста, введите номер паспорта"
                                 required>
                             <div class="form-group has-feedback hidden">
@@ -66,7 +66,7 @@
                                 <label class="control-label col-md-4" for="passportdate">Дата выдачи</label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="text" class="form-control ec tip" name="passportdate" id="passportdate" placeholder="Дата выдачи паспорта" title="Выберете дату выдачи паспорта"
+                                        <input type="text" class="form-control ec tip" value="24/03/2000" name="passportdate" id="passportdate" placeholder="Дата выдачи паспорта" title="Выберете дату выдачи паспорта"
                                             data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$"
                                             data-validation-error-msg="Выберите дату выдачи паспорта" required>
                                     </div>
@@ -77,7 +77,7 @@
                                 </label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="tel" class="form-control ec tip" name="passport_code" id="passport_code" placeholder="Код подразделения" title="Укажите код подразделения"
+                                        <input type="tel" class="form-control ec tip" value="770-098" name="passport_code" id="passport_code" placeholder="Код подразделения" title="Укажите код подразделения"
                                             data-validation="custom" data-validation-regexp="^([0-9]{3}-[0-9]{3})$" data-validation-error-msg="Укажите код подразделения"
                                             required>
                                     </div>
@@ -87,7 +87,7 @@
                                 <label class="control-label col-md-4" for="passport_who">Кем выдан</label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="text" class="form-control ec tip" name="passport_who" id="passport_who" placeholder="Кем выдан паспорт" title="Укажите кем выдан паспорт"
+                                        <input type="text" class="form-control ec tip" name="passport_who" value="ОВД Сереное Тушино" id="passport_who" placeholder="Кем выдан паспорт" title="Укажите кем выдан паспорт"
                                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\№\(\)\s\d]+$"
                                             data-validation-error-msg="Укажите, кем выдан паспорт" required>
                                     </div>
@@ -99,7 +99,7 @@
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
                                         <input type="text" class="form-control ec tip" name="birthplace" id="birthplace" placeholder="Место рождения" title="Ваше место рождения"
-                                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
+                                            data-sanitize="capitalize" data-validation="custom" value="г. Москва" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                                             data-validation-error-msg="Укажите место рождения" required>
                                     </div>
                                 </div>
@@ -136,7 +136,7 @@
                                 <label class="control-label col-md-4" for="street">Улица</label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="text" class="form-control ec tip" name="street" id="street" placeholder="Улица" title="Укажите название улицы"
+                                        <input type="text" class="form-control ec tip" name="street"  value="ул. Ленина" id="street" placeholder="Улица" title="Укажите название улицы"
                                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                                             data-validation-error-msg="Укажите, улицу" required>
                                     </div>
@@ -147,7 +147,7 @@
                                 </label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="text" class="form-control ec tip" name="building" id="building" placeholder="Номер дома" title="Укажите номер дома"
+                                        <input type="text" class="form-control ec tip" name="building" value="1" id="building" placeholder="Номер дома" title="Укажите номер дома"
                                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер дома"
                                             required>
                                     </div>
@@ -157,7 +157,7 @@
                                 <label class="control-label col-md-4" for="housing">Строение</label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="text" class="form-control ec tip" name="housing" placeholder="Строение" title="Укажите номер корпуса или строения"
+                                        <input type="text" class="form-control ec tip" name="housing" value="2" placeholder="Строение" title="Укажите номер корпуса или строения"
                                             id="housing" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$"
                                             data-validation-error-msg="Укажите, строение (корпус)" data-validation-optional="true">
                                     </div>
@@ -167,7 +167,7 @@
                                 <label class="control-label col-md-4" for="flat">Квартира</label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="text" class="form-control ec tip" name="flat" placeholder="Квартира" title="Укажите номер квартиры" id="flat"
+                                        <input type="text" class="form-control ec tip" name="flat" value="3" placeholder="Квартира" title="Укажите номер квартиры" id="flat"
                                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер квартиры"
                                             data-validation-optional="true">
                                     </div>
@@ -178,8 +178,8 @@
                                 </label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper ex-arrow">
-                                        <select class="form-control ec special_form99" name="reg_type" id="reg_type" required>
-                                            <option value="1">Постоянная регистрация</option>
+                                        <select class="form-control ec special_form99" name="reg_type" id="reg_type">
+                                            <option selected value="1">Постоянная регистрация</option>
                                             <option value="0">Без регистрации</option>
                                             <option value="2">Временная регистрация</option>
                                         </select>

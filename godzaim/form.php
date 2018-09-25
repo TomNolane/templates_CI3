@@ -36,10 +36,6 @@ if($this->input->post('amount', TRUE) != '')
     else { $period = '30'; }
 } 
 
-if(!isset($my_title))
-{
-    $my_title = 'Подача Заявки на Получение Займа Онлайн';
-}  
 if($this->input->get('amount', TRUE) != '') 
 {  
     if ($this->input->get('amount', TRUE) <= '10000') { 
@@ -72,7 +68,7 @@ include "templates/common/new2/php/form_header.php";
 include "header.php";
 ?>
  <div class="container">
-<section id="to_scroll">
+<section>
     <div class="row">
         <div class="col-xs-12">
             <h1>Заполните свои личные данные</h1>
@@ -80,14 +76,14 @@ include "header.php";
                 <i class="fa fa-lock fa-lg"></i>
             </p>
             <ul class="nav nav-tabs text-center" id="form-steps">
+                <li role="presentation" class="disabled">
+                    <a href="#form1" id="step1"></a>
+                </li>
                 <li role="presentation" class="active">
-                    <a href="#form1" id="step1">Личные данные</a>
+                    <a href="#form2" id="step2">Личные данные</a>
                 </li>
                 <li role="presentation" class="disabled">
-                    <a href="#form2" id="step2">Паспортные данные</a>
-                </li>
-                <li role="presentation" class="disabled">
-                    <a href="#form3" id="step3">Данные о работе</a>
+                    <a href="#form3" id="step3"></a>
                 </li>
             </ul>
         </div>
@@ -104,15 +100,15 @@ include "header.php";
                 <div class="tab-content">
                     <div id="form1" class="tab-pane fade in active">
                         <span class="form-sum-value"></span>
-                        <?php require 'full/form1.php'; ?>
+                        <?php require 'form1.php'; ?>
                         <div class="col-sm-offset-4 col-sm-8">
                             <div class="text-center">
-                                <a class="btn btn-primary btn-next" id="next1f">Далее</a>
+                                <a class="btn btn-primary btn-next" id="next1">Оформить заявку</a>
                             </div>
                         </div>
                     </div>
                     <div id="form2" class="tab-pane fade">
-                        <?php require('full/form2.php'); ?>
+                        <?php require('form2.php'); ?>
                         <div class="clearfix">&nbsp;</div>
                         <div class="form-group"> 
                             <div class="col-md-12">
@@ -126,10 +122,10 @@ include "header.php";
                         <div class="clearfix"></div>
                     </div>
                     <div id="form3" class="tab-pane fade">
-                        <?php require('full/form3.php'); ?>
+                        <?php require('form3.php'); ?>
                         <div class="row">
                             <div class="col-sm-8 col-sm-offset-4 col-xs-12 text-center">
-                                <a class="btn btn-primary btn-header" id="getmoney">Оформить заявку</a>
+                                <a class="btn btn-primary btn-header" id="form-send">Оформить заявку</a>
                             </div>
                         </div>
                     </div>

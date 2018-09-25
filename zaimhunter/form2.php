@@ -1,6 +1,6 @@
 <div class="ex-anketa-head">
                 <img src="/templates/zaimhunter/assets/img/active2.png" alt="active2.png">
-                <h2 class="">
+                <h2>
                     Паспортные данные
                 </h2>
             </div>

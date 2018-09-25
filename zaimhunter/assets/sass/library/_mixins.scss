@@ -20,13 +20,6 @@
   box-sizing:         $type;
 }
 
-//Border radius
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
-}
-
 //prefix for all browsers
 @mixin prefix ($property, $value,
                  $moz:    true,
@@ -85,4 +78,3 @@
   animation-name: $animation;
   animation-fill-mode: forwards; /* this prevents the animation from restarting! */
 }
-

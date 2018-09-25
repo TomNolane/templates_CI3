@@ -1,4 +1,5 @@
-<main class="">
+<?php require 'header.php';?>
+<main>
     <div class="ex-info">
         <div class="container"> 
             <h1>Непосильные кредиты:<br>
@@ -79,3 +80,4 @@
         </section> 
     </div>
 </main>
+<?php require 'footer.php';?>
