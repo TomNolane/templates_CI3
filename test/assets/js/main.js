@@ -8,16 +8,12 @@ function checkMee() {
     null != e && (e.checked ? $("#next1f").css("visibility", "visible") : $("#next1f").css("visibility", "hidden"))
 }
 
-function goToForm()
-{
-    $('#anketa').submit();
-}
-
 var equalheight = function (container) {
     var currentTallest = 0,
         currentRowStart = 0,
         rowDivs = new Array(),
-        $el, topPosition = 0;
+        $el,
+        topPosition = 0;
     $(container).each(function () {
         $el = $(this);
         $($el).height('auto');
@@ -39,82 +35,75 @@ var equalheight = function (container) {
         }
     });
 };
+
+
 $(document).ready(function () {
-    var body = $('body'),
-        footerHeight = $(".ex-main-footer").outerHeight(),
-        panelCollapse = $('.panel-collapse'),
-        indicator = $('.ex-indicator-scope'),
-        formIndicator1 = $('.ex-first-step'),
-        formIndicator2 = $('.ex-second-step').find('span'),
-        formIndicator3 = $('.ex-last-step'),
-        formBtn1 = $('#submitOne'),
-        formBtn2 = $('#submitTwo');
-    body.css('padding-bottom', footerHeight);
+    var dropdownToggle = $('.dropdown-toggle'),
+        menu = $('.dropdown-menu'),
+        askButton = $('.ex-ask-question'),
+        footerHeight = $('.ex-sticky-footer').outerHeight();
+    $(document).on('click', function () {
+        dropdownToggle.hasClass('ex-on-off') ? dropdownToggle.removeClass('ex-on-off') : '';
+    });
+    dropdownToggle.on('click', function (e) {
+        $(this).toggleClass('ex-on-off');
+        $(this).parent().css('position', 'initial');
+    });
+    menu.on('click', function (e) {
+        e.stopPropagation();
+    });
+    askButton.on('click', function (event) {
+        $('#askQuestion').modal();
+        $('.dropdown.open .dropdown-toggle').dropdown('toggle');
+    });
+
+    $('.ex-sticky').css('padding-bottom', footerHeight);
     $(window).resize(function () {
-        footerHeight = $(".ex-main-footer").outerHeight();
-        body.css('padding-bottom', footerHeight);
+        var dynamicFooterHeight = $('.ex-sticky-footer').outerHeight();
+        $('.ex-sticky').css('padding-bottom', dynamicFooterHeight);
     });
-    panelCollapse.on('show.bs.collapse', function () {
-        $(this).prev('.panel-heading').find('.ex-plus-icon').removeClass('ex-plus-icon').addClass('ex-minus-icon');
+
+    $('.ex-ask-question').on('click', function (event) {
+        $('#askQuestion').modal();
     });
-    panelCollapse.on('hide.bs.collapse', function () {
-        $(this).prev('.panel-heading').find('.ex-minus-icon').removeClass('ex-minus-icon').addClass('ex-plus-icon');
+
+
+    //Collapse menu hide show events
+    $('.panel-collapse').on('show.bs.collapse', function () {
+        $(this).prev('.panel-heading').addClass('ex-bg-head')
+            .find('.ex-down')
+            .removeClass('ex-down')
+            .addClass('ex-up');
     });
-    $(formBtn1).on('click', function () {
-        indicator.addClass('ex-on-second-step');
+    $('.panel-collapse').on('hide.bs.collapse', function () {
+        $(this).prev('.panel-heading').removeClass('ex-bg-head')
+            .find('.ex-up')
+            .removeClass('ex-up')
+            .addClass('ex-down');
     });
-    $(formBtn2).on('click', function () {
-        indicator.removeClass('ex-on-second-step').addClass('ex-on-last-step');
-    });
-    var collapseParagraph = $('.ex-hidden'),
-        collapseBtn = $('.ex-collapse');
-    collapseParagraph.each(function (index) {
-        var self = $(this);
-        if ($.trim(self.html()).length > 0) {
-            self.closest('.ex-info-block').append("<span class='ex-collapse'>+ Подробнее</span>")
-        }
-    });
-    $(".ex-info-block").on("click", collapseBtn, function () {
-        $(this).find(collapseParagraph).toggleClass('ex-active');
-        $(this).find($('.ex-collapse')).toggleClass('ex-blinked');
-        if ($(this).find(collapseParagraph).hasClass('ex-active')) {
-            $(this).find($('.ex-collapse')).text('- Закрыть');
-        } else {
-            $(this).find($('.ex-collapse')).text('+ Подробнее');
-        }
-    });
-    $('.ex-hamburger').on('click', function () {
-        $('.ex-aside-menu').addClass('ex-is-open');
-    });
-    $('.ex-close-menu').on('click', function () {
-        $('.ex-aside-menu').removeClass('ex-is-open');
-    });
-});
-$(document).ready(function ()
-{
-    var c = getParameterByName('amount');
-    if ("undefined" != typeof $("#amount").val())
+
+    if (void 0 != $("#amount").val())
     {
         var gg = parseInt(($('#amount').val().trim().length < 1) ? 20000 : $('#amount').val());
-        if (c != null) {
-            if (c > 100000 || c < 1000) {
-                c = 20000;
-            }
-            gg = c;
+        if (gg != null) {
+            if (gg > 100000 || gg < 1000) {
+                gg = 20000;
+            } 
         };
         var currentLoanSize = parseInt(gg),
             range = $("#rangeSlider"),
             commissionPercantage = 13,
-            rangeUpperValue = $('#ex-slider-val'),
-            rangeUpperValue2 = $('.val2'),
+            bet = 'от 1.27%',
+            rangeUpperValue = $('.ex-slider-val'),
             rangeTableValue = $('.ex-current-val'),
             timeTable = $('.ex-time'),
+            betSize = $('.ex-bet'),
             commissionTableSize = $('.ex-Commission'),
             returnTable = $('.ex-total'),
             probabilityTable = $('.irs-single'),
             probabilityTable2 = $('.ex-prob'),
             probability = 95,
-            time = '',
+            time = 'от 130 дней',
             commission = (currentLoanSize * commissionPercantage) / 100,
             returnTotal = currentLoanSize + commission,
             setDynamicProbability = function () {
@@ -137,33 +126,46 @@ $(document).ready(function ()
                 }
             },
             setDynamicTimePeriod = function () {
-                if (currentLoanSize < 30000) {
-                    $('.ex-zaim-time').find('.ex-active-time').removeClass();
-                    $('.ex-zaim-time li').eq(0).attr('class', 'ex-active-time');
-                    $('.ex-zaim-time2').find('.ex-active-time').removeClass();
-                    $('.ex-zaim-time2 li').eq(0).attr('class', 'ex-active-time');
+                if (currentLoanSize < 20000) {
+                    time = 'от 100 дней';
+                    timeTable.html("<span>" + time + "</span>");
                 }
-                if (currentLoanSize >= 30000 && currentLoanSize <= 50000) {
-                    $('.ex-zaim-time').find('.ex-active-time').removeClass();
-                    $('.ex-zaim-time li').eq(1).attr('class', 'ex-active-time');
-                    $('.ex-zaim-time2').find('.ex-active-time').removeClass();
-                    $('.ex-zaim-time2 li').eq(1).attr('class', 'ex-active-time');
+                if (currentLoanSize < 8000) {
+                    time = 'от 61 дня';
+                    timeTable.html("<span>" + time + "</span>");
+                }
+                if (currentLoanSize >= 20000 && currentLoanSize < 30000) {
+                    time = 'от 130 дней';
+                    timeTable.html("<span>" + time + "</span>");
+                }
+                if (currentLoanSize > 30000 && currentLoanSize < 50000) {
+                    time = 'от 200 дней';
+                    timeTable.html("<span>" + time + "</span>");
                 }
                 if (currentLoanSize > 50000) {
-                    $('.ex-zaim-time').find('.ex-active-time').removeClass();
-                    $('.ex-zaim-time li').eq(2).attr('class', 'ex-active-time');
-                    $('.ex-zaim-time2').find('.ex-active-time').removeClass();
-                    $('.ex-zaim-time2 li').eq(2).attr('class', 'ex-active-time');
+                    time = 'от 250 дней';
+                    timeTable.html("<span>" + time + "</span>");
                 }
             };
-        rangeUpperValue.append("<span class='special_index7'><b>" + currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " рублей</b></span>");
-        $('.amm').html("<span>" + currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " рублей</span>");
+        setDynamicBet = function () {
+            if (currentLoanSize > 30000) {
+                bet = 'от 0,2%';
+                betSize.html(bet);
+            } else {
+                bet = 'от 1.27%';
+                betSize.html(bet);
+            }
+        };
+        //------------------------Declaration of variables end-------------------------
+        rangeUpperValue.append("<span>" + currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " рублей</span>");
         rangeTableValue.append("<span>" + currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " рублей</span>");
-        timeTable.append("<span>" + '' + "</span>");
+        timeTable.append("<span>" + time + "</span>");
+        betSize.html(bet);
         commissionTableSize.append("<span>" + commission.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " рублей</span>");
-        returnTable.append("<span>" + returnTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " рублей</span>" + "<span> " + time + " </span>");
+        returnTable.append("<span>" + returnTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " рублей</span>");
         probabilityTable.text('').append("<span>вероятность " + probability + "%</span>");
         probabilityTable2.text('').append("<span>" + probability + "%</span>");
+        //-------------------Use this function to get and set range slider current value----------------------//
         range.on("change", function () {
             probabilityTable.css('margin-left', '0');
             currentLoanSize = parseInt($(this).prop("value"));
@@ -172,14 +174,13 @@ $(document).ready(function ()
             var currentLoanToShow = currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "),
                 commissionToShow = commission.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "),
                 totalToShow = returnTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-            rangeUpperValue.html("<span class='special_index7'><b>" + currentLoanToShow + " рублей</b></span>");
-            rangeUpperValue2.html("<div class='text-center'><span>" + totalToShow + " рублей</span></div>");
-            $('.amm').text("<span>" + totalToShow + "</span><i></i>");
-            rangeTableValue.html("<span> " + currentLoanToShow + " рублей</span>");
+            rangeUpperValue.html("<span>" + currentLoanToShow + " рублей</span>");
+            rangeTableValue.html("<span>" + currentLoanToShow + " рублей</span>");
             commissionTableSize.html("<span>" + commissionToShow + " рублей</span>");
-            returnTable.html("<span class='special_index6'> " + currentLoanToShow + " рублей</span>" + "<span> " + time + " </span>");
+            returnTable.html("<span>" + totalToShow + " рублей</span>");
             setDynamicProbability();
             setDynamicTimePeriod();
+            setDynamicBet();
         });
     }
 });

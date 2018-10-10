@@ -43,7 +43,7 @@ figure.hh1:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     background-color: #f7f7f7;
 }
-ins {
+/* ins {
     max-height: 150px !important;
     height: 150px !important;
 }
@@ -51,7 +51,7 @@ ins {
 .adsbygoogle {
     max-height: 150px !important;
     height: 150px !important;
-}
+} */
 
 .offers { 
     <?php if($site == "zaimomix") {?>

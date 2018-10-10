@@ -127,10 +127,7 @@ else
 			break;
 		default: $my_title = 'Срочные Займы Круглосуточно без Проверок Онлайн'; $description = 'Edenga - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!'; break;
 	}
-	echo '<div class="clearfix">&nbsp;</div>
-	<div class="container">
-	  <div class="row">
-		<div class="col-sm-12">';
+
 	if ($this->uri->segment(1) == 'about') {require 'internal-about.php';}
 	elseif ($this->uri->segment(1) == 'contacts') {require 'internal-contacts.php';}
 	elseif ($this->uri->segment(1) == 'faq') {require 'internal-faq.php';}
@@ -140,10 +137,7 @@ else
 	elseif ($this->uri->segment(1) == 'docs') {require 'internal-docs.php';}
 	elseif ($this->uri->segment(1) == 'service') {require 'internal-service.php';}
 	elseif ($this->uri->segment(1) == 'article') {require 'internal-article.php';}
-	echo '</div>
-	</div>
-  </div>
-  <div class="clearfix">&nbsp;</div>';
+	elseif($this->uri->segment(1) == '404') require 'internal-404.php';
 }
 ?> 
    

@@ -58,19 +58,24 @@ if(!isset($sum))
         } 
     } 
 $px = ($px - 3.5) . '%';
-if($this->uri->segment(1) != 'form')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
+    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156788691" alt="123">';
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Godzaim -->
+    <!-- godzaim -->
     <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9509439067407055"
-         data-ad-slot="9238958715"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="5116247776"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
+    echo '<!-- Yandex.RTB R-A-257495-1 desktop -->
+    <div id="yandex_rtb_R-A-257495-1"></div>
+    <!-- Yandex.RTB R-A-257495-2 mobile -->
+    <div id="yandex_rtb_R-A-257495-2"></div> ';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }?>
     <div class="footer-wrap">
@@ -82,6 +87,7 @@ if($this->uri->segment(1) != 'form')
                         <img src="/templates/godzaim/assets/img/logo-footer.png" class="logo">
                     </a>
                 </div>
+                <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
                 <div class="col-md-3 col-md-offset-1 col-xs-12 spec_footer4">
                     <p>
                         Cервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. ул. Осипенко,
@@ -99,8 +105,26 @@ if($this->uri->segment(1) != 'form')
                         ставке 0% в случае своевременного погашения. <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001
                     </p>
                 </div>
+                <?php endif; ?>
                 <div class="col-sm-12">
                     <hr/>
+                    <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
+                        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- godzaim -->
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-4970738258373085"
+                            data-ad-slot="5116247776"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>';
+                        echo '<!-- Yandex.RTB R-A-257495-1 desktop -->
+                        <div id="yandex_rtb_R-A-257495-1"></div>
+                        <!-- Yandex.RTB R-A-257495-2 mobile -->
+                        <div id="yandex_rtb_R-A-257495-2"></div> ';
+                    } ?>
                     <ul class="list-inline text-center">
                         <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
                         <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
@@ -598,5 +622,32 @@ require 'templates/common/new2/js/exeption.js';
     (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
         '//vk.com/rtrg?r=Z7pk5C4xjqokU5G*QALWNq2pkJhzPOom99yo3Qxf9oIeFlECprDRQgjZP9SEA86kYiMHFgew1rs3AF6e*l8tUryFp/Fl495P7rPnkWnSEnGPEQiabdvpee/7*npmHm33ovO1TSw3ulRHBDU7ITWvhsLgKc4jAIpbdw4C7HeMV/s-&pixel_id=1000099730';
 </script>
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3052558", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
+(function (d, w, id) {
+if (d.getElementById(id)) return;
+var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+ts.src = "//top-fwz1.mail.ru/js/code.js";
+var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="//top-fwz1.mail.ru/counter?id=3052558;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
+<script type="text/javascript">
+var _tmr = _tmr || [];
+_tmr.push({
+type: 'itemView',
+productid: 'VALUE',
+pagetype: 'VALUE',
+list: 'VALUE',
+totalvalue: 'VALUE'
+});
+</script>
+<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
 </body>
 </html>

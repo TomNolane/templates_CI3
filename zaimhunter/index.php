@@ -66,7 +66,7 @@ require 'header.php';
                             <li><span>365</span></li> 
                         </ul>
                     <div class="text-center">
-                        <a class="btn ex-main-btn hidden-xs hidden-sm visible-md visible-lg" style="width: 65%;" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">Получить деньги</a>
+                        <a class="btn ex-main-btn hidden-xs hidden-sm visible-md visible-lg" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">Получить деньги</a>
                     </div>
                     </form>
                     </div>

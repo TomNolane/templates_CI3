@@ -86,3 +86,6 @@ a#step2, a#step1, a#step3, a#next1, a#next2, a#form-send {
 input[type="checkbox"] {
     vertical-align: unset;
 }
+.form-control {
+    height: 50px;
+}

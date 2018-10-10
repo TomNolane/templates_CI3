@@ -59,15 +59,15 @@ include "header.php";
                         <input type="hidden" id="amount" name="amount" value="<?=$sum;?>" />
                         <div class="tab-content">
                             <div id="firstStep" class="tab-pane fade in active">
-                                <?php require 'form1.php'; ?>
+                                <?php require 'full/form1.php'; ?>
                                 <div class="text-center">
-                                    <a class="btn btn-primary btn-next" id="next1">Оформить заявку 
+                                    <a class="btn btn-primary btn-next" id="next1f">Далее
                                     </a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                             <div id="secondStep" class="tab-pane fade">
-                                <?php require('form2.php'); ?>
+                                <?php require('full/form2.php'); ?>
                                 <div class="clearfix">&nbsp;</div>
                                 <div class="form-group"> 
                                     <div class="text-center">
@@ -79,7 +79,7 @@ include "header.php";
                                 <div class="clearfix"></div>
                             </div>
                             <div id="thirdStep" class="tab-pane fade">
-                                <?php require('form3.php'); ?>
+                                <?php require('full/form3.php'); ?>
                                 <div class="row">
                                     <div class="text-center">
                                         <a class="btn btn-primary btn-next" id="getmoney">Оформить заявку</a>

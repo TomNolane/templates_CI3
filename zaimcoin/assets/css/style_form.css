@@ -77,3 +77,6 @@ margin-bottom: 0 !important;
         font-size: 33px;
     }
 }
+.ex-form .ex-form-content .form-horizontal .form-group select {
+    height: 50px;
+}

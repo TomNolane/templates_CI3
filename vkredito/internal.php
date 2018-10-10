@@ -140,6 +140,7 @@ else
 			elseif ($this->uri->segment(1) == 'contacts') require 'internal-contacts.php';
 			elseif ($this->uri->segment(1) == 'faq') require 'internal-faq.php';
 			elseif ($this->uri->segment(1) == 'info') require 'internal-info.php';
+			elseif($this->uri->segment(1) == '404') require 'internal-404.php';
 		?>
 		</div>
 	</div>

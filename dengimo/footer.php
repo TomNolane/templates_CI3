@@ -1,23 +1,29 @@
 </div>
 <div class="buffer"></div> 
 <?php $from = '15';
-if($this->uri->segment(1) != 'form')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Dengimo -->
+    <!-- dengimo -->
     <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9509439067407055"
-         data-ad-slot="9737652169"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="1070967656"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    ';
+    </script>';
+    echo '<!-- Yandex.RTB R-A-232716-7 mobile -->
+    <div id="yandex_rtb_R-A-232716-7"></div>
+    <!-- Yandex.RTB R-A-232716-8 desktop -->
+    <div id="yandex_rtb_R-A-232716-8"></div>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-
+if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
+{
+    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156936666">';
+}
 ?>
 <footer>
 <div class="container">
@@ -28,6 +34,7 @@ if($this->uri->segment(1) != 'form')
                     <img src="/templates/dengimo/assets/img/logo-footer.png" class="logo" alt="logo-footer.png">
                 </a>
             </div>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
             <div class="col-md-4 col-sm-4 col-xs-12 spec_footer4">
                 <p class="footer-text">
                     Сервис по подбору выгодных онлайн займов находящийся по адресу:
@@ -39,8 +46,25 @@ if($this->uri->segment(1) != 'form')
                 <p style="font-size: 12px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
                 <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001.</p>
             </div>
+             <?php endif; ?>
             <div class="col-sm-12">
                 <hr/>
+                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- dengimo -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-4970738258373085"
+                    data-ad-slot="1070967656"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script><!-- Yandex.RTB R-A-232716-7 mobile -->
+                <div id="yandex_rtb_R-A-232716-7"></div>
+                <!-- Yandex.RTB R-A-232716-8 desktop -->
+                <div id="yandex_rtb_R-A-232716-8"></div>
+                <?php } ?>
                 <ul class="list-inline text-center">
                     <li><a class="fonts12" href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
                     <li><a class="fonts12" href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
@@ -411,5 +435,32 @@ require 'templates/common/new2/js/exeption.js';
         </div>
         </noscript> 
 <?php } ?>
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3052627", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
+(function (d, w, id) {
+if (d.getElementById(id)) return;
+var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="//top-fwz1.mail.ru/counter?id=3052627;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
+<script type="text/javascript">
+var _tmr = _tmr || [];
+_tmr.push({
+type: 'itemView',
+productid: 'VALUE',
+pagetype: 'VALUE',
+list: 'VALUE',
+totalvalue: 'VALUE'
+});
+</script>
+<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
 </body>
 </html>

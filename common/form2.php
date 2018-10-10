@@ -171,7 +171,7 @@
 			<div class="form-group">
 				<label class="label-required">Населённый пункт</label>
 				<!--select class="form-control" id="city" name="city" required><option value="0">Город проживания</option></select-->
-				<input type="text" class="form-control" name="city" value="<?php echo isset($city_name)? $city_name : ''; ?>" pattern="^[А-Яа-яЁё\-\.\(\)\s]+$">
+				<input type="text" class="form-control" name="city" value="<?php echo isset($city_name)? $city_name : ''; ?>" pattern="^[А-Яа-яЁё\s]+$">
 			</div>
 		</div>
 		<div class="col-sm-6">

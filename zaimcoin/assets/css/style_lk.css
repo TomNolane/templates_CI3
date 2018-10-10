@@ -1,11 +1,5 @@
-.spec_footer4 { 
-    visibility: hidden;
-}
-.spec_footer5 { 
-    visibility: hidden;
-}
-.spec_footer6 { 
-    visibility: hidden;
+.ex-main-footer-bg .ex-foot-logo {
+    padding-bottom: 0; 
 }
 .table_text {
     color: #000000 !important;

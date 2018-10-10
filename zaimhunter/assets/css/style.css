@@ -226,8 +226,8 @@ input[type='number']::-webkit-calendar-picker-indicator {
 }
 
 /* line 174, ../sass/core/_global.scss */
-.has-feedback label ~ .form-control-feedback {
-  top: 20px !important;
+.form-control-feedback {
+  top: 10px !important;
 }
 
 /* line 1, ../sass/core/_glyphicons.scss */
@@ -5916,15 +5916,7 @@ select[multiple].input-lg {
 /* line 2908, ../sass/library/_bootstrap.scss */
 .has-feedback label.sr-only ~ .form-control-feedback {
   top: 0;
-}
-
-/* line 2911, ../sass/library/_bootstrap.scss */
-.help-block {
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  color: #737373;
-}
+} 
 
 @media (min-width: 768px) {
   /* line 2918, ../sass/library/_bootstrap.scss */
@@ -8955,7 +8947,7 @@ a.thumbnail.active {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  -webkit-background-size: 40px 40px;
+  background-size: 40px 40px;
   background-size: 40px 40px;
 }
 
@@ -10457,7 +10449,7 @@ button.close {
     -webkit-transition: -webkit-transform .6s ease-in-out;
     -o-transition: -o-transform .6s ease-in-out;
     transition: transform .6s ease-in-out;
-    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-perspective: 1000px;
     perspective: 1000px;
@@ -11498,7 +11490,7 @@ button.close {
   background-color: #f0ad4e;
   border-radius: 3px;
   cursor: default;
-  display: inline-block;
+  /* display: inline-block; */
   text-align: center;
 }
 
@@ -11898,9 +11890,6 @@ button.close {
 /* line 16, ../sass/library/_owlCarousel.scss */
 .owl-carousel .owl-stage {
   position: relative;
-  -ms-touch-action: pan-Y;
-  -moz-backface-visibility: hidden;
-  /* fix firefox animation glitch */
 }
 
 /* line 21, ../sass/library/_owlCarousel.scss */
@@ -11918,16 +11907,16 @@ button.close {
   position: relative;
   overflow: hidden;
   /* fix for flashing background */
-  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
 }
 
 /* line 33, ../sass/library/_owlCarousel.scss */
 .owl-carousel .owl-wrapper,
 .owl-carousel .owl-item {
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
 }
@@ -11937,7 +11926,7 @@ button.close {
   position: relative;
   min-height: 1px;
   float: left;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }
@@ -12094,7 +12083,7 @@ button.close {
   background: url("owl.video.play.png") no-repeat;
   cursor: pointer;
   z-index: 1;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: transform 100ms ease;
 }
 
@@ -12194,7 +12183,7 @@ button.close {
   margin: 5px 7px;
   background: #D6D6D6;
   display: block;
-  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
   transition: opacity 200ms ease;
   border-radius: 30px;
 }
@@ -12476,7 +12465,7 @@ header .navbar-default {
   height: 36px;
   display: inline-block;
   background: url(/templates/zaimhunter/assets/img/rub.png) no-repeat;
-  -webkit-background-size: contain;
+  background-size: contain;
 }
 @media screen and (max-width: 991px) and (min-width: 768px) {
   /* line 146, ../sass/desktop/_start.scss */
@@ -12555,11 +12544,7 @@ header .navbar-default {
   .ex-main-btn {  /* Tom Nolane  .ex-start-head .ex-calc-wraper .ex-calc-block .ex-main-btn */
     padding: 15px;
   }
-}
-/* line 218, ../sass/desktop/_start.scss */
-.ex-start-head .ex-calc-wraper .ex-range-scope {
-  /* padding-top: 50px; */  /* Tom Nolane */
-}
+} 
 /* line 222, ../sass/desktop/_start.scss */
 .ex-start-head .ex-calc-wraper .ex-range-scope .ex-slider-info span:first-child {
   float: left;
@@ -13011,7 +12996,7 @@ header .navbar-default {
   height: 36px;
   display: inline-block;
   background: url(/templates/zaimhunter/assets/img/rub.png) no-repeat;
-  -webkit-background-size: contain;
+  background-size: contain;
 }
 /* line 128, ../sass/desktop/_form.scss */
 .ex-form .ex-calc-wraper .ex-zaim-time {
@@ -14282,32 +14267,6 @@ header .navbar-default {
   color: #ff0000 !important;
   font-size: 0.8em;
 }
-
-input:-moz-placeholder {
-  /* color: #000000   !important;
-  opacity: .8; */
-}
-
-input::-moz-placeholder {
-  /* color: #000000   !important; */
-  /* opacity: .8; */
-}
-
-input::placeholder {
-  /* color: #000000   !important;
-   opacity: .8; */
-}
-
-input:-ms-input-placeholder {
-  /* color: #000000   !important;
-   opacity: .8; */
-}
-
-input:-webkit-input-placeholder {
-  /* color: #000000   !important;
-   opacity: .8; */
-}
-
 .label_er {
   color: #b94a48 !important;
 }

@@ -104,7 +104,7 @@
                 <label class="control-label col-md-3" value="ул. Ленина" for="work_street">Место работы (улица)</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip" name="work_street" placeholder="Улица" title="Укажите улицу" id="work_street"
+                        <input type="text" class="form-control ec tip" name="work_street" value="ул. Ленина" placeholder="Улица" title="Укажите улицу" id="work_street"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                             data-validation-error-msg="Укажите, улицу" required>
                             <p class="text-muted helpblock">Пример: ул. Ленина</p>

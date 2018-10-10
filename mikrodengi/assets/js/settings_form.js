@@ -478,6 +478,7 @@ $("#email").suggestions({
         
     }
     $('#next1f').click(function(){
+		/*
 		if (validate1()) {
 			send_form();
 			$('.ex-step-counter').removeClass('ex-step-active');
@@ -494,7 +495,16 @@ $("#email").suggestions({
 		setcookies();
         setcookie('i', $('#i').val());
 		$('select[name="reg_type"]').change();
-       
+       */
+	   if (validate()) {
+            $('input[name="step"]').val('3');
+            $('#form-modal').show();
+			send_form(true, '/lk');
+            markTarget('form-step-3');
+            window.location = '/lk';
+		}
+		showBzzz = false;
+		setcookies();
 	});
 	$('#next2').click(function(){
 		if (validate2()) {

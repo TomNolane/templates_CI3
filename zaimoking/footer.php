@@ -1,14 +1,14 @@
 <?php $from = '15';
-    if($this->uri->segment(1) != 'form')
+    if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
     {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Zaimoking -->
+        <!-- zaimoking -->
         <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-9509439067407055"
-             data-ad-slot="4673544662"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="7850222323"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
@@ -20,9 +20,10 @@
         <div class="row">
             <div class="col-md-2">
                 <div class="ex-foot-logo">
-                    <a href=""><img src="/templates/zaimoking/assets/img/logo-footer.png" alt="logo-footer.png"></a>
+                    <a href="/"><img src="/templates/zaimoking/assets/img/logo-footer.png" alt="logo-footer.png"></a>
                 </div>
             </div>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
             <div class="col-md-10">
                 <p>Сервис по подбору выгодных онлайн займов и кредитов находящийся по адресу: <br>
                     Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 support@zaimoking.ru<span class="hidden-xs hidden-sm"> | 8
@@ -35,14 +36,28 @@
                     своевременного погашения<br>
                     ООО «Альянс» | ОГРН 5177746353054 | ИНН 9705113909 | КПП 770501001</span></p>
             </div>
+            <?php endif; ?>
             <div class="col-sm-12">
                 <hr/>
+                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
+                    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- zaimoking -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-4970738258373085"
+                        data-ad-slot="7850222323"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>';
+                } ?>
                 <ul class="list-inline text-center">
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
                 </ul>
             </div>
         </div>

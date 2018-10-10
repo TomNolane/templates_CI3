@@ -1,40 +1,68 @@
 <?php $from = '15';
-if($this->uri->segment(1) != 'form')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Forzaim -->
+    <!-- forzaim -->
     <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9509439067407055"
-         data-ad-slot="3411916965"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="6265677912"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
+    echo '<!-- Yandex.RTB R-A-260582-2 mobile -->
+    <div id="yandex_rtb_R-A-260582-2"></div>
+    <!-- Yandex.RTB R-A-260582-1 desktop -->
+    <div id="yandex_rtb_R-A-260582-1"></div>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
-}?>
+}
+if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
+{
+    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="//top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156080921">';
+}
+?>
 <footer class="ex-main-footer">
     <div class="container">
         <a href="/"><h2>Forzaim</h2></a>
+        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
         <p class="spec_footer7">
             Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <a href="mailto:support@forzaim.ru" target="_blank">support@forzaim.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
             <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
             Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.</span>
             Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001
         </p> 
+        <?php endif; ?>
         <hr/>
+        <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
+            echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- forzaim -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4970738258373085"
+                data-ad-slot="6265677912"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>';
+            echo '<!-- Yandex.RTB R-A-260582-2 mobile -->
+            <div id="yandex_rtb_R-A-260582-2"></div>
+            <!-- Yandex.RTB R-A-260582-1 desktop -->
+            <div id="yandex_rtb_R-A-260582-1"></div><hr/>';
+        } ?>
         <ul class="list-inline">
-            <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-            <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-            <li><a href="https://bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-            <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-            <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
+            <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
+            <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
+            <li><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
+            <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
+            <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
         </ul>
     </div>
 </footer> 
 <!-- [if lt IE 10]>
-<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+<script  src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif] --> 
 
 <!-- common JS -->
@@ -264,5 +292,32 @@ require 'templates/common/new2/js/exeption.js';
 '; 
     }
 ?>
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3052550", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
+(function (d, w, id) {
+if (d.getElementById(id)) return;
+var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+ts.src = "//top-fwz1.mail.ru/js/code.js";
+var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="//top-fwz1.mail.ru/counter?id=3052550;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
+<script type="text/javascript">
+var _tmr = _tmr || [];
+_tmr.push({
+type: 'itemView',
+productid: 'VALUE',
+pagetype: 'VALUE',
+list: 'VALUE',
+totalvalue: 'VALUE'
+});
+</script>
+<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
 </body>
 </html>

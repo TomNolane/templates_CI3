@@ -118,6 +118,7 @@ else
 		elseif ($this->uri->segment(1) == 'news4') { require 'internal-news4.php'; }
 		elseif ($this->uri->segment(1) == 'news5') { require 'internal-news5.php'; }
 		elseif ($this->uri->segment(1) == 'news6') { require 'internal-news6.php'; }
+		elseif($this->uri->segment(1) == '404') require 'internal-404.php';
 }
 ?> 
    

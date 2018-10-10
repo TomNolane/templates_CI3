@@ -85,13 +85,13 @@ include "header.php";
                 <input type="hidden" name="fingerprint" id="fingerprint" value="">
             <div class="tab-content">
                 <div id="firstStep"  class="tab-pane active">
-                    <?php require 'form1.php'; ?>
+                    <?php require 'full/form1.php'; ?>
                 </div>
                 <div id="secondStep"  class="tab-pane">
-                    <?php require 'form2.php'; ?>
+                    <?php require 'full/form2.php'; ?>
                 </div>
                 <div id="thirdStep"  class="tab-pane" >
-                    <?php require 'form3.php'; ?>
+                    <?php require 'full/form3.php'; ?>
                 </div>
             </div>
         </form>

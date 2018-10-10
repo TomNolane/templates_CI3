@@ -1,45 +1,68 @@
-<br><br>
 <?php $from = '15'; $px = '63.974'; 
-if($this->uri->segment(1) != 'form')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
-	echo '';
+	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- zaimoking -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="7850222323"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
-} 
+}
 ?>
-<footer class="ex-start-footer">
+<footer class="ex-main-footer">
     <div class="container">
-        <div class="row ex-main-footer">
+        <div class="row">
             <div class="col-md-2">
-                <div class="ex-footer-logo">
-                    <a rel="nofollow" href="/"> <img src="/templates/test/assets/img/footer-logo-zaimhunter.png" alt="logo-zaimhunter"></a>
+                <div class="ex-foot-logo">
+                    <a href="/"><img src="/templates/zaimoking/assets/img/logo-footer.png" alt="logo-footer.png"></a>
                 </div>
             </div>
-            <div class="col-md-10 spec_footer4">
-                <p>Сервис по подбору выгодных онлайн займов
-                    находящийся по адресу Россия, Ленинградская обл.
-                    г. Санкт-Петербург, ул. Осипенко, 12, оф 201
-                    <a rel="nofollow" href="mailto:support@zaimhunter.ru">support@zaimhunter.ru</a> <span class="hidden-xs hidden-sm">| +7 (495) 006 19 61</span><br>
-                    <span id="special_footer" class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
-                    Максимальная процентная ставка по займу составляет
-                    0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок
-                    пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате
-                    31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
-                    <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span>
-                </p>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
+            <div class="col-md-10">
+                <p>Сервис по подбору выгодных онлайн займов и кредитов находящийся по адресу: <br>
+                    Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 support@zaimoking.ru<span class="hidden-xs hidden-sm"> | 8
+                    (960) 950 93 53</span><br>
+                    <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
+                    Максимальная процентная ставка по займу составляет 0,98% в день,<br>
+                    а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10
+                    недель под 0,08% в день; проценты за весь период составят 11 200 руб.
+                    Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае
+                    своевременного погашения<br>
+                    ООО «Альянс» | ОГРН 5177746353054 | ИНН 9705113909 | КПП 770501001</span></p>
             </div>
+            <?php endif; ?>
             <div class="col-sm-12">
                 <hr/>
+                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
+                    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- zaimoking -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-4970738258373085"
+                        data-ad-slot="7850222323"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script><hr/>';
+                } ?>
                 <ul class="list-inline text-center">
-                    <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li><a href="https://bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
                 </ul>
             </div>
         </div>
-    </div> 
-</footer>  
+    </div>
+</footer> 
 <!-- [if lt IE 10]>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 <![endif] --> 
@@ -50,17 +73,15 @@ if($this->uri->segment(1) != 'form')
     echo 'try{';
     require 'footer_common_js.php';
     echo '/* private JS */';
-    require 'templates/test/assets/js/main.js'; 
+    require 'templates/zaimoking/assets/js/main.js'; 
 
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
  
-    $("#rangeSlider").ionRangeSlider
-    (
-        {
-        navigation: true,
-        navigationText: ["<img src='myprevimage.png'>","<img src='mynextimage.png'>"],
+    $("#rangeSlider").ionRangeSlider({
         hide_min_max: true,
+        hide_from_to: true,
         keyboard: true,
+        grid: false,
         from: <?php 
         if($this->input->get('amount') != '')
         {  
@@ -201,130 +222,137 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
             $('#amount').val(slider.result.from_value);
             $("#form_slrd").val(slider.result.from);
         }, 50); 
-        traffic("zaimhunter.ru",0);
+        traffic("zaimoking.ru",0);
 
-        $(document).ready(function () 
+        function GetMoney() 
         {
-            $('.owl-carousel').owlCarousel({
-                stagePadding: 40,
-                center: true,
-                loop: true,
-                margin: 74,
-                items: 1.5,
-                nav: false,
-                responsive: {
-                    1200: {
-                        items: 1.5
-                    },
-                    // breakpoint from 480 up
-                    480: {
-                        items: 1
-                    }
-                }
-            })
-        });
-        $(document).ready(function () 
-        {
-            var amount = 20000;
-            $("#special").on({
-                mouseenter: function () {
-                    $(this).addClass("ex-active");
-                },
-                mouseleave: function () {
-                    $(this).removeClass("ex-active");
-                }
-            });
-            $("#special2").on({
-                mouseenter: function () {
-                    $(this).addClass("ex-active");
-                },
-                mouseleave: function () {
-                    $(this).removeClass("ex-active");
-                }
-            });
-            $("#special3").on({
-                mouseenter: function () {
-                    $(this).addClass("ex-active");
-                },
-                mouseleave: function () {
-                    $(this).removeClass("ex-active");
-                }
-            });
-            $("#special4").on({
-                mouseenter: function () {
-                    $(this).addClass("ex-active");
-                },
-                mouseleave: function () {
-                    $(this).removeClass("ex-active");
-                }
-            });
-
-        });
+            $('form#anketa').submit();
+        }
 <?php }
 }
 elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {
     include "templates/common/new2/js/lk.js";      
-    echo 'traffic("zaimhunter.ru",4);'; 
+    echo 'traffic("zaimoking.ru",4);'; 
 
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic("zaimhunter.ru",9);'; 
+    echo 'traffic("zaimoking.ru",9);'; 
 }
-else if($this->uri->segment(1) == 'form')
-{ }
-else if($this->uri->segment(1) == 'faq')
-{
-    echo '$(".my_select").change(function() {
-            $("#output_text0").addClass("hidden");
-            $("#output_text1").addClass("hidden");
-            $("#output_text2").addClass("hidden");
-            $("#output_text3").addClass("hidden");
-            $("#output_text4").addClass("hidden");
-            $("#output_text5").addClass("hidden");
-            $("#output_text6").addClass("hidden");
-            $("#output_text7").addClass("hidden");
-            $("#output_text8").addClass("hidden");
-            $("#output_text9").addClass("hidden");
-            $("#output_text10").addClass("hidden");
-        
-            var val = $(".my_select option:selected").val(); 
-            switch(val)
-            {
-                case "0":  $("#output_text0").removeClass("hidden"); break;
-                case "1":  $("#output_text1").removeClass("hidden"); break;
-                case "2":  $("#output_text2").removeClass("hidden"); break;
-                case "3":  $("#output_text3").removeClass("hidden"); break;
-                case "4":  $("#output_text4").removeClass("hidden"); break;
-                case "5":  $("#output_text5").removeClass("hidden"); break;
-                case "6":  $("#output_text6").removeClass("hidden"); break;
-                case "7":  $("#output_text7").removeClass("hidden"); break;
-                case "8":  $("#output_text8").removeClass("hidden"); break;
-                case "9":  $("#output_text9").removeClass("hidden"); break;
-                case "10":  $("#output_text10").removeClass("hidden"); break;
-            }
-        });';
-}
-else if($this->uri->segment(1) == 'money')
-{ 
-    echo '$(".my_select2").change(function() {
-    
-        $("#money_text0").addClass("hidden");
-        $("#money_text1").addClass("hidden");
-        $("#money_text2").addClass("hidden");
-        $("#money_text3").addClass("hidden");
-    
-        var val = $(".my_select2 option:selected").val(); 
-        switch(val)
-        {
-            case "0":  $("#money_text0").removeClass("hidden"); break;
-            case "1":  $("#money_text1").removeClass("hidden"); break;
-            case "2":  $("#money_text2").removeClass("hidden"); break;
-            case "3":  $("#money_text3").removeClass("hidden"); break;
+elseif($this->uri->segment(1) == 'faq') {
+    echo '<script>//******select menu *******//
+
+    $(\'select\').each(function () {
+        var $this = $(this), numberOfOptions = $(this).children(\'option\').length;
+
+        $this.addClass(\'select-hidden\');
+        $this.wrap(\'<div class="select"></div>\');
+        $this.after(\'<div class="select-styled"></div>\');
+
+        var $styledSelect = $this.next(\'div.select-styled\');
+        $styledSelect.text($this.children(\'option\').eq(0).text());
+
+        var $list = $(\'<ul />\', {
+            \'class\': \'select-options\'
+        }).insertAfter($styledSelect);
+
+        for (var i = 0; i < numberOfOptions; i++) {
+            $(\'<li />\', {
+                text: $this.children(\'option\').eq(i).text(),
+                rel: $this.children(\'option\').eq(i).val()
+            }).appendTo($list);
         }
-    });';
+
+        var $listItems = $list.children(\'li\');
+
+        $styledSelect.click(function (e) {
+            e.stopPropagation();
+            $(\'div.select-styled.active\').not(this).each(function () {
+                $(this).removeClass(\'active\').next(\'ul.select-options\').hide();
+            });
+            $(this).toggleClass(\'active\').next(\'ul.select-options\').toggle();
+        });
+
+        $listItems.click(function (e) {
+            e.stopPropagation();
+            $styledSelect.text($(this).text()).removeClass(\'active\');
+            $this.val($(this).attr(\'rel\'));
+            $list.hide();
+        });
+        $(document).click(function () {
+            $styledSelect.removeClass(\'active\');
+            $list.hide();
+        });
+    });
+
+    $(\'.select-options li\').click(function (e) {
+        e.preventDefault();
+        var value = $(this).closest(\'li\').attr(\'rel\');
+        if (value !== 0) {
+            $(\'.ex-faq-type\').css(\'display\', \'none\');
+            $(\'#div\' + value).css(\'display\', \'block\');
+        }
+    });</script>';
+} elseif($this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-bank' || $this->uri->segment(1) == 'zaim-contact' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-yandex') {
+    echo '<script>
+    //******select menu *******//
+
+    $(\'select\').each(function () {
+        var $this = $(this), numberOfOptions = $(this).children(\'option\').length;
+
+        $this.addClass(\'select-hidden\');
+        $this.wrap(\'<div class="select"></div>\');
+        $this.after(\'<div class="select-styled"></div>\');
+
+        var $styledSelect = $this.next(\'div.select-styled\');
+        $styledSelect.text($this.children(\'option\').eq(0).text());
+
+        var $list = $(\'<ul />\', {
+            \'class\': \'select-options\'
+        }).insertAfter($styledSelect);
+
+        for (var i = 0; i < numberOfOptions; i++) {
+            $(\'<li />\', {
+                text: $this.children(\'option\').eq(i).text(),
+                rel: $this.children(\'option\').eq(i).val()
+            }).appendTo($list);
+        }
+
+        var $listItems = $list.children(\'li\');
+
+        $styledSelect.click(function (e) {
+            e.stopPropagation();
+            $(\'div.select-styled.active\').not(this).each(function () {
+                $(this).removeClass(\'active\').next(\'ul.select-options\').hide();
+            });
+            $(this).toggleClass(\'active\').next(\'ul.select-options\').toggle();
+        });
+
+        $listItems.click(function (e) {
+            e.stopPropagation();
+            $styledSelect.text($(this).text()).removeClass(\'active\');
+            $this.val($(this).attr(\'rel\'));
+            $list.hide();
+        });
+        $(document).click(function () {
+            $styledSelect.removeClass(\'active\');
+            $list.hide();
+        });
+    });
+
+    $(\'.select-options li\').click(function(e) {
+        e.preventDefault();
+        var value = $(this).closest(\'li\').attr(\'rel\');
+        if (value !== 0) {
+            $(\'.ex-money-type\').css(\'display\' , \'none\');
+            $(\'#div\' + value).css(\'display\' , \'block\');
+        }
+    });
+</script>';
 } 
+else if($this->uri->segment(1) == 'form')
+{ } 
 echo "}";
 require 'templates/common/new2/js/exeption.js';
 ?>
@@ -335,8 +363,46 @@ require 'templates/common/new2/js/exeption.js';
     include "yandex_rtb.php";
     if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
     {     
-        echo ''; 
+        echo '<!-- Google Code for  
+        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
+        Page -->
+        <script >
+        /* <![CDATA[ */
+        var google_conversion_id = 819783468;
+        var google_conversion_label = "umfOCI-B1XsQrM7zhgM";
+        var google_remarketing_only = false;
+        /* ]]> */
+        </script>
+        <script   
+        src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""  
+        src="//www.googleadservices.com/pagead/conversion/819783468/?label=umfOCI-B1XsQrM7zhgM&amp;guid=ON&amp;script=0"/>
+        </div>
+        </noscript>'; 
     }
 ?>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1337253769702359'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" 
+src="https://www.facebook.com/tr?id=1337253769702359&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
 </body>
 </html>

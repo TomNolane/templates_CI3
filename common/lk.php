@@ -9,7 +9,7 @@
     
     (isset($_GET['loan']) && $_GET['loan']) ? $loan = 0 : $loan = 0;
     
-    $data = $this->offers->all(8, 0);
+    $data = $this->offers->all(4, 0);
     
     // IP
     $this->load->helper('ip');
@@ -36,8 +36,10 @@
 	echo '</style>';
 ?> 
 <style>
-ins {
+ins, .adsbygoogle{
 	text-align: center !important;
+    max-height: none !important;
+    height: none !important;
 }
 </style>
 <div class="row container3"><div class="col-md-12">
@@ -47,7 +49,7 @@ ins {
 	<?php } else { ?>
 	<h2 class="text-center hh">Вам доступен займ в следующих организациях:</h2>
 	<?php }?> 
-    <div class="row"><br>
+    <div class="row" id="for_google">
     <?php 
         function plural_type($n) { 
             return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 

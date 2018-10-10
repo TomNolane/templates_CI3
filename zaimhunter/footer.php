@@ -1,8 +1,22 @@
 <br><br>
 <?php $from = '15'; $px = '63.974'; 
-if($this->uri->segment(1) != 'form')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
-	echo '';
+	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- zaimhunter -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="2625815808"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
+    echo '<!-- Yandex.RTB R-A-258704-1 desktop -->
+    <div id="yandex_rtb_R-A-258704-1"></div>
+    <!-- Yandex.RTB R-A-258704-2 mobile -->
+    <div id="yandex_rtb_R-A-258704-2"></div>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 } 
 ?>
@@ -14,6 +28,7 @@ if($this->uri->segment(1) != 'form')
                     <a rel="nofollow" href="/"> <img src="/templates/zaimhunter/assets/img/footer-logo-zaimhunter.png" alt="logo-zaimhunter"></a>
                 </div>
             </div>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
             <div class="col-md-10 spec_footer4">
                 <p>Сервис по подбору выгодных онлайн займов
                     находящийся по адресу Россия, Ленинградская обл.
@@ -27,14 +42,32 @@ if($this->uri->segment(1) != 'form')
                     <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span>
                 </p>
             </div>
+            <?php endif; ?>
             <div class="col-sm-12">
                 <hr/>
+                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
+                echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- zaimhunter -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-4970738258373085"
+                        data-ad-slot="2625815808"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>';
+                    echo '<!-- Yandex.RTB R-A-258704-1 desktop -->
+                    <div id="yandex_rtb_R-A-258704-1"></div>
+                    <!-- Yandex.RTB R-A-258704-2 mobile -->
+                    <div id="yandex_rtb_R-A-258704-2"></div><hr/>';
+                } ?>
                 <ul class="list-inline text-center">
-                    <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li><a href="https://bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
+                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
+                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
+                    <li><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
+                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
+                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
                 </ul>
             </div>
         </div>

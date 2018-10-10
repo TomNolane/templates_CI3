@@ -10918,7 +10918,7 @@ footer.ex-main-footer ul li a:focus {
 @media (max-width: 374px) {
   /* line 30, ../sass/mobile/_footer.scss */
   footer.ex-main-footer ul li a {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -10979,7 +10979,7 @@ header.ex-mob .ex-head .ex-head-menu li a:focus {
 @media (max-width: 374px) {
   /* line 32, ../sass/mobile/_header.scss */
   header.ex-mob .ex-head .ex-head-menu li a {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 /* line 48, ../sass/mobile/_header.scss */
@@ -11073,7 +11073,7 @@ main .ex-offers-section .ex-offers-block .ex-off-body figure {
   position: relative;
   text-align: center;
   color: #fff;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 900;
   background-color: #f3a530;
   padding: 2px 5px;

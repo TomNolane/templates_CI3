@@ -2,18 +2,26 @@
 if($this->uri->segment(1) != 'form')
 {
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Zaimsoon -->
+    <!-- zaimsoon -->
     <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9509439067407055"
-         data-ad-slot="3168374381"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="4548012382"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>';
+    echo '<!-- Yandex.RTB R-A-261295-1 desktop -->
+    <div id="yandex_rtb_R-A-261295-1"></div>
+    <!-- Yandex.RTB R-A-261295-2 mobile -->
+    <div id="yandex_rtb_R-A-261295-2"></div>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
-} 
+}
+if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
+{
+    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156975824">';
+}
 ?>
 <footer class="ex-main-footer">
     <div class="container">
@@ -285,5 +293,32 @@ require 'templates/common/new2/js/exeption.js';
         </noscript>'; 
     }
 ?>
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3052628", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
+(function (d, w, id) {
+if (d.getElementById(id)) return;
+var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="//top-fwz1.mail.ru/counter?id=3052628;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
+<script type="text/javascript">
+var _tmr = _tmr || [];
+_tmr.push({
+type: 'itemView',
+productid: 'VALUE',
+pagetype: 'VALUE',
+list: 'VALUE',
+totalvalue: 'VALUE'
+});
+</script>
+<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
 </body>
 </html>

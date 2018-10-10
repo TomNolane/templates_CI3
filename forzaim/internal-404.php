@@ -4,6 +4,12 @@
 		height: 0px !important;
 	}
 </style> 
+<nav class="ex-main-header ex-transparent">
+	<div class="container">
+		<i class="ex-hamburger"></i>
+		<a class="ex-brand" href="/">Forzaim</a>
+	</div>
+</nav>
 	<div class="row">
 		<div class="col-sm-2"></div>
 		<div class="col-sm-7">

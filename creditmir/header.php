@@ -137,26 +137,20 @@ if(!isset($description))
      <!--[if lte IE 9]>
      <script src="/modules/html5shiv/html5shiv.js"></script>
      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-     <![endif]-->
-
-	<?php
-		if ($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'confirm') 
-		{
-			echo '';
-		} 
-	?>
+     <![endif]--> 
 
 	<?php
 		require 'sendpuls.php';
         require 'google_tag_manager.php';
         require 'googlesyndication.php';
+        require 'templates/common/new2/php/utm.php';
     ?>
 </head>
 <?php 
     if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index')
     {
         echo '<body class="ex-sticky ex-bg-grey">
-        <form id="anketa" action="/form" method="post">
+        <form id="anketa" action="/form'.$utm.'" method="post">
         <section class="ex-home">
             <nav class="navbar navbar-default ex-main-header">
                 <div class="container">

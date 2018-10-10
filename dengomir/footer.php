@@ -1,18 +1,21 @@
 <?php $from = '15';
-if($this->uri->segment(1) != 'form')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Dengomir -->
+    <!-- dengomir -->
     <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9509439067407055"
-         data-ad-slot="5387343615"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="4639511728"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    ';
+    </script>';
+    echo '<!-- Yandex.RTB R-A-261797-1 desktop -->
+    <div id="yandex_rtb_R-A-261797-1"></div>
+    <!-- Yandex.RTB R-A-261797-2 mobile -->
+    <div id="yandex_rtb_R-A-261797-2"></div>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 } 
 ?>
@@ -24,6 +27,7 @@ if($this->uri->segment(1) != 'form')
                     <div class="col-md-3 ex-foot-logo">
                         <a href="/"><img src="/templates/dengomir/assets/img/icons/logo-footer.png" alt="logo-footer.png"></a>
                     </div>
+                    <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
                     <div class="col-md-9">
                         <p>Сервис по подбору выгодных онлайн займов Dengomir, находящийся по адресу
                             Россия, Ленинградская обл., г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
@@ -37,8 +41,10 @@ if($this->uri->segment(1) != 'form')
                             Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>
                             ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001 </span></p>
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
             <div class="col-md-5 hidden-xs hidden-sm">
                 <div class="col-md-6">
                     <p class="ex-list-title">Документы</p>
@@ -59,8 +65,26 @@ if($this->uri->segment(1) != 'form')
                     </ul>
                 </div>
             </div>
+            <?php endif; ?>
             <div class="col-sm-12">
                 <hr/>
+                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
+                    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- dengomir -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-4970738258373085"
+                        data-ad-slot="4639511728"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>';
+                    echo '<!-- Yandex.RTB R-A-261797-1 desktop -->
+                    <div id="yandex_rtb_R-A-261797-1"></div>
+                    <!-- Yandex.RTB R-A-261797-2 mobile -->
+                    <div id="yandex_rtb_R-A-261797-2"></div>';
+                } ?>
                 <ul class="list-inline text-center">
                     <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
                     <li><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
@@ -300,5 +324,32 @@ require 'templates/common/new2/js/exeption.js';
         </noscript>'; 
     }
 ?>
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3052547", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
+(function (d, w, id) {
+if (d.getElementById(id)) return;
+var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="//top-fwz1.mail.ru/counter?id=3052547;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
+<script type="text/javascript">
+var _tmr = _tmr || [];
+_tmr.push({
+type: 'itemView',
+productid: 'VALUE',
+pagetype: 'VALUE',
+list: 'VALUE',
+totalvalue: 'VALUE'
+});
+</script>
+<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
 </body>
 </html>

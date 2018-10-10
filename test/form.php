@@ -60,32 +60,43 @@ if($this->input->post('percent', TRUE) != '')
 
 if(!isset($my_title))
 {
-    $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Zaimhunter';
+    $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Zaimoking';
     $description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }
 include "templates/common/new2/php/form_header.php";
 include "header.php";
 ?>
-<div class="container ex-form">
-    <h1 class="text-center" id="to_scroll">Заполните анкету</h1>
-    <form id="anketa" action="/lk" method="post"   autocomplete="off" class="tab-content">
-        <input type="hidden" name="display" id="display" value="0">
-        <input type="hidden" name="referer" value="<?=$referer?>">
-        <input type="hidden" name="id" value="">
-        <input type="hidden" name="step" value="1">
-        <input type="hidden" name="ad_id" value="<?=$ad_id?>">
-        <input type="hidden" id="amount" name="amount" value="<?=$sum;?>"/>
-        <input type="hidden" id="period" name="period" value="<?=$period;?>" />
-        <input type="hidden" name="fingerprint" id="fingerprint" value="">
-        <div role="tabpanel" class="ex-anketa1-block tab-pane fade in active col-xs-12" id="firstTabContent">
-            <?php require 'full/form1.php';?>
-        </div>
-        <div role="tabpanel" class="ex-anketa2-block tab-pane col-xs-12" id="secondTabContent">
-            <?php require 'full/form2.php';?>
-        </div>
-        <div role="tabpanel" class="ex-anketa3-block tab-pane col-xs-12" id="lastTabContent">
-            <?php require 'full/form3.php';?>
-        </div>
-    </form>
-</div> 
+<main class="ex-form">
+    <h1 class="text-center" id="to_scroll">До одобрения кредита вас отделяют всего 3 шага</h1>
+    <p></p>
+    <ul class="ex-tab-steps text-center" id="form-steps">
+        <li class="ex-step-counter ex-step-active">Заполните личные данные</li>
+        <li class="ex-step-counter ex-step-2">Паспортные данные</li>
+        <li class="ex-step-counter">Сведения о работе</li>
+    </ul>
+    <div class="container">
+        <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off">
+                <input type="hidden" name="display" id="display" value="0">
+                <input type="hidden" name="referer" value="<?=$referer?>">
+                <input type="hidden" name="id" value="">
+                <input type="hidden" name="step" value="1">
+                <input type="hidden" name="ad_id" value="<?=$ad_id?>">
+                <input type="hidden" name="fingerprint" id="fingerprint" value="">
+                <input type="hidden" id="amount" name="amount" value="<?=$sum;?>"/>
+                <input type="hidden" id="period" name="period" value="<?=$period;?>" />
+            <div class="tab-content">
+                <div id="firstStep" class="tab-pane fade in active">
+                    <?php require 'full/form1.php'; ?>
+                </div>
+                <div id="secondStep" class="tab-pane fade">
+                    <?php require 'full/form2.php'; ?>
+                </div>
+                <div id="thirdStep" class="tab-pane fade">
+                    <?php require 'full/form3.php'; ?>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+<br><br>
 <?php include 'footer.php';?>
