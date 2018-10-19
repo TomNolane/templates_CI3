@@ -66,6 +66,18 @@
                     </div>
                 </div>
                 </form>
+                 <a class="anchor" name="id2"></a>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- zaimrubli -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-4970738258373085"
+                    data-ad-slot="4278094234"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
             <ul class="ex-section-money hidden-xs hidden-sm">
                 <li class="active"><a data-toggle="tab" href="/zaim-card"><img src="/templates/zaimrubli/assets/img/visa.png" alt="visa.png"></a></li>
@@ -88,6 +100,7 @@
                             <h3>Ответьте на несколько вопросов в короткой анкете</h3>
                             <p>Для этого нужен только паспорт и 2 минуты вашего времени</p>
                         </div>
+                        <a class="anchor" name="id3"></a>
                         <div class="ex-get-block">
                             <i></i>
                             <h3>Получите ваши деньги уже через 10-15 минут без проверок</h3>
@@ -179,4 +192,5 @@
         </div>
     </section> 
 </main>
+<a class="anchor" name="id4"></a>
 <?php require 'footer.php'; ?>

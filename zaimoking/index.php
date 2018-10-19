@@ -64,9 +64,22 @@
                 </div>
             </div>
         <div class="ex-get-money">
+        <a class="anchor" name="id2"></a>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- zaimoking -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4970738258373085"
+                data-ad-slot="7850222323"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script><br>
             <h2 class="text-center">
                 Как получить деньги?
             </h2>
+            
             <div class="row">
                 <div class="col-md-4">
                     <div class="ex-get-money-block">
@@ -107,6 +120,7 @@
             </div>
         </div>
         <div class="ex-articles">
+         <a class="anchor" name="id3"></a>
             <h2 class="text-center">Статьи о займах</h2>
             <div class="row">
                <a href="/without_check">
@@ -170,6 +184,7 @@
                 </div>
             </div>
         </div>
+        <a class="anchor" name="id4"></a>
         <div class="ex-about">
             <h2 class="text-center">Отзывы о нас</h2>
             <div class="row">
@@ -204,6 +219,7 @@
                 </div>
             </div>
         </div>
+        <a class="anchor" name="id5"></a>
         <div class="ex-suggestion">
             <h2 class="text-center">Специальное предложение</h2>
             <div class="row">

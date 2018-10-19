@@ -102,6 +102,18 @@
     <section class="ex-section-2 hidden-xs hidden-sm">
         <div class="container">
             <div class="row">
+            <a class="anchor" name="id2"></a>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- zaimsoon -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4970738258373085"
+                data-ad-slot="4548012382"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
                 <div class="col-md-10 col-md-offset-1">
                     <h3>Как получить деньги?</h3>
                     <div class="ex-get-money">
@@ -143,6 +155,7 @@
                             <i></i>
                         </div>
                     </div>
+                    <a class="anchor" name="id3"></a>
                     <div class="ex-get-money">
                         <div class="row">
                             <div class="col-md-3">
@@ -170,4 +183,5 @@
         </div>
     </section>
 </main>
+<a class="anchor" name="id4"></a>
 <?php require 'footer.php'; ?>

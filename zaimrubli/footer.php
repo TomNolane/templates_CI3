@@ -1,7 +1,8 @@
 <?php $from = '15'; $px = '63.974'; 
 if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
-	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
+        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- zaimrubli -->
         <ins class="adsbygoogle"
             style="display:block"
@@ -12,6 +13,8 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
+    }
+	
     echo '<!-- Yandex.RTB R-A-264025-1 desktop -->
     <div id="yandex_rtb_R-A-264025-1"></div>
     <!-- Yandex.RTB R-A-264025-2 mobile -->

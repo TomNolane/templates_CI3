@@ -11,9 +11,7 @@ require 'header.php';
                         <div class="row">
                             <div class="col-md-7">
                                 <div class="ex-range-scope">
-
                                     <form id="anketa" action="/form<?=$utm;?>" method="post">
-
                                         <h2>Какую сумму займа вы хотите получить?</h2>
                                         <div id="ex-main-slider-range">
                                             <figure class="ex-range-slider">
@@ -70,7 +68,19 @@ require 'header.php';
             </div>
         </div>
     </div>
-    <h2 class="text-center ex-money-receive-title">Как получить деньги</h2>
+    <a class="anchor" name="id2"></a>
+    <h2 class="text-center ex-money-receive-title">Как получить деньги</h2><hr/>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- zaimhome -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="7107437553"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     <div id="ex-how-receive" class="row">
         <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
             <div>
@@ -101,4 +111,5 @@ require 'header.php';
         </div>
     </div>
 </div>
+<a class="anchor" name="id3"></a>
 <?php require 'footer.php';?>

@@ -69,9 +69,20 @@
     <section class="ex-advantages hidden-xs hidden-sm">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center">Самый быстрый и удобный сервис<br>
+                <div class="col-md-12"> 
+                    <h2 class="text-center"><a class="anchor" name="id2"></a>Самый быстрый и удобный сервис<br>
                         по подбору онлайн займов на нужную сумму и период</h2>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- zaimcoin -->
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-4970738258373085"
+                            data-ad-slot="9741339751"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                     <div class="ex-adv-bg">
                         <div class="row">
                             <div class="col-md-4 ex-line-right ">
@@ -140,6 +151,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <a class="anchor" name="id3"></a>
                         </div>
                     </div>
                 </div>
@@ -147,4 +159,5 @@
         </div>
     </section>
 </main>
+<a class="anchor" name="id4"></a>
 <?php require 'footer.php'; ?>

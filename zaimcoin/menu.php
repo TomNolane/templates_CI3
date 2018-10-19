@@ -1,3 +1,4 @@
+<a class="anchor" name="id1"></a>
 <header>
     <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header" style="z-index: 777 !important;">
         <div class="container">
@@ -9,7 +10,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/" class="navbar-brand">
-                    <img src="templates/zaimcoin/assets/img/logo.png" alt="logo.png">
+                    <img src="templates/zaimcoin/assets/img/logo.png" class="logo-header" alt="logo.png">
                 </a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse">

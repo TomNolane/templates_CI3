@@ -1,6 +1,8 @@
 <?php $from = '15';
 if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
+    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') 
+    {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- fanzaim -->
         <ins class="adsbygoogle"
@@ -12,11 +14,13 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
-        echo '<!-- Yandex.RTB R-A-260538-1 desktop -->
-        <div id="yandex_rtb_R-A-260538-1"></div>
-        <!-- Yandex.RTB R-A-260538-2 mobile -->
-        <div id="yandex_rtb_R-A-260538-2"></div> ';
-        echo '<a href="#0" class="cd-top">Наверх</a>';
+    }
+    
+    echo '<!-- Yandex.RTB R-A-260538-1 desktop -->
+    <div id="yandex_rtb_R-A-260538-1"></div>
+    <!-- Yandex.RTB R-A-260538-2 mobile -->
+    <div id="yandex_rtb_R-A-260538-2"></div> ';
+    echo '<a href="#0" class="cd-top">Наверх</a>';
 }
 if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
 {

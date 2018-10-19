@@ -18,5 +18,6 @@ require 'templates/common/new2/js/backtotop.js';
 require 'templates/common/new2/js/fingerprintjs2.js';
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') {
     require 'templates/common/new2/js/for_index.js';
+    require 'templates/bzaim/assets/js/index.js';
 }
 ?>

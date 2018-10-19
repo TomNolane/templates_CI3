@@ -73,7 +73,20 @@ require 'header.php';
                 </div>
             </div>
         </div>
-    </section>
+        <br><br><br><br><br>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- zaimhunter -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4970738258373085"
+                data-ad-slot="2625815808"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+    </section> 
+    <a class="anchor" name="id2"></a>
     <section class="ex-service hidden-xs hidden-sm">
         <div class="container">
             <h2>Преимущества нашего сервиса</h2>
@@ -112,7 +125,6 @@ require 'header.php';
                             <p>Никаких поездок в офисы банков  и очередей. Все документы оформляются в режиме онлайн. Одобренная сумма в течение 15 минут поступит в ваше распоряжение.</p>
                         </div>
                     </div>
-
                 </div>
                 <div class="col-sm-6">
                     <div class="row">
@@ -152,6 +164,7 @@ require 'header.php';
             </div>
         </div>
     </section>
+    <a class="anchor" name="id3"></a>
     <section class="ex-about-zaim hidden-sm hidden-xs">
         <div class="container">
             <h2 style="margin-top: 30px !important;">Статьи о займах</h2>
@@ -194,8 +207,8 @@ require 'header.php';
                 </div>
             </div>
         </div>
-
     </section>
+    <a class="anchor" name="id4"></a>
     <section class="ex-condition hidden-sm hidden-xs">
         <div class="container">
             <h2>Подпишитесь на нашу рассылку с лучшими условиями займа</h2>
@@ -229,9 +242,7 @@ require 'header.php';
 
             </div>
         </div>
-
     </section>
-
     <?php
     $reviews = array(
         array('img' => '/templates/zaimhunter/assets/img/Ivan_K.png', 'name' => 'Иван К, студент:',   'text' => 'Я учусь на очном, живу отдельно от родителей, и денег у них не беру. Подрабатываю, но доходы на фрилансе нерегулярные. А небольшие суммы всегда нужны: то на подарок, то на поездку с друзьями. Выход нашелся: уже несколько раз оформлял онлайн-займ на небольшие суммы в 10 000 р. В чем выгода сервиса: заполнил один раз анкету – получил несколько предложений, из которых уже можно выбрать лучшие.  Написал отзыв, потому что многие люди боятся микрокредитов. Если четко просчитывать свою платежеспособность, никакого подвоха нет, и это единственная возможность например, для студентов. Просто читайте и считайте.'),
@@ -239,8 +250,7 @@ require 'header.php';
         array('img' => '/templates/zaimhunter/assets/img/Anton.png', 'name' => 'Антон',        'text' => 'И смех и грех: живем от зарплаты до зарплаты, заначек делать не успеваем, все время какие-то расходы. И тут сломался унитаз, а лишних денег нет. И жить без унитаза нереально, и кредит на такую смешную сумму в 7 000 рублей не взять, и все нужно вообще в один вечер решить! Спасибо товарищу: посоветовал ваш сервис, сказал, что деньги приходят мгновенно. Они реально пришли через 5 минут после оформления, и мы понеслись в магазин. Через неделю получили зарплату, погасили, все без проблем.  Сломается еще что-нибудь – знаю, куда обращаться.')
     ); 
     ?>
-    
-
+    <a class="anchor" name="id5"></a>
     <section class="ex-about hidden-sm hidden-xs">
         <div class="container">
             <h2>Отзывы о нас</h2>
@@ -264,4 +274,5 @@ require 'header.php';
         </div>
     </section>
 </main>
+<a class="anchor" name="id6"></a>
 <?php require 'footer.php';?>

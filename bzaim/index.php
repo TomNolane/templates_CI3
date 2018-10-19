@@ -59,8 +59,23 @@
 <div class="ex-get-money">
     <div class="container">
         <div class="row">
+            <a class="anchor" name="id2"></a>
             <h1 class="hidden-xs hidden-sm visible-md visible-lg">Как получить деньги сейчас?</h1> 
 			<h2 class="hidden-md hidden-lg visible-xs visible-sm special_ind42">Как получить деньги сейчас?</h2> 
+            <?php
+            echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- bzaim5.ru -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4970738258373085"
+                data-ad-slot="5816862028"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>';
+            ?>
+            <br><br><br>
             <div class="col-md-6 hidden-xs hidden-sm visible-md visible-lg">
                 <div class="ex-get-money-block">
                 <a href="/form"><img src="templates/bzaim/assets/img/calc.png" alt="calc.png" class="ex-vh-center"></a>
@@ -124,9 +139,11 @@
                     <h3>Получите деньги</h3>
                     <p>На карту VISA, MAESTRO, QIWI кошелёк, Яндекс.Деньги, через систему CONTACT, банковский счёт</p>
                 </div>
-            </div> 
+            </div>
+            <a class="anchor" name="id3"></a>
 			<div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm special_ind34">
                 <div class="ex-get-money-steps special_ind35">
+                    
                     <span class="special_ind36">3</span>
                     <h3 class="special_ind37">Получите деньги</h3>
                     <p>На карту VISA, MAESTRO, QIWI кошелёк, Яндекс.Деньги, через систему CONTACT, банковский счёт</p>
@@ -199,6 +216,7 @@
                         </div>
                     </div>
                 </div>
+                <a class="anchor" name="id4"></a>
                 <div class="ex-info-block hidden-xs hidden-sm">
                     <h3>Документы и разрешительная документация</h3>
                     <p>Услуги на проекте «Сервис» оказываются юридическим лицом ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001.
@@ -236,4 +254,5 @@
         </div>
     </div>
 </div>
+<a class="anchor" name="id5"></a>
 <?php include 'footer.php';?>

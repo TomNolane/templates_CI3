@@ -2,6 +2,7 @@
 <div class="b">
     <section class="calc" id="calc">
         <div class="container">
+        <a class="anchor" name="id2"></a>
             <div class="row">
                 <div class="col-lg-12 hidden-xs">
                     <h2 class="h1">Моментальные займы онлайн</h2>
@@ -105,11 +106,24 @@
         </div>
     </section>
     <div class="section-doc">
+        <a class="anchor" name="id3"></a>
         <section class="about white hidden-xs">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <h2 class="text-center"><span class="index_special"><b>Dengimo</b></span> - моментальные займы онлайн</h2>
+                        <hr/>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- dengimo -->
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-4970738258373085"
+                            data-ad-slot="1070967656"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script><hr/>
                         <p class="col_middle">Нужно срочно решить финансовые проблемы? Dengimo готов в этом помочь прямо сейчас. Просто зарегистрируйтесь на сайте, дождитесь одобрения заявки и получите деньги. В 97% случаев будет принято решение в вашу пользу. </p>
                         <p class="col_middle">Клиенты Dengimo могут не беспокоиться об отказе. Наш сервис не просто проверяет кредитную историю, он способен ее улучшить. В результате вы сможете взять займ на более выгодных условиях и всегда держать свои финансы под контролем.</p>
                         <p class="col_middle">Деньги быстро, просто и выгодно - это Dengimo. С нами можно забыть об экономических сложностях!</p>
@@ -187,6 +201,7 @@
                 </div>
             </div>
         </section>
+        <a class="anchor" name="id4"></a>
         <section class="conditions hidden-xs">
             <div class="container">
                 <div class="row">
@@ -304,5 +319,6 @@
             </div>
         </section>
     </div> 
-</div> 
+</div>
+<a class="anchor" name="id5"></a>
 <?php require 'footer.php'; ?>

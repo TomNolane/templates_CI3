@@ -42,3 +42,11 @@ tr:hover {
 .logo-spec {
     margin: 9px 0;
 }
+
+body {
+    padding-bottom: 0 !important;
+}
+
+.ex-sticky .ex-sticky-footer {
+    position: inherit;
+}

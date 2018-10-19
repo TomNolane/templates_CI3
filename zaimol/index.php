@@ -54,6 +54,18 @@
 	</section>
 	<section class="ex-section-2 hidden-xs hidden-sm">
 		<div class="container">
+			<a class="anchor" name="id2"></a>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- zaimol -->
+			<ins class="adsbygoogle"
+				style="display:block"
+				data-ad-client="ca-pub-4970738258373085"
+				data-ad-slot="8397017235"
+				data-ad-format="auto"
+				data-full-width-responsive="true"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
 			<ul class="ex-tabs">
 				<li class="active">
 					<a data-toggle="tab" href="#menu1" id="exReceiveMoney">Как получить деньги</a>
@@ -237,6 +249,7 @@
 			</div>
 		</div>
 	</section>
+	<a class="anchor" name="id3"></a>
 	<section class="ex-section-3 hidden-xs hidden-sm">
 		<div class="container text-center">
 			<h2>Отзывы клиентов</h2>
@@ -341,6 +354,7 @@
 	</section>
 	<section class="ex-section-5 hidden-xs hidden-sm">
 		<div class="container">
+		<a class="anchor" name="id4"></a>
 			<h2 class="text-center">Максимум выгоды</h2>
 			<ul class="ex-tabs">
 				<li class="active">
@@ -449,4 +463,5 @@
 		</div>
 	</section>
 </form>
+<a class="anchor" name="id5"></a>
 <?php require 'footer.php'; ?>

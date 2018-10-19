@@ -56,6 +56,18 @@
         </div>
     </div>
 </section>
+<a class="anchor" name="id2"></a>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- forzaim -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="6265677912"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <section class="ex-section-2 hidden-xs hidden-sm">
     <div class="container">
         <div class="row">
@@ -97,6 +109,7 @@
         </div>
     </div>
 </section>
+<a class="anchor" name="id3"></a>
 <section class="ex-section-3 hidden-xs hidden-sm">
     <h2 class="text-center">Отзывы о нас</h2>
     <div class="ex-slider-wrap">
@@ -153,6 +166,7 @@
         </div>
     </div>
 </section>
+<a class="anchor" name="id4"></a>
 <section class="ex-section-4 hidden-xs hidden-sm">
     <h2 class="text-center">Быстрый старт</h2>
     <div class="ex-fast-start-wrap">
@@ -203,4 +217,5 @@
     </div>
 </section>
 </form>
+<a class="anchor" name="id5"></a>
 <?php require 'footer.php'; ?>

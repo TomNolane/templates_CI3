@@ -6,17 +6,20 @@ $from = '15';
 
 if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
-	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- dengoman -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="4110287868"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>';
+    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
+        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- dengoman -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="4110287868"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
+    }
+	
     echo '<!-- Yandex.RTB R-A-243980-1 desktop -->
     <div id="yandex_rtb_R-A-243980-1"></div>
     <!-- Yandex.RTB R-A-243980-3 mobile -->
@@ -67,8 +70,8 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
             </div>
         </div>
         <div class="col-sm-12">
-            <hr/>
             <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+                <hr/>
                 <!-- Yandex.RTB R-A-243980-1 desktop -->
                 <div id="yandex_rtb_R-A-243980-1"></div>
                 <!-- Yandex.RTB R-A-243980-3 mobile -->

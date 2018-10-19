@@ -1,8 +1,8 @@
 <nav class="navbar">
 	<div class="container">
+		<a class="anchor" name="id1"></a>
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/"><img alt="logo.png" src="/templates/dengoman/assets/img/logo.png"></a>
-			
 			<button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
 				<span class="sr-only">Раскрыть меню</span>
 				<i class="glyphicon glyphicon-menu-hamburger"></i>

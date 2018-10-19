@@ -873,7 +873,7 @@ pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;backgrou
 }
 @media (min-width:992px){.container{width:970px;}
 }
-@media (min-width:1200px){.container{width:1240px;}
+@media (min-width:1200px){.container{width:1210px;}
 }
 .container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;}
 .row{margin-right:-15px;margin-left:-15px;}
@@ -3350,3 +3350,6 @@ input:valid:not(:placeholder-shown) {border-color: green !important;}
 		.ins {
 			margin: 20px;
 		}
+    .logo-header{
+        margin: 0 0 0 15px;
+    }

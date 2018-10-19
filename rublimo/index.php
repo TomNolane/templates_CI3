@@ -13,7 +13,6 @@
 					<h3>
 						<b class="text-uppercase">Выберите сумму и срок</b>
 					</h3>
-					
 					<input type="hidden" id="amount" name="amount" value="20000" />
 					<input type="hidden" id="period" name="period" value="21" />
 					<input type="hidden" id="form_slrd" name="form_slrd" value="15" />
@@ -100,6 +99,18 @@
 	</div>
 </section>
 </form>
+<a class="anchor" name="id2"></a>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- rublimo --> 
+<ins class="adsbygoogle"
+	style="display:block"
+	data-ad-client="ca-pub-4970738258373085"
+	data-ad-slot="8065296007"
+	data-ad-format="auto"
+	data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <div class="doc">
 	<section class="howto hidden-xs">
 		<div class="howto-header text-center">
@@ -181,6 +192,7 @@
 			</div>
 		</div>
 	</div>
+	<a class="anchor" name="id3"></a>
 	<section class="rating hidden-md hidden-sm hidden-xs">
 		<div class="container">
 			<div class="row text-center">
@@ -204,6 +216,7 @@
 			</div>
 		</div>
 	</section>
+	<a class="anchor" name="id4"></a>
 	<section class="reviews hidden-md hidden-sm hidden-xs">
 		<div class="pattern">
 			<div class="container">
@@ -264,6 +277,7 @@
 			</div>
 		</div>
 	</section>
+	<a class="anchor" name="id5"></a>
 	<div class="hidden-xs">
 		<div class="great-support-container section-container section-container-gray-bg">
 			<div class="container">
@@ -345,6 +359,7 @@
 			</div>
 		</div>
 	</div>
+	<a class="anchor" name="id6"></a>
 	<div class="portfolio-container hidden-xs section-container section-container-gray-bg">
 		<div class="container">
 			<div class="row">
@@ -475,5 +490,6 @@
 			</div>
 		</div>
 	</div>
-</div> 
+</div>
+<a class="anchor" name="id7"></a>
 <?php require 'footer.php'; ?>
