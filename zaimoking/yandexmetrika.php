@@ -1,5 +1,5 @@
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
+<script>
 (function (d, w, c) {
 (w[c] = w[c] || []).push(function() {
 try {
@@ -23,5 +23,25 @@ d.addEventListener("DOMContentLoaded", f, false);
 } else { f(); }
 })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/49039196" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/49039196" style="position:absolute; left:-9999px;" alt="yandex" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+
+<script>
+function markTarget(target,param, id){
+    if (typeof yaCounter49039196 == 'undefined') return;
+	if (typeof param == 'undefined') yaCounter49039196.reachGoal(target);
+	else yaCounter49039196.reachGoal(target,param);
+        
+        $.ajax({
+            type: 'POST',
+            url: '/pixel/',
+            data: 'id='+id+'&pixel='+param,
+            success: function(data){
+                console.log(22);
+            }
+            ,error: function(data){
+                console.log(33);
+            }
+        });
+} 
+</script>

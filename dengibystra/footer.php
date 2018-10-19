@@ -1,17 +1,19 @@
 <?php $from = '15'; 
 if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
-	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- dengibystra -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9509439067407055"
-         data-ad-slot="1987154652"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>';
+    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
+        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- dengybistra -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="9919758561"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
+    }
     echo '<!-- Yandex.RTB R-A-247243-1 mobile -->
     <div id="yandex_rtb_R-A-247243-1"></div>
     <!-- Yandex.RTB R-A-247243-3 desktop -->
@@ -90,28 +92,35 @@ else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $th
     echo '<footer class="ex-footer">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12">
-                    <div class="text-center">
-                        <a href="/"><img src="templates/dengibystra/assets/img/logo.png" alt="logo"></a>
+            <hr/>
+                <div class="col-xs-3">
+                    <div class="text-left">
+                        <!-- <a href="/"><img src="templates/dengibystra/assets/img/logo.png" alt="logo" class="logo-spec"></a>  -->
+                        <img src="templates/dengibystra/assets/img/logo.png" alt="logo" class="logo-spec"> 
                     </div>
                 </div>
-                <div class="col-sm-12">
+
+                <div class="col-xs-9">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- dengybistra -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-4970738258373085"
+                        data-ad-slot="9919758561"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            <div class="col-sm-12">
                 <hr/>
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- dengibystra -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-9509439067407055"
-                    data-ad-slot="1987154652"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
                 <!-- Yandex.RTB R-A-247243-1 mobile -->
                 <div id="yandex_rtb_R-A-247243-1"></div>
                 <!-- Yandex.RTB R-A-247243-3 desktop -->
                 <div id="yandex_rtb_R-A-247243-3"></div>
+                <hr/>
                 <ul class="list-inline">
                     <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
                     <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
@@ -120,9 +129,8 @@ else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $th
                     <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
                 </ul>
             </div>
-            </div>
         </div>
-    </footer>';
+</footer>';
 }
 else if($this->uri->segment(1) == 'form' )
 {
@@ -380,7 +388,7 @@ _tmr.push({id: "3051515", type: "pageView", start: (new Date()).getTime(), pid: 
 (function (d, w, id) {
 if (d.getElementById(id)) return;
 var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-ts.src = (d.location.protocol == "" ? "" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+ts.src = "//top-fwz1.mail.ru/js/code.js";
 var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
 if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
 })(document, window, "topmailru-code");

@@ -1,7 +1,7 @@
-<?php $from = '15'; 
-    if($this->uri->segment(1) != 'form')
-    {
-        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<?php $from = '15'; $px = '63.974'; 
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+{
+	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- zaimrubli -->
         <ins class="adsbygoogle"
             style="display:block"
@@ -12,22 +12,27 @@
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
-        echo '<!-- Yandex.RTB R-A-264025-1 desktop -->
-        <div id="yandex_rtb_R-A-264025-1"></div>
-        <!-- Yandex.RTB R-A-264025-2 mobile -->
-        <div id="yandex_rtb_R-A-264025-2"></div>';
-        echo '<a href="#0" class="cd-top">Наверх</a>';
-    }
+    echo '<!-- Yandex.RTB R-A-264025-1 desktop -->
+    <div id="yandex_rtb_R-A-264025-1"></div>
+    <!-- Yandex.RTB R-A-264025-2 mobile -->
+    <div id="yandex_rtb_R-A-264025-2"></div>';
+    echo '<a href="#0" class="cd-top">Наверх</a>';
+}
+if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
+{
+    // это от zaimhoime echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534155815490" alt="mytarget">';
+}
 ?>
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="ex-foot-logo">
-                    <a href="/"><img src="/templates/zaimrubli/assets/img/logo-footer.png" alt="logo-footer.png"></a>
+                    <img src="/templates/zaimrubli/assets/img/logo-footer.png" alt="logo-footer.png" class="logo-spec">
                 </div>
             </div>
-            <div class="col-md-9 spec_footer4">
+             <div class="col-md-10">
+             <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
                 <p>Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г.
                     Санкт-Петербург, ул. Осипенко, 12, оф 201 <a href="mailto:support@zaimrubli.ru" class="spec_foot" target="_blank">support@zaimrubli.ru</a> <span class="hidden-xs hidden-sm">| 8 (960) 950 93 53</span><br>
                     <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
@@ -36,114 +41,62 @@
                     проценты за весь период составят
                     11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в
                     случае своевременного погашения<br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span></p>
+             <?php } else { ?>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- zaimrubli -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-4970738258373085"
+                    data-ad-slot="4278094234"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+             <?php } ?>
             </div>
             <div class="col-lg-12">
             <br>
+            <hr/>
+                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
+                    echo '<!-- Yandex.RTB R-A-264025-1 desktop -->
+                    <div id="yandex_rtb_R-A-264025-1"></div>
+                    <!-- Yandex.RTB R-A-264025-2 mobile -->
+                    <div id="yandex_rtb_R-A-264025-2"></div> <hr/>';
+                } ?>
                 <ul class="list-inline text-center"> 
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
                 </ul>
             </div>
         </div>
     </div>
 </footer>
+<!-- [if lt IE 10]>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+<![endif] --> 
+<!-- common JS -->
+<script>
+<?php
+    echo 'try{';
+    require 'footer_common_js.php';
+    echo '/* private JS */';
+    require 'templates/zaimrubli/assets/js/main.js'; 
 
-    <?php
-    require 'templates/common/get_display_size.php';
-    echo '<script>';
-    require 'modules/jquery/jquery-1.11.3.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/bootstrap/3.3.6/js/bootstrap.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/jquery-ui/1.10.4/js/jquery-ui-1.10.4.custom.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimrubli/assets/js/jquery.form-validator.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimrubli/assets/js/jquery.suggestions.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimrubli/assets/js/coockie.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimrubli/assets/js/custom.js';
-    echo '</script>';
-    require 'templates/common/detect.min.php';
-    echo '<script>';
-    require 'templates/zaimrubli/assets/js/settings_main.js';
-    echo '</script>'; 
-    echo '<script>';
-    require 'templates/zaimrubli/assets/js/owl.carousel.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimrubli/assets/js/settings_form.js';
-    require 'templates/common/new2/js/fingerprintjs2.js';
-    echo '</script>'; 
-    ?>
-
-    <!--[if lt IE 10]>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-    <![endif]-->
-
-    <?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form' || $this->uri->segment(1) == 'money' || $this->uri->segment(1) == 'zaim-bank' || $this->uri->segment(1) == 'zaim-yandex' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-contact') 
-    { 
-        echo '<script>';
-        require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
-        echo '</script>';
-        echo '<script>';
-        require 'templates/zaimrubli/assets/js/loanCalculator.js';
-        if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') {
-            //require 'templates/common/new2/js/for_index.js';
-        }
-        echo '</script>';
-    ?>
-
-    <script> 
-    //backtotop
-    jQuery(document).ready(function(o){var l=300,s=1200,c=700,d=o(".cd-top");o(window).scroll(function(){o(this).scrollTop()>l?d.addClass("cd-is-visible"):d.removeClass("cd-is-visible cd-fade-out"),o(this).scrollTop()>s&&d.addClass("cd-fade-out")}),d.on("click",function(l){l.preventDefault(),o("body,html").animate({scrollTop:0},c)})});
-
-    function getParameterByName(name, url) 
-    {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-
-    function goToUp() {
-        $('html, body').animate({
-            scrollTop: $('.toUp').offset().top
-        }, 1000);
-    }
-
-    $(document).ready(function () 
-    {
-        $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
-        $('[data-toggle="popover"]').popover();
-        $("#rangeSlider").ionRangeSlider({
+if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
+ 
+    $("#rangeSlider").ionRangeSlider({
         hide_min_max: true,
         hide_from_to: true,
         keyboard: true,
         grid: false,
         from: <?php 
-        if(isset($_GET['amount'])) 
+        if($this->input->get('amount') != '')
         {  
-            switch($_GET['amount'])
+            switch($this->input->get('amount'))
             {
                 case '1000': $from = '0' ; break;
                 case '2000': $from = '1' ; break;
@@ -167,433 +120,185 @@
                 case '50000': $from = '19' ; break;
                 case '80000': $from = '20' ; break;
                 case '100000': $from = '21' ; break;
+                case '110000': $from = '22' ; break;
+                case '120000': $from = '23' ; break;
+                case '130000': $from = '24' ; break;
+                case '140000': $from = '25' ; break;
+                case '150000': $from = '26' ; break;
+                case '160000': $from = '27' ; break; 
+                case '170000': $from = '28' ; break;
+                case '180000': $from = '29' ; break;
+                case '190000': $from = '30' ; break;
+                case '200000': $from = '31' ; break;
+                case '250000': $from = '32' ; break;
+                case '300000': $from = '33' ; break;
+                case '400000': $from = '34' ; break;
+                case '500000': $from = '35' ; break;
+                case '600000': $from = '36' ; break;
+                case '700000': $from = '37' ; break;
+                case '800000': $from = '38' ; break;
+                case '900000': $from = '39' ; break;
+                case '1000000': $from = '40' ; break;
             }
             echo $from; 
         }
-        elseif(!isset($_POST['form_slrd'])) echo '15'; else echo $_POST['form_slrd']; 
-        ?>,
+        elseif($this->input->post('form_slrd') == '') echo '15'; else echo $this->input->post('form_slrd'); ?>,
         values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 20000, 25000, 30000, 40000, 50000, 80000, 100000],
-        onFinish: function (data) {
-            $('#amount').val(data.from_value);
-            $('#form_slrd').val(data.from);
-        }, 
-        onLoad: function (data) {
-            $('#amount').val(data.from_value);
-            $('#form_slrd').val(data.from);
-        },
-        onChange: function (range) {
-            if (range.from_value <= 10000) {
+        onChange: function (range3) {
+                 if (range3.from_value <= 10000) {
+                    $("#period").val("7");
+                    $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
+                } else if (range3.from_value <= 15000) {
+                    $("#period").val("14");
+                    $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
+                } else if (range3.from_value <= 20000) {
+                    $("#period").val("21");
+                    $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('95');
+                } else if (range3.from_value <= 30000) {
+                    $("#period").val("21");
+                    $("#period2").val("От 61 до 130 дней");
+                    $('#percent').val('85');
+                } else if (range3.from_value <= 50000) {
+                    $("#period").val("30");
+                    $("#period2").val("От 130 до 250 дней");
+                    $('#percent').val('77');
+                } else  if (range3.from_value <= 200000 && range3.from_value > 50000) {
+                    $("#period").val("30");
+                    $("#period2").val("От 250 до 365 дней");
+                    $('#percent').val('65');
+                } else  if (range3.from_value <= 500000 && range3.from_value > 200000) {
+                    $("#period").val("30");
+                    $("#period2").val("От 1 до 3 лет");
+                    $('#percent').val('58');
+                } else {
+                    $("#period").val("30");
+                    $("#period2").val("От 1 до 5 лет");
+                    $('#percent').val('52');
+                }
+
+                $("#amount").val(range3.from_value);
+                $("#form_slrd").val(range3.from);
+            }
+        }); 
+        <?php if ($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'money' || $this->uri->segment(1) == 'zaim-bank' || $this->uri->segment(1) == 'zaim-yandex' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-contact') {?>
+        var slider = $('#rangeSlider').data('ionRangeSlider');
+        var slider_plus = true;
+        var n = 10;
+        var slider_init = setInterval(function () {
+            if (slider_plus) {
+                n++;
+            } else {
+                n--;
+            }
+            if (n == 21 && n != <?php echo $from; ?>) {
+                slider_plus = false;
+            }else if (n == <?php echo $from; ?> && slider_plus == false) {
+                clearInterval(slider_init);
+            }else if (n == 21 && n == <?php echo $from; ?>) {
+                clearInterval(slider_init);
+            }
+
+            slider.update({
+                from: n
+            });
+
+            if (n <= 9) {
             $('#period').val('7');
             $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 15000) {
-            $('#period').val('14');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 20000) {
-            $('#period').val('21');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 30000) {
-            $('#period').val('21');
-            $('#period2').val('От 61 до 130 дней');
-        } else if (range.from_value <= 50000) {
-            $('#period').val('30');
-            $('#period2').val('От 130 до 250 дней');
-        } else {
-            $('#period').val('30');
-            $('#period2').val('От 250 до 365 дней');
-        } 
-            $('#amount').val(range.from_value);
-            $('#form_slrd').val(range.from);
-        },
-    });
-});
-</script> 
-<?php } ?> 
-<script>
-    function getcookie(name) {
-        var cookie = " " + document.cookie;
-        var search = " " + name + "=";
-        var setStr = null;
-        var offset = 0;
-        var end = 0;
-
-        if (cookie.length > 0) {
-            offset = cookie.indexOf(search);
-
-            if (offset != -1) {
-                offset += search.length;
-                end = cookie.indexOf(";", offset)
-
-                if (end == -1) {
-                    end = cookie.length;
-                }
-
-                setStr = unescape(cookie.substring(offset, end));
+            $('#percent').val('95');
+            } else if (n <= 14 && n > 9) {
+                $('#period').val('14');
+                $('#period2').val('От 61 до 130 дней');
+                $('#percent').val('95');
+            } else if (n <= 15 && n > 14) {
+                $('#period').val('21');
+                $('#period2').val('От 61 до 130 дней');
+                $('#percent').val('95');
+            } else if (n <= 17 && n > 15) {
+                $('#period').val('21');
+                $('#period2').val('От 61 до 130 дней');
+                $('#percent').val('85');
+            } else if (n <= 19 && n > 17) {
+                $('#period').val('30');
+                $('#period2').val('От 130 до 250 дней');
+                $('#percent').val('77');
+            } else if (n > 19) {
+                $('#period').val('30');
+                $('#period2').val('От 250 до 365 дней');
+                $('#percent').val('65');
             }
-        }
-        return (setStr);
-    }
-
-    function GetMoney() 
-    {
-        $('form#anketa').submit();
-    } 
-</script>
-
-    <?php
-		if ($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'money' || $this->uri->segment(1) == 'zaim-bank' || $this->uri->segment(1) == 'zaim-yandex' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-contact') { 
-    ?>
-
-    <script> 
-    $(document).ready(function () {
-    var slider3 = $('#rangeSlider').data('ionRangeSlider');
-    var slider_plus = true;
-    var n = 10;
-    var slider_init = setInterval(function () {
-        if (slider_plus) {
-            n++;
-        } else {
-            n--;
-        }
-        if (n == 21 && n != <?php echo $from;?>) {
-            slider_plus = false;
-        }else if (n == <?php echo $from;?> && slider_plus == false) {
-            clearInterval(slider_init);
-        }else if (n == 21 && n == <?php echo $from;?>) {
-            clearInterval(slider_init);
-        }
-
-        slider3.update({
-            from: n
-        });
-
-        if (n <= 9) {
-            $('#period').val('7'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 14 && n > 9) {
-            $('#period').val('14');
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 15 && n > 14) {
-            $('#period').val('21');
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 17 && n > 15) {
-            $('#period').val('21');
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 19 && n > 17) {
-            $('#period').val('30');
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n > 19) {
-            $('#period').val('30'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        }
-    }, 50);
-});</script>
+            $('#amount').val(slider.result.from_value);
+            $("#form_slrd").val(slider.result.from);
+        }, 50); 
+        traffic("zaimrubli.ru",0);
 <?php }
-
-if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
-{  
-    echo '<!-- Google Code for  
-    &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
-    Page -->
-    <script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 822854490;
-    var google_conversion_label = "joByCJCX5XoQ2oaviAM";
-    var google_remarketing_only = false;
-    /* ]]> */
-    </script>
-    <script type="text/javascript"  
-    src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-    <div style="display:inline;">
-    <img height="1" width="1" style="border-style:none;" alt=""  
-    src="//www.googleadservices.com/pagead/conversion/822854490/?label=joByCJCX5XoQ2oaviAM&amp;guid=ON&amp;script=0"/>
-    </div>
-    </noscript>';
-    echo '<script>
-    $( ".ex-off-block").find(\'button\').css("display" , "none");
-    if($(".ex-off-block").hasClass("ex-offers-active")) {
-        $( ".ex-off-block.ex-offers-active").find(\'p\').css("display" , "none");
-        $( ".ex-off-block.ex-offers-active").find(\'button\').css("display" , "block");
-    }
-    $(".ex-off-block").hover(function(){
-        if($(".ex-off-block").hasClass("ex-offers-active")) {
-            $( ".ex-off-block.ex-offers-active").find(\'p\').css("display" , "block");
-            $( ".ex-off-block.ex-offers-active").find(\'button\').css("display" , "none");
-       $( ".ex-off-block").removeClass( "ex-offers-active");
-        }
-        $(this).addClass( "ex-offers-active");
-        $( ".ex-off-block.ex-offers-active").find(\'p\').css("display" , "none");
-        $( ".ex-off-block.ex-offers-active").find(\'button\').css("display" , "block");
-
-    });
-    $( ".ex-off-block:first").addClass("ex-offers-active");
-    $( ".ex-off-block:first").find(\'p\').css("display" , "none");
-        $( ".ex-off-block:first").find(\'button\').css("display" , "block");
-</script>';
-    echo '<script> 
-    var offers = '.json_encode($data).'
-    var by_reg = null;
-    $(document).ready(function () {
-        $(".offer-type").change(function () {
-            update_offers();
-        });
-
-        function update_offers() {
-            var str = ".results tbody tr";
-            //var curr = clone(by_reg.length? by_reg : offers);
-            var ot_card = $(".offer-type[data-id=\'card\']").prop("checked");
-            var ot_qiwi = $(".offer-type[data-id=\'qiwi\']").prop("checked");
-            var ot_yandex = $(".offer-type[data-id=\'yandex\']").prop("checked");
-            var ot_contact = $(".offer-type[data-id=\'contact\']").prop("checked");
-            // Прячем всё
-            $(str).hide();
-            // Пробегаемся по списку офферов
-            ((by_reg !== null) ? by_reg : offers).forEach(function (offer, i) {
-                var $tr = $(str + "[data-id=\'" + offer.id + "\']");
-                if ($tr.data("amount") >= amount) {
-                    if (ot_card && !!$tr.data(\'card\') == ot_card) $tr.show();
-                    else if (ot_qiwi && !!$tr.data(\'qiwi\') == ot_qiwi) $tr.show();
-                    else if (ot_yandex && !!$tr.data(\'yandex\') == ot_yandex) $tr.show();
-                    else if (ot_contact && !!$tr.data(\'contact\') == ot_contact) $tr.show();
-                }
-            });
-        }
-        if (getcookie("i")) {
-            var i = getcookie("i");
-            $("#i").text(i);
-        } 
-    });
-
-    function clone(o) {
-        if (!o || "object" !== typeof o) return o;
-
-        var c = "function" === typeof o.pop ? [] : {};
-        var p, v;
-        for (p in o) {
-            if (o.hasOwnProperty(p)) {
-                v = o[p];
-                if (v && "object" === typeof v) {
-                    c[p] = clone(v);
-                } else {
-                    c[p] = v;
-                }
-            }
-        }
-        return c;
-    } 
-    traffic("zaimrubli.ru", "4");
-</script>';
 }
-?>
-<!-- всплывающее окошко -->
-<?php 
-if ($this->uri->segment(1) == 'form') 
+elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {
-    echo ' <script>
-    $("#work").change(function(){
-        if($(this).val().toLowerCase() == "пенсионер" || $(this).val().toLowerCase() == "безработный")
-        { 
-            $("#work_name").addClass("valid");
-            $("#work_name").parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_name").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_name").removeClass("er");
-            $("#work_namestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
+    include "templates/common/new2/js/lk.js";      
+    echo 'traffic("zaimrubli.ru",4);'; 
 
-            $("#work_occupation").addClass("valid");
-            $("#work_occupation").parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_occupation").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_occupation").removeClass("er");
-            $("#work_occupationstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_phone").addClass("valid");
-            $("#work_phone").parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_phone").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_phone").removeClass("er");
-            $("#work_phonestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
-
-            $("#work_experience").addClass("valid");
-            $("#work_experience").parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_experience").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_experience").removeClass("er");
-            $("#work_experiencestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok");
-
-            $("#work_salary").removeClass("valid");
-            $("#work_salary").parent().addClass("ex-error").removeClass("ex-success");
-            $("#work_salary").parent().parent().prev().removeClass("label_true").addClass("label_er");
-            $("#work_salary").addClass("er");
-            $("#work_salary").focus();
-            $("#work_salarystatus").addClass("glyphicon-remove");
-
-            $("#work_region").addClass("valid");
-            $("#work_region").parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_region").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_region").removeClass("er");
-
-            $("#work_city").addClass("valid");
-            $("#work_city").parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_city").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_city").removeClass("er");
-            $("#work_citystatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_street").addClass("valid");
-            $("#work_street").parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_street").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_street").removeClass("er");
-            $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_house").addClass("valid");
-            $("#work_house").parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_house").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_house").removeClass("er");
-            $("#work_streetstatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-
-            $("#work_office").addClass("valid");
-            $("#work_office").parent().addClass("ex-success").removeClass("ex-error");
-            $("#work_office").parent().parent().prev().removeClass("label_er").addClass("label_true");
-            $("#work_office").removeClass("er");
-            $("#work_officestatus").removeClass("glyphicon-remove").addClass("glyphicon-ok"); 
-            
-            if($(this).val().toLowerCase() == "пенсионер")
-            $("#work_name").val("пенсионер");
-            else  $("#work_name").val("безработный");
-            if($(this).val().toLowerCase() == "пенсионер")
-            $("#work_occupation").val("пенсионер");
-            else  $("#work_occupation").val("безработный");
-            var teemp = $("#phone").val();
-            $("#work_phone").val(teemp);
-            $("#work_experience").val(100);
-            $("#work_salary").val("");
-
-            var teemp2 = Number($("#region").find(":selected").index());
-            $("#work_region option").eq(teemp2).prop("selected", true);
-            var teemp3 = $("#city").val();
-            $("#work_city").val(teemp3);
-            var teemp4 = $("#street").val();
-            $("#work_street").val(teemp4);
-            var teemp5 = $("#building").val();
-            $("#work_house").val(teemp5);
-            $("#work_building").val(" ");
-            var teemp6 = $("#flat").val();
-            $("#work_office").val(teemp6);
-        }
-        else { 
-
-            $("#work_name").val("");
-            $("#work_name").removeClass("valid");
-            $("#work_name").parent().removeClass("ex-success");
-            $("#work_name").parent().parent().prev().removeClass("label_true"); 
-            $("#work_namestatus").removeClass("glyphicon-ok");
-
-            $("#work_occupation").val("");
-            $("#work_occupation").removeClass("valid");
-            $("#work_occupation").parent().removeClass("ex-success");
-            $("#work_occupation").parent().parent().prev().removeClass("label_true"); 
-            $("#work_occupationstatus").removeClass("glyphicon-ok"); 
-
-            $("#work_phone").val("");
-            $("#work_phone").removeClass("valid");
-            $("#work_phone").parent().removeClass("ex-success");
-            $("#work_phone").parent().parent().prev().removeClass("label_true"); 
-            $("#work_phonestatus").removeClass("glyphicon-ok");
-
-            $("#work_experience").val("");
-            $("#work_experience").removeClass("valid");
-            $("#work_experience").parent().removeClass("ex-success");
-            $("#work_experience").parent().parent().prev().removeClass("label_true"); 
-            $("#work_experiencestatus").removeClass("glyphicon-ok");
-
-            $("#work_salary").val("");
-            $("#work_salary").removeClass("valid");
-            $("#work_salary").parent().removeClass("ex-success");
-            $("#work_salary").parent().parent().prev().removeClass("label_true"); 
-            $("#work_salarystatus").removeClass("glyphicon-ok");
- 
-            $("#work_region").removeClass("valid");
-            $("#work_region").parent().removeClass("ex-success");
-            $("#work_region").parent().parent().prev().removeClass("label_true");
-
-            $("#work_city").val("");
-            $("#work_city").removeClass("valid");
-            $("#work_city").parent().removeClass("ex-success");
-            $("#work_city").parent().parent().prev().removeClass("label_true"); 
-            $("#work_citystatus").removeClass("glyphicon-ok"); 
-
-            $("#work_street").val("");
-            $("#work_street").removeClass("valid");
-            $("#work_street").parent().removeClass("ex-success");
-            $("#work_street").parent().parent().prev().removeClass("label_true"); 
-            $("#work_streetstatus").removeClass("glyphicon-ok"); 
-
-            $("#work_house").val("");
-            $("#work_house").removeClass("valid");
-            $("#work_house").parent().removeClass("ex-success");
-            $("#work_house").parent().parent().prev().removeClass("label_true"); 
-            $("#work_housestatus").removeClass("glyphicon-ok");
-
-            $("#work_office").val("");
-            $("#work_office").removeClass("valid");
-            $("#work_office").parent().removeClass("ex-success");
-            $("#work_office").parent().parent().prev().removeClass("label_true"); 
-            $("#work_officestatus").removeClass("glyphicon-ok");
-            $("#work_name").val(""); 
-             $("#work_occupation").val(""); 
-            $("#work_phone").val("");
-            $("#work_experience").val(""); 
-            $("#work_salary").val("");
-            $("#work_region option").eq(0, true).prop("selected", true);
-            $("#work_city").val("");
-            $("#work_street").val("");
-            $("#work_house").val("");
-            $("#work_building").val("");
-            $("#work_office").val("");
-        }
-    }); 
-    </script>'; 
-} 
- require 'yandexmetrika.php';
- require 'googleanalytics.php';
- echo '<script>';
-    require 'templates/zaimrubli/assets/js/modal.js';
-echo '</script>';
-?>
-
-<script>
-    function markTarget(target, param, id) {
-        if (typeof yaCounter49039130 == 'undefined') return;
-        if (typeof param == 'undefined') yaCounter49039130.reachGoal(target);
-        else yaCounter49039130.reachGoal(target, param);
-
-        $.ajax({
-            type: 'POST',
-            url: '/pixel/',
-            data: 'id=' + id + '&pixel=' + param,
-            success: function(data){
-                console.log(22);
-            }
-            ,error: function(data){
-                console.log(33);
-            }
-        });
-    }
-
-function traffic(site, page)
-{
-    $.ajax({
-        type: 'POST',
-        url: '/traffic/',
-        data: 'site='+site+'&page='+page,
-            success: function(data){ 
-            }
-    });
 }
-//traffic(window.location.hostname,window.location.pathname);
+elseif($this->uri->segment(1) == '404')
+{
+    echo 'traffic("zaimrubli.ru",9);'; 
+}
+else if($this->uri->segment(1) == 'form')
+{ } 
+echo "}";
+require 'templates/common/new2/js/exeption.js';
+?>
 </script>
+<?php
+    include "google.php";
+    include "yandexmetrika.php"; 
+    include "yandex_rtb.php";
+    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+    {     
+        echo '<!-- Google Code for  
+        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
+        Page -->
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 822854490;
+        var google_conversion_label = "joByCJCX5XoQ2oaviAM";
+        var google_remarketing_only = false;
+        /* ]]> */
+        </script>
+        <script type="text/javascript"  
+        src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""  
+        src="//www.googleadservices.com/pagead/conversion/822854490/?label=joByCJCX5XoQ2oaviAM&amp;guid=ON&amp;script=0"/>
+        </div>
+        </noscript>'; 
+        echo '<script>
+        $( ".ex-off-block").find(\'button\').css("display" , "none");
+            if($(".ex-off-block").hasClass("ex-offers-active")) {
+                $( ".ex-off-block.ex-offers-active").find(\'p\').css("display" , "none");
+                $( ".ex-off-block.ex-offers-active").find(\'button\').css("display" , "block");
+            }
+            $(".ex-off-block").hover(function(){
+                if($(".ex-off-block").hasClass("ex-offers-active")) {
+                    $( ".ex-off-block.ex-offers-active").find(\'p\').css("display" , "block");
+                    $( ".ex-off-block.ex-offers-active").find(\'button\').css("display" , "none");
+            $( ".ex-off-block").removeClass( "ex-offers-active");
+                }
+                $(this).addClass( "ex-offers-active");
+                $( ".ex-off-block.ex-offers-active").find(\'p\').css("display" , "none");
+                $( ".ex-off-block.ex-offers-active").find(\'button\').css("display" , "block");
+
+            });
+            $( ".ex-off-block:first").addClass("ex-offers-active");
+            $( ".ex-off-block:first").find(\'p\').css("display" , "none");
+                $( ".ex-off-block:first").find(\'button\').css("display" , "block");
+        </script>';
+    }
+?>
 </body>
 </html>

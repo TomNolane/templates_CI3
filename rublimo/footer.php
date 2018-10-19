@@ -26,12 +26,10 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-xs-12">
-                <a href="/">
-                    <img src="/templates/rublimo/assets/img/logo-footer.png" alt="logo" class="logo">
-                </a>
+            <div class="col-md-2 col-xs-12"> 
+                <img src="/templates/rublimo/assets/img/logo-footer.png" alt="logo" class="logo">
             </div>
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
             <div class="col-md-4 col-xs-12 spec_footer4">
                 <p class="gut font10">
                     «RUBLIMO» - сервис по подбору выгодных онлайн займов находящийся по адресу: Россия, Ленинградская обл. г. Санкт-Петербург,
@@ -47,11 +45,9 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                     11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае
                     своевременного погашения. <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</p>
             </div>
-            <?php endif; ?>
-            <div class="col-sm-12">
-                <hr/>
-                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-                    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <?php } else { ?>
+            <div class="col-md-10 col-xs-12">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                     <!-- rublimo --> 
                     <ins class="adsbygoogle"
                         style="display:block"
@@ -61,11 +57,16 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                         data-full-width-responsive="true"></ins>
                     <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>';
+                    </script>
+            </div>
+            <?php } ?>
+            <div class="col-sm-12">
+                <hr/>
+                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
                     echo '<!-- Yandex.RTB R-A-244327-1 mobile -->
                     <div id="yandex_rtb_R-A-244327-1"></div>
                     <!-- Yandex.RTB R-A-244327-2 desktop -->
-                    <div id="yandex_rtb_R-A-244327-2"></div> ';
+                    <div id="yandex_rtb_R-A-244327-2"></div><hr/>';
                 } ?>
                 <ul class="list-inline text-center">
                     <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>

@@ -1,1 +1,1 @@
-function traffic(a,c){$.ajax({type:"POST",url:"/traffic/",data:"site="+a+"&page="+c,success:function(a){console.log(1)}})}
+function traffic(a,c){$.ajax({type:"POST",url:"/traffic/",data:"site="+a+"&page="+c,success:function(a){}})}

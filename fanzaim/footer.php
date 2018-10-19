@@ -25,33 +25,45 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
 ?> 
 <footer class="ex-main-footer">
         <div class="container text-center">
-            <div class="ex-wrapper"><a href="/"><img src="/templates/fanzaim/assets/img/icons/Fanzaim-logo-footer.png"  alt="Image"></a></div>
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
+            <div>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+                <div class="ex-wrapper">
+                    <img src="/templates/fanzaim/assets/img/icons/Fanzaim-logo-footer.png"  alt="Image">
+                </div> 
                 <p class="spec_footer7">
                 Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <a href="mailto:support@fanzaim" target="_blank">support@fanzaim</a> <span class="hidden-xs hidden-sm">|  +7 (495) 006 19 61</span>
                 <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
                 Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.
                 Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span>
                 </p>
-            <?php endif; ?>
+            <?php } else { ?>
+                <div class='row'>
+                    <div class='col-md-3'>
+                        <img src="/templates/fanzaim/assets/img/icons/Fanzaim-logo-footer.png"  alt="Image" class='logo-special'>
+                    </div>
+                    <div class='col-md-9'>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- fanzaim -->
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-4970738258373085"
+                            data-ad-slot="5186306631"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                    </div>
+                </div>
+                </div>
+            <?php } ?>
             <div class="col-sm-12">
                 <hr/>
                 <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-                    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- fanzaim -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-4970738258373085"
-                        data-ad-slot="5186306631"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>';
                     echo '<!-- Yandex.RTB R-A-260538-1 desktop -->
                     <div id="yandex_rtb_R-A-260538-1"></div>
                     <!-- Yandex.RTB R-A-260538-2 mobile -->
-                    <div id="yandex_rtb_R-A-260538-2"></div> ';
+                    <div id="yandex_rtb_R-A-260538-2"></div> <hr/>';
                 } ?>
                 <ul class="list-inline">
                     <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
@@ -293,7 +305,7 @@ require 'templates/common/new2/js/exeption.js';
     }
 ?>
 <!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
+<script>
 var _tmr = window._tmr || (window._tmr = []);
 _tmr.push({id: "3052551", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
 (function (d, w, id) {

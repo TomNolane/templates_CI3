@@ -25,3 +25,22 @@ d.addEventListener("DOMContentLoaded", f, false);
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/49039130" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<script>
+function markTarget(target,param, id){
+    if (typeof yaCounter49039130 == 'undefined') return;
+	if (typeof param == 'undefined') yaCounter49039130.reachGoal(target);
+	else yaCounter49039130.reachGoal(target,param);
+        
+        $.ajax({
+            type: 'POST',
+            url: '/pixel/',
+            data: 'id='+id+'&pixel='+param,
+            success: function(data){
+                console.log(22);
+            }
+            ,error: function(data){
+                console.log(33);
+            }
+        });
+} 
+</script>

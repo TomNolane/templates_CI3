@@ -22,13 +22,18 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
         <div class="row">
+        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
             <div class="col-md-7">
+        <?php } else { ?>
+             <div class="col-md-12">
+        <?php } ?>
                 <div class="row">
                     <div class="col-md-3 ex-foot-logo">
-                        <a href="/"><img src="/templates/dengomir/assets/img/icons/logo-footer.png" alt="logo-footer.png"></a>
+                        <img src="/templates/dengomir/assets/img/icons/logo-footer.png" alt="logo-footer.png" class="logo-spec">
                     </div>
-                    <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
                     <div class="col-md-9">
+                    <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+                    
                         <p>Сервис по подбору выгодных онлайн займов Dengomir, находящийся по адресу
                             Россия, Ленинградская обл., г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
                             <a href="mailto:support@dengomir.ru" target="_blank">| support@dengomir.ru</a></span> | +7(495) 006 19 61<br>
@@ -40,8 +45,21 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                             рублей.
                             Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>
                             ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001 </span></p>
+                    
+                    <?php } else { ?>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- dengomir -->
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-4970738258373085"
+                            data-ad-slot="4639511728"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    <?php } ?>
                     </div>
-                    <?php endif; ?>
                 </div>
             </div>
             <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
@@ -69,21 +87,10 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
             <div class="col-sm-12">
                 <hr/>
                 <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-                    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- dengomir -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-4970738258373085"
-                        data-ad-slot="4639511728"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>';
                     echo '<!-- Yandex.RTB R-A-261797-1 desktop -->
                     <div id="yandex_rtb_R-A-261797-1"></div>
                     <!-- Yandex.RTB R-A-261797-2 mobile -->
-                    <div id="yandex_rtb_R-A-261797-2"></div>';
+                    <div id="yandex_rtb_R-A-261797-2"></div><hr/>';
                 } ?>
                 <ul class="list-inline text-center">
                     <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>

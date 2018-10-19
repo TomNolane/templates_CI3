@@ -125,31 +125,45 @@ else
 {
     echo '
     <footer class="ex-main-footer-bg">
-        <div class="container">
-            <div class="ex-foot-logo text-center">
-                <a href="/"><img src="/templates/zaimcoin/assets/img/logo-footer.png" alt="logo-footer.png"></a>
-            </div>';
-                if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : 
-                echo '<p class="spec_footer5">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург,
+        <div class="container">';
+                if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
+                {
+                    echo '<div class="ex-foot-logo text-center">
+                        <img src="/templates/zaimcoin/assets/img/logo-footer.png" alt="logo-footer.png">
+                    </div>
+                     <p class="spec_footer5">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург,
                     ул. Осипенко, 12, оф 201 | <a href="mailto:support@zaimcoin.ru" class="spec_foot" target="_blank">support@zaimcoin.ru</a>
                     <span class="hidden-xs hidden-sm"><span id="sp_footer2">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
                     Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
                     Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
                     за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.
                     Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span></span></p>';
-                endif;
+                } 
+                else 
+                {
+                    echo '<div class="row">
+                            <div class="col-md-3">
+                                <div class="ex-foot-logo text-center">
+                                    <img src="/templates/zaimcoin/assets/img/logo-footer.png" alt="logo-footer.png" class="logo-spec">
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                            <br>
+                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- zaimcoin -->
+                                <ins class="adsbygoogle"
+                                    style="display:block"
+                                    data-ad-client="ca-pub-4970738258373085"
+                                    data-ad-slot="9741339751"
+                                    data-ad-format="auto"
+                                    data-full-width-responsive="true"></ins>
+                                <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+                        </div>';
+                }
                 echo '<hr/>';
-                echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- zaimcoin -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-4970738258373085"
-                    data-ad-slot="9741339751"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>';
                 echo '<!-- Yandex.RTB R-A-259325-1 desktop -->
                 <div id="yandex_rtb_R-A-259325-1"></div>
                 <!-- Yandex.RTB R-A-259325-2 mobile-->

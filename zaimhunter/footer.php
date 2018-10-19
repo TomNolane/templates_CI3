@@ -25,10 +25,10 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         <div class="row ex-main-footer">
             <div class="col-md-2">
                 <div class="ex-footer-logo">
-                    <a rel="nofollow" href="/"> <img src="/templates/zaimhunter/assets/img/footer-logo-zaimhunter.png" alt="logo-zaimhunter"></a>
+                     <img src="/templates/zaimhunter/assets/img/footer-logo-zaimhunter.png" alt="logo-zaimhunter" class="logo-spec">
                 </div>
             </div>
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
             <div class="col-md-10 spec_footer4">
                 <p>Сервис по подбору выгодных онлайн займов
                     находящийся по адресу Россия, Ленинградская обл.
@@ -42,11 +42,9 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                     <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span>
                 </p>
             </div>
-            <?php endif; ?>
-            <div class="col-sm-12">
-                <hr/>
-                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-                echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <?php } else { ?>
+                 <div class="col-md-10">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                     <!-- zaimhunter -->
                     <ins class="adsbygoogle"
                         style="display:block"
@@ -56,7 +54,12 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                         data-full-width-responsive="true"></ins>
                     <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>';
+                    </script>
+                  </div>
+            <?php } ?>
+            <div class="col-sm-12">
+                <hr/>
+                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
                     echo '<!-- Yandex.RTB R-A-258704-1 desktop -->
                     <div id="yandex_rtb_R-A-258704-1"></div>
                     <!-- Yandex.RTB R-A-258704-2 mobile -->

@@ -60,7 +60,7 @@ if(!isset($sum))
 $px = ($px - 3.5) . '%';
 if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
-    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156788691" alt="123">';
+    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156788691" alt="MYTARGET">';
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- godzaim -->
     <ins class="adsbygoogle"
@@ -83,11 +83,9 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
             <br class="hidden-xs hidden-sm">
             <div class="row">
                 <div class="col-md-2 col-xs-12">
-                    <a href="/">
-                        <img src="/templates/godzaim/assets/img/logo-footer.png" class="logo">
-                    </a>
+                    <img src="/templates/godzaim/assets/img/logo-footer.png" class="logo logo-spec">
                 </div>
-                <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
+                <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
                 <div class="col-md-3 col-md-offset-1 col-xs-12 spec_footer4">
                     <p>
                         Cервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. ул. Осипенко,
@@ -105,11 +103,9 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                         ставке 0% в случае своевременного погашения. <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001
                     </p>
                 </div>
-                <?php endif; ?>
-                <div class="col-sm-12">
-                    <hr/>
-                    <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-                        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <?php } else { ?>
+                    <div class="col-md-10 col-xs-12"> 
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- godzaim -->
                         <ins class="adsbygoogle"
                             style="display:block"
@@ -119,11 +115,16 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                             data-full-width-responsive="true"></ins>
                         <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>';
+                        </script>
+                    </div>
+                <?php } ?>
+                <div class="col-sm-12">
+                    <hr/>
+                    <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
                         echo '<!-- Yandex.RTB R-A-257495-1 desktop -->
                         <div id="yandex_rtb_R-A-257495-1"></div>
                         <!-- Yandex.RTB R-A-257495-2 mobile -->
-                        <div id="yandex_rtb_R-A-257495-2"></div> ';
+                        <div id="yandex_rtb_R-A-257495-2"></div><hr/>';
                     } ?>
                     <ul class="list-inline text-center">
                         <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>

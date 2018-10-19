@@ -6,7 +6,7 @@
         else isMobile = false;
     }
     if (isMobile) {
-         (function(w, d, n, s, t) {
+        (function(w, d, n, s, t) {
             w[n] = w[n] || [];
             w[n].push(function() {
                 Ya.Context.AdvManager.render({
@@ -23,7 +23,7 @@
             t.parentNode.insertBefore(s, t);
         })(this, this.document, "yandexContextAsyncCallbacks");
     } else {
-            (function(w, d, n, s, t) {
+         (function(w, d, n, s, t) {
             w[n] = w[n] || [];
             w[n].push(function() {
                 Ya.Context.AdvManager.render({

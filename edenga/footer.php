@@ -20,16 +20,30 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
 }
 if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
 {
-    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156836350">';
+    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156836350" alt="MYTARGET">';
 }
 ?>
 <footer class="">
     <div class="container">
         <div class="row">
             <div class="col-md-2 col-xs-12">
-                <a href="/"><img src="/templates/edenga/assets/img/logo.png" class="logo"></a>
+                 <img src="/templates/edenga/assets/img/logo.png" class="logo logo-spec"> 
             </div>
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
+            <?php if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') {  ?>
+             <div class="col-md-10 col-xs-12">
+                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- edenga -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-4970738258373085"
+                    data-ad-slot="3535572793"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div> 
+            <?php } if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
             <div class="col-md-3 col-xs-12 spec_footer4">
                 Cервис по подбору выгодных онлайн займов находящийся по адресу Россия, Новосибирская область г. Новосибирск, ул. Маршала Покрышкина, 12, оф 201
                 Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 <a href="mailto:support@edenga.ru" target="_blank">support@edenga.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
@@ -42,21 +56,10 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
             <div class="col-sm-12">
                 <hr/>
                 <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-                    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- edenga -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-4970738258373085"
-                        data-ad-slot="3535572793"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>';
                     echo '<!-- Yandex.RTB R-A-243982-1 mobile -->
                     <div id="yandex_rtb_R-A-243982-1"></div>
                     <!-- Yandex.RTB R-A-243982-2 desktop -->
-                    <div id="yandex_rtb_R-A-243982-2"></div> ';
+                    <div id="yandex_rtb_R-A-243982-2"></div><hr/>';
                 } ?>
                 <ul class="list-inline text-center">
                     <li><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>

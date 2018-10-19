@@ -1,5 +1,5 @@
 <?php $from = '15'; 
-if($this->uri->segment(1) != 'form')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- zaimol -->
@@ -20,16 +20,46 @@ if($this->uri->segment(1) != 'form')
 }
 ?>
 <footer class="ex-main-footer">
-    <div class="container">
-        <div>
-            <a href="/"><img src="/templates/zaimol/assets/img/logo-footer.png" alt="missed"></a>
-        </div>
-        <p class="spec_footer4">
-            Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <a class="spec_index3" href="mailto:support@zaimol.ru">support@zaimol.ru</a> &nbsp; <span class="hidden-xs hidden-sm">| +7(495) 006 19 61
-            <br>Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
-            Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.
-            Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span> 
-        </p> <br>
+    <div class="container"> 
+        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+             <div>
+                <img src="/templates/zaimol/assets/img/logo-footer.png" alt="missed">
+            </div>
+            <p class="spec_footer4">
+                Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <a class="spec_index3" href="mailto:support@zaimol.ru">support@zaimol.ru</a> &nbsp; <span class="hidden-xs hidden-sm">| +7(495) 006 19 61
+                <br>Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
+                Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.
+                Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span> 
+            </p> <br>
+        <?php } else { ?>
+             <div class="row">
+                 <div class="col-md-3">
+                      <img src="/templates/zaimol/assets/img/logo-footer.png" alt="missed" class="logo-spec">
+                 </div>
+                 <div class="col-md-9">
+                     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- zaimol -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-4970738258373085"
+                        data-ad-slot="8397017235"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script> 
+                 </div>
+                 <div class="col-md-12">
+                      <hr/>
+                 </div>
+                 <div class="col-md-12">
+                     <!-- Yandex.RTB R-A-259962-1 desktop -->
+                    <div id="yandex_rtb_R-A-259962-1"></div>
+                    <!-- Yandex.RTB R-A-259962-2 mobile -->
+                    <div id="yandex_rtb_R-A-259962-2"></div>
+                </div>
+            </div><hr/>
+        <?php } ?>
         <ul class="list-inline text-center"> 
             <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
             <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>

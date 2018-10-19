@@ -25,7 +25,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
 }
 if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
 {
-    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="//top-fwz1.mail.ru/tracker?id=3052545;e=RG%3A/trg-pixel-2721105-1534147134779">';
+    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="//top-fwz1.mail.ru/tracker?id=3052545;e=RG%3A/trg-pixel-2721105-1534147134779" alt="mypixel">';
 }
 ?>
 <footer>
@@ -33,12 +33,12 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
         <div class="col-md-12 ">
             <div class="row">
                 <div class="col-md-3">
-                    <h1 style="text-align: left; margin: 10px;" id="for_lk">
+                    <h1 class="logo-spec" id="for_lk">
                         Dengoman
                     </h1>
                     <div class="footer-copyright"></div>
                 </div>
-                <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
+                <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
                 <div class="col-md-3 hidden-xs hidden-sm" >
                     <div class="footer-text spec_footer4" style="font-size: 12px; line-height: 1;">
                         <p>Сервис по подбору выгодных онлайн займов находящийся по адресу <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
@@ -49,28 +49,32 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                     <p style="font-size: 12px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
                         <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001.</p>
                 </div>
-                <?php endif; ?>
+            <?php } else { ?>
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- dengoman -->
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-4970738258373085"
+                            data-ad-slot="4110287868"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            <?php } ?>
             </div>
         </div>
         <div class="col-sm-12">
             <hr/>
             <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- dengoman -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-4970738258373085"
-                    data-ad-slot="4110287868"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
                 <!-- Yandex.RTB R-A-243980-1 desktop -->
                 <div id="yandex_rtb_R-A-243980-1"></div>
                 <!-- Yandex.RTB R-A-243980-3 mobile -->
                 <div id="yandex_rtb_R-A-243980-3"></div>
             <?php } ?>
+             <hr/>
             <ul class="list-inline text-center">
                 <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
                 <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>

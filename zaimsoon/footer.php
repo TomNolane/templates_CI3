@@ -1,5 +1,5 @@
 <?php $from = '15';
-if($this->uri->segment(1) != 'form')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
 	echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- zaimsoon -->
@@ -20,27 +20,47 @@ if($this->uri->segment(1) != 'form')
 }
 if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
 {
-    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156975824">';
+    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156975824" alr="MYTARGET">';
 }
 ?>
 <footer class="ex-main-footer">
     <div class="container">
         <div class="row">
             <div class="col-md-2 ex-foot-logo">
-                <a href="/"><img src="/templates/zaimsoon/assets/img/logo-footer.png" alt="logo-footer.png"></a>
+                <img src="/templates/zaimsoon/assets/img/logo-footer.png" alt="logo-footer.png" class="spec-logo">
             </div>
-            <div class="col-md-10">
-                <p class="spec_footer7">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г.
-                    Санкт-Петербург, ул. Осипенко, 12, оф 201| <a href="mailto:support@zaimsoon.ru" class="special_footer99" target="_blank">support@zaimsoon.ru</a> | +7(495) 006 19 61 <span class="hidden-xs hidden-sm">Займы
-                    предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
-                    Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета
-                    общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
-                    за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей
-                    выдается по ставке 0% в случае своевременного погашения
+             <div class="col-md-10">
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+                    <p class="spec_footer7">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г.
+                        Санкт-Петербург, ул. Осипенко, 12, оф 201| <a href="mailto:support@zaimsoon.ru" class="special_footer99" target="_blank">support@zaimsoon.ru</a> | +7(495) 006 19 61 <span class="hidden-xs hidden-sm">Займы
+                        предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
+                        Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета
+                        общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
+                        за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей
+                        выдается по ставке 0% в случае своевременного погашения
                     <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span></p>
+            <?php } else {
+                    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- zaimsoon -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-4970738258373085"
+                        data-ad-slot="4548012382"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>';
+                    
+                 } ?>
             </div>
+            <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
+                echo '<div class="col-md-12"><hr/><!-- Yandex.RTB R-A-261295-1 desktop -->
+                    <div id="yandex_rtb_R-A-261295-1"></div>
+                    <!-- Yandex.RTB R-A-261295-2 mobile -->
+                    <div id="yandex_rtb_R-A-261295-2"></div><hr><br>';
+            } ?>
             <div class="col-lg-12">
-            <br>
                 <ul class="list-inline text-center"> 
                     <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
                     <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>

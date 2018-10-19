@@ -1,109 +1,112 @@
-body {
-  font-family: $acrobat !important;
-  font-weight: 400 !important;
+body{
+  background-color: $mainBg;
+  font-family: $lato;
   position: relative;
   width: 100%;
-  color: #30323e!important;
+  color: $font;
   float: left;
   min-height: 100vh;
-  padding-right: 0 !important;
+  padding-right: 0!important;
 }
 
-.ex-main-btn {
+.dropdown-menu{
+  padding: 15px;
+}
+
+.ex-home-bg{
+  position: absolute;
   width: 100%;
-  padding: 20px 5px;
-  border: none;
-  outline: none;
-  background-color: #f9a45a;
-  color: #ffffff;
-  cursor: pointer;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 16px;
-  font-weight: 900;
-  line-height: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.47px;
-  @include prefix(border-radius, 5px);
+  height: 385px;
+  top: 0;
+  left: 0;
+  background: url(../img/home-bg.jpg) no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  z-index: -1;
 }
 
-.noSelect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.ex-money-receive-title{
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
 }
 
-.ex-adds {
-  height: 220px;
-  background-color: #edeeef;
-}
-
-.ex-sticky {
-  position: relative;
-  width: 100%;
-  float: left;
-  padding-bottom: 250px;
-  min-height: 100vh;
-  .ex-sticky-footer {
-    position: absolute;
-    width: 100%;
-    min-height: 133px;
-    bottom: 0;
-    left: 0;
+.ex-pd-and-h1-mb{
+  padding-top: 40px;
+  padding-bottom: 50px;
+  h1{
+    font-weight: 700;
+    margin-bottom: 55px;
+    @media (max-width: 600px) {
+      font-size: 28px;
+    }
   }
 }
-.ex-agreement-check {
-  label {
-    margin-top: 14px !important;
+
+.ex-main-btn{
+  width: 100%;
+  text-transform: uppercase;
+  margin-top: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 700;
+  color: $white;
+  background-color: $mainBtn;
+  outline: none;
+  border: none;
+  @include prefix(border-radius, 3px);
+}
+
+.ex-agreement-check{
+  label{
     display: block;
     position: relative;
     cursor: pointer;
-    padding-top: 3px !important;
-    color: #333333;
-    font-size: 14px;
-    font-weight: 600;
-    &:hover input ~ i {
-      background: #f8f8f8;
+    font-weight: 700;
+    &:hover input ~ i{
+      background: #ccc;
     }
-    &:focus input ~ i {
-      background: #f8f8f8;
+    &:focus input ~ i{
+      background: #ccc;
     }
-    span {
+    span{
       display: inline-block;
       margin-left: 15px;
-      color: #333333;
-      font-size: 14px;
-      font-weight: 600;
+      margin-top: 2px;
+      @media (max-width: 991px) {
+        font-size: 12px;
+        margin-top: 4px;
+      }
     }
-    input {
+    input{
       position: absolute;
       z-index: -1;
       opacity: 0;
       left: 0;
-      margin-left: 0 !important;
-      &:checked ~ i {
-        background: transparent;
-        &:after {
+      margin-left: 0!important;
+      &:checked ~ i{
+        background: $mainBtn;
+        &:after{
           display: block;
         }
       }
-
+      &:disabled ~ i{
+        background: #0e647d;
+        &:after{
+          border-color: #7b7b7b;
+        }
+      }
     }
-    i {
+    i{
       display: inline-block;
       position: absolute;
-      top: 0;
+      top: 2px;
       left: 0;
-      height: 24px;
-      width: 24px;
-      border: 1px solid #c8cfce;
-      background-color: #ffffff;
-      @include prefix(border-radius, 5px);
-      &:after {
+      height: 20px;
+      width: 20px;
+      background: #e6e6e6;
+      @include prefix(border-radius, 4px);
+      &:after{
         content: '';
         position: absolute;
         display: none;
@@ -111,22 +114,35 @@ body {
         top: 4px;
         width: 5px;
         height: 10px;
-        border: solid #c8cfce;
+        border: solid #fff;
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
         @include prefix(border-radius, 4px);
       }
     }
   }
-}
-.ex-transparent {
-  background-color: transparent !important;
-}
-
-
-#div2, #div3, #div4, #div5 ,#div6, #div7, #div8, #div9, #div10, #div11, #div12, #div13{
-  display: none;
+  button{
+    margin-top: 28px;
+  }
 }
 
-
-
+.ex-adds{
+  position: relative;
+  min-height: 175px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  div{
+    position: absolute;
+    top: 0;
+    width: 49%;
+    height: 100%;
+    padding: 8px;
+    background-color: #e8e8e8;
+    &:first-of-type{
+      left: 0;
+    }
+    &:last-of-type{
+      right: 0;
+    }
+  }
+}

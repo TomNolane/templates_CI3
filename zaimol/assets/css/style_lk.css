@@ -36,3 +36,12 @@ tr:hover {
         font-weight: 500;
     }
   }
+  .ex-main-footer .container div{
+          border-bottom: 1px solid transparent
+  }
+  .logo-spec {
+          margin: 20px 0;
+  }
+  .ex-main-footer .container div {
+      padding-bottom: 0
+  }

@@ -9,7 +9,8 @@
                         <input type="tel" class="form-control ec tip" id="passport" name="passport" placeholder="Серия и номер паспорта" title="Введите серию и номер паспорта"
                             data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Введите номер и серию паспорта"
                             required>
-                            <p class="text-muted helpblock">Пример: 4510 123456</p>
+                            <div><p class="help-block2">Укажите номер и серию паспорта</p>
+                            <p class="text-muted text-right">Пример: 4510 123456</p></div>
                     </div>
                 </div>
             </div>
@@ -66,7 +67,8 @@
                         <input type="text" class="form-control ec tip" name="passportdate" id="passportdate" placeholder="Дата выдачи паспорта" title="Выберете дату выдачи паспорта"
                             data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату выдачи паспорта"
                             required>
-                            <p class="text-muted helpblock">Пример: 24/03/2016</p>
+                            <div><p class="help-block2">Укажите дату выдачи паспорта</p>
+                            <p class="text-muted text-right">Пример: 24/03/2016</p></div>
                     </div>
                 </div>
             </div>
@@ -77,7 +79,8 @@
                         <input type="tel" class="form-control ec tip" name="passport_code" id="passport_code" placeholder="Код подразделения" title="Укажите код подразделения"
                             data-validation="custom" data-validation-regexp="^([0-9]{3}-[0-9]{3})$" data-validation-error-msg="Укажите код подразделения"
                             required>
-                            <p class="text-muted helpblock">Пример: 770-098</p>
+                            <div><p class="help-block2">Укажите код подразделения</p>
+                            <p class="text-muted text-right">Пример: 770-098</p></div>
                     </div>
                 </div>
             </div>
@@ -88,7 +91,8 @@
                         <input type="text" class="form-control ec tip" name="passport_who" id="passport_who" placeholder="Кем выдан паспорт" title="Укажите кем выдан паспорт"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\№\(\)\s\d]+$"
                             data-validation-error-msg="Укажите, кем выдан паспорт" required>
-                            <p class="text-muted helpblock">Пример: ОТДЕЛЕНИЕ УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЩУКИНО</p>
+                            <div><p class="help-block2">Укажите кем выдан паспорт</p>
+                            <p class="text-muted text-right">Пример: ОТДЕЛЕНИЕ УФМС РОССИИ ПО ГОР. МОСКВЕ ПО РАЙОНУ ЩУКИНО</p></div>
                     </div>
                 </div>
             </div>
@@ -99,7 +103,8 @@
                         <input type="text" class="form-control ec tip" name="birthplace" id="birthplace" placeholder="Место рождения" title="Ваше место рождения"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                             data-validation-error-msg="Укажите место рождения" required>
-                            <p class="text-muted helpblock">Пример: г. Новосибирск, Новосибирского района</p>
+                            <div><p class="help-block2">Укажите место своего рождения</p>
+                            <p class="text-muted text-right">Пример: г. Новосибирск, Новосибирского района</p></div>
                     </div>
                 </div>
             </div>
@@ -109,12 +114,12 @@
                     <div class="ex-wrapper ex-arrow">
                         <select class="form-control ec tip special_form99" id="region" name="region" autocomplete="off" required>
                             <option value="">-- Выберите регион --</option>
-                            <?php
-                        if (isset($regions) && is_array($regions))
-                        {
-                            foreach($regions as $region)
-                            echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
-                        }
+                        <?php
+                            if (isset($regions) && is_array($regions))
+                            {
+                                foreach($regions as $region)
+                                echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
+                            }
                         ?>
                         </select>
                     </div>
@@ -127,7 +132,8 @@
                         <input type="text" class="form-control ec tip" name="city" id="city" title="Укажите город в котором вы живете" value="<?php echo isset($city_name)? $city_name : ''; ?>"
                             pattern="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$"
                             data-validation-error-msg="Укажите, населенный пункт">
-                            <p class="text-muted helpblock">Пример: г. Новосибирск</p>
+                            <div><p class="help-block2">Укажите город своего проживания</p>
+                            <p class="text-muted text-right">Пример: г. Новосибирск</p></div>
                     </div>
                 </div>
             </div>
@@ -138,7 +144,8 @@
                         <input type="text" class="form-control ec tip" name="street" id="street" placeholder="Улица" title="Укажите название улицы"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                             data-validation-error-msg="Укажите, улицу" required>
-                            <p class="text-muted helpblock">Пример: ул. Ленина</p>
+                            <div><p class="help-block2">Укажите улицу своего проживания</p>
+                            <p class="text-muted text-right">Пример: ул. Ленина</p></div>
                     </div>
                 </div>
             </div>
@@ -149,7 +156,8 @@
                         <input type="text" class="form-control ec tip" name="building" id="building" placeholder="Номер дома" title="Укажите номер дома"
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер дома"
                             required>
-                            <p class="text-muted helpblock">Пример: 14</p>
+                            <div><p class="help-block2">Укажите № дома своего проживания</p>
+                            <p class="text-muted text-right">Пример: 14</p></div>
                     </div>
                 </div>
             </div>
@@ -160,7 +168,8 @@
                         <input type="text" class="form-control ec tip" name="housing" placeholder="Строение" title="Укажите номер корпуса или строения"
                             id="housing" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, строение (корпус)"
                             data-validation-optional="true">
-                            <p class="text-muted helpblock">Пример: 1а</p>
+                            <div><p class="help-block2">Укажите строение\корпус (не обязательно)</p>
+                            <p class="text-muted text-right">Пример: 1а</p></div>
                     </div>
                 </div>
             </div>
@@ -171,7 +180,8 @@
                         <input type="text" class="form-control ec tip" name="flat" placeholder="Квартира" title="Укажите номер квартиры" id="flat"
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Укажите, номер квартиры"
                             data-validation-optional="true">
-                            <p class="text-muted helpblock">Пример: 38</p> 
+                            <div><p class="help-block2">Укажите номер вашей квартиры</p>
+                            <p class="text-muted text-right">Пример: 38</p></div>
                     </div>
                 </div>
             </div>

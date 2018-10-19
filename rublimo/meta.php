@@ -17,3 +17,13 @@
 <meta name="twitter:url" content="https://rublimo.ru/"/>
 <meta name="twitter:domain" content="rublimo.ru"/>
 <meta name="yandex-verification" content="5f2b2f09988764fa" />
+<link rel="manifest" href="/manifest2.json" />
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "70ec2095-7412-4df5-a66a-edbaea9f020c",
+    });
+  });
+</script>

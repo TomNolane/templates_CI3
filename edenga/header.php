@@ -18,7 +18,7 @@ if(!isset($description))
     ?>
     <!--[if lte IE 9]>
     <script src="/modules/html5shiv/html5shiv.js"></script>
-    <![endif]-->  
+    <![endif]--> 
 </head>
 <body>
 <?php require 'menu.php';?>

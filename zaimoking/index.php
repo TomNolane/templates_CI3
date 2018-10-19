@@ -109,7 +109,6 @@
         <div class="ex-articles">
             <h2 class="text-center">Статьи о займах</h2>
             <div class="row">
-              
                <a href="/without_check">
                     <div class="col-md-4">
                         <div class="ex-art-block">

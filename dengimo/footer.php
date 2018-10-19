@@ -22,19 +22,17 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
 }
 if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
 {
-    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156936666">';
+    echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156936666" alt="mypixel">';
 }
 ?>
 <footer>
 <div class="container">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-12">
-                <a href="/">
-                    <img src="/templates/dengimo/assets/img/logo-footer.png" class="logo" alt="logo-footer.png">
-                </a>
+            <div class="col-md-3 col-sm-3 col-xs-12"> 
+                <img src="/templates/dengimo/assets/img/logo-footer.png" class="logo logo-spec" alt="logo-footer.png">
             </div>
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
             <div class="col-md-4 col-sm-4 col-xs-12 spec_footer4">
                 <p class="footer-text">
                     Сервис по подбору выгодных онлайн займов находящийся по адресу:
@@ -46,10 +44,8 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                 <p style="font-size: 12px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
                 <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001.</p>
             </div>
-             <?php endif; ?>
-            <div class="col-sm-12">
-                <hr/>
-                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+                <?php } else {?>
+                 <div class="col-md-9 col-sm-9 col-xs-12">
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <!-- dengimo -->
                 <ins class="adsbygoogle"
@@ -60,11 +56,18 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                     data-full-width-responsive="true"></ins>
                 <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-                </script><!-- Yandex.RTB R-A-232716-7 mobile -->
+                </script>
+                 </div>
+             <?php } ?>
+            <div class="col-sm-12">
+                <hr/>
+                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+                <!-- Yandex.RTB R-A-232716-7 mobile -->
                 <div id="yandex_rtb_R-A-232716-7"></div>
                 <!-- Yandex.RTB R-A-232716-8 desktop -->
                 <div id="yandex_rtb_R-A-232716-8"></div>
                 <?php } ?>
+                <hr/>
                 <ul class="list-inline text-center">
                     <li><a class="fonts12" href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
                     <li><a class="fonts12" href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>

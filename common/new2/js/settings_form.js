@@ -626,8 +626,7 @@ $(document).ready(function () {
         if (validate1()) { 
         
             $('input[name="step"]').val('1');
-            send_form(); 
-            console.log(222);
+            send_form();
             $('#form1').removeClass('in').removeClass('active');
             $('#form2').addClass('in').addClass('active');
             $('.ex-indicator-scope').addClass('ex-on-second-step');

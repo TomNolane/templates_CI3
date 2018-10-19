@@ -1,3 +1,13 @@
 .spec_footer7 { 
     display: none;
 } 
+footer.ex-main-footer .ex-wrapper{
+    display: block;
+}
+.spec-footer-class{
+    display: inline-flex;
+}
+.logo-special{
+    height: 90px;
+    padding: 20px 0;
+}

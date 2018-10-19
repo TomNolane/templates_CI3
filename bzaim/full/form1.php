@@ -32,7 +32,7 @@
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="f">Фамилия</label>
-                        <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию" data-sanitize="capitalize"
+                        <input type="text" class="form-control ec tip" name="f" id="f" autocomplete="family-name" placeholder="Фамилия" title="Укажите свою фамилию" data-sanitize="capitalize"
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
                             required>
                         <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -45,7 +45,7 @@
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="i">Имя</label>
-                        <input type="text" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Укажите свое имя" data-sanitize="capitalize"
+                        <input type="text" autocomplete="name" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Укажите свое имя" data-sanitize="capitalize"
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое имя"
                             required>
                         <span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -73,7 +73,7 @@
                     <div class="form-group has-feedback">
                         <label class="label-required" for="phone">Номер телефона</label>
                         <input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон" title="Укажите свой телефон"
-                            data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Укажите телефон"
+                            data-validation="custom" autocomplete='tel' data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Укажите телефон"
                             required>
                         <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать номер телефона</p>
@@ -131,7 +131,7 @@
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
                         <label class="label-required" for="birthdate">Дата рождения</label>
-                        <input type="tel" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Укажите свою дату рождения"
+                        <input type="tel" class="form-control ec tip" autocomplete="bday" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Укажите свою дату рождения"
                             data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Укажите дату рождения"
                             required>
                         <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -144,7 +144,7 @@
                 <div class="col-sm-12"> 
                     <div class="form-group has-feedback">
                         <label class="label-required" for="email">Электронная почта</label>
-                        <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Укажите свой email адрес"
+                        <input type="email" autocomplete="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Укажите свой email адрес"
                             placeholder="Укажите свой email адрес" data-validation="email" data-validation-error-msg="Укажите свой email адрес"
                             required>
                         <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>

@@ -3,7 +3,10 @@
     if($site == 'bzaim5') $site = 'bzaim';
     else if($site == 'www.mikrodengi') $site = 'mikrodengi';
     else if($site == 'bzaim.tomnolane') $site = 'bzaim';
-	else if($site == 'test.zaimhome') $site = 'test';
+    else if($site == 'test.zaimhome') $site = 'test';
+    
+    $site = str_replace("www.", "", $site);
+
     require realpath(__DIR__ . '/..').'/'.$site.'/header.php';
     $this->load->model('offers/offers_model', 'offers');
     
@@ -42,6 +45,16 @@ ins, .adsbygoogle{
     height: none !important;
 }
 </style>
+
+<?php if( $site == 'forzaim') { ?>
+<nav class="ex-main-header ex-transparent">
+    <div class="container">
+        <i class="ex-hamburger"></i>
+        <a class="ex-brand" href="/">Forzaim</a>
+    </div>
+</nav>
+<?php } ?>
+
 <div class="row container3"><div class="col-md-12">
 <?php if($site == 'www.mikrodengi' || $site == 'zaimrubli' || $site == 'zaimoking' || $site == 'mikrodengi') { ?>
 <h2 class="text-center hh" style="font-size: 26px;">Мы подобрали для Вас лучшие условия по микрозаймам! <br>

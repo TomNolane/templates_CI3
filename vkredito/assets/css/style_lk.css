@@ -36,3 +36,6 @@ tr:hover {
         font-weight: 500;
     }
   }
+ footer .logo {
+     margin: 6px 0;
+ }

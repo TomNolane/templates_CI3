@@ -111,12 +111,12 @@
                                         <select class="form-control ec tip special_form99" id="region" name="region" autocomplete="off" required>
                                             <option value="0">-- Выберите регион --</option>
                                             <?php
-                            if (isset($regions) && is_array($regions))
-                            {
-                                foreach($regions as $region)
-                                echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
-                            }
-                            ?>
+                                                if (isset($regions) && is_array($regions))
+                                                {
+                                                    foreach($regions as $region)
+                                                    echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
+                                                }
+                                            ?>
                                         </select>
                                     </div>
                                 </div>
