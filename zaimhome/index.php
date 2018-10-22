@@ -68,6 +68,7 @@ require 'header.php';
             </div>
         </div>
     </div>
+    <br><br><br><br><br>
     <a class="anchor" name="id2"></a>
     <h2 class="text-center ex-money-receive-title">Как получить деньги</h2><hr/>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
