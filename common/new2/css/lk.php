@@ -112,3 +112,8 @@ figure.hh1:hover {
 	padding-right: 0 !important;
     padding-left: 0 !important;
 }
+footer {
+    <?php if($site == "rublimo") {?>
+    background-color: #fff !important;
+    <?php }?>
+}

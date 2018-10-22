@@ -37,7 +37,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
             <div class="row">
                 <div class="col-md-3">
                     <h1 class="logo-spec" id="for_lk">
-                        Dengoman
+                        <img alt="logo.png" src="/templates/dengoman/assets/img/logo.png">
                     </h1>
                     <div class="footer-copyright"></div>
                 </div>
@@ -78,6 +78,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                 <div id="yandex_rtb_R-A-243980-3"></div>
             <?php } ?>
              <hr/>
+              <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) == 'lk2' && $this->uri->segment(1) == 'lk3' && $this->uri->segment(1) == 'form') { ?>
             <ul class="list-inline text-center">
                 <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
                 <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
@@ -85,6 +86,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                 <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
                 <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
             </ul>
+             <?php } ?>
         </div>
     </div>
 </footer>

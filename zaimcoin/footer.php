@@ -109,7 +109,7 @@ echo '<footer class="ex-main-footer">
             <div id="special_footer" class="ex-for-btn"><a onclick="goToUp(); return false;">ВЕРНУТЬСЯ В НАЧАЛО</a></div>
         </div>
         <p class="spec_footer5">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург,
-            ул. Осипенко, 12, оф 201 | <a href="mailto:support@zaimcoin.ru" class="spec_foot" target="_blank">support@zaimcoin.ru</a> <span id="sp_footer1" class="hidden-xs hidden-sm"> | +7 (495) 006 19 61.</span><br>
+            ул. Осипенко, 12, оф 201 | support@zaimcoin.ru <span id="sp_footer1" class="hidden-xs hidden-sm"> | +7 (495) 006 19 61.</span><br>
             <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
             Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
             Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
@@ -137,7 +137,7 @@ else
                         <img src="/templates/zaimcoin/assets/img/logo-footer.png" alt="logo-footer.png">
                     </div>
                      <p class="spec_footer5">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург,
-                    ул. Осипенко, 12, оф 201 | <a href="mailto:support@zaimcoin.ru" class="spec_foot" target="_blank">support@zaimcoin.ru</a>
+                    ул. Осипенко, 12, оф 201 | support@zaimcoin.ru
                     <span class="hidden-xs hidden-sm"><span id="sp_footer2">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
                     Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
                     Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
@@ -169,18 +169,14 @@ else
                         </div>';
                 }
                 echo '<hr/>';
-                echo '<!-- Yandex.RTB R-A-259325-1 desktop -->
-                <div id="yandex_rtb_R-A-259325-1"></div>
-                <!-- Yandex.RTB R-A-259325-2 mobile-->
-                <div id="yandex_rtb_R-A-259325-2"></div> ';
-                echo '<hr/>';
-                echo '<ul class="list-inline text-center">
-                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-                </ul> 
+                if ($this->uri->segment(1) != 'form') {
+                    echo '<!-- Yandex.RTB R-A-259325-1 desktop -->
+                    <div id="yandex_rtb_R-A-259325-1"></div>
+                    <!-- Yandex.RTB R-A-259325-2 mobile-->
+                    <div id="yandex_rtb_R-A-259325-2"></div> ';
+                    echo '<hr/>';
+                }
+                echo '
         </div>
     </footer>';
 }

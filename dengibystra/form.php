@@ -61,7 +61,7 @@ elseif($this->input->post('percent', TRUE) != '')
 
 if(!isset($my_title))
 {
-    $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис bzaim';
+    $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Dengibystra';
     $description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }
 include "templates/common/new2/php/form_header.php";

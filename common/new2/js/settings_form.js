@@ -50,6 +50,9 @@ function CheckTime()
         return false;
     }
 }
+function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+}
 function CheckTime2()
 {
     var today = addDate2($('#passportdate').val().split('/')[0],$('#passportdate').val().split('/')[1],$('#passportdate').val().split('/')[2]).getTime();
@@ -156,7 +159,15 @@ function validate0() {
 }
 
 function validate1() {
-	if (isWebvisor) return true;
+    if (isWebvisor) return true;
+    if (document.location.host == 'rublimo.ru')
+    {
+        if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || isInArray(document.querySelector('#email').value, blacklist_array2) || document.querySelector('#fingerprint').value == '' || document.querySelector('#fingerprint').value == 'cff86fd87ce86b59489c715d504e8d72') {
+            window.location.href = 'https://bankmoney.su';
+            return false;
+        }
+    }
+    
 	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 100000) {
 		error('Вы не указали сумму.', $('input[name="amount"]'));
 		return false;

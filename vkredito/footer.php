@@ -37,7 +37,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                 <div style="font-size: 12px;">
                     <p>Сервис по подбору выгодных онлайн займов находящийся по адресу
                         <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
-                        <br><a href="mailto:support@vkredito.ru" target="_blank">support@vkredito.ru</a>
+                        <br> support@vkredito.ru 
                         <span class="hidden-xs hidden-sm"> | +7(495) 006 19 61</span>
                     </p>
                 </div>
@@ -73,6 +73,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                     <!-- Yandex.RTB R-A-249178-2 desktop -->
                     <div id="yandex_rtb_R-A-249178-2"></div><hr/>';
                 } ?>
+                <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
                 <ul class="list-inline text-center">
                     <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
                     <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
@@ -80,6 +81,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                     <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
                     <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
                 </ul>
+                <?php } ?>
             </div>
         </div>
         <div class="clearfix">&nbsp;</div>

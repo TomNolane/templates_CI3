@@ -50,3 +50,6 @@ body {
 .ex-sticky .ex-sticky-footer {
     position: inherit;
 }
+.ex-sticky .ex-sticky-footer {
+    background-color: #fff;
+}

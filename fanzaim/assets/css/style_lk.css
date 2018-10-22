@@ -11,3 +11,6 @@ footer.ex-main-footer .ex-wrapper{
     height: 90px;
     padding: 20px 0;
 }
+footer.ex-main-footer{
+    background-color: #fff;
+}

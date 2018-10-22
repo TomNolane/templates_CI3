@@ -45,3 +45,10 @@ tr:hover {
   .ex-main-footer .container div {
       padding-bottom: 0
   }
+  .ex-main-footer {
+    background-color: #fff;
+    color: #000;
+  }
+  #yandex_rtb_R-A-259962-1 {
+      color: black
+  }

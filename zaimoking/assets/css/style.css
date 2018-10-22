@@ -3278,7 +3278,7 @@ a {
 }
 
 li.list-inline-item > a {
-    color: #fefefe;
+    color: #000;
     text-decoration: none;
 }
 
@@ -12080,7 +12080,7 @@ button.close {
 footer.ex-main-footer {
     padding-top: 37px;
     padding-bottom: 37px;
-    background: #202020;
+    background: #fff;
 }
 
 /* line 5, ../sass/desktop/_footer.scss */
@@ -12090,7 +12090,7 @@ footer.ex-main-footer .ex-foot-logo {
 
 /* line 8, ../sass/desktop/_footer.scss */
 footer.ex-main-footer p {
-    color: #ffffff;
+    color: #000;
     font-weight: 400;
     line-height: 20px;
     font-size: 14px;

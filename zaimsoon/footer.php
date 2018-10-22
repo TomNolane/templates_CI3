@@ -29,10 +29,14 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
 <footer class="ex-main-footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-2 ex-foot-logo">
+            <div class="col-md-3 ex-foot-logo">
+                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+                 <img src="/templates/zaimsoon/assets/img/logo.png" alt="logo-footer.png" class="spec-logo">
+                <?php } else { ?> 
                 <img src="/templates/zaimsoon/assets/img/logo-footer.png" alt="logo-footer.png" class="spec-logo">
+                <?php } ?>
             </div>
-             <div class="col-md-10">
+             <div class="col-md-9">
             <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
                     <p class="spec_footer7">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г.
                         Санкт-Петербург, ул. Осипенко, 12, оф 201| <a href="mailto:support@zaimsoon.ru" class="special_footer99" target="_blank">support@zaimsoon.ru</a> | +7(495) 006 19 61 <span class="hidden-xs hidden-sm">Займы
@@ -63,15 +67,17 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                     <!-- Yandex.RTB R-A-261295-2 mobile -->
                     <div id="yandex_rtb_R-A-261295-2"></div><hr><br>';
             } ?>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
             <div class="col-lg-12">
                 <ul class="list-inline text-center"> 
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="https://bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
+                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
                 </ul>
             </div>
+            <?php } ?>
         </div>
     </div>
 </footer>

@@ -39,3 +39,6 @@ tr:hover {
   .logo-spec {
       margin: 11px 0;
   }
+  .footer, .footer-wrap{
+      background-color: #fff;
+  }

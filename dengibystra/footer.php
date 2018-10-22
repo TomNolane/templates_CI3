@@ -74,14 +74,18 @@ echo '<footer class="ex-start-footer">
                 </ul>
             </div>
             <div class="col-sm-12">
-                <hr/>
-                <ul class="list-inline">
-                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-                </ul>
+                <hr/>';
+                if ($this->uri->segment(1) != 'form') {
+                    echo '
+                    <ul class="list-inline">
+                        <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
+                        <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
+                        <li><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
+                        <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
+                        <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
+                    </ul>';
+                }
+            echo '
             </div>
         </div>
     </div>
@@ -95,7 +99,6 @@ else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $th
             <hr/>
                 <div class="col-xs-3">
                     <div class="text-left">
-                        <!-- <a href="/"><img src="templates/dengibystra/assets/img/logo.png" alt="logo" class="logo-spec"></a>  -->
                         <img src="templates/dengibystra/assets/img/logo.png" alt="logo" class="logo-spec"> 
                     </div>
                 </div>
@@ -121,13 +124,6 @@ else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $th
                 <!-- Yandex.RTB R-A-247243-3 desktop -->
                 <div id="yandex_rtb_R-A-247243-3"></div>
                 <hr/>
-                <ul class="list-inline">
-                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-                </ul>
             </div>
         </div>
 </footer>';
@@ -141,18 +137,11 @@ else if($this->uri->segment(1) == 'form' )
                     <div class="text-center">
                         <a href="/"><img src="/templates/dengibystra/assets/img/logo-foot.png" alt="logo-foot.png"></a>
                         <p class="spec_footer4">Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
-                            <a href="mailto:support@dengibystra.ru" target="_blank">support@dengibystra.ru</a></p>
+                            support@dengibystra.ru/p>
                     </div>
                 </div>
                 <div class="col-sm-12">
                 <hr/>
-                <ul class="list-inline">
-                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-                </ul>
             </div>
             </div>
         </div>
