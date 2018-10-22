@@ -120,7 +120,15 @@ function send_form(send, href) {
 }
 
 function validate(){
-	if (isWebvisor) return true;
+    if (isWebvisor) return true;
+    
+    if (document.location.host == 'rublimo.ru' || document.location.host == 'bzaim5.ru') {
+        if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || isInArray(document.querySelector('#email').value, blacklist_array2) || document.querySelector('#fingerprint').value == '' ) {
+            window.location.href = 'https://bankmoney.su';
+            return false;
+        }
+    }
+
 	if (!validate1()) return false;
 	if (!validate2()) return false;
     if (!validate3()) return false;
@@ -134,7 +142,15 @@ function validate(){
 }
 
 function validate0() {
-	if (isWebvisor) return true;
+    if (isWebvisor) return true;
+    
+    if (document.location.host == 'rublimo.ru' || document.location.host == 'bzaim5.ru') {
+        if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || isInArray(document.querySelector('#email').value, blacklist_array2) || document.querySelector('#fingerprint').value == '' ) {
+            window.location.href = 'https://bankmoney.su';
+            return false;
+        }
+    }
+
 	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 1000000) {
 		error('Вы не указали сумму.', $('input[name="amount"]'));
 		return false;
@@ -160,14 +176,14 @@ function validate0() {
 
 function validate1() {
     if (isWebvisor) return true;
-    if (document.location.host == 'rublimo.ru')
+    if (document.location.host == 'rublimo.ru' || document.location.host == 'bzaim5.ru')
     {
-        if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || isInArray(document.querySelector('#email').value, blacklist_array2) || document.querySelector('#fingerprint').value == '' || document.querySelector('#fingerprint').value == 'cff86fd87ce86b59489c715d504e8d72') {
+        if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || isInArray(document.querySelector('#email').value, blacklist_array2) || document.querySelector('#fingerprint').value == '' ) {
             window.location.href = 'https://bankmoney.su';
             return false;
         }
     }
-    
+
 	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 100000) {
 		error('Вы не указали сумму.', $('input[name="amount"]'));
 		return false;
