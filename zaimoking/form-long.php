@@ -67,12 +67,12 @@ include "templates/common/new2/php/form_header.php";
 include "header.php";
 ?>
 <main class="ex-form">
-    <h1 class="text-center" id="to_scroll">До одобрения кредита вас отделяют всего 3 шага</h1>
+    <h1 class="text-center" id="to_scroll">До одобрения кредита вас отделяют всего 1 шаг</h1>
     <p></p>
     <ul class="ex-tab-steps text-center" id="form-steps">
+        <li class="ex-step-counter"></li>
         <li class="ex-step-counter ex-step-active">Заполните личные данные</li>
-        <li class="ex-step-counter ex-step-2">Паспортные данные</li>
-        <li class="ex-step-counter">Сведения о работе</li>
+        <li class="ex-step-counter "></li>
     </ul>
     <div class="container">
         <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off">
@@ -86,13 +86,13 @@ include "header.php";
                 <input type="hidden" id="period" name="period" value="<?=$period;?>" />
             <div class="tab-content">
                 <div id="firstStep" class="tab-pane fade in active">
-                    <?php require 'full/form1.php'; ?>
+                    <?php require 'form1.php'; ?>
                 </div>
                 <div id="secondStep" class="tab-pane fade">
-                    <?php require 'full/form2.php'; ?>
+                    <?php require 'form2.php'; ?>
                 </div>
                 <div id="thirdStep" class="tab-pane fade">
-                    <?php require 'full/form3.php'; ?>
+                    <?php require 'form3.php'; ?>
                 </div>
             </div>
         </form>

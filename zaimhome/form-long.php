@@ -75,17 +75,17 @@ include "header.php";
                     <div class="ex-indicator-scope ex-on-second-step ex-on-last-step nav nav-tabs" role="tablist">
                         <figure class="ex-first-step">
                             <p>
-                                <br> </p>
+                                <br> Личные данные (шаг 1)</p>
                         </figure>
                         <figure class="ex-second-step">
                             <div>
                                 <span></span>
                             </div>
-                            <p>Личные данные 
-                                <br> (всего 3 шага)</p>
+                            <p>Паспортные данные 
+                                <br> (шаг 2)</p>
                         </figure>
                         <figure class="ex-last-step">
-                            <p style="width: 105px; left: -130%;"></p>
+                            <p style="width: 105px; left: -130%;">Данные о работе (шаг 3)</p>
                         </figure>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ include "header.php";
                     <input type="hidden" name="referer" value="<?=$referer?>">
                     <input type="hidden" name="id" value="">
                     <input type="hidden" name="step" value="1">
-                    <input type="hidden" name="ad_id" value="<?=$ad_id?>">
+                    <input type="hidden" name="ad_id" value="<?=$ad_id?>"> 
                     <input type="hidden" id="amount" name="amount" value="<?=$sum;?>"/>
                     <input type="hidden" id="period" name="period" value="<?=$period;?>" />
                     <input type="hidden" name="fingerprint" id="fingerprint" value="">

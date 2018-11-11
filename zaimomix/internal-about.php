@@ -9,8 +9,10 @@
 </div>
 </div>
 <div class="container">
+    <span id="adsence_about"></span><br><br>
 <div class="ex-steps">
     <div class="row">
+        
         <div class="col-lg-4">
             <div class="ex-steps-block text-center">
                 <img src="/templates/zaimomix/assets/img/icons/icon-calc.png" alt="">

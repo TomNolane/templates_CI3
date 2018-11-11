@@ -63,13 +63,13 @@
         </div>
     </div> 
     <div class="ex-form-wrap">
-        <div class="form-group has-feedback hidden">
+        <div class="form-group has-feedback">
             <div class="row">
                 <label class="control-label col-md-3" for="f">Фамилия</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
-                            data-sanitize="capitalize" value="Иванова" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
+                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
                             required>
                     </div>
                 </div>
@@ -88,12 +88,12 @@
             </div>
         </div>
         <div class="form-group has-feedback ">
-            <div class="row hidden">
+            <div class="row">
                 <label class="control-label col-md-3" for="o">Отчество</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
-                            data-sanitize="capitalize" value="Ивановна" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
+                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
                             required>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback hidden">
+            <div class="form-group has-feedback">
                 <div class="row">
                     <label class="control-label col-md-3" for="delays_type">Кредитная история
                     </label>
@@ -158,13 +158,17 @@
                     <div class="col-md-3"></div>
                     <div class="col-md-9">
                         <label class="checkbox-inline">
-                            <span>Я согласен(на) на обработку персональных данных и с публичной офертой</span>
+                            <span class="font12">Я согласен(на) на обработку персональных данных и с публичной офертой</span>
                             <input type="checkbox" onClick="checkMee();" id="agree" value="1" checked>
                             <i></i>
                         </label>
-                        <label class="hidden">
+                    </div>    
+                    <div class="col-md-3"></div>
+                    <div class="col-md-9">    
+                        <label class="checkbox-inline">
+                            <span class="font12">Я согласен на получение рекламных сообщений</span>
                             <input type="checkbox" id="marketing" value="1" checked>
-                            <b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
+                            <i></i>
                         </label>
                     </div>
                 </div>
@@ -181,3 +185,15 @@
         </div>
     </div>
 </section>
+<br><br>
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- dengomir -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="4639511728"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>

@@ -6,6 +6,7 @@
             <a class="ex-brand" href="/">Forzaim</a>
         </div>
     </nav>
+    <span id="adsence_about"></span>
     <div class="container">
         <form id="anketa" action="/form" method="post">
             <input type="hidden" id="amount" name="amount" value="20000" />

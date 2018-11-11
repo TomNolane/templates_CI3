@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </nav>
-                <div class="container">
+                <div class="container hidden-xs hidden-md">
                     <a class="ex-brand navbar-brand" href="/"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,7 @@
                         <div class="navbar-nav ">
                             <a class="ex-dropdown nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                меню
+                                меню 
                                 <i></i>
                             </a>
                             <div class="dropdown-menu justify-content-end" aria-labelledby="navbarDropdown">
@@ -47,7 +47,7 @@
                                 <a class="dropdown-item" href="/oferta">Публичная оферта</a>
                                 <a class="dropdown-item" href="/soglasie">Согласие на обработку данных</a>
                                 <a class="dropdown-item" href="/rules">Правила предоставления займов</a>
-                                <a class="dropdown-item" href="/faq">Часто задаваемые вопросы</a>
+                                <a class="dropdown-item" href="/faq">1Часто задаваемые вопросы</a>
                                 <input  class="ex-ask-question ex-main-btn ex-question-btn text-center" value="задать вопрос"/>
                             </div>
                         </div>

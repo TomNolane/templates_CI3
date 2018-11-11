@@ -1,4 +1,12 @@
 <?php require 'header.php';?>
+<style>
+a.spec {
+    color: #000 !important;
+    border: 2px solid black;
+    font-size: 16px;
+    padding: 10px;
+}
+</style>
 <div class="ex-artikle">
     <nav class="ex-main-header">
         <div class="container">
@@ -6,6 +14,7 @@
             <a class="ex-brand" href="/">Forzaim</a>
         </div>
     </nav>
+    <span id="adsence_about"></span>
 </div>
 <div class="ex-artikle-content"> 
 <div class="container">
@@ -17,7 +26,7 @@
             Юридические лица имеют право вложить в деятельность МФО абсолютно любые суммы денег. А вот физические
             лица вправе открыть счёт в данных организациях на сумму от 1,5 млн. руб. Как видим, МФО привлекают
             средства и граждан, и юридических лиц.</p>
-        <a href="/microloans-organization"><img src="/templates/forzaim/assets/img/readnext.png" alt="readnext.png"></a>
+        <br><a class="spec" href="/microloans-organization">Читать далее >></a>
     </div>
     <div class="ex-artikle-block">
         <h2>Кредитная история и её виды</h2>
@@ -26,7 +35,7 @@
             Штрафы, задолженности и нарушенный в прошлом график платежей – всё это часто приводит к отказу в кредите
             (а иногда и в займе). Конечно же, финансовой организации безразлично, присутствовали ли объективные
             причины у этих нарушений или кредит не выплачивали сознательно.</p>
-        <a href="/credits-history"><img src="/templates/forzaim/assets/img/readnext.png" alt="readnext.png"></a>
+        <br><a class="spec" href="/credits-history">Читать далее >></a>
     </div>
     <div class="ex-artikle-block">
         <h2>Срочные деньги в долг по паспорту: способы получения</h2>
@@ -36,7 +45,7 @@
             Банки. На сегодняшний день вероятность получить кредит (или срочный заем) в банке без дополнительных
             документов и с одним паспортом чрезмерно низка. Банкам необходимо проверять клиентов по полной
             программе, а также запрашивать справки для выявления</p>
-        <a href="/urgently-money"><img src="/templates/forzaim/assets/img/readnext.png" alt="readnext.png"></a>
+        <br><a class="spec" href="/urgently-money">Читать далее >></a>
     </div>
     <div class="ex-artikle-block">
         <h2>Что лучше: займ или кредит?</h2>
@@ -45,7 +54,7 @@
             микрофинансовых организаций или банков и получали от них финансовую помощь или срочный микрозайм.<br><br>
             Получение кредита предполагает поход в банк, после чего подписывается кредитный договор. В нём
             отражаются условия, по которым…</p>
-        <a href="/microloans-or-credit"><img src="/templates/forzaim/assets/img/readnext.png" alt="readnext.png"></a>
+        <br><a class="spec" href="/microloans-or-credit">Читать далее >></a>
     </div>
 </div>
 </div>

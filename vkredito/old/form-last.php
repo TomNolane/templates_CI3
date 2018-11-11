@@ -93,15 +93,15 @@ include "header.php";
                 </div>
                 <div class="col-md-4 text-center icon hidden-xs">
                     <div class="text-center icon-text col-md-12 col-sm-4 col-xs-4">
-                        <img src="/templates/vkredito/assets/img/advantage/4.png" alt="Ваши персональные данные надёжно защищены" class="img-rounded">
+                        <img src="/templates/vkredito/templates/vkredito/assets/img/advantage/4.png" alt="Ваши персональные данные надёжно защищены" class="img-rounded">
                         <p class="hidden-xs">Ваши персональные данные надежно защищены</p>
                     </div>
                     <div class="text-center icon-text col-md-12 col-sm-4 col-xs-4" style="padding: 25px;">
-                        <img src="/templates/vkredito/assets/img/steps/1.png" alt="Удобное получение денег" class="img-rounded">
+                        <img src="/templates/vkredito/templates/vkredito/assets/img/steps/1.png" alt="Удобное получение денег" class="img-rounded">
                         <p class="hidden-xs">Удобное получение денег</p>
                     </div>
                     <div class="text-center icon-text col-md-12 col-sm-4 col-xs-4" style="padding: 45px;">
-                        <img src="/templates/vkredito/assets/img/steps/3.png" alt="Принимаем заявки с любой кредитной историей" class="img-rounded">
+                        <img src="/templates/vkredito/templates/vkredito/assets/img/steps/3.png" alt="Принимаем заявки с любой кредитной историей" class="img-rounded">
                         <p class="hidden-xs">Деньги ждут вас</p>
                     </div>
                 </div>

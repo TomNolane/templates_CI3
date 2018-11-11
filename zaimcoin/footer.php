@@ -3,9 +3,9 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
 {
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156578754" alt="mytarget">';
 }
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
-    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') 
+    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index' && $this->uri->segment(1) != 'form') 
     {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- zaimcoin -->
@@ -19,12 +19,16 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
     }
-	
-    echo '<!-- Yandex.RTB R-A-259325-1 desktop -->
-    <div id="yandex_rtb_R-A-259325-1"></div>
-    <!-- Yandex.RTB R-A-259325-2 mobile-->
-    <div id="yandex_rtb_R-A-259325-2"></div> ';
-    echo '<a href="#0" class="cd-top">Наверх</a>';
+
+    if($this->uri->segment(1) != 'form')
+    {
+        echo '<!-- Yandex.RTB R-A-259325-1 deckstop -->
+        <div id="yandex_rtb_R-A-259325-1"></div>
+        <!-- Yandex.RTB R-A-259325-2 mobile-->
+        <div id="yandex_rtb_R-A-259325-2"></div>';
+        echo '<a href="#0" class="cd-top">Наверх</a>';
+    }
+    
 }
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') 
 {
@@ -116,13 +120,6 @@ echo '<footer class="ex-main-footer">
             за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.
             Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span></p>
             <hr/>
-            <ul class="list-inline text-center">
-                <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                <li><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-            </ul>
     </div> 
 </footer>';
 }
@@ -147,12 +144,12 @@ else
                 else 
                 {
                     echo '<div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3 hidden-xs">
                                 <div class="ex-foot-logo text-center">
                                     <img src="/templates/zaimcoin/assets/img/logo-footer.png" alt="logo-footer.png" class="logo-spec">
                                 </div>
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-9 col-xs-12">
                             <br>
                                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                                 <!-- zaimcoin -->

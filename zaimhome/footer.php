@@ -28,7 +28,11 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
 ?>
 <footer class="ex-main-footer">
 <div class="container" style="width: 100%">
+    <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
     <div class="col-sm-2 text-center">
+    <?php } else { ?>
+    <div class="col-sm-2 hidden-xs text-center">
+    <?php } ?>
         <div class="ex-footer-logo">
             <img src="/templates/zaimhome/assets/img/header-logo.png" alt="Missing image" class="special_foot22">
         </div> 
@@ -45,7 +49,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
         <p style="font-size: 85%;">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</p>
     </div>
     <?php } else { ?>
-    <div class="col-sm-10">
+    <div class="col-sm-10 col-xs-12">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- zaimhome -->
         <ins class="adsbygoogle"
@@ -68,13 +72,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
             <div id="yandex_rtb_R-A-257494-3"></div> <hr/>';
         } ?>
         <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-        <ul class="list-inline text-center">
-            <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-            <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-            <li><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-            <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-            <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-        </ul>
+
         <?php } ?>
     </div>
 </div>

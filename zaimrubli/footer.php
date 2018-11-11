@@ -29,7 +29,11 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-2">
+            <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+            <div class="col-md-2 hidden-xs">
+            <?php } else { ?>
+             <div class="col-md-2">
+            <?php } ?>
                 <div class="ex-foot-logo">
                     <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
                     <img src="templates/zaimrubli/assets/img/logo.svg" alt="logo.svg" class="logo-spec">
@@ -38,7 +42,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                     <?php } ?>
                 </div>
             </div>
-             <div class="col-md-10">
+             <div class="col-md-10 col-xs-12">
              <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
                 <p>Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г.
                     Санкт-Петербург, ул. Осипенко, 12, оф 201 <a href="mailto:support@zaimrubli.ru" class="spec_foot" target="_blank">support@zaimrubli.ru</a> <span class="hidden-xs hidden-sm">| 8 (960) 950 93 53</span><br>
@@ -72,13 +76,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                     <div id="yandex_rtb_R-A-264025-2"></div> <hr/>';
                 } ?>
                 <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-                <ul class="list-inline text-center"> 
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-                </ul>
+
                 <?php } ?>
             </div>
         </div>

@@ -42,6 +42,27 @@ if(!isset($my_title))
 }
 include "templates/common/new2/php/form_header.php";
 include "header.php";
+
+include 'simple-php-captcha.php';
+session_start(); 
+$_SESSION['captcha'] = simple_php_captcha( array(
+    'min_length' => 4,
+    'max_length' => 6, 
+    'characters' => 'abcdefghjkmnprstuvwxyz23456789',
+    'min_font_size' => 20,
+    'max_font_size' => 28,
+    // 'color' => '#d4d4d4',
+    'color' => '#777',
+    'angle_min' => 10,
+    'angle_max' => 40,
+    'shadow' => true,
+    'shadow_color' => '#fff',
+    'shadow_offset_x' => -1,
+    'shadow_offset_y' => 1
+));
+echo '<script>
+var ahctpac2 = "'.sha1($_SESSION['captcha']['code']).'";
+</script>'
 ?>
 <div class="container">
     <section class="form-anketa">
@@ -59,15 +80,14 @@ include "header.php";
                         <input type="hidden" id="amount" name="amount" value="<?=$sum;?>" />
                         <div class="tab-content">
                             <div id="firstStep" class="tab-pane fade in active">
-                                <?php require 'full/form1.php'; ?>
+                                <?php require 'form1.php'; ?>
                                 <div class="text-center">
-                                    <a class="btn btn-primary btn-next" id="next1f">Далее
-                                    </a>
+                                    <a class="btn btn-primary btn-next" id="next1">Оформить заявку</a>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                             <div id="secondStep" class="tab-pane fade">
-                                <?php require('full/form2.php'); ?>
+                                <?php require('form2.php'); ?>
                                 <div class="clearfix">&nbsp;</div>
                                 <div class="form-group"> 
                                     <div class="text-center">
@@ -79,7 +99,7 @@ include "header.php";
                                 <div class="clearfix"></div>
                             </div>
                             <div id="thirdStep" class="tab-pane fade">
-                                <?php require('full/form3.php'); ?>
+                                <?php require('form3.php'); ?>
                                 <div class="row">
                                     <div class="text-center">
                                         <a class="btn btn-primary btn-next" id="getmoney">Оформить заявку</a>
@@ -112,7 +132,17 @@ include "header.php";
     </section>
     <div class="clearfix visible-sm visible-xs">&nbsp;</div>
 </div>
-
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- edenga -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="3535572793"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <!-- Modal -->
 <div class="modal fade" id="tosModal" tabindex="-1" role="dialog" aria-labelledby="tosModalLabel">
     <div class="modal-dialog" role="document">

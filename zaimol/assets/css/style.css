@@ -11585,9 +11585,9 @@ main.ex-main-counter .ex-draft .ex-wrapper p {
 
 /* line 41, ../sass/desktop/_homepage.scss */
 .ex-section-2 {
-  padding-top: 182px;
+  padding-top: 12px;
   padding-bottom: 110px;
-}
+} 
 /* line 45, ../sass/desktop/_homepage.scss */
 .ex-section-2 .tab-content h2 {
   font-size: 26px;
@@ -11597,6 +11597,9 @@ main.ex-main-counter .ex-draft .ex-wrapper p {
   margin-bottom: 80px;
 }
 @media (max-width: 767px) {
+	.ex-section-2 {
+	  padding-bottom: 0;
+	} 
   /* line 45, ../sass/desktop/_homepage.scss */
   .ex-section-2 .tab-content h2 {
     line-height: 30px;

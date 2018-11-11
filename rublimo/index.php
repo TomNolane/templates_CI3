@@ -99,7 +99,6 @@
 	</div>
 </section>
 </form>
-<a class="anchor" name="id2"></a>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- rublimo --> 
 <ins class="adsbygoogle"
@@ -192,7 +191,6 @@
 			</div>
 		</div>
 	</div>
-	<a class="anchor" name="id3"></a>
 	<section class="rating hidden-md hidden-sm hidden-xs">
 		<div class="container">
 			<div class="row text-center">
@@ -216,7 +214,6 @@
 			</div>
 		</div>
 	</section>
-	<a class="anchor" name="id4"></a>
 	<section class="reviews hidden-md hidden-sm hidden-xs">
 		<div class="pattern">
 			<div class="container">
@@ -277,7 +274,6 @@
 			</div>
 		</div>
 	</section>
-	<a class="anchor" name="id5"></a>
 	<div class="hidden-xs">
 		<div class="great-support-container section-container section-container-gray-bg">
 			<div class="container">
@@ -359,7 +355,6 @@
 			</div>
 		</div>
 	</div>
-	<a class="anchor" name="id6"></a>
 	<div class="portfolio-container hidden-xs section-container section-container-gray-bg">
 		<div class="container">
 			<div class="row">
@@ -491,5 +486,4 @@
 		</div>
 	</div>
 </div>
-<a class="anchor" name="id7"></a>
 <?php require 'footer.php'; ?>

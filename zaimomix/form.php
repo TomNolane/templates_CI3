@@ -69,9 +69,9 @@ include "header.php";
 <main class="ex-form">
     <h1 class="text-center" id="form-steps">До одобрения кредита вас отделяют всего 1 шаг</h1>
     <div class="ex-tab-steps text-center">
-        <p class="ex-step-counter ex-step-active">шаг 1 Заполните личные данные</p>
-        <p class="ex-step-counter ex-step-2">шаг 2 Заполните паспортные данные</p>
-        <p class="ex-step-counter ex-step-3">шаг 3 Заполните данные о работе</p>
+        <p class="ex-step-counter ex-step-active"></p>
+        <p class="ex-step-counter ex-step-active">Заполните личные данные</p>
+        <p class="ex-step-counter ex-step-active"></p>
     </div>
     <div class="container">
     <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off"> 
@@ -85,13 +85,13 @@ include "header.php";
                 <input type="hidden" name="fingerprint" id="fingerprint" value="">
             <div class="tab-content">
                 <div id="firstStep"  class="tab-pane active">
-                    <?php require 'full/form1.php'; ?>
+                    <?php require 'form1.php'; ?>
                 </div>
                 <div id="secondStep"  class="tab-pane">
-                    <?php require 'full/form2.php'; ?>
+                    <?php require 'form2.php'; ?>
                 </div>
                 <div id="thirdStep"  class="tab-pane" >
-                    <?php require 'full/form3.php'; ?>
+                    <?php require 'form3.php'; ?>
                 </div>
             </div>
         </form>

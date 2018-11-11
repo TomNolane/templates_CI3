@@ -73,8 +73,8 @@ include "header.php";
     <div class="container-fluid ex-step-counter hidden-xs">
         <ul class="ex-step-indicator">
             <li><span>Личные данные</span></li>
-            <li><span>Паспортные данные</span></li>
-            <li><span>Данные о работе</span></li>
+            <li><span></span></li>
+            <li><span></span></li>
         </ul>
     </div>
     <section class="ex-main-form">
@@ -90,17 +90,28 @@ include "header.php";
                 <input type="hidden" name="fingerprint" id="fingerprint" value="">
             <div class="tab-content">
                 <div id="firstStep" class="tab-pane fade in active">
-                    <?php require 'full/form1.php'; ?>
+                    <?php require 'form1.php'; ?>
                 </div>
                 <div id="secondStep" class="tab-pane fade">
-                    <?php require 'full/form2.php'; ?>
+                    <?php require 'form2.php'; ?>
                 </div>
                 <div id="thirdStep" class="tab-pane fade">
-                    <?php require 'full/form3.php'; ?>
+                    <?php require 'form3.php'; ?>
                 </div>
             </div>
         </form>
     </section>
 </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- zaimrubli -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="4278094234"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <br><br>
 <?php include 'footer.php';?>

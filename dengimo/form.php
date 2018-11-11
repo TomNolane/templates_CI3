@@ -129,7 +129,7 @@ include "templates/common/new2/php/form_header.php";
 include "header.php";
 ?>
 <div class="container">
-        <div class="steps" id="to_scroll">
+        <div class="steps">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-steps-line">
@@ -137,17 +137,17 @@ include "header.php";
                             <div class="row" role="tablist" id="form-steps">
                                 <div class="col-xs-2 col-xs-offset-3 text-center" role="presentation">
                                     <a href="#form1" aria-controls="form1" role="tab">
-                                        <span class="btn btn-circle" id="step1">1</span>
+                                        <span class="btn btn-circle" id="step1"></span>
                                     </a>
                                 </div>
                                 <div class="col-xs-2 text-center" role="presentation">
                                     <a href="#form2" aria-controls="form1" role="tab">
-                                        <span class="btn btn-circle " id="step2">2</span>
+                                        <span class="btn btn-circle " id="step2">1</span>
                                     </a>
                                 </div>
                                 <div class="col-xs-2 text-center" role="presentation">
                                     <a href="#form3" aria-controls="form1" role="tab">
-                                        <span class="btn btn-circle " id="step3">3</span>
+                                        <span class="btn btn-circle " id="step3"></span>
                                     </a>
                                 </div>
                             </div>
@@ -177,15 +177,15 @@ include "header.php";
                         <input type="hidden" id="period" name="period" value="<?=$period;?>" />
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="form1">
-                                <?php require 'full/form1.php'; ?>
+                                <?php require 'form1.php'; ?>
                                 <div class="col-sm-8 col-sm-offset-4 col-xs-12">
-                                    <a class="btn btn-block" id="next1f" style="padding: 13px;">Далее
+                                    <a class="btn btn-block" id="next1" style="padding: 13px;">Отправить заявку 
                                     </a>
-                                </div>
+                                </div> 
                                 <div class="clearfix"></div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="form2">
-                                <?php require('full/form2.php'); ?>
+                                <?php require('form2.php'); ?>
                                 <div class="clearfix">&nbsp;</div>
                                 <div class="pull-right">
                                     <a class="btn btn-next" id="next2">Далее
@@ -195,11 +195,11 @@ include "header.php";
                                 <div class="clearfix"></div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="form3">
-                                <?php require('full/form3.php'); ?>
+                                <?php require('form3.php'); ?>
                                 <div class="row">
                                     <div class="col-sm-8 col-sm-offset-4 col-xs-12">
                                         <!--a href="#doiModal" class="btn btn-block" id="form-send" data-toggle="modal" data-target="#doiModal" style="padding: 13px;" onclick="yaCounter39556840.reachGoal('popup'); return true;">Отправить заявку</a-->
-                                        <a class="btn btn-block" id="getmoney" style="padding: 13px;">Отправить заявку</a>
+                                        <a class="btn btn-block" id="form-send" style="padding: 13px;">Отправить заявку</a>
                                     </div>
                                 </div>
                             </div>
@@ -209,7 +209,17 @@ include "header.php";
                 </div>
             </div>
         </div>
-
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- dengimo -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="1070967656"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
         <div class="triggers hidden-xs hidden-sm">
             <div class="row">
                 <div class="col-sm-2 col-sm-offset-2">

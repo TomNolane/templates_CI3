@@ -99,10 +99,9 @@
             </div>
         </form>
     </section>
-    <section class="ex-section-2 hidden-xs hidden-sm">
+    <section class="ex-section-2">
         <div class="container">
             <div class="row">
-            <a class="anchor" name="id2"></a>
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- zaimsoon -->
             <ins class="adsbygoogle"
@@ -114,7 +113,7 @@
             <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
-                <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-10 col-md-offset-1 hidden-xs hidden-sm">
                     <h3>Как получить деньги?</h3>
                     <div class="ex-get-money">
                         <div class="row">

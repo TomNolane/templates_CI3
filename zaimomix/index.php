@@ -14,7 +14,7 @@
                     <h1><span class="ex-orange"> Максимально</span><br>
                         выгодные <span class="ex-blue">онлайн займы</span>
                     </h1>
-                    <p class="ex-text-hd">Получите срочные деньги без залога,<br>
+                    <p class="ex-text-hd hidden-xs hidden-sm">Получите срочные деньги без залога,<br>
                         проверок и потери времени</p>
                     <div class="ex-action">
                         <button class="ex-main-btn">Получить деньги</button>

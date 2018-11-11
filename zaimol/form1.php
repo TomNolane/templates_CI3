@@ -4,11 +4,11 @@
         <div class="col-lg-9 col-md-8"> 
             <div class="ex-pr">
             <h3 class="hidden-lg hidden-md text-center"><?=$sum;?> рублей</h3>
-                <div class="form-group has-feedback hidden">
+                <div class="form-group has-feedback">
                     <label class="control-label col-md-4" for="f">Фамилия</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
-                            <input type="text" value="Иванова" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию"
+                            <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
                                 data-validation-error-msg="Пожалуйста, введите свою фамилию" required>
                             <figure></figure>
@@ -27,11 +27,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group has-feedback hidden">
+                <div class="form-group has-feedback">
                     <label class="control-label col-md-4" for="o">Отчество</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
-                            <input type="text" value="Иванович" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество"
+                            <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
                                 data-validation-error-msg="Пожалуйста, введите свое отчество" required>
                             <!-- <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> -->
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group hidden">
+                <div class="form-group">
                     <label class="control-label col-md-4" for="delays_type">Кредитная история</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper ex-arrow">
@@ -132,15 +132,18 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-4 ex-agreement-check">
                         <label class="checkbox-inline">
-                            <span>Я согласен на обработку персональных данных и с публичной офертой</span>
+                            <span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span>
                             <input type="checkbox" onClick="checkMee();" id="agree" value="1" checked>
                             <i></i>
                         </label>
-                        <label class="hidden">
-                            <input type="checkbox" id="marketing" value="1" checked>
-                            <b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
-                        </label>
                     </div>
+                    <div class="col-md-8 col-md-offset-4 ex-agreement-check">
+                        <label class="checkbox-inline">
+                            <span class="font12">Я согласен на получение рекламных сообщений</span>
+                            <input type="checkbox" id="marketing" value="1" checked>
+                            <i></i>
+                        </label>
+                    </div>                    
                 </div>
                 <div class="form-group">
 
@@ -204,3 +207,15 @@
         </aside>
     </div>
 </section>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- zaimol -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="8397017235"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br><br>

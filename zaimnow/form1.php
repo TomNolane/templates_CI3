@@ -137,11 +137,14 @@
                         <input type="checkbox" id="agree" value="1" checked>
                         <i></i>
                     </label>
-                    <label class="hidden">
-                        <input type="checkbox" id="marketing" value="1" checked>
-                        <b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
-                    </label>
                 </div>
+                <div class="col-md-9 offset-md-3  ex-agreement-check">
+                    <label class="checkbox-inline">
+                        <span>Я согласен на получение рекламных сообщений</span>
+                        <input type="checkbox" id="marketing" value="1" checked>
+                        <i></i>
+                    </label>
+                </div>                
             </div>
             <div class="form-group row">
                 <div class="col-md-9 offset-md-3">

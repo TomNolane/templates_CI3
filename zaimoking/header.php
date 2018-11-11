@@ -32,3 +32,8 @@ if(!isset($description))
     }
 ?>
 <?php require 'menu.php';?>
+<?php
+if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index' && $this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') {
+    echo '<span id="adsence_about"></span>';
+}
+?>

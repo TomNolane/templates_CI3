@@ -28,12 +28,12 @@
                 </div>
             </div>
             <!-- /слайдер -->
-            <div class="row hidden">
+            <div class="row">
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="f">Фамилия</label>
                         <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию" data-sanitize="capitalize"
-                            data-validation="custom" value="Иванова" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
+                            data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
                             required>
                         <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать фамилию</p>
@@ -54,12 +54,12 @@
                     </div>
                 </div>
             </div>
-            <div class="row hidden">
+            <div class="row">
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="o">Отчество</label>
                         <input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Укажите свое отчество"
-                            data-sanitize="capitalize" value="Ивановна" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
+                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
                             required>
                         <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать отчество</p> 
@@ -152,7 +152,7 @@
                         <p class="text-muted helpblock">Пример: email@mail.ru</p>
                     </div>
                 </div>
-                <div class="col-sm-12 hidden">
+                <div class="col-sm-12">
                     <div class="form-group ex-arrow-on">
                         <label for="credit">Кредитная история</label>
                         <select class="form-control" id="credit">
@@ -174,13 +174,16 @@
         <div class="col-sm-8 col-sm-offset-2">
             <div class="col-sm-8 col-xs-12 ex-agreement-check">
                 <label class="checkbox-inline">
-                    <span>Я согласен на обработку персональных данных и с публичной офертой</span>
+                    <span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span>
                     <input type="checkbox" value="" id="agree" onclick="checkMee();" checked>
                     <i></i>
                 </label>
-                <label style="display: none">
-                    <input type="checkbox" id="marketing" value="1" checked>
-                    <b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
+            </div>    
+            <div class="col-sm-8 col-xs-12 ex-agreement-check">
+                <label class="checkbox-inline">
+                    <span class="font12">Я согласен на получение рекламных сообщений</span>
+                    <input type="checkbox" value="" id="marketing" checked>
+                    <i></i>
                 </label>
             </div>
             <div class="col-sm-4 col-xs-12">
@@ -189,3 +192,16 @@
         </div>
     </div>
 </div>
+<br><br>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- dengybistra -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="9919758561"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br><br>

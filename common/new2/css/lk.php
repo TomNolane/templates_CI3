@@ -97,7 +97,6 @@ figure.hh1:hover {
     margin: 0 auto !important;
 } 
 .fa-star {
-    visibility: hidden;
 }
 .row {
     <?php if($site == "zaimol") {?>

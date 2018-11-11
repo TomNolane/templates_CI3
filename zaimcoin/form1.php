@@ -24,12 +24,12 @@
         </div>
     </div>
     <div class="form-horizontal">
-        <div class="form-group has-feedback hidden">
+        <div class="form-group has-feedback">
             <label class="control-label col-md-2" for="f">Фамилия</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию"
-			        data-sanitize="capitalize" value="Иванова" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свою фамилию"
+			        data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свою фамилию"
                     required>
                     <figure></figure>
 			        <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -47,12 +47,12 @@
                 </div>
             </div>
         </div>
-        <div class="form-group has-feedback hidden">
+        <div class="form-group has-feedback">
             <label class="control-label col-md-2" for="o">Отчество</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество"
-                    data-sanitize="capitalize" value="Иванович" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое отчество"
+                    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое отчество"
                     required>
                     <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
@@ -128,10 +128,11 @@
                     <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Пожалуйста, введите свой email адрес" placeholder="Email"
                     title="Email" data-validation="email"  data-validation-error-msg="Пожалуйста, введите свой email" required>
                     <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                    <p class="help-block2"></p>
                 </div>
             </div>
         </div>
-        <div class="form-group hidden">
+        <div class="form-group">
             <label class="control-label col-md-2" for="delays_type">Кредитная история</label>
             <div class="col-md-8">
                 <select class="form-control ec" name="delays_type" id="delays_type">
@@ -147,15 +148,18 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 ex-agreement-check">
                 <label class="checkbox-inline">
-                    <span>Я согласен на обработку персональных данных и с публичной офертой</span>
+                    <span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span>
                     <input type="checkbox" onClick="checkMee();" id="agree" value="1" checked>
                     <i></i>
                 </label>
-                <label id="display-none">
-                    <input type="checkbox" id="marketing" value="1" checked>
-                    <b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
-                </label>
             </div>
+            <div class="col-md-8 col-md-offset-2 ex-agreement-check">
+                <label class="checkbox-inline">
+                    <span class="font12">Я согласен на получение рекламных сообщений</span>
+                    <input type="checkbox" id="marketing" value="1" checked>
+                    <i></i>
+                </label>
+            </div>            
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-right"> 

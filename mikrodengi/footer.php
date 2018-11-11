@@ -2,16 +2,19 @@
 if($this->uri->segment(1) != 'form')
 {
     require 'googlesyndication.php';
-    echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Mikrodengi -->
+    echo '
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Микроденьги -->
     <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-2169296404508755"
-    data-ad-slot="2651789746"
-    data-ad-format="auto"></ins>
+         style="display:block"
+         data-ad-client="ca-pub-4970738258373085"
+         data-ad-slot="4467713186"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>';
+    </script>
+    ';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 } 
 ?>

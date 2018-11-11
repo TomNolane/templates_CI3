@@ -29,11 +29,11 @@
 </div>
 <input type="hidden" id="period" name="period" value="<?=$period;?>" />
 <br>
-<div class="form-group has-feedback hidden"> 
+<div class="form-group has-feedback"> 
 	<label class="col-sm-4 control-label label-required hidden-xs" for="f">Фамилия</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию"
-			    data-sanitize="capitalize" value="Иванова" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
+			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
 			    required>
 			<span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2">Нужно указать фамилию</p>
@@ -52,11 +52,11 @@
 	 
 	</div>
 </div>
-<div class="form-group has-feedback hidden">
+<div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs"  for="o">Отчество</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="text" class="form-control ec tip" name="o" id="o" placeholder="Отчество" title="Укажите свое отчество"
-			    data-sanitize="capitalize" value="Ивановна" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
+			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
 			    required>
 			<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2">Нужно указать отчество</p> 
@@ -143,7 +143,7 @@
 		<p class="text-muted helpblock">Пример: email@mail.ru</p>
 	</div>
 </div>
-<div class="form-group hidden">
+<div class="form-group">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="credit">Кредитная история</label>
 	<div class="col-sm-8 col-xs-12">
 		<select class="form-control" id="credit">
@@ -162,20 +162,22 @@
 	<div class="col-sm-8 col-xs-12">
 		<label>
 			<input type="checkbox" id="agree" onclick="checkMee()"value="1" checked>
-			<b>Я согласен на обработку персональных данных и с
+			<b class="font12">Я согласен на обработку персональных данных и с
 				<a href="#" data-toggle="modal" data-target="#tosModal">публичной офертой</a>
 			</b>
 		</label>
 	</div>
-	<label class="hidden">
-		<input type="checkbox" id="marketing" value="1" checked>
-		<b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
-	</label>
-
+	<label class="col-sm-4 control-label"></label>
+	<div class="col-sm-8 col-xs-12">
+		<label>
+			<input type="checkbox" id="marketing" value="1" checked>
+			<b class="font12">Я согласен на получение рекламных сообщений</b>
+		</label>
+	</div>
 </div>
 <div class="clearfix"></div>
 <div class="col-sm-7 col-sm-offset-4 col-xs-12">
 <div class="shadow">
 <a class="btn btn-ok btn-block" id="next1">Отправить заявку</a>
 </div>
-</div> 
+</div>

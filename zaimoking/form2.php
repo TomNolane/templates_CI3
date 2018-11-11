@@ -1,7 +1,23 @@
 <section class="ex-main-form">
     <div class="row">
         <div class="col-md-9">
-            
+             <div class="form-group has-feedback">
+                <label class="control-label col-md-4" for="passport">Серия и номер паспорта
+                </label>
+                <div class="col-md-8">
+                    <div class="ex-wrapper">
+                        <input type="tel" class="form-control ec tip" value="4510 123456" id="passport" name="passport" placeholder="Серия и номер паспорта" title="Введите серию и номер паспорта"
+                            data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Введите номер и серию паспорта"
+                            required>
+                            <div><p class="help-block2">Укажите номер и серию паспорта</p>
+                            <p class="text-muted text-right">Пример: 4510 123456</p></div>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" class="form-control ec" id="passport-s" name="passport_s" title="Серия паспорта" data-validation="number"
+                data-validation-allowing="range[1;9999]" data-validation-error-msg="Введите серию паспорта">
+            <input type="hidden" class="form-control ec" id="passport-n" name="passport_n" title="Номер паспорта" data-validation="number"
+                data-validation-allowing="range[1;999999]" data-validation-error-msg="Введите номер паспорта">
             <div class="form-group hidden">
                 <div class="col-sm-2">
                     <label class="col-sm-4 control-label label-required" for="passport_dd">Дата выдачи*</label>

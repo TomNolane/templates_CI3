@@ -89,11 +89,11 @@
                 </div>
             </div>
             <!-- Скрываем старую форму даты рождения -->
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback hidden">
                 <label class="control-label col-md-4" for="birthdate">Дата рождения</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения"
+                        <input type="text" class="form-control ec tip" value="06/02/2000" id="birthdate" name="birthdate" placeholder="Дата рождения"
                             title="Выберете свою дату рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$"
                             data-validation-error-msg="Выберите дату рождения" required>
                         <div><p class="help-block2"></p>
@@ -114,35 +114,18 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback hidden">
+            <div class="form-group has-feedback">
                 <label class="control-label col-md-4" for="email">Email</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
-                        <input type="email" class="form-control ec tip special_form" name="email" id="email" 
-                            value='df@mail.ru'>
+                        <input type="email" class="form-control ec tip special_form" name="email" id="email" placeholder="Электронная почта" >
                         <div><p class="help-block2"></p>
                         <p class="text-muted text-right">Пример: email@mail.ru</p></div>
                     </div>
                 </div>
             </div>
+           
             <div class="form-group has-feedback">
-                <label class="control-label col-md-4" for="passport">Серия и номер паспорта
-                </label>
-                <div class="col-md-8">
-                    <div class="ex-wrapper">
-                        <input type="tel" class="form-control ec tip" id="passport" name="passport" placeholder="Серия и номер паспорта" title="Введите серию и номер паспорта"
-                            data-validation="custom" data-validation-regexp="^([0-9]{4}\s[0-9]{6})+$" data-validation-error-msg="Введите номер и серию паспорта"
-                            required>
-                            <div><p class="help-block2">Укажите номер и серию паспорта</p>
-                            <p class="text-muted text-right">Пример: 4510 123456</p></div>
-                    </div>
-                </div>
-            </div>
-            <input type="hidden" class="form-control ec" id="passport-s" name="passport_s" title="Серия паспорта" data-validation="number"
-                data-validation-allowing="range[1;9999]" data-validation-error-msg="Введите серию паспорта">
-            <input type="hidden" class="form-control ec" id="passport-n" name="passport_n" title="Номер паспорта" data-validation="number"
-                data-validation-allowing="range[1;999999]" data-validation-error-msg="Введите номер паспорта">
-            <div class="form-group has-feedback hidden">
                 <label class="control-label col-md-4" for="delays_type">Кредитная история</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper ex-arrow">
@@ -160,15 +143,18 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-4 ex-agreement-check">
                     <label class="checkbox-inline">
-                        <span>Я согласен на обработку персональных данных и с публичной офертой</span>
+                        <span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span>
                         <input type="checkbox" id="agree" value="1" checked>
                         <i></i>
                     </label>
-                    <label class="hidden">
-                        <input type="checkbox" id="marketing" value="1" checked>
-                        <b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
-                    </label>
                 </div>
+                <div class="col-md-8 col-md-offset-4 ex-agreement-check">
+                    <label class="checkbox-inline">
+                        <span class="font12">Я согласен на получение рекламных сообщений</span>
+                        <input type="checkbox" id="marketing" value="1" checked>
+                        <i></i>
+                    </label>
+                </div>                
             </div>
             <div class="form-group has-feedback">
                 <div class="col-md-8 col-md-offset-4">
@@ -180,3 +166,15 @@
         </div>
     </div>
 </section>
+<br>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- zaimoking -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="7850222323"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>

@@ -28,14 +28,22 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156936666" alt="mypixel">';
 }
 ?>
+<style>
+.black {
+    color: #000;
+    font-size: 12px;
+}
+</style>
 <footer>
 <div class="container">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-12"> 
+           
             <?php if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+             <div class="col-md-3 col-sm-3 hidden-xs"> 
                 <img src="/templates/dengimo/assets/img/logo.png" class="logo logo-spec" alt="logo-footer.png">
             <?php } else { ?>
+             <div class="col-md-3 col-sm-3 col-xs-12"> 
                 <img src="/templates/dengimo/assets/img/logo-footer.png" class="logo logo-spec" alt="logo-footer.png">
             <?php } ?>
             </div>
@@ -74,16 +82,16 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                 <div id="yandex_rtb_R-A-232716-7"></div>
                 <!-- Yandex.RTB R-A-232716-8 desktop -->
                 <div id="yandex_rtb_R-A-232716-8"></div>
+                <hr/>
+                <div class="col-sm-12">
+                    <p class="black">
+                        Сервис по подбору выгодных онлайн займов находящийся по адресу:
+                    Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 email: support@dengimo.ru <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+                    </p>
+                </div>
                 <?php } ?>
                 <hr/>
-                <?php if ($this->uri->segment(1) != 'lk' &&  $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-                <ul class="list-inline text-center">
-                    <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li><a class="fonts12" href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-                </ul>
+                <?php if ($this->uri->segment(1) != 'lk' &&  $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?> 
                  <?php } ?>
             </div>
         </div>
@@ -100,7 +108,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
     echo 'try{';
     require 'footer_common_js.php';
     echo '/* private JS */';
-    require 'templates/zaimhome/assets/js/main.js'; 
+    require 'templates/dengimo/assets/js/main.js'; 
 
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
     var amount = 20000;
@@ -384,18 +392,18 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
 
             updateComm();
         }, 50); 
-        traffic("zaimhome.ru",0);
+        traffic("dengimo.ru",0);
 <?php }
 }
 elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {
     include "templates/common/new2/js/lk.js";      
-    echo 'traffic("zaimhome.ru",4);'; 
+    echo 'traffic("dengimo.ru",4);'; 
 
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic("zaimhome.ru",9);'; 
+    echo 'traffic("dengimo.ru",9);'; 
 }
 else if($this->uri->segment(1) == 'form')
 { } 

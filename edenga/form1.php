@@ -26,11 +26,11 @@
 </div>
 <input type="hidden" class="form-control" id="p" name="period" value=" <?=$period;?>"/>
 <br>
-<div class="form-group has-feedback hidden">
+<div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="f">Фамилия *</label>
 	<div class="col-sm-8 col-xs-12">
         <div class="shadow">
-            <input type="text" class="form-control ec" value="Иванова" name="f" id="f" placeholder="Фамилия" title="Фамилия" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
+            <input type="text" class="form-control ec" name="f" id="f" placeholder="Фамилия" title="Фамилия" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
             <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <p class="help-block2">Нужно указать фамилию</p>
             <p class="text-muted helpblock">Пример: Иванова</p>
@@ -48,11 +48,11 @@
             </div>
         </div>
 </div>
-<div class="form-group has-feedback hidden">
+<div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="o">Отчество *</label>
 	<div class="col-sm-8 col-xs-12">
             <div class="shadow">
-                <input type="text" class="form-control ec" value="Иванович" name="o" id="o" placeholder="Отчество" title="Отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество" required>
+                <input type="text" class="form-control ec" name="o" id="o" placeholder="Отчество" title="Отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество" required>
                 <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 <p class="help-block2">Нужно указать отчество</p> 
                 <p class="text-muted helpblock">Пример: Ивановна</p>
@@ -91,7 +91,7 @@
         </div>
     </div>
 </div>
-<div class="form-group has-feedback hidden">
+<div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="delays_type">Кредитная история</label>
 	<div class="col-sm-8 col-xs-12">
 		<select class="form-control ec" name="delays_type" id="delays_type">
@@ -111,15 +111,28 @@
 		<div class="checkbox checkbox-primary">
 			<input class="styled" type="checkbox" onClick="checkMee();" id="agree" value="1" checked>
 			<label for="agree">
-				<b>Я согласен на обработку персональных данных и с <a href="#" data-toggle="modal" data-target="#tosModal">публичной офертой</a></b>
+				<b class="font12">Я согласен на обработку персональных данных и с <a href="#" data-toggle="modal" data-target="#tosModal">публичной офертой</a></b>
 			</label>
 		</div>
-        <div class="checkbox checkbox-primary hidden">
-            <input class="styled" type="checkbox" id="marketing" value="1" checked>
-            <label for="marketing">
-                <b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
-            </label>
-        </div>
-	</div>
+    </div>
+	<label class="col-sm-4 control-label"></label>
+	<div class="col-sm-8 col-xs-12">
+		<div class="checkbox checkbox-primary">
+			<input class="styled" type="checkbox" id="marketing" value="1" checked>
+			<label for="marketing">
+				<b class="font12">Я согласен на получение рекламных сообщений</b>
+			</label>
+		</div>
+    </div>
 </div>
+<br>
+
+  <div class="form-group has-feedback">
+    <div class="col-sm-4"><img src="<?php echo $_SESSION['captcha']['image_src'] ?>"/></div>
+	<div class="col-sm-8 col-xs-12">
+        <br>
+        <input type="text" class="form-control ec" name="ahctpac" id="ahctpac" placeholder="Введите текст с картинки" required>
+        <p class="help-block2">Введите правильно текст с картинки</p> 
+    </div>
+</div> 
 <div class="clearfix"></div>

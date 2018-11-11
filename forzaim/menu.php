@@ -1,10 +1,9 @@
-<a class="anchor" name="id1"></a>
 <aside class="ex-aside-menu">
     <div>
         <i class="ex-close-menu"></i>
     </div>
     <main>
-        <a href="/form"><button class="ex-main-btn" type="button">Получить деньги</button></a>
+        <a href="/form"><input class="ex-main-btn" type="button" value="Получить деньги"/></a>
         <button class="ex-main-btn ex-ask-question" data-toggle="modal" data-target="#askQuestion">Задать вопрос</button> 
         <!-- <button class="ex-main-btn ex-ask-question" type="button">Задать вопрос</button> -->
         <ul>

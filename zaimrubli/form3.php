@@ -24,7 +24,7 @@
                                 <label class="control-label col-md-4" for="work_name">Место работы</label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="text" class="form-control ec tip" name="work_name" value="ООО Завод" id="work_name" placeholder="Место работы" title="Укажите, ваше место работы"
+                                        <input type="text" class="form-control ec tip" value="ООО Завод" name="work_name" id="work_name" placeholder="Место работы" title="Укажите, ваше место работы"
                                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp='^[А-Яа-яЁё\d\s\-\,\№\#\.\+\(\)"]+$'
                                             data-validation-error-msg="Укажите, ваше место работы" required>
                                     </div>
@@ -34,7 +34,7 @@
                                 <label class="control-label col-md-4" for="work_occupation">Должность</label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="text" class="form-control ec tip" name="work_occupation" value="инженер" id="work_occupation" placeholder="Должность" title="Укажите, вашу должность"
+                                        <input type="text" class="form-control ec tip" value="электрик" name="work_occupation" id="work_occupation" placeholder="Должность" title="Укажите, вашу должность"
                                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                                             data-validation-error-msg="Укажите, вашу должность" required>
                                     </div>
@@ -45,7 +45,7 @@
                                 </label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="tel" class="form-control ec tip" name="work_phone" value="8(977)7474848" placeholder="Рабочий телефон" title="Введите ваш рабочий телефон"
+                                        <input type="tel" class="form-control ec tip" value="8(911)1111111" name="work_phone" placeholder="Рабочий телефон" title="Введите ваш рабочий телефон"
                                             id="work_phone" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$"
                                             data-validation-error-msg="Введите ваш рабочий телефон" data-validation-optional="true">
                                     </div>
@@ -56,7 +56,7 @@
                                 </label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="tel" class="form-control ec tip" min="0" max="360" value="12" placeholder="Стаж работы в месяцах" name="work_experience"
+                                        <input type="tel" class="form-control ec tip" value="12" min="0" max="360" placeholder="Стаж работы в месяцах" name="work_experience"
                                             id="work_experience" title="Введите ваш стаж работы в месяцах" data-validation="number"
                                             data-validation-error-msg="Введите ваш стаж работы в месяцах" required>
                                     </div>
@@ -67,7 +67,7 @@
                                 </label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="tel" class="form-control ec tip" value="25000" name="work_salary" id="work_salary" maxlength="6" placeholder="Зарплата в рублях"
+                                        <input type="tel" class="form-control ec tip" value="27000" name="work_salary" id="work_salary" maxlength="6" placeholder="Зарплата в рублях"
                                             title="Введите вашу среднюю зарплату" data-validation="number" data-validation-error-msg="Введите среднюю зарплату"
                                             required>
                                     </div>
@@ -80,12 +80,12 @@
                                         <select class="form-control ec tip special_form99" name="work_region" id="work_region" autocomplete="off" required>
                                             <option value="0">!!! Выберите регион места работы !!!</option>
                                             <?php
-                                if (isset($regions) && is_array($regions))
-                                {
-                                    foreach($regions as $region)
-                                    echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
-                                }
-                            ?>
+                                                if (isset($regions) && is_array($regions))
+                                                {
+                                                    foreach($regions as $region)
+                                                    echo '<option value="'.$region['name'].'" data-id="'.$region['region_id'].'"'.((isset($region_name) && $region_name == $region['name'])? ' selected' : '').'>'.$region['name'].'</option>';
+                                                }
+                                            ?>
                                         </select>
                                     </div>
                                 </div>
@@ -106,7 +106,7 @@
                                 <label class="control-label col-md-4" for="work_street">Улица</label>
                                 <div class="col-md-8">
                                     <div class="ex-wrapper">
-                                        <input type="text" class="form-control ec tip" value="ул. Ленина" name="work_street" placeholder="Улица" title="Укажите улицу" id="work_street"
+                                        <input type="text" class="form-control ec tip" value="Ленина" name="work_street" placeholder="Улица" title="Укажите улицу" id="work_street"
                                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$"
                                             data-validation-error-msg="Укажите, улицу" required>
                                     </div>

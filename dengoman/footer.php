@@ -31,16 +31,21 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="//top-fwz1.mail.ru/tracker?id=3052545;e=RG%3A/trg-pixel-2721105-1534147134779" alt="mypixel">';
 }
 ?>
+<style>
+.black {
+    font-size: 12px;
+}
+</style>
 <footer>
     <div class="container">
         <div class="col-md-12 ">
-            <div class="row">
-                <div class="col-md-3">
+            <div class="row"> 
+                <div class="col-md-3 hidden-xs">
                     <h1 class="logo-spec" id="for_lk">
                         <img alt="logo.png" src="/templates/dengoman/assets/img/logo.png">
                     </h1>
                     <div class="footer-copyright"></div>
-                </div>
+                </div> 
                 <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
                 <div class="col-md-3 hidden-xs hidden-sm" >
                     <div class="footer-text spec_footer4" style="font-size: 12px; line-height: 1;">
@@ -76,16 +81,17 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                 <div id="yandex_rtb_R-A-243980-1"></div>
                 <!-- Yandex.RTB R-A-243980-3 mobile -->
                 <div id="yandex_rtb_R-A-243980-3"></div>
+                <hr/>
+                <div class="col-sm-12">
+                    <p class="black">
+                        Сервис по подбору выгодных онлайн займов находящийся по адресу:
+                    Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 email: support@dengoman.ru <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+                    </p>
+                </div>
             <?php } ?>
              <hr/>
               <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) == 'lk2' && $this->uri->segment(1) == 'lk3' && $this->uri->segment(1) == 'form') { ?>
-            <ul class="list-inline text-center">
-                <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                <li><a class="fonts12" href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                <li><a class="fonts12" href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-            </ul>
+
              <?php } ?>
         </div>
     </div>

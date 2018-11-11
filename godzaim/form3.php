@@ -1,5 +1,5 @@
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Вид трудоустройства</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="work">Вид трудоустройства</label>
 	<div class="col-sm-8">
 		<div class="shadow"><select class="form-control ec" id="work" name="work" required>
 				<option value="ШТАТНЫЙ СОТРУДНИК">Штатный сотрудник</option>
@@ -12,7 +12,7 @@
 </div>
  
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Место работы</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="work_name">Место работы</label>
 	<div class="col-sm-8">
             <div class="shadow">
                 <input type="text" class="form-control ec tip" name="work_name" id="work_name" placeholder="Место работы" title="Пожалуйста, укажите, ваше место работы" data-sanitize="capitalize"  data-validation="custom" data-validation-regexp='^[А-Яа-яЁё\d\s\-\,\№\#\.\+\(\)"]+$' data-validation-error-msg="Пожалуйста, укажите, ваше место работы" required>
@@ -23,7 +23,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Должность</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="work_occupation">Должность</label>
 	<div class="col-sm-8">
             <div class="shadow">
                 <input type="text" class="form-control ec tip" name="work_occupation" id="work_occupation" placeholder="Должность" title="Пожалуйста, укажите, вашу должность" data-sanitize="capitalize"  data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Пожалуйста, укажите, вашу должность" required>
@@ -33,7 +33,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label">Рабочий телефон</label>
+	<label class="col-sm-4 control-label" for="work_phone">Рабочий телефон</label>
 	<div class="col-sm-8"><div class="shadow">
                 <input type="tel" class="form-control ec tip" name="work_phone" placeholder="Рабочий телефон" title="Пожалуйста, введите ваш рабочий телефон" id="work_phone" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Пожалуйста, введите ваш рабочий телефон" data-validation-optional="true">
                 <span id="work_phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -42,7 +42,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Стаж работы <br class="hidden-xs">(в месяцах)</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="work_experience">Стаж работы <br class="hidden-xs">(в месяцах)</label>
 	<div class="col-sm-8">
             <div class="shadow">
                 <input type="tel" class="form-control ec tip" min="0" max="360" name="work_experience" id="work_experience" placeholder="Стаж работы (в месяцах)" title="Пожалуйста, введите ваш стаж работы в месяцах" data-validation="number" data-validation-error-msg="Пожалуйста, введите ваш стаж работы в месяцах" required>
@@ -52,7 +52,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Зарплата <br class="hidden-xs">(в рублях)</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="work_salary">Зарплата <br class="hidden-xs">(в рублях)</label>
 	<div class="col-sm-8">
             <div class="shadow">
                 <input type="tel" maxlength="6" class="form-control ec tip" name="work_salary" id="work_salary" placeholder="Зарплата (в рублях)" title="Пожалуйста, введите вашу среднюю зарплату"  data-validation="number" data-validation-error-msg="Пожалуйста, введите среднюю зарплату" required>
@@ -66,7 +66,7 @@
 <div class="clearfix">&nbsp;</div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Регион</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="work_region">Регион</label>
 	<div class="col-sm-8">
 		<div class="shadow"><select class="form-control ec tip" name="work_region" id="work_region" autocomplete="off" required>
 		<option value="0">-- Выберите регион --</option>
@@ -82,7 +82,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Населённый пункт</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="work_city">Населённый пункт</label>
 	<div class="col-sm-8">
 		<div class="shadow">
                     <input type="text" class="form-control ec tip" name="work_city" placeholder="Населённый пункт" title="Пожалуйста, укажите населенный пункт" id="work_city" value="<?php echo isset($city_name)? $city_name : ''; ?>" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, населенный пункт" required>
@@ -92,7 +92,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Улица</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="work_street">Улица</label>
 	<div class="col-sm-8">
             <div class="shadow">
                 <input type="text" class="form-control ec tip" name="work_street" placeholder="Улица" title="Пожалуйста, укажите улицу" id="work_street" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\d\s\-\,\#\.\+\(\)]+$" data-validation-error-msg="Пожалуйста, укажите, улицу" required>
@@ -102,7 +102,7 @@
 </div>
 
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs">Номер дома</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="work_house">Номер дома</label>
 	<div class="col-sm-8">
             <div class="shadow">
                 <input type="text" class="form-control ec tip" name="work_house" placeholder="Номер дома" title="Пожалуйста, укажите номер дома" id="work_house"  data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, номер дома" required>
@@ -111,18 +111,8 @@
         </div>
 </div>
 
-<div class="form-group has-feedback" style="display:none;">
-	<label class="col-sm-4 control-label">Строение (корпус)</label>
-	<div class="col-sm-8">
-            <div class="shadow">
-                <input type="text" class="form-control ec tip" name="work_building" placeholder="Строение (корпус)" title="Пожалуйста, укажите номер строения или корпуса" id="work_building"  data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, строение (корпус)" data-validation-optional="true">
-                <span id="work_buildingstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-            </div>
-        </div>
-</div>
-
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label hidden-xs">Офис</label>
+	<label class="col-sm-4 control-label hidden-xs" for="work_office">Офис</label>
 	<div class="col-sm-8">
             <div class="shadow">
                 <input type="text" class="form-control ec tip" name="work_office" placeholder="Офис" title="Пожалуйста, укажите номер офиса" id="work_office" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё0-9\-\.\(\)\s]+$" data-validation-error-msg="Пожалуйста, укажите, номер офиса" data-validation-optional="true">

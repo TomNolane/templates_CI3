@@ -5,6 +5,7 @@
         <a class="ex-brand" href="/">Forzaim</a>
     </div>
 </nav>
+<span id="adsence_about"></span>
 <main class="ex-document-3">
 <div class="container">
     <h2>Правила предоставления займов</h2>

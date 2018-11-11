@@ -1,8 +1,9 @@
 <?php require 'header.php';?>
 <main>
     <div class="ex-faq">
-        <div class="container">
+        <div class="container"> 
             <div class="row">
+                <span id="adsence_about"></span>
                 <div class="col-md-10 col-md-offset-1">
                     <h1>Zaimcoin - скорая финансовая помощь</h1>
                     <p>Zaimcoin – автоматический сервис для подбора вариантов онлайн микрозаймов. Оперативный, надежный

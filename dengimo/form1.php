@@ -26,12 +26,13 @@
 		</div>
 	</div>
 </div>
-<div class="form-group has-feedback hidden">
+<br><br>
+<div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="f">Фамилия</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow">
 			<input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
-			    data-sanitize="capitalize" data-validation="custom" value="Иванова" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
+			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
 			    autofocus required>
 			<span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2">Нужно указать фамилию</p>
@@ -53,12 +54,12 @@
 		</div>
 	</div>
 </div>
-<div class="form-group has-feedback hidden">
+<div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="o">Отчество</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow">
 			<input type="text" class="form-control ec tip" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
-			    data-sanitize="capitalize" data-validation="custom" value="Ивановна" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
+			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
 			    required>
 			<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2">Нужно указать отчество</p> 
@@ -154,7 +155,7 @@
 	</div>
 </div> 
 
-<div class="form-group hidden">
+<div class="form-group">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="delays_type">Кредитная история</label>
 	<div class="col-sm-8 col-xs-12">
 		<select size="1" class="form-control ec" name="delays_type" id="delays_type">
@@ -173,16 +174,14 @@
 	<div class="col-sm-8 col-xs-12">
 		<label>
 			<input type="checkbox" id="agree" onclick="checkMee()" value="1" checked>
-			<b>Я согласен на обработку персональных данных и с
+			<b class="font12">Я согласен на обработку персональных данных и с
 				<a href="#" data-toggle="modal" data-target="#tosModal">публичной офертой</a>
 			</b>
 		</label>
+            <label>
+                    <input type="checkbox" id="marketing" value="1" checked>
+                    <b class="font12">Я согласен на получение рекламных сообщений</b>
+            </label>            
 	</div>
-	<label style="display: none">
-		<input type="checkbox" id="marketing" value="1" checked>
-		<b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
-	</label>
-
 </div>
-
 <div class="clearfix"></div>

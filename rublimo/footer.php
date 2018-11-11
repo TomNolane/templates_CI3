@@ -29,8 +29,13 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
 <footer>
     <div class="container">
         <div class="row">
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
             <div class="col-md-2 col-xs-12"> 
+            <?php } else { ?>
+             <div class="col-md-2 hidden-xs"> 
+             <?php }  ?>
                 <img src="/templates/rublimo/assets/img/logo-footer.png" alt="logo" class="logo">
+           
             </div>
             <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
             <div class="col-md-4 col-xs-12 spec_footer4">
@@ -72,13 +77,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                     <div id="yandex_rtb_R-A-244327-2"></div><hr/>';
                 } ?>
                 <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-                    <ul class="list-inline text-center">
-                        <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                        <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                        <li><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                        <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                        <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-                    </ul>
+
                 <?php } ?>
             </div>
         </div>
@@ -442,14 +441,14 @@ require 'templates/common/new2/js/exeption.js';
         echo '<!-- Google Code for  
         &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080;  
         (&#1073;&#1077;&#1079; &#1044;&#1086;&#1080;) Conversion Page -->
-        <script type="text/javascript">
+        <script>
         /* <![CDATA[ */
         var google_conversion_id = 832752826;
         var google_conversion_label = "rzldCPv3u3gQupmLjQM";
         var google_remarketing_only = false;
         /* ]]> */
         </script>
-        <script type="text/javascript"  
+        <script  
         src="//www.googleadservices.com/pagead/conversion.js">
         </script>
         <noscript>
@@ -461,7 +460,7 @@ require 'templates/common/new2/js/exeption.js';
     }
 ?>
 <!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
+<script>
 var _tmr = window._tmr || (window._tmr = []);
 _tmr.push({id: "3052549", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
 (function (d, w, id) {
@@ -476,7 +475,7 @@ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, fal
 </div></noscript>
 <!-- //Rating@Mail.ru counter -->
 <!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script type="text/javascript">
+<script>
 var _tmr = _tmr || [];
 _tmr.push({
 type: 'itemView',

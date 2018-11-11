@@ -68,7 +68,7 @@ require 'header.php';
             </div>
         </div>
     </div>
-    <br><br><br><br><br>
+    <div class="hidden-xs hidden-sm"><br><br><br><br><br></div>
     <a class="anchor" name="id2"></a>
     <h2 class="text-center ex-money-receive-title">Как получить деньги</h2><hr/>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -82,7 +82,7 @@ require 'header.php';
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-    <div id="ex-how-receive" class="row">
+    <div id="ex-how-receive" class="row hidden-xs hidden-sm">
         <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
             <div>
                 <a href="#" onClick="goToUp(); return false;" style="text-decoration: none;">

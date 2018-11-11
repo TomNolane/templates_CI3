@@ -130,18 +130,21 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row">                
                 <div class="col-md-8 col-md-offset-4 ex-agreement-check">
                     <label class="checkbox-inline">
                         <span> Я согласен на <a href="https://mikrodengi.su/soglasie" target="_blank">обработку персональных данных</a> и с <a href="https://mikrodengi.su/oferta" target="_blank">публичной офертой</a></span>
                         <input type="checkbox" id="agree" value="0" >
                         <i></i>
                     </label>
-                    <label class="hidden">
-                        <input type="checkbox" id="marketing" value="1" checked>
-                        <b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
-                    </label>
                 </div>
+                <div class="col-md-8 col-md-offset-4">
+                    <label class="checkbox-inline">
+                        <span> Я согласен на получение рекламных сообщений</span>
+                        <input type="checkbox" id="marketing" value="1" >
+                        <i></i>
+                    </label>
+                </div>                
             </div>
             <div class="form-group has-feedback">
                 <div class="col-md-8 col-md-offset-4">

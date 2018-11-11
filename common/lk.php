@@ -12,7 +12,7 @@
     
     (isset($_GET['loan']) && $_GET['loan']) ? $loan = 0 : $loan = 0;
     
-    $data = $this->offers->all(4, 0);
+    $data = $this->offers->all(6, 0);
     
     // IP
     $this->load->helper('ip');
@@ -35,7 +35,7 @@
     $base_url = str_replace("http:","",$base_url);
     $pixel = $this->pixel->stat($base_url);
 	echo '<style>';
-	require 'new2/css/lk.php';
+	require 'new2/css/lk2.php';
 	echo '</style>';
 ?> 
 <style>
@@ -44,10 +44,88 @@ ins, .adsbygoogle{
     max-height: none !important;
     height: none !important;
 }
+.gold {
+    background-color: gold;
+    border-radius: 15px;
+    color: #000;
+    padding: 10px;
+    
+}
+.green {
+    background-color: green;
+    border-radius: 15px;
+    color: #fff;
+    padding: 10px;
+    
+}
+.yellow {
+    background-color: yellow;
+    border-radius: 15px;
+    color: #000;
+    padding: 10px;
+    
+}
+.blue {
+    background-color: blue;
+    border-radius: 15px;
+    color: #fff;
+    padding: 10px;
+    
+} 
+.empty {
+    background-color: transparent;
+    border-radius: 15px;
+    color: #fff !important;
+    padding: 10px;
+    
+}
+figure.hh1 {
+    border: 0 solid #FFDD2D;
+	border: none !important;
+}
+tr>td:first-child {
+    font-size: 16px;
+}
+@media (max-width: 450px) {
+    <?php if ( $site == 'dengomir' ) { ?>
+    table {
+        height: 0;
+    }
+    <?php } ?>
+    .font08 {
+        font-size: .8em;
+    }
+	.wordwrap{
+		font-size: 0.9em;
+	}
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+        padding: 4px;
+    }
+    figure.hh1 {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
+    .ex-main-btn {
+        font-size: .9em;
+        margin-top: 0;
+    }
+    tr>td:first-child {
+        font-size: 12px;
+    }
+    .col-xs-6 {
+        padding-right: 5px !important;
+        padding-left: 5px !important;
+    }
+    .gold, .empty, .blue, .yellow, .green {
+        font-size: 11px !important;
+    }
+}
 </style>
 
 <?php if( $site == 'forzaim') { ?>
-<nav class="ex-main-header ex-transparent">
+<nav class="ex-main-header ex-transparent hidden-xs">
     <div class="container">
         <i class="ex-hamburger"></i>
         <a class="ex-brand" href="/">Forzaim</a>
@@ -73,12 +151,10 @@ ins, .adsbygoogle{
         $_plural_days = array('дня', 'дня', 'дней');
         $_plural_times = array('раз', 'раза', 'раз');
         $temp = 0;
-        echo '<div class="row"><div class="col-md-12">';
+        echo '<div class="row"><div class="col-md-10 col-xs-12 col-md-offset-1">';
 
         foreach($data as $item)
         {
-            
-
             $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
             $item['link'] = str_replace("#site1", ucfirst($domen), $item['link']);
             $item['link'] = str_replace("#site", $domen, $item['link']);
@@ -91,17 +167,86 @@ ins, .adsbygoogle{
             }            
             if ( $domen == 'dengibystra.ru' ){
                 $item['link'] = str_replace("https://kviku.ru/cards/?promo=nb&utm_source=bzaim5", 'https://kviku.ru/cards/?promo=nb&utm_source=dengibystra', $item['link']);
-            }            
-            
-            if(strpos($item['link'], "aff_sub1=") == true) $item['link'] = str_replace("aff_sub1=".ucfirst($domen), "aff_sub1=".$domen."&aff_sub2=".$this->input->get('keyword', TRUE)."&aff_sub3=".$this->input->get('campaign_id', TRUE)."&aff_sub4=".$this->input->get('utm_source', TRUE), $item['link']);
-            if(strpos($item['link'], "aff_sub1=") == true && strpos($item['link'],"aff_sub3=") == false) $item['link'] = str_replace("aff_sub1=".$domen, "aff_sub1=".$domen."&aff_sub2=".$this->input->get('keyword', TRUE)."&aff_sub3=".$this->input->get('campaign_id', TRUE)."&aff_sub4=".$this->input->get('utm_source', TRUE), $item['link']);
-            else if(strpos($item['link'], "aff_sub=") == true) $item['link'] = str_replace( "aff_sub=bzaim5.ru" , "aff_sub=bzaim5.ru&aff_sub2=".$domen."&aff_sub3=".$this->input->get('keyword', TRUE)."&aff_sub4=".$this->input->get('campaign_id', TRUE)."&aff_sub5=".$this->input->get('utm_source', TRUE) , $item['link']);
+            }
+ 
+			if(strpos($item['link'], "aff_sub1=") == true)
+            {
+                $item['link'] = str_replace( "aff_sub1=#site1", $domen, $item['link']);
+                $item['link'] = str_replace( "aff_sub1=#site", $domen, $item['link']);
 
+                if(trim($this->input->get('utm_source', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub2='.$this->input->get('utm_source', TRUE);
+                else
+                    $item['link'] = $item['link'].'&aff_sub2='.$domen;
+
+                if(trim($this->input->get('utm_campaign', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
+                else if(trim($this->input->get('campaign_id', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
+                else
+                    $item['link'] = $item['link'].'&aff_sub3='.$domen;
+
+                if(trim($this->input->get('utm_term', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
+                else if(trim($this->input->get('keyword', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
+                else
+                    $item['link'] = $item['link'].'&aff_sub4='.$domen;
+            }
+            else if (strpos($item['link'], "aff_sub=") == true)
+            {
+                $item['link'] = str_replace( "aff_sub=bzaim5.ru", "aff_sub=".$domen, $item['link']);
+                $item['link'] = str_replace( "aff_sub2=#site", "", $item['link']);
+                $item['link'] = str_replace( "aff_sub2=#site1", "", $item['link']);
+
+                if(trim($this->input->get('utm_source', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub2='.$this->input->get('utm_source', TRUE);
+                else
+                    $item['link'] = $item['link'].'&aff_sub2='.$domen;
+
+                if(trim($this->input->get('utm_campaign', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
+                else if(trim($this->input->get('campaign_id', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
+                else
+                    $item['link'] = $item['link'].'&aff_sub3='.$domen;
+
+                if(trim($this->input->get('utm_term', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
+                else if(trim($this->input->get('keyword', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
+                else
+                    $item['link'] = $item['link'].'&aff_sub4='.$domen;
+            }
+            else if (strpos($item['link'], "promo=") == true)
+            {
+                $item['link'] = str_replace( "utm_source=bzaim5", "utm_source=".$domen, $item['link']);
+
+                if(trim($this->input->get('utm_source', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub2='.$this->input->get('utm_source', TRUE);
+                else
+                    $item['link'] = $item['link'].'&aff_sub2='.$domen;
+
+                if(trim($this->input->get('utm_campaign', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
+                else if(trim($this->input->get('campaign_id', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
+                else
+                    $item['link'] = $item['link'].'&aff_sub3='.$domen;
+
+                if(trim($this->input->get('utm_term', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
+                else if(trim($this->input->get('keyword', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
+                else
+                    $item['link'] = $item['link'].'&aff_sub4='.$domen;
+            }
+             
             $temp++;  
 
-            if($temp==5)
-            {
-                echo '</div></div><div class="row"><div class="col-md-12">';
+            // if($temp==4)
+            // {
+            //     echo '</div></div><div class="row"><div class="col-md-10 col-md-offset-1">';
                 // echo '<div class="col-md-4 offers" >
                 // <figure class="text-center hh2"><br> 
                 //     <div> 
@@ -153,42 +298,49 @@ ins, .adsbygoogle{
                 //     </div> 
                 //     <br></figure>
                 // </div></div></div><div class="col-md-12">';
-            }
+            // }
 
-            echo '<div class="col-md-3 offers" ><br>
-                <figure class="text-center hh1">
-                    <span class="fa fa-star ex-checked-stars"></span>
-                    <span class="fa fa-star ex-checked-stars"></span>
-                    <span class="fa fa-star ex-checked-stars"></span>
-                    <span class="fa fa-star ex-checked-stars"></span>
+            $words = array (
+                '<span class="empty"> </span>',
+                '<span class="green">Выгодно сегодня</span>',
+                '<span class="gold">Лучшее предложение дня</span>',
+                '<span class="yellow">Предложение месяца</span>',
+                '<span class="blue">Одобрение 96,5%</span>',
+                '<span class="empty"> </span>'
+            );
+
+            echo '<div class="col-md-4 col-xs-6" >
+                <figure class="text-center hh1"> 
                     <div class="ex-wrapper"><br><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
                     <img class="lk-img img-responsive" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
                 </a></div> 
-                    <table>
+                    <table class="table">
                         <tbody>
-                        <tr>
-                            <td class="wordwrap">Макс. сумма:</td>
-                            <td class="wordwrap">'.number_format($item['amount'],0,'',' ').'<i></i></td>
+                        <tr class="font08">
+                            <td class="wordwrap">Сумма:</td>
+                            <td class="wordwrap">до '.number_format($item['amount'],0,'',' ').' <i class="fa fa-rub"></i></td>
                         </tr>
-                        <tr>
-                            <td class="wordwrap">Основная ставка</td>
-                            <td class="wordwrap">'.$item['percent'].'%</td>
+                        <tr class="font08">
+                            <td class="wordwrap">Основная<br class="visible-xs"> ставка</td>
+                            <td class="wordwrap">'.$item['percent'].' <i class="fa fa-percent"></i></td>
                         </tr>
-                        <tr>
+                        <tr class="font08">
                             <td>Возраст</td>
-                            <td class="wordwrap">от '.$item['min_year'].' до '.$item['max_year'].'</td>
+                            <td class="wordwrap">от '.$item['min_year'].' до '.$item['max_year'].' <i class="fa fa-user"></i></td>
                         </tr>
                         </tbody>
                     </table>
-                    <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button type="button" class="ex-main-btn">Получить деньги</button></a>
+                    <a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button type="button" class="ex-main-btn">Получить <br class="visible-xs">деньги</button></a>
                 </figure><br>
                 </div>'; 
             
         }
         echo '</div></div>';
-        echo '<div class="row"><div class="col-md-12">';
+        echo '<div class="row"><div class="col-md-10 col-xs-12 col-md-offset-1">';
         echo '</div></div>'; 
             ?>
     </div></div>
 </div>
+<br><br>
+<!-- <h3 class="text-center hh">Вам одобрили заявку и на почту прислали уникальное предложение. Воспользуйтесь им!</h3> -->
 <?php require realpath(__DIR__ . '/..').'/'.$site.'/footer.php';?>

@@ -42,14 +42,14 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                 </p>
             <?php } else { ?>
                 <div class='row'>
-                    <div class='col-md-4'>
+                    <div class='col-md-4 hidden-xs'>
                         <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
                             <img src="/templates/fanzaim/assets/img/icons/fanzaim-logo.png"  alt="Image">
                         <?php } else { ?>
                              <img src="/templates/fanzaim/assets/img/icons/Fanzaim-logo-footer.png"  alt="Image" class='logo-special'>
                         <?php } ?>
                     </div>
-                    <div class='col-md-8'>
+                    <div class='col-md-8 col-xs-12'>
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- fanzaim -->
                         <ins class="adsbygoogle"
@@ -74,13 +74,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                     <div id="yandex_rtb_R-A-260538-2"></div> <hr/>';
                 } ?>
                 <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-                <ul class="list-inline">
-                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-                </ul>
+   
                 <?php } ?>
             </div>
         </div>

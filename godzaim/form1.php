@@ -17,32 +17,37 @@
 	</div>
 </div>
 
-<div class="form-group has-feedback hidden">
-	<label class="col-sm-4 control-label label-required hidden-xs">Фамилия</label>
+<div class="form-group has-feedback">
+	<label class="col-sm-4 control-label label-required hidden-xs" for="f">Фамилия</label>
 	<div class="col-sm-8 col-xs-12">
 		<input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию"
-		    data-sanitize="capitalize" value="Иванова" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свою фамилию"
+		    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свою фамилию"
 		    required>
 		<span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-
+		<p class="help-block2">Нужно указать фамилию</p>
+		<p class="text-muted helpblock">Пример: Иванова</p>
 	</div>
 </div>
 <div class="form-group has-feedback" >
-	<label class="col-sm-4 control-label label-required hidden-xs">Имя</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="i">Имя</label>
 	<div class="col-sm-8 col-xs-12">
 		<input type="text" class="form-control ec tip sp_push_custom_data" name="i" id="i" placeholder="Имя" title="Пожалуйста, введите свое имя"
 		    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое имя"
 		    required>
 		<span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="help-block2">Нужно указать имя</p> 
+		<p class="text-muted helpblock">Пример: Лариса</p>
 	</div>
 </div>
-<div class="form-group has-feedback hidden" >
-	<label class="col-sm-4 control-label label-required hidden-xs">Отчество</label>
+<div class="form-group has-feedback" >
+	<label class="col-sm-4 control-label label-required hidden-xs" for="o">Отчество</label>
 	<div class="col-sm-8 col-xs-12">
 		<input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество"
-		    data-sanitize="capitalize" value="Иванович" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое отчество"
+		    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое отчество"
 		    required>
 		<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+		<p class="help-block2">Нужно указать отчество</p> 
+		<p class="text-muted helpblock">Пример: Ивановна</p>
 	</div>
 </div>
 <input type="hidden" id="gender" value="1" name="gender" required>
@@ -90,35 +95,39 @@
 </div>
 <!-- Скрываем старую форму даты рождения -->
 <div class="form-group has-feedback hidden">
-	<label class="col-sm-4 control-label label-required hidden-xs">Дата рождения</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="birthdate">Дата рождения</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Пожалуйста, выберете свою дату рождения"
 			    data-validation="custom" value="06/12/1988" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Пожалуйста, выберите дату рождения"
 			    required>
 			<span id="birthdagodzaimatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-		 
+		 	<p class="help-block2"></p>
+			<p class="text-muted helpblock">Пример: 06/02/2000</p>
 	</div>
 </div>
 <div class="form-group has-feedback" >
-	<label class="col-sm-4 control-label label-required hidden-xs">Телефон</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="phone">Телефон</label>
 	<div class="col-sm-8 col-xs-12">
 		<input style="margin-bottom: 20px;" type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон"
 		    title="Пожалуйста, введите свой телефон" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$"
 		    data-validation-error-msg="Пожалуйста, введите телефон" required>
 		<span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true" style="margin-top: -4px;"></span>
+		<p class="help-block2">Нужно указать номер телефона</p>
+		<p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
 	</div>
 </div>
 <div class="form-group has-feedback" > 
-	<label class="col-sm-4 control-label label-required hidden-xs">Почта</label>
+	<label class="col-sm-4 control-label label-required hidden-xs" for="email">Почта</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Пожалуйста, введите свой email адрес"
 			    placeholder="Email" title="Email" data-validation="email" data-validation-error-msg="Пожалуйста, выберите ваш email" required>
 			<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-	 
+	 		<p class="help-block2"></p>
+			<p class="text-muted helpblock">Пример: email@mail.ru</p>
 	</div>
 </div>
-<div class="form-group hidden">
-	<label class="col-sm-4 control-label label-required hidden-xs">Кредитная история</label>
+<div class="form-group">
+	<label class="col-sm-4 control-label label-required hidden-xs" for="delays_type">Кредитная история</label>
 	<div class="col-sm-8 col-xs-12">
 		<select class="form-control ec" name="delays_type" id="delays_type" required>
 			<option selected value="never">Никогда не брал(а) кредитов</option>
@@ -135,14 +144,18 @@
 	<div class="col-sm-8 col-xs-12">
 		<label>
 			<input type="checkbox" onclick="checkMee()" id="agree" value="1" checked>
-			<b>Я согласен на обработку персональных данных и с
+			<b class="font12">Я согласен на обработку персональных данных и с
 				<a href="#" data-toggle="modal" data-target="#tosModal">публичной офертой</a>
 			</b>
 		</label>
 	</div>
-	<label style="display: none">
-		<input type="checkbox" id="marketing" value="1" checked>
-		<b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
-	</label>
+	<label class="col-sm-4 control-label hidden-xs"></label>
+	<div class="col-sm-8 col-xs-12">
+		<label>
+			<input type="checkbox" id="marketing" value="1" checked>
+			<b class="font12">Я согласен на получение рекламных сообщений
+			</b>
+		</label>
+	</div>
 </div>
 <div class="clearfix"></div>

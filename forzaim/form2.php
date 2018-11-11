@@ -105,6 +105,7 @@
                     </div>
                 </div>
             </div>
+<!--            
             <div class="form-group has-feedback">
                 <label class="control-label col-md-3" for="region">Регион проживания</label>
                 <div class="col-md-9">
@@ -134,6 +135,7 @@
                     </div>
                 </div>
             </div>
+-->
             <div class="form-group has-feedback">
                 <label class="control-label col-md-3" for="street">Улица проживания</label>
                 <div class="col-md-9">

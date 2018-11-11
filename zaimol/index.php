@@ -11,7 +11,7 @@
 		<div class="container">
 			<h1 class="text-center">Лучший выбор и самые низкие
 				<br> процентные ставки в молле микрозаймов!</h1>
-			<p class="ex-lg text-center">Подберите свой вариант в три шага!</p>
+			<p class="ex-lg text-center hidden-xs hidden-sm">Подберите свой вариант в три шага!</p>
 			<main class="ex-main-counter">
 				<div class="ex-borrow-selector text-center">
 					<div class="ex-slider-val"></div>
@@ -52,9 +52,8 @@
 			</main>
 		</div>
 	</section>
-	<section class="ex-section-2 hidden-xs hidden-sm">
+	<section class="ex-section-2">
 		<div class="container">
-			<a class="anchor" name="id2"></a>
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- zaimol -->
 			<ins class="adsbygoogle"
@@ -66,7 +65,7 @@
 			<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>
-			<ul class="ex-tabs">
+			<ul class="ex-tabs hidden-xs hidden-sm">
 				<li class="active">
 					<a data-toggle="tab" href="#menu1" id="exReceiveMoney">Как получить деньги</a>
 				</li>
@@ -74,7 +73,7 @@
 					<a data-toggle="tab" href="#menu2">Преимущества сервиса ZAIMOL</a>
 				</li>
 			</ul>
-			<div class="tab-content">
+			<div class="tab-content hidden-xs hidden-sm">
 				<div id="menu1" class="tab-pane active">
 					<h2 class="text-center">Оформление запроса на займ займет всего три минуты!</h2>
 					<div class="row">

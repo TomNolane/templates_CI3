@@ -5,6 +5,7 @@
         <a class="ex-brand" href="/">Forzaim</a>
     </div>
 </nav>
+<span id="adsence_about"></span>
 <main class="ex-faq">
 <div class="container">
     <h2>Часто задаваемые вопросы</h2>

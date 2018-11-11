@@ -3,12 +3,12 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="ex-form-wrap">
-                    <div class="form-group has-feedback hidden">
+                    <div class="form-group has-feedback">
                         <div class="row">
                             <label class="control-label col-md-4" for="f">Фамилия</label>
                             <div class="col-md-8">
                                 <div class="ex-wrapper">
-                                    <input type="text" value="Иванова" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
+                                    <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
                                         data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
                                         data-validation-error-msg="Введите свою фамилию" required>
                                 </div>
@@ -27,12 +27,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group has-feedback hidden">
+                    <div class="form-group has-feedback">
                         <div class="row">
                             <label class="control-label col-md-4" for="o">Отчество</label>
                             <div class="col-md-8">
                                 <div class="ex-wrapper">
-                                    <input type="text" value="Иванович" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
+                                    <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
                                         data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
                                         data-validation-error-msg="Введите свое отчество" required>
                                 </div>
@@ -41,54 +41,54 @@
                     </div>
                     <input type="hidden" id="gender" value="1" name="gender" required>
                     <!-- Скрываем старую форму даты рождения -->
-<div class="form-group hidden">
-	<label class="col-sm-4 control-label label-required hidden-xs">Дата рождения*</label>
-	<div class="col-sm-2">
-		<div class="shadow">
-			<select class="form-control ec" id="birth_dd" name="birth_dd" required>
-				<option value="0">День</option>
-				<?php for($i=1;$i<=31;$i++) echo '<option value="'.(($i<10)? '0' : '').$i.'">'.$i.'</option>'; ?>
-			</select>
-		</div>
-	</div>
-	<div class="col-sm-3">
-		<div class="shadow">
-			<select class="form-control ec" id="birth_mm" name="birth_mm" required>
-				<option value="0">Месяц</option>
-				<option value="01">Январь</option>
-				<option value="02">Февраль</option>
-				<option value="03">Март</option>
-				<option value="04">Апрель</option>
-				<option value="05">Май</option>
-				<option value="06">Июнь</option>
-				<option value="07">Июль</option>
-				<option value="08">Август</option>
-				<option value="09">Сентябрь</option>
-				<option value="10">Октябрь</option>
-				<option value="11">Ноябрь</option>
-				<option value="12">Декабрь</option>
-			</select>
-		</div>
-	</div>
-	<div class="col-sm-3">
-		<div class="shadow">
-			<select class="form-control ec" id="birth_yyyy" name="birth_yyyy" required>
-				<option value="0">Год</option>
-				<?php
-				for($i=date('Y', strtotime('-80 years', time()));$i<=date('Y', strtotime('-18 years', time()));$i++)
-				echo '<option value="'.$i.'">'.$i.'</option>';
-				?>
-			</select>
-		</div>
-	</div>
-</div>
-<!-- Скрываем старую форму даты рождения -->
+                    <div class="form-group hidden">
+                        <label class="col-sm-4 control-label label-required hidden-xs">Дата рождения*</label>
+                        <div class="col-sm-2">
+                            <div class="shadow">
+                                <select class="form-control ec" id="birth_dd" name="birth_dd" required>
+                                    <option value="0">День</option>
+                                    <?php for($i=1;$i<=31;$i++) echo '<option value="'.(($i<10)? '0' : '').$i.'">'.$i.'</option>'; ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="shadow">
+                                <select class="form-control ec" id="birth_mm" name="birth_mm" required>
+                                    <option value="0">Месяц</option>
+                                    <option value="01">Январь</option>
+                                    <option value="02">Февраль</option>
+                                    <option value="03">Март</option>
+                                    <option value="04">Апрель</option>
+                                    <option value="05">Май</option>
+                                    <option value="06">Июнь</option>
+                                    <option value="07">Июль</option>
+                                    <option value="08">Август</option>
+                                    <option value="09">Сентябрь</option>
+                                    <option value="10">Октябрь</option>
+                                    <option value="11">Ноябрь</option>
+                                    <option value="12">Декабрь</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="shadow">
+                                <select class="form-control ec" id="birth_yyyy" name="birth_yyyy" required>
+                                    <option value="0">Год</option>
+                                    <?php
+                                    for($i=date('Y', strtotime('-80 years', time()));$i<=date('Y', strtotime('-18 years', time()));$i++)
+                                    echo '<option value="'.$i.'">'.$i.'</option>';
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Скрываем старую форму даты рождения -->
                     <div class="form-group has-feedback hidden">
                         <div class="row">
                             <label class="control-label col-md-4" for="birthdate">Дата рождения</label>
                             <div class="col-md-8">
                                 <div class="ex-wrapper">
-                                    <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
+                                    <input type="text" value="24/03/1988" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
                                         data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
                                         required>
                                 </div>
@@ -119,7 +119,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group has-feedback hidden">
+                    <div class="form-group has-feedback">
                         <div class="row">
                             <label class="control-label col-md-4" for="delays_type">Кредитная история
                             </label>
@@ -142,13 +142,17 @@
                             <div class="col-md-4"></div>
                             <div class="col-md-8">
                                 <label class="checkbox-inline">
-                                    <span>Я согласен(на) на обработку персональных данных и с публичной офертой</span>
+                                    <span class="font12">Я согласен(на) на обработку персональных данных и с публичной офертой</span>
                                     <input type="checkbox" onClick="checkme_form();" id="agree" value="1" checked>
                                     <i></i>
                                 </label>
-                                <label class="hidden">
+                            </div>
+                            <div class="col-md-4"></div>
+                            <div class="col-md-8">
+                                <label class="checkbox-inline">
+                                    <span class="font12">Я согласен на получение рекламных сообщений</span>
                                     <input type="checkbox" id="marketing" value="1" checked>
-                                    <b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
+                                    <i></i>
                                 </label>
                             </div>
                         </div>
@@ -158,13 +162,14 @@
         </div>
     </div>
 </div>
+<br>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="row">
-                <div class="col-md-4 col-md-offset-8 ">
-                    <a id="next1f" class="ex-main-btn text-center" style="width: 100%;text-transform: uppercase; text-decoration: none;">
-                        получить займ
+                <div class="col-md-4 col-md-offset-4 ">
+                    <a id="next1" class="ex-main-btn text-center" style="width: 100%;text-transform: uppercase; text-decoration: none;">
+                        Получить займ
                     </a>
                 </div>
             </div>

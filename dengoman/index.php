@@ -63,7 +63,6 @@
 		</div>
 	</form>
 </section>
-<a class="anchor" name="id2"></a>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- dengoman -->
 <ins class="adsbygoogle"

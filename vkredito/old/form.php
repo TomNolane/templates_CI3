@@ -48,7 +48,7 @@ include "header.php";
     <section class="form">
         <div class="row">
             <div class="col-md-12 col-xs-12">
-                <h1 class="title" id="to_scroll">Заполните свои личные данные</h1> 
+                <h1 class="title">Заполните свои личные данные</h1>
                 <div class="col-md-8 col-xs-12">
                     <form class="form-horizontal" id="anketa" action="/add" method="post" onsubmit="return validate();" autocomplete="off">
                         <input type="hidden" name="display" id="display" value="0">
@@ -59,18 +59,18 @@ include "header.php";
                         <input type="hidden" name="fingerprint" id="fingerprint" value="">
                         <div class="tab-content">
                             <div id="form1" class="tab-pane fade in active">
-                                <?php require 'full/form1.php'; ?>
+                                <?php require 'form1.php'; ?>
                                 <div class="col-sm-8 col-sm-offset-4 col-xs-12">
                                     <div class="text-center">
-                                        <a class="btn btn-primary btn-next" id="next1f">Далее 
+                                        <a class="btn btn-primary btn-next" id="next1">Оформить заявку 
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div id="form2" class="tab-pane fade">
-                                <?php require('full/form2.php'); ?>
+                                <?php require('form2.php'); ?>
                                 <div class="form-group">
-                                    <div class="col-sm-10 col-sm-offset-2 col-xs-12">
+                                    <div class="col-sm-8 col-sm-offset-4 col-xs-12">
                                         <div class="text-center">
                                             <a class="btn btn-primary btn-next" id="next2">Далее
                                                 <i class="fa fa-arrow-right"></i>
@@ -81,10 +81,10 @@ include "header.php";
                                 <div class="clearfix"></div>
                             </div>
                             <div id="form3" class="tab-pane fade">
-                                <?php require('full/form3.php'); ?>
+                                <?php require('form3.php'); ?>
                                 <div class="row">
                                     <div class="col-sm-8 col-sm-offset-4 col-xs-12">
-                                        <a class="btn btn-primary btn-header" id="getmoney">Оформить заявку</a>
+                                        <a class="btn btn-primary btn-header" id="form-send">Оформить заявку</a>
                                     </div>
                                 </div>
                             </div>
@@ -110,6 +110,18 @@ include "header.php";
     </section>
     <div class="clearfix visible-sm visible-xs">&nbsp;</div>
 </div>
+<br>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- vkredito -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="9129421079"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <!-- Modal -->
 <div class="modal fade" id="tosModal" tabindex="-1" role="dialog" aria-labelledby="tosModalLabel">
     <div class="modal-dialog" role="document">

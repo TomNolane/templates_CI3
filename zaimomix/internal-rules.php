@@ -10,6 +10,7 @@
             </div>
         </div>
         <div class="container">
+            <br><span id="adsence_about"></span>
             <div class="ex-text">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">

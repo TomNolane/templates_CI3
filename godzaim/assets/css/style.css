@@ -135,7 +135,8 @@ img{max-width:100%;}
     bottom: 5px;
     color: #99a4ac;
 }
-@import url(reset.css);@font-face{font-family:Roboto Bold;src:url("/templates/common/new2/fonts/RobotoBold.ttf");}
+
+@font-face{font-family:Roboto Bold;src:url("/templates/common/new2/fonts/RobotoBold.ttf");}
 @font-face{font-family:Roboto Light;src:url("/templates/common/new2/fonts/RobotoLight.ttf");}
 @font-face{font-family:Roboto Regular;src:url("/templates/common/new2/fonts/RobotoRegular.ttf");}
 @font-face{font-family:Roboto Meduim;src:url("/templates/common/new2/fonts/RobotoMedium.ttf");}
@@ -417,7 +418,7 @@ label.green{color:#7e975a;}
 #getmoney{color:#ffffff;font-size:25px;line-height:28px;}
 #hero-area{background:url(templates/godzaim/assets/img/how-bgg.png) no-repeat;background-size:cover;height:723px;}
 #hero-area h1{color:#fff;font-size:70px;margin:50px 0;text-shadow:0 4px 4px rgba(0,0,0,0.9), 0 0 15px rgba(0,0,0,0.9);text-transform:uppercase;}
-.form{background:rgba(255,255,255,0.9);border-radius:10px;padding:13px 50px 8px;position:absolute;height:384px;width:100%;}
+.form{background:rgba(255,255,255,0.9);border-radius:10px;padding:13px 50px 50px;position:inherit;height:384px;width:100%;}
 .form h2{color:#597b28;font-size:22px;margin:0 auto 25px;text-transform:uppercase;}
 #form-steps{margin:auto;}
 .form-sum-label{color:#130e27;font-size:20px;padding-left:5px;}

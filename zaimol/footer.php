@@ -36,10 +36,10 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
             </p> <br>
         <?php } else { ?>
              <div class="row">
-                 <div class="col-md-3">
+                 <div class="col-md-3 hidden-xs">
                      <img src="/templates/zaimol/assets/img/logo.png" alt="missed"  class="logo-spec">
                  </div>
-                 <div class="col-md-9">
+                 <div class="col-md-9 col-xs-12">
                      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                     <!-- zaimol -->
                     <ins class="adsbygoogle"
@@ -64,13 +64,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
             <hr/>
         <?php } ?>
         <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-        <ul class="list-inline text-center"> 
-            <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-            <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-            <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-            <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-            <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-        </ul>
+
         <?php } ?>
     </div>
 </footer>

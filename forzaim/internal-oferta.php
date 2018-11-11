@@ -5,6 +5,7 @@
         <a class="ex-brand" href="/">Forzaim</a>
     </div>
 </nav>
+<span id="adsence_about"></span>
 <main class="ex-document-1">
         <div class="container">
             <h2>Публичная оферта</h2>

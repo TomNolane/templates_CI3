@@ -1,7 +1,7 @@
 <?php $from = '15'; $px = '63.974'; 
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
-    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
+    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index' && $this->uri->segment(1) != 'form') {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- zaimoking -->
         <ins class="adsbygoogle"
@@ -14,14 +14,24 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
     }
-	
-    echo '<a href="#0" class="cd-top">Наверх</a>';
+
+    if($this->uri->segment(1) != 'form') 
+    {
+        echo '<a href="#0" class="cd-top">Наверх</a>';
+    }
+    
 }
 ?>
+<div id="yandex_rtb_R-A-326206-2"></div>
+<div id="yandex_rtb_R-A-326206-1"></div>
 <footer class="ex-main-footer">
     <div class="container">
         <div class="row">
+             <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
             <div class="col-md-2">
+             <?php } else { ?>
+              <div class="col-md-2 hidden-xs">
+             <?php } ?>
                 <div class="ex-foot-logo">
                     <img src="/templates/zaimoking/assets/img/logo-footer.png" alt="logo-footer.png">
                 </div>
@@ -57,13 +67,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
             <div class="col-sm-12">
                 <hr/>
                 <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-                <ul class="list-inline text-center">
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-                </ul>
+
                 <?php } ?>
             </div>
         </div>

@@ -59,14 +59,7 @@ echo '<footer class="ex-start-footer">
             </div>
             <div class="col-sm-12">
                 <hr/>';
-                if ($this->uri->segment(1) != 'form') {
-                    echo '<ul class="list-inline">
-                        <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                        <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                        <li><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                        <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                        <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-                    </ul>';
+                if ($this->uri->segment(1) != 'form') { 
                 }
             echo '</div>
         </div>
@@ -78,13 +71,11 @@ else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $th
     echo '<footer class="ex-footer">
         <div class="container">
             <div class="row">
-            <hr/>
-                <div class="col-xs-3">
-                    <div class="text-center">
-                        <img src="templates/bzaim/assets/img/logo-2.png" alt="logo-2" class="logo-spec">
-                    </div>
+            <hr/> 
+                <div class="ex-footer-logo col-md-3 hidden-xs"> 
+                    <img src="templates/bzaim/assets/img/logo-foot.png" alt="logo-foot.png">
                 </div>
-                <div class="col-xs-9">
+                <div class="col-xs-12 col-md-9">
                  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <!-- bzaim5.ru -->
                 <ins class="adsbygoogle"
@@ -105,6 +96,12 @@ else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $th
                 <!-- Yandex.RTB R-A-243981-3 desktop -->
                 <div id="yandex_rtb_R-A-243981-3"></div>
                 <hr/>
+            </div>
+             <div class="col-sm-12">
+                <p class="ex-text">
+                    Займы предоставляются на сумму от 1 000 до 1 000 000 рублей включительно на срок от 61 дня до 5 лет. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: support@bzaim5.ru  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+                    <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001. Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
+                </p>
             </div>
         </div>
 </footer>';

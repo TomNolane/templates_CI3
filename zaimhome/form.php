@@ -82,7 +82,7 @@ include "header.php";
                                 <span></span>
                             </div>
                             <p>Личные данные 
-                                <br> (всего 3 шага)</p>
+                                <br> (всего 1 шаг)</p>
                         </figure>
                         <figure class="ex-last-step">
                             <p style="width: 105px; left: -130%;"></p>
@@ -96,23 +96,23 @@ include "header.php";
                     <input type="hidden" name="referer" value="<?=$referer?>">
                     <input type="hidden" name="id" value="">
                     <input type="hidden" name="step" value="1">
-                    <input type="hidden" name="ad_id" value="<?=$ad_id?>"> 
+                    <input type="hidden" name="ad_id" value="<?=$ad_id?>">
                     <input type="hidden" id="amount" name="amount" value="<?=$sum;?>"/>
                     <input type="hidden" id="period" name="period" value="<?=$period;?>" />
                     <input type="hidden" name="fingerprint" id="fingerprint" value="">
                     <div class="row tab-content">
                         <div role="tabpanel" class="tab-pane fade in active col-xs-12" id="firstTabContent">
-                            <?php  require 'full/form1.php'; ?>
+                            <?php  require 'form1.php'; ?>
                         </div>
                     </div>
                     <div class="row tab-content">
                         <div role="tabpanel" class="tab-pane col-xs-12" id="secondTabContent"> 
-                        <?php  require 'full/form2.php'; ?>
+                        <?php  require 'form2.php'; ?>
                         </div>
                     </div>
                     <div class="row tab-content">
                         <div role="tabpanel" class="tab-pane col-xs-12" id="lastTabContent"> 
-                        <?php  require 'full/form3.php'; ?>
+                        <?php  require 'form3.php'; ?>
                         </div>
                     </div>
                 </form>

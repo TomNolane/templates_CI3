@@ -12903,7 +12903,7 @@ a.text-dark:focus, a.text-dark:hover {
 /*@@@@@@ Desktop Site part files import here @@@@@@*/
 /* line 1, ../sass/desktop/_header.scss */
 .ex-main-header, .ex-main-header-white, .ex-main-header-art {
-  padding: 38px 15px;
+  padding: 15px;
   color: #fff;
   background-color: transparent;
   border: none;
@@ -13265,7 +13265,7 @@ footer.ex-main-footer p {
 }
 /* line 19, ../sass/desktop/_start.scss */
 .ex-home .ex-main-section h1 {
-  margin-top: 57px;
+  /* margin-top: 57px; */
   margin-bottom: 27px;
   font-size: 36px;
   font-weight: 700;
@@ -13660,7 +13660,7 @@ footer.ex-main-footer p {
 
 /* line 1, ../sass/desktop/_form.scss */
 main.ex-form {
-  padding-bottom: 70px;
+  /* padding-bottom: 70px; */
 }
 /* line 3, ../sass/desktop/_form.scss */
 main.ex-form h1 {

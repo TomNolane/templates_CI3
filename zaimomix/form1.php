@@ -18,12 +18,12 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback row hidden">
+            <div class="form-group has-feedback row">
                 <label class="col-md-3  d-flex align-items-center justify-content-md-end" for="f">Фамилия</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
-                            data-sanitize="capitalize" value="Иванова" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
+                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
                             required>
                             <p class="text-muted helpblock">Пример: Иванова</p>
                     </div>
@@ -40,12 +40,12 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback row hidden">
+            <div class="form-group has-feedback row">
                 <label class="col-md-3 d-flex align-items-center justify-content-md-end" for="o">Отчество</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
-                            data-sanitize="capitalize" value="Ивановна" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
+                            data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
                             required>
                             <p class="text-muted helpblock">Пример: Ивановна</p>
                     </div>
@@ -132,7 +132,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback row hidden"> 
+            <div class="form-group has-feedback row"> 
                 <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="delays_type">Кредитная история</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper ex-arrow">
@@ -150,21 +150,24 @@
             <div class="row">
                 <div class="col-md-9  offset-md-3  ex-agreement-check">
                     <label class="checkbox-inline">
-                        <span>Я согласен на обработку персональных данных и с публичной офертой</span>
+                        <span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span>
                         <input type="checkbox" id="agree" value="1" onclick="checkMee();" checked>
                         <i></i>
                     </label>
-                    <label class="hidden">
-                        <input type="checkbox" id="marketing" value="1" checked>
-                        <b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
-                    </label>
                 </div>
+                <div class="col-md-9  offset-md-3  ex-agreement-check">
+                    <label class="checkbox-inline">
+                        <span class="font12">Я согласен на получение рекламных сообщений</span>
+                        <input type="checkbox" id="marketing" value="1" checked>
+                        <i></i>
+                    </label>
+                </div>               
             </div>
             <div class="form-group has-feedback row">
                 <div class="col-md-9 offset-md-3">
                     <div class="row justify-content-center">
                         <div class="col-md-10">
-                            <button type="button" id="submitOne" class="nav nav-tabs ex-orange-btn text-center"> Получить деньги </button>
+                            <button type="button" id="next1" class="nav nav-tabs ex-orange-btn text-center"> Получить деньги </button>
                         </div>
                     </div>
                 </div>
@@ -172,3 +175,16 @@
         </div>
     </div>
 </section>
+<br><br>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- zaimomix -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="1488279360"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br><br>

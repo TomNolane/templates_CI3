@@ -1,3 +1,4 @@
+<span id="adsence_about"></span>
 <div class="panel-body">
 	<h2><b>Пользовательское соглашение</b></h2>
 

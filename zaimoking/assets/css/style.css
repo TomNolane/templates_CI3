@@ -12078,7 +12078,7 @@ button.close {
 
 /* line 1, ../sass/desktop/_footer.scss */
 footer.ex-main-footer {
-    padding-top: 37px;
+    /* padding-top: 37px; */
     padding-bottom: 37px;
     background: #fff;
 }
@@ -12926,7 +12926,7 @@ footer.ex-main-footer p {
 
 /* line 1, ../sass/desktop/_form.scss */
 main.ex-form {
-    padding-bottom: 70px;
+    /* padding-bottom: 70px; */
 }
 
 /* line 3, ../sass/desktop/_form.scss */

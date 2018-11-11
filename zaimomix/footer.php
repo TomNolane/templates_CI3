@@ -14,19 +14,26 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
     }
-	
+	echo '<!-- Yandex.RTB R-A-328085-1 mobile -->
+    <div id="yandex_rtb_R-A-328085-1"></div>
+    <!-- Yandex.RTB R-A-328085-2 desktop -->
+    <div id="yandex_rtb_R-A-328085-2"></div>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 } 
 ?>
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
         <div class="row">
+        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
             <div class="col-lg-2">
+        <?php } else { ?>
+         <div class="col-lg-2 hidden-xs">
+        <?php } ?>
                 <div class="ex-foot-logo">
                     <img src="/templates/zaimomix/assets/img/logo-footer.png" alt="logo-footer.png" class="logo-spec">
                 </div>
             </div>
-            <div class="col-lg-10">
+            <div class="col-lg-10 col-xs-12">
             <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
                 <p>Сервис по подбору выгодных онлайн займов и кредитов находящийся по адресу:<br>
                     Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 support@zaimomix.ru<span class="hidden-xs hidden-sm"> | 8
@@ -57,14 +64,13 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
             <div class="col-lg-12">
             <br>
             <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-                <ul class="list-inline text-center"> 
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li class="list-inline-item"><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-                </ul>
-                <?php } ?>
+                    
+                <?php } else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') {
+                    echo '<!-- Yandex.RTB R-A-328085-1 mobile -->
+                    <div id="yandex_rtb_R-A-328085-1"></div>
+                    <!-- Yandex.RTB R-A-328085-2 desktop -->
+                    <div id="yandex_rtb_R-A-328085-2"></div>';
+                } ?>
             </div>
         </div>
     </div>

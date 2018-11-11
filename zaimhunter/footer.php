@@ -1,6 +1,6 @@
 <br><br>
 <?php $from = '15'; $px = '63.974'; 
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
     if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -15,18 +15,24 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
     }
-	
-    echo '<!-- Yandex.RTB R-A-258704-1 desktop -->
-    <div id="yandex_rtb_R-A-258704-1"></div>
-    <!-- Yandex.RTB R-A-258704-2 mobile -->
-    <div id="yandex_rtb_R-A-258704-2"></div>';
-    echo '<a href="#0" class="cd-top">Наверх</a>';
+    
+    if($this->uri->segment(1) != 'form') {
+        echo '<!-- Yandex.RTB R-A-258704-1 desktop -->
+        <div id="yandex_rtb_R-A-258704-1"></div>
+        <!-- Yandex.RTB R-A-258704-2 mobile -->
+        <div id="yandex_rtb_R-A-258704-2"></div>';
+        echo '<a href="#0" class="cd-top">Наверх</a>';
+    }
 } 
 ?>
 <footer class="ex-start-footer">
     <div class="container">
         <div class="row ex-main-footer">
+        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
             <div class="col-md-2">
+        <?php } else { ?>
+             <div class="col-md-2 hidden-xs">
+        <?php } ?>
                 <div class="ex-footer-logo">
                      <img src="/templates/zaimhunter/assets/img/footer-logo-zaimhunter.png" alt="logo-zaimhunter" class="logo-spec">
                 </div>
@@ -69,13 +75,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                     <div id="yandex_rtb_R-A-258704-2"></div><hr/>';
                 } ?>
                 <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-                <ul class="list-inline text-center">
-                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su/category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-                </ul>
+
                 <?php } ?>
             </div>
         </div>

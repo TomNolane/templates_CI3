@@ -65,6 +65,18 @@ function checkMee()
 
 //-----------------------Initializing--------------------------
 $(document).ready(function () {
+    $('.navbar-toggler').on('click', function () {
+        if($(this).hasClass('collapsed'))
+            $('.navbar-nav').show();
+        else
+            $('.navbar-nav').hide();
+    });
+
+    if($('.navbar-toggler').hasClass('collapsed'))
+        $('.navbar-nav').show();
+    else
+        $('.navbar-nav').hide();
+
 	equalheight('.ex-section-3 .ex-wrapper');
 	$(document).on('click', function (e) {
         if($('.ex-aside-menu').hasClass('ex-is-open')){

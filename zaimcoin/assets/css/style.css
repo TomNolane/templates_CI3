@@ -2975,7 +2975,7 @@ header .navbar-default{background-color:#fff !important;}
 @media (max-width:992px){.ex-main .ex-calc-wraper{width:100%;}
 }
 .ex-advantages{background-color:#fff;}
-.ex-advantages h2{margin-top:70px;margin-bottom:66px;}
+.ex-advantages h2{margin-top:30px;/*margin-bottom:66px;*/}
 .ex-advantages .ex-adv-bg{margin-bottom:41px;box-shadow:0 2px 4px rgba(0, 0, 0, 0.18);border-radius:5px;background-image:linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);}
 .ex-advantages .ex-adv-bg .ex-pad-not{padding-left:15px;}
 .ex-advantages .ex-adv-bg .ex-pad-not-right{padding-right:15px;}

@@ -83,13 +83,13 @@ include "header.php";
                 <div class="ex-form-content">
                     <div class="row tab-content">
                         <div role="tabpanel" class="tab-pane fade in active col-xs-12" id="firstTabContent">
-                            <?php require 'full/form1.php'; ?>
+                            <?php require 'form1.php'; ?>
                         </div>
                         <div role="tabpanel" class="tab-pane col-xs-12" id="secondTabContent">
-                            <?php require 'full/form2.php'; ?>
+                            <?php require 'form2.php'; ?>
                         </div>
                         <div role="tabpanel" class="tab-pane col-xs-12" id="lastTabContent">
-                            <?php require 'full/form3.php'; ?>
+                            <?php require 'form3.php'; ?>
                         </div>
                     </div>
                 </div> 
@@ -97,4 +97,15 @@ include "header.php";
         </div>
     </div>
 </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- zaimcoin -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="9741339751"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <?php include 'footer.php';?>

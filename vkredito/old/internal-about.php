@@ -1,3 +1,4 @@
+<span id="adsence_about"></span>
 <div class="page-about">
     <h2>Что такое сервис Vkredito и как он работает?</h2>
     <br>

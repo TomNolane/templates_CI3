@@ -21,6 +21,12 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
     echo '<a href="#0" class="cd-top">Наверх</a>';
 } 
 ?>
+<style>
+.black {
+    color: #000;
+}
+</style>
+
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
         <div class="row">
@@ -30,14 +36,17 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
              <div class="col-md-12">
         <?php } ?>
                 <div class="row">
-                    <div class="col-md-3 ex-foot-logo">
                         <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+                         <div class="col-md-3 hidden-xs ex-foot-logo">
                             <img src="/templates/dengomir/assets/img/icons/logo-header.png" alt="logo-footer.png">
+                        </div>
                         <?php } else { ?>
-                            <img src="/templates/dengomir/assets/img/icons/logo-footer.png" alt="logo-footer.png" class="logo-spec">
+                             <div class="col-md-3 ex-foot-logo">
+                                <img src="/templates/dengomir/assets/img/icons/logo-footer.png" alt="logo-footer.png" class="logo-spec">
+                             </div>
                         <?php } ?>
-                    </div>
-                    <div class="col-md-9">
+                   
+                    <div class="col-md-9 col-xs-12">
                     <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
                     
                         <p>Сервис по подбору выгодных онлайн займов Dengomir, находящийся по адресу
@@ -96,16 +105,17 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                     echo '<!-- Yandex.RTB R-A-261797-1 desktop -->
                     <div id="yandex_rtb_R-A-261797-1"></div>
                     <!-- Yandex.RTB R-A-261797-2 mobile -->
-                    <div id="yandex_rtb_R-A-261797-2"></div><hr/>';
+                    <div id="yandex_rtb_R-A-261797-2"></div><hr/>
+                    
+                    <div class="col-sm-12">
+                    <p class="black">
+                        Сервис по подбору выгодных онлайн займов находящийся по адресу:
+                    Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 email: support@dengomir.ru <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+                    </p>
+                </div>';
                 } ?>
                  <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-                <ul class="list-inline text-center">
-                    <li><a href="//bankmoney.su//category/zajmy/zajm-na-kartu-mgnovenno-kruglosutochno-bez-otkaza/"> Займ на карту мгновенно круглосуточно без отказа &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su//category/zajmy/zajmy-onlajn/">&nbsp;&nbsp; Займы онлайн &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su//category/zajmy/">&nbsp;&nbsp; Займ &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su//category/zajmy/zajm-na-kartu/">&nbsp;&nbsp; Займ на карту &nbsp;&nbsp;</a></li>
-                    <li><a href="//bankmoney.su//category/zajmy/zajmy-onlajn-na-kartu/">&nbsp;&nbsp; Займы онлайн на карту </a></li>
-                </ul>
+
                  <?php } ?>
             </div>
         </div>

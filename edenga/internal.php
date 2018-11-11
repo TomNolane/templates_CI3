@@ -138,6 +138,7 @@ else
 	elseif ($this->uri->segment(1) == 'service') {require 'internal-service.php';}
 	elseif ($this->uri->segment(1) == 'article') {require 'internal-article.php';}
 	elseif($this->uri->segment(1) == '404') require 'internal-404.php';
+	elseif($this->uri->segment(1) == 'simple-php-captcha') require 'internal-simple-php-captcha.php';
 }
 ?> 
    

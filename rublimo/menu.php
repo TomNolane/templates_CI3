@@ -1,5 +1,4 @@
-<div class="row"> 
-	<a class="anchor" name="id1"></a>
+<div class="row">
 	<nav class="navbar">
 		<div class="col-md-12">
 			<div class="navbar-header">
@@ -72,7 +71,7 @@
 						</ul>
 					</li>
 					<li>
-						<a  href="/faq">Вопросы-ответы</a>
+						<a  id="test" href="/faq">Вопросы-ответы</a>
 					</li>
 					<li>
 					<a href="" data-toggle="modal" id="askQuestion_" data-target="#askQuestion">Обратная связь</a>
@@ -136,3 +135,32 @@
 </div>
 </div>
 <!-- /Modal -->
+<div id="modal-container">
+  <div class="modal-background">
+    <div class="modal">
+      <h2>Мы вам одобрили предложение. Для получения заполните ваш email и № контактного телефона</h2>
+	  <div class="form-group">
+	  <p>Номер телефона</p>
+		<input type="tel" class="form-control" id="feedback-phone2" placeholder="Номер телефона" value="" required>
+	</div>
+	<div class="form-group">
+		<p>Ваш email</p>
+		<input type="email" class="form-control" id="feedback-email2" title="Email" placeholder="Введите ваш email" required>
+	</div>
+      
+	  <button type="button" id="feedback-send" class="btn">Отправить</button>
+      <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+			<rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
+	</svg>
+    </div>
+  </div>
+</div>
+<?php
+if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index' && $this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') {
+    echo '<div class="row">
+  <div class="col-md-12">
+    <span id="adsence_about"></span>
+  </div>
+</div>';
+}
+?>

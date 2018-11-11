@@ -1,26 +1,10 @@
-<div class="row" style="margin-bottom: 20px;">
-    <div class="col-md-4 text-right">
-    <label class="control-label label-spec">Срок займа</label>
-        <p class="ex-time">61-100 дней</p>
-    </div>
-    <div id="ex-main-slider-range" class="col-md-6">
-        <figure class="ex-range-slider">
-            <p id="ex-slider-val"></p>
-            <i></i>
-            <input type="text" id="rangeSlider" name="rangeSlider" value="<?=$sum;?>" /> 
-        </figure>
-        <div class="ex-slider-info">
-            <span>1 тыс.</span>
-            <span>100 тыс.</span>
-        </div>
-    </div>
-</div> 
-<div class="form-group has-feedback hidden">
+<div class="form-group has-feedback">
     <label class="control-label col-md-4 label-required" for="f">Фамилия</label>
     <div class="col-md-6">
         <div class="ex-wrapper"> 
-            <input type="text" value="Иванова" class="form-control ec tip"  name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
+            <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
             <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div> <p class="help-block2">Нужно указать фамилию</p>
             <p class="text-muted text-right">Пример: Иванова</p></div>
         </div> 
     </div>
@@ -31,16 +15,18 @@
         <div class="ex-wrapper">
             <input type="text" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя" required>
             <span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <div><p class="help-block2">Нужно указать имя</p> 
             <p class="text-muted text-right">Пример: Лариса</p></div>
         </div>
     </div>
 </div> 
-<div class="form-group has-feedback hidden">
+<div class="form-group has-feedback">
     <label class="control-label col-md-4 label-required" for="o">Отчество</label>
     <div class="col-md-6">
         <div class="ex-wrapper"> 
-            <input type="text" value="Ивановна" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Введите свое отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество" required>
+            <input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Введите свое отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество" required>
             <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <p class="help-block2">Нужно указать отчество</p> 
             <p class="text-muted text-right">Пример: Ивановна</p>
         </div>
     </div>
@@ -99,7 +85,7 @@
     <div class="col-md-6">
         <div class="ex-wrapper">
             <input type="tel" class="form-control ec tip" value="06/02/2000" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Укажите свою дату рождения" data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Укажите дату рождения" required>
-            <span id="birthdazaimhomeatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            <span id="birthdatestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <p class="help-block2"></p>
             <p class="text-muted text-right">Пример: 06/02/2000</p>
         </div>
@@ -127,7 +113,7 @@
         </div>
     </div>
 </div>
-<div class="form-group hidden">
+<div class="form-group">
 <label class="control-label col-md-4" for="credit">Кредитная история</label>
 <div class="col-md-6">
     <select size="1" class="form-control" id="credit">
@@ -143,18 +129,34 @@
 <div class="row">
 <div class="col-md-6 col-md-offset-4 ex-agreement-check">
     <br>
-    <label class="checkbox-inline"><span>Я согласен на обработку персональных данных и с публичной офертой</span>
+    <label class="checkbox-inline"><span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span>
         <input type="checkbox" value="" id="agree" onclick="checkMe();" checked>
         <i></i>
-    </label>
-    <label class="hidden">
-        <input type="checkbox" id="marketing" value="1" checked>
-        <b>Я согласен(на) получать маркетинговые рассылки с предложениями микрозаймов</b>
-    </label>
+    </label>    
 </div>
+<div class="col-md-6 col-md-offset-4 ex-agreement-check">
+    <br>    
+    <label class="checkbox-inline"><span class="font12">Я согласен на получение рекламных сообщений</span>
+        <input type="checkbox" value="" id="marketing" checked>
+        <i></i>
+    </label>    
+</div>   
+    
 </div>
 <div class="form-group">
-    <div class="col-md-12 col-xs-12 text-center" id="my_btn"> 
-        <button class="ex-main-btn" id="next1" type="button"> получить займ </button> 
+    <div class="col-md-12 col-xs-12 text-center" id="my_btn">  
+        <button class="ex-main-btn" id="next1" type="button"> Получить заём </button> 
     </div>
 </div> 
+<br>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- zaimhome -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="7107437553"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
