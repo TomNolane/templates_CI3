@@ -52,7 +52,7 @@
                 </p>
             </article>
             <aside class="col-lg-3 col-md-4">
-                <form id="anketa" action="/form" method="post">
+                <form id="anketa" action="/form<?=$utm;?>" method="post">
                 <input type="hidden" id="amount" name="amount" value="20000" />
                 <input type="hidden" id="period" name="period" value="21" />
                 <input type="hidden" id="form_slrd" name="form_slrd" value="15" />

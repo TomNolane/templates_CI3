@@ -1,9 +1,15 @@
 <?php
- $utm = '';
- if ($this->input->get('keyword', TRUE) != "" && 
- $this->input->get('campaign_id', TRUE) != "" &&
- $this->input->get('utm_source', TRUE) != "" ) 
- $utm = '?keyword='.$this->input->get('keyword', TRUE).'&campaign_id='.$this->input->get('campaign_id', TRUE)."&utm_source=".$this->input->get('utm_source', TRUE);
+$utm = '';
+
+if($this->input->get())
+{
+    $utm = '?'.http_build_query($this->input->get()); 
+} 
+ 
+//  if ($this->input->get('keyword', TRUE) != "" && 
+//  $this->input->get('campaign_id', TRUE) != "" &&
+//  $this->input->get('utm_source', TRUE) != "" ) 
+//  $utm = '?keyword='.$this->input->get('keyword', TRUE).'&campaign_id='.$this->input->get('campaign_id', TRUE)."&utm_source=".$this->input->get('utm_source', TRUE);
 
  $ip = $this->input->ip_address();
 require_once 'emails.php';

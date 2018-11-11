@@ -28,7 +28,7 @@
             </ul>
             <div class="ex-range-scope">
                 <div class="row">
-                <form id="anketa" action="/form" method="post"> 
+                <form id="anketa" action="/form<?=$utm;?>" method="post"> 
                 <input type="hidden" id="period" name="period" value="21" />
                 <input type="hidden" id="form_slrd" name="form_slrd" value="15" /> 
                 <input type="hidden" name="fingerprint" id="fingerprint" value="">

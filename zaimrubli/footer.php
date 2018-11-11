@@ -93,7 +93,8 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
     echo '/* private JS */';
     require 'templates/zaimrubli/assets/js/main.js'; 
 
-if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
+if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form' || $this->uri->segment(1) == 'zaim-yandex' || $this->uri->segment(1) == 'zaim-bank' 
+|| $this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-contact' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-money') { ?>
  
     $("#rangeSlider").ionRangeSlider({
         hide_min_max: true,

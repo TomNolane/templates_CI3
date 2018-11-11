@@ -18,7 +18,7 @@ require 'header.php';
                 <div class="col-lg-5 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
                     <div class="ex-calc-wraper"> 
                     <h3 class="visible-sm visible-xs hidden-md hidden-lg special_index2 font26 text-center"><b>Мгновенные займы онлайн.</b></h3><br> 
-                        <form id="anketa" action="/form" method="post">
+                        <form id="anketa" action="/form<?=$utm;?>" method="post">
                         <div class="ex-calc-block text-center">
                             <p class="font26 hidden-xs hidden-sm visible-md visible-lg"><b>Срок займа (в днях)</b></p>
                             <ul class="ex-zaim-time hidden-xs hidden-sm visible-md visible-lg" id="index_special"> 
