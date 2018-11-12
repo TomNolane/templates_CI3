@@ -3,7 +3,9 @@ $utm = '';
 
 if($this->input->get())
 {
-    $utm = '?'.http_build_query($this->input->get()); 
+    $utm = str_replace(";", "", '?'.http_build_query($this->input->get()));
+    $utm = str_replace("+", "", $utm);
+    // $utm = '?'.http_build_query($this->input->get()); 
 } 
  
 //  if ($this->input->get('keyword', TRUE) != "" && 

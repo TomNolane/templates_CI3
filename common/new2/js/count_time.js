@@ -1,6 +1,6 @@
 var data_in_site = {
 	time_to_come: new Date(),
-	time_to_come_timestamp: toTimestamp(new Date()),
+	time_to_come_timestamp: new Date().getTime() / 1000,
 	is_localstorage: 'нет',
 	is_coockie: 'нет',
 	count_visit: 1
@@ -8,91 +8,93 @@ var data_in_site = {
 
 function toTimestamp(strDate){
    var datum = Date.parse(strDate);
-   return datum/1000;
+   return datum;
 }
 
-// сохраняем информацию о времени проведенного на сайте
-// через localStorage
-if (window.localStorage) 
-{
-	data_in_site.is_localstorage = 'да';
-	
-	// если пользователь не новый
-	if(window.localStorage.length != 0)
+try { 
+	// сохраняем информацию о времени проведенного на сайте
+	// через localStorage
+	if (window.localStorage) 
 	{
-		var _data_in_site = JSON.parse(localStorage.getItem('data_in_site'));
-		if(_data_in_site)
+		data_in_site.is_localstorage = 'да';
+		
+		// если пользователь не новый
+		if(window.localStorage.length != 0)
 		{
-			if (Date.parse(_data_in_site.time_to_come) < (new Date() - 1000*60*60*24*2)) 
+			var _data_in_site = JSON.parse(localStorage.getItem('data_in_site'));
+			if(_data_in_site)
 			{
-				localStorage.removeItem("data_in_site");
+				if (Date.parse(_data_in_site.time_to_come) < (new Date() - 1000*60*60*24*2)) 
+				{
+					localStorage.removeItem("data_in_site");
+				}
+				else
+				{
+					data_in_site.time_to_come = (JSON.parse(localStorage.getItem('data_in_site'))).time_to_come;
+					data_in_site.time_to_come_timestamp = (JSON.parse(localStorage.getItem('data_in_site'))).time_to_come_timestamp;
+					data_in_site.count_visit = (JSON.parse(localStorage.getItem('data_in_site'))).count_visit;
+					data_in_site.count_visit++;
+				}
 			}
 			else
 			{
-				data_in_site.time_to_come = (JSON.parse(localStorage.getItem('data_in_site'))).time_to_come;
-				data_in_site.time_to_come_timestamp = (JSON.parse(localStorage.getItem('data_in_site'))).time_to_come_timestamp;
-				data_in_site.count_visit = (JSON.parse(localStorage.getItem('data_in_site'))).count_visit;
-				data_in_site.count_visit++;
+				localStorage.setItem("data_in_site", JSON.stringify(data_in_site));
 			}
+			
+		} 
+		
+		localStorage.setItem("data_in_site", JSON.stringify(data_in_site));
+	
+	}
+	else
+	{
+		// сохраняем информацию о времени проведенного на сайте через печеньки
+		var _data_in_site = Cookies.get('data_in_site');
+		if(typeof _data_in_site === 'undefined')
+		{
+			Cookies.set('data_in_site', 'sadg6453wesdx', { expires: 2 });
+			Cookies.set('time_to_come', data_in_site.time_to_come, { expires: 2 });
+			Cookies.set('time_to_come_timestamp', data_in_site.time_to_come_timestamp, { expires: 2 });
+			Cookies.set('is_localstorage', 'нет', { expires: 2 });
+			Cookies.set('is_coockie', 'да', { expires: 2 });
+			Cookies.set('count_visit', 1, { expires: 2 });
 		}
 		else
 		{
-			localStorage.setItem("data_in_site", JSON.stringify(data_in_site));
+			var time_to_come = Cookies.get('time_to_come');
+			
+			if (Date.parse(time_to_come) < (new Date() - 1000*60*60*24*2)) 
+			{
+				Cookies.remove('data_in_site');
+				Cookies.remove('time_to_come');
+				Cookies.remove('time_to_come_timestamp');
+				Cookies.remove('is_localstorage');
+				Cookies.remove('is_coockie');
+				Cookies.remove('count_visit');
+				Cookies.set('data_in_site', 'sadg6453wesdx', { expires: 2 });
+				Cookies.set('time_to_come', data_in_site.time_to_come, { expires: 2 });
+				Cookies.set('time_to_come_timestamp', data_in_site.time_to_come_timestamp, { expires: 2 });
+				Cookies.set('is_localstorage', 'нет', { expires: 2 });
+				Cookies.set('is_coockie', 'да', { expires: 2 });
+				Cookies.set('count_visit', 1, { expires: 2 });
+			}
+			else
+			{
+				data_in_site.time_to_come = Cookies.get('time_to_come');
+				data_in_site.time_to_come_timestamp = Cookies.get('time_to_come_timestamp');
+				data_in_site.count_visit = Cookies.get('count_visit');
+				data_in_site.is_localstorage = 'нет';
+				data_in_site.is_coockie = 'да';
+				data_in_site.count_visit++;
+				Cookies.remove('count_visit');
+				Cookies.set('count_visit', data_in_site.count_visit, { expires: 2 });
+			}
 		}
-		
-	} 
-	
-	localStorage.setItem("data_in_site", JSON.stringify(data_in_site));
-   
+	}
 }
-else {
-   // сохраняем информацию о времени проведенного на сайте через печеньки
-   var _data_in_site = Cookies.get('data_in_site');
-   if(typeof _data_in_site === 'undefined')
-   {
-	   Cookies.set('data_in_site', 'sadg6453wesdx', { expires: 2 });
-	   Cookies.set('time_to_come', data_in_site.time_to_come, { expires: 2 });
-	   Cookies.set('time_to_come_timestamp', data_in_site.time_to_come_timestamp, { expires: 2 });
-	   Cookies.set('is_localstorage', 'нет', { expires: 2 });
-	   Cookies.set('is_coockie', 'да', { expires: 2 });
-	   Cookies.set('count_visit', 1, { expires: 2 });
-   }
-   else
-   {
-	   var time_to_come = Cookies.get('time_to_come');
-	   
-	   if (Date.parse(time_to_come) < (new Date() - 1000*60*60*24*2)) 
-	   {
-		   Cookies.remove('data_in_site');
-		   Cookies.remove('time_to_come');
-		   Cookies.remove('time_to_come_timestamp');
-		   Cookies.remove('is_localstorage');
-		   Cookies.remove('is_coockie');
-		   Cookies.remove('count_visit');
-		   Cookies.set('data_in_site', 'sadg6453wesdx', { expires: 2 });
-		   Cookies.set('time_to_come', data_in_site.time_to_come, { expires: 2 });
-		   Cookies.set('time_to_come_timestamp', data_in_site.time_to_come_timestamp, { expires: 2 });
-		   Cookies.set('is_localstorage', 'нет', { expires: 2 });
-		   Cookies.set('is_coockie', 'да', { expires: 2 });
-		   Cookies.set('count_visit', 1, { expires: 2 });
-	   }
-	   else
-	   {
-		   data_in_site.time_to_come = Cookies.get('time_to_come');
-		   data_in_site.time_to_come_timestamp = Cookies.get('time_to_come_timestamp');
-		   data_in_site.count_visit = Cookies.get('count_visit');
-		   data_in_site.is_localstorage = 'нет';
-		   data_in_site.is_coockie = 'да';
-		   data_in_site.count_visit++;
-		   Cookies.remove('count_visit');
-		   Cookies.set('count_visit', data_in_site.count_visit, { expires: 2 });
-	   }
-   }
+catch (e) {
+	console.log(e);
 }
-
-
-
-
 
 
 

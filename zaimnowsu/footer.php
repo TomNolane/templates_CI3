@@ -435,7 +435,7 @@ if($this->uri->segment(1) != 'form')
                 name: $('#feedback-name').val(),
                 phone: $('#feedback-phone').val(),
                 email: $('#feedback-email').val(),
-                comment: 'Обращение: ' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size + "\n | Данные:" + _input
+                comment: '' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size + "\n | Данные:" + _input
             };
         }
         else
@@ -444,7 +444,7 @@ if($this->uri->segment(1) != 'form')
                 name: $('#feedback-name').val(),
                 phone: $('#feedback-phone').val(),
                 email: $('#feedback-email').val(),
-                comment: 'Обращение: ' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size
+                comment: '' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size
             };
         } 
         

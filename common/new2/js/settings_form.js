@@ -5,6 +5,7 @@ var scroll_sizeY = 0;
 var ahctpac = 0;
 var isMobile2 = 0;
 var count_errors = 0;
+var time_to_come_now = new Date();
 
 if (typeof isMobile2 === "undefined") {
     var isMobile2 = false;
@@ -160,6 +161,7 @@ function send_form(send, href) {
 function send_stats()
 {
     var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
 
     var _email, _display, _fingerprint = '';
 
@@ -177,17 +179,27 @@ function send_stats()
         _display = 'декстоп';
 
     var body = 'fingerprint=' + encodeURIComponent(_fingerprint) +
-    '&site=' + encodeURIComponent(document.location.href) +
-    '&email=' + encodeURIComponent(_email) +
-    '&count_touch=' + encodeURIComponent(count_touch) +
-    '&scroll_sizeX=' + encodeURIComponent(scroll_sizeX) +
-    '&scroll_sizeY=' + encodeURIComponent(scroll_sizeY) +
-    '&ahctpac=' + encodeURIComponent(ahctpac) +
-    '&display=' + encodeURIComponent(_display) +
-    '&count_errors=' + encodeURIComponent(count_errors) +
-    '&refferer=' + encodeURIComponent(document.querySelector('[name=referer]').value);
+        '&site=' + encodeURIComponent(document.location.href) +
+        '&ip=' + encodeURIComponent('<?php echo $this->input->ip_address(); ?>') +
+        '&email=' + encodeURIComponent(_email) +
+        '&count_touch=' + encodeURIComponent(count_touch) +
+        '&scroll_sizeX=' + encodeURIComponent(scroll_sizeX) +
+        '&scroll_sizeY=' + encodeURIComponent(scroll_sizeY) +
+        '&ahctpac=' + encodeURIComponent(ahctpac) +
+        '&display=' + encodeURIComponent(_display) +
+        '&count_errors=' + encodeURIComponent(count_errors) +
+        '&time_to_come=' + encodeURIComponent(new Date(time_to_come_now).toLocaleString()) +
+        // '&time_to_come_timestamp=' + encodeURIComponent(toTimestamp(data_in_site.time_to_come)) +
+        '&is_localstorage=' + encodeURIComponent(data_in_site.is_localstorage) +
+        '&is_coockie=' + encodeURIComponent(data_in_site.is_coockie) +
+        '&count_visit=' + encodeURIComponent(data_in_site.count_visit) +
+        '&time_spend=' + encodeURIComponent(
+            
+            Math.ceil(Math.abs(new Date().getTime() - new Date(data_in_site.time_to_come).getTime()) / 1000)
+        );  
+        '&refferer=' + encodeURIComponent(document.querySelector('[name=referer]').value);
 
-    xhr.open("POST", '/test/log', true);
+    xhr.open("POST", 'https://zaimhome.ru/news7', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     xhr.onreadystatechange == function () {
@@ -621,6 +633,9 @@ $(document).ready(function () {
     {
         if(e.pageY <= 5)
         {
+            if (document.location.host == 'zaimhome.ru') {
+                send_stats();
+            }
             // prompt('Вы в одном шаге от займа! Получите займ уже в '+ DateFormat(AddMinutesToDate(new Date(),15))+ '. Какая сумма вам нужна?',10000);
             // document.location.href = 'https://pxl.leads.su/click/762f05fbbdde479f81315e58b8557785?source=Vkredito';
             
@@ -1133,8 +1148,10 @@ $(document).ready(function () {
         if (validate0()) {
             
             if($('#amount').val() > 100000)
-            loans = 1;
-            
+                loans = 1;
+            if (document.location.host == 'zaimhome.ru') {
+                send_stats();
+            }
             $('input[name="step"]').val('3');
             //send_form(true, '/lk?loan='+loans+'&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source')));
             send_form(true, '/lk' + document.location.search);

@@ -27,10 +27,10 @@
             require "templates/forzaim/assets/css/style_lk.css";
             require "templates/common/new2/css/lk.php";
         }
-        // if ($this->uri->segment(1) == 'form') 
-        //{
+        if ($this->uri->segment(1) == 'form') 
+        {
             require "templates/common/new2/css/form.css";
             require "templates/forzaim/assets/css/style_form.css";
-        //}
+        }
 		echo '</style>'; 
     ?>

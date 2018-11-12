@@ -1,4 +1,3 @@
-<a class="anchor" name="id1"></a>
 <div class="page">
     <nav class="navbar">
         <div class="container">

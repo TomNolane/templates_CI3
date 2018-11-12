@@ -92,7 +92,7 @@
                     <div class="col-md-8">
                         <div class="ex-wrapper">
                             <input type="tel" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
-                                data-validation="custom" value="06/02/2000" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
+                                data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
                                 required>
                                 <p class="help-block2"></p>
                                 <p class="text-muted helpblock">Пример: 06/02/2000</p>
@@ -110,11 +110,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group has-feedback hidden">
+                <div class="form-group has-feedback">
                     <label class="control-label col-md-4" for="email">Email</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
-                            <input type="email" class="form-control ec tip special_form" name="email" id="email" value="email@mail.ru" title="Укажите свой email адрес" placeholder="Email"
+                            <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Укажите свой email адрес" placeholder="Email"
                                 data-validation="email" data-validation-error-msg="Укажите свой email" required>
                                 <p class="help-block2"></p>
                                 <p class="text-muted helpblock  hidden-xs hidden-sm">Пример: email@mail.ru</p>
@@ -123,7 +123,7 @@
                 </div>
                 
                 <!-- Регион и город -->
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback hidden">
                 <label class="control-label col-md-4" for="region">Регион проживания</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper ex-arrow">
@@ -140,7 +140,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback hidden">
                 <label class="control-label col-md-4" for="city">Город проживания</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">

@@ -12,7 +12,7 @@
     
     (isset($_GET['loan']) && $_GET['loan']) ? $loan = 0 : $loan = 0;
     
-    $data = $this->offers->all(6, 0);
+    $data = $this->offers->all(4, 0);
     
     // IP
     $this->load->helper('ip');
@@ -151,7 +151,7 @@ tr>td:first-child {
         $_plural_days = array('дня', 'дня', 'дней');
         $_plural_times = array('раз', 'раза', 'раз');
         $temp = 0;
-        echo '<div class="row"><div class="col-md-10 col-xs-12 col-md-offset-1">';
+        echo '<div class="row"><div class="col-md-12 col-xs-12">';
 
         foreach($data as $item)
         {
@@ -188,6 +188,8 @@ tr>td:first-child {
 
                 if(trim($this->input->get('utm_term', TRUE)) != false)
                     $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
+                else if(trim($this->input->get('utm;_term', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm;_term', TRUE);
                 else if(trim($this->input->get('keyword', TRUE)) != false)
                     $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
                 else
@@ -213,6 +215,8 @@ tr>td:first-child {
 
                 if(trim($this->input->get('utm_term', TRUE)) != false)
                     $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
+                else if(trim($this->input->get('utm;_term', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm;_term', TRUE);
                 else if(trim($this->input->get('keyword', TRUE)) != false)
                     $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
                 else
@@ -236,6 +240,8 @@ tr>td:first-child {
 
                 if(trim($this->input->get('utm_term', TRUE)) != false)
                     $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
+                else if(trim($this->input->get('utm;_term', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm;_term', TRUE);
                 else if(trim($this->input->get('keyword', TRUE)) != false)
                     $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
                 else
@@ -309,7 +315,7 @@ tr>td:first-child {
                 '<span class="empty"> </span>'
             );
 
-            echo '<div class="col-md-4 col-xs-6" >
+            echo '<div class="col-md-3 col-xs-6" >
                 <figure class="text-center hh1"> 
                     <div class="ex-wrapper"><br><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
                     <img class="lk-img img-responsive" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
@@ -336,8 +342,8 @@ tr>td:first-child {
             
         }
         echo '</div></div>';
-        echo '<div class="row"><div class="col-md-10 col-xs-12 col-md-offset-1">';
-        echo '</div></div>'; 
+        // echo '<div class="row"><div class="col-md-10 col-xs-12 col-md-offset-1">';
+        // echo '</div></div>'; 
             ?>
     </div></div>
 </div>

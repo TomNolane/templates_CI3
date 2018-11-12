@@ -502,7 +502,7 @@
                             top: c.top + b.outerHeight() + "px"
                         })
                     };
-                e && a.extend(f, e), f.css.position = "absolute", f.css["z-index"] = 9999, b.attr("autocomplete", "off"), 0 === this._numSuggestionElements && c.bind("resize", function () {
+                e && a.extend(f, e), f.css.position = "absolute", f.css["z-index"] = 9999, b.attr("autocomplete", "on"), 0 === this._numSuggestionElements && c.bind("resize", function () {
                     a(".jquery-form-suggestions").each(function () {
                         var b = a(this),
                             c = b.attr("data-suggest-container");
