@@ -288,4 +288,37 @@ include "header.php";
             </div>
         </div>
     </div>
+    <style> 
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 900px;
+        margin: 30px auto;
+    } 
+}
+    </style>
+    <!-- Modal Iphone -->
+    <div class="modal fade" id="tosModal2" tabindex="-1" role="dialog" aria-labelledby="tosModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h1 class="modal-title" id="tosModalLabel">Подтвердите адрес электронной почты</h1> 
+                    
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p>Вам, на указанный email адресс было выслано письмо. Потвердите свою почту и учавствуйте в розыгрыше Iphone XS уже 16.11.2018</p>
+                            <img class='img-responsive' src="/templates/common/img/iphone2.png">
+                         </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"> Закрыть </button>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php include 'footer.php';?>

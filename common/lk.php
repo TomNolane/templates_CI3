@@ -4,6 +4,7 @@
     else if($site == 'www.mikrodengi') $site = 'mikrodengi';
     else if($site == 'bzaim.tomnolane') $site = 'bzaim';
     else if($site == 'test.zaimhome') $site = 'test';
+    else if($site == 'catpost.test') $site = 'dengimo'; 
     
     $site = str_replace("www.", "", $site);
 
@@ -86,6 +87,13 @@ figure.hh1 {
 tr>td:first-child {
     font-size: 16px;
 }
+.imgg {
+    width: 70%;
+    padding: 20px;
+}
+.hh4 {
+    padding-top: 24px;
+}
 @media (max-width: 450px) {
     <?php if ( $site == 'dengomir' ) { ?>
     table {
@@ -121,6 +129,13 @@ tr>td:first-child {
     .gold, .empty, .blue, .yellow, .green {
         font-size: 11px !important;
     }
+    .hh4 {
+        padding-top: 0;
+        font-size: 1.4em;
+    }
+    .imgg {
+        width: 100%;
+    }
 }
 </style>
 
@@ -133,13 +148,22 @@ tr>td:first-child {
 </nav>
 <?php } ?>
 
+
+
+
+
+
 <div class="row container3"><div class="col-md-12">
 <?php if($site == 'www.mikrodengi' || $site == 'zaimrubli' || $site == 'zaimoking' || $site == 'mikrodengi') { ?>
 <h2 class="text-center hh" style="font-size: 26px;">Мы подобрали для Вас лучшие условия по микрозаймам! <br>
 Чтобы увеличить свои шансы на получение денег, заполните анкеты в нескольких организациях!</h2>
+    <?php } else if($site == 'dengimo' || $site == 'zaimcoin' || $site == 'catpost.me' || $site == 'catpost') { ?>
+    <div class="col-md-8"><h2 class="text-center hh hh4">Заполните заявку во всех организациях ниже и выиграйте Iphone XS. Розыгрыш 16.11.2018:</h2> </div>
+    <div class="col-md-4"><img class='img-responsive imgg' src="/templates/common/img/iphone.png"></div>
 	<?php } else { ?>
-	<h2 class="text-center hh">Вам доступен займ в следующих организациях:</h2>
-	<?php }?> 
+	<h2 class="text-center hh hh4">Вам доступен займ в следующих организациях:</h2>
+    <?php }?> 
+    <br>
     <div class="row" id="for_google">
     <?php 
         function plural_type($n) { 

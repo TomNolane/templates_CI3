@@ -83,12 +83,22 @@ figure.hh1:hover {
     padding-left: 0;
     padding-right: 0;
 }
+@media screen and (min-width: 441px) {
+	.col-md-12 {
+	padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+}
 @media screen and (max-width: 440px) {
     .container3 {
     background-color: #ffffff;
     padding-left: 0;
     padding-right: 0;
 } 
+.col-md-12 {
+	padding-right: 0 !important;
+    padding-left: 0 !important;
+}
 }
 .ex-checked-stars {
     color: #f8e71c !important;
@@ -107,10 +117,6 @@ figure.hh1:hover {
         margin-right: 0 !important;
         margin-left: 0 !important;
     <?php }?>
-}
-.col-md-12 {
-	padding-right: 0 !important;
-    padding-left: 0 !important;
 }
 footer {
     <?php if($site == "rublimo") {?>

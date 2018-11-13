@@ -2,8 +2,9 @@
 <main>
     <section class="ex-main">
         <div class="container">
+            <div class="col-md-10 col-sm-9">
             <h1 class="hidden-xs">Если деньги нужны срочно,<br> есть проверенное и надежное решение</h1>
-            <h2>Zaimcoin - скорая финансовая помощь</h2>
+            <h2>Zaimcoin - скорая <br class="visible-xs"> финансовая помощь</h2>
             <form id="anketa" action="/form<?=$utm;?>" method="post">
             <input type="hidden" id="amount" name="amount" value="20000" />
             <input type="hidden" id="period" name="period" value="21" />
@@ -14,7 +15,7 @@
             <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>         
             <div class="ex-calc-wraper"> 
                 <div class="row">
-                    <div class="col-md-8" id="specialIndex">
+                    <div class="col-md-8 col-xs-10" id="specialIndex">
                         <div class="ex-range-scope">
                             <div id="ex-main-slider-range">
                                 <figure class="ex-range-slider">
@@ -27,14 +28,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" id="specialIndex2">
+                    <div class="col-md-4 col-xs-8" id="specialIndex2">
                         <figure class="ex-val-block">
                             <p id="ex-slider-val"></p>
                         </figure>
                     </div>
                 </div> 
                 <div class="row ex-tab-section">
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <ul class="ex-calc-block ">
                             <li>
                                 <div class="ex-crumbs ex-crumbs-first"><span class="ex-unique">Вероятность</span>
@@ -58,14 +59,78 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-4 ex-for-button text-center" style=" margin-top: 30px;"> 
+                    <div class="col-md-3 col-sm-4 ex-for-button text-center spec_btn_index"> 
                         <button class="ex-orange-btn"  type="submit" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;Получить деньги&nbsp;&nbsp;&nbsp;</button> 
+                    </div>
+                    <div class="col-md-12 text-center spec_index"> 
+                        <p class="color-black">Оставь заявку и участвуй в розыгрыше Iphone XS 16.11.2018</p>
                     </div>
                 </div>
             </div>
         </form>
         </div>
+        </div>
+
+
     </section>
+    <div class="container">
+  <div class="iphone">
+    <div class="buttons">
+      <div class="silent"></div>
+      <div class="sleep"></div>
+      <div class="vol-up"></div>
+      <div class="vol-down"></div>
+    </div>
+    <div class="top">
+      <div class="black-bar"></div>
+      <div class="iphone-top"></div>
+    </div>
+    <div class="components">
+      <div class="speaker"></div>
+      <div class="camera">
+        <div class="shine-left"></div>
+        <div class="shine-right"></div>
+      </div>
+    </div>
+    <div class="top-bar"></div>
+    <div class="bottom-bar"></div>
+    <div class="screen">
+      <video loop="loop" autoplay="autoplay" src="https://images.apple.com/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/overview/primary/hero/large_2x.mp4"></video>
+      <div class="service">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="battery">
+        <div class="nub"></div>
+        <div class="energy"></div>
+      </div>
+      <div class="lock-carrier">AT&T</div>
+      <div class="lock-lock"></div>
+      <div class="info">
+            <?php 
+                $next5min = time() + 0;//(60 * 5); 
+                $months = array( 1 => 'Января' , 'Февраля' , 'Марта' , 'Апреля' , 'Мая' , 'Июня' , 'Июля' , 'Августа' , 'Сентября' , 'Октября' , 'Ноября' , 'Декабря' );
+                $weeks = array( 1 => 'Понедельник' , 'Вторник' , 'Среда' , 'Четверг' , 'Пятница' , 'Суббота' , 'Воскресенье');
+            ?>
+        <div class="lock-time"><?php echo date('H:i', $next5min)?></div>
+        <div class="lock-date"><?php echo date($weeks[date( 'N' )]).','.date('d').' '.date($months[date( 'n' )]);?></div>
+      </div>
+      <!--.lock-swipe Swipe up to unlock-->
+      <div class="lock-bar"></div>
+    </div>
+  </div> 
+</div>
+<!-- goo filter for notch shape-->
+<svg viewbox="0 0 0 0 ">
+  <filter id="goo" color-interpolation-filters="sRGB">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"></feGaussianBlur>
+    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 8 -1" result="cm"></feColorMatrix>
+    <feBlend in="sourceGraphic" in2="cm" mode="multiply"></feBlend>
+  </filter>
+</svg>
+
     <section class="ex-advantages hidden-xs hidden-sm">
         <div class="container">
             <div class="row">

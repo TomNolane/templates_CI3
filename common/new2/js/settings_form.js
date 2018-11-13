@@ -814,7 +814,8 @@ $(document).ready(function () {
             return;
         }
 
-        if (document.location.host != 'forzaim.ru' && document.location.host != 'zaimomix.ru') {
+        // отключил перемещение к инпутам при клике
+        if (document.location.host == 'forzaim22.ru') {
              $('html, body').animate({
                 scrollTop: $(this).offset().top - 100
             }, 1000);
@@ -825,6 +826,11 @@ $(document).ready(function () {
         if($('input').name == 'rangeSlider')
             return;
         if (valid) {
+
+            if (this.name == 'email' && (document.location.host == 'dengimo.ru' || document.location.host == 'zaimcoin.ru')) {
+                $("#modal2").click();
+            } 
+            
             if(this.name == 'birthdate')
             {    
                 var today = addDate2($('#birthdate').val().split('/')[0],$('#birthdate').val().split('/')[1],$('#birthdate').val().split('/')[2]).getTime();

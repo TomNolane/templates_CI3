@@ -21,6 +21,9 @@
         echo '<style>'; 
         require "templates/common/new2/css/common.css";
         require "templates/zaimcoin/assets/css/style.css";
+        if ($this->uri->segment(1)==' ' || $this->uri->segment(1)=='' || $this->uri->segment(1)=='index') {
+            require "templates/zaimcoin/assets/css/style_iphone.css";
+        }
         if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') 
         {
             require "templates/zaimcoin/assets/css/style_lk.css";

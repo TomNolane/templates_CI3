@@ -2,7 +2,6 @@
 <div class="b">
     <section class="calc" id="calc">
         <div class="container">
-        <a class="anchor" name="id2"></a>
             <div class="row">
                 <div class="col-lg-12 hidden-xs">
                     <h2 class="h1">Моментальные займы онлайн</h2>
@@ -67,7 +66,7 @@
                             </div> 
                     </div>
                 </div>
-                <div class="col-xs-12 visible-xs text-center">
+                <div class="col-xs-8 visible-xs text-center">
                     <h2 class="h1" id="getmoney">Моментальные займы онлайн</h2>
                     <div class="form text-center">
                             <div class="form-slider green">
@@ -102,11 +101,68 @@
                     </div>
                 </div>
             </form>
+<div class="container">
+  <div class="iphone">
+    <div class="buttons">
+      <div class="silent"></div>
+      <div class="sleep"></div>
+      <div class="vol-up"></div>
+      <div class="vol-down"></div>
+    </div>
+    <div class="top">
+      <div class="black-bar"></div>
+      <div class="iphone-top"></div>
+    </div>
+    <div class="components">
+      <div class="speaker"></div>
+      <div class="camera">
+        <div class="shine-left"></div>
+        <div class="shine-right"></div>
+      </div>
+    </div>
+    <div class="top-bar"></div>
+    <div class="bottom-bar"></div>
+    <div class="screen">
+      <video loop="loop" autoplay="autoplay" src="https://images.apple.com/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/overview/primary/hero/large_2x.mp4"></video>
+      <div class="service">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="battery">
+        <div class="nub"></div>
+        <div class="energy"></div>
+      </div>
+      <div class="lock-carrier">AT&T</div>
+      <div class="lock-lock"></div>
+      <div class="info">
+            <?php 
+                $next5min = time() + 0;//(60 * 5); 
+                $months = array( 1 => 'Января' , 'Февраля' , 'Марта' , 'Апреля' , 'Мая' , 'Июня' , 'Июля' , 'Августа' , 'Сентября' , 'Октября' , 'Ноября' , 'Декабря' );
+                $weeks = array( 1 => 'Понедельник' , 'Вторник' , 'Среда' , 'Четверг' , 'Пятница' , 'Суббота' , 'Воскресенье');
+            ?>
+        <div class="lock-time"><?php echo date('H:i', $next5min)?></div>
+        <div class="lock-date"><?php echo date($weeks[date( 'N' )]).','.date('d').' '.date($months[date( 'n' )]);?></div>
+      </div>
+      <!--.lock-swipe Swipe up to unlock-->
+      <div class="lock-bar"></div>
+    </div>
+  </div> 
+</div>
+<!-- goo filter for notch shape-->
+<svg viewbox="0 0 0 0 ">
+  <filter id="goo" color-interpolation-filters="sRGB">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"></feGaussianBlur>
+    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 8 -1" result="cm"></feColorMatrix>
+    <feBlend in="sourceGraphic" in2="cm" mode="multiply"></feBlend>
+  </filter>
+</svg>
+<p class="iphone-text">Оставь заявку и участвуй в розыгрыше Iphone XS 16.11.2018</p>
             </div>
         </div>
     </section>
     <div class="section-doc">
-        <a class="anchor" name="id3"></a>
         <section class="about white hidden-xs">
             <div class="container">
                 <div class="row">
@@ -201,7 +257,6 @@
                 </div>
             </div>
         </section>
-        <a class="anchor" name="id4"></a>
         <section class="conditions hidden-xs">
             <div class="container">
                 <div class="row">
@@ -320,5 +375,4 @@
         </section>
     </div> 
 </div>
-<a class="anchor" name="id5"></a>
 <?php require 'footer.php'; ?>

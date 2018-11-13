@@ -185,3 +185,4 @@
 	</div>
 </div>
 <div class="clearfix"></div>
+<a href="#" data-toggle="modal" id="modal2" data-target="#tosModal2"></a>
