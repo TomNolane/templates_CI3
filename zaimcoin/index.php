@@ -73,7 +73,7 @@
 
 
     </section>
-    <div class="container">
+    <!-- <div class="container">
   <div class="iphone">
     <div class="buttons">
       <div class="silent"></div>
@@ -108,28 +108,28 @@
       </div>
       <div class="lock-carrier">AT&T</div>
       <div class="lock-lock"></div>
-      <div class="info">
+      <div class="info"> -->
             <?php 
-                $next5min = time() + 0;//(60 * 5); 
-                $months = array( 1 => 'Января' , 'Февраля' , 'Марта' , 'Апреля' , 'Мая' , 'Июня' , 'Июля' , 'Августа' , 'Сентября' , 'Октября' , 'Ноября' , 'Декабря' );
-                $weeks = array( 1 => 'Понедельник' , 'Вторник' , 'Среда' , 'Четверг' , 'Пятница' , 'Суббота' , 'Воскресенье');
+                // $next5min = time() + 0;//(60 * 5); 
+                // $months = array( 1 => 'Января' , 'Февраля' , 'Марта' , 'Апреля' , 'Мая' , 'Июня' , 'Июля' , 'Августа' , 'Сентября' , 'Октября' , 'Ноября' , 'Декабря' );
+                // $weeks = array( 1 => 'Понедельник' , 'Вторник' , 'Среда' , 'Четверг' , 'Пятница' , 'Суббота' , 'Воскресенье');
             ?>
-        <div class="lock-time"><?php echo date('H:i', $next5min)?></div>
+        <!-- <div class="lock-time"><?php echo date('H:i', $next5min)?></div>
         <div class="lock-date"><?php echo date($weeks[date( 'N' )]).','.date('d').' '.date($months[date( 'n' )]);?></div>
-      </div>
+      </div> -->
       <!--.lock-swipe Swipe up to unlock-->
-      <div class="lock-bar"></div>
+      <!-- <div class="lock-bar"></div>
     </div>
   </div> 
-</div>
+</div> -->
 <!-- goo filter for notch shape-->
-<svg viewbox="0 0 0 0 ">
+<!-- <svg viewbox="0 0 0 0 ">
   <filter id="goo" color-interpolation-filters="sRGB">
     <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"></feGaussianBlur>
     <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 8 -1" result="cm"></feColorMatrix>
     <feBlend in="sourceGraphic" in2="cm" mode="multiply"></feBlend>
   </filter>
-</svg>
+</svg> -->
 
     <section class="ex-advantages hidden-xs hidden-sm">
         <div class="container">

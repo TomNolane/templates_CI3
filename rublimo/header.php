@@ -27,4 +27,7 @@ if(!isset($description))
     <![endif]-->  
 </head>
 <body>
-<?php require 'menu.php';?>
+<?php 
+require 'templates/common/new2/php/modal.php';
+require 'menu.php';
+?>

@@ -12159,9 +12159,9 @@ a.text-dark:focus, a.text-dark:hover {
     page-break-after: avoid;
   }
 
-  @page {
+  /* @page {
     size: a3;
-  }
+  } */
   /* line 6, ../sass/library/_bootstrap.scss */
   body {
     min-width: 992px !important;

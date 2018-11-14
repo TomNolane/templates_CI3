@@ -1,4 +1,3 @@
-<a class="anchor" name="id1"></a>
 <?php 
     if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index') {
         echo '<body>

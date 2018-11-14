@@ -16,6 +16,9 @@ require 'templates/common/new2/js/owl.carousel.min.js';
 require 'templates/common/new2/js/settings_form.js';
 require 'templates/common/new2/js/backtotop.js';
 require 'templates/common/new2/js/fingerprintjs2.js';
+if ($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk'  && $this->uri->segment(1) != 'lk2'  && $this->uri->segment(1) != 'lk3') {
+    require 'templates/common/new2/js/popup_modal.js';
+}
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') {
     require 'templates/common/new2/js/for_index.js';
     //require 'templates/edenga/assets/js/index.js';

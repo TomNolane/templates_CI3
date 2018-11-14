@@ -825,12 +825,21 @@ $(document).ready(function () {
     $('input').on('validation', function (evt, valid) {
         if($('input').name == 'rangeSlider')
             return;
-        if (valid) {
-
-            if (this.name == 'email' && (document.location.host == 'dengimo.ru' || document.location.host == 'zaimcoin.ru')) {
-                $("#modal2").click();
-            } 
+        if (valid) { 
             
+            /*
+            if (this.name == 'email' && (document.location.host == 'dengimo.ru' || document.location.host == 'zaimcoin.ru')) {
+                if($('#i').val() != '' && $('#o').val() != '')
+                {
+                    $("#form_name").text($('#i').val() + ' ' + $('#o').val() + ', вам');
+                }
+                else
+                    $("#form_name").text('Вам');
+                
+                $("#modal2").click();
+            }  
+            */
+           
             if(this.name == 'birthdate')
             {    
                 var today = addDate2($('#birthdate').val().split('/')[0],$('#birthdate').val().split('/')[1],$('#birthdate').val().split('/')[2]).getTime();

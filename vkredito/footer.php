@@ -29,7 +29,11 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
 <footer>
     <div class="container">
         <div class="row">
+         <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
             <div class="col-md-2 col-sm-4 col-xs-12"> 
+         <?php } else {?>
+             <div class="col-md-2 col-sm-4 hidden-xs"> 
+         <?php } ?>
                 <img src="/templates/vkredito/assets/img/logo.png" class="logo" alt="logo.png">
             </div>
             <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
@@ -51,7 +55,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                     <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001.</p>
             </div>
             <?php } else { ?>
-                 <div class="col-md-10">
+                 <div class="col-md-10 col-xs-12">
                      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                     <!-- vkredito -->
                     <ins class="adsbygoogle"
@@ -65,7 +69,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                     </script>
                 </div>
             <?php } ?>
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-xs-12">
                 <hr/>
                 <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
                     echo '<!-- Yandex.RTB R-A-249178-1 mobile -->

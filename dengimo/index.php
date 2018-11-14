@@ -7,7 +7,7 @@
                     <h2 class="h1">Моментальные займы онлайн</h2>
                 </div>
                 <form id="anketa" action="/form<?=$utm;?>" method="post">
-                <div class="col-lg-7 col-md-8 col-sm-10 col-xs-12 hidden-xs">
+                <div class="col-lg-10 col-md-12 col-sm-10 col-xs-12 hidden-xs">
                     <div class="form">
                         <h2>Выберите сумму и срок займа</h2>
                             <input type="hidden" id="period" name="period" value="21" />
@@ -66,7 +66,7 @@
                             </div> 
                     </div>
                 </div>
-                <div class="col-xs-8 visible-xs text-center">
+                <div class="col-xs-12 visible-xs text-center">
                     <h2 class="h1" id="getmoney">Моментальные займы онлайн</h2>
                     <div class="form text-center">
                             <div class="form-slider green">
@@ -100,8 +100,8 @@
                             <button type="submit" class="btn">Получить деньги</button> 
                     </div>
                 </div>
-            </form>
-<div class="container">
+            </form> 
+<!-- <div class="container">
   <div class="iphone">
     <div class="buttons">
       <div class="silent"></div>
@@ -136,34 +136,34 @@
       </div>
       <div class="lock-carrier">AT&T</div>
       <div class="lock-lock"></div>
-      <div class="info">
+      <div class="info"> -->
             <?php 
-                $next5min = time() + 0;//(60 * 5); 
-                $months = array( 1 => 'Января' , 'Февраля' , 'Марта' , 'Апреля' , 'Мая' , 'Июня' , 'Июля' , 'Августа' , 'Сентября' , 'Октября' , 'Ноября' , 'Декабря' );
-                $weeks = array( 1 => 'Понедельник' , 'Вторник' , 'Среда' , 'Четверг' , 'Пятница' , 'Суббота' , 'Воскресенье');
+                // $next5min = time() + 0;//(60 * 5); 
+                // $months = array( 1 => 'Января' , 'Февраля' , 'Марта' , 'Апреля' , 'Мая' , 'Июня' , 'Июля' , 'Августа' , 'Сентября' , 'Октября' , 'Ноября' , 'Декабря' );
+                // $weeks = array( 1 => 'Понедельник' , 'Вторник' , 'Среда' , 'Четверг' , 'Пятница' , 'Суббота' , 'Воскресенье');
             ?>
-        <div class="lock-time"><?php echo date('H:i', $next5min)?></div>
+        <!-- <div class="lock-time"><?php echo date('H:i', $next5min)?></div>
         <div class="lock-date"><?php echo date($weeks[date( 'N' )]).','.date('d').' '.date($months[date( 'n' )]);?></div>
-      </div>
+      </div> -->
       <!--.lock-swipe Swipe up to unlock-->
-      <div class="lock-bar"></div>
+      <!-- <div class="lock-bar"></div>
     </div>
   </div> 
-</div>
+</div> -->
 <!-- goo filter for notch shape-->
-<svg viewbox="0 0 0 0 ">
+<!-- <svg viewbox="0 0 0 0 ">
   <filter id="goo" color-interpolation-filters="sRGB">
     <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"></feGaussianBlur>
     <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 8 -1" result="cm"></feColorMatrix>
     <feBlend in="sourceGraphic" in2="cm" mode="multiply"></feBlend>
   </filter>
 </svg>
-<p class="iphone-text">Оставь заявку и участвуй в розыгрыше Iphone XS 16.11.2018</p>
+<p class="iphone-text">Оставь заявку и участвуй в розыгрыше Iphone XS 16.11.2018</p> -->
             </div>
         </div>
     </section>
     <div class="section-doc">
-        <section class="about white hidden-xs">
+        <section class="about white">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">

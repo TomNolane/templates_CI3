@@ -310,13 +310,13 @@ include "header.php";
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1">
-                            <p>Вам, на указанный email адресс было выслано письмо. Потвердите свою почту и учавствуйте в розыгрыше Iphone XS уже 16.11.2018</p>
+                            <p><span id="form_name"></span> на указанный email было отправлено письмо. Подтвердите свою почту и участвуйте в розыгрыше Iphone XS уже 16.11.2018</p>
                             <img class='img-responsive' src="/templates/common/img/iphone2.png">
                          </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal"> Закрыть </button>
+                    <div class="text-center"><button type="button" class="btn btn-primary btn-spec" data-dismiss="modal"> Закрыть </button></div>
                 </div>
             </div>
         </div>

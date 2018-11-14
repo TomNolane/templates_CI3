@@ -20,4 +20,7 @@ if(!isset($description))
     <script src="/modules/html5shiv/html5shiv.js"></script>
     <![endif]-->  
 </head>
-<?php require 'menu.php';?>
+<?php 
+require 'templates/common/new2/php/modal.php';
+require 'menu.php';
+?>

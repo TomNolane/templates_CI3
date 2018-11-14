@@ -18,12 +18,14 @@ if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->u
     if($this->uri->segment(1) != 'form') 
     {
         echo '<a href="#0" class="cd-top">Наверх</a>';
+
     }
     
 }
-?>
+if($this->uri->segment(1) != 'form') { ?>
 <div id="yandex_rtb_R-A-326206-2"></div>
 <div id="yandex_rtb_R-A-326206-1"></div>
+<?php } ?>
 <footer class="ex-main-footer">
     <div class="container">
         <div class="row">

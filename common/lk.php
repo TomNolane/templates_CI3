@@ -35,11 +35,12 @@
     $base_url = str_replace("https:","",$base_url);
     $base_url = str_replace("http:","",$base_url);
     $pixel = $this->pixel->stat($base_url);
-	echo '<style>';
+	echo '<div><style scoped>';
 	require 'new2/css/lk2.php';
-	echo '</style>';
+	echo '</style></div>';
 ?> 
-<style>
+<div>
+<style scoped>
 ins, .adsbygoogle{
 	text-align: center !important;
     max-height: none !important;
@@ -138,6 +139,7 @@ tr>td:first-child {
     }
 }
 </style>
+</div>
 
 <?php if( $site == 'forzaim') { ?>
 <nav class="ex-main-header ex-transparent hidden-xs">
@@ -148,22 +150,18 @@ tr>td:first-child {
 </nav>
 <?php } ?>
 
-
-
-
-
-
 <div class="row container3"><div class="col-md-12">
 <?php if($site == 'www.mikrodengi' || $site == 'zaimrubli' || $site == 'zaimoking' || $site == 'mikrodengi') { ?>
-<h2 class="text-center hh" style="font-size: 26px;">Мы подобрали для Вас лучшие условия по микрозаймам! <br>
-Чтобы увеличить свои шансы на получение денег, заполните анкеты в нескольких организациях!</h2>
-    <?php } else if($site == 'dengimo' || $site == 'zaimcoin' || $site == 'catpost.me' || $site == 'catpost') { ?>
-    <div class="col-md-8"><h2 class="text-center hh hh4">Заполните заявку во всех организациях ниже и выиграйте Iphone XS. Розыгрыш 16.11.2018:</h2> </div>
-    <div class="col-md-4"><img class='img-responsive imgg' src="/templates/common/img/iphone.png"></div>
+<!-- <h2 class="text-center hh" style="font-size: 26px;">Мы подобрали для Вас лучшие условия по микрозаймам! <br>
+Чтобы увеличить свои шансы на получение денег, заполните анкеты в нескольких организациях!</h2> -->
+    <div class="col-md-12"><h2 class="text-center hh hh4" style="font-size: 26px;">Заполните заявку во всех организациях ниже и выиграйте Iphone XS. Розыгрыш 16.11.2018:</h2> </div>
+    <?php } else if($site == 'dengimo' || $site == 'zaimcoin') { ?>
+    <div class="col-md-12"><h2 class="text-center hh hh4">Заполните заявку во всех организациях ниже и выиграйте Iphone XS. Розыгрыш 16.11.2018:</h2> </div>
 	<?php } else { ?>
-	<h2 class="text-center hh hh4">Вам доступен займ в следующих организациях:</h2>
+	<!-- <h2 class="text-center hh hh4">Вам доступен займ в следующих организациях:</h2> -->
+    <div class="col-md-12"><h2 class="text-center hh hh4">Заполните заявку во всех организациях ниже и выиграйте Iphone XS. Розыгрыш 16.11.2018:</h2> </div>
     <?php }?> 
-    <br>
+    <br><br><br>
     <div class="row" id="for_google">
     <?php 
         function plural_type($n) { 
@@ -372,5 +370,79 @@ tr>td:first-child {
     </div></div>
 </div>
 <br><br>
+<!-- Modal Iphone -->
+<a href="#" data-toggle="modal" id="modal2" data-target="#tosModal2"></a>
+<div>
+<style scoped> 
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 900px;
+        margin: 30px auto;
+    } 
+}
+<?php if ( $site == 'zaimomix' || $site == 'zaimsoon') {?>
+    .modal-dialog {
+        margin: 114px auto;
+    }
+    .col-xs-6 {
+        width: 50% !important;
+    }
+    .modal {
+        top: 50px;
+    }
+<?php } ?> 
+<?php if ( $site == 'zaimsoon') {?>
+    .col-md-3 {
+        width: 25% !important;
+    }
+<?php } ?> 
+<?php if ( $site == 'dengimo' || $site == 'dengoman' || $site == 'dengomir' || $site == 'fanzaim' || $site == 'forzaim' || $site == 'godzaim' || $site == 'rublimo' || $site == 'zaimcoin' || $site == 'zaimhome'
+|| $site == 'zaimoking' || $site == 'zaimol' || $site == 'zaimrubli') { ?> 
+@media (max-width: 740px) {
+    
+    h1.modal-title{
+        font-size: 1em;
+    }
+    div.col-md-10.col-md-offset-1 p {
+        font-size: 0.9em;
+    }
+}
+<?php } ?>
+<?php if ( $site == 'dengoman' ) { ?>
+.page h1 {
+    margin: 20px 0;
+    color: #000;
+    font-size: 1.5em;
+}
+.btn-spec, .btn-spec:hover {
+    line-height: 30px;
+}
+<?php } ?>
+</style>
+</div>
+<div class="modal fade" id="tosModal2" tabindex="-1" role="dialog" aria-labelledby="tosModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h1 class="modal-title" id="tosModalLabel">Подтвердите адрес электронной почты</h1> 
+                
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <p><span id="form_name"></span> на указанный email было отправлено письмо. Подтвердите свою почту и участвуйте в розыгрыше Iphone XS уже 16.11.2018</p>
+                        <img class='img-responsive' src="/templates/common/img/iphone2.png">
+                        </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="text-center"><button type="button" class="btn btn-primary btn-spec" data-dismiss="modal"> Закрыть </button></div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- <h3 class="text-center hh">Вам одобрили заявку и на почту прислали уникальное предложение. Воспользуйтесь им!</h3> -->
 <?php require realpath(__DIR__ . '/..').'/'.$site.'/footer.php';?>
