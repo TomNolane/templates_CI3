@@ -41,6 +41,11 @@
 ?> 
 <div>
 <style scoped>
+@font-face{font-family:"'Dosis'";src:url(/templates/common/new2/fonts/Dosis-Regular.eot);src:url(/templates/common/new2/fonts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/new2/fonts/Dosis-Regular.woff) format("woff"),url(/templates/common/new2/fonts/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
+.hh4 {
+    font-family: Dosis !important;
+    font-size: 34px;
+}
 ins, .adsbygoogle{
 	text-align: center !important;
     max-height: none !important;
@@ -91,9 +96,6 @@ tr>td:first-child {
 .imgg {
     width: 70%;
     padding: 20px;
-}
-.hh4 {
-    padding-top: 24px;
 }
 @media (max-width: 450px) {
     <?php if ( $site == 'dengomir' ) { ?>
@@ -152,16 +154,18 @@ tr>td:first-child {
 
 <div class="row container3"><div class="col-md-12">
 <?php if($site == 'www.mikrodengi' || $site == 'zaimrubli' || $site == 'zaimoking' || $site == 'mikrodengi') { ?>
-<!-- <h2 class="text-center hh" style="font-size: 26px;">Мы подобрали для Вас лучшие условия по микрозаймам! <br>
-Чтобы увеличить свои шансы на получение денег, заполните анкеты в нескольких организациях!</h2> -->
-    <div class="col-md-12"><h2 class="text-center hh hh4" style="font-size: 26px;">Заполните заявку во всех организациях ниже и выиграйте Iphone XS. Розыгрыш 16.11.2018:</h2> </div>
+  <!-- <h2 class="text-center hh" style="font-size: 26px;">Мы подобрали для Вас лучшие условия по микрозаймам! <br>
+Чтобы увеличить свои шансы на получение денег, заполните анкеты в нескольких организациях!</h2>  -->
+ <h2 class="text-center hh hh4">Вам доступен займ в следующих организациях:</h2>
+    <!-- <h2 class="text-center hh hh4" style="font-size: 26px;">Заполните заявку во всех организациях ниже и выиграйте iPhone XS. Розыгрыш через <span id="lk_timer"></span></h2>   -->
     <?php } else if($site == 'dengimo' || $site == 'zaimcoin') { ?>
-    <div class="col-md-12"><h2 class="text-center hh hh4">Заполните заявку во всех организациях ниже и выиграйте Iphone XS. Розыгрыш 16.11.2018:</h2> </div>
+    <h2 class="text-center hh hh4">Вам доступен займ в следующих организациях:</h2>
+    <!-- <h2 class="text-center hh hh4">Заполните заявку во всех организациях ниже и выиграйте iPhone XS. Розыгрыш через <span id="lk_timer"></span></h2>   -->
 	<?php } else { ?>
-	<!-- <h2 class="text-center hh hh4">Вам доступен займ в следующих организациях:</h2> -->
-    <div class="col-md-12"><h2 class="text-center hh hh4">Заполните заявку во всех организациях ниже и выиграйте Iphone XS. Розыгрыш 16.11.2018:</h2> </div>
+	<h2 class="text-center hh hh4">Вам доступен займ в следующих организациях:</h2>
+    <!-- <h2 class="text-center hh hh4">Заполните заявку во всех организациях ниже и выиграйте iPhone XS. Розыгрыш через <span id="lk_timer"></span></h2>   -->
     <?php }?> 
-    <br><br><br>
+    <br>
     <div class="row" id="for_google">
     <?php 
         function plural_type($n) { 
@@ -205,6 +209,8 @@ tr>td:first-child {
                     $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
                 else if(trim($this->input->get('campaign_id', TRUE)) != false)
                     $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
+                else if(trim($this->input->get('doi', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub3=doi';
                 else
                     $item['link'] = $item['link'].'&aff_sub3='.$domen;
 
@@ -232,6 +238,8 @@ tr>td:first-child {
                     $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
                 else if(trim($this->input->get('campaign_id', TRUE)) != false)
                     $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
+                else if(trim($this->input->get('doi', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub3=doi';
                 else
                     $item['link'] = $item['link'].'&aff_sub3='.$domen;
 
@@ -257,6 +265,8 @@ tr>td:first-child {
                     $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
                 else if(trim($this->input->get('campaign_id', TRUE)) != false)
                     $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
+                else if(trim($this->input->get('doi', TRUE)) != false)
+                    $item['link'] = $item['link'].'&aff_sub3=doi';
                 else
                     $item['link'] = $item['link'].'&aff_sub3='.$domen;
 
@@ -370,79 +380,67 @@ tr>td:first-child {
     </div></div>
 </div>
 <br><br>
-<!-- Modal Iphone -->
-<a href="#" data-toggle="modal" id="modal2" data-target="#tosModal2"></a>
-<div>
-<style scoped> 
-@media (min-width: 768px) {
-    .modal-dialog {
-        width: 900px;
-        margin: 30px auto;
-    } 
+<script>
+/*
+window.onload = function() // дожидаемся загрузки страницы
+{
+     initializeTimer(); // вызываем функцию инициализации таймера
 }
-<?php if ( $site == 'zaimomix' || $site == 'zaimsoon') {?>
-    .modal-dialog {
-        margin: 114px auto;
-    }
-    .col-xs-6 {
-        width: 50% !important;
-    }
-    .modal {
-        top: 50px;
-    }
-<?php } ?> 
-<?php if ( $site == 'zaimsoon') {?>
-    .col-md-3 {
-        width: 25% !important;
-    }
-<?php } ?> 
-<?php if ( $site == 'dengimo' || $site == 'dengoman' || $site == 'dengomir' || $site == 'fanzaim' || $site == 'forzaim' || $site == 'godzaim' || $site == 'rublimo' || $site == 'zaimcoin' || $site == 'zaimhome'
-|| $site == 'zaimoking' || $site == 'zaimol' || $site == 'zaimrubli') { ?> 
-@media (max-width: 740px) {
-    
-    h1.modal-title{
-        font-size: 1em;
-    }
-    div.col-md-10.col-md-offset-1 p {
-        font-size: 0.9em;
-    }
+
+function initializeTimer() {
+	var endDate = new Date().setHours(new Date().getHours()+3); // получаем дату истечения таймера
+    endDate = new Date(endDate).setMinutes(new Date().getMinutes()-25);
+     endDate = new Date(endDate).setSeconds(new Date().getSeconds()-47);
+	var currentDate = new Date(); // получаем текущую дату
+	var seconds = (endDate-currentDate) / 1000; // определяем количество секунд до истечения таймера
+	if (seconds > 0) { // проверка - истекла ли дата обратного отсчета
+		var minutes = seconds/60; // определяем количество минут до истечения таймера
+		var hours = minutes/60; // определяем количество часов до истечения таймера
+		minutes = (hours - Math.floor(hours)) * 60; // подсчитываем кол-во оставшихся минут в текущем часе
+		hours = Math.floor(hours); // целое количество часов до истечения таймера
+		seconds = Math.floor((minutes - Math.floor(minutes)) * 60); // подсчитываем кол-во оставшихся секунд в текущей минуте
+		minutes = Math.floor(minutes); // округляем до целого кол-во оставшихся минут в текущем часе
+		
+		setTimePage(hours,minutes,seconds); // выставляем начальные значения таймера
+		
+		function secOut() {
+		  if (seconds == 0) { // если секунду закончились то
+			  if (minutes == 0) { // если минуты закончились то
+				  if (hours == 0) { // если часы закончились то
+					  showMessage(timerId); // выводим сообщение об окончании отсчета
+				  }
+				  else {
+					  hours--; // уменьшаем кол-во часов
+					  minutes = 59; // обновляем минуты 
+					  seconds = 59; // обновляем секунды
+				  }
+			  }
+			  else {
+				  minutes--; // уменьшаем кол-во минут
+				  seconds = 59; // обновляем секунды
+			  }
+		  }
+		  else {
+			  seconds--; // уменьшаем кол-во секунд
+		  }
+		  setTimePage(hours,minutes,seconds); // обновляем значения таймера на странице
+		}
+		timerId = setInterval(secOut, 1000) // устанавливаем вызов функции через каждую секунду
+	}
+	else {
+		alert("Установленная дата уже прошла");
+	}
 }
-<?php } ?>
-<?php if ( $site == 'dengoman' ) { ?>
-.page h1 {
-    margin: 20px 0;
-    color: #000;
-    font-size: 1.5em;
+
+function setTimePage(h,m,s) { // функция выставления таймера на странице
+	var element = document.getElementById("lk_timer"); // находим элемент с id = timer
+	element.innerHTML = h+":"+m+":"+s; // выставляем новые значения таймеру на странице
 }
-.btn-spec, .btn-spec:hover {
-    line-height: 30px;
+
+function showMessage(timerId) { // функция, вызываемая по истечению времени
+	alert("Время истекло!");
+	clearInterval(timerId); // останавливаем вызов функции через каждую секунду
 }
-<?php } ?>
-</style>
-</div>
-<div class="modal fade" id="tosModal2" tabindex="-1" role="dialog" aria-labelledby="tosModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h1 class="modal-title" id="tosModalLabel">Подтвердите адрес электронной почты</h1> 
-                
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <p><span id="form_name"></span> на указанный email было отправлено письмо. Подтвердите свою почту и участвуйте в розыгрыше Iphone XS уже 16.11.2018</p>
-                        <img class='img-responsive' src="/templates/common/img/iphone2.png">
-                        </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="text-center"><button type="button" class="btn btn-primary btn-spec" data-dismiss="modal"> Закрыть </button></div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- <h3 class="text-center hh">Вам одобрили заявку и на почту прислали уникальное предложение. Воспользуйтесь им!</h3> -->
+*/
+</script>
 <?php require realpath(__DIR__ . '/..').'/'.$site.'/footer.php';?>

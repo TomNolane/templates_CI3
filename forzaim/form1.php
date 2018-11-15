@@ -87,13 +87,12 @@
                     </div>
                 </div>
                 <!-- Скрываем старую форму даты рождения -->
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="birthdate">Дата рождения</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
-                            <input type="tel" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
-                                data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения"
-                                required>
+                            <input type="tel" class="form-control ec tip" value="06/02/2000" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
+                                data-validation="custom" data-validation-regexp="^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" data-validation-error-msg="Выберите дату рождения">
                                 <p class="help-block2"></p>
                                 <p class="text-muted helpblock">Пример: 06/02/2000</p>
                         </div>

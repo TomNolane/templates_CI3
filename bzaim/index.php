@@ -58,8 +58,7 @@
 </div>
 <div class="ex-get-money">
     <div class="container">
-        <div class="row">
-            <a class="anchor" name="id2"></a>
+        <div class="row"> 
             <h1 class="hidden-xs hidden-sm visible-md visible-lg">Как получить деньги сейчас?</h1> 
 			<h2 class="hidden-md hidden-lg visible-xs visible-sm special_ind42">Как получить деньги сейчас?</h2> 
             <?php
@@ -139,8 +138,7 @@
                     <h3>Получите деньги</h3>
                     <p>На карту VISA, MAESTRO, QIWI кошелёк, Яндекс.Деньги, через систему CONTACT, банковский счёт</p>
                 </div>
-            </div>
-            <a class="anchor" name="id3"></a>
+            </div> 
 			<div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm special_ind34">
                 <div class="ex-get-money-steps special_ind35">
                     
@@ -215,8 +213,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <a class="anchor" name="id4"></a>
+                </div> 
                 <div class="ex-info-block hidden-xs hidden-sm">
                     <h3>Документы и разрешительная документация</h3>
                     <p>Услуги на проекте «Сервис» оказываются юридическим лицом ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001.
@@ -254,5 +251,4 @@
         </div>
     </div>
 </div>
-<a class="anchor" name="id5"></a>
 <?php include 'footer.php';?>

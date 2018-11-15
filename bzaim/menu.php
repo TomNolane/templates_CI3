@@ -1,8 +1,7 @@
 <header>
     <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header">
         <div class="container">
-            <div class="navbar-header">
-                <a class="anchor" name="id1"></a>
+            <div class="navbar-header"> 
                 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>

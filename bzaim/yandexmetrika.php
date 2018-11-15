@@ -1,5 +1,5 @@
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
+<script>
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function () {
             try {
@@ -29,7 +29,7 @@
 </script>
 <noscript>
     <div>
-        <img src="https://mc.yandex.ru/watch/35589670" style="position:absolute; left:-9999px;" alt="mc.yandex.ru/watch" />
+        <img src="https://mc.yandex.ru/watch/35589670" style="position:absolute; left:-9999px;" alt="mc.yandex.ru" />
     </div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
