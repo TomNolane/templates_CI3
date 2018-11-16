@@ -267,7 +267,7 @@ h3 {
                                 <label class="control-label col-md-3 hidden-xs" for="email">Email</label>
                                 <div class="col-md-7 col-xs-12">
                                     <div class="ex-wrapper">
-                                        <input type="email" class="form-control pulse ec tip special_form" name="email" id="email" title="Укажите свой email адрес" placeholder="Email"
+                                        <input type="email" class="form-control pulse ec tip special_form" name="email" id="email" title="Укажите свой email адрес" placeholder="Пример: email@mail.ru"
                                             data-validation="email" data-validation-error-msg="Укажите свой email" required>
                                             <p class="help-block2"></p>
                                             <p class="text-muted helpblock hidden-xs hidden-sm">Пример: email@mail.ru</p>

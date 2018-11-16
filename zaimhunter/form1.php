@@ -91,7 +91,7 @@
                 <p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
             </div>
             <div class="form-group has-feedback">
-                <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Введите свой email адрес" placeholder="Email"
+                <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Введите свой email адрес" placeholder="Пример: email@mail.ru"
 			    title="Email" data-validation="email" required>
 		        <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> 
             </div>

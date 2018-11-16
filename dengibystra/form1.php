@@ -149,7 +149,7 @@
                             required>
                         <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2"></p>
-                        <p class="text-muted helpblock">Пример: email@mail.ru</p>
+                        <p class="text-muted helpblock">Проверьте почту. Письмо могло попасть в папку "СПАМ"</p>
                     </div>
                 </div>
                 <div class="col-sm-12">

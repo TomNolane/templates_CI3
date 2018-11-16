@@ -1,318 +1,45 @@
-<?php require 'header.php'; ?>
+<?php 
+    require 'header.php';
+    $this->load->model('offers/offers_model', 'offers');
+    $data = $this->offers->all(12);
+?>
 <main>
     <div class="ex-offers-section">
         <div class="container">
             <h2>MONEYSHARE - БЫСТРЫЕ ОНЛАЙН-ЗАЙМЫ НА КАРТУ В РОССИИ</h2>
-            <p>РЕКОМЕНДУЕМ ЗАПОЛНИТЬ МАКСИМАЛЬНОЕ КОЛИЧЕСТВО ЗАЯВОК, ТЕМ САМЫМ</p>
+            <p>РЕКОМЕНДУЕМ ЗАПОЛНИТЬ МАКСИМАЛЬНОЕ КОЛИЧЕСТВО ЗАЯВОК, ТЕМ САМЫМ ВЫ УВЕЛИЧИТЕ СВОИ ШАНСЫ НА ПОЛУЧЕНИЕ КРЕДИТА ДО 100%</p>
             <div class="row">
-                <div class="col-md-3">
-                    <div class="ex-offers-block ex-orange-border">
-                        <div class="ex-off-img">
-                            <img src="/templates/moneyshare/assets/img/1.png" alt="1.png">
-                        </div>
-                        <div class="ex-off-body">
-                            <figure>
-                                ЛУЧШЕЕ ПРЕДЛОЖЕНИЕ
-                            </figure>
-                            <ul class="ex-off-content">
-                                <li>
-                                    <i class="money-bag"></i>до 15000 руб.</li>
-                                <li>
-                                    <i class="percent "></i>от 0.25 % в день</li>
-
-                                <li>
-                                    <i class="money"></i>около 30 минут</li>
-                            </ul>
-                            <div class="ex-action">
-                                <a href="https://go.leadgid.ru/aff_c?offer_id=1625&aff_id=23263&aff_sub=bzaim5.ru&aff_sub2=moneyshare.ru" target="_blank">
-                                    <button class="ex-main-btn">Получить деньги</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="ex-offers-block ex-orange-border">
-                        <div class="ex-off-img">
-                            <img src="/templates/moneyshare/assets/img/2.png" alt="img/2.png">
-                        </div>
-                        <div class="ex-off-body">
-                            <figure>
-                                МГНОВЕННОЕ РЕШЕНИЕ
-                            </figure>
-                            <ul class="ex-off-content">
-                                <li>
-                                    <i class="money-bag"></i>до 30000 руб.</li>
-                                <li>
-                                    <i class="percent "></i>от 0.2 % в день</li>
-
-                                <li>
-                                    <i class="money"></i>около 30 минут</li>
-                            </ul>
-                            <div class="ex-action">
-                                <a href="https://go.leadgid.ru/aff_c?offer_id=3285&aff_id=23263&aff_sub=bzaim5.ru_sub2=moneyshare.ru" target="_blank">
-                                    <button class="ex-main-btn">Получить деньги</button>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-3">
-                    <div class="ex-offers-block ex-orange-border">
-                        <div class="ex-off-img">
-                            <img src="/templates/moneyshare/assets/img/3.png" alt="3.png">
-                        </div>
-                        <div class="ex-off-body">
-                            <figure>
-                                ЛУЧШЕЕ ОДОБРЕНИЕ
-                            </figure>
-                            <ul class="ex-off-content">
-                                <li>
-                                    <i class="money-bag"></i>до 30000 руб.</li>
-                                <li>
-                                    <i class="percent "></i>от 0.32 % в день</li>
-
-                                <li>
-                                    <i class="money"></i>около 30 минут</li>
-                            </ul>
-                            <div class="ex-action">
-                                <a href="https://pxl.leads.su/click/4913c6dba4e609f7e6e739d29342349b?aff_sub1=moneyshare.ru" target="_blank">
-                                    <button class="ex-main-btn">Получить деньги</button>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-3">
-                    <div class="ex-offers-block ex-orange-border">
-                        <div class="ex-off-img">
-                            <img src="/templates/moneyshare/assets/img/4.png" alt="4.png">
-                        </div>
-                        <div class="ex-off-body ">
-                            <figure>
-                                ДЕНЬГИ СРАЗУ
-                            </figure>
-                            <ul class="ex-off-content">
-                                <li>
-                                    <i class="money-bag"></i>до 100000 руб.</li>
-                                <li>
-                                    <i class="percent "></i>от 0.31 % в день</li>
-
-                                <li>
-                                    <i class="money"></i>около 30 минут</li>
-                            </ul>
-                            <div class="ex-action">
-                                <a href="https://pxl.leads.su/click/82df65f049bab0129c4b793ad54b4047?aff_sub1=moneyshare.ru" target="_blank">
-                                    <button class="ex-main-btn">Получить деньги</button>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-3">
-                    <div class="ex-offers-block ex-green-border">
-                        <div class="ex-off-img">
-                            <img src="/templates/moneyshare/assets/img/5.png" alt="5.png">
-                        </div>
-                        <div class="ex-off-body">
-                            <ul class="ex-off-content">
-                                <li>
-                                    <i class="money-bag"></i>до 70000 руб.</li>
-                                <li>
-                                    <i class="percent "></i>от 0.5 % в день</li>
-
-                                <li>
-                                    <i class="money"></i>около 30 минут</li>
-                            </ul>
-                            <div class="ex-action">
-                                <a href="https://pxl.leads.su/click/808b2dfdcd439ebcb3aa4befe32b3059?aff_sub1=moneyshare" target="_blank">
-                                    <button class="ex-main-btn">Получить деньги</button>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-3">
-                    <div class="ex-offers-block ex-green-border">
-                        <div class="ex-off-img">
-                            <img src="/templates/moneyshare/assets/img/6.png" alt="6.png">
-                        </div>
-                        <div class="ex-off-body">
-                            <ul class="ex-off-content">
-                                <li>
-                                    <i class="money-bag"></i>до 25000 руб.</li>
-                                <li>
-                                    <i class="percent "></i>от 0.95 % в день</li>
-
-                                <li>
-                                    <i class="money"></i>около 30 минут</li>
-                            </ul>
-                            <div class="ex-action">
-                                <a href="https://go.leadgid.ru/aff_c?offer_id=2179&aff_id=23263&aff_sub=bzaim5.ru&aff_sub2=moneyshare.ru" target="_blank">
-                                    <button class="ex-main-btn">Получить деньги</button>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-3">
-                    <div class="ex-offers-block ex-green-border">
-                        <div class="ex-off-img">
-                            <img src="/templates/moneyshare/assets/img/7.png" alt="7.png">
-                        </div>
-                        <div class="ex-off-body ">
-                            <ul class="ex-off-content">
-                                <li>
-                                    <i class="money-bag"></i>до 60000 руб.</li>
-                                <li>
-                                    <i class="percent "></i>от 1.1 % в день</li>
-
-                                <li>
-                                    <i class="money"></i>около 30 минут</li>
-                            </ul>
-                            <div class="ex-action">
-                                <a href="https://go.leadgid.ru/aff_c?offer_id=2635&aff_id=23263&aff_sub=bzaim5.ru&aff_sub2=moneyshare.ru" target="_blank">
-                                    <button class="ex-main-btn">Получить деньги</button>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-3">
-                    <div class="ex-offers-block ex-green-border">
-                        <div class="ex-off-img">
-                            <img src="/templates/moneyshare/assets/img/8.png" alt="8.png">
-                        </div>
-                        <div class="ex-off-body">
-                            <ul class="ex-off-content">
-                                <li>
-                                    <i class="money-bag"></i>до 15000 руб.</li>
-                                <li>
-                                    <i class="percent "></i>от 0.9 % в день</li>
-
-                                <li>
-                                    <i class="money"></i>около 30 минут</li>
-                            </ul>
-                            <div class="ex-action">
-                                <a href="https://pxl.leads.su/click/af270b2716d45fb6aa83dea0366eba8c?aff_sub1=moneyshare.ru" target="_blank">
-                                    <button class="ex-main-btn">Получить деньги</button>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-3">
-                    <div class="ex-offers-block ex-green-border">
-                        <div class="ex-off-img">
-                            <img src="/templates/moneyshare/assets/img/9.png" alt="9.png">
-                        </div>
-                        <div class="ex-off-body">
-                            <ul class="ex-off-content">
-                                <li>
-                                    <i class="money-bag"></i>до 15000 руб.</li>
-                                <li>
-                                    <i class="percent "></i>от 1.2 % в день</li>
-
-                                <li>
-                                    <i class="money"></i>около 30 минут</li>
-                            </ul>
-                            <div class="ex-action">
-                                <a href="https://pxl.leads.su/click/0d0fe90392e40473a476c86e9b489d33?aff_sub1=mo" target="_blank">
-                                    <button class="ex-main-btn">Получить деньги</button>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-3">
-                    <div class="ex-offers-block ex-green-border">
-                        <div class="ex-off-img">
-                            <img src="/templates/moneyshare/assets/img/10.png" alt="10.png">
-                        </div>
-                        <div class="ex-off-body">
-                            <ul class="ex-off-content">
-                                <li>
-                                    <i class="money-bag"></i>до 15000 руб.</li>
-                                <li>
-                                    <i class="percent "></i>от 0.5 % в день</li>
-
-                                <li>
-                                    <i class="money"></i>около 30 минут</li>
-                            </ul>
-                            <div class="ex-action">
-                                <a href="https://pxl.leads.su/click/96823bff62a10bd6dc7b31b3b9426569?aff_sub1=mo" target="_blank">
-                                    <button class="ex-main-btn">Получить деньги</button>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-3">
-                    <div class="ex-offers-block ex-green-border">
-                        <div class="ex-off-img">
-                            <img src="/templates/moneyshare/assets/img/11.png" alt="11.png">
-                        </div>
-                        <div class="ex-off-body">
-                            <ul class="ex-off-content">
-                                <li>
-                                    <i class="money-bag"></i>до 15000 руб.</li>
-                                <li>
-                                    <i class="percent "></i>от 0.84 % в день</li>
-
-                                <li>
-                                    <i class="money"></i>около 30 минут</li>
-                            </ul>
-                            <div class="ex-action">
-                                <a href="https://pxl.leads.su/click/3e6e383015ab0ffc25aceeb2fb2477bb?aff_sub1=moneyshare.ru" target="_blank">
-                                    <button class="ex-main-btn">Получить деньги</button>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-3">
-                    <div class="ex-offers-block ex-green-border">
-                        <div class="ex-off-img">
-                            <img src="/templates/moneyshare/assets/img/12.png" alt="12.png">
-                        </div>
-                        <div class="ex-off-body ">
-                            <ul class="ex-off-content">
-                                <li>
-                                    <i class="money-bag"></i>до 12000 руб.</li>
-                                <li>
-                                    <i class="percent "></i>от 0.57 % в день</li>
-
-                                <li>
-                                    <i class="money"></i>около 30 минут</li>
-                            </ul>
-                            <div class="ex-action">
-                                <a href="https://pxl.leads.su/click/eeaeebd943eb5d2a859e8cd5afd434ee?aff_sub1=mon" target="_blank">
-                                    <button class="ex-main-btn">Получить деньги</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    foreach($data as $item){
+                        $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
+                        $item['link'] = str_replace("#site", $domen, $item['link']);
+                        $item['link'] = str_replace("aff_sub1=bzaim5.ru", "aff_sub1=moneyshare.ru", $item['link']);
+                        echo '
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="ex-offers-block ex-orange-border">
+                                        <div class="ex-off-img">
+                                            <img src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['img'].'.png">
+                                        </div>
+                                        <div class="ex-off-body">
+                                            <figure>
+                                                '.$item['subtitle'].'
+                                            </figure>
+                                            <ul class="ex-off-content">
+                                                <li><i class="money-bag"></i>до '.$item['amount'].' руб.</li>
+                                                <li><i class="percent"></i>от '.$item['percent'].' % в день</li>
+                                                <li><i class="money"></i>от '.$item['min_year'].' до '.$item['max_year'].' лет</li>
+                                            </ul>
+                                            <div class="ex-action">
+                                                <a href="'.$item['link'].'" target="_blank">
+                                                    <button class="ex-main-btn">Получить деньги</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        ';
+                    }
+                ?>
             </div>
             <div class="ex-advertising">
                 <p style="text-align: center;">Подпишись на рассылку*</p>
@@ -343,6 +70,17 @@
                 </div>
                 <p class="ex-email ex-int">*На указанную электронную почту вам будут приходить оповещения с лучшими условиями кредитования. Вы не пропустите
                     интересные и выгодные предложения!</p>
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- moneyshare.ru -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-4970738258373085"
+                        data-ad-slot="5821870539"
+                        data-ad-format="auto"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+
             </div>
         </div>
     </div>
@@ -385,6 +123,15 @@
             <div class="ex-art-block">
                 <h3>ПСК (полная стоимость кредита) в процентах составляет 365% годовых.</h3>
             </div>
+            <!-- moneyshare.ru -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4970738258373085"
+                data-ad-slot="5821870539"
+                data-ad-format="auto"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
     </div>
     <div class="ex-card">
@@ -420,7 +167,7 @@
                     интересные и выгодные предложения!</p>
             </div>
             <h2>Информация о кредиторах, представленных на сайте.</h2>
-            <h3>subtitle</h3>
+            <h3></h3>
             <div class="row text-center">
                 <div class="col-md-6">
                     <div class="ex-card-block ex-green-border">
@@ -686,5 +433,25 @@
         </div>
     </div>
 </main>
-<div id="ex-up-button"></div>
+<div id="ex-up-button"></div> 
+<!-- Google Code for  
+&#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
+Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 811797469;
+var google_conversion_label = "XcaKCOHhlX8Q3ZeMgwM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript"  
+src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt=""  
+src="//www.googleadservices.com/pagead/conversion/811797469/?label=XcaKCOHhlX8Q3ZeMgwM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
 <?php require 'footer.php';  ?>

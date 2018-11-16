@@ -113,7 +113,7 @@
                             <label class="control-label col-md-4" for="email">Email</label>
                             <div class="col-md-8">
                                 <div class="ex-wrapper">
-                                    <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Введите свой email адрес" placeholder="Email"
+                                    <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Введите свой email адрес" placeholder="Пример: email@mail.ru"
                                         data-validation="email" data-validation-error-msg="Введите свой email" required>
                                 </div>
                             </div>

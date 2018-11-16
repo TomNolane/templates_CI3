@@ -127,7 +127,7 @@
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow">
 			<input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Пожалуйста, введите свой email адрес"
-			    placeholder="Email" title="Email" data-validation="email" data-validation-error-msg="Пожалуйста, введите email" required>
+			    placeholder="Пример: email@mail.ru" title="Email" data-validation="email" data-validation-error-msg="Пожалуйста, введите email" required>
 			<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <p class="help-block2"></p>
             <p class="text-muted helpblock">Пример: email@mail.ru</p>

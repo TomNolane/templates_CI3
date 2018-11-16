@@ -105,7 +105,7 @@
                                 <input type="hidden" class="form-control" id="feedback-phone" title="Телефон">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" id="feedback-email" placeholder="Email" title="Email" required>
+                                <input type="email" class="form-control" id="feedback-email" placeholder="Пример: email@mail.ru" title="Email" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" id="feedback-comment" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"

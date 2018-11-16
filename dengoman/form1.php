@@ -141,11 +141,11 @@
 	<label class="col-sm-4 control-label label-required hidden-xs">Почта</label>
 	<div class="col-sm-8 col-xs-12">
 		<div class="shadow ">
-			<input type="email" class="form-control ec tip" name="email" id="email" placeholder="Email" title="Укажите свой email адрес"
+			<input type="email" class="form-control ec tip" name="email" id="email" placeholder="Пример: email@mail.ru" title="Укажите свой email адрес"
 			    data-validation-error-msg="Укажите email" data-validation="email" required>
 			<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2"></p>
-			<p class="text-muted helpblock">Пример: email@mail.ru</p>
+			<p class="text-muted helpblock">Проверьте почту. Письмо могло попасть в папку "СПАМ"</p>
 		</div>
 	</div>
 </div>

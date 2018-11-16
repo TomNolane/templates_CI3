@@ -120,7 +120,7 @@
                     <div class="ex-wrapper">
                         <input type="email" class="form-control ec tip special_form" name="email" id="email" placeholder="Электронная почта" >
                         <div><p class="help-block2"></p>
-                        <p class="text-muted text-right">Пример: email@mail.ru</p></div>
+                        <p class="text-muted text-right">Проверьте почту. Письмо могло попасть в папку "СПАМ"</p></div>
                     </div>
                 </div>
             </div>

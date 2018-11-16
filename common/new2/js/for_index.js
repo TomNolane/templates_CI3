@@ -14,9 +14,7 @@ var fingerprint0 = $("#fingerprint").val(), ip = $("#ip").val(), my_timer = 0; $
 });
 function start_check() {
     if (document.querySelector('#fingerprint')) {
-        // console.log('test finger');
         if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || document.querySelector('#fingerprint').value == '') {
-            //
             if (document.location.host == 'rublimo.ru' || document.location.host == 'zaimhome.ru') {
                 send_clickfrod();
                 window.location.href = 'https://moneyshare.ru?utm=clickfrods';

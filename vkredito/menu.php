@@ -51,7 +51,7 @@
                             <input type="hidden" class="form-control input-lg" id="feedback-phone" name="feedback-phone" value="89117876655">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control input-lg" id="feedback-email" name="feedback-email" placeholder="Email" title="Email" required>
+                            <input type="email" class="form-control input-lg" id="feedback-email" name="feedback-email" placeholder="Пример: email@mail.ru" title="Email" required>
                         </div>
                         <br>
                         <div class="form-group">

@@ -224,7 +224,7 @@ require 'header.php';
                             <input type="text" id="feedback-name2" placeholder="Имя" title="Имя" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="feedback-email2" placeholder="Email" title="Email" required>
+                            <input type="email" id="feedback-email2" placeholder="Пример: email@mail.ru" title="Email" required>
                         </div> 
                         <!-- Hidde this block -->
                         <div class="form-group hidden">

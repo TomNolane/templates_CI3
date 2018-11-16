@@ -62,7 +62,7 @@
                                 <input type="tel" class="form-control input-lg" id="feedback-phone" placeholder="Телефон" title="Телефон" value="79777777736">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control input-lg" id="feedback-email" placeholder="Email" title="Email" required>
+                                <input type="email" class="form-control input-lg" id="feedback-email" placeholder="Пример: email@mail.ru" title="Email" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control input-lg" id="feedback-comment" rows="3" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"

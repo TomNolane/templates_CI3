@@ -106,7 +106,7 @@
     <label class="control-label col-md-4" for="email">Почта</label>
     <div class="col-md-6">
         <div class="ex-wrapper">
-             <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Введите свой email адрес" placeholder="Email" data-validation="email" data-validation-error-msg="Укажите ваш email" required>
+             <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Введите свой email адрес" placeholder="Пример: email@mail.ru" data-validation="email" data-validation-error-msg="Укажите ваш email" required>
             <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <p class="help-block2"></p>
             <p class="text-muted text-right">Пример: email@mail.ru</p>

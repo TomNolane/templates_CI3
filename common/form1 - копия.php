@@ -67,7 +67,7 @@
 </div>
 <div class="form-group">
 	<div class="input-group">
-		<input type="email" class="form-control" name="email" placeholder="Email" title="Email" required>
+		<input type="email" class="form-control" name="email" placeholder="Пример: email@mail.ru" title="Email" required>
 		<div class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></div>
 	</div>
 </div>

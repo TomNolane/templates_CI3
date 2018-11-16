@@ -124,7 +124,38 @@ function CheckTime2()
         return false;
     }
 }
- 
+
+if (document.querySelector("#agree") != null && document.querySelector("#marketing") != null) {
+    document.querySelector("#agree").addEventListener('click', function () {
+        if (document.querySelector('#agree').checked && document.querySelector('#marketing').checked) {
+            if (document.querySelector('#next1') != null)
+                document.querySelector('#next1').style.visibility = 'visible';
+            else if (document.querySelector('#next1f') != null)
+                document.querySelector('#next1f').style.visibility = 'visible';
+        } else {
+            if (document.querySelector('#next1') != null)
+                document.querySelector('#next1').style.visibility = 'hidden';
+            else if (document.querySelector('#next1f') != null)
+                document.querySelector('#next1f').style.visibility = 'hidden';
+        }
+    }, false);
+
+    document.querySelector("#marketing").addEventListener('click', function () {
+        if (document.querySelector('#agree').checked && document.querySelector('#marketing').checked) {
+            if (document.querySelector('#next1') != null)
+                document.querySelector('#next1').style.visibility = 'visible';
+            else if (document.querySelector('#next1f') != null)
+                document.querySelector('#next1f').style.visibility = 'visible';
+            else if (document.querySelector('#next1ff') != null)
+                document.querySelector('#next1ff').style.visibility = 'visible';
+        } else {
+            if (document.querySelector('#next1') != null)
+                document.querySelector('#next1').style.visibility = 'hidden';
+            else if (document.querySelector('#next1f') != null)
+                document.querySelector('#next1f').style.visibility = 'hidden';
+        }
+    }, false);
+}
 var re = /^[а-яА-Я0-9\/]+$/i;
 var re_rc = /^[а-яА-Яё,\W\.\s-]+$/i;
 var re_email = /^[A-Z0-9._%+-]+(@mail.ru|@bk.ru|@inbox.ru|@list.ru|@yandex.ru|@ya.ru|@gmail.com|@rambler.ru|@mail.ua)$/i;
@@ -827,8 +858,8 @@ $(document).ready(function () {
             return;
         if (valid) { 
             
-            /*
-            if (this.name == 'email' && (document.location.host == 'dengimo.ru' || document.location.host == 'zaimcoin.ru')) {
+            
+            if (this.name == 'email' && (document.location.host == 'vkredito.ru' || document.location.host == 'rublimo.ru')) {
                 if($('#i').val() != '' && $('#o').val() != '')
                 {
                     $("#form_name").text($('#i').val() + ' ' + $('#o').val() + ', вам');
@@ -836,9 +867,10 @@ $(document).ready(function () {
                 else
                     $("#form_name").text('Вам');
                 
-                $("#modal2").click();
+                // $("#modal2").click();
+                showModal();
             }  
-            */
+            
            
             if(this.name == 'birthdate')
             {    
