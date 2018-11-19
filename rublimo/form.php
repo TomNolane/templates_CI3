@@ -245,7 +245,7 @@ include "header.php";
 			</div>
 		</div>
 	</div>
-	<!--Start of Modal --> 
+<!--Start of Modal --> 
 <div class="modal__popup">
     <input id="modal__trigger" type="checkbox" />
     <label for="modal__trigger"></label>

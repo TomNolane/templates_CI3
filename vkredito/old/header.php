@@ -1,5 +1,4 @@
 <?php 
-require 'templates/common/new2/php/check_bot.php';
 if(!isset($my_title)) 
 	$my_title = 'Срочные займы круглосуточно без проверок Онлайн';
 
@@ -22,7 +21,4 @@ if(!isset($description))
     <![endif]-->  
 </head>
 <body>
-<?php 
-require 'templates/common/new2/php/modal.php';
-require 'menu.php';
-?>
+<?php require 'menu.php';?>

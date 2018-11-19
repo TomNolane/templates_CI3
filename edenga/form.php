@@ -44,7 +44,9 @@ include "templates/common/new2/php/form_header.php";
 include "header.php";
 
 include 'simple-php-captcha.php';
-session_start(); 
+if(session_id() == '') {
+    session_start();
+}
 $_SESSION['captcha'] = simple_php_captcha( array(
     'min_length' => 4,
     'max_length' => 6, 

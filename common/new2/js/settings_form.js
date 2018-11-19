@@ -859,7 +859,8 @@ $(document).ready(function () {
         if (valid) { 
             
             
-            if (this.name == 'email' && (document.location.host == 'vkredito.ru' || document.location.host == 'rublimo.ru')) {
+            if (this.name == 'email' && (document.location.host == 'vkredito.ru' || document.location.host == 'rublimo.ru' || document.location.host == 'edenga.ru' || document.location.host == 'zaimhome.ru')) {
+                
                 if($('#i').val() != '' && $('#o').val() != '')
                 {
                     $("#form_name").text($('#i').val() + ' ' + $('#o').val() + ', вам');
