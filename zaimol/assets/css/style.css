@@ -10740,7 +10740,7 @@ button.close {
 /* line 278, ../sass/library/_ionRangeSlider.scss */
 .irs {
   position: relative;
-  z-index: 9999;
+  z-index: 300;
   bottom: 11px;
   height: 30px;
 }
@@ -11145,7 +11145,7 @@ aside.ex-aside-menu {
   max-width: 300px;
   width: 100%;
   top: 0;
-  z-index: 99999;
+  z-index: 3009;
   overflow-y: auto;
   -moz-transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
@@ -11315,7 +11315,7 @@ main.ex-main-counter .ex-borrow-selector:after {
 /* line 45, ../sass/desktop/_counter.scss */
 main.ex-main-counter .ex-borrow-selector .ex-slider-val {
   position: relative;
-  z-index: 9999;
+  z-index: 300;
   color: #ffffff;
   text-align: right;
   margin-top: 35px;
@@ -11347,7 +11347,7 @@ main.ex-main-counter .ex-borrow-selector .ex-slider-val {
 /* line 70, ../sass/desktop/_counter.scss */
 main.ex-main-counter .ex-borrow-selector .ex-val-static {
   position: relative;
-  z-index: 9999;
+  z-index: 300;
   color: #ffffff;
   text-align: right;
   margin-top: 35px;
@@ -11364,7 +11364,7 @@ main.ex-main-counter .ex-borrow-selector .ex-main-btn {
   width: 100%;
   max-width: 408px;
   position: relative;
-  z-index: 9999;
+  z-index: 300;
   margin-top: 25px;
 }
 @media (max-width: 767px) {
@@ -12065,7 +12065,7 @@ main.ex-main-counter .ex-draft .ex-wrapper p {
 /* line 444, ../sass/desktop/_homepage.scss */
 .ex-section-5 .ex-main-counter .ex-val-static {
   position: relative;
-  z-index: 9999;
+  z-index: 300;
   color: #ffffff;
   text-align: right;
   margin-top: 35px;
@@ -12632,7 +12632,7 @@ section.ex-single-article aside .irs .irs-bar {
 }
 /* line 159, ../sass/desktop/_articles.scss */
 section.ex-single-article aside .irs .irs-slider {
-  z-index: 9999;
+  z-index: 300;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.27);
   border: 1px solid #252525;
 }
@@ -12806,7 +12806,7 @@ section.ex-single-article aside .ex-main-btn {
 
 /* line 1, ../sass/desktop/_modal.scss */
 #askQuestion {
-  z-index: 999999;
+  z-index: 300;
 }
 /* line 3, ../sass/desktop/_modal.scss */
 #askQuestion .modal-dialog {
@@ -13273,7 +13273,7 @@ section.ex-single-article aside .ex-main-btn {
 /* line 278, ../sass/desktop/_form.scss */
 .tab-content .ex-main-form aside .irs .irs-slider {
   border: none;
-  z-index: 9999;
+  z-index: 300;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.27);
 }
 @media (max-width: 991px) {

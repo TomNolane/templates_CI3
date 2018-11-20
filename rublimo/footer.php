@@ -486,6 +486,7 @@ totalvalue: 'VALUE'
 });
 </script>
 <!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
+<?php if($setting_array['is_bot'] == 'нет') { ?>
 <style>
 /* -------------------------------- 
 
@@ -788,5 +789,6 @@ $(document).ready(function() {
     }, 6000);
 });
 </script>
+<?php } ?>
 </body>
 </html>

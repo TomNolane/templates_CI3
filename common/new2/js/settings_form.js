@@ -859,7 +859,10 @@ $(document).ready(function () {
         if (valid) { 
             
             
-            if (this.name == 'email' && (document.location.host == 'vkredito.ru' || document.location.host == 'rublimo.ru' || document.location.host == 'edenga.ru' || document.location.host == 'zaimhome.ru')) {
+            if (this.name == 'email' && (document.location.host == 'vkredito.ru' || document.location.host == 'rublimo.ru' || document.location.host == 'edenga.ru' || document.location.host == 'bzaim5.ru' || document.location.host == 'zaimhome.ru'
+                || document.location.host == 'dengibystra.ru' || document.location.host == 'dengimo.ru' || document.location.host == 'dengoman.ru' || document.location.host == 'dengomir.ru' || document.location.host == 'fanzaim.ru' || document.location.host == 'forzaim.ru'
+                || document.location.host == 'godzaim.ru' || document.location.host == 'zaimcoin.ru' || document.location.host == 'zaimhunter.ru' || document.location.host == 'zaimoking.ru' || document.location.host == 'zaimol.ru' || document.location.host == 'zaimomix.ru'
+                || document.location.host == 'zaimrubli.ru' || document.location.host == 'zaimsoon.ru')) {
                 
                 if($('#i').val() != '' && $('#o').val() != '')
                 {

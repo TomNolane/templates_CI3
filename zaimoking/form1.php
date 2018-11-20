@@ -118,7 +118,8 @@
                 <label class="control-label col-md-4" for="email">Email</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
-                        <input type="email" class="form-control ec tip special_form" name="email" id="email" placeholder="Электронная почта" >
+                         <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Пожалуйста, введите свой email адрес" placeholder="Пример: email@mail.ru"
+                    title="Email" data-validation="email"  data-validation-error-msg="Пожалуйста, введите свой email" required>
                         <div><p class="help-block2"></p>
                         <p class="text-muted text-right">Проверьте почту. Письмо могло попасть в папку "СПАМ"</p></div>
                     </div>

@@ -63,7 +63,7 @@
                         <button class="ex-orange-btn"  type="submit" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;Получить деньги&nbsp;&nbsp;&nbsp;</button> 
                     </div>
                     <div class="col-md-12 text-center spec_index"> 
-                        <p class="color-black">Оставь заявку и участвуй в розыгрыше Iphone XS 16.11.2018</p>
+                        <!-- <p class="color-black">Оставь заявку и участвуй в розыгрыше Iphone XS 16.11.2018</p> -->
                     </div>
                 </div>
             </div>

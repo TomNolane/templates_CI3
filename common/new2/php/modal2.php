@@ -8,10 +8,11 @@
           <hr class="hr_black">
           
             <p class="text" id="modal__desc"><span id="form_name"></span> на указанный email было отправлено письмо.</p>
-          <p class="text2">Подтвердите свою почту и учавствуйте в розыгрыше iPhone XS уже сегодня</p>
+          <p class="text2">Подтвердите свою почту и учавствуйте в розыгрыше iPhone XS <span id="date_end"></span></p>
             
           <img class='img_iphone img-responsive' src='//zaimhome.ru/templates/common/img/iphone3.png'>
           <div class="text-center"><input type="button" class="btn_modall" id="btn_modall" value="Закрыть"></div>
+          <br class="visible-xs">
         </div>
     </div>
 </div>
@@ -48,15 +49,27 @@
   color: #fff;
 }
 .modal__overlay {
+  
   background: #fff;
-  outline: 2px solid;
-  bottom: 0;
+  /* position: fixed;
+  text-align: center;
+  padding: 30px 0; */
+  border-radius: 20px; 
+  top: 30px;
+  margin: 0 auto;
+  border: 2px solid #000;
+  bottom: 114px;
   left: 0;
   position: fixed;
   right: 0;
   text-align: center;
   text-shadow: none;
   top: 0; 
+/*   
+  text-align: center;
+  padding: 30px 0;
+  height: max-content;
+  border-radius: 20px;  */
 }
 .header1 {
   color: rgb(0, 0, 0);
@@ -74,6 +87,9 @@
   font-weight: bold;
 }
 @media (max-width: 800px) { 
+  .modal__overlay {
+      bottom: unset;
+  }
   input:checked ~ .modal__overlay {
     opacity: 1;
     -webkit-transform: scale(.9);
@@ -172,6 +188,11 @@
 }
 </style>
 <script> 
+function getLastDayOfMonth() {
+  var date = new Date(   (new Date()).getFullYear()     , (new Date()).getMonth() + 1, 0);
+  return date.getDate() + '.' + (new Date()).getMonth() + '.' + (new Date()).getFullYear();
+};
+
 function hideModal() {
    document.querySelector("#modal__trigger").click();
    setTimeout(function () {
@@ -185,9 +206,14 @@ function showModal() {
      document.querySelector("#modal__trigger").click();
         setTimeout(function () {
         hideModal();
-        }, 5000);
+        }, 6000);
     }, 500);
 }
+if (document.querySelector("#date_end") != null)
+{
+  document.querySelector("#date_end").innerText = getLastDayOfMonth();
+}
+
 
 document.querySelector(".modal__overlay").addEventListener('click', function() { 
     hideModal();

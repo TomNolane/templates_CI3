@@ -77,10 +77,11 @@ $country = BewteenBinarySearch($ip,$data,$data2);
 if($country != 'RU')
 {
     try {
-        $a = json_decode(file_get_contents('http://ip-api.com/json/'.$ip), true); 
+        // $a = json_decode(file_get_contents('http://ip-api.com/json/'.$ip), true); 
 
-        if($a['status'] != 'fail')
-            $country = $a['countryCode'];
+        // if($a['status'] != 'fail')
+        //     $country = $a['countryCode'];
+        $country = 'NONE';
 
     } catch (\Exception $e) {
         $country = 'NONE';

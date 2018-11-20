@@ -35,6 +35,11 @@ if(!isset($description))
 require 'templates/common/new2/php/modal.php';
 require 'menu.php';
 
+if($this->uri->segment(1) == 'form')
+{
+    require 'templates/common/new2/php/modal2.php';
+}
+
 if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index' && $this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') {
     echo '<span id="adsence_about"></span>';
 }
