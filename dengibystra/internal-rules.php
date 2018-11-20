@@ -46,7 +46,7 @@
                         <tbody>
                             <tr>
                                 <td>max</td>
-                                <td>5 лет</td>
+                                <td>1 год</td>
                             </tr>
                             <tr>
                                 <td>min</td>

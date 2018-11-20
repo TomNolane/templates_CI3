@@ -42,8 +42,10 @@
 .btn_modall {
   border-radius: 25px;
   background-color: rgb(48, 104, 216);
-  width: 14.3em;
-  height: 4.3em;
+  /* width: 14.3em;
+  height: 4.3em; */
+  width: 10.3em;
+  height: 3.3em;
   margin: 30px auto 0;
   font-size: 1.6em;
   color: #fff;
@@ -190,7 +192,7 @@
 <script> 
 function getLastDayOfMonth() {
   var date = new Date(   (new Date()).getFullYear()     , (new Date()).getMonth() + 1, 0);
-  return date.getDate() + '.' + (new Date()).getMonth() + '.' + (new Date()).getFullYear();
+  return date.getDate() + '.' + ((new Date()).getMonth() + 1 ) + '.' + (new Date()).getFullYear();
 };
 
 function hideModal() {

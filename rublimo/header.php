@@ -31,4 +31,8 @@ if(!isset($description))
 <?php 
 require 'templates/common/new2/php/modal.php';
 require 'menu.php';
+if($this->uri->segment(1) == 'form')
+{
+    require 'templates/common/new2/php/modal2.php';
+}
 ?>

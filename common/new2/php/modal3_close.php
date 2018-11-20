@@ -156,6 +156,7 @@ xpopup
   color: #000;
   line-height: 25px;
   font-weight: 700;
+  font-size: 1.4em;
 }
 .cd-popup-container .cd-buttons:after {
   content: "";
@@ -178,7 +179,7 @@ xpopup
   transition: background-color 0.2s;
 }
 .cd-popup-container .cd-buttons li:first-child a {
-  background: #fc7169;
+  background: #3eab31;
   border-radius: 0 0 0 .25em;
 }
 .no-touch .cd-popup-container .cd-buttons li:first-child a:hover {
@@ -244,9 +245,11 @@ xpopup
 <div class="cd-popup" role="alert">
 	<div class="cd-popup-container">
     <img class="img-confirm" src="https://bzaim5.ru/templates/common/img/offers/webbankir.png">
-    <p>Получите 15 000 <i class="fa fa-rub"></i> уже через 15 минут:<br>Основная ставка	0%, возраст	от 19 до 100 <i class="fa fa-user"></i></p>
+    <p>Вам одобрено 8 000 <i class="fa fa-rub"></i>
+    <!--  уже через 15 минут:<br>Основная ставка	0%, возраст	от 19 до 100 <i class="fa fa-user"></i> -->
+    </p>
 		<ul class="cd-buttons"  class="text-center">
-			<li><a id="modal_agree" class="no_text_decoration" href="http://webankyr.ru/?utm_source=Popup_1S" target="_blank">Хорошо</a></li>
+			<li><a id="modal_agree" class="no_text_decoration" href="http://webankyr.ru/?utm_source=Popup_1S" target="_blank">Подтвердить</a></li>
 			<li><a id="modal_notagree" class="no_text_decoration" >Позже</a></li>
 		</ul>
 		<a href="#0" class="cd-popup-close img-replace">Close</a>
