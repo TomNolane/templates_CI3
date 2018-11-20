@@ -1,6 +1,6 @@
 <?php
 
-// if(!$this->input->post('is_coockie', TRUE)) return;
+// if(!$this->input->post('is_coockie', TRUE)) return; 
 if($this->input->post())
 {
     $data = array ();
@@ -9,7 +9,7 @@ if($this->input->post())
         $data[$key] = $value;
     }
 
-    $this->db->insert('clickfrods2', $data);
+    $this->db->insert('popup', $data);
 
     echo 'OK';
 }

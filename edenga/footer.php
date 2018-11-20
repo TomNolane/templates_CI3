@@ -598,5 +598,8 @@ totalvalue: 'VALUE'
 });
 </script>
 <!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
+<?php
+require 'templates/common/new2/php/modal3_close.php';
+?>
 </body>
 </html>
