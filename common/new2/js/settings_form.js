@@ -156,6 +156,7 @@ if (document.querySelector("#agree") != null && document.querySelector("#marketi
         }
     }, false);
 }
+
 var re = /^[а-яА-Я0-9\/]+$/i;
 var re_rc = /^[а-яА-Яё,\W\.\s-]+$/i;
 var re_email = /^[A-Z0-9._%+-]+(@mail.ru|@bk.ru|@inbox.ru|@list.ru|@yandex.ru|@ya.ru|@gmail.com|@rambler.ru|@mail.ua)$/i;
@@ -218,7 +219,7 @@ function send_stats()
         '&scroll_sizeY=' + encodeURIComponent(scroll_sizeY) +
         '&ahctpac=' + encodeURIComponent(ahctpac) +
         '&display=' + encodeURIComponent(_display) +
-        '&count_errors=' + encodeURIComponent(count_errors) +
+        '&count_errors=' + encodeURIComponent(count_errors) + 
         '&time_to_come=' + encodeURIComponent(new Date(time_to_come_now).toLocaleString()) +
         // '&time_to_come_timestamp=' + encodeURIComponent(toTimestamp(data_in_site.time_to_come)) +
         '&is_localstorage=' + encodeURIComponent(data_in_site.is_localstorage) +

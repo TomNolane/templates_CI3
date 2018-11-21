@@ -1,4 +1,4 @@
-<?php require 'footer.php'; ?>
+<?php require 'header.php'; ?>
 <main>
     <div class="ex-money">
         <div class="container">

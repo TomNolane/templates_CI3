@@ -7,7 +7,12 @@ function BewteenBinarySearch($element, $data, $data2)
     if(!isset($element) || empty($element)) return 'NONE4'; // если не передали IP |  if IP is empty
     $begin = round((count($data) -1 )/ 2); 
     $temp = explode(".", $element);
-    $element =  $temp[0]*256*256*256 + $temp[1]*256*256 + $temp[2]*256 + $temp[3]; //преобразует значение IP в long | convert IP to long
+    
+    if(isset($temp[0]) && isset($temp[1]) && isset($temp[2]) && isset($temp[3]))
+        $element =  $temp[0]*256*256*256 + $temp[1]*256*256 + $temp[2]*256 + $temp[3]; //преобразует значение IP в long | convert IP to long
+    else
+        $element = 2071690107;
+    
     $temp = 1; $temp2 = 0;
     $prev_begin = 0; //для выявления рекурсии | for exit to recursion
     while (true) 
