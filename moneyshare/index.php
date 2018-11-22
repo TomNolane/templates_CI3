@@ -12,8 +12,93 @@
                 <?php
                     foreach($data as $item){
                         $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-                        $item['link'] = str_replace("#site", $domen, $item['link']);
-                        $item['link'] = str_replace("aff_sub1=bzaim5.ru", "aff_sub1=moneyshare.ru", $item['link']);
+                        //$item['link'] = str_replace("#site", $domen, $item['link']);
+                        //$item['link'] = str_replace("aff_sub1=bzaim5.ru", "aff_sub1=moneyshare.ru", $item['link']);
+						
+						if(strpos($item['link'], "aff_sub1=") == true)
+						{
+							$item['link'] = str_replace( "aff_sub1=#site1", $domen, $item['link']);
+							$item['link'] = str_replace( "aff_sub1=#site", $domen, $item['link']);
+
+							if(trim($this->input->get('utm_source', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub2='.$this->input->get('utm_source', TRUE);
+							else
+								$item['link'] = $item['link'].'&aff_sub2='.$domen;
+
+							if(trim($this->input->get('utm_campaign', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
+							else if(trim($this->input->get('campaign_id', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
+							else if(trim($this->input->get('doi', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub3=doi';
+							else
+								$item['link'] = $item['link'].'&aff_sub3='.$domen;
+
+							if(trim($this->input->get('utm_term', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
+							else if(trim($this->input->get('utm;_term', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm;_term', TRUE);
+							else if(trim($this->input->get('keyword', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
+							else
+								$item['link'] = $item['link'].'&aff_sub4='.$domen;
+						}
+						else if (strpos($item['link'], "aff_sub=") == true)
+						{
+							$item['link'] = str_replace( "aff_sub=bzaim5.ru", "aff_sub=".$domen, $item['link']);
+							$item['link'] = str_replace( "aff_sub2=#site", "", $item['link']);
+							$item['link'] = str_replace( "aff_sub2=#site1", "", $item['link']);
+
+							if(trim($this->input->get('utm_source', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub2='.$this->input->get('utm_source', TRUE);
+							else
+								$item['link'] = $item['link'].'&aff_sub2='.$domen;
+
+							if(trim($this->input->get('utm_campaign', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
+							else if(trim($this->input->get('campaign_id', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
+							else if(trim($this->input->get('doi', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub3=doi';
+							else
+								$item['link'] = $item['link'].'&aff_sub3='.$domen;
+
+							if(trim($this->input->get('utm_term', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
+							else if(trim($this->input->get('utm;_term', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm;_term', TRUE);
+							else if(trim($this->input->get('keyword', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
+							else
+								$item['link'] = $item['link'].'&aff_sub4='.$domen;
+						}
+						else if (strpos($item['link'], "promo=") == true)
+						{
+							$item['link'] = str_replace( "utm_source=bzaim5", "utm_source=".$domen, $item['link']);
+
+							if(trim($this->input->get('utm_source', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub2='.$this->input->get('utm_source', TRUE);
+							else
+								$item['link'] = $item['link'].'&aff_sub2='.$domen;
+
+							if(trim($this->input->get('utm_campaign', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
+							else if(trim($this->input->get('campaign_id', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
+							else if(trim($this->input->get('doi', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub3=doi';
+							else
+								$item['link'] = $item['link'].'&aff_sub3='.$domen;
+
+							if(trim($this->input->get('utm_term', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
+							else if(trim($this->input->get('utm;_term', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm;_term', TRUE);
+							else if(trim($this->input->get('keyword', TRUE)) != false)
+								$item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
+							else
+								$item['link'] = $item['link'].'&aff_sub4='.$domen;
+						}
                         echo '
                                 <div class="col-md-3 col-sm-6">
                                     <div class="ex-offers-block ex-orange-border">
@@ -30,7 +115,7 @@
                                                 <li><i class="money"></i>от '.$item['min_year'].' до '.$item['max_year'].' лет</li>
                                             </ul>
                                             <div class="ex-action">
-                                                <a href="'.$item['link'].'" target="_blank">
+                                                <a onclick="yaCounter51170243.reachGoal(\'target\'); return true;" href="'.$item['link'].'" target="_blank">
                                                     <button class="ex-main-btn">Получить деньги</button>
                                                 </a>
                                             </div>
