@@ -135,7 +135,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12"> 
-                    <h2 class="text-center"><a class="anchor" name="id2"></a>Самый быстрый и удобный сервис<br>
+                    <h2 class="text-center">Самый быстрый и удобный сервис<br>
                         по подбору онлайн займов на нужную сумму и период</h2>
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- zaimcoin -->
@@ -216,7 +216,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a class="anchor" name="id3"></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -224,5 +224,5 @@
         </div>
     </section>
 </main>
-<a class="anchor" name="id4"></a>
+
 <?php require 'footer.php'; ?>

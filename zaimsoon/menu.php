@@ -1,4 +1,4 @@
-<a class="anchor" name="id1"></a>
+
 <header>
     <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header">
         <div class="container">
@@ -39,7 +39,7 @@
             </div>
         </div>
     </nav>
-</header> 
+</heade> 
     <div id="askQuestion" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">

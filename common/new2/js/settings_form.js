@@ -666,7 +666,7 @@ $(document).ready(function () {
         if(e.pageY <= 5)
         {
             if (document.location.host == 'zaimhome.ru') {
-                send_stats();
+                //send_stats();
             }
             // prompt('Вы в одном шаге от займа! Получите займ уже в '+ DateFormat(AddMinutesToDate(new Date(),15))+ '. Какая сумма вам нужна?',10000);
             // document.location.href = 'https://pxl.leads.su/click/762f05fbbdde479f81315e58b8557785?source=Vkredito';
@@ -1202,7 +1202,7 @@ $(document).ready(function () {
             if($('#amount').val() > 100000)
                 loans = 1;
             if (document.location.host == 'zaimhome.ru') {
-                send_stats();
+                //send_stats();
             }
             $('input[name="step"]').val('3');
             //send_form(true, '/lk?loan='+loans+'&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source')));

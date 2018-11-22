@@ -99,7 +99,7 @@
         </div>
     </form>
 </section>
-<a class="anchor" name="id2"></a>
+
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- fanzaim -->
         <ins class="adsbygoogle"
@@ -190,7 +190,7 @@
         </div>
     </div>
 </section>
-<a class="anchor" name="id3"></a>
+
 <section class="ex-section-3 hidden-xs hidden-sm">
     <h2 class="text-center">Как получить займ</h2>
     <div class="container">
@@ -255,7 +255,7 @@
         </main>
     </div>
 </section>
-<a class="anchor" name="id4"></a>
+
 <section class="ex-section-4 hidden-xs hidden-sm">
     <h2 class="text-center">Отзывы о нас</h2>
     <div class="container">
@@ -362,5 +362,5 @@
     </div>
     </div>
 </section>
-<a class="anchor" name="id5"></a>
+
 <?php require 'footer.php'; ?>

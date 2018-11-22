@@ -67,9 +67,20 @@ xnugget info
 Main components 
 
 -------------------------------- */
+
+<?php
+function getDomain2()
+{
+    $CI =& get_instance();
+    return preg_replace("/^[\w]{2,6}:\/\/([\w\d\.\-]+).*$/","$1", $CI->config->slash_item('base_url'));
+}
+?>
+
 header {
+  <?php if (getDomain2() != 'zaimsoon.ru') { ?>
   height: 200px;
   line-height: 200px;
+  <?php } ?>
   text-align: center;
   background-color: #5e6e8d;
   color: #FFF;

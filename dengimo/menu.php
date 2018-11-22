@@ -1,7 +1,7 @@
 <div class="page">
 	<nav class="navbar">
 		<div class="container">
-		<a class="anchor" name="id1"></a>
+		
 			<div class="navbar-header">
 				<a class="navbar-brand" href="/">
 					<img alt="logo.png" src="/templates/dengimo/assets/img/logo.png">

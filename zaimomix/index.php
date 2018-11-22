@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <a class="anchor" name="id2"></a>
+        
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- zaimomix -->
         <ins class="adsbygoogle"
@@ -110,7 +110,7 @@
                         </div>
                         </a>
                     </div>
-                    <a class="anchor" name="id3"></a>
+                    
                     <div class="ex-info-zaim-block">
                     <a href="/bad-credit-history">
                         <div class="row">
@@ -202,5 +202,5 @@
     </div>
 </form>
 </main>
-<a class="anchor" name="id4"></a>
+
 <?php require 'footer.php'; ?>

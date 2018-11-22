@@ -416,7 +416,7 @@ h3 {
         </div>
     </div>
 </section>
-<a class="anchor" name="id3"></a>
+
 <section class="ex-section-3 hidden-xs hidden-sm">
     <h2 class="text-center">Отзывы о нас</h2>
     <div class="ex-slider-wrap">

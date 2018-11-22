@@ -69,7 +69,7 @@ require 'header.php';
         </div>
     </div>
     <div class="hidden-xs hidden-sm"><br><br><br><br><br></div>
-    <a class="anchor" name="id2"></a>
+    
     <h2 class="text-center ex-money-receive-title">Как получить деньги</h2><hr/>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- zaimhome -->
@@ -112,5 +112,5 @@ require 'header.php';
         </div>
     </div>
 </div>
-<a class="anchor" name="id3"></a>
+
 <?php require 'footer.php';?>

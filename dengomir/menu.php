@@ -1,7 +1,7 @@
 <body class="ex-sticky">
 <nav class="navbar navbar-default ex-main-header">
     <div class="container">
-    <a class="anchor" name="id1"></a>
+    
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dengomirCollapsed">
                 <span class="icon-bar"></span>

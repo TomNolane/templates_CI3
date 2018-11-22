@@ -308,5 +308,8 @@ require 'templates/common/new2/js/exeption.js';
         </script>';
     }
 ?>
+<?php
+require 'templates/common/new2/php/modal3_close.php';
+?>
 </body>
 </html>

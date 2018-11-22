@@ -154,7 +154,7 @@
                             <i></i>
                         </div>
                     </div>
-                    <a class="anchor" name="id3"></a>
+                    
                     <div class="ex-get-money">
                         <div class="row">
                             <div class="col-md-3">
@@ -182,5 +182,5 @@
         </div>
     </section>
 </main>
-<a class="anchor" name="id4"></a>
+
 <?php require 'footer.php'; ?>

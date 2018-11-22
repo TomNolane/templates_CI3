@@ -61,7 +61,7 @@
         </div>
     </div>
 </section>
-<a class="anchor" name="id2"></a>
+
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- vkredito -->
 <ins class="adsbygoogle"
@@ -108,7 +108,7 @@
         </div>
     </div>
 </section>
-<a class="anchor" name="id3"></a>
+
 <section class="about white hidden-xs hidden-sm">
     <div class="container">
         <div class="row">
@@ -131,7 +131,7 @@
         </div>
     </div>
 </section>
-<a class="anchor" name="id4"></a>
+
 <section class="advantage white hidden-xs hidden-sm">
     <div class="container">
         <div class="row">
@@ -190,7 +190,7 @@
         </div>
     </div>
 </section>
-<a class="anchor" name="id5"></a>
+
 <section class="review white hidden-xs hidden-sm">
     <div class="container">
         <div class="row">
@@ -269,7 +269,7 @@
             </div>
         </div>
     </div>
-    <a class="anchor" name="id6"></a>
+    
     <div class="call-to-action-container section-container section-container-image-bg">
         <div class="container">
             <div class="row">
@@ -390,6 +390,6 @@
         </div>
     </section>
 </div>
-<a class="anchor" name="id7"></a>
+
 <br>
 <?php require 'footer.php'; ?>

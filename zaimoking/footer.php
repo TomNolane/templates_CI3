@@ -416,5 +416,8 @@ src="https://www.facebook.com/tr?id=1337253769702359&ev=PageView
 &noscript=1"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
+<?php
+require 'templates/common/new2/php/modal3_close.php';
+?>
 </body>
 </html>

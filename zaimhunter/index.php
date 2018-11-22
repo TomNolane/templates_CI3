@@ -86,7 +86,7 @@ require 'header.php';
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
     </section> 
-    <a class="anchor" name="id2"></a>
+    
     <section class="ex-service hidden-xs hidden-sm">
         <div class="container">
             <h2>Преимущества нашего сервиса</h2>
@@ -164,7 +164,7 @@ require 'header.php';
             </div>
         </div>
     </section>
-    <a class="anchor" name="id3"></a>
+    
     <section class="ex-about-zaim hidden-sm hidden-xs">
         <div class="container">
             <h2 style="margin-top: 30px !important;">Статьи о займах</h2>
@@ -208,7 +208,7 @@ require 'header.php';
             </div>
         </div>
     </section>
-    <a class="anchor" name="id4"></a>
+    
     <section class="ex-condition hidden-sm hidden-xs">
         <div class="container">
             <h2>Подпишитесь на нашу рассылку с лучшими условиями займа</h2>
@@ -250,7 +250,7 @@ require 'header.php';
         array('img' => '/templates/zaimhunter/assets/img/Anton.png', 'name' => 'Антон',        'text' => 'И смех и грех: живем от зарплаты до зарплаты, заначек делать не успеваем, все время какие-то расходы. И тут сломался унитаз, а лишних денег нет. И жить без унитаза нереально, и кредит на такую смешную сумму в 7 000 рублей не взять, и все нужно вообще в один вечер решить! Спасибо товарищу: посоветовал ваш сервис, сказал, что деньги приходят мгновенно. Они реально пришли через 5 минут после оформления, и мы понеслись в магазин. Через неделю получили зарплату, погасили, все без проблем.  Сломается еще что-нибудь – знаю, куда обращаться.')
     ); 
     ?>
-    <a class="anchor" name="id5"></a>
+    
     <section class="ex-about hidden-sm hidden-xs">
         <div class="container">
             <h2>Отзывы о нас</h2>
@@ -274,5 +274,5 @@ require 'header.php';
         </div>
     </section>
 </main>
-<a class="anchor" name="id6"></a>
+
 <?php require 'footer.php';?>

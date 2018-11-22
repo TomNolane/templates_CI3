@@ -1,7 +1,7 @@
 <div class="notificate-wrapper pulse2"><table class="table table-hover table-responsive">
   <thead>
      <tr> 
-       <td class="text-center font08" colspan="2">Специальное предложение до <span id="time15"></span> <i class="fa fa-remove close-btn"></i></td> 
+       <td class="text-center font08" colspan="2">Вам одобрено &nbsp;<i class="fa fa-remove close-btn"></i></td> 
     </tr>
   </thead>
   <tbody>
@@ -10,7 +10,7 @@
     </tr>
     <tr class="popup08 text-center">
       <td>Сумма:</td>
-      <td>до 15 000 &nbsp;<i class="fa fa-rub fa-lg"></i></td>
+      <td>8 000 &nbsp;<i class="fa fa-rub fa-lg"></i></td>
     </tr>
     <tr class="popup08">
       <td class="text-center" colspan="2">

@@ -55,7 +55,7 @@ echo '<footer class="ex-main-footer">
                     </li>
                 </ul>
             </div>
-            <a class="anchor" name="id5"></a>
+            
             <div class="row">
                 <h4>Информация о кредиторах, с которыми мы сотрудничаем</h4>
 
@@ -459,5 +459,8 @@ totalvalue: 'VALUE'
 });
 </script>
 <!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
+<?php
+require 'templates/common/new2/php/modal3_close.php';
+?>
 </body>
 </html>

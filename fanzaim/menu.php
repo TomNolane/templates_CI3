@@ -1,6 +1,6 @@
 <nav id="exMainHeader" class="navbar navbar-default">
     <div class="container">
-        <a class="anchor" name="id1"></a>
+        
         <div class="navbar-header">
             <a class="navbar-brand" href="/"></a>
         </div>

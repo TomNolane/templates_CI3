@@ -1,4 +1,4 @@
-<a class="anchor" name="id1"></a>
+
 <nav class="navbar navbar-default ex-main-header hidden-xs">
     <div class="container">
         <div class="nav navbar-nav">

@@ -1,5 +1,5 @@
-<a class="anchor" name="id1"></a>
-<header>
+
+<header style="height: 0 !important;">
     <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header" style="z-index: 777 !important;">
         <div class="container">
             <div class="navbar-header">

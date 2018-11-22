@@ -144,7 +144,7 @@
 		</div>
 	</div> 
 </section>
-<a class="anchor" name="id3"></a>
+
 <section class="reviews hidden-xs hidden-sm">
 	<div class="container">
 		<h1>Отзывы клиентов</h1>
@@ -284,7 +284,7 @@
 		</div>
 	</div>
 </section>
-<a class="anchor" name="id4"></a>
+
 <section class="where hidden-xs hidden-sm">
 	<div class="container">
 		<h1>Займ до зарплаты</h1>
@@ -313,7 +313,7 @@
 		</div>
 	</div>
 </section>
-<a class="anchor" name="id5"></a>
+
 <div class="doc hidden-xs hidden-sm" style="color: #333">
 	<div class="great-support-container section-container section-container-gray-bg">
 		<div class="container">
@@ -443,7 +443,7 @@
 			</div>
 		</div>
 	</div>
-	<a class="anchor" name="id6"></a>
+	
 	<div class="blog-container section-container partner-container hidden-xs hidden-sm">
 		<div class="container">
 			<div class="row">
@@ -527,5 +527,5 @@
 		</div>
 	</div>
 </div>
-<a class="anchor" name="id7"></a>
+
 <?php require 'footer.php'; ?>
