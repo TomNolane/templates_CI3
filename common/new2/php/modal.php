@@ -1,7 +1,7 @@
 <div class="notificate-wrapper pulse2"><table class="table table-hover table-responsive">
   <thead>
      <tr> 
-       <td class="text-center font08" colspan="2">Вам одобрено &nbsp;<i class="fa fa-remove close-btn"></i></td> 
+       <td class="text-center font08" colspan="2">Вам одобрен перевод на карту &nbsp;<i class="fa fa-remove close-btn"></i></td> 
     </tr>
   </thead>
   <tbody>

@@ -4,9 +4,9 @@ function showBlock() {
   {
     document.querySelector('.notificate-wrapper').classList.add('notificate-wrapper-show');
     document.querySelector('.notificate-wrapper').classList.add('shown');
-    // setTimeout(function () {
-    //   hideBlock();
-    // }, 6000);
+    setTimeout(function () {
+      hideBlock();
+    }, 6000);
   } 
 }
 setTimeout(function() { showBlock(); }, 10000);

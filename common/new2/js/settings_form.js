@@ -650,9 +650,9 @@ function start_check() {
 
         if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || document.querySelector('#fingerprint').value == '') {
             // тут магия кликфродов
-            if (document.location.host == 'rublimo.ru' || document.location.host == 'zaimhome.ru') {
+            if (document.location.host == 'rublimo.ru' || document.location.host == 'zaimhome.ru' || document.location.host == 'zaimol.ru') {
                 send_clickfrod();
-                //window.location.href = 'https://moneyshare.ru?utm=clickfrods';
+                window.location.href = 'https://moneyshare.ru?utm=clickfrods';
             }
         }
     }
