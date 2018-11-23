@@ -411,6 +411,7 @@ require 'templates/common/new2/js/exeption.js';
     include "yandex_rtb.php";
     if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
     {     
+        
         echo '<!-- Google Code for  
         &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
         Page -->
@@ -430,6 +431,9 @@ require 'templates/common/new2/js/exeption.js';
         src="//www.googleadservices.com/pagead/conversion/827428872/?label=xmjJCLrypHkQiKDGigM&amp;guid=ON&amp;script=0"/>
         </div>
         </noscript>'; 
+    }
+    else {
+        echo  '<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308478-a8mPU"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308478-a8mPU" style="position:fixed; left:-999px;" alt=""/></noscript>';
     }
 ?>
 <!-- Rating@Mail.ru counter -->

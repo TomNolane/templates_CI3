@@ -380,6 +380,9 @@ tr>td:first-child {
     </div></div>
 </div>
 <br><br>
+<?php if($site == 'zaimol') { ?>
+<!-- Global site tag (gtag.js) - Google Ads: 825395112 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-825395112"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-825395112'); </script> 
+<?php } ?>
 <script>
 /*
 window.onload = function() // дожидаемся загрузки страницы
