@@ -10787,7 +10787,7 @@ button.close {
  */
 /* line 9, ../sass/library/_owlCarousel.scss */
 .owl-carousel {
-  display: none;
+  display: flow-root;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
   /* position relative and z-index fix webkit rendering fonts issue */

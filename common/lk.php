@@ -156,13 +156,13 @@ tr>td:first-child {
 <?php if($site == 'www.mikrodengi' || $site == 'zaimrubli' || $site == 'zaimoking' || $site == 'mikrodengi') { ?>
   <!-- <h2 class="text-center hh" style="font-size: 26px;">Мы подобрали для Вас лучшие условия по микрозаймам! <br>
 Чтобы увеличить свои шансы на получение денег, заполните анкеты в нескольких организациях!</h2>  -->
- <h2 class="text-center hh hh4">Вам доступен займ в следующих организациях:</h2>
+ <h2 class="text-center hh hh4"> Вам одобрен займ в следующих организациях:</h2>
     <!-- <h2 class="text-center hh hh4" style="font-size: 26px;">Заполните заявку во всех организациях ниже и выиграйте iPhone XS. Розыгрыш через <span id="lk_timer"></span></h2>   -->
     <?php } else if($site == 'dengimo' || $site == 'zaimcoin') { ?>
-    <h2 class="text-center hh hh4">Вам доступен займ в следующих организациях:</h2>
+    <h2 class="text-center hh hh4"> Вам одобрен займ в следующих организациях:</h2>
     <!-- <h2 class="text-center hh hh4">Заполните заявку во всех организациях ниже и выиграйте iPhone XS. Розыгрыш через <span id="lk_timer"></span></h2>   -->
 	<?php } else { ?>
-	<h2 class="text-center hh hh4">Вам доступен займ в следующих организациях:</h2>
+	<h2 class="text-center hh hh4"> Вам одобрен займ в следующих организациях:</h2>
     <!-- <h2 class="text-center hh hh4">Заполните заявку во всех организациях ниже и выиграйте iPhone XS. Розыгрыш через <span id="lk_timer"></span></h2>   -->
     <?php }?> 
     <br>

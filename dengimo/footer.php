@@ -416,7 +416,7 @@ require 'templates/common/new2/js/exeption.js';
     include "yandexmetrika.php"; 
     include "yandex_rtb.php";
     if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
-    {     
+    {  
         
         echo '<!-- Google Code for  
         &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  

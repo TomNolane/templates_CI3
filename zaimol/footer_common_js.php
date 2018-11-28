@@ -21,5 +21,4 @@ if ($this->uri->segment(1) != 'form') {
 }
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') {
     require 'templates/common/new2/js/for_index.js';
-    //require 'templates/zaimol/assets/js/index.js';
 }?>

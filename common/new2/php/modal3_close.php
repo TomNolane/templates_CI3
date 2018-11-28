@@ -260,7 +260,7 @@ xpopup
     <!--  уже через 15 минут:<br>Основная ставка	0%, возраст	от 19 до 100 <i class="fa fa-user"></i> -->
     </p>
 		<ul class="cd-buttons"  class="text-center">
-			<li><a id="modal_agree" class="no_text_decoration" rel="noopener" href="http://webankyr.ru/?utm_source=Popup_1S" target="_blank">Подтвердить</a></li>
+			<li><a id="modal_agree" class="no_text_decoration" rel="noopener" href="https://webankyr.ru/?utm_source=Popup_1S" target="_blank">Подтвердить</a></li>
 			<li><a id="modal_notagree" class="no_text_decoration" >Позже</a></li>
 		</ul> 
 		<a href="#0" class="cd-popup-close img-replace">Close</a>
