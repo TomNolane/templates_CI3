@@ -80,9 +80,10 @@ var _offers_count = 0;
 var _offers_img = arr_offers['webbankir'].src;
 var _offers_url = arr_offers['webbankir'].url; 
 
-//checkOffer();
+checkOffer(false);
 
-function checkOffer ()
+
+function checkOffer (_boolean)
 {
   var _temp_checkOffer = 0;
   for (var i = 0; i < Object.keys(arr_offers).length; i++)
@@ -90,8 +91,15 @@ function checkOffer ()
       if(arr_offers[Object.keys(arr_offers)[i]].count == _offers_count)
       {
         _offers_url = arr_offers[Object.keys(arr_offers)[i]].url;
-        _offers_img = arr_offers[Object.keys(arr_offers)[i]].src;;
-        setcookie2(arr_offers[Object.keys(arr_offers)[i]].name,++arr_offers[Object.keys(arr_offers)[i]].count);
+        _offers_img = arr_offers[Object.keys(arr_offers)[i]].src;
+
+        document.querySelector('#change_img').src = _offers_img;
+        document.querySelector('#notificate_url').href = _offers_url;
+        document.querySelector('#notificate_url2').href = _offers_url;
+        
+        if(_boolean)
+          setcookie2(arr_offers[Object.keys(arr_offers)[i]].name,++arr_offers[Object.keys(arr_offers)[i]].count);
+        
         break;
       }
       else
@@ -103,11 +111,15 @@ function checkOffer ()
   if(_temp_checkOffer == 3)
   {
     _offers_count += 1; 
-    checkOffer();
+    checkOffer(_boolean);
   }
 }
 
-document.querySelector('#change_img').src = _offers_img;
-document.querySelector('#notificate_url').href = _offers_url;
-document.querySelector('#notificate_url2').href = _offers_url;
+document.querySelector('#notificate_url').addEventListener('click', function () { 
+   checkOffer(true);
+});
+
+document.querySelector('#notificate_url2').addEventListener('click', function () { 
+   checkOffer(true);
+});
 </script>
