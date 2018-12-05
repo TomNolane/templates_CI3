@@ -240,7 +240,19 @@ cursor: pointer;
     font-weight: 700;
     text-align: center;
 }
+.tom_modal_background {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.7);
+    z-index: 100;
+    top: 0;
+}
 </style>
+<div class="tom_modal_background">
 <div class="modal_container">
     <div class="modal_form">
         <div class="tom_right"><img id="tom_not_agree" class="tom_modal_close" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAA9ElEQVQokX3SsS4FQRTG8d+dLAWR8BR6iSjEre5tJKr7Ct5BZSV0eo1iW72CKCQapdWK4BHQSESlMOOuMXu/ZnK+Pf9vJ+fMoGkaUQMs4MNsLeMdQgc8xRWWZoBDvGCS4ATuYhOXPQFDXGAFZ5gE7EQwqRSQwMVYz+Ek4ByH2V+6ATkIr9iuYnEQzzoLuMFqARyjrTpmKWAtu9EvCFX2sRTQBUe4T0YoNF3jq+A/46lr5HAaznwBXpdtoQuXpvqZBfxZY4K3CuBbbD7qC6iwEYscHPmZahu9/Twg4BEPPWBSXbjBbYjNY9yZrqP1X7XpSzzG3jdlwTmOwQgzXAAAAABJRU5ErkJggg=="/></div>
@@ -251,7 +263,8 @@ cursor: pointer;
             <!-- -->
             <div class="form-group-modal">
                 <label class="bootstrap3" for="i_modal">* Ваше имя:</label>
-                <input type="text" class="tom bootstrap3" name="i_modal" id="i_modal" placeholder="Имя" title="Укажите своё Имя..."
+                <input type="text" class="tom bootstrap3" name="i_modal" onfocus="FormatName_MainModal(this,event);" onblur="FormatName_MainModal(this,event);"
+                    onkeydown="FormatName_MainModal(this,event);" id="i_modal" placeholder="Имя" title="Укажите своё Имя..."
                     required="" autocomplete="on">
             </div>
             <!-- -->
@@ -289,6 +302,7 @@ cursor: pointer;
         <!-- -->
     </div>
 </div>
+</div>
 <script>
 var HttpClient = function() {
     this.get = function(aUrl, aCallback) {
@@ -302,6 +316,14 @@ var HttpClient = function() {
         anHttpRequest.send( null );
     }
 }
+
+function setcookie_modal(name, value, expires, path, domain, secure) {
+    document.cookie = name + "=" + escape(value) +
+        ((expires) ? "; expires=" + (new Date(expires)) : "") +
+        ((path) ? "; path=" + path : "; path=/") +
+        ((domain) ? "; domain=" + domain : "") +
+        ((secure) ? "; secure" : "");
+};
 
 var _uu = 0;
 
@@ -324,13 +346,15 @@ function sendToSite_MainModal(e) {
 
         document.querySelector('.tom_btn').style.display = 'none';
         
-        var _data_modal = "addnew?fingerprint="+encodeURI(sendToSite_j)+"?display=0&referer="+encodeURI(document.location.href)+"&step=3&ad_id=4&amount=20000&period=21&rangeSlider=20000&f=%D0%A2%D0%B5%D1%81%D1%82&i="+encodeURI(sendToSite_n)+"&o=%D0%A2%D0%B5%D1%81%D1%82&gender=0&birth_dd=0&birth_mm=0&birth_yyyy=0&birthdate=27%2F01%2F1999&phone="+encodeURI(sendToSite_t)+"&email="+encodeURI(sendToSite_y)+"&delays_type=never&passport=1234+567890&passport_s=1234&passport_n=567890&passportdate=05%2F01%2F2018&passport_code=770-095&passport_who=%D0%9E%D0%A2%D0%94%D0%95%D0%9B+%D0%A3%D0%A4%D0%9C%D0%A1+%D0%A0%D0%9E%D0%A1%D0%A1%D0%98%D0%98+%D0%9F%D0%9E+%D0%93%D0%9E%D0%A0.+%D0%9C%D0%9E%D0%A1%D0%9A%D0%92%D0%95+%D0%9F%D0%9E+%D0%A0%D0%90%D0%99%D0%9E%D0%9D%D0%A3+%D0%A1%D0%95%D0%92%D0%95%D0%A0%D0%9D%D0%9E%D0%95+%D0%A2%D0%A3%D0%A8%D0%98%D0%9D%D0%9E&birthplace=%D0%A2%D0%B5%D1%81%D1%82&region=%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0+%D0%9A%D0%B0%D1%80%D0%B5%D0%BB%D0%B8%D1%8F&city=%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA&street=%D0%A2%D0%B5%D1%81%D1%82&building=1&housing=2&flat=3&reg_type=1&reg_same=1&work=%D0%9F%D0%95%D0%9D%D0%A1%D0%98%D0%9E%D0%9D%D0%95%D0%A0&work_name=%D0%BF%D0%B5%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%B5%D1%80&work_occupation=%D0%BF%D0%B5%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%B5%D1%80&work_phone=8+(912)+345+6789&work_experience=100&work_salary=123456&work_region=%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0+%D0%9A%D0%B0%D1%80%D0%B5%D0%BB%D0%B8%D1%8F&work_city=%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA&work_street=%D0%A2%D0%B5%D1%81%D1%82&work_house=1&work_office=3";
+        var _data_modal = "addnew?fingerprint="+encodeURI(sendToSite_j)+"?display=0&referer="+encodeURI(document.location.href)+"&step=5&ad_id=4&amount=20000&period=21&rangeSlider=20000&f=%D0%A2%D0%B5%D1%81%D1%82&i="+encodeURI(sendToSite_n)+"&o=%D0%A2%D0%B5%D1%81%D1%82&gender=0&birth_dd=0&birth_mm=0&birth_yyyy=0&birthdate=27%2F01%2F1999&phone="+encodeURI(sendToSite_t)+"&email="+encodeURI(sendToSite_y)+"&delays_type=never&passport=1234+567890&passport_s=1234&passport_n=567890&passportdate=05%2F01%2F2018&passport_code=770-095&passport_who=%D0%9E%D0%A2%D0%94%D0%95%D0%9B+%D0%A3%D0%A4%D0%9C%D0%A1+%D0%A0%D0%9E%D0%A1%D0%A1%D0%98%D0%98+%D0%9F%D0%9E+%D0%93%D0%9E%D0%A0.+%D0%9C%D0%9E%D0%A1%D0%9A%D0%92%D0%95+%D0%9F%D0%9E+%D0%A0%D0%90%D0%99%D0%9E%D0%9D%D0%A3+%D0%A1%D0%95%D0%92%D0%95%D0%A0%D0%9D%D0%9E%D0%95+%D0%A2%D0%A3%D0%A8%D0%98%D0%9D%D0%9E&birthplace=%D0%A2%D0%B5%D1%81%D1%82&region=%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0+%D0%9A%D0%B0%D1%80%D0%B5%D0%BB%D0%B8%D1%8F&city=%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA&street=%D0%A2%D0%B5%D1%81%D1%82&building=1&housing=2&flat=3&reg_type=1&reg_same=1&work=%D0%9F%D0%95%D0%9D%D0%A1%D0%98%D0%9E%D0%9D%D0%95%D0%A0&work_name=%D0%BF%D0%B5%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%B5%D1%80&work_occupation=%D0%BF%D0%B5%D0%BD%D1%81%D0%B8%D0%BE%D0%BD%D0%B5%D1%80&work_phone=8+(912)+345+6789&work_experience=100&work_salary=123456&work_region=%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0+%D0%9A%D0%B0%D1%80%D0%B5%D0%BB%D0%B8%D1%8F&work_city=%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA&work_street=%D0%A2%D0%B5%D1%81%D1%82&work_house=1&work_office=3";
         var client = new HttpClient();
-            client.get('https://godzaim.ru/'+_data_modal, function(response) {
-                send_form(true, '/lk' + document.location.search);
-                markTarget('form-step-3');
-                window.location = '/lk' + document.location.search;
+        client.get('https://'+document.location.host+'/'+_data_modal, function() {
+                
         });
+        setcookie_modal('lk',1);
+        send_form(true, '/lk' + document.location.search);
+        markTarget('form-step-3');
+        window.location = '/lk' + document.location.search;
 
     }
 
@@ -365,7 +389,7 @@ function sendToSite_MainModal(e) {
     document.querySelector('#tom_agree').addEventListener('click', sendToSite_MainModal);
 
     document.querySelector('#tom_not_agree').addEventListener('click', function () {
-        document.querySelector('.modal_container').style.display = 'none';
+        document.querySelector('.tom_modal_background').style.display = 'none';
         setTimeout(function () { showBlock(); }, 3000);
     });
 
@@ -376,7 +400,30 @@ function sendToSite_MainModal(e) {
             enableBtn_MainModal(true);
     });
 
-    //#modal_checkbox
+    function FormatName_MainModal(tt, e) {
+        var _re_name = /^[а-яА-Яё,\W\.\s-]{2,}$/i.test(document.querySelector('#i_modal').value);
+        if(_re_name)
+        {
+            if (document.querySelector('#i_modal').classList.contains('tom_input__error'))
+                document.querySelector('#i_modal').classList.remove('tom_input__error');
+
+            if (!document.querySelector('#i_modal').classList.contains('tom_input__agree')) {
+                document.querySelector('#i_modal').classList.add('tom_input__agree');
+            }
+            document.querySelector('.tom_warning').innerText = '';
+            PopupFormIsCorrect_MainModal();
+        }
+        else
+        {
+            if (!document.querySelector('#i_modal').classList.contains('tom_input__error')) {
+                document.querySelector('#i_modal').classList.add('tom_input__error');
+            }
+            
+            enableBtn_MainModal(false);
+            document.querySelector('.tom_warning').innerText = ' Укажите правильно своё имя';
+        }
+    }
+
     function FormatEmail_MainModal(tt, e) {
         var _email = /^[A-Z0-9._%+-]+(@mail.ru|@bk.ru|@inbox.ru|@list.ru|@yandex.ru|@ya.ru|@gmail.com|@rambler.ru|@mail.ua)$/i.test(document.querySelector('#email_modal').value);
         if (_email) {
@@ -389,6 +436,7 @@ function sendToSite_MainModal(e) {
                     document.querySelector('.tom_email_error').innerText = ' Проверьте попозже почту. Письмо могло попасть в папку "СПАМ".';
             }
             PopupFormIsCorrect_MainModal();
+            document.querySelector('.tom_warning').innerText = ' ';
         } else {
             if (!document.querySelector('#email_modal').classList.contains('tom_input__error')) {
                 document.querySelector('#email_modal').classList.add('tom_input__error');
@@ -399,10 +447,9 @@ function sendToSite_MainModal(e) {
                     document.querySelector('.tom_img_error').prepend(img);
                     document.querySelector('.tom_email_error').innerText = ' Адрес должен заканчиваться на @mail.ru, @bk.ru, @inbox.ru, @list.ru, @yandex.ru, @ya.ru, @gmail.com, @rambler.ru, @mail.ua';
                     enableBtn_MainModal(false);
+                    document.querySelector('.tom_warning').innerText = ' Укажите правильно свой email';
                 }
-                    
             }
-
 
             if (document.querySelector('#email_modal').classList.contains('tom_input__agree'))
                 document.querySelector('#email_modal').classList.remove('tom_input__agree');
@@ -434,6 +481,7 @@ function sendToSite_MainModal(e) {
                 document.querySelector('#phone_modal').classList.remove('tom_input__error');
             }
 
+            document.querySelector('.tom_warning').innerText = ' ';
             PopupFormIsCorrect_MainModal();
         } else {
             if (document.querySelector('#phone_modal').classList.contains('tom_input__agree')) {
@@ -474,6 +522,7 @@ function sendToSite_MainModal(e) {
                     }
 
                     PopupFormIsCorrect_MainModal();
+                    document.querySelector('.tom_warning').innerText = ' ';
                 } else {
                     if (document.querySelector('#phone_modal').classList.contains('tom_input__agree')) {
                         document.querySelector('#phone_modal').classList.remove('tom_input__agree');
@@ -527,6 +576,7 @@ function sendToSite_MainModal(e) {
                 }
 
                 PopupFormIsCorrect_MainModal();
+                document.querySelector('.tom_warning').innerText = ' ';
             } else {
                 if (document.querySelector('#phone_modal').classList.contains('tom_input__agree')) {
                     document.querySelector('#phone_modal').classList.remove('tom_input__agree');
@@ -535,6 +585,8 @@ function sendToSite_MainModal(e) {
                 if (!document.querySelector('#phone_modal').classList.contains('tom_input__error')) {
                     document.querySelector('#phone_modal').classList.add('tom_input__error');
                 }
+
+                document.querySelector('.tom_warning').innerText = ' Укажите правильно свой № телефона';
             }
         }
     }
