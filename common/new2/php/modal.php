@@ -55,14 +55,14 @@ function getcookie2(name) {
 
 var arr_offers = {
  'webbankir': { 
-   'url': 'https://pxl.leads.su/click/72c0cb6b29fa68ebdaa08ecc50e1cbfa?aff_sub1='+encodeURIComponent(document.location.href),
+   'url': 'https://webankyr.ru?source=Popup10sec',
    'src': 'https://bzaim5.ru/templates/common/img/offers/webbankir.png',
    'count': (getcookie2('webbankir_count') != null) ? parseInt(getcookie2('webbankir_count')) : 0,
    'name': 'webbankir_count'
   }, 
  'moneyman':
  { 
-   'url': 'https://pxl.leads.su/click/808b2dfdcd439ebcb3aa4befe32b3059?aff_sub1='+encodeURIComponent(document.location.href),
+   'url': 'https://manimy.ru?source=Popup10sec',
    'src': 'https://bzaim5.ru/templates/common/img/offers/moneyman.png',
    'count': (getcookie2('moneyman_count') != null) ? parseInt(getcookie2('moneyman_count')) : 0,
    'name': 'moneyman_count'
@@ -80,7 +80,7 @@ var _offers_count = 0;
 var _offers_img = arr_offers['webbankir'].src;
 var _offers_url = arr_offers['webbankir'].url; 
 
-checkOffer();
+//checkOffer();
 
 function checkOffer ()
 {

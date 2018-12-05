@@ -97,6 +97,14 @@ tr>td:first-child {
     width: 70%;
     padding: 20px;
 }
+.lk_special_offer {
+    /* -webkit-animation: neon .08s ease-in-out infinite alternate;
+    animation: neon .08s ease-in-out infinite alternate; */
+    font-size: 1.8em;
+    font-weight: 700; 
+    /* text-shadow: 0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000; */
+  color: #00da00; 
+} 
 @media (max-width: 450px) {
     <?php if ( $site == 'dengomir' ) { ?>
     table {
@@ -139,6 +147,9 @@ tr>td:first-child {
     .imgg {
         width: 100%;
     }
+    .lk_special_offer { 
+        font-size: 1em;
+    }
 }
 </style>
 </div>
@@ -156,13 +167,13 @@ tr>td:first-child {
 <?php if($site == 'www.mikrodengi' || $site == 'zaimrubli' || $site == 'zaimoking' || $site == 'mikrodengi') { ?>
   <!-- <h2 class="text-center hh" style="font-size: 26px;">Мы подобрали для Вас лучшие условия по микрозаймам! <br>
 Чтобы увеличить свои шансы на получение денег, заполните анкеты в нескольких организациях!</h2>  -->
- <h2 class="text-center hh hh4"> Вам одобрен займ в следующих организациях:</h2>
+ <h2 class="text-center hh hh4"> Вам доступен займ в следующих организациях:</h2>
     <!-- <h2 class="text-center hh hh4" style="font-size: 26px;">Заполните заявку во всех организациях ниже и выиграйте iPhone XS. Розыгрыш через <span id="lk_timer"></span></h2>   -->
     <?php } else if($site == 'dengimo' || $site == 'zaimcoin') { ?>
-    <h2 class="text-center hh hh4"> Вам одобрен займ в следующих организациях:</h2>
+    <h2 class="text-center hh hh4"> Вам доступен займ в следующих организациях:</h2>
     <!-- <h2 class="text-center hh hh4">Заполните заявку во всех организациях ниже и выиграйте iPhone XS. Розыгрыш через <span id="lk_timer"></span></h2>   -->
 	<?php } else { ?>
-	<h2 class="text-center hh hh4"> Вам одобрен займ в следующих организациях:</h2>
+	<h2 class="text-center hh hh4"> Вам доступен займ в следующих организациях:</h2>
     <!-- <h2 class="text-center hh hh4">Заполните заявку во всех организациях ниже и выиграйте iPhone XS. Розыгрыш через <span id="lk_timer"></span></h2>   -->
     <?php }?> 
     <br>
@@ -348,8 +359,11 @@ tr>td:first-child {
             );
 
             echo '<div class="col-md-3 col-xs-6" >
-                <figure class="text-center hh1"> 
-                    <div class="ex-wrapper"><br><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
+                <figure class="text-center hh1">';
+                    if($item['title'] == 'Веббанкир') echo ' <img class="lk-img img-responsive" src="/templates/common/img/cristams.png" alt="cristams.png">';
+                    else if($item['title'] == 'Moneyman') echo ' <img class="lk-img img-responsive" src="/templates/common/img/cristams9000.png" alt="cristams9000.png">';
+                    else echo '<img class="lk-img img-responsive" src="/templates/common/img/cristams_empty.png" alt="cristams_empty.png">';
+                    echo '<div class="ex-wrapper"><br><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank">
                     <img class="lk-img img-responsive" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
                 </a></div> 
                     <table class="table">

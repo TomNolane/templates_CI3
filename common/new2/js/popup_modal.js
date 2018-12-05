@@ -9,7 +9,9 @@ function showBlock() {
     // }, 6000);
   } 
 }
-setTimeout(function() { showBlock(); }, 3000);
+if(document.location.host != 'godzaim.ru')
+  setTimeout(function () { showBlock(); }, 3000);
+
 function hideBlock() {
    document.querySelector('.notificate-wrapper').classList.remove('notificate-wrapper-show');
 }
