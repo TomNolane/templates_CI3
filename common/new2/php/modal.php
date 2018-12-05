@@ -55,14 +55,14 @@ function getcookie2(name) {
 
 var arr_offers = {
  'webbankir': { 
-   'url': 'https://webankyr.ru?source=Popup10sec',
+   'url': 'https://webankyr.ru?utm_source=Popup10sec',
    'src': 'https://bzaim5.ru/templates/common/img/offers/webbankir.png',
    'count': (getcookie2('webbankir_count') != null) ? parseInt(getcookie2('webbankir_count')) : 0,
    'name': 'webbankir_count'
   }, 
  'moneyman':
  { 
-   'url': 'https://manimy.ru?source=Popup10sec',
+   'url': 'https://manymir.ru?utm_source=Popup10sec',
    'src': 'https://bzaim5.ru/templates/common/img/offers/moneyman.png',
    'count': (getcookie2('moneyman_count') != null) ? parseInt(getcookie2('moneyman_count')) : 0,
    'name': 'moneyman_count'

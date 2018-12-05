@@ -263,21 +263,21 @@ cursor: pointer;
             <!-- -->
             <div class="form-group-modal">
                 <label class="bootstrap3" for="i_modal">* Ваше имя:</label>
-                <input type="text" class="tom bootstrap3" name="i_modal" onfocus="FormatName_MainModal(this,event);" onblur="FormatName_MainModal(this,event);"
+                <input type="text" tabindex="1" class="tom bootstrap3" name="i_modal" onfocus="FormatName_MainModal(this,event);" onblur="FormatName_MainModal(this,event);"
                     onkeydown="FormatName_MainModal(this,event);" id="i_modal" placeholder="Имя" title="Укажите своё Имя..."
                     required="" autocomplete="on">
             </div>
             <!-- -->
             <div class="form-group-modal">
                 <label class="bootstrap3" for="phone_modal">* Ваш номер телефона:</label>
-                <input type="tel" class="tom bootstrap3" name="phone_modal" onfocus="FormatPhone_MainModal(this,event);"
+                <input type="tel" class="tom bootstrap3" tabindex="2" name="phone_modal" onfocus="FormatPhone_MainModal(this,event);"
                     onblur="FormatPhone_MainModal(this,event);" onkeydown="FormatPhone_MainModal(this,event);" id="phone_modal"
                     placeholder="Ваш номер телефона..." title="Ваш номер телефона" required="" autocomplete="on">
             </div>
             <!-- -->
             <div class="form-group-modal">
                 <label class="bootstrap3" for="email_modal">* Ваш email:</label>
-                <input type="text" class="tom bootstrap3" name="email_modal" id="email_modal" placeholder="Ваш email..."
+                <input type="text" tabindex="3" class="tom bootstrap3" name="email_modal" id="email_modal" placeholder="Ваш email..."
                     title="Укажите Ваш email" required="" onfocus="FormatEmail_MainModal(this,event);" onblur="FormatEmail_MainModal(this,event);"
                     onkeydown="FormatEmail_MainModal(this,event);" autocomplete="on">
                 <div class="tom_center"><span class="tom_img_error"></span><span class="tom_email_error"></span></div>
@@ -290,12 +290,12 @@ cursor: pointer;
             <!-- -->
              <!-- -->
             <div class="form-group-modal tom_center">
-                <input type="checkbox" id="modal_checkbox" class="modal_checkbox" checked><label class="label_checkbox" for="modal_checkbox">Согласен с обработкой персональных данных и публичной офертой сайта.</label>
+                <input type="checkbox" id="modal_checkbox" tabindex="4" class="modal_checkbox" checked><label class="label_checkbox" for="modal_checkbox">Согласен с обработкой персональных данных и публичной офертой сайта.</label>
             </div>
             <!-- -->
             <div><p class="bootstrap3 tom_warning"></p></div>
             <div class="form-group-modal btn_controls tom_center">
-                <a class='tom_btn agree_btn' id="tom_agree">Забрать деньги</a>
+                <a tabindex="5" class='tom_btn agree_btn' id="tom_agree">Забрать деньги</a>
             </div>
             <!-- -->
         </div>
@@ -410,8 +410,9 @@ function sendToSite_MainModal(e) {
             if (!document.querySelector('#i_modal').classList.contains('tom_input__agree')) {
                 document.querySelector('#i_modal').classList.add('tom_input__agree');
             }
-            document.querySelector('.tom_warning').innerText = '';
+
             PopupFormIsCorrect_MainModal();
+            document.querySelector('.tom_warning').innerText = ' ';
         }
         else
         {
