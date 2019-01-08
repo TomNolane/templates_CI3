@@ -55,32 +55,32 @@ function getcookie2(name) {
 
 var arr_offers = {
  'webbankir': { 
-   'url': 'https://webankyr.ru?utm_source=Popup10sec',
+   'url': 'https://webankyr.ru?utm_source=Popup10S',
    'src': 'https://bzaim5.ru/templates/common/img/offers/webbankir.png',
    'count': (getcookie2('webbankir_count') != null) ? parseInt(getcookie2('webbankir_count')) : 0,
    'name': 'webbankir_count'
-  }, 
- 'moneyman':
- { 
-   'url': 'https://manymir.ru?utm_source=Popup10sec',
-   'src': 'https://bzaim5.ru/templates/common/img/offers/moneyman.png',
-   'count': (getcookie2('moneyman_count') != null) ? parseInt(getcookie2('moneyman_count')) : 0,
-   'name': 'moneyman_count'
- },
- 'limezaim': 
- { 
-   'url': 'https://lime-finance.go2affise.com/click?pid=2&offer_id=1&sub1='+encodeURIComponent(document.location.href),
-   'src': 'https://bzaim5.ru/templates/common/img/offers/lime.png',
-   'count': (getcookie2('limezaim_count') != null) ? parseInt(getcookie2('limezaim_count')) : 0,
-   'name': 'limezaim_count'
- } 
+  } 
+//  ,'moneyman':
+//  { 
+//    'url': 'https://manymir.ru?utm_source=Popup10S',
+//    'src': 'https://bzaim5.ru/templates/common/img/offers/moneyman.png',
+//    'count': (getcookie2('moneyman_count') != null) ? parseInt(getcookie2('moneyman_count')) : 0,
+//    'name': 'moneyman_count'
+//  }
+//  ,'limezaim': 
+//  { 
+//    'url': 'https://lime-finance.go2affise.com/click?pid=2&offer_id=1&sub1='+encodeURIComponent(document.location.href),
+//    'src': 'https://bzaim5.ru/templates/common/img/offers/lime.png',
+//    'count': (getcookie2('limezaim_count') != null) ? parseInt(getcookie2('limezaim_count')) : 0,
+//    'name': 'limezaim_count'
+//  } 
 }
 
 var _offers_count = 0;
 var _offers_img = arr_offers['webbankir'].src;
 var _offers_url = arr_offers['webbankir'].url; 
 
-checkOffer(false);
+//checkOffer(false);
 
 
 function checkOffer (_boolean)

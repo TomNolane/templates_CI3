@@ -9,8 +9,10 @@ function showBlock() {
     // }, 6000);
   } 
 }
-if(document.location.host != 'godzaim.ru')
-  setTimeout(function () { showBlock(); }, 3000);
+var _show_modal_timer = (document.location.pathname != '/lk') ? 3000 : 10000;
+
+//  if (document.location.host != 'godzaim.ru' && document.location.host != 'zaimsoon.ru' )
+setTimeout(function () { showBlock(); }, _show_modal_timer);
 
 function hideBlock() {
    document.querySelector('.notificate-wrapper').classList.remove('notificate-wrapper-show');

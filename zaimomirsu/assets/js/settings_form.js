@@ -48,7 +48,7 @@ function validate1() {
 	if ($('input[name="amount"]').val() < 200 || $('input[name="amount"]').val() > 15000) {
 		error('Вы не указали сумму.', $('input[name="amount"]'));
 		return false;
-	} else if ($('input[name="period"]').val() < 7 || $('input[name="period"]').val() > 14) {
+	} else if ($('input[name="period"]').val() < 1 || $('input[name="period"]').val() > 14) {
 		error('Вы не указали срок займа.', $('input[name="period"]'));
 		return false;
 	} else if ($('input[name="f"]').val().length < 2 || !re_name.test($('input[name="f"]').val())) {

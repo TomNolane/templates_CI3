@@ -1,11 +1,11 @@
 <section class="ex-main-form">
     <div class="row">
         <div class="col-lg-8 offset-lg-1">
-            <div class="form-group row">
+            <div class="form-group row hidden">
                 <label class="col-md-3  d-flex align-items-center justify-content-md-end" for="f">Фамилия</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
+                        <input type="text" class="form-control ec tip special_form" name="f" value="Батейко" id="f" placeholder="Фамилия" title="Введите свою фамилию"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[-А-я ЁёІіЇїҐґЄє']+$" data-validation-error-msg="Введите свою фамилию"
                             required>
                         <p class="text-muted helpblock">Пример: Батейко</p>
@@ -23,11 +23,11 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row hidden">
                 <label class="col-md-3 d-flex align-items-center justify-content-md-end" for="o">Отчество</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
+                        <input type="text" class="form-control ec tip special_form" value="Дмитрович" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[-А-я ЁёІіЇїҐґЄє']+$" data-validation-error-msg="Введите свое отчество"
                             required>
                         <p class="text-muted helpblock">Пример: Дмитрович</p>
@@ -115,7 +115,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row hidden">
                 <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="credit">Кредитная история</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper ex-arrow">

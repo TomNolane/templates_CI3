@@ -4,16 +4,16 @@
 $(document).ready(function () {
     //-----------------------Declaration of variables--------------------------
     var c = getParameterByName('amount'); 
-    var gg = parseInt(($('#amount').val().trim().length < 1) ? 5000 : $('#amount').val());
+    var gg = parseInt(($('#amount').val().trim().length < 1) ? 1000 : $('#amount').val());
     if (c != null) {
-        if (c > 15000 || c < 200) {
-            c = 5000;
+        if (c > 10000 || c < 600) {
+            c = 1000;
         }
         gg = c;
     }
     var currentLoanSize = gg,
         range = $("#rangeSlider"),
-        commissionPercantage = 13,
+        commissionPercantage = 28,
         rangeUpperValue =  $('.ex-slider-val'),
         rangeTableValue = $('.ex-current-val'),
         timeTable = $('.ex-time'),
@@ -22,7 +22,7 @@ $(document).ready(function () {
         probabilityTable = $('.irs-single'),
         probabilityTable2 = $('.ex-prob'),
         probability = 95,
-        time = '130-200 дней',
+        time = '14 дней',
         commission = (currentLoanSize * commissionPercantage) / 100,
         returnTotal = currentLoanSize + commission,
         setDynamicProbability = function () {
@@ -46,22 +46,9 @@ $(document).ready(function () {
             }
         },
         setDynamicTimePeriod = function () {
-            if(currentLoanSize < 4000){
-                time = '100-130 дней';
-                timeTable.html("<span>"+time+"</span>");
-            }if(currentLoanSize <= 2000){
-                time = '61-100 дней';
-                timeTable.html("<span>"+time+"</span>");
-            }if(currentLoanSize >= 4000 && currentLoanSize <= 9000){
-                time = '130-200 дней';
-                timeTable.html("<span>"+time+"</span>");
-            }if(currentLoanSize <= 12000 && currentLoanSize > 9000){
-                time = '200-250 дней';
-                timeTable.html("<span>"+time+"</span>");
-            }if(currentLoanSize > 12000){
-                time = '250-365 дней';
-                timeTable.html("<span>"+time+"</span>");
-            }
+
+            time = '14 дней';
+            timeTable.html("<span>" + time + "</span>");
         };
     //------------------------Declaration of variables end-------------------------
     rangeUpperValue.append("<span>"+currentLoanSize.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+"</span><i></i>");

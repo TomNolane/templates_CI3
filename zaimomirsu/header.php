@@ -159,10 +159,7 @@ if(!isset($description))
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/faq">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/money">Получение денег</a>
-                </li>
+                </li> 
                 <li class="nav-item">
                     <a class="nav-link ex-ask-question" href="#">Обратная связь</a>
                 </li>

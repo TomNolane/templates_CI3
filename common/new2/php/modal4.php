@@ -1,25 +1,41 @@
 <style>
+.tom_modal_background {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.7);
+    z-index: 9999;
+    top: -999px;
+    /* animation-timing-function: ease-out;
+    animation: showing 2s; */
+}
 .modal_container {
 top: 20px;
 /* width: 548px; */
 margin: 0 auto;
 max-width: 548px;
-position: fixed;
+/* position: fixed; */
+position: absolute;
 left: 0;
 right: 0;
-animation-delay: 4s;
-animation-timing-function: ease-out;
-animation: showing 2s;
+
+/* animation-timing-function: ease-out;
+animation: showing 2s; */
+/* -webkit-animation-delay: 4s;
+animation-delay: 4s; */
 z-index: 9999;
 }
 .hr {
 background-color: rgb(233, 236, 238);
 height: 1px;
 }
-@keyframes showing {
+/* @keyframes showing {
 from {top: -999px;}
 to {top: 20px;}
-}
+} */
 .modal_h2 {
 font-size: 20px;
 font-family: "OpenSans";
@@ -240,17 +256,6 @@ cursor: pointer;
     font-weight: 700;
     text-align: center;
 }
-.tom_modal_background {
-    position: fixed;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0,0,0,.7);
-    z-index: 100;
-    top: 0;
-}
 </style>
 <div class="tom_modal_background">
 <div class="modal_container">
@@ -271,7 +276,7 @@ cursor: pointer;
             <div class="form-group-modal">
                 <label class="bootstrap3" for="phone_modal">* Ваш номер телефона:</label>
                 <input type="tel" class="tom bootstrap3" tabindex="2" name="phone_modal" onfocus="FormatPhone_MainModal(this,event);"
-                    onblur="FormatPhone_MainModal(this,event);" onkeydown="FormatPhone_MainModal(this,event);" id="phone_modal"
+                    onblur="FormatPhone_MainModal(this,event);" onmouseover="FormatPhone_MainModal2(event);" onkeydown="FormatPhone_MainModal(this,event);" id="phone_modal"
                     placeholder="Ваш номер телефона..." title="Ваш номер телефона" required="" autocomplete="on">
             </div>
             <!-- -->
@@ -295,7 +300,7 @@ cursor: pointer;
             <!-- -->
             <div><p class="bootstrap3 tom_warning"></p></div>
             <div class="form-group-modal btn_controls tom_center">
-                <a tabindex="5" class='tom_btn agree_btn' id="tom_agree">Забрать деньги</a>
+                <a tabindex="5" onfocus="check_main_btn(this,event);" class='tom_btn agree_btn' id="tom_agree">Забрать деньги</a>
             </div>
             <!-- -->
         </div>
@@ -304,6 +309,31 @@ cursor: pointer;
 </div>
 </div>
 <script>
+function animate(draw, duration) {
+  var start = performance.now();
+
+  requestAnimationFrame(function animate(time) {
+    // определить, сколько прошло времени с начала анимации
+    var timePassed = time - start;
+
+    // возможно небольшое превышение времени, в этом случае зафиксировать конец
+    if (timePassed > duration) timePassed = duration;
+
+    // нарисовать состояние анимации в момент timePassed
+    draw(timePassed);
+
+    // если время анимации не закончилось - запланировать ещё кадр
+    if (timePassed < duration) {
+      requestAnimationFrame(animate);
+    }
+
+  });
+}
+
+animate(function(timePassed) {
+    document.querySelector('.tom_modal_background').style.top = (timePassed - 4000)  +'px';
+}, 4000);
+
 var HttpClient = function() {
     this.get = function(aUrl, aCallback) {
         var anHttpRequest = new XMLHttpRequest();
@@ -358,6 +388,32 @@ function sendToSite_MainModal(e) {
 
     }
 
+     function check_main_btn(tt, e) 
+     {
+        var sendToSite_t = document.querySelector('#phone_modal').value;
+        var sendToSite_y = document.querySelector('#email_modal').value; 
+
+        if (sendToSite_t.length < 7 || sendToSite_y.length < 7 || !document.querySelector('#modal_checkbox').checked) {
+            if (document.querySelector('#tom_agree').classList.contains('tom_pulse'))
+            { 
+                document.querySelector('#tom_agree').classList.remove('tom_pulse');
+            }
+             
+            document.querySelector('#tom_agree').setAttribute('disabled', 'disabled');
+            document.querySelector('.tom_warning').innerText = ' Заполните все свои данные правильно.';
+
+            return false;
+        }
+        else
+        {
+            if (!document.querySelector('#tom_agree').classList.contains('tom_pulse'))
+                document.querySelector('#tom_agree').classList.add('tom_pulse');
+
+            document.querySelector('.tom_warning').innerText = ''; 
+            document.querySelector('#tom_agree').removeAttribute("disabled");
+        }
+     }
+
     function enableBtn_MainModal(on = true) {
 
         var sendToSite_t = document.querySelector('#phone_modal').value;
@@ -369,7 +425,8 @@ function sendToSite_MainModal(e) {
                 document.querySelector('#tom_agree').classList.remove('tom_pulse');
             }
             
-            document.querySelector('#tom_agree').style.visibility = 'hidden'
+            // document.querySelector('#tom_agree').style.visibility = 'hidden'
+            document.querySelector('#tom_agree').setAttribute('disabled', 'disabled');
             document.querySelector('.tom_warning').innerText = ' Заполните все свои данные правильно.';
 
             return false;
@@ -381,7 +438,8 @@ function sendToSite_MainModal(e) {
 
             document.querySelector('.tom_warning').innerText = '';
             
-            document.querySelector('#tom_agree').style.visibility = 'visible'
+            // document.querySelector('#tom_agree').style.visibility = 'visible'
+             document.querySelector('#tom_agree').removeAttribute("disabled");
 
         } 
     }
@@ -443,10 +501,10 @@ function sendToSite_MainModal(e) {
                 document.querySelector('#email_modal').classList.add('tom_input__error');
                 if (document.querySelector('.tom_email_error'))
                 {
-                    var img = document.createElement('img');
-                    img.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAABD0lEQVQokZXSIU/CQRgG8B9KcH4Amqibn8BNPwEUMmzOZtBk0o2ZLDYJBLqOYiEZDGwUZhNnsho0mplQGIb/sf13HG4+2+3ufe553nvvvStMKg0rUMJnWG/jOyUqrnLjFY+5dfk/CU6whaMQzwN3HwvXViS4QzMXNwO3hFSCLqZo4SKMVuC6sbgQNbEsa9whRpgFfh0HeJE19GthiHswxHMww3tubxT2hthNXaGOHdRy3A8mubgWNPVUBT3cYJzjNqMKx0HTQyFfQSfM15HhDKcRt9B0FglKOEfVMi5xleCrwVMqoo8nDBLCkewFYgyCp1+YVBpzHOMtIf6Q/cK9iJ9hHw9FtHGLjcRJf2GK9i80JTjgBnpyPgAAAABJRU5ErkJggg==';
-                    document.querySelector('.tom_img_error').prepend(img);
-                    document.querySelector('.tom_email_error').innerText = ' Адрес должен заканчиваться на @mail.ru, @bk.ru, @inbox.ru, @list.ru, @yandex.ru, @ya.ru, @gmail.com, @rambler.ru, @mail.ua';
+                    // var img = document.createElement('img');
+                    // img.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAABD0lEQVQokZXSIU/CQRgG8B9KcH4Amqibn8BNPwEUMmzOZtBk0o2ZLDYJBLqOYiEZDGwUZhNnsho0mplQGIb/sf13HG4+2+3ufe553nvvvStMKg0rUMJnWG/jOyUqrnLjFY+5dfk/CU6whaMQzwN3HwvXViS4QzMXNwO3hFSCLqZo4SKMVuC6sbgQNbEsa9whRpgFfh0HeJE19GthiHswxHMww3tubxT2hthNXaGOHdRy3A8mubgWNPVUBT3cYJzjNqMKx0HTQyFfQSfM15HhDKcRt9B0FglKOEfVMi5xleCrwVMqoo8nDBLCkewFYgyCp1+YVBpzHOMtIf6Q/cK9iJ9hHw9FtHGLjcRJf2GK9i80JTjgBnpyPgAAAABJRU5ErkJggg==';
+                    // document.querySelector('.tom_img_error').prepend(img);
+                    // document.querySelector('.tom_email_error').innerText = ' Адрес должен заканчиваться на @mail.ru, @bk.ru, @inbox.ru, @list.ru, @yandex.ru, @ya.ru, @gmail.com, @rambler.ru, @mail.ua';
                     enableBtn_MainModal(false);
                     document.querySelector('.tom_warning').innerText = ' Укажите правильно свой email';
                 }
@@ -463,6 +521,11 @@ function sendToSite_MainModal(e) {
         } else {
             enableBtn_MainModal(false);
         }
+    }
+
+    function FormatPhone_MainModal2(event)
+    {
+        FormatPhone_MainModal(null, event);
     }
 
     function FormatPhone_MainModal(tt, e) {

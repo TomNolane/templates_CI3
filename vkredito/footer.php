@@ -1,3 +1,22 @@
+<script>
+// onbeforeunload = function(){ 
+// 	return 'Вы покидаете нас!';
+// }
+// window.onbeforeunload = function() {
+//   return "Данные не сохранены. Точно перейти?";
+// };
+window.onunload = function() { 
+
+    //  var url = "https://vkredito.ru/addnew/?send=true&display=0&referer=https%3A%2F%2Fvkredito.ru%2F&id=&step=5&ad_id=4&fingerprint=4bd0fabe60cfc05a0bcbfcceac4752ff&amount=15000&period=21&f=%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0&i=%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9&o=%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%BD%D0%B0&gender=0&birth_dd=0&birth_mm=0&birth_yyyy=0&birthdate=06%2F12%2F1988&phone=8+(911)+111+1111&email=df%40mail.ru&delays_type=never&passport=&passport_s=&passport_n=&passport_dd=0&passport_mm=0&passport_yyyy=0&passportdate=&passport_code=&passport_who=&birthplace=&region=0&city=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80&street=&building=&housing=&flat=&reg_type=1&reg_same=1&work=%D0%A8%D0%A2%D0%90%D0%A2%D0%9D%D0%AB%D0%99+%D0%A1%D0%9E%D0%A2%D0%A0%D0%A3%D0%94%D0%9D%D0%98%D0%9A&work_name=&work_occupation=&work_phone=&work_experience=&work_salary=&work_region=0&work_city=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80&work_street=&work_house=&work_building=&work_office=";
+    // fetch(url)
+    // .then(data => data.text())
+    // .then((text) => { 
+    // }).catch(function (error) {
+    //     console.log('request failed', error)
+    // })
+};
+</script>
+
 </div><?php $from = '15';
 if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
 {
@@ -316,7 +335,7 @@ $('.docs, .info').click(function () {
 <?php }
 elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
 {
-    include "templates/common/new2/js/lk.js";      
+    include "templates/common/new2/js/lk.js";
     echo 'traffic("vkredito.ru",4);'; 
 
 }

@@ -1,8 +1,8 @@
 <?php require 'header.php'; ?>
 <form id="anketa" action="/form<?=$utm;?>" method="post">
-    <input type="hidden" id="amount" name="amount" value="20000" />
-    <input type="hidden" id="period" name="period" value="21" />
-    <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
+    <input type="hidden" id="amount" name="amount" value="1000" />
+    <input type="hidden" id="period" name="period" value="7" />
+    <input type="hidden" id="form_slrd" name="form_slrd" value="4" />
     <input type="hidden" name="fingerprint" id="fingerprint" value="">
     <input type="hidden" name="ip" id="ip" value="<?php echo $ip;?>">
     <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
@@ -10,8 +10,10 @@
     <main class="ex-home">
         <div class="container">
             <div class="ex-main-section">
-                <h1>ZaimoMir – мир мгновенных онлайн займов за 15 минут</h1>
-                <p class="ex-text-hd">Онлайн займы по паспорту – мгновенно и безотказно</p>
+                <h1>ZaimoMir – мир мгновенных онлайн займов за 20 минут</h1>
+                <p class="ex-text-hd">Онлайн займы по паспорту – Без справок,
+залога и 
+поручителей</p>
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="ex-calc-block">
@@ -85,7 +87,7 @@
                         </div>
                         <div class="ex-icon-block">
                             <h3>Одобрение в 98% случаев</h3>
-                            <p>Быстрое решение по заявке (до 7 минут), невзирая на кредитную историю.</p>
+                            <p>Быстрое решение по заявке (до 20 минут), невзирая на кредитную историю.</p>
                         </div>
 
                     </div>
@@ -125,7 +127,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Заполните анкету</h4>
-                                        <p>Для этого нужен лишь мобильный телефон, паспорт и 2-3 минуты.</p>
+                                        <p>Для этого нужен лишь мобильный телефон и ваш email.</p>
                                     </div>
                                 </div>
                             </li>
@@ -136,8 +138,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4 class="timeline-title">Получите деньги</h4>
-                                        <p>Удобные варианты получения: на банковскую карту/счёт, через систему CONTACT, на кошельки
-                                            WebMoney и Яндекс.Деньги.</p>
+                                        <p>Удобные варианты получения: на карту или наличными.</p>
                                     </div>
                                 </div>
                             </li>
