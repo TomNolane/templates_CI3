@@ -1,14 +1,14 @@
 <section class="ex-main-form">
     <div class="row">
         <div class="col-md-9">
-            <div class="ex-pr">
+            <div class="ex-pr hidden">
                 <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="f">Фамилия</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
                                 data-sanitize="capitalize" value="Иванова" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                data-validation-error-msg="Введите свою фамилию" required>
+                                data-validation-error-msg="Введите свою фамилию" required value="Тестовое">
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                         <div class="ex-wrapper">
                             <input type="text" value="Валерьевна" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                data-validation-error-msg="Введите свое отчество" required>
+                                data-validation-error-msg="Введите свое отчество" required value="Тестовое">
                         </div>
                     </div>
                 </div>

@@ -4,13 +4,13 @@
         <div class="col-lg-9 col-md-8"> 
             <div class="ex-pr">
             <h3 class="hidden-lg hidden-md text-center"><?=$sum;?> рублей</h3>
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="f">Фамилия</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                data-validation-error-msg="Пожалуйста, введите свою фамилию" required>
+                                data-validation-error-msg="Пожалуйста, введите свою фамилию" required value="Тестовое">
                             <figure></figure>
                             <!-- <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> -->
                         </div>
@@ -27,13 +27,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="o">Отчество</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                data-validation-error-msg="Пожалуйста, введите свое отчество" required>
+                                data-validation-error-msg="Пожалуйста, введите свое отчество" required value="Тестовое">
                             <!-- <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> -->
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group hidden">
                     <label class="control-label col-md-4" for="delays_type">Кредитная история</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper ex-arrow">
