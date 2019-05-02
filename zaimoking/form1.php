@@ -1,14 +1,14 @@
 <section class="ex-main-form">
     <div class="row">
         <div class="col-md-9">
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback hidden">
                 <label class="control-label col-md-4" for="f">Фамилия</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия"
                             title="Введите свою фамилию" data-sanitize="capitalize" data-validation="custom"
                             data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
-                            required>
+                            required value="Тестовое">
                         <div><p class="help-block2">Нужно указать фамилию</p>
                         <p class="text-muted text-right">Пример: Иванова</p></div>
                     </div>
@@ -27,14 +27,14 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback hidden">
                 <label class="control-label col-md-4" for="o">Отчество</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество"
                             title="Введите свое отчество" data-sanitize="capitalize" data-validation="custom"
                             data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
-                            required>
+                            required value="Тестовое">
                         <div><p class="help-block2">Нужно указать отчество</p>
                         <p class="text-muted text-right">Пример: Ивановна</p></div>
                     </div>
@@ -126,7 +126,7 @@
                 </div>
             </div>
            
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback hidden">
                 <label class="control-label col-md-4" for="delays_type">Кредитная история</label>
                 <div class="col-md-8">
                     <div class="ex-wrapper ex-arrow">

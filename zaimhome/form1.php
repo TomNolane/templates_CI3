@@ -1,8 +1,8 @@
-<div class="form-group has-feedback">
+<div class="form-group has-feedback hidden">
     <label class="control-label col-md-4 label-required" for="f">Фамилия</label>
     <div class="col-md-6">
         <div class="ex-wrapper"> 
-            <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required>
+            <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию" required value="Тестовое">
             <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <div> <p class="help-block2">Нужно указать фамилию</p>
             <p class="text-muted text-right">Пример: Иванова</p></div>
@@ -20,11 +20,11 @@
         </div>
     </div>
 </div> 
-<div class="form-group has-feedback">
+<div class="form-group has-feedback hidden">
     <label class="control-label col-md-4 label-required" for="o">Отчество</label>
     <div class="col-md-6">
         <div class="ex-wrapper"> 
-            <input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Введите свое отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество" required>
+            <input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Введите свое отчество" data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество" required value="Тестовое">
             <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <p class="help-block2">Нужно указать отчество</p> 
             <p class="text-muted text-right">Пример: Ивановна</p>
@@ -113,7 +113,7 @@
         </div>
     </div>
 </div>
-<div class="form-group">
+<div class="form-group hidden">
 <label class="control-label col-md-4" for="credit">Кредитная история</label>
 <div class="col-md-6">
     <select size="1" class="form-control" id="credit">

@@ -24,15 +24,15 @@
 
 <!--legend>Личные данные</legend-->
 
-<div class="form-group">
+<div class="form-group hidden">
 	<label class="label-required">ФИО</label>
-	<input type="text" class="form-control" name="f" placeholder="Фамилия" title="Фамилия" required>
+	<input type="text" class="form-control" name="f" placeholder="Фамилия" title="Фамилия" required value="Тестовое">
 </div>
 <div class="form-group">
 	<input type="text" class="form-control" name="i" placeholder="Имя" title="Имя" required>
 </div>
-<div class="form-group">
-	<input type="text" class="form-control" name="o" placeholder="Отчество" title="Отчество" required>
+<div class="form-group hidden">
+	<input type="text" class="form-control" name="o" placeholder="Отчество" title="Отчество" required value="Тестовое">
 </div>
 <div class="form-group">
 	<label class="label-required">Пол</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -98,10 +98,10 @@
 </div>
 <div class="clearfix">&nbsp;</div>
 
-<div class="form-group">
+<div class="form-group hidden">
 	<label class="label-required">Кредитная история</label>
 	<select class="form-control" name="delays_type" required>
-		<option value="never">Никогда не брал(а) кредитов</option>
+		<option selected value="never">Никогда не брал(а) кредитов</option>
 		<option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
 		<option value="credit_open_no_delay">Кредиты есть, просрочек нет</option>
 		<option value="credit_closed_had_delay">Кредиты закрыты, просрочки были</option>

@@ -3,14 +3,14 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="ex-form-wrap">
-                    <div class="form-group has-feedback">
+                    <div class="form-group has-feedback hidden">
                         <div class="row">
                             <label class="control-label col-md-4" for="f">Фамилия</label>
                             <div class="col-md-8">
                                 <div class="ex-wrapper">
                                     <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
                                         data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                        data-validation-error-msg="Введите свою фамилию" required>
+                                        data-validation-error-msg="Введите свою фамилию" required value="Тестовое">
                                 </div>
                             </div>
                         </div>
@@ -27,14 +27,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group has-feedback">
+                    <div class="form-group has-feedback hidden">
                         <div class="row">
                             <label class="control-label col-md-4" for="o">Отчество</label>
                             <div class="col-md-8">
                                 <div class="ex-wrapper">
                                     <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
                                         data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                        data-validation-error-msg="Введите свое отчество" required>
+                                        data-validation-error-msg="Введите свое отчество" required value="Тестовое">
                                 </div>
                             </div>
                         </div>
@@ -119,7 +119,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group has-feedback">
+                    <div class="form-group has-feedback hidden">
                         <div class="row">
                             <label class="control-label col-md-4" for="delays_type">Кредитная история
                             </label>

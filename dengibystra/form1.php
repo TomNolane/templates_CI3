@@ -28,13 +28,13 @@
                 </div>
             </div>
             <!-- /слайдер -->
-            <div class="row">
+            <div class="row hidden">
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="f">Фамилия</label>
                         <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию" data-sanitize="capitalize"
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
-                            required>
+                            required value="Тестовое">
                         <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать фамилию</p>
                         <p class="text-muted helpblock">Пример: Иванова</p>
@@ -54,13 +54,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row hidden">
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="o">Отчество</label>
                         <input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Укажите свое отчество"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
-                            required>
+                            required value="Тестовое">
                         <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать отчество</p> 
                         <p class="text-muted helpblock">Пример: Ивановна</p>
@@ -152,7 +152,7 @@
                         <p class="text-muted helpblock">Проверьте почту. Письмо могло попасть в папку "СПАМ"</p>
                     </div>
                 </div>
-                <div class="col-sm-12">
+                <div class="col-sm-12 hidden">
                     <div class="form-group ex-arrow-on">
                         <label for="credit">Кредитная история</label>
                         <select class="form-control" id="credit">

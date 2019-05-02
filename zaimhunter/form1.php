@@ -7,10 +7,10 @@
 <div class="row">
     <div class="col-sm-6 col-xs-12">
         <div class="ex-anketa-main"> 
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback hidden">
                 <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
-			    required>
+			    required value="Тестовое">
 			    <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 <p class="help-block2">Нужно указать фамилию</p>
                 <p class="text-muted helpblock">Пример: Иванова</p>
@@ -23,10 +23,10 @@
                 <p class="help-block2">Нужно указать имя</p> 
                 <p class="text-muted helpblock">Пример: Лариса</p>
             </div>
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback hidden">
                 <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
-			    required>
+			    required value="Тестовое">
 			    <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 <p class="help-block2">Нужно указать отчество</p> 
                 <p class="text-muted helpblock">Пример: Ивановна</p>
@@ -95,7 +95,7 @@
 			    title="Email" data-validation="email" required>
 		        <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span> 
             </div>
-            <div class="form-group ex-arrow-on">
+            <div class="form-group ex-arrow-on hidden">
                 <select class="form-control ec" name="delays_type" id="delays_type">
                     <option selected value="never">Никогда не брал(а) кредитов</option>
                     <option value="credit_closed_no_delay">Кредиты закрыты, просрочек не было</option>
