@@ -55,5 +55,7 @@ if($site[0]['popup']){
     ";
 }
 $popup_text = $this->forms->site_settings('bzaim5.ru');
-$popup_text = $popup_text[0]['popup_text'];
-$popup_text = str_replace("{{name}}", "<span id='username'></span>", $popup_text);
+if (!empty($popup_text)) {
+    $popup_text = $popup_text[0]['popup_text'];
+    $popup_text = str_replace("{{name}}", "<span id='username'></span>", $popup_text);
+}
