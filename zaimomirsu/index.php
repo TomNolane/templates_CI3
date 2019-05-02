@@ -11,7 +11,7 @@
         <div class="container">
             <div class="ex-main-section">
                 <h1>ZaimoMir – мир мгновенных онлайн займов за 20 минут</h1>
-                <p class="ex-text-hd">Онлайн займы по паспорту – Без справок,
+                <p class="ex-text-hd hidden-xs">Онлайн займы по паспорту – Без справок,
 залога и 
 поручителей</p>
                 <div class="row">
@@ -45,7 +45,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="ex-action">
-                                        <button class="ex-main-btn">Получить деньги</button>
+                                        <button id="ex-main-btn" class="ex-main-btn">Получить деньги</button>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -60,6 +60,16 @@
                 </div>
             </div>
         </div>
+         <!-- zaimomir.su -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="3043058324"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
         <div class="ex-why-zaim">
             <div class="container">
                 <div class="row  text-center">
@@ -103,6 +113,16 @@
                 </div>
             </div>
         </div>
+        <!-- zaimomir.su -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="3043058324"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
         <div class="container">
             <div class="ex-why-get-money">
                 <h2>Как получить деньги?</h2>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?=$my_title?></title>
+    <meta name="description" content="<?=$description?>">
+    <meta property="og:url" content="https://ru-zaimo.ru/prelend/<?=$main?>">
+    <meta property="og:title" content="Вам одобрено!">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./img/universal/<?=$universal_folder?>/<?=$main?>>.png">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="canonical" href="https://ru-zaimo.ru/prelend/<?=$main?>">
+    <link rel="shortcut icon" href="./img/universal/<?=$universal_folder?>/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/universal/<?=$universal_folder?>/tilda-grid-3.0.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./css/universal/<?=$universal_folder?>/tilda-blocks-2.12.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./css/universal/<?=$universal_folder?>/tilda-animation-1.0.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./css/universal/<?=$universal_folder?>/tilda-slds-1.4.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./css/universal/<?=$universal_folder?>/tilda-zoom-2.0.min.css" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="./css/universal/<?=$universal_folder?>/custom.css">
+    <script src="./js/universal/osd.js"></script>
+    <script async="" id="tildastatscript" src="./js/universal/tildastat-0.2.min.js"></script>
+    <script async="" id="topmailru-code" src="./js/universal/code.js"></script>
+    <script src="./js/universal/rentafont_webfonts.js" charset="utf-8"></script>
+    <script>
+        WebFontConfig = {
+            "id": "Mjk1MDFvcmRlcjIzNTc5",
+            "fonts": ["167", "168", "169", "170"],
+            by_style: 1,
+            by_id: 1
+        };
+    </script>
+    <script src="./js/universal/jquery-1.10.2.min.js"></script>
+    <script src="./js/universal/tilda-scripts-2.8.min.js"></script>
+    <script src="./js/universal/tilda-blocks-2.7.js"></script>
+    <script src="./js/universal/lazyload-1.3.min.js" charset="utf-8"></script>
+    <script src="./js/universal/tilda-animation-1.0.min.js" charset="utf-8"></script>
+    <script src="./js/universal/typed.min.js" charset="utf-8"></script>
+    <script src="./js/universal/tilda-slds-1.4.min.js" charset="utf-8"></script>
+    <script src="./js/universal/hammer.min.js" charset="utf-8"></script>
+    <script src="./js/universal/tilda-zoom-2.0.min.js" charset="utf-8"></script><!-- Tratimo -->
+</head>
+
+<body class="t-body" style="margin: 0px;">
+    <!--allrecords-->
+    <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="663907"
+        data-tilda-page-id="3385037" data-tilda-page-alias="push" data-tilda-formskey="93c3cbd6dbbe2328e90d7d614020b440"
+        style="overflow-x: hidden;">
+        <div id="rec63469314" class="r t-rec t-screenmin-480px" style=" " data-animationappear="off" data-record-type="338"
+            data-screen-min="480px">
+            <!-- cover -->
+            <div class="t-cover" id="recorddiv63469314" bgimgfield="img" style="height:100vh; background-image:url(&#39;./img/universal/<?=$universal_folder?>/Depositphotos_186789.png&#39;);">
+                <div class="t-cover__carrier loaded" id="coverCarry63469314" data-content-cover-id="63469314"
+                    data-content-cover-bg="./img/universal/<?=$universal_folder?>/Depositphotos_186789.png"
+                    data-content-cover-height="100vh" data-content-cover-parallax="" style="height: 100vh; background-attachment: scroll; background-image: url(&quot;./img/universal/<?=$universal_folder?>/Depositphotos_186789.png&quot;);"
+                    src=""></div>
+                <div class="t-cover__filter" style="height:100vh;background-image: -moz-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -o-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -ms-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=&#39;#fe000000&#39;, endColorstr=&#39;#fe000000&#39;);"></div>
+                <div class="t338">
+                    <div class="t-container">
+                        <div class="t-col t-col_11 t-prefix_1">
+                            <div class="t-cover__wrapper t-valign_middle" style="height:100vh; position: relative;z-index: 1;">
+                                <div class="t338 t-align_left" style="">
+                                    <div data-hook-content="covercontent">
+                                        <div class="t339__wrapper"> <a href="<?=$link?>"
+                                                target="_blank"><img class="t338__logo t-img loaded" data-tu-max-width="800"
+                                                    data-tu-max-height="800" style="max-width:330px;" src="./img/universal/<?=$universal_folder?>/<?=$main?>.png"
+                                                    data-original="./img/universal/<?=$universal_folder?>/<?=$main?>.png"
+                                                    imgfield="img2" data-hook-clogo="coverlogo"></a>
+                                            <div class="t338__title t-title t-title_xxs" style="" field="title">
+                                                <div style="font-size:52px;" data-customstyle="yes">Бесплатный заем <br>до
+                                                    15 000 рублей <br>на карту.<br>
+                                                     
+                                                        <span
+                                                        class="typed-cursor">|</span><br></div>
+                                            </div>
+                                            <div class="t338__buttonwrapper"><a href="<?=$link?>"
+                                                    target="_blank" class="t338__btn t-btn " style="color:#000000;background-color:#ffd900;border-radius:300px; -moz-border-radius:300px; -webkit-border-radius:300px;font-weight:700;">
+                                                    <table style="width:100%; height:100%;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>ПОЛУЧИТЬ ДЕНЬГИ</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>#rec63469314 .t-btn[data-btneffects-first],
+#rec63469314 .t-btn[data-btneffects-second],
+#rec63469314 .t-submit[data-btneffects-first],
+#rec63469314 .t-submit[data-btneffects-second] {	position: relative; overflow: hidden; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0);
+}</style>
+            <script>
+                $(document).ready(function () {});
+            </script>
+            <style>#rec63469314 .t-btn:not(.t-animate_no-hover):hover{ background-color: #ffe100 !important; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2) !important;	}	#rec63469314 .t-btn:not(.t-animate_no-hover){ -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;	}</style>
+        </div>
+        <div id="rec63581518" class="r t-rec t-screenmax-480px" style=" " data-animationappear="off" data-record-type="338"
+            data-screen-max="480px">
+            <!-- cover -->
+            <div class="t-cover" id="recorddiv63581518" bgimgfield="img" style="height:100vh; background-image:url(&#39;./img/universal/<?=$universal_folder?>/Depositphotos_186789.png&#39;);">
+                <div class="t-cover__carrier" id="coverCarry63581518" data-content-cover-id="63581518"
+                    data-content-cover-bg="./img/universal/<?=$universal_folder?>/Depositphotos_186789.png"
+                    data-content-cover-height="100vh" data-content-cover-parallax="" style="height:100vh;background-attachment:scroll; "></div>
+                <div class="t-cover__filter" style="height:100vh;background-image: -moz-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -o-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -ms-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=&#39;#fe000000&#39;, endColorstr=&#39;#fe000000&#39;);"></div>
+                <div class="t338">
+                    <div class="t-container">
+                        <div class="t-col t-col_11 t-prefix_1">
+                            <div class="t-cover__wrapper t-valign_middle" style="height:100vh; position: relative;z-index: 1;">
+                                <div class="t338 t-align_center" style="">
+                                    <div data-hook-content="covercontent">
+                                        <div class="t339__wrapper"> <a href="<?=$link?>"
+                                                target="_blank"><img class="t338__logo t-img t-animate t-animate_started"
+                                                    data-animate-style="fadeindown" data-animate-group="yes"
+                                                    data-tu-max-width="800" data-tu-max-height="800" style="max-width:330px;"
+                                                    src="./img/universal/<?=$universal_folder?>/photo(1).png" data-original="./img/universal/<?=$universal_folder?>/<?=$main?>.png"
+                                                    imgfield="img2" data-hook-clogo="coverlogo"></a>
+                                            <div class="t338__title t-title t-title_xxs t-animate t-animate_started"
+                                                data-animate-style="fadeinleft" data-animate-group="yes" style="transition-delay: 0.5s;"
+                                                field="title">
+                                                <div style="font-size:52px;" data-customstyle="yes"><span style="font-size: 38px;">Бесплатный
+                                                        заем<br>до 15 000 рублей<br>на карту.</span><br><span style="font-size: 42px;"><span
+                                                            style="color: rgb(255, 226, 0);" data-redactor-style="color: rgb(255, 226, 0);">Круглосуточно.
+                                                            Быстро. Выгодно</span></span></div>
+                                            </div>
+                                            <div class="t338__buttonwrapper"><a href="<?=$link?>"
+                                                    target="_blank" class="t338__btn t-btn t-animate t-animate_no-hover t-animate_started"
+                                                    data-animate-style="fadeinup" data-animate-group="yes" style="color: rgb(0, 0, 0); background-color: rgb(255, 217, 0); border-radius: 300px; font-weight: 700; transition-delay: 1s;">
+                                                    <table style="width:100%; height:100%;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>ПОЛУЧИТЬ ДЕНЬГИ</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>#rec63581518 .t-btn[data-btneffects-first],
+#rec63581518 .t-btn[data-btneffects-second],
+#rec63581518 .t-submit[data-btneffects-first],
+#rec63581518 .t-submit[data-btneffects-second] {	position: relative; overflow: hidden; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0);
+}</style>
+            <script>
+                $(document).ready(function () {});
+            </script>
+            <style>#rec63581518 .t-btn:not(.t-animate_no-hover):hover{ background-color: #ffe100 !important; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2) !important;	}	#rec63581518 .t-btn:not(.t-animate_no-hover){ -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;	}</style>
+        </div>
+        <div id="rec63469593" class="r t-rec" style=" " data-animationappear="off" data-record-type="635">
+            <!-- T635 -->
+            <div class="t635__textholder" data-recid="63469314" data-text1="Круглосуточно" data-text2="Повсюду"
+                data-text3="Быстро" data-text4="Безопасно" data-text5="Одобрение 95%"></div>
+            <script>
+                $(document).ready(function () {
+                    setTimeout(function () {
+                        t635_init('63469593');
+                    }, 500);
+                });
+            </script>
+            <style>
+                #rec63469314 .t635__typing-text {
+                    color: #ffe100;
+                }
+
+                #rec63469314 .typed-cursor {
+                    color: #ffe100;
+                }
+            </style>
+        </div>
+        <div id="rec63469079" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; "
+            data-record-type="215"><a name="form" style="font-size:0;"></a></div>
+        <div id="rec63469083" class="r t-rec t-screenmin-640px" style=" " data-animationappear="off" data-record-type="131"
+            data-screen-min="640px">
+        </div>
+        <div id="rec63469080" class="r t-rec t-rec_pt_90 t-rec_pb_75" style="padding-top:90px;padding-bottom:75px;background-color:#ffffff; "
+            data-record-type="490" data-bg-color="#ffffff" data-animationappear="off">
+            <!-- t490 -->
+            <div class="t490">
+                <div class="t-section__container t-container">
+                    <div class="t-col t-col_12">
+                        <div class="t-section__topwrapper t-align_center">
+                            <div class="t-section__title t-title t-title_xs" field="btitle">
+                                <div style="font-size:40px;line-height:18px;font-family:&#39;Circe&#39;;"
+                                    data-customstyle="yes"><span style="font-weight: 400;">Как получить займ <br></span><br></div>
+                            </div>
+                            <div class="t-section__descr t-descr t-descr_xl t-margin_auto" field="bdescr">
+                                <div style="font-size:20px;line-height:24px;font-family:&#39;Circe&#39;;"
+                                    data-customstyle="yes">Получить займ онлайн очень просто: нужен паспорт и
+                                    банковская карта, на которую поступят деньги. Рассчитать стоимость займа онлайн
+                                    можно на главной странице - через онлайн калькулятор</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-container">
+                    <div class="t490__col t-col t-col_4 t-align_center t-item"> <a href="<?=$link?>"
+                            target="_blank"> <img src="./img/universal/<?=$universal_folder?>/m-3-1-v2.png" data-original="./img/universal/<?=$universal_folder?>/m-3-1-v2.png"
+                                class="t490__img t-img loaded" imgfield="li_img__1476968690512" style="width:170px;">
+                            <div class="t490__wrappercenter ">
+                                <div class="t-heading t-heading_md" style="font-size:20px;padding-top:1px;padding-bottom:1px;"
+                                    field="li_title__1476968690512">Заявка</div>
+                                <div class="t-descr t-descr_xs" style="" field="li_descr__1476968690512">
+                                    <div style="font-size:14px;" data-customstyle="yes">Оформление срочного займа на
+                                        карту онлайн начинается с заполнения заявки. Укажите сумму и срок возврата.
+                                        Получить деньги можно круглосуточно, заявки принимаются в любое время <br><br>
+                                        <br></div>
+                                </div>
+                            </div>
+                        </a> </div>
+                    <div class="t490__col t-col t-col_4 t-align_center t-item"> <a href="<?=$link?>"
+                            target="_blank"> <img src="./img/universal/<?=$universal_folder?>/asdasd.png" data-original="./img/universal/<?=$universal_folder?>/asdasd.png"
+                                class="t490__img t-img loaded" imgfield="li_img__1476968700508" style="width:170px;">
+                            <div class="t490__wrappercenter ">
+                                <div class="t-heading t-heading_md" style="font-size:20px;padding-top:1px;padding-bottom:1px;"
+                                    field="li_title__1476968700508">Одобрение</div>
+                                <div class="t-descr t-descr_xs" style="" field="li_descr__1476968700508">
+                                    <div style="font-size:14px;" data-customstyle="yes">Быстрые займы на карту
+                                        одобряются в течение 10 минут. Процент отказов в компании <?=$main?>
+                                        минимальный. Повторные заявки на займы денег одобряются в 95% случаев <br><br>
+                                        <br></div>
+                                </div>
+                            </div>
+                        </a> </div>
+                    <div class="t490__col t-col t-col_4 t-align_center t-item"> <a href="<?=$link?>"
+                            target="_blank"> <img src="./img/universal/<?=$universal_folder?>/m-3-3.png" data-original="./img/universal/<?=$universal_folder?>/m-3-3.png"
+                                class="t490__img t-img loaded" imgfield="li_img__1476968722790" style="width:170px;">
+                            <div class="t490__wrappercenter ">
+                                <div class="t-heading t-heading_md" style="font-size:20px;padding-top:1px;padding-bottom:1px;"
+                                    field="li_title__1476968722790">Деньги</div>
+                                <div class="t-descr t-descr_xs" style="" field="li_descr__1476968722790"><span style="font-size: 14px;">Заёмщик
+                                        получит займ на карту сразу же после одобрения заявки и подписания договора
+                                        простым кодом из смс. Возьмите деньги на любые цели: погашение кредита, оплату
+                                        покупок и срочные нужды <br></span><br> <br> <br></div>
+                            </div>
+                        </a> </div>
+                </div>
+                <div class="t-section__container t-container">
+                    <div class="t-col t-col_12">
+                        <div class="t-section__bottomwrapper t-clear t-align_center "><a href="<?=$link?>"
+                                target="_blank" class="t-btn" style="color:#666666;background-color:#ffee00;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;font-family:Circe;font-weight:700;">
+                                <table style="width:100%; height:100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td>ПОЛУЧИТЬ ДЕНЬГИ</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </a></div>
+                    </div>
+                </div>
+                <style>
+                    #rec63469080 .t-btn:not(.t-animate_no-hover):hover {
+                        color: #000000 !important;
+                    }
+
+                    #rec63469080 .t-btn:not(.t-animate_no-hover) {
+                        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+                    }
+                </style>
+            </div>
+        </div>
+        <div id="rec63469081" class="r t-rec t-rec_pt_75 t-rec_pb_90" style="padding-top:75px;padding-bottom:90px;background-color:#f5f5f5; "
+            data-animationappear="off" data-record-type="598" data-bg-color="#f5f5f5">
+            <!-- T598 -->
+            <style>
+                #rec63469081 .t-btn:not(.t-animate_no-hover):hover {
+                    background-color: #ffee00 !important;
+                    color: #1f1f1f !important;
+                }
+
+                #rec63469081 .t-btn:not(.t-animate_no-hover) {
+                    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+                    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+                }
+            </style>
+            <div class="t598">
+                <div class="t-section__container t-container">
+                    <div class="t-col t-col_12">
+                        <div class="t-section__topwrapper t-align_center">
+                            <div class="t-section__title t-title t-title_xs" field="btitle"><span style="font-weight: 400;">Дополнительные
+                                    услуги</span><br></div>
+                            <div class="t-section__descr t-descr t-descr_xl t-margin_auto" field="bdescr">
+                                <div style="font-size:20px;" data-customstyle="yes"><?=$main?> – больше, чем МФО! Мы
+                                    всегда следим за качеством сервиса. Пользуйтесь дополнительными услугами вместе с
+                                    нами.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-container">
+                    <div class="t598__col t-col t-col_4 t-align_center">
+                        <div class="t598__content">
+                            <div class="t598__imgwrapper" style="height: 82px;"> <img src="./img/universal/<?=$universal_folder?>/1.png"
+                                    data-original="./img/universal/<?=$universal_folder?>/1.png"
+                                    class="t598__img t-margin_auto t-img loaded" imgfield="img" style="max-width:400px;">
+                            </div>
+                            <div class="t598__title t-name t-name_xl" field="title" style="height: 64px;">Переводы с
+                                карты на карту <br><br></div>
+                            <div class="t598__descr t-descr t-descr_xs" field="descr" style="height: 74px;">
+                                <ul>
+                                    <li> Отправляйте деньги с карты на карту любого банка России </li>
+                                </ul>
+                            </div> <a href="<?=$link?>"
+                                target="_blank" class="t598__btn t-btn " style="color:#666666;background-color:#ffee00;border-radius:60px; -moz-border-radius:60px; -webkit-border-radius:60px;font-family:Circe;font-weight:700;text-transform:uppercase;">
+                                <table style="width:100%; height:100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td>Получить деньги</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="t598__col t-col t-col_4 t-align_center">
+                        <div class="t598__line_mobile" style="background-color: #ffffff;"></div>
+                        <div class="t598__content">
+                            <div class="t598__imgwrapper" style="height: 82px;"> <img src="./img/universal/<?=$universal_folder?>/2.png"
+                                    data-original="./img/universal/<?=$universal_folder?>/2.png"
+                                    class="t598__img t-margin_auto t-img loaded" imgfield="img2" style="max-width:400px;">
+                            </div>
+                            <div class="t598__title t-name t-name_xl" field="title2" style="height: 64px;">Оплата услуг
+                                в любое время <br><br></div>
+                            <div class="t598__descr t-descr t-descr_xs" field="descr2" style="height: 74px;">Оплачивайте
+                                коммунальные и еще более 1000 различных услуг</div> <a href="<?=$link?>"
+                                target="_blank" class="t598__btn t-btn " style="color:#666666;background-color:#ffee00;border-radius:60px; -moz-border-radius:60px; -webkit-border-radius:60px;font-family:Circe;font-weight:700;text-transform:uppercase;">
+                                <table style="width:100%; height:100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td>Получить деньги</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </a>
+                        </div>
+                        <div class="t598__line" style="background-color: #ffffff;"></div>
+                    </div>
+                    <div class="t598__col t-col t-col_4 t-align_center">
+                        <div class="t598__line_mobile" style="background-color: #ffffff;"></div>
+                        <div class="t598__content">
+                            <div class="t598__imgwrapper" style="height: 82px;"> <img src="./img/universal/<?=$universal_folder?>/3.png"
+                                    data-original="./img/universal/<?=$universal_folder?>/3.png"
+                                    class="t598__img t-margin_auto t-img loaded" imgfield="img3" style="max-width:400px;">
+                            </div>
+                            <div class="t598__title t-name t-name_xl" field="title3" style="height: 64px;">
+                                <div style="font-size:24px;" data-customstyle="yes">Узнайте свой кредитный рейтинг <br></div>
+                            </div>
+                            <div class="t598__descr t-descr t-descr_xs" field="descr3" style="height: 74px;">
+                                <ul>
+                                    <li> Это оценка вашей возможности получения займов и кредитов </li>
+                                </ul>
+                            </div> <a href="<?=$link?>"
+                                target="_blank" class="t598__btn t-btn " style="color:#666666;background-color:#ffee00;border-radius:60px; -moz-border-radius:60px; -webkit-border-radius:60px;font-family:Circe;font-weight:700;text-transform:uppercase;">
+                                <table style="width:100%; height:100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td>Получить деньги</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </a>
+                        </div>
+                        <div class="t598__line" style="background-color: #ffffff;"></div>
+                    </div>
+                </div>
+            </div>
+            <style type="text/css">
+                #rec63469081 .t598__descr li {
+                    border-color: #ffffff !important;
+                }
+            </style>
+            <script>
+                $(document).ready(function () {
+                    t598_init('63469081');
+                    $(window).bind('resize', t_throttle(function () {
+                        t598_init('63469081')
+                    }, 250));
+                    $('.t598').bind('displayChanged', function () {
+                        t598_init('63469081');
+                    });
+                    $(window).load(function () {
+                        t598_init('63469081');
+                    });
+                });
+            </script>
+        </div>
+        <div id="rec63469085" class="r t-rec t-rec_pt_30 t-rec_pb_90" style="padding-top:30px;padding-bottom:90px;background-color:#3b3b3b; "
+            data-animationappear="off" data-record-type="420" data-bg-color="#3b3b3b">
+            <!-- T420 -->
+            <div class="t420">
+                <div class="t-container">
+                    <p><span style="color:#ffffff;font-size:20px;">Сайт НЕ является представительством МФО или банком, не выдает займов и кредитов.
+                    Персональные данные пользователей не
+                    собираются и не хранятся. Все рекомендуемые на сайте кредитные учреждения имеют
+                    соответствующие лицензии. Условия
+                    неуплаты можно уточнить на сайте МФО.</span>
+                        <hr>
+                        <span style="color:#ffffff;font-size:20px;text-align: center;display: block;">ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001.</span></p>
+                </div>
+            </div>
+        </div>
+        <div id="rec72892849" class="r t-rec" style=" " data-animationappear="off" data-record-type="131">
+            <!-- T123 -->
+            <div class="t123">
+                <div class="t-container_100 ">
+                    <div class="t-width t-width_100 ">
+                        <script>
+                            $(function () {
+                                $('a[href]').attr('href', function (index, href) {
+                                    var param = "key=value";
+
+                                    if (href.charAt(href.length - 1) === '?') //Very unlikely
+                                        return href + param;
+                                    else if (href.indexOf('?') > 0)
+                                        return href + '&' + window.location.search.slice(1);
+                                    else
+                                        return href + window.location.search.slice(1);
+                                });
+                            })
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

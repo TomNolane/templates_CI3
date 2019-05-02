@@ -131,7 +131,7 @@
 							</main>
 						</div>
 					</div>
-					<a href="/form"><button class="ex-main-btn">Получить деньги</button></a>
+					<a href="/form"><button class="ex-main-btn ">Получить деньги</button></a>
 				</div>
 				<div id="menu2" class="tab-pane">
 					<div class="row">
@@ -248,7 +248,7 @@
 			</div>
 		</div>
 	</section>
-	
+	<a class="anchor" name="id3"></a>
 	<section class="ex-section-3 hidden-xs hidden-sm">
 		<div class="container text-center">
 			<h2>Отзывы клиентов</h2>
@@ -353,7 +353,7 @@
 	</section>
 	<section class="ex-section-5 hidden-xs hidden-sm">
 		<div class="container">
-		
+		<a class="anchor" name="id4"></a>
 			<h2 class="text-center">Максимум выгоды</h2>
 			<ul class="ex-tabs">
 				<li class="active">
@@ -462,5 +462,5 @@
 		</div>
 	</section>
 </form>
-
+<a class="anchor" name="id5"></a>
 <?php require 'footer.php'; ?>

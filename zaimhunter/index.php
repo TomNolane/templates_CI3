@@ -4,7 +4,7 @@ require 'header.php';
 <main>
     <section class="ex-start-head">
         <div class="container ">
-            <div class="row">
+            <div class="row" style="padding-top: 50px;">
                 <div class="col-sm-6 col-xs-12">
                     <div class="ex-bg hidden-sm hidden-xs">
                         <h1>Мгновенные<br>
@@ -66,27 +66,32 @@ require 'header.php';
                             <li><span>365</span></li> 
                         </ul>
                     <div class="text-center">
-                        <a class="btn ex-main-btn hidden-xs hidden-sm visible-md visible-lg" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">Получить деньги</a>
+                        <a class="btn ex-main-btn hidden-xs hidden-sm visible-md visible-lg main-btn-offerwall" onclick="<?php echo $this->input->cookie('lk')? 'goToForm()' : 'goToForm()';?>">Получить деньги</a>
                     </div>
                     </form>
                     </div>
                 </div>
             </div>
+             <?php if($setting_array['is_mobile'] != 'мобила') { ?>
+                   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                   <br><br><br>
+                    <!-- zaimhunter -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-4970738258373085"
+                        data-ad-slot="2625815808"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                    <?php } ?>
         </div>
-        <br><br><br><br><br>
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- zaimhunter -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-4970738258373085"
-                data-ad-slot="2625815808"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-    </section> 
-    
+        <?php if($setting_array['is_mobile'] == 'мобила') { ?>
+         <br><br><br><br><br>
+       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+        <?php } ?>
+    </section>
     <section class="ex-service hidden-xs hidden-sm">
         <div class="container">
             <h2>Преимущества нашего сервиса</h2>
@@ -164,7 +169,6 @@ require 'header.php';
             </div>
         </div>
     </section>
-    
     <section class="ex-about-zaim hidden-sm hidden-xs">
         <div class="container">
             <h2 style="margin-top: 30px !important;">Статьи о займах</h2>
@@ -208,7 +212,6 @@ require 'header.php';
             </div>
         </div>
     </section>
-    
     <section class="ex-condition hidden-sm hidden-xs">
         <div class="container">
             <h2>Подпишитесь на нашу рассылку с лучшими условиями займа</h2>
@@ -274,5 +277,4 @@ require 'header.php';
         </div>
     </section>
 </main>
-
 <?php require 'footer.php';?>

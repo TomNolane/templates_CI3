@@ -17,7 +17,7 @@
                     <p class="ex-text-hd hidden-xs hidden-sm">Получите срочные деньги без залога,<br>
                         проверок и потери времени</p>
                     <div class="ex-action">
-                        <button class="ex-main-btn">Получить деньги</button>
+                        <button class="ex-main-btn main-btn-offerwall">Получить деньги</button>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -56,11 +56,21 @@
                     </div>
                 </div>
             </div>
+             <?php if($setting_array['is_mobile'] != 'мобила') { ?>
+             <br><br><br><br>
+                 <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-4970738258373085"
+                    data-ad-slot="1488279360"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <?php } ?>
         </div>
-        
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- zaimomix -->
-        <ins class="adsbygoogle"
+        <?php if($setting_array['is_mobile'] == 'мобила') { ?>
+       <ins class="adsbygoogle"
             style="display:block"
             data-ad-client="ca-pub-4970738258373085"
             data-ad-slot="1488279360"
@@ -69,6 +79,7 @@
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
+        <?php } ?>
         <div class="ex-info-zaim">
             <h2>Информация о займах</h2>
             <div class="row justify-content-center">

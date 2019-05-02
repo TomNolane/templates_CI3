@@ -136,7 +136,7 @@
 <div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="email">Почта</label>
 	<div class="col-sm-8 col-xs-12"> 
-		<input type="email" class="form-control ec tip" name="email" id="email" title="Укажите свой email адрес" placeholder="Пример: email@mail.ru"
+		<input type="email" class="form-control ec tip" name="email" id="email" title="Укажите свой email адрес" placeholder="Email"
 			  data-validation="email" data-validation-error-msg="Укажите свой email" required>
 		<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 		<p class="help-block2"></p>

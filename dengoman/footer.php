@@ -20,10 +20,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         </script>';
     }
 	
-    echo '<!-- Yandex.RTB R-A-243980-1 desktop -->
-    <div id="yandex_rtb_R-A-243980-1"></div>
-    <!-- Yandex.RTB R-A-243980-3 mobile -->
-    <div id="yandex_rtb_R-A-243980-3"></div>';
+    echo '';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
 if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
@@ -77,11 +74,6 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
         <div class="col-sm-12">
             <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
                 <hr/>
-                <!-- Yandex.RTB R-A-243980-1 desktop -->
-                <div id="yandex_rtb_R-A-243980-1"></div>
-                <!-- Yandex.RTB R-A-243980-3 mobile -->
-                <div id="yandex_rtb_R-A-243980-3"></div>
-                <hr/>
                 <div class="col-sm-12">
                     <p class="black">
                         Сервис по подбору выгодных онлайн займов находящийся по адресу:
@@ -90,9 +82,6 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                 </div>
             <?php } ?>
              <hr/>
-              <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) == 'lk2' && $this->uri->segment(1) == 'lk3' && $this->uri->segment(1) == 'form') { ?>
-
-             <?php } ?>
         </div>
     </div>
 </footer>
@@ -315,11 +304,11 @@ if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->
 } 
 else
 {
-    echo '<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308478-a8mPU"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308478-a8mPU" style="position:fixed; left:-999px;" alt=""/></noscript>';
+    echo '<script>!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308478-a8mPU"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308478-a8mPU" style="position:fixed; left:-999px;" alt=""/></noscript>';
 }
 ?>
 <!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
+<script>
 var _tmr = window._tmr || (window._tmr = []);
 _tmr.push({id: "3052545", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
 (function (d, w, id) {
@@ -334,7 +323,7 @@ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, fal
 </div></noscript>
 <!-- //Rating@Mail.ru counter -->
 <!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script type="text/javascript">
+<script>
 var _tmr = _tmr || [];
 _tmr.push({
 type: 'itemView',

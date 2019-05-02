@@ -44,13 +44,27 @@
                                         <div>вероятность одобрения
                                             <span class="ex-prob"></span>
                                         </div>
-                                        <button class="ex-main-btn" type="submit">Получить деньги</button>
+                                        <button class="ex-main-btn main-btn-offerwall" type="submit">Получить деньги</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php if($setting_array['is_mobile'] != 'мобила') { ?>
+                <br><br><br>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- fanzaim -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-4970738258373085"
+                    data-ad-slot="5186306631"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <?php } ?>
                 <div class="row ex-virtual-money hidden-xs hidden-sm">
                     <div class="col-md-2">
                         <div class="ex-wrapper">
@@ -99,18 +113,19 @@
         </div>
     </form>
 </section>
-
+<?php if($setting_array['is_mobile'] == 'мобила') { ?>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- fanzaim -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="5186306631"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+<!-- fanzaim -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="5186306631"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<?php } ?>
 <section class="ex-section-2 hidden-xs hidden-sm">
     <div class="container">
         <div class="row">
@@ -190,7 +205,6 @@
         </div>
     </div>
 </section>
-
 <section class="ex-section-3 hidden-xs hidden-sm">
     <h2 class="text-center">Как получить займ</h2>
     <div class="container">
@@ -255,7 +269,6 @@
         </main>
     </div>
 </section>
-
 <section class="ex-section-4 hidden-xs hidden-sm">
     <h2 class="text-center">Отзывы о нас</h2>
     <div class="container">
@@ -362,5 +375,4 @@
     </div>
     </div>
 </section>
-
 <?php require 'footer.php'; ?>

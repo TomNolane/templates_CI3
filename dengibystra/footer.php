@@ -1,5 +1,5 @@
 <?php $from = '15'; 
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
 {
     if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -14,20 +14,25 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
     }
-    echo '<!-- Yandex.RTB R-A-247243-1 mobile -->
-    <div id="yandex_rtb_R-A-247243-1"></div>
-    <!-- Yandex.RTB R-A-247243-3 desktop -->
-    <div id="yandex_rtb_R-A-247243-3"></div>';
+    echo ' <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="9919758561"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') {
+if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') {
 echo '<footer class="ex-start-footer">
     <div class="container">
         <div class="row">
             <div class="col-sm-5">
                 <div class="ex-footer-logo">
                     <a href="/">
-                        <img src="templates/dengibystra/assets/img/logo-foot.png" alt="logo-foot.png">
+                        <img src="/templates/dengibystra/assets/img/logo-foot.png" alt="logo-foot.png">
                     </a>
                 </div>
                 <p class="ex-text spec_footer4">
@@ -73,7 +78,7 @@ echo '<footer class="ex-start-footer">
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-12">
+            <div class="col-sm-12"> 
                 <hr/>';
                 if ($this->uri->segment(1) != 'form') { 
                 }
@@ -83,7 +88,7 @@ echo '<footer class="ex-start-footer">
     </div>
 </footer>';
 }
-else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall')
 {
     echo '<footer class="ex-footer">
         <div class="container">
@@ -105,14 +110,6 @@ else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $th
                     (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
-            </div>
-            <div class="col-sm-12">
-                <hr/>
-                <!-- Yandex.RTB R-A-247243-1 mobile -->
-                <div id="yandex_rtb_R-A-247243-1"></div>
-                <!-- Yandex.RTB R-A-247243-3 desktop -->
-                <div id="yandex_rtb_R-A-247243-3"></div>
-                <hr/>
             </div>
             <div class="col-sm-12">
                 <p class="ex-text">
@@ -347,14 +344,14 @@ require 'templates/common/new2/js/exeption.js';
 		<!-- Google Code for  
 		&#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
 		Page -->
-		<script type="text/javascript">
+		<script>
 		/* <![CDATA[ */
 		var google_conversion_id = 828633180;
 		var google_conversion_label = "pxx8CJTupXgQ3OCPiwM";
 		var google_remarketing_only = false;
 		/* ]]> */
 		</script>
-		<script type="text/javascript"  
+		<script  
 		src="//www.googleadservices.com/pagead/conversion.js">
 		</script>
 		<noscript>
@@ -366,11 +363,11 @@ require 'templates/common/new2/js/exeption.js';
 ';  
     }
     else {
-        echo '<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308471-eZeHS"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308471-eZeHS" style="position:fixed; left:-999px;" alt=""/></noscript>';
+        echo '<script>!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308471-eZeHS"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308471-eZeHS" style="position:fixed; left:-999px;" alt=""/></noscript>';
     }
 ?>
 <!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
+<script>
 var _tmr = window._tmr || (window._tmr = []);
 _tmr.push({id: "3051515", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
 (function (d, w, id) {

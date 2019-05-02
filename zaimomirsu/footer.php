@@ -1,8 +1,19 @@
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <?php $from = '4';
 
-    if($this->uri->segment(1) != 'form')
+    if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'offerwall' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
     {
-        echo '';
+        echo '
+        <!-- zaimomir.su -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="3043058324"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     }
 ?>
 
@@ -15,92 +26,53 @@
                 </div>
             </div>
             <div class="col-lg-9">
+                 <?php
+                if($this->uri->segment(1) == 'offerwall' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+                {
+                    echo '
+                    <!-- zaimomir.su -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-4970738258373085"
+                        data-ad-slot="3043058324"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>';
+                } else {
+                ?>
                 <p>Максимальная процентная ставка по займу составляет 2% в день<br>
                    Пример расчета: при сумме займа в 1000 грн., проценты за пользование средствами составят 20 грн. в день, что примерно составляет 2% в день. APR — 730%. Никаких дополнительных комиссий и платежей за пользование кредитом Компания не взимает.
-                    Условия продления финансирования (займа): Заёмщик вправе продлить срок займа, оплатив только проценты за пользование. Никаких дополнительных комиссий и платежей Компания не взимает. Минимальный срок погашения долга – 1 день, а максимальный — 3 года.
+                    Условия продления финансирования (займа): Заёмщик вправе продлить срок займа, оплатив только проценты за пользование. Никаких дополнительных комиссий и платежей Компания не взимает. Выдается на срок от 61 дня до 1 года.
                     ТОВ «СПОЖИВЧИЙ ЦЕНТР», ЄДРПОУ 37356833, 01032, г. Киев, ул. Саксаганского 133-А, тел. (044) 498 10 21, info@zaimomir.su. Лицензия выдана Нацкомфинуслуг, распоряжение от 28.02.2017 р. №438. 
                 </p>
-            </div>
-            <div class="col-lg-12">
-            <br>
-
+                <?php } ?>
             </div>
         </div>
     </div>
 </footer> 
-    <?php
-    require 'templates/common/get_display_size.php';
-    echo '<script>';
-    require 'modules/jquery/jquery-1.11.3.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimomirsu/assets/js/bootstrap.min.js';
-    echo '</script>';?>
-    <script>  
-    function getParameterByName(name, url) 
-    {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-    } 
-    </script> 
-    <?php
-    echo '<script>';
-    require 'modules/jquery-maskedinput/jquery.maskedinput.1.4.2.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'modules/poshytip-1.2/src/jquery.poshytip.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimomirsu/assets/js/jquery.pickmeup.twitter-bootstrap.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimomirsu/assets/js/pickmeup.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimomirsu/assets/js/jquery.form-validator.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimomirsu/assets/js/jquery.suggestions.min.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimomirsu/assets/js/coockie.js';
-    echo '</script>';
-    require 'templates/common/detect.min.php';
-    echo '<script>';
-    require 'templates/zaimomirsu/assets/js/custom.js';
-    echo '</script>';
-    echo '<script>';
-    require 'templates/zaimomirsu/assets/js/settings_form.js';
-    require 'templates/common/new2/js/fingerprintjs2.js';
-    echo '</script>';
-    ?>
+<!-- [if lt IE 10]>
+<script  src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></footer>
+<![endif] --> 
+<!-- common JS --> 
+<script>
+<?php 
+    echo 'try{';
+    require 'footer_common_js.php';
+    echo '/* private JS */';
 
-    <!--[if lt IE 10]>
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-    <![endif]-->
-
-<?php if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') 
+if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') 
 { 
-    echo '<script>';
-    require 'modules/jquery.ion.rangeslider/js/ion.rangeSlider.min.js';
-    echo '</script>';
-    echo '<script>';
+    //require 'templates/zaimomirsu/assets/js/settings_form.js';
     require 'templates/zaimomirsu/assets/js/loanCalculator.js';
     if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') {
         require 'templates/common/new2/js/for_index.js';
-    }
-    echo '</script>';
-?>
-
-    <script>
+    } 
+?> 
+ 
     $(document).ready(function () 
     {
-        $.mask.definitions['*'] = "[-А-я ЁёІіЇїҐґЄє'а-яёА-ЯЁA-Za-z0-9\/\-_]";
         $('[data-toggle="popover"]').popover();
         $("#rangeSlider").ionRangeSlider({
         hide_min_max: true,
@@ -108,9 +80,9 @@
         keyboard: true,
         grid: false,
         from: <?php 
-        if(isset($_GET['amount'])) 
+        if($this->input->get('amount') != '') 
         {  
-            switch($_GET['amount'])
+            switch($this->input->get('amount'))
             { 
                 case '600': $from = '0' ; break;
                 case '700': $from = '1' ; break;
@@ -135,7 +107,7 @@
             }
             echo $from; 
         }
-        elseif(!isset($_POST['form_slrd'])) echo '4'; else echo $_POST['form_slrd']; 
+        elseif($this->input->post('form_slrd') == '') echo '4'; else echo $this->input->post('form_slrd');
         ?>,
         values: [600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 2000, 2500, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000],
         onFinish: function (data) {
@@ -156,238 +128,8 @@
         },
     }); 
 });
-
-</script> 
-<?php } ?> 
-<script>
-    function getcookie(name) {
-        var cookie = " " + document.cookie;
-        var search = " " + name + "=";
-        var setStr = null;
-        var offset = 0;
-        var end = 0;
-
-        if (cookie.length > 0) {
-            offset = cookie.indexOf(search);
-
-            if (offset != -1) {
-                offset += search.length;
-                end = cookie.indexOf(";", offset)
-
-                if (end == -1) {
-                    end = cookie.length;
-                }
-
-                setStr = unescape(cookie.substring(offset, end));
-            }
-        }
-        return (setStr);
-    }
-
-    function Loading(flag) 
-    {
-        if (typeof flag == 'undefined') { 
-            $('#feedback-send').prop('disabled', false); 
-            $('#feedback-send').html('Отправляется <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        } else if (!flag) {
-            $('#feedback-send').html('Отправлено');
-            $('#feedback-send').prop('disabled', true);
-        }
-    } 
-
-    $('#feedback-send').click(function () 
-    {
-        Loading();
-
-        if(!re_email.test($('#feedback-email').val()))
-        {
-            Loading(0);
-            alert('Пожалуйста, заполните поле "ваш емаил" корректно.');
-            $('#feedback-send').prop('disabled', false);
-            $('#feedback-send').html('Отправить');
-            return;
-        } 
-        
-        var data;
-        if(window.location.pathname == '/form')
-        {
-            var _input = $('#anketa').serialize();
-            _input = decodeURIComponent(_input);
-            _input = _input.replace(new RegExp("&step",'g'),"&Шаг");
-            _input = _input.replace(new RegExp("&period",'g'),"&Срок");
-            _input = _input.replace(new RegExp("display=0",'g'),"Декстоп версия");
-            _input = _input.replace(new RegExp("display=1",'g'),"Мобайл версия");
-            _input = _input.replace(new RegExp("referer",'g'),"Откуда пришли");
-            _input = _input.replace(new RegExp("&f=",'g'),"&Фамилия=");
-            _input = _input.replace(new RegExp("&i=",'g'),"&Имя=");
-            _input = _input.replace(new RegExp("&o=",'g'),"&Отчество=");
-            _input = _input.replace(new RegExp("gender=0",'g'),"Пол женский");
-            _input = _input.replace(new RegExp("gender=1",'g'),"Пол мужской");
-            _input = _input.replace(new RegExp("&birth_dd=0&birth_mm=0&birth_yyyy=0",'g'),"");
-            _input = _input.replace(new RegExp("birthdate",'g'),"Дата рождения");
-            _input = _input.replace(new RegExp("&phone=",'g'),"&Телефон=");
-            _input = _input.replace(new RegExp("&email",'g'),"&Емаил");
-            _input = _input.replace(new RegExp("&delays_type=never",'g'),"&Никогда не брал(а) кредитов");
-            _input = _input.replace(new RegExp("&delays_type=credit_closed_no_delay",'g'),"&Кредиты закрыты, просрочек не было");
-            _input = _input.replace(new RegExp("&delays_type=credit_open_no_delay",'g'),"&Кредиты есть, просрочек нет");
-            _input = _input.replace(new RegExp("&delays_type=credit_closed_had_delay",'g'),"&Кредиты закрыты, просрочки были");
-            _input = _input.replace(new RegExp("&delays_type=had_delay",'g'),"&Просрочки были, сейчас нет");
-            _input = _input.replace(new RegExp("&delays_type=had_delay",'g'),"&Просрочки сейчас есть");
-            _input = _input.replace(new RegExp("rangeSlider",'g'),"Сумма");
-            _input = _input.replace(new RegExp("ammount",'g'),"Сумма");
-            _input = _input.replace(new RegExp("amount",'g'),"Сумма");
-            _input = _input.replace(new RegExp("&passport=",'g'),"&Серия и номер паспорта=");
-            _input = _input.replace(new RegExp("passport_s",'g'),"Серия паспорта");
-            _input = _input.replace(new RegExp("passport_n",'g'),"Номер паспорта");
-            _input = _input.replace(new RegExp("passport_dd",'g'),"День выдачи");
-            _input = _input.replace(new RegExp("passport_mm",'g'),"Месяц выдачи");
-            _input = _input.replace(new RegExp("passport_yyyy",'g'),"Год выдачи");
-            _input = _input.replace(new RegExp("passportdate",'g'),"Дата выдачи");
-            _input = _input.replace(new RegExp("passport_code",'g'),"Код подразделения");
-            _input = _input.replace(new RegExp("passport_who",'g'),"Кем выдан");
-            _input = _input.replace(new RegExp("birthplace",'g'),"Место рождения");
-            _input = _input.replace(new RegExp("&region=",'g'),"&Регион=");
-            _input = _input.replace(new RegExp("&city=",'g'),"&Населённый пункт=");
-            _input = _input.replace(new RegExp("&street=",'g'),"&Улица проживания=");
-            _input = _input.replace(new RegExp("&building=",'g'),"&Дом=");
-            _input = _input.replace(new RegExp("&housing=",'g'),"&Корпус=");
-            _input = _input.replace(new RegExp("flat=",'g'),"Квартира=");
-            _input = _input.replace(new RegExp("reg_type=1",'g'),"Постоянная регистрация");
-            _input = _input.replace(new RegExp("reg_type=0",'g'),"Без регистрации");
-            _input = _input.replace(new RegExp("reg_type=2",'g'),"Временная регистрация");
-            _input = _input.replace(new RegExp("&reg_same=1",'g'),"");
-            _input = _input.replace(new RegExp("&work=",'g'),"&Вид трудоустройства=");
-            _input = _input.replace(new RegExp("work_name",'g'),"Место работы"); 
-            _input = _input.replace(new RegExp("work_occupation",'g'),"Должность");
-            _input = _input.replace(new RegExp("work_phone",'g'),"Рабочий телефон");
-            _input = _input.replace(new RegExp("work_experience",'g'),"Стаж");
-            _input = _input.replace(new RegExp("work_salary",'g'),"Зарплата");
-            _input = _input.replace(new RegExp("work_region",'g'),"Регион работы");
-            _input = _input.replace(new RegExp("work_city",'g'),"Город работы");
-            _input = _input.replace(new RegExp("work_street",'g'),"Улица работы");
-            _input = _input.replace(new RegExp("work_house",'g'),"Номер дома работы");
-            _input = _input.replace(new RegExp("work_office",'g'),"Офис работы");
-
-            _info = _info.replace(new RegExp("undefined",'g'),"неопределено");
-            data = {
-                name: $('#feedback-name').val(),
-                phone: $('#feedback-phone').val(),
-                email: $('#feedback-email').val(),
-                comment: '' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size + "\n | Данные:" + _input
-            };
-        }
-        else
-        {
-            data = {
-                name: $('#feedback-name').val(),
-                phone: $('#feedback-phone').val(),
-                email: $('#feedback-email').val(),
-                comment: '' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size
-            };
-        } 
-        
-        if ((typeof data.phone != 'undefined' && data.phone != '') && (typeof data.email != 'undefined' && data
-                .email != '') && (typeof data.comment != 'undefined' && data.comment != '')) {
-            $.ajax({
-                url: '/feedback/',
-                type: 'POST',
-                dataType: 'json',
-                data: data
-            }).done(function (response) {
-                if (response != null) {
-                    if (typeof response.error != 'undefined') {
-                        alert('Ошибка. ' + response.error);
-                    } else {
-                        $('#askQuestion').modal('hide');
-                        Loading(0);
-                        alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
-                        $('#feedback-send').prop("disabled", true);
-                    }
-                } else {
-                    alert('Не получилось отправить. Попробуйте ещё раз.');
-                    $('#askQuestion').modal('hide');
-                }
-            }).fail(function (jqxhr, textStatus, error) {
-                alert('Не получилось отправить. Попробуйте ещё раз.');
-            }).always(function () {
-                Loading(0);
-            });
-        } else {
-            Loading(0);
-            alert('Пожалуйста, заполните все поля.');
-        }
-    });
-    
-    function Loading2(flag) {
-        if (typeof flag == 'undefined') {
-            $('#feedback-send2').prop('disabled', true);
-            $('#feedback-send2').html('OK <i class="fa fa-spinner fa-spin fa-pulse"></i>');
-        } else if (!flag) {
-            $('#feedback-send2').html('OK');
-            $('#feedback-send2').prop('disabled', false);
-        }
-    }
-
-    $('#feedback-send2').click(function () {
-        Loading2();
-
-        var data2 = {
-            name: $('#feedback-name2').val(),
-            phone: $('#feedback-phone2').val(),
-            email: $('#feedback-email2').val(),
-            comment: $('#feedback-comment2').val()
-        };
-
-        if ((typeof data2.phone != 'undefined' && data2.phone != '') && (typeof data2.email != 'undefined' && data2
-                .email != '') && (typeof data2.comment != 'undefined' && data2.comment != '')) { 
-
-            if(!re_email.test($('#feedback-email2').val()))
-            {
-                Loading2(0);
-                alert('Пожалуйста, заполните поле "ваш емаил" корректно.');
-                return;
-            } 
-    
-            $.ajax({
-                url: '/feedback/',
-                type: 'POST',
-                dataType: 'json',
-                data: data2
-            }).done(function (response) {
-                if (response != null) {
-                    if (typeof response.error != 'undefined') {
-                        alert('Ошибка. ' + response.error);
-                    } else {
-                        Loading2(0);
-                        alert('Заявка отправлена. Мы ответим вам в ближайшее время.');
-                        $('#feedback-send2').prop("disabled", true);
-                        $('#feedback-send2').css("visibility","hidden");
-                    }
-                } else {
-                    alert('Не получилось отправить. Попробуйте ещё раз.');
-                }
-            }).fail(function (jqxhr, textStatus, error) {
-                alert('Не получилось отправить. Попробуйте ещё раз.');
-            }).always(function () {
-                Loading2(0);
-            });
-        } else {
-            Loading2(0);
-            alert('Пожалуйста, заполните поле "ваш емаил".');
-        }
-    });
-    $(".ex-offerta-block").hover(function () {
-        $(".ex-offerta-block ").removeClass("ex-offerta-active");
-        $(this).addClass("ex-offerta-active");
-    });
-</script>
-    <?php
-		if ($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') { 
-    ?>
-
-    <script> 
-    $(document).ready(function () {
-         
+ <?php if ($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {  ?> 
+$(document).ready(function () {
     var slider3 = $('#rangeSlider').data('ionRangeSlider');
     var slider_plus = true;
     var n = 4;
@@ -397,6 +139,7 @@
         } else {
             n--;
         }
+        
         if (n == 19 && n != <?php echo $from;?>) {
             slider_plus = false;
         }else if (n == <?php echo $from;?> && slider_plus == false) {
@@ -414,137 +157,40 @@
 
     }, 50);
 });
-<?php require 'templates/zaimomirsu/assets/js/owl.carousel.min.js';?>
-    $('.owl-carousel').owlCarousel({
-        stagePadding: 40,
-        center: true,
-        loop: true,
-        margin: 120,
-        nav: false,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplaySpeed: 1000,
-        autoplayHoverPause: true,
-        dots: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            1000: {
-                items: 2
-            }
-        }
-    });
-    </script>
-<?php } elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2')
-{  
-    echo '<script> 
-    $(".ex-offerta-block").hover(function () {
+<?php }
+}
+elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall')
+{
+    echo '$(".ex-offerta-block").hover(function () {
         $(".ex-offerta-block ").removeClass("ex-offerta-active");
         $(this).addClass("ex-offerta-active");
-    });
-    function traffic(site, page)
-    {
-        $.ajax({
-            type: \'POST\',
-            url: \'/traffic/\',
-            data: \'site=\'+site+\'&page=\'+page,
-                success: function(data){ 
-                }
-        });
-    }
-    var offers = '.json_encode($data).'
-    var by_reg = null;
-    $(document).ready(function () {
-        $(".offer-type").change(function () {
-            update_offers();
-        });
+    }); ';
+    include "templates/common/new2/js/lk.js";
+    echo 'traffic("zaimomir.su",4);'; 
 
-        function update_offers() {
-            var str = ".results tbody tr";
-            //var curr = clone(by_reg.length? by_reg : offers);
-            var ot_card = $(".offer-type[data-id=\'card\']").prop("checked");
-            var ot_qiwi = $(".offer-type[data-id=\'qiwi\']").prop("checked");
-            var ot_yandex = $(".offer-type[data-id=\'yandex\']").prop("checked");
-            var ot_contact = $(".offer-type[data-id=\'contact\']").prop("checked");
-            // Прячем всё
-            $(str).hide();
-            // Пробегаемся по списку офферов
-            ((by_reg !== null) ? by_reg : offers).forEach(function (offer, i) {
-                var $tr = $(str + "[data-id=\'" + offer.id + "\']");
-                if ($tr.data("amount") >= amount) {
-                    if (ot_card && !!$tr.data(\'card\') == ot_card) $tr.show();
-                    else if (ot_qiwi && !!$tr.data(\'qiwi\') == ot_qiwi) $tr.show();
-                    else if (ot_yandex && !!$tr.data(\'yandex\') == ot_yandex) $tr.show();
-                    else if (ot_contact && !!$tr.data(\'contact\') == ot_contact) $tr.show();
-                }
-            });
-        }
-        if (getcookie("i")) {
-            var i = getcookie("i");
-            $("#i").text(i);
-        } 
-    });
-
-    function clone(o) {
-        if (!o || "object" !== typeof o) return o;
-
-        var c = "function" === typeof o.pop ? [] : {};
-        var p, v;
-        for (p in o) {
-            if (o.hasOwnProperty(p)) {
-                v = o[p];
-                if (v && "object" === typeof v) {
-                    c[p] = clone(v);
-                } else {
-                    c[p] = v;
-                }
-            }
-        }
-        return c;
-    }
-</script>';
-} 
+}
+elseif($this->uri->segment(1) == '404')
+{
+    echo 'traffic("zaimomir.su",9);'; 
+}
+else if($this->uri->segment(1) == 'form')
+{ } 
+echo "}";
+require 'templates/common/new2/js/exeption.js';
+?>  
+</script>
+<?php
+ require 'yandexmetrika.php';
+ require 'googleanalytics.php';
+ require 'google_tag_manager.php';
 
 if ($this->uri->segment(1) == 'form') 
 {
-    echo "
-    <script>
+    echo "<script>
     $('.ex-calc-zaim').on('click', function () {
         $('.ex-calc-zaim').toggleClass('ex-calc-zaim-open');
         $('.ex-calc-zaim').prev('.ex-calc-block').toggleClass('d-none');
-    });
-    //$('.ex-calc-zaim').click();
-    </script>";
-    require 'templates/common/switch_form.php';
-    require 'templates/common/js.php';
-    if(isset($_GET['popup']) and $_GET['popup']==1 ){
-        echo '
-    <!-- Modal Popup-->
-    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-                <div class="modal-header text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-body text-center">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="templates/common/img/popup.jpg" alt="popup.jpg">
-                            <h2>'.$popup_text.'</h2>
-                            <button type="button" class="btn btn-xl btn-success get-money" data-dismiss="modal" id="back"> Получить деньги </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type= " text/javascript">
-        $(window).load(function(){
-            $("#popup").modal("show");
-        });
-    </script>';
-    }
+    });</script>";
 }
 
 if ($this->uri->segment(1) == 'money') 
@@ -556,44 +202,40 @@ if ($this->uri->segment(1) == 'money')
         });
     </script>";
 }
-
-if(isset($_GET['email']))
-{
-    //данные пользователя
-    $this->load->model('user/user_model', 'user');
-    $user_data = $this->user->get_user($_GET['email']);
-    $user_data['birthdate'] = date('d/m/Y', strtotime($user_data['birth']));
-    $user_data['passportdate'] = date('d/m/Y', strtotime($user_data['passport_date']));
-    foreach ($user_data as $name => $item)
-    {
-        echo '<script> $("#'.$name.'").val("'.$item.'"); </script>';
-    }
-    echo '<script> $("#username").text("'.$user_data['i'].'"); </script>';
-}
-?>
-
-<!-- всплывающее окошко --> 
-<?php
- require 'yandexmetrika.php';
- require 'googleanalytics.php';
-?>
-
+if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+{     
+    
+    echo '<!-- Event snippet for Регистрация conversion page -->
 <script>
-function markTarget(target,param, id) 
-{
-    if (typeof yaCounter47764510 == 'undefined') return;
-	if (typeof param == 'undefined') yaCounter47764510.reachGoal(target);
-	else yaCounter47764510.reachGoal(target,param);
-        
-        $.ajax({
-            type: 'POST',
-            url: '/pixel/',
-            data: 'id='+id+'&pixel='+param,
-            success: function(data){ 
-            }
-        });
+  gtag(\'event\', \'conversion\', {\'send_to\': \'AW-770053270/F6JfCLmQ7pMBEJapmO8C\'});
+</script><!-- Google Code for  
+        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
+        Page -->
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 816307745;
+        var google_conversion_label = "NPAoCJDk4X0QobyfhQM";
+        var google_remarketing_only = false;
+        /* ]]> */
+        </script>
+        <script type="text/javascript"  
+        src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""  
+        src="//www.googleadservices.com/pagead/conversion/816307745/?label=NPAoCJDk4X0QobyfhQM&amp;guid=ON&amp;script=0"/>
+        </div>
+        </noscript>
+        <!-- Global site tag (gtag.js) - Google Ads: 755948010 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-755948010"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag(\'js\', new Date());
+        gtag(\'config\', \'AW-755948010\');
+        </script>'; 
 }
-</script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+?>
 </body>
 </html>

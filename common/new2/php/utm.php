@@ -1,5 +1,6 @@
 <?php
 $utm = '';
+
 if($this->input->get())
 {
     $utm = str_replace(";", "", '?'.http_build_query($this->input->get()));

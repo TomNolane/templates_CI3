@@ -1102,8 +1102,8 @@ $(document).ready(function () {
         if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || document.querySelector('#fingerprint').value == '' || isInArray(document.querySelector('#email').value, blacklist_array2)) {
             //
             if (document.location.host == 'rublimo.ru' || document.location.host == 'zaimhome.ru') {
-                send_clickfrod();
-                window.location.href = 'https://moneyshare.ru?utm=clickfrods';
+                //send_clickfrod();
+                //window.location.href = 'https://moneyshare.ru?utm=clickfrods';
                 return false;
             }
         }
@@ -1201,14 +1201,16 @@ $(document).ready(function () {
             
             if($('#amount').val() > 100000)
                 loans = 1;
-            if (document.location.host == 'zaimhome.ru') {
-                //send_stats();
-            }
             $('input[name="step"]').val('3');
             //send_form(true, '/lk?loan='+loans+'&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source')));
             send_form(true, '/lk' + document.location.search);
             markTarget('form-step-3');
-            window.location = '/lk' + document.location.search;
+            //window.location = '/lk' + document.location.search;
+			window.location.href = '/offerwall2';
+			window.open(
+				'/lk' + document.location.search,
+				'_blank'
+			);
             //window.location = '/lk?loan='+loans+'&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source'));
         }
         count_errors++;
@@ -1226,7 +1228,12 @@ $(document).ready(function () {
 				$('input[name="step"]').val('3');
 				send_form(true, '/lk' + document.location.search);
 				markTarget('form-step-3');
-				window.location = '/lk' + document.location.search;
+				//window.location = '/lk' + document.location.search;
+				window.location.href = '/offerwall2';
+				window.open(
+					'/lk' + document.location.search,
+					'_blank'
+				);
             }
 			showBzzz = false;
 			$('.reg_same').change();
@@ -1276,7 +1283,12 @@ $(document).ready(function () {
             $('input[name="step"]').val('3');
             send_form(true, '/lk' + document.location.search);
             markTarget('form-step-3');
-            window.location = '/lk' + document.location.search;
+            //window.location = '/lk' + document.location.search;
+			window.location.href = '/offerwall2';
+			window.open(
+				'/lk' + document.location.search,
+				'_blank'
+			);
         }
         showBzzz = false;
         setcookies();
@@ -1286,7 +1298,12 @@ $(document).ready(function () {
             $('input[name="step"]').val('3');
             send_form(true, '/lk' + document.location.search);
             markTarget('form-step-3');
-            window.location = '/lk' + document.location.search;
+            //window.location = '/lk' + document.location.search;
+			window.location.href = '/offerwall2';
+			window.open(
+				'/lk' + document.location.search,
+				'_blank'
+			);
         }
         showBzzz = false;
         setcookies();
@@ -1296,7 +1313,12 @@ $(document).ready(function () {
             $('input[name="step"]').val('3');
             send_form(true, '/lk' + document.location.search);
             markTarget('form-step-3');
-            window.location = '/lk' + document.location.search;
+            //window.location = '/lk' + document.location.search;
+			window.location.href = '/offerwall2';
+			window.open(
+				'/lk' + document.location.search,
+				'_blank'
+			);
         }
         showBzzz = false;
         setcookies();

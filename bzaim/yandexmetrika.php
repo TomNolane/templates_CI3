@@ -29,26 +29,38 @@
 </script>
 <noscript>
     <div>
-        <img src="https://mc.yandex.ru/watch/35589670" style="position:absolute; left:-9999px;" alt="mc.yandex.ru" />
+        <img src="https://mc.yandex.ru/watch/35589670" style="position:absolute; left:-9999px;" alt="mc.yandex.ru/watch" />
     </div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
 <script>
-function markTarget(target,param, id){
+<?php  
+    if($this->uri->segment(1) == 'offerwall')
+        echo '_mark = 1;';
+    else if($this->uri->segment(1) == 'offerwall2')
+        echo '_mark = 2;';
+    else
+        echo '_mark = 0;';
+?>
+function markTarget(target,param, _id){
     if (typeof yaCounter35589670 == 'undefined') return;
 	if (typeof param == 'undefined') yaCounter35589670.reachGoal(target);
 	else yaCounter35589670.reachGoal(target,param);
-        
+    <?php if ($this->uri->segment(1) == 'offerwall' || $this->uri->segment(1) == 'offerwall2' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
     $.ajax({
         type: 'POST',
         url: '/pixel/',
-        data: 'id='+id+'&pixel='+param,
+        data: 
+        {
+            id : _id,
+            pixel : param,
+            mark : _mark
+        },
         success: function(data){
-            console.log(22);
         }
         ,error: function(data){
-            console.log(33);
         }
     });
+    <?php } ?>
 }
 </script>

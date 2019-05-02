@@ -58,7 +58,7 @@ if(!isset($sum))
         } 
     } 
 $px = ($px - 3.5) . '%';
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
 {
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156788691" alt="MYTARGET">';
     if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
@@ -74,27 +74,33 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
     }
-	
-    echo '<!-- Yandex.RTB R-A-257495-1 desktop -->
-    <div id="yandex_rtb_R-A-257495-1"></div>
-    <!-- Yandex.RTB R-A-257495-2 mobile -->
-    <div id="yandex_rtb_R-A-257495-2"></div> ';
+	 if($setting_array['is_mobile'] != 'мобила') {
+    echo '<ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="5116247776"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
+        }
 }?>
     <div class="footer-wrap">
         <div class="footer">
             <br class="hidden-xs hidden-sm">
             <div class="row">
                
-                    <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+                    <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' ||  $this->uri->segment(1) == 'offerwall') { ?>
                      <div class="col-md-2 hidden-xs">
-                        <img alt="logo.png" src="/templates/godzaim/assets/img/logo.png">
+                        <img alt="logo.png" src="/templates/godzaim/assets/img/logo-footer.png">
                     <?php } else { ?>
                      <div class="col-md-2 col-xs-12">
                         <img src="/templates/godzaim/assets/img/logo-footer.png" alt="logo-footer.png" class="logo logo-spec">
                     <?php } ?>
                 </div>
-                <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+                <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
                 <div class="col-md-3 col-md-offset-1 col-xs-12 spec_footer4">
                     <p>
                         Cервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. ул. Осипенко,
@@ -129,15 +135,8 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                 <?php } ?>
                 <div class="col-sm-12">
                     <hr/>
-                    <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-                        echo '<!-- Yandex.RTB R-A-257495-1 desktop -->
-                        <div id="yandex_rtb_R-A-257495-1"></div>
-                        <!-- Yandex.RTB R-A-257495-2 mobile -->
-                        <div id="yandex_rtb_R-A-257495-2"></div><hr/>';
+                    <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') { 
                     } ?>
-                    <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-  
-                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -619,20 +618,11 @@ require 'templates/common/new2/js/exeption.js';
                 </div>
             </noscript>'; 
     } else {
-        echo '<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308476-dwNvj"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308476-dwNvj" style="position:fixed; left:-999px;" alt=""/></noscript>';
+        echo '<script>!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308476-dwNvj"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308476-dwNvj" style="position:fixed; left:-999px;" alt=""/></noscript>';
     }
 ?>
-<script >
-    (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
-        '//vk.com/rtrg?r=RRRhvxA7nvURG7xAUtL1b2tM0X6dhz4tDAGsjmC3XYdu0hMp4G5M1qB0DwX9x5CjKiwuRfUUCPeTFJgPM96VEJMDEF2kd2TqnCHkwMhTMLKMsje7SOydhyYmYfpnJZCNZHLFjJlRoiPU4bCFDyrAjhJufuYNkPM30caOVnC7B/8-&pixel_id=1000099082';
-</script>
-<!--Константин Гутлид-->
-<script >
-    (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
-        '//vk.com/rtrg?r=Z7pk5C4xjqokU5G*QALWNq2pkJhzPOom99yo3Qxf9oIeFlECprDRQgjZP9SEA86kYiMHFgew1rs3AF6e*l8tUryFp/Fl495P7rPnkWnSEnGPEQiabdvpee/7*npmHm33ovO1TSw3ulRHBDU7ITWvhsLgKc4jAIpbdw4C7HeMV/s-&pixel_id=1000099730';
-</script>
 <!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
+<script>
 var _tmr = window._tmr || (window._tmr = []);
 _tmr.push({id: "3052558", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
 (function (d, w, id) {
@@ -647,7 +637,7 @@ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, fal
 </div></noscript>
 <!-- //Rating@Mail.ru counter -->
 <!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script type="text/javascript">
+<script>
 var _tmr = _tmr || [];
 _tmr.push({
 type: 'itemView',

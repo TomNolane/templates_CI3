@@ -1,5 +1,5 @@
 <?php $from = '15';
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
 {
     if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -14,10 +14,15 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
     }
-    echo '<!-- Yandex.RTB R-A-261797-1 desktop -->
-    <div id="yandex_rtb_R-A-261797-1"></div>
-    <!-- Yandex.RTB R-A-261797-2 mobile -->
-    <div id="yandex_rtb_R-A-261797-2"></div>';
+    echo '<ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="4639511728"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 } 
 ?>
@@ -30,13 +35,13 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
         <div class="row">
-        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
             <div class="col-md-7">
         <?php } else { ?>
              <div class="col-md-12">
         <?php } ?>
                 <div class="row">
-                        <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+                        <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') { ?>
                          <div class="col-md-3 hidden-xs ex-foot-logo">
                             <img src="/templates/dengomir/assets/img/icons/logo-header.png" alt="logo-footer.png">
                         </div>
@@ -47,7 +52,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                         <?php } ?>
                    
                     <div class="col-md-9 col-xs-12">
-                    <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+                    <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
                     
                         <p>Сервис по подбору выгодных онлайн займов Dengomir, находящийся по адресу
                             Россия, Ленинградская обл., г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
@@ -63,7 +68,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                     
                     <?php } else { ?>
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- dengomir -->
+                         <!-- dengomir -->
                         <ins class="adsbygoogle"
                             style="display:block"
                             data-ad-client="ca-pub-4970738258373085"
@@ -77,7 +82,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                     </div>
                 </div>
             </div>
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') : ?>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') : ?>
             <div class="col-md-5 hidden-xs hidden-sm">
                 <div class="col-md-6">
                     <p class="ex-list-title">Документы</p>
@@ -102,11 +107,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
             <div class="col-sm-12">
                 <hr/>
                 <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-                    echo '<!-- Yandex.RTB R-A-261797-1 desktop -->
-                    <div id="yandex_rtb_R-A-261797-1"></div>
-                    <!-- Yandex.RTB R-A-261797-2 mobile -->
-                    <div id="yandex_rtb_R-A-261797-2"></div><hr/>
-                    
+                    echo '
                     <div class="col-sm-12">
                     <p class="black">
                         Сервис по подбору выгодных онлайн займов находящийся по адресу:
@@ -331,14 +332,14 @@ require 'templates/common/new2/js/exeption.js';
         echo '<!-- Google Code for  
         &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
         Page -->
-        <script type="text/javascript">
+        <script>
         /* <![CDATA[ */
         var google_conversion_id = 823384433;
         var google_conversion_label = "GUrSCJuU2HoQ8bLPiAM";
         var google_remarketing_only = false;
         /* ]]> */
         </script>
-        <script type="text/javascript"  
+        <script  
         src="//www.googleadservices.com/pagead/conversion.js">
         </script>
         <noscript>
@@ -350,7 +351,7 @@ require 'templates/common/new2/js/exeption.js';
     }
 ?>
 <!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
+<script>
 var _tmr = window._tmr || (window._tmr = []);
 _tmr.push({id: "3052547", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
 (function (d, w, id) {
@@ -365,7 +366,7 @@ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, fal
 </div></noscript>
 <!-- //Rating@Mail.ru counter -->
 <!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script type="text/javascript">
+<script>
 var _tmr = _tmr || [];
 _tmr.push({
 type: 'itemView',

@@ -59,7 +59,7 @@ function plural_type($n) {
                                             <tbody>
                                             <tr>
                                                 <td>Сумма займа</td>
-                                                <td>до '.number_format($item['amount'],0,'',' ').' рублей</td>
+                                                <td>до '.number_format($item['amount'],0,'',' ').' гривен</td>
                                             </tr>
                                             <tr>
                                                 <td>Срок займа</td>

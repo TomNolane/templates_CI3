@@ -49,21 +49,35 @@
                         </div>
                     </div>
                     <div class="col-sm-5 ex-for-button text-center">
-                        <button class="ex-main-btn " type="submit">Получить деньги</button>
+                        <button class="ex-main-btn main-btn-offerwall" type="submit">Получить деньги</button>
                     </div>
                 </form>
                 </div>
             </div>
+            <?php if($setting_array['is_mobile'] != 'мобила') { ?>
+                <br><br><br>
+               <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- dengybistra -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-4970738258373085"
+                    data-ad-slot="9919758561"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            <?php } ?>
         </div>
     </div>
 </div>
 <div class="ex-get-money">
     <div class="container">
         <div class="row">
-            
+            <a class="anchor" name="id2"></a>
             <h1 class="hidden-xs hidden-sm visible-md visible-lg">Как получить деньги сейчас?</h1> 
             <h1 class="hidden-md hidden-lg visible-xs visible-sm special_ind42">Как получить деньги сейчас?</h1>
-            <?php
+            <?php if($setting_array['is_mobile'] == 'мобила') {
             echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- dengybistra -->
             <ins class="adsbygoogle"
@@ -75,7 +89,7 @@
             <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script>';
-            ?>
+            } ?>
             <br><br><br>
             <div class="col-md-6 hidden-xs hidden-sm visible-md visible-lg">
                 <div class="ex-get-money-block">
@@ -141,7 +155,7 @@
                     <p>На карту VISA, MAESTRO, QIWI кошелёк, Яндекс.Деньги, через систему CONTACT, банковский счёт</p>
                 </div>
             </div> 
-           
+           <a class="anchor" name="id3"></a>
 			<div class="col-md-6 hidden-md hidden-lg visible-xs visible-sm special_ind34">
                 <div class="ex-get-money-steps special_ind35">
                     <span class="special_ind36">3</span>
@@ -216,7 +230,7 @@
                         </div>
                     </div>
                 </div>
-                
+                <a class="anchor" name="id4"></a>
                 <div class="ex-info-block hidden-xs hidden-sm">
                     <h3>Документы и разрешительная документация</h3>
                     <p>Услуги на проекте «Сервис» оказываются юридическим лицом ИП «Бабакова К.К.» ОГРНИП 316222500122426 ИНН

@@ -48,11 +48,25 @@
                         </div>
                     </div>
                     <div class="col-sm-5 ex-for-button text-center">
-                        <button class="ex-main-btn bttn" type="submit">Получить деньги</button>
+                        <button class="ex-main-btn bttn main-btn-offerwall" type="submit">Получить деньги</button>
                     </div>
-                </form>
-                </div>
+                </form> 
+                </div> 
             </div>
+             <?php if($setting_array['is_mobile'] != 'мобила') { ?>
+                    <br><br><br>
+                   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- bzaim5.ru -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-4970738258373085"
+                        data-ad-slot="5816862028"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+               <?php } ?>
         </div>
     </div>
 </div>
@@ -61,19 +75,19 @@
         <div class="row"> 
             <h1 class="hidden-xs hidden-sm visible-md visible-lg">Как получить деньги сейчас?</h1> 
 			<h2 class="hidden-md hidden-lg visible-xs visible-sm special_ind42">Как получить деньги сейчас?</h2> 
-            <?php
+            <?php  if($setting_array['is_mobile'] == 'мобила') {
             echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- bzaim5.ru -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-4970738258373085"
-                data-ad-slot="5816862028"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>';
-            ?>
+        <!-- bzaim5.ru -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="5816862028"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
+            } ?>
             <br><br><br>
             <div class="col-md-6 hidden-xs hidden-sm visible-md visible-lg">
                 <div class="ex-get-money-block">

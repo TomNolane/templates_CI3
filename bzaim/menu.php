@@ -9,35 +9,43 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/">
-                    <img src="/templates/bzaim/assets/img/logo.png" alt="Image missing">
+                    <? $logo_addon = '';
+                    switch ($this->uri->segment(1)) {
+                        case 'offerwall': $logo_addon = '-fanzaim'; break;
+                        case 'offerwall2': $logo_addon = '-edenga'; break;
+                        default: break;
+                    } ?>
+                    <img src="/templates/bzaim/assets/img/logo<?=$logo_addon?>.png" alt="Image missing">
                 </a>
             </div>
-            <div id="navbarCollapse" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right"> 
-                   <li><a href="/about" class="hov">О нас</a></li>
-                    <li><a href="/faq">Вопросы-ответы</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Информация
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="/oferta" class="hov">Публичная оферта</a>
-                            </li>
-                            <li>
-                                <a href="/rules" class="hov">Правила предоставления займов</a>
-                            </li>
-                            <li>
-                                <a href="/agreement" class="hov">Согласие на обработку данных</a>
-                            </li>
-                            <li>
-                                <a href="/documents" class="hov">Правовые документы</a>
-                            </li>
-                        </ul>
-                    </li> 
-                    <li><a href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a></li>
-                </ul>
-            </div>
+            <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2'))) : ?>
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right"> 
+                    <li><a href="/about" class="hov">О нас</a></li>
+                        <li><a href="/faq">Вопросы-ответы</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Информация
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/oferta" class="hov">Публичная оферта</a>
+                                </li>
+                                <li>
+                                    <a href="/rules" class="hov">Правила предоставления займов</a>
+                                </li>
+                                <li>
+                                    <a href="/agreement" class="hov">Согласие на обработку данных</a>
+                                </li>
+                                <li>
+                                    <a href="/documents" class="hov">Правовые документы</a>
+                                </li>
+                            </ul>
+                        </li> 
+                        <li><a href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a></li>
+                    </ul>
+                </div>
+            <? endif; ?>
         </div>
     </nav>
 </header>
@@ -62,7 +70,7 @@
                                 <input type="tel" class="form-control input-lg" id="feedback-phone" placeholder="Телефон" title="Телефон" value="79777777736">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control input-lg" id="feedback-email" placeholder="Пример: email@mail.ru" title="Email" required>
+                                <input type="email" class="form-control input-lg" id="feedback-email" placeholder="Email" title="Email" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control input-lg" id="feedback-comment" rows="3" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"

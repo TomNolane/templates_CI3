@@ -1,5 +1,5 @@
 <?php $from = '15'; $px = '63.974'; 
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
 {
     if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -15,13 +15,18 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         </script>';
     }
 	
-    echo '<!-- Yandex.RTB R-A-264025-1 desktop -->
-    <div id="yandex_rtb_R-A-264025-1"></div>
-    <!-- Yandex.RTB R-A-264025-2 mobile -->
-    <div id="yandex_rtb_R-A-264025-2"></div>';
+    echo '<ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="4278094234"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
+if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') 
 {
     // это от zaimhoime echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534155815490" alt="mytarget">';
 }
@@ -29,13 +34,13 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
         <div class="row">
-            <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+            <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') { ?>
             <div class="col-md-2 hidden-xs">
             <?php } else { ?>
              <div class="col-md-2">
             <?php } ?>
                 <div class="ex-foot-logo">
-                    <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+                    <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') { ?>
                     <img src="templates/zaimrubli/assets/img/logo.svg" alt="logo.svg" class="logo-spec">
                     <?php } else { ?>
                     <img src="/templates/zaimrubli/assets/img/logo-footer.png" alt="logo-footer.png" class="logo-spec">
@@ -43,7 +48,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
                 </div>
             </div>
              <div class="col-md-10 col-xs-12">
-             <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+             <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
                 <p>Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г.
                     Санкт-Петербург, ул. Осипенко, 12, оф 201 <a href="mailto:support@zaimrubli.ru" class="spec_foot" target="_blank">support@zaimrubli.ru</a> <span class="hidden-xs hidden-sm">| 8 (960) 950 93 53</span><br>
                     <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
@@ -69,15 +74,8 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
             <div class="col-lg-12">
             <br>
             <hr/>
-                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-                    echo '<!-- Yandex.RTB R-A-264025-1 desktop -->
-                    <div id="yandex_rtb_R-A-264025-1"></div>
-                    <!-- Yandex.RTB R-A-264025-2 mobile -->
-                    <div id="yandex_rtb_R-A-264025-2"></div> <hr/>';
+                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') { 
                 } ?>
-                <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-
-                <?php } ?>
             </div>
         </div>
     </div>
@@ -269,14 +267,14 @@ require 'templates/common/new2/js/exeption.js';
         echo '<!-- Google Code for  
         &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
         Page -->
-        <script type="text/javascript">
+        <script>
         /* <![CDATA[ */
         var google_conversion_id = 822854490;
         var google_conversion_label = "joByCJCX5XoQ2oaviAM";
         var google_remarketing_only = false;
         /* ]]> */
         </script>
-        <script type="text/javascript"  
+        <script  
         src="//www.googleadservices.com/pagead/conversion.js">
         </script>
         <noscript>
@@ -284,7 +282,14 @@ require 'templates/common/new2/js/exeption.js';
         <img height="1" width="1" style="border-style:none;" alt=""  
         src="//www.googleadservices.com/pagead/conversion/822854490/?label=joByCJCX5XoQ2oaviAM&amp;guid=ON&amp;script=0"/>
         </div>
-        </noscript>'; 
+        </noscript><!-- Global site tag (gtag.js) - Google Ads: 755948010 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-755948010"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag(\'js\', new Date());
+        gtag(\'config\', \'AW-755948010\');
+        </script>'; 
         echo '<script>
         $( ".ex-off-block").find(\'button\').css("display" , "none");
             if($(".ex-off-block").hasClass("ex-offers-active")) {

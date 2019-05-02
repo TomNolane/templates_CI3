@@ -6,6 +6,7 @@
         echo '<style>'; 
         require "templates/common/new2/css/common.css";
         require "templates/bzaim/assets/css/style.css";
+        if ($this->uri->segment(1) == 'offerwall') require "templates/bzaim/assets/css/add.css";
         if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') 
         {
             require "templates/bzaim/assets/css/style_lk.css";

@@ -15,10 +15,15 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         </script>';
     }
 	
-    echo '<!-- Yandex.RTB R-A-259962-1 desktop -->
-    <div id="yandex_rtb_R-A-259962-1"></div>
-    <!-- Yandex.RTB R-A-259962-2 mobile -->
-    <div id="yandex_rtb_R-A-259962-2"></div>';
+    echo '<ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="7850222323"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
 ?>
@@ -57,14 +62,6 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                  </div>
                     
             </div>
-             <!-- Yandex.RTB R-A-259962-1 desktop -->
-            <div id="yandex_rtb_R-A-259962-1"></div>
-            <!-- Yandex.RTB R-A-259962-2 mobile -->
-            <div id="yandex_rtb_R-A-259962-2"></div>
-            <hr/>
-        <?php } ?>
-        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-
         <?php } ?>
     </div>
 </footer>
@@ -308,14 +305,14 @@ require 'templates/common/new2/js/exeption.js';
         echo '<!-- Google Code for  
         &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
         Page -->
-        <script type="text/javascript">
+        <script>
         /* <![CDATA[ */
         var google_conversion_id = 826360846;
         var google_conversion_label = "tDGuCMWP13kQjoiFigM";
         var google_remarketing_only = false;
         /* ]]> */
         </script>
-        <script type="text/javascript"  
+        <script  
         src="//www.googleadservices.com/pagead/conversion.js">
         </script>
         <noscript>

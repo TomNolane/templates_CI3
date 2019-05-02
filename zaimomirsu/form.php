@@ -69,21 +69,13 @@ if(isset($_SERVER['HTTP_REFERER'])){
             <div class="col-lg-6">
                 <ul class="ex-tab-steps ">
                     <li class="ex-step-counter ex-step-active">
-                        <figure></figure>
-                        <p><br></p>
-                    </li>
-                    <li class="ex-step-counter ex-step-active">
                         <figure>Ваши данные</figure>
-                        <p><br></p>
-                    </li>
-                    <li class="ex-step-counter ex-step-active">
-                        <figure></figure>
                         <p><br></p>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <!-- <div class="row justify-content-center">
             <div class="col-xl-8 ">
                 <div class="ex-calc-block">
                     <div class="ex-wrapper">
@@ -113,7 +105,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="ex-bg-form">
         <div class="container">

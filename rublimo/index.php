@@ -48,7 +48,7 @@
 								</span>
 							</div>
 						</div>
-						<button type="submit" class="btn form-button">Оформить</button>
+						<button type="submit" class="btn form-button main-btn-offerwall">Оформить</button>
 				</div>
 				<img src="/templates/rublimo/assets/img/bank2.png" alt="rublimo.ru" id="bank">
 			</div>
@@ -91,7 +91,7 @@
 							</div>
 						</div>
 						<div class="shadow">
-							<button type="submit" class="btn ind_spec2">Оформить займ</button>
+							<button type="submit" class="btn ind_spec2 main-btn-offerwall">Оформить займ</button>
 						</div>
 				</div>
 			</div>

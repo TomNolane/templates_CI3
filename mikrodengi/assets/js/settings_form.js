@@ -3,12 +3,12 @@ var agree = 1;
 $('#agree').change(function(){ 
     if (agree == 1)
     {
-        $('#next1f').removeClass('btn3').addClass('btn2');
+        $('#submitOne').removeClass('btn3').addClass('btn2');
         agree = 0;
     }
     else
     {
-        $('#next1f').removeClass('btn2').addClass('btn3')
+        $('#submitOne').removeClass('btn2').addClass('btn3')
         agree = 1;
     }
 });

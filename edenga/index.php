@@ -44,7 +44,7 @@
                                     <img src="/templates/edenga/assets/img/ps.png" alt="ps.png">
                                 </div>
                             </div>
-                            <button type="submit" class="btn form-button">Получить деньги</button>
+                            <button type="submit" class="btn form-button main-btn-offerwall">Получить деньги</button>
                         </div>
                     </div>
                     <div class="col-sm-4">
@@ -137,7 +137,7 @@
         </div>
     </form>
 </section>
-
+  <?php if($setting_array['is_mobile'] != 'мобила') { ?>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- edenga -->
     <ins class="adsbygoogle"
@@ -149,6 +149,7 @@
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
+  <?php } ?>
 <section id="conditions" class="hidden-xs hidden-sm">
     <div class="container container-services">
         <div class="row conditions">
@@ -195,7 +196,6 @@
         </div>
     </div>
 </section>
-
 <section id="conditions" class="hidden-xs hidden-sm">
     <div class="container container-services text-left">
         <div class="row conditions">
@@ -233,7 +233,6 @@
         </div>
     </div>
 </section>
-
 <section id="conditions" class="hidden-xs hidden-sm">
     <div class="container container-services text-left">
         <div class="row conditions">
@@ -257,7 +256,6 @@
         </div>
     </div>
 </section>
-
 <section id="conditions" class="hidden-xs hidden-sm">
     <div class="container container-services text-left">
         <div class="row conditions">

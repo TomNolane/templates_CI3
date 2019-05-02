@@ -1,0 +1,112 @@
+.bottom-text.fa {color: #777 !important;}
+
+.top-text {
+    font-weight: normal !important;
+    font-size: 85% !important;
+    color: #AAA !important;
+}
+.bottom-text {
+    font-weight: normal !important;
+}
+
+.bem_offer {
+    display: flex !important;
+    margin-bottom: 38px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    position: relative !important;
+    text-decoration: none !important;
+    transition: 0.2s !important;
+    font-family: "Calibri" !important;
+    height: 82px !important;
+
+    border: 1px solid #2cbd04 !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+.bem_offer__note {
+    color: #fff !important;
+    font-size: 14px !important;
+    left: 20px !important;
+    padding: 0px 13px 0px !important;
+    position: absolute !important;
+    top: -20px !important;
+    transition: 0.2s !important;
+    height: 20px !important;
+    line-height: 20px !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+@keyframes pop{
+  50%  {transform: scale(1.05);}
+}
+
+.bem_offers__wrapper {
+    width: 85% !important;
+    margin: 0 auto !important;
+}
+.bem_offers__wrapper:hover {
+  -webkit-animation: pop 0.4s ease !important;
+   -webkit-animation-iteration-count: 1 !important;
+   animation-iteration-count: 1 !important;
+   animation: pop 0.4s linear 1 !important;
+}
+
+.bem_offer__image {
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
+}
+.bem_offer__info {
+    color: #777 !important;
+    width: auto !important;
+    flex: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    padding: 0 15px !important;
+}
+.bem_offer__info-wrapper {
+    display: flex !important;
+    justify-content: space-evenly !important;
+    width: 100% !important;
+}
+.bem_param {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    line-height: 26px !important;
+    padding-right: 10px !important;
+}
+.bem_offer__get {
+    max-width: 285px !important;
+    align-items: center !important;
+    display: flex !important;
+    text-align: right !important;
+    vertical-align: middle !important;
+    position: relative !important;
+}
+.bem_offer__button {
+    width: 210px !important;
+    height: 40px !important;
+    border-radius: 18px !important;
+    line-height: 40px !important;
+    text-align: center !important;
+    font-size: 16px !important;
+    text-transform: uppercase !important;
+    transition: 0.2s !important;
+    font-weight: bold !important;
+
+    background: rgba(88,255,46,1);
+    background: -moz-linear-gradient(top, rgba(88,255,46,1) 0%, rgba(44,189,4,1) 50%, rgba(42,184,2,1) 51%, rgba(88,255,46,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(88,255,46,1)), color-stop(50%, rgba(44,189,4,1)), color-stop(51%, rgba(42,184,2,1)), color-stop(100%, rgba(88,255,46,1)));
+    background: -webkit-linear-gradient(top, rgba(88,255,46,1) 0%, rgba(44,189,4,1) 50%, rgba(42,184,2,1) 51%, rgba(88,255,46,1) 100%);
+    background: -o-linear-gradient(top, rgba(88,255,46,1) 0%, rgba(44,189,4,1) 50%, rgba(42,184,2,1) 51%, rgba(88,255,46,1) 100%);
+    background: -ms-linear-gradient(top, rgba(88,255,46,1) 0%, rgba(44,189,4,1) 50%, rgba(42,184,2,1) 51%, rgba(88,255,46,1) 100%);
+    background: linear-gradient(to bottom, rgba(88,255,46,1) 0%, rgba(44,189,4,1) 50%, rgba(42,184,2,1) 51%, rgba(88,255,46,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58ff2e', endColorstr='#58ff2e', GradientType=0 );
+    color: #FFF !important;
+}

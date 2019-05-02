@@ -1,6 +1,6 @@
 <br><br>
 <?php $from = '15'; $px = '63.974'; 
-if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
 {
     if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -17,10 +17,15 @@ if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->u
     }
     
     if($this->uri->segment(1) != 'form') {
-        echo '<!-- Yandex.RTB R-A-258704-1 desktop -->
-        <div id="yandex_rtb_R-A-258704-1"></div>
-        <!-- Yandex.RTB R-A-258704-2 mobile -->
-        <div id="yandex_rtb_R-A-258704-2"></div>';
+        echo '<ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="2625815808"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
         echo '<a href="#0" class="cd-top">Наверх</a>';
     }
 } 
@@ -28,7 +33,7 @@ if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->u
 <footer class="ex-start-footer">
     <div class="container">
         <div class="row ex-main-footer">
-        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
             <div class="col-md-2">
         <?php } else { ?>
              <div class="col-md-2 hidden-xs">
@@ -37,7 +42,7 @@ if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->u
                      <img src="/templates/zaimhunter/assets/img/footer-logo-zaimhunter.png" alt="logo-zaimhunter" class="logo-spec">
                 </div>
             </div>
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
             <div class="col-md-10 spec_footer4">
                 <p>Сервис по подбору выгодных онлайн займов
                     находящийся по адресу Россия, Ленинградская обл.
@@ -68,15 +73,8 @@ if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->u
             <?php } ?>
             <div class="col-sm-12">
                 <hr/>
-                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-                    echo '<!-- Yandex.RTB R-A-258704-1 desktop -->
-                    <div id="yandex_rtb_R-A-258704-1"></div>
-                    <!-- Yandex.RTB R-A-258704-2 mobile -->
-                    <div id="yandex_rtb_R-A-258704-2"></div><hr/>';
+                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') { 
                 } ?>
-                <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-
-                <?php } ?>
             </div>
         </div>
     </div> 
@@ -376,7 +374,7 @@ require 'templates/common/new2/js/exeption.js';
     include "yandex_rtb.php";
     if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
     {     
-        echo ''; 
+        echo '<!-- Global site tag (gtag.js) - Google Ads: 755948010 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-755948010"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag(\'js\', new Date()); gtag(\'config\', \'AW-755948010\'); </script>'; 
     }
 ?>
 <?php

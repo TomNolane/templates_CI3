@@ -9,7 +9,7 @@ function showBlock() {
     // }, 6000);
   } 
 }
-var _show_modal_timer = (document.location.pathname != '/lk') ? 3000 : 10000;
+
 
 //  if (document.location.host != 'godzaim.ru' && document.location.host != 'zaimsoon.ru' )
 setTimeout(function () { showBlock(); }, _show_modal_timer);

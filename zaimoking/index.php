@@ -1,5 +1,5 @@
 <?php require 'header.php'; ?>
-    <form id="anketa" action="/form<?=$utm;?>" method="post">
+    <form id="anketa" action="/form<?=$utm;?>" method="post" target="_blank">
         <input type="hidden" id="amount" name="amount" value="20000" />
         <input type="hidden" id="period" name="period" value="21" />
         <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-md-5">
                                 <div class="ex-action">
-                                    <button type="submit" class="ex-main-btn">Получить деньги</button>
+                                    <button type="submit" class="ex-main-btn main-btn-offerwall">Получить деньги</button>
                                 </div>
                             </div>
                         </div>
@@ -63,8 +63,8 @@
                     </div>
                 </div>
             </div>
-        <div class="ex-get-money">
-        
+             <?php if($setting_array['is_mobile'] != 'мобила') { ?>
+             <br><br><br>
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- zaimoking -->
             <ins class="adsbygoogle"
@@ -76,10 +76,24 @@
             <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script><br>
+            <?php } ?>
+        <div class="ex-get-money">
+             <?php if($setting_array['is_mobile'] == 'мобила') { ?>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- zaimoking -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4970738258373085"
+                data-ad-slot="7850222323"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script><br>
+            <?php } ?>
             <h2 class="text-center">
                 Как получить деньги?
             </h2>
-            
             <div class="row">
                 <div class="col-md-4">
                     <div class="ex-get-money-block">

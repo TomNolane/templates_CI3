@@ -92,8 +92,8 @@ if($country != 'RU')
         $country = 'NONE';
     }
     
-    if($country != 'RU')
-        $is_bot = 1;
+    if($country != 'RU') $is_bot = 1;
+         
 }
 
 $is_mobile = 'декстоп';

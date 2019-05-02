@@ -203,6 +203,7 @@ function hideModal() {
 };
 
 function showModal() {
+	/*
     document.querySelector(".modal__overlay").style.display = 'block';
     setTimeout(function () {
      document.querySelector("#modal__trigger").click();
@@ -210,6 +211,7 @@ function showModal() {
         hideModal();
         }, 6000);
     }, 500);
+	*/
 }
 if (document.querySelector("#date_end") != null)
 {

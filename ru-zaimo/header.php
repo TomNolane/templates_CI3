@@ -1,0 +1,242 @@
+<?php
+    require 'templates/common/new2/php/check_bot.php';
+	$my_title = ''; $description = ''; $universal_folder = 0; $price = "8 000";
+	$main = 'bigzaim';
+	$link = 'https://pxl.leads.su/click/3b00787cbb4b9484e25cbe512163ca7d?source=ru-zaimo.ru/bigzaim';
+	$my_title = 'Bigzaim Лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
+	$description = 'Bigzaim осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
+    
+    $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
+    $link = str_replace("#site1", ucfirst($domen), $link);
+    $link = str_replace("#site", $domen, $link);
+
+    $domen = $this->uri->segment(1);
+    
+    if(isset($domen[1]))
+        $domen = $domen[1];
+
+    switch($domen)
+    {
+        case 'p': $domen = "push-".$this->uri->segment(1).'_'.date("d").'_'.date("m"); break;
+        case 'e': $domen = "email-".$this->uri->segment(1).'_'.date("d").'_'.date("m"); break;
+        default; $domen = "sms-".$this->uri->segment(1).'_'.date("d").'_'.date("m"); break;
+    }
+
+    if($this->input->get())
+        $link = str_replace("#name#", implode('',$this->input->get())."_".$domen, $link);
+    else 
+        $link = str_replace("#name#", $domen, $link);
+
+    function getDomain3()
+    {
+        $CI =& get_instance();
+        return preg_replace("/^[\w]{2,6}:\/\/([\w\d\.\-]+).*$/","$1", $CI->config->slash_item('base_url'));
+    }
+
+    $domain = getDomain3();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php if($this->uri->segment(1) != 'index' && $this->uri->segment(1) != '') echo $my_title; else echo 'Ru-zaimo доступные займы';?></title>
+    <meta name="description" content="<?=$description?>">
+    <meta property="og:url" content="https://<?=$domain?>/<?=$main?>">
+    <meta property="og:title" content="Вам одобрено!">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/templates/ru-zaimo/img/universal/<?=$main?>_header.jpg">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="canonical" href="https://<?=$domain?>/<?=$main?>">
+    <link rel="shortcut icon" href="/templates/ru-zaimo/img/universal/<?=$main?>.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/templates/ru-zaimo/css/universal/<?=$universal_folder?>/tilda-grid-3.0.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/templates/ru-zaimo/css/universal/<?=$universal_folder?>/tilda-blocks-2.12.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/templates/ru-zaimo/css/universal/<?=$universal_folder?>/tilda-animation-1.0.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/templates/ru-zaimo/css/universal/<?=$universal_folder?>/tilda-slds-1.4.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/templates/ru-zaimo/css/universal/<?=$universal_folder?>/tilda-zoom-2.0.min.css" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="/templates/ru-zaimo/css/universal/<?=$universal_folder?>/custom.css">
+	<script src="/templates/ru-zaimo/js/universal/jquery-1.10.2.min.js"></script>
+    <script src="/templates/ru-zaimo/js/universal/osd.js"></script>
+    <script async="" id="tildastatscript" src="/templates/ru-zaimo/js/universal/tildastat-0.2.min.js"></script>
+    <script async="" id="topmailru-code" src="/templates/ru-zaimo/js/universal/code.js"></script>
+    <script src="/templates/ru-zaimo/js/universal/tilda-scripts-2.8.min.js"></script>
+    <script src="/templates/ru-zaimo/js/universal/tilda-blocks-2.7.js"></script>
+    <script src="/templates/ru-zaimo/js/universal/lazyload-1.3.min.js" charset="utf-8"></script>
+    <script src="/templates/ru-zaimo/js/universal/tilda-animation-1.0.min.js" charset="utf-8"></script>
+    <script src="/templates/ru-zaimo/js/universal/typed.min.js" charset="utf-8"></script>
+    <script src="/templates/ru-zaimo/js/universal/tilda-slds-1.4.min.js" charset="utf-8"></script>
+    <script src="/templates/ru-zaimo/js/universal/hammer.min.js" charset="utf-8"></script>
+    <script src="/templates/ru-zaimo/js/universal/tilda-zoom-2.0.min.js" charset="utf-8"></script>
+    <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/33505121ee025ec05bae5fd44c7ba208_1.js" async></script>
+    <style>
+    <?php
+    echo '.t338__logo{float: unset;max-width: 220px !important;}.t338__title{margin-bottom: 40px;padding-top: 200px;text-align: center;} .t-prefix_1{padding-left: 0;padding-right: 0;}';
+    echo '@media (max-width: 450px) {.t338__logo{margin-top: 0;float: initial;margin-bottom:0;} }';
+    if($this->uri->segment(1) == 'hz' || $this->uri->segment(1) == 'mz')
+    {
+        echo '#spec, #spec2 {background-color: #fff !important;padding: 10px !important;border-radius: 10px !important;}';
+    }
+    if($this->uri->segment(1) == 'bg' || $this->uri->segment(1) == 'dz' || $this->uri->segment(1) == 'mz' || $this->uri->segment(1) == 'oz')
+    {
+        echo '@media (max-width: 640px) {.t-cover__carrier{background-position: center right !important;} .t-valign_middle{vertical-align: unset !important;}.t338__title{padding-top: 0;} }';
+    }
+    if($this->uri->segment(1) == 'ek' || $this->uri->segment(1) == 'cr')
+    {
+        echo '@media (max-width: 640px) {.t-valign_middle{vertical-align: unset !important;}.t338__title{padding-top: 0;} }';
+    }
+    ?>
+    @keyframes shadow-pulse {
+	0% {
+		-webkit-box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.75);
+		box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.75)
+	}
+
+	100% {
+		box-shadow: 0 0 0 15px rgba(0, 0, 0, 0)
+	}
+}
+.t-prefix_1 {
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 20px;
+      vertical-align: unset;
+}
+.pulse2 {
+	animation: shadow-pulse 1s infinite !important;
+	-webkit-animation: shadow-pulse 1s infinite !important;
+}
+.t-container {max-width: 1700px;}
+.t-col_11 {max-width: 100%;}
+.t338__btn {
+    font-size: 18px;
+    height: 70px;
+}
+.t-col_12 {max-width: inherit !important;} 
+
+<?php require "templates/common/new2/css/common.css"; ?>
+li > a {
+    font-size: 16px;
+    color: #000;
+    margin: 0 auto;
+    vertical-align: middle;
+    margin-top: 20px;
+}
+.dropdown-menu {
+    left: auto !important;
+}
+    </style>
+</head>
+<?php
+$previous = '';
+
+if(isset($_SERVER['HTTP_REFERER'])) {
+    $previous = $_SERVER['HTTP_REFERER'];
+
+}?>
+<body class="t-body" style="margin: 0px;">
+<?php
+// if(empty($previous) || $previous == 'https://ru-zaimo.ru/' || $previous == 'https://ru-zaimo.ru/faq' || $previous == 'https://ru-zaimo.ru/about' || $previous == 'https://ru-zaimo.ru/oferta'
+//     || $previous == 'https://ru-zaimo.ru/soglasie' || $previous == 'https://ru-zaimo.ru/rules' || $previous == 'https://ru-zaimo.ru/personal-data' || $previous == 'https://ru-zaimo.ru/calls'
+//     || $previous == 'https://ru-zaimo.ru/regulation' || $previous == 'https://ru-zaimo.ru/safety' || $previous == 'https://ru-zaimo.ru/zaim-card' || $previous == 'https://ru-zaimo.ru/zaim-yandex'
+//     || $previous == 'https://ru-zaimo.ru/zaim-contact' || $previous == 'https://ru-zaimo.ru/zaim-qiwi' || $previous == 'https://ru-zaimo.ru/zaim-bank' || $previous == 'https://ru-zaimo.ru/offerwall')
+if(1 == 1)
+{
+?>
+    <header style="margin: 0 20px; top: 0;">
+    <nav class="navbar">
+		<div class="col-md-12">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/be">
+                    <?php if($domain == 'ru-zaimo.ru') { ?>
+					<img src="/templates/ru-zaimo/img/ru-zaimo.png" class="t338__logo t-img">
+                    <?php } else { ?>
+                    <img src="/templates/ru-zaimo/img/sumas.png" class="t338__logo t-img">
+                    <?php } ?>
+				</a>
+			</div>
+			<div class="navbar-collapsem hidden-xs" id="navbar-collapse-1">
+				<ul class="nav navbar-nav menu">
+					<li >
+						<a href="/about">
+							О сервисе
+						</a>
+					</li>
+					<li>
+						<a href="<?=$link?>" target="_blank">Получить деньги</a>
+					</li>
+					<li>
+						<a id="test" href="/faq">Вопросы-ответы</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+							Документы
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/oferta">Публичная оферта</a></li>
+                            <li><a href="/soglasie">Согласие на обработку данных</a></li>
+                            <li><a href="/rules">Условия пользования сайтом</a></li>
+                            <li><a href="/personal-data">Политика компании</a></li>
+                            <li><a href="/calls">Согласие на звонки</a></li> 
+                            <li><a href="/regulation">Персональные данные</a></li>
+                            <li><a href="/safety">Безопасность данных</a></li>
+						</ul>
+					</li>
+                    <li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+							Способы получения займа
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="/zaim-card">Банковская карта</a></li>
+                            <li><a href="/zaim-yandex">Яндекс.Деньги</a></li>
+                            <li><a href="/zaim-contact">Contact</a></li>
+                            <li><a href="/zaim-qiwi">QIWI VISA кошелек</a></li>
+                            <li><a href="/zaim-bank">Счет в банке</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>  
+  </header>
+  <?php if(!empty($previous) && $previous != 'https://ru-zaimo.ru/' && $previous != 'https://sumas.ru/') { 
+      if($this->uri->segment(1) != '/' && $this->uri->segment(1) != '' && $this->uri->segment(1) != ' ') { ?>
+<?php if($domain == 'ru-zaimo.ru') { ?>
+         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Ru-zaimo.ru -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="9321709999"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <?php } else { ?>
+        
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4970738258373085",
+        enable_page_level_ads: true
+        });
+        </script>
+        <?php } ?>
+ <?php } }?>
+    <!--allrecords-->
+<?php } else { ?>
+<!-- <header  style="margin: 20px 0 0 0;  text-align: center">
+    <a class="" href="/">
+        <img src="/templates/ru-zaimo/img/ru-zaimo.png" class="t-img">
+    </a> 
+  </header> -->
+<?php }?>
+  
+    <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="663907"
+        data-tilda-page-id="3385037" data-tilda-page-alias="push" data-tilda-formskey="93c3cbd6dbbe2328e90d7d614020b440"
+        style="overflow-x: hidden;">

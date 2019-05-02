@@ -335,14 +335,14 @@ require 'templates/common/new2/js/exeption.js';
         echo '<!-- Google Code for  
         &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
         Page -->
-        <script type="text/javascript">
+        <script>
         /* <![CDATA[ */
         var google_conversion_id = 844462441;
         var google_conversion_label = "NxPcCNq4sHUQ6fLVkgM";
         var google_remarketing_only = false;
         /* ]]> */
         </script>
-        <script type="text/javascript"  
+        <script  
         src="//www.googleadservices.com/pagead/conversion.js">
         </script>
         <noscript>
@@ -354,7 +354,7 @@ require 'templates/common/new2/js/exeption.js';
     }
 ?>
 <!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
+<script>
 var _tmr = window._tmr || (window._tmr = []);
 _tmr.push({id: "3052560", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
 (function (d, w, id) {
@@ -369,7 +369,7 @@ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, fal
 </div></noscript>
 <!-- //Rating@Mail.ru counter -->
 <!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script type="text/javascript">
+<script>
 var _tmr = _tmr || [];
 _tmr.push({
 type: 'itemView',

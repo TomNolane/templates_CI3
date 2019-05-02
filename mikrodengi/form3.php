@@ -61,10 +61,10 @@
                 </div>
             </div>
             <div class="form-group has-feedback">
-                <label class="control-label col-md-3" for="work_salary">Зарплата(в рублях)</label>
+                <label class="control-label col-md-3" for="work_salary">Зарплата(в гривнах)</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
-                        <input type="tel" class="form-control ec tip"  value="25000" name="work_salary" id="work_salary" maxlength="6" placeholder="Зарплата в рублях"
+                        <input type="tel" class="form-control ec tip"  value="25000" name="work_salary" id="work_salary" maxlength="6" placeholder="Зарплата в гривнах"
                             title="Введите вашу среднюю зарплату" data-validation="number" data-validation-error-msg="Введите среднюю зарплату"
                             required>
                             <p class="text-muted helpblock">Пример: 25000</p>

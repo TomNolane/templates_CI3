@@ -20,14 +20,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZBK47T" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
-<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=oUIrxEEED8qFrsbZJVRzG6duZ39T8*M4rPAzc85XgSNJGHvUfFFTr*9nZ58V0olTf5G3bB6OmSvKfhe0KKVpL59wDXvoeJKk6bhKowF8eH0ftUpimXiJQjVbz966t3x2pGl72xUo/MH3sCBkZn*ZLtslFpEET2fM*kev/d/iwPU-&pixel_id=1000099083';</script>
+<script>(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=oUIrxEEED8qFrsbZJVRzG6duZ39T8*M4rPAzc85XgSNJGHvUfFFTr*9nZ58V0olTf5G3bB6OmSvKfhe0KKVpL59wDXvoeJKk6bhKowF8eH0ftUpimXiJQjVbz966t3x2pGl72xUo/MH3sCBkZn*ZLtslFpEET2fM*kev/d/iwPU-&pixel_id=1000099083';</script>
 <!--Константин Гутлид-->
-<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=wqJ*K2aGdcpg2liN6EhsYyFiF/6V/WyeQDg3Fhe0LS0BD72zEww9dHFpCCZoPNfX5wX32Mp*ZUkoX15dQfo7LWYGZpJPbd10TICdApDxTC6EeiIgyRTsu8jBiK9Y1NV5KNux8UYE2rP10qeO297yIxm5gcl9RV2TyjnYnnP2EzU-&pixel_id=1000099729';</script>
+<script>(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=wqJ*K2aGdcpg2liN6EhsYyFiF/6V/WyeQDg3Fhe0LS0BD72zEww9dHFpCCZoPNfX5wX32Mp*ZUkoX15dQfo7LWYGZpJPbd10TICdApDxTC6EeiIgyRTsu8jBiK9Y1NV5KNux8UYE2rP10qeO297yIxm5gcl9RV2TyjnYnnP2EzU-&pixel_id=1000099729';</script>
 <!-- Код тега ремаркетинга Google -->
 <!-- ------------------------------------------------
 С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
 ------------------------------------------------- -->
-<script type="text/javascript">
+<script>
 /* <![CDATA[ */
 var google_conversion_id = 843631316;
 var google_custom_params = window.google_tag_params;

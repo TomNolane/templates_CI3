@@ -1,4 +1,4 @@
-
+<a class="anchor" name="id1"></a>
 <nav class="navbar">
     <div class="container">
         <div class="navbar-header">
@@ -54,7 +54,7 @@
                                 <input type="hidden" class="form-control input-lg" id="feedback-phone" value="89116789870" name="feedback-phone">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control input-lg" id="feedback-email" name="feedback-email" placeholder="Пример: email@mail.ru" title="Email" required>
+                                <input type="email" class="form-control input-lg" id="feedback-email" name="feedback-email" placeholder="Email" title="Email" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control input-lg" id="feedback-comment" name="feedback-comment" rows="3" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"

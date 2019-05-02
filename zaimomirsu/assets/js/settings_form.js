@@ -19,13 +19,18 @@ var re_int = /^\d+$/;
 var re_name = /^[а-яА-Яё,\W\.\s-]+$/i;
 var isWebvisor = new RegExp('^https?:\/\/([^/]+metrika.yandex\.(ru|ua|com|com\.tr|by|kz)|([^/]+\.)?webvisor\.com)').test(document.referrer); 
 
-function error(msg, elem) {  
-	$('html, body').animate({
-		scrollTop: elem.offset().top - 160
-	}, 1000);
-	elem.click();
-	elem.blur(); 
-	elem.parent(elem).find('.help-block2').css('display','inline-block'); 
+function error(msg, elem) {
+	var title = 'Ошибка';
+	if ($('#message').length) $('#message').remove();
+	$('body').append('<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
+		'<h4 class="modal-title" id="messageLabel">' + title + '</h4></div>' +
+        '<div class="modal-body">' + msg + '</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">OK</button></div></div></div></div>');
+        $('html, body').animate({
+            scrollTop: elem.offset().top - 160
+        }, 1000);
+        elem.click();
+        elem.blur();
+        $('#message').modal('show');
 }
 
 function send_form(send, href) {
@@ -83,7 +88,7 @@ function validate(){
 	if (!validate1()) return false;
 	if(typeof window.obUnloader != 'undefined')
     {
-        window.obUnloader.resetUnload();
+        //window.obUnloader.resetUnload();
     }
 	$('#form-modal').show();
 	return true;
@@ -250,18 +255,18 @@ init2($("#feedback-name"));
         }
     } 
   });
-  $('#phone').blur(function(){
-    if ($('input[name="phone"]').val().length != 13) {
-        $('#phonestatus').html('');
-        $('#spec_form2').addClass('label_er').removeClass('label_true'); 
-        $('#phone').parent().removeClass('ex-success').addClass('ex-error');
-    }
-    else
-    {
-        $('#spec_form2').removeClass('label_er').addClass('label_true');
-        $('#phone').parent().removeClass('ex-error').addClass('ex-success');
-    } 
-});
+//   $('#phone').blur(function(){
+//     if ($('input[name="phone"]').val().length != 13) {
+//         $('#phonestatus').html('');
+//         $('#spec_form2').addClass('label_er').removeClass('label_true'); 
+//         $('#phone').parent().removeClass('ex-success').addClass('ex-error');
+//     }
+//     else
+//     {
+//         $('#spec_form2').removeClass('label_er').addClass('label_true');
+//         $('#phone').parent().removeClass('ex-error').addClass('ex-success');
+//     } 
+// });
   $('#passport_code').blur(function(){
     $.ajax({
 	type: 'POST',
@@ -351,55 +356,55 @@ init2($("#feedback-name"));
     var today_100  = current_date + "/" + current_month + "/" + current_year_100;
     var today  = current_date + "/" + current_month + "/" + current_year;
     var today_5  = current_date + "/" + current_month + "/" + current_year_5;
-    $('#birthdate').pickmeup_twitter_bootstrap(
-        pickmeup.defaults.locales['en'] = {
-            days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-            daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-            daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-            months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-            monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
-        },
-        pickmeup('#birthdate', {
-            format	: 'd/m/Y',
-            default_date : true,
-            hide_on_select: true,
-            date: today_18,
-            min:  today_70,
-            max: today_18,
-            change : function (formatted_date) { 
-                if ($(this).val().indexOf("_") == -1) $('#phone').focus();
-            }
-        })
-    );
-    $('#passportdate').pickmeup_twitter_bootstrap(
-        pickmeup.defaults.locales['en'] = {
-            days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-            daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-            daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-            months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-            monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
-        },
-        pickmeup('#passportdate', {
-            format	: 'd/m/Y',
-            default_date : true,
-            hide_on_select: true,
-            date: today_5,
-            min:  today_100,
-            max: today,
-            change : function (formatted_date) { 
-                var birth = formatted_date.split('/');
-                $('select#passport_dd').append($("<option></option>").attr("value", birth[0]).text(birth[0]));
-                $("select#passport_dd").val(birth[0]);
-                $('select#passport_mm').append($("<option></option>").attr("value", birth[1]).text(birth[1]));
-                $("select#passport_mm").val(birth[1]);
-                $('select#passport_yyyy').append($("<option></option>").attr("value", birth[2]).text(birth[2]));
-                $("select#passport_yyyy").val(birth[2]);
+    // $('#birthdate').pickmeup_twitter_bootstrap(
+    //     pickmeup.defaults.locales['en'] = {
+    //         days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+    //         daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    //         daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    //         months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    //         monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
+    //     },
+    //     pickmeup('#birthdate', {
+    //         format	: 'd/m/Y',
+    //         default_date : true,
+    //         hide_on_select: true,
+    //         date: today_18,
+    //         min:  today_70,
+    //         max: today_18,
+    //         change : function (formatted_date) { 
+    //             if ($(this).val().indexOf("_") == -1) $('#phone').focus();
+    //         }
+    //     })
+    // );
+    // $('#passportdate').pickmeup_twitter_bootstrap(
+    //     pickmeup.defaults.locales['en'] = {
+    //         days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+    //         daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    //         daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    //         months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    //         monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
+    //     },
+    //     pickmeup('#passportdate', {
+    //         format	: 'd/m/Y',
+    //         default_date : true,
+    //         hide_on_select: true,
+    //         date: today_5,
+    //         min:  today_100,
+    //         max: today,
+    //         change : function (formatted_date) { 
+    //             var birth = formatted_date.split('/');
+    //             $('select#passport_dd').append($("<option></option>").attr("value", birth[0]).text(birth[0]));
+    //             $("select#passport_dd").val(birth[0]);
+    //             $('select#passport_mm').append($("<option></option>").attr("value", birth[1]).text(birth[1]));
+    //             $("select#passport_mm").val(birth[1]);
+    //             $('select#passport_yyyy').append($("<option></option>").attr("value", birth[2]).text(birth[2]));
+    //             $("select#passport_yyyy").val(birth[2]);
 
-                if ($(this).val().indexOf("_") == -1) 
-                $('#passport_code').focus();
-             }
-        })
-    ); 
+    //             if ($(this).val().indexOf("_") == -1) 
+    //             $('#passport_code').focus();
+    //          }
+    //     })
+    // ); 
 	$('#submitOne').click(function(){
 		if (validate()) {
             // $('.ex-step-counter.ex-step-2').addClass('ex-step-active');

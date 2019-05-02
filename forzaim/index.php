@@ -47,15 +47,30 @@
                                 </li>
                             </ul>
                             <div class="ex-for-button text-center">
-                                <button class="ex-main-btn">Получить деньги</button>
+                                <button class="ex-main-btn main-btn-offerwall">Получить деньги</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <?php if($setting_array['is_mobile'] != 'мобила') { ?>
+            <br><br><br>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- forzaim -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4970738258373085"
+                data-ad-slot="6265677912"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <?php } ?>
         </div>
     </div>
 </section>
+<?php if($setting_array['is_mobile'] == 'мобила') { ?>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- forzaim -->
 <ins class="adsbygoogle"
@@ -67,6 +82,7 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<?php } ?>
 <section class="ex-section-2 hidden-xs hidden-sm">
     <div class="container">
         <div class="row">

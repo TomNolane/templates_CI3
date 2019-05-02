@@ -2,7 +2,7 @@
     <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header">
         <div class="container">
             <div class="navbar-header">
-                
+                <a class="anchor" name="id1"></a>
                 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -75,7 +75,7 @@
                                 <input type="tel" class="form-control input-lg" value="79777474646" id="feedback-phone" placeholder="Телефон" title="Телефон">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control input-lg" id="feedback-email" placeholder="Пример: email@mail.ru" title="Email" required>
+                                <input type="email" class="form-control input-lg" id="feedback-email" placeholder="Email" title="Email" required>
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control input-lg" id="feedback-comment" rows="3" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"

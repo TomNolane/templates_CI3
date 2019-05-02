@@ -1,4 +1,5 @@
 <?php  
+require 'templates/common/new2/php/check_bot.php';
 if(!isset($my_title)) 
 	$my_title = 'Срочные займы круглосуточно без проверок Онлайн';
 
@@ -27,7 +28,10 @@ if(!isset($description))
 <body>
 <div class="page">
 <?php 
+// popup
 require 'templates/common/new2/php/modal.php';
+// if ($setting_array['is_mobile'] != 'мобила') require 'templates/common/new2/php/modal_polygon.php';
+// else require 'templates/common/new2/php/modal_mobile.php';
 require 'menu.php';
 
 if($this->uri->segment(1) == 'form')

@@ -8,7 +8,7 @@
         range2 = $("#rangeSlider2"),
         rangeUpperValue2 =  $('.ex-slider-val-2');
         var dayz = "<span class='spec_calc'> дней</span>"; 
-        var rub = "<span class='spec_calc'> рублей</span>";
+        var rub = "<span class='spec_calc'> гривен</span>";
         //------------------------Declaration of variables end-------------------------
 
     rangeUpperValue1.append(current1.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));

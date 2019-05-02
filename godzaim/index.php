@@ -25,7 +25,7 @@
 								<div class="calc-period-item index_spec7" id="period-8">365<br>дней</div> 
 								<div class="clearfix"></div>
 							</div>
-							<div class="text-center"><button type="submit" class="btn btn-primary btn-lg button-get">Получить деньги</button></div>
+							<div class="text-center"><button type="submit" class="main-btn-offerwall btn btn-primary btn-lg button-get">Получить деньги</button></div>
 						</form>
 						<hr>
 						<div class="form-data-bottom">
@@ -34,12 +34,27 @@
 								Вероятность одобрения займа
 							</div>
 						</div>
-					</div>
+					</div> 
 				</div>
 			</div>
+			<?php if($setting_array['is_mobile'] != 'мобила') { ?>
+			<br>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- godzaim -->
+			<ins class="adsbygoogle"
+				style="display:block"
+				data-ad-client="ca-pub-4970738258373085"
+				data-ad-slot="5116247776"
+				data-ad-format="auto"
+				data-full-width-responsive="true"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+			<?php } ?>
 			<div class="row">
 			<div class="col-md-12">
-			<br>
+				<?php if($setting_array['is_mobile'] == 'мобила') { ?>
+				<br>
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 				<!-- godzaim -->
 				<ins class="adsbygoogle"
@@ -51,6 +66,7 @@
 				<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
+				<?php } ?>
 			</div>
 		</div>
 		</div> 
@@ -117,11 +133,10 @@
 					</div>
 				</div>
 				</div>
-				<button type="submit" onclick="GetMoney();" class="btn button1 btn-primary btn-lg button-get">Получить деньги</button>
+				<button type="submit" onclick="GetMoney();" class="main-btn-offerwall btn button1 btn-primary btn-lg button-get">Получить деньги</button>
 			</div>
 		</div>
 	</section>
-
 <div class="about-ser">
 	<div class="ser">
 		<h5 id="about-ser">О сервисе</h5>
@@ -161,8 +176,7 @@
 			<p>В случае нарушения сроков, размер неустойки составляет 0,10% от суммы просрочки в день, но не более 10% от суммы займа. В случае длительной задержки выплаты информация будет передана в БКИ.</p>
 			<p>Продление займа возможно при своевременном информировании кредитора (до наступления даты возврата займа) и уплаты процентов за первичный срок займа. Дополнительных комиссий за продление займа не предусмотрено.</p>
 		</div> 
-	</div> 
-	
+	</div>
 	<div class="ser hidden-xs">
 		<div class="what-be">
 			<h6>Что будет при невыплате заёмных средств:</h6>
@@ -172,7 +186,6 @@
 <p>При несоблюдении Вами условий по погашению кредитов и займов, данные о Вас могут быть переданы в реестр должников или БКИ, что негативно может сказаться на Вашей кредитной истории и рейтинге кредитоспособности. Задолженность может быть передана коллекторскому агентству для взыскания долга. При допуске просрочки продление займа невозможно. Погашая задолженность в срок, Вы формируете хорошую кредитную историю, что повышает Ваш рейтинг кредитоспособности и шансы в дальнейшем получить кредит на более выгодных условиях.</p>
 <p>Лицензии организаций-партнеров: №651303552003006, №651303045003951, №2110177000478</p>
 		</div>
-		
 		<div class="info">
 			<h6 id="info">Информация о кредиторах с которыми мы сотрудничаем:</h6>
 			<div class="info-top">

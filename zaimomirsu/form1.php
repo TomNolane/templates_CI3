@@ -1,11 +1,11 @@
 <section class="ex-main-form">
     <div class="row">
         <div class="col-lg-8 offset-lg-1">
-            <div class="form-group row hidden">
-                <label class="col-md-3  d-flex align-items-center justify-content-md-end" for="f">Фамилия</label>
+            <div class="form-group row">
+                <label class="col-md-3 align-items-center justify-content-md-end" for="f">Фамилия</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip special_form" name="f" value="Батейко" id="f" placeholder="Фамилия" title="Введите свою фамилию"
+                        <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[-А-я ЁёІіЇїҐґЄє']+$" data-validation-error-msg="Введите свою фамилию"
                             required>
                         <p class="text-muted helpblock">Пример: Батейко</p>
@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-md-3 d-flex align-items-center justify-content-md-end" for="i">Имя</label>
+                <label class="col-md-3  align-items-center justify-content-md-end" for="i">Имя</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize"
@@ -23,11 +23,11 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group row hidden">
-                <label class="col-md-3 d-flex align-items-center justify-content-md-end" for="o">Отчество</label>
+            <div class="form-group row">
+                <label class="col-md-3  align-items-center justify-content-md-end" for="o">Отчество</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
-                        <input type="text" class="form-control ec tip special_form" value="Дмитрович" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
+                        <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[-А-я ЁёІіЇїҐґЄє']+$" data-validation-error-msg="Введите свое отчество"
                             required>
                         <p class="text-muted helpblock">Пример: Дмитрович</p>
@@ -84,7 +84,7 @@
             </div>
             <!-- Скрываем старую форму даты рождения -->
             <div class="form-group row hidden">
-                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="birthdate">Дата рождения</label>
+                <label class="control-label col-md-3  align-items-center justify-content-md-end" for="birthdate">Дата рождения</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip" id="birthdate" name="birthdate" placeholder="Дата рождения" title="Выберете свою дату рождения"
@@ -95,18 +95,17 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="phone">Телефон</label>
+                <label class="control-label col-md-3  align-items-center justify-content-md-end" for="phone">Телефон</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Введите свой номер телефона"
                             title="Введите свой номер телефона" data-validation-error-msg="Введите номер телефона" required>
-                        <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="text-muted helpblock">Пример: 095 725 09 99</p>
                     </div>
                 </div>
             </div>
             <div class="form-group row">
-                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="email">Email</label>
+                <label class="control-label col-md-3  align-items-center justify-content-md-end" for="email">Email</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Введите свой email адрес" placeholder="Пример: email@mail.ru"
@@ -116,7 +115,7 @@
                 </div>
             </div>
             <div class="form-group row hidden">
-                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="credit">Кредитная история</label>
+                <label class="control-label col-md-3  align-items-center justify-content-md-end" for="credit">Кредитная история</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper ex-arrow">
                         <select size="1" class="form-control ec special_form99" name="delays_type" id="delays_type">

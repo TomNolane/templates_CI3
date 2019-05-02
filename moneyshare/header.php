@@ -14,15 +14,7 @@ if(!isset($description)) $description='Moneyshare - лучший онлайн с
     <meta name="robots" content="all" />
     <meta name="copyright" lang="ru" content="Vkredito.ru" />
     <link rel="stylesheet" href="/templates/moneyshare/assets/css/style.css">
-    <link rel="icon" href="/templates/moneyshare/favicon/favicon.ico">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116089147-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-116089147-1');
-    </script> 
+    <link rel="icon" href="/templates/moneyshare/favicon/favicon.ico"> 
 </head>
 <body class="ex-sticky">
     <header>

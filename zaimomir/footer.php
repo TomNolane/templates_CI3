@@ -314,7 +314,7 @@
                 name: $('#feedback-name').val(),
                 phone: $('#feedback-phone').val(),
                 email: $('#feedback-email').val(),
-                comment: '' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size + "\n | Данные:" + _input
+                comment: 'Обращение: ' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size + "\n | Данные:" + _input
             };
         }
         else
@@ -323,7 +323,7 @@
                 name: $('#feedback-name').val(),
                 phone: $('#feedback-phone').val(),
                 email: $('#feedback-email').val(),
-                comment: '' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size
+                comment: 'Обращение: ' + $('#feedback-comment').val() + _info + "\n | Разрешение экрана: " + x_size + " x " + y_size
             };
         } 
         

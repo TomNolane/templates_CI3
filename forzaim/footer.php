@@ -1,5 +1,5 @@
 <?php $from = '15';
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
 {
     if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -14,21 +14,27 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
     }
-	
-    echo '<!-- Yandex.RTB R-A-260582-2 mobile -->
-    <div id="yandex_rtb_R-A-260582-2"></div>
-    <!-- Yandex.RTB R-A-260582-1 desktop -->
-    <div id="yandex_rtb_R-A-260582-1"></div>';
+	 if($setting_array['is_mobile'] != 'мобила') {
+    echo ' <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="6265677912"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
+     }
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
+if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') 
 {
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="//top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156080921" alt="MYTARGET">';
 }
 ?>
 <footer class="ex-main-footer">
     <div class="container">
-        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
         <h2>Forzaim</h2> 
         <p class="spec_footer7">
             Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <a href="mailto:support@forzaim.ru" target="_blank">support@forzaim.ru</a> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
@@ -39,7 +45,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
         <?php } else {?>
             <div class='row'>
                 <div class='col-md-3'>
-                    <h2 class="black spec-logo hidden-xs hidden-sm">Forzaim</h2>
+                    <h2 class="black spec-logo hidden-xs hidden-sm" style="color: #fff !important">Forzaim</h2>
                 </div>
                 <div class='col-md-9'>
                     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -57,16 +63,8 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
             </div>
         <?php } ?>
         <hr/>
-        <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-            echo '';
-            echo '<!-- Yandex.RTB R-A-260582-2 mobile -->
-            <div id="yandex_rtb_R-A-260582-2"></div>
-            <!-- Yandex.RTB R-A-260582-1 desktop -->
-            <div id="yandex_rtb_R-A-260582-1"></div><hr/>';
+        <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') { 
         } ?>
-        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-
-        <?php } ?>
     </div>
 </footer> 
 <!-- [if lt IE 10]>
@@ -281,14 +279,14 @@ require 'templates/common/new2/js/exeption.js';
         echo '<!-- Google Code for  
 		&#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
 		Page -->
-		<script type="text/javascript">
+		<script>
 		/* <![CDATA[ */
 		var google_conversion_id = 824879582;
 		var google_conversion_label = "lw8uCLndhnoQ3tOqiQM";
 		var google_remarketing_only = false;
 		/* ]]> */
 		</script>
-		<script type="text/javascript"  
+		<script  
 		src="//www.googleadservices.com/pagead/conversion.js">
 		</script>
 		<noscript>
@@ -301,7 +299,7 @@ require 'templates/common/new2/js/exeption.js';
     }
 ?>
 <!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
+<script>
 var _tmr = window._tmr || (window._tmr = []);
 _tmr.push({id: "3052550", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
 (function (d, w, id) {
@@ -316,7 +314,7 @@ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, fal
 </div></noscript>
 <!-- //Rating@Mail.ru counter -->
 <!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script type="text/javascript">
+<script>
 var _tmr = _tmr || [];
 _tmr.push({
 type: 'itemView',

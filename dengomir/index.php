@@ -82,10 +82,11 @@
                             <div class="row">
                                 <div class="col-md-6 col-md-offset-3">
                                     <div class="ex-for-button">
-                                        <button class="ex-main-btn">Получить деньги</button>
+                                        <button class="ex-main-btn main-btn-offerwall">Получить деньги</button>
                                     </div>
                                 </div>
                             </div>
+                             <?php if($setting_array['is_mobile'] != 'мобила') { ?>
                             <br><br><br><br>
                              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                     <!-- dengomir -->
@@ -98,6 +99,7 @@
                     <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
+                             <?php } ?>
                         </div>
                        
                     </div>
@@ -106,7 +108,7 @@
             </div>
         </section>
         
-        
+        <a class="anchor" name="id2"></a>
         <section class="ex-section-2 hidden-xs hidden-sm">
             <div class="container">
                 <div class="row">
@@ -119,7 +121,7 @@
                             и быстро.</p>
                         <div class="row">
                             <div class="col-md-6">
-                                <button class="ex-main-btn">Получить деньги</button>
+                                <button class="ex-main-btn main-btn-offerwall">Получить деньги</button>
                             </div>
                             <div class="col-md-6">
                                 <button class="ex-white-btn next">Узнать о других способах</button>
@@ -134,7 +136,7 @@
                 </div>
             </div>
         </section>
-        
+        <a class="anchor" name="id3"></a>
         <section class="ex-section-3 hidden-xs hidden-sm">
             <div class="ex-rus-map">
                 <div class="container">
@@ -191,7 +193,7 @@
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4">
                                 <div class="ex-for-button">
-                                    <button class="ex-main-btn">Получить деньги</button>
+                                    <button class="ex-main-btn main-btn-offerwall">Получить деньги</button>
                                 </div>
                             </div>
                         </div>
@@ -213,7 +215,7 @@
                 </div>
             </div>
         </section>
-        
+        <a class="anchor" name="id4"></a>
         <section class="ex-section-4 hidden-xs hidden-sm">
             <div class="container">
                 <h2>О нас говорят</h2>
@@ -278,5 +280,5 @@
         </section>
     </form>
 </main>
-
+<a class="anchor" name="id5"></a>
 <?php require 'footer.php'; ?>

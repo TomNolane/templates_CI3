@@ -34,21 +34,34 @@
 </noscript>
 <!-- /Yandex.Metrika counter -->
 <script>
-function markTarget(target,param, id){
+<?php  
+    if($this->uri->segment(1) == 'offerwall')
+        echo '_mark = 1;';
+    else if($this->uri->segment(1) == 'offerwall2')
+        echo '_mark = 2;';
+    else
+        echo '_mark = 0;';
+?>
+function markTarget(target,param, _id){
     if (typeof yaCounter40423675 == 'undefined') return;
 	if (typeof param == 'undefined') yaCounter40423675.reachGoal(target);
 	else yaCounter40423675.reachGoal(target,param);
         
-        $.ajax({
-            type: 'POST',
-            url: '/pixel/',
-            data: 'id='+id+'&pixel='+param,
-            success: function(data){
-                console.log(22);
-            }
-            ,error: function(data){
-                console.log(33);
-            }
-        });
+    <?php if ($this->uri->segment(1) == 'offerwall' || $this->uri->segment(1) == 'offerwall2' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+    $.ajax({
+        type: 'POST',
+        url: '/pixel/',
+        data: 
+        {
+            id : _id,
+            pixel : param,
+            mark : _mark
+        },
+        success: function(data){
+        }
+        ,error: function(data){
+        }
+    });
+    <?php } ?>
 } 
 </script>

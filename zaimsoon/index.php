@@ -63,7 +63,7 @@
                                                 </tr>
                                             </table>
                                             <div class="ex-for-button">
-                                                <button class="ex-main-btn">Получить деньги</button>
+                                                <button class="ex-main-btn main-btn-offerwall">Получить деньги</button>
                                             </div>
                                         </div>
                                     </div>
@@ -102,7 +102,9 @@
     <section class="ex-section-2">
         <div class="container">
             <div class="row">
+                
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+               <?php if($setting_array['is_mobile'] != 'мобила') { ?>
             <!-- zaimsoon -->
             <ins class="adsbygoogle"
                 style="display:block"
@@ -113,6 +115,7 @@
             <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
+               <?php } ?>
                 <div class="col-md-10 col-md-offset-1 hidden-xs hidden-sm">
                     <h3>Как получить деньги?</h3>
                     <div class="ex-get-money">
@@ -175,7 +178,7 @@
                         </div>
                     </div>
                     <div class="ex-for-button">
-                        <button class="ex-main-btn" onClick="goToForm();">Получить деньги</button>
+                        <button class="ex-main-btn main-btn-offerwall" onClick="goToForm();">Получить деньги</button>
                     </div>
                 </div>
             </div>

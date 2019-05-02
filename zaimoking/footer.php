@@ -1,5 +1,5 @@
 <?php $from = '15'; $px = '63.974'; 
-if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
 {
     if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index' && $this->uri->segment(1) != 'form') {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -17,19 +17,26 @@ if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->u
 
     if($this->uri->segment(1) != 'form') 
     {
+        echo '<ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="7850222323"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
         echo '<a href="#0" class="cd-top">Наверх</a>';
 
     }
     
 }
 if($this->uri->segment(1) != 'form') { ?>
-<div id="yandex_rtb_R-A-326206-2"></div>
-<div id="yandex_rtb_R-A-326206-1"></div>
 <?php } ?>
 <footer class="ex-main-footer">
     <div class="container">
         <div class="row">
-             <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+             <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
             <div class="col-md-2">
              <?php } else { ?>
               <div class="col-md-2 hidden-xs">
@@ -39,7 +46,7 @@ if($this->uri->segment(1) != 'form') { ?>
                 </div>
             </div>
              <div class="col-md-10">
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
            
                 <p>Сервис по подбору выгодных онлайн займов и кредитов находящийся по адресу: <br>
                     Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 support@zaimoking.ru<span class="hidden-xs hidden-sm"> | 8
@@ -65,13 +72,7 @@ if($this->uri->segment(1) != 'form') { ?>
                 (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             <?php } ?>
-             </div>
-            <div class="col-sm-12">
-                <hr/>
-                <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
-
-                <?php } ?>
-            </div>
+             </div> 
         </div>
     </div>
 </footer> 
@@ -240,6 +241,16 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
         {
             $('form#anketa').submit();
         }
+
+        $(document).on('click','.ex-main-btn',function(){
+           window.location.href = 'https://zaimoking.ru/lk2';
+           window.open(
+                'https://zaimoking.ru/form/',
+                '_blank'
+           );
+           return false;
+        });
+        
 <?php }
 }
 elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
@@ -396,6 +407,9 @@ require 'templates/common/new2/js/exeption.js';
         </noscript>'; 
     }
 ?>
+
+
+
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Facebook Pixel Code -->
 <script>
@@ -419,5 +433,6 @@ src="https://www.facebook.com/tr?id=1337253769702359&ev=PageView
 <?php
 require 'templates/common/new2/php/modal3_close.php';
 ?>
+
 </body>
 </html>

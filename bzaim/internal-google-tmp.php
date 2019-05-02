@@ -1,0 +1,1 @@
+<img src="https://dummyimage.com/1200x94/999999/ffffff&text=google+ads" style="margin: 0 auto; display: block; width: 100%;" />

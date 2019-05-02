@@ -1,5 +1,12 @@
 <?php $from = '15';
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+$logo_foot = '-foot';
+$email = 'support@bzaim5.ru';
+switch ($this->uri->segment(1)) {
+    case 'offerwall': $logo_foot = '-fanzaim'; $email = 'support@fanzaim.ru'; break;
+    case 'offerwall2': $logo_foot = '-edenga'; $email = 'support@edenga.ru'; break;
+    default: break;
+}
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
 {
     if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') 
     {
@@ -15,24 +22,29 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
     }
-    echo '<!-- Yandex.RTB R-A-243981-1 mobile -->
-    <div id="yandex_rtb_R-A-243981-1"></div>
-    <!-- Yandex.RTB R-A-243981-3 desktop -->
-    <div id="yandex_rtb_R-A-243981-3"></div>';
+    echo '<ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="5816862028"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
-} 
-if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') {
+}
+if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall'))) {
 echo '<footer class="ex-start-footer">
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
                 <div class="ex-footer-logo">
                     <a href="/">
-                        <img src="templates/bzaim/assets/img/logo-foot.png" alt="logo-foot.png"> 
+                        <img src="/templates/bzaim/assets/img/logo' . $logo_foot . '.png" alt="logo-foot.png">
                     </a>
                 </div>
                 <p class="ex-text spec_footer4">
-                    Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 дня до 1 года. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: support@bzaim5.ru  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+                    Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 дня до 1 года. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: ' . $email . '  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
                     <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001. Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
                 </p>
             </div>
@@ -66,19 +78,19 @@ echo '<footer class="ex-start-footer">
     </div>
 </footer>'; 
 }
-else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+else if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall')))
 {
     echo '<footer class="ex-footer">
         <div class="container">
             <div class="row">
             <hr/> 
                 <div class="ex-footer-logo col-md-3 hidden-xs"> 
-                    <img src="templates/bzaim/assets/img/logo-foot.png" alt="logo-foot.png">
+                    <!--<img src="templates/bzaim/assets/img/logo-foot.png" alt="logo-foot.png">-->
+                    <img src="templates/bzaim/assets/img/logo' . $logo_foot . '.png" alt="logo-foot.png">
                 </div>
                 <div class="col-xs-12 col-md-9">
-                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- bzaim5.ru -->
-                <ins class="adsbygoogle"
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                 <ins class="adsbygoogle"
                     style="display:block"
                     data-ad-client="ca-pub-4970738258373085"
                     data-ad-slot="5816862028"
@@ -89,17 +101,9 @@ else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $th
                     </script>
                 </div>
             </div>
-            <div class="col-sm-12">
-                <hr/>
-                <!-- Yandex.RTB R-A-243981-1 mobile -->
-                <div id="yandex_rtb_R-A-243981-1"></div>
-                <!-- Yandex.RTB R-A-243981-3 desktop -->
-                <div id="yandex_rtb_R-A-243981-3"></div>
-                <hr/>
-            </div>
              <div class="col-sm-12">
                 <p class="ex-text">
-                    Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 дня до 1 года. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: support@bzaim5.ru  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+                    Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 дня до 1 года. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: ' . $email . '  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
                     <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001. Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
                 </p>
             </div>
@@ -131,7 +135,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
 }
 ?>
 <!-- [if lt IE 10]>
-<script  src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+<script  src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></footer>
 <![endif] --> 
 <!-- common JS -->
 <script>
@@ -337,14 +341,14 @@ require 'templates/common/new2/js/exeption.js';
 		<!-- Google Code for  
 		&#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103;  
 		(&#1073;&#1077;&#1079; &#1076;&#1086;&#1080;) Conversion Page -->
-		<script type="text/javascript">
+		<script>
 		/* <![CDATA[ */
 		var google_conversion_id = 832752781;
 		var google_conversion_label = "9no7CIzpqHgQjZmLjQM";
 		var google_remarketing_only = false;
 		/* ]]> */
 		</script>
-		<script type="text/javascript"  
+		<script  
 		src="//www.googleadservices.com/pagead/conversion.js">
 		</script>
 		<noscript>
@@ -354,11 +358,11 @@ require 'templates/common/new2/js/exeption.js';
 		</div>
 		</noscript>'; 
     } else {
-        echo '<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308478-a8mPU"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308478-a8mPU" style="position:fixed; left:-999px;" alt=""/></noscript>';
+        echo '<script>!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308478-a8mPU"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308478-a8mPU" style="position:fixed; left:-999px;" alt=""/></noscript>';
     }
 ?>
 <!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
+<script>
 var _tmr = window._tmr || (window._tmr = []);
 _tmr.push({id: "3052548", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
 (function (d, w, id) {
@@ -373,7 +377,7 @@ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, fal
 </div></noscript>
 <!-- //Rating@Mail.ru counter -->
 <!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script type="text/javascript">
+<script>
 var _tmr = _tmr || [];
 _tmr.push({
 type: 'itemView',

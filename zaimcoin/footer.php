@@ -1,9 +1,9 @@
 <?php $from = '15';
-if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
+if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') 
 {
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156578754" alt="mytarget">';
 }
-if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
 {
     if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index' && $this->uri->segment(1) != 'form') 
     {
@@ -22,10 +22,15 @@ if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->u
 
     if($this->uri->segment(1) != 'form')
     {
-        echo '<!-- Yandex.RTB R-A-259325-1 deckstop -->
-        <div id="yandex_rtb_R-A-259325-1"></div>
-        <!-- Yandex.RTB R-A-259325-2 mobile-->
-        <div id="yandex_rtb_R-A-259325-2"></div>';
+        echo ' <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="9741339751"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
         echo '<a href="#0" class="cd-top">Наверх</a>';
     }
     
@@ -44,11 +49,11 @@ echo '<footer class="ex-main-footer">
                     <li>Сумма первого займа не более 10 000 рублей, кредит можно получить со ставкой 0%, если он будет
                         погашен вовремя.
                     </li>
-                    <li>Размер кредита от 1000 до 100 000 рублей.</li>
+                    <li>Размер займа от 1000 до 100 000 рублей.</li>
                     <li>Процент начисляется каждый день, ставка составляет от 0,08% до 0,98%. В месяц в среднем выходит
                         4,5%, в год - от 30% до 360%.
                     </li>
-                    <li>Кредит выдается на период от 61 дня до года.</li>
+                    <li>Займ выдается на период от 61 дня до года.</li>
                     <li>За несоблюдение условий договора начисляется пеня, минимальный размер которой 0,03%, средний -
                         0,10%
                         от начальной суммы займа.
@@ -128,7 +133,7 @@ else
     echo '
     <footer class="ex-main-footer-bg">
         <div class="container">';
-                if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
+                if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') 
                 {
                     echo '<div class="ex-foot-logo text-center">
                         <img src="/templates/zaimcoin/assets/img/logo-footer.png" alt="logo-footer.png">
@@ -164,18 +169,8 @@ else
                                 </script>
                             </div>
                         </div>';
-                }
-                echo '<hr/>';
-                if ($this->uri->segment(1) != 'form') {
-                    echo '<!-- Yandex.RTB R-A-259325-1 desktop -->
-                    <div id="yandex_rtb_R-A-259325-1"></div>
-                    <!-- Yandex.RTB R-A-259325-2 mobile-->
-                    <div id="yandex_rtb_R-A-259325-2"></div> ';
-                    echo '<hr/>';
-                }
-                echo '
-        </div>
-    </footer>';
+                } 
+                echo '<hr/></div></footer>';
 }
 ?>
 <!-- [if lt IE 10]>
@@ -415,14 +410,14 @@ require 'templates/common/new2/js/exeption.js';
         echo '<!-- Google Code for  
         &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
         Page -->
-        <script type="text/javascript">
+        <script>
         /* <![CDATA[ */
         var google_conversion_id = 827428872;
         var google_conversion_label = "xmjJCLrypHkQiKDGigM";
         var google_remarketing_only = false;
         /* ]]> */
         </script>
-        <script type="text/javascript"  
+        <script  
         src="//www.googleadservices.com/pagead/conversion.js">
         </script>
         <noscript>
@@ -433,11 +428,11 @@ require 'templates/common/new2/js/exeption.js';
         </noscript>'; 
     }
     else {
-        echo  '<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308478-a8mPU"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308478-a8mPU" style="position:fixed; left:-999px;" alt=""/></noscript>';
+        echo  '<script>!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308478-a8mPU"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308478-a8mPU" style="position:fixed; left:-999px;" alt=""/></noscript>';
     }
 ?>
 <!-- Rating@Mail.ru counter -->
-<script type="text/javascript">
+<script>
 var _tmr = window._tmr || (window._tmr = []);
 _tmr.push({id: "3052554", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
 (function (d, w, id) {
@@ -452,7 +447,7 @@ if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, fal
 </div></noscript>
 <!-- //Rating@Mail.ru counter -->
 <!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script type="text/javascript">
+<script>
 var _tmr = _tmr || [];
 _tmr.push({
 type: 'itemView',

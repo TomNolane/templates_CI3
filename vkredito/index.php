@@ -53,14 +53,29 @@
 
                         </div>
                         <div id="current_period"></div>
-                        <button type="submit" class="btn btn-primary">Взять займ</button>
+                        <button type="submit" class="btn btn-primary main-btn-offerwall">Взять займ</button>
                     </form>
                 </div>
             </div>
             <div class="clearfix"></div>
+            <?php if($setting_array['is_mobile'] != 'мобила') { ?>
+            <br><br><br>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- vkredito -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4970738258373085"
+                data-ad-slot="9129421079"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <?php } ?>
         </div>
     </div>
 </section>
+<?php if($setting_array['is_mobile'] == 'мобила') { ?>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- vkredito -->
 <ins class="adsbygoogle"
@@ -72,6 +87,7 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<?php } ?>
 <section class="howto white text-center hidden-xs">
     <div class="container">
         <h2>Как получить деньги?</h2>
@@ -123,7 +139,7 @@
                 <p>Если столкнулись со сложной ситуацией и срочно нужны деньги, обращайтесь сразу Vkredito. Тут вам окажут своевременную
                     помощь.</p>
                 <a href="/form">
-                    <button type="button" class="btn btn-primary">Взять займ</button>
+                    <button type="button" class="btn btn-primary main-btn-offerwall">Взять займ</button>
                 </a>
             </div>
         </div>

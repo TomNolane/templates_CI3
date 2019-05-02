@@ -23,12 +23,15 @@ if(!isset($description))
 </head>
 <body>
 <?php 
+// popup
 require 'templates/common/new2/php/modal.php';
+// if ($setting_array['is_mobile'] != 'мобила') require 'templates/common/new2/php/modal_polygon.php';
+// else require 'templates/common/new2/php/modal_mobile.php';
 require 'menu.php';
 
 if($this->uri->segment(1) == 'form')
 {
-    require 'templates/common/new2/php/modal2.php';
+    //require 'templates/common/new2/php/modal2.php';
 }
 
 if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index')

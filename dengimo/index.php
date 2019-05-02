@@ -62,7 +62,7 @@
                                 </div>
                             </div> 
                             <div class="col-md-12 col-sm-12 text-center">
-                                <button type="submit" class="btn">Получить деньги</button>
+                                <button type="submit" class="btn main-btn-offerwall">Получить деньги</button>
                             </div> 
                     </div>
                 </div>
@@ -97,12 +97,25 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn">Получить деньги</button> 
+                            <button type="submit" class="btn main-btn-offerwall">Получить деньги</button> 
                     </div>
                 </div>
             </form> 
             </div>
         </div>
+         <?php if($setting_array['is_mobile'] != 'мобила') {
+            echo '<br><br><br><br><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- dengimo -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-4970738258373085"
+                    data-ad-slot="1070967656"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>';
+            } ?>
     </section>
     <div class="section-doc">
         <section class="about white">
@@ -111,6 +124,7 @@
                     <div class="col-xs-12">
                         <h2 class="text-center"><span class="index_special"><b>Dengimo</b></span> - моментальные займы онлайн</h2>
                         <hr/>
+                         <?php if($setting_array['is_mobile'] == 'мобила') { ?>
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- dengimo -->
                         <ins class="adsbygoogle"
@@ -121,7 +135,9 @@
                             data-full-width-responsive="true"></ins>
                         <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script><hr/>
+                        </script>
+                         <?php } ?>
+                        <hr/>
                         <p class="col_middle">Нужно срочно решить финансовые проблемы? Dengimo готов в этом помочь прямо сейчас. Просто зарегистрируйтесь на сайте, дождитесь одобрения заявки и получите деньги. В 97% случаев будет принято решение в вашу пользу. </p>
                         <p class="col_middle">Клиенты Dengimo могут не беспокоиться об отказе. Наш сервис не просто проверяет кредитную историю, он способен ее улучшить. В результате вы сможете взять займ на более выгодных условиях и всегда держать свои финансы под контролем.</p>
                         <p class="col_middle">Деньги быстро, просто и выгодно - это Dengimo. С нами можно забыть об экономических сложностях!</p>

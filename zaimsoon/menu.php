@@ -1,5 +1,5 @@
 
-<header>
+<header style="height: 0 !important;">
     <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header">
         <div class="container">
             <div class="navbar-header">

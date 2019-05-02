@@ -53,16 +53,31 @@
 						<div class="col-md-12 hidden-xs hidden-sm">
 							<img id="ps" src="/templates/dengoman/assets/img/index/ps.png" alt="ps.png">
 						</div>
-						<button type="submit" class="btn">Получить деньги</button>
+						<button type="submit" class="btn main-btn-offerwall">Получить деньги</button>
 					</div>
-				</div>
+				</div> 
 				<div class="col-md-6 col-sm-5 hidden-xs">
 					<img src="/templates/dengoman/assets/img/index/man.png" alt="man.png">
-				</div> 
+				</div>  
 			</div>
+			<?php if($setting_array['is_mobile'] != 'мобила') { ?>
+				<br>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- dengoman -->
+				<ins class="adsbygoogle"
+					style="display:block"
+					data-ad-client="ca-pub-4970738258373085"
+					data-ad-slot="4110287868"
+					data-ad-format="auto"
+					data-full-width-responsive="true"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				<?php } ?>
 		</div>
 	</form>
 </section>
+<?php if($setting_array['is_mobile'] == 'мобила') { ?>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- dengoman -->
 <ins class="adsbygoogle"
@@ -74,6 +89,7 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<?php } ?>
 <section class="features hidden-xs hidden-sm">
 	<h1>Преимущества нашего сервиса</h1>
 	<div class="features-cover">
@@ -144,7 +160,7 @@
 		</div>
 	</div> 
 </section>
-
+<a class="anchor" name="id3"></a>
 <section class="reviews hidden-xs hidden-sm">
 	<div class="container">
 		<h1>Отзывы клиентов</h1>
@@ -284,7 +300,7 @@
 		</div>
 	</div>
 </section>
-
+<a class="anchor" name="id4"></a>
 <section class="where hidden-xs hidden-sm">
 	<div class="container">
 		<h1>Займ до зарплаты</h1>
@@ -313,7 +329,7 @@
 		</div>
 	</div>
 </section>
-
+<a class="anchor" name="id5"></a>
 <div class="doc hidden-xs hidden-sm" style="color: #333">
 	<div class="great-support-container section-container section-container-gray-bg">
 		<div class="container">
@@ -443,7 +459,7 @@
 			</div>
 		</div>
 	</div>
-	
+	<a class="anchor" name="id6"></a>
 	<div class="blog-container section-container partner-container hidden-xs hidden-sm">
 		<div class="container">
 			<div class="row">
@@ -527,5 +543,5 @@
 		</div>
 	</div>
 </div>
-
+<a class="anchor" name="id7"></a>
 <?php require 'footer.php'; ?>

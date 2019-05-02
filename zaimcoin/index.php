@@ -2,7 +2,7 @@
 <main>
     <section class="ex-main">
         <div class="container">
-            <div class="col-md-10 col-sm-9">
+            <div class="col-md-12 col-sm-9">
             <h1 class="hidden-xs">Если деньги нужны срочно,<br> есть проверенное и надежное решение</h1>
             <h2>Zaimcoin - скорая <br class="visible-xs"> финансовая помощь</h2>
             <form id="anketa" action="/form<?=$utm;?>" method="post">
@@ -60,10 +60,23 @@
                         </ul>
                     </div>
                     <div class="col-md-3 col-sm-4 ex-for-button text-center spec_btn_index"> 
-                        <button class="ex-orange-btn"  type="submit" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;Получить деньги&nbsp;&nbsp;&nbsp;</button> 
+                        <button class="ex-orange-btn main-btn-offerwall"  type="submit" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;Получить деньги&nbsp;&nbsp;&nbsp;</button> 
                     </div>
-                    <div class="col-md-12 text-center spec_index"> 
-                        <!-- <p class="color-black">Оставь заявку и участвуй в розыгрыше Iphone XS 16.11.2018</p> -->
+                    <div class="col-md-12 text-center "> 
+                        <?php if($setting_array['is_mobile'] != 'мобила') { ?>
+                        <br><br><br>
+                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- zaimcoin -->
+                        <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-4970738258373085"
+                            data-ad-slot="9741339751"
+                            data-ad-format="auto"
+                            data-full-width-responsive="true"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -77,7 +90,8 @@
                 <div class="col-md-12"> 
                     <h2 class="text-center">Самый быстрый и удобный сервис<br>
                         по подбору онлайн займов на нужную сумму и период</h2>
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                         <?php if($setting_array['is_mobile'] == 'мобила') { ?>
+                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- zaimcoin -->
                         <ins class="adsbygoogle"
                             style="display:block"
@@ -88,6 +102,7 @@
                         <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
+                        <?php } ?>
                     <div class="ex-adv-bg">
                         <div class="row">
                             <div class="col-md-4 ex-line-right ">

@@ -43,7 +43,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="ex-action">
-                                        <button class="ex-main-btn">Получить деньги</button>
+                                        <button class="ex-main-btn main-btn-offerwall">Получить деньги</button>
                                     </div>
                                 </div>
                                 <div class="col-md-6">

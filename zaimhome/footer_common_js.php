@@ -19,6 +19,11 @@ require 'templates/common/new2/js/fingerprintjs2.js';
 require 'templates/common/new2/js/count_time.js';
 if ($this->uri->segment(1) != 'form') {
     require 'templates/common/new2/js/popup_modal.js';
+    // popup
+    // if ($setting_array['is_mobile'] != 'мобила') {
+    //     require 'templates/common/new2/js/TweenMax.min.js';
+    //     require 'templates/common/new2/js/modal_polygon.js';
+    // } else require 'templates/common/new2/js/modal_mobile.js';
 }
 if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') {
     require 'templates/common/new2/js/for_index.js';

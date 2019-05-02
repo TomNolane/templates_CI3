@@ -56,7 +56,7 @@
                                 <div class="row justify-content-center">
                                     <div class="col-md-7">
                                         <div class="ex-action">
-                                            <button type="submit" class="ex-main-btn">Получить деньги</button>
+                                            <button type="submit" class="ex-main-btn main-btn-offerwall">Получить деньги</button>
                                         </div>
                                     </div>
                                 </div>

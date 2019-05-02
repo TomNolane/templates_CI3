@@ -410,6 +410,9 @@ svg {
     0 0 1px #000,
     0 0 1px #000;
 }
+.btn-spec {
+    padding: 12px 60px !important;
+}
 @media screen and (max-width: 500px) {
     .iphone {
         -moz-transform: scale(0.4);

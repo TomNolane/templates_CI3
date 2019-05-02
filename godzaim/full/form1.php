@@ -112,7 +112,7 @@
 	<label class="col-sm-4 control-label label-required hidden-xs">Почта</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Пожалуйста, введите свой email адрес"
-			    placeholder="Пример: email@mail.ru" title="Email" data-validation="email" data-validation-error-msg="Пожалуйста, выберите ваш email" required>
+			    placeholder="Email" title="Email" data-validation="email" data-validation-error-msg="Пожалуйста, выберите ваш email" required>
 			<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 	 
 	</div>

@@ -156,7 +156,7 @@
             <div class="row">
                 <div class="col-md-9 col-md-offset-3 ex-agreement-check">
                     <label class="checkbox-inline">
-                        <span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span>
+                        <a href="/oferta" target="_blank"><span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span></a>
                         <input type="checkbox" onClick="checkMee();" id="agree" value="1" checked>
                         <i></i>
                     </label>

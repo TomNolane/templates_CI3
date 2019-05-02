@@ -267,7 +267,7 @@ h3 {
                                 <label class="control-label col-md-3 hidden-xs" for="email">Email</label>
                                 <div class="col-md-7 col-xs-12">
                                     <div class="ex-wrapper">
-                                        <input type="email" class="form-control pulse ec tip special_form" name="email" id="email" title="Укажите свой email адрес" placeholder="Пример: email@mail.ru"
+                                        <input type="email" class="form-control pulse ec tip special_form" name="email" id="email" title="Укажите свой email адрес" placeholder="Email"
                                             data-validation="email" data-validation-error-msg="Укажите свой email" required>
                                             <p class="help-block2"></p>
                                             <p class="text-muted helpblock hidden-xs hidden-sm">Пример: email@mail.ru</p>
@@ -416,7 +416,7 @@ h3 {
         </div>
     </div>
 </section>
-
+<a class="anchor" name="id3"></a>
 <section class="ex-section-3 hidden-xs hidden-sm">
     <h2 class="text-center">Отзывы о нас</h2>
     <div class="ex-slider-wrap">

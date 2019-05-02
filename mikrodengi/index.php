@@ -1,9 +1,9 @@
 <?php require 'header.php'; ?>
 <main>
     <form id="anketa" action="/form<?=$utm;?>" method="post">
-        <input type="hidden" id="amount" name="amount" value="20000" />
-        <input type="hidden" id="period" name="period" value="21" />
-        <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
+        <input type="hidden" id="amount" name="amount" value="1000" />
+        <input type="hidden" id="period" name="period" value="7" />
+        <input type="hidden" id="form_slrd" name="form_slrd" value="4" />
         <input type="hidden" name="fingerprint" id="fingerprint" value="">
         <input type="hidden" name="ip" id="ip" value="<?php echo $ip;?>">
         <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
@@ -40,7 +40,7 @@
                             </div>
                             <div class="ex-range-slider-ruble ex-pr">
                                 <div class="ex-info">
-                                    <span>сумма (в рублях)</span>
+                                    <span>сумма (в гривнах)</span>
                                 </div>
                                 <input id="rangeSlider1" name="rangeSlider"/>
                             </div>
@@ -149,7 +149,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-o"></i>
                          </span>
-                            <h3>Юлия Мордвинова, 29 лет, г. Сочи</h3>
+                            <h3>Юлия Мордвинова, 29 лет, г. Карловка</h3>
                         </div>
                     </div>
                     <div class="ex-about-block">
@@ -157,7 +157,7 @@
                             квартиру, а родственников почти нет, никто не поможет… И все банки в отказ, потому что я
                             студент. А здесь даже лишнего вопроса не задали, я только указал паспортные данные! Займ я
                             снял минут через 10 после одобрения. И кстати, услуги сервиса бесплатны, это правда, ни
-                            рубля не взяли!</p>
+                            гривны не взяли!</p>
                         <div class="ex-review">
                         <span class="ex-stars">
                         <i class="fa fa-star"></i>
@@ -166,7 +166,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                          </span>
-                            <h3>Юрий Белкин, 21 год, г. Санкт-Петербург</h3>
+                            <h3>Юрий Белкин, 21 год, г. Броды</h3>
                         </div>
                     </div>
                     <div class="ex-about-block">
@@ -183,7 +183,7 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                          </span>
-                            <h3>Сергей Калугин, 32 года, г. Псков</h3>
+                            <h3>Сергей Калугин, 32 года, г. Киев</h3>
                         </div>
                     </div>
                 </div>

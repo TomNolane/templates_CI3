@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                             <div class="ex-for-button  ex-mb">
-                                <button class="ex-main-btn">Получить деньги</button>
+                                <button class="ex-main-btn main-btn-offerwall">Получить деньги</button>
                             </div>
                         </div>
                     </div>
@@ -66,8 +66,9 @@
                     </div>
                 </div>
                 </form>
-                 
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                  <?php if($setting_array['is_mobile'] != 'мобила') { ?>
+               
                 <!-- zaimrubli -->
                 <ins class="adsbygoogle"
                     style="display:block"
@@ -78,6 +79,7 @@
                 <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
+                  <?php } ?>
             </div>
             <ul class="ex-section-money hidden-xs hidden-sm">
                 <li class="active"><a data-toggle="tab" href="/zaim-card"><img src="/templates/zaimrubli/assets/img/visa.png" alt="visa.png"></a></li>
@@ -110,7 +112,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
-                        <button class="ex-main-btn">Получить деньги</button>
+                        <button class="ex-main-btn main-btn-offerwall">Получить деньги</button>
                     </div>
                 </div>
             </div>

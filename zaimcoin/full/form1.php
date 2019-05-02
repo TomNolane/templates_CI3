@@ -125,7 +125,7 @@
             <label class="control-label col-md-2" for="email">Email</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
-                    <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Пожалуйста, введите свой email адрес" placeholder="Пример: email@mail.ru"
+                    <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Пожалуйста, введите свой email адрес" placeholder="Email"
                     title="Email" data-validation="email"  data-validation-error-msg="Пожалуйста, введите свой email" required>
                     <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>

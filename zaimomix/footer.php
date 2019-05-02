@@ -1,5 +1,5 @@
 <?php $from = '15';
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
 {
     if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
         echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -14,19 +14,25 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>';
     }
-	echo '<!-- Yandex.RTB R-A-328085-1 mobile -->
-    <div id="yandex_rtb_R-A-328085-1"></div>
-    <!-- Yandex.RTB R-A-328085-2 desktop -->
-    <div id="yandex_rtb_R-A-328085-2"></div>';
+	echo ' <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-4970738258373085"
+            data-ad-slot="1488279360"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 } 
 ?>
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
         <div class="row">
-        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
             <div class="col-lg-2">
         <?php } else { ?>
+        <style>.row{display: block;}</style>
          <div class="col-lg-2 hidden-xs">
         <?php } ?>
                 <div class="ex-foot-logo">
@@ -34,7 +40,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                 </div>
             </div>
             <div class="col-lg-10 col-xs-12">
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
                 <p>Сервис по подбору выгодных онлайн займов и кредитов находящийся по адресу:<br>
                     Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 support@zaimomix.ru<span class="hidden-xs hidden-sm"> | 8
                     (960) 950 93 53</span><br>
@@ -63,13 +69,9 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
             <hr/>
             <div class="col-lg-12">
             <br>
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form') { ?>
+            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'offerwall') { ?>
                     
-                <?php } else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') {
-                    echo '<!-- Yandex.RTB R-A-328085-1 mobile -->
-                    <div id="yandex_rtb_R-A-328085-1"></div>
-                    <!-- Yandex.RTB R-A-328085-2 desktop -->
-                    <div id="yandex_rtb_R-A-328085-2"></div>';
+                <?php } else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') {
                 } ?>
             </div>
         </div>
