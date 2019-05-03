@@ -596,30 +596,9 @@ require 'templates/common/new2/js/exeption.js';
     include "google.php";
     include "yandexmetrika.php"; 
     include "yandex_rtb.php";
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
-    {     
-        
-        echo '<!-- Google Code for  
-        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
-        Page -->
-            <script>
-                /* <![CDATA[ */
-                var google_conversion_id = 830227331;
-                var google_conversion_label = "M_bzCPqNnHcQg4fxiwM";
-                var google_remarketing_only = false;
-                /* ]]> */
-            </script>
-            <script src="//www.googleadservices.com/pagead/conversion.js">
-            </script>
-            <noscript>
-                <div style="display:inline;">
-                    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/830227331/?label=M_bzCPqNnHcQg4fxiwM&amp;guid=ON&amp;script=0"
-                    />
-                </div>
-            </noscript>'; 
-    } else {
+    
+    if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3')))
         echo '<script>!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308476-dwNvj"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308476-dwNvj" style="position:fixed; left:-999px;" alt=""/></noscript>';
-    }
 
 include('mailru.php');
 require 'templates/common/new2/php/modal3_close.php';
