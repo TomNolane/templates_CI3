@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-default ex-main-header hidden-xs">
     <div class="container">
         <div class="nav navbar-nav">
@@ -19,7 +18,8 @@
                 </div>
             </div>
         </div>
-        <a class="ex-brand" href="/"></a>
+        <a class="ex-brand" href="/"> 
+        </a>
     </div>
 </nav>
 <nav class="navbar navbar-default ex-main-header visible-xs">
@@ -31,7 +31,14 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">
-                <i></i>
+                <!-- <i></i> -->
+                <?php $logo_addon = '/templates/zaimoking/assets/img/logo.png';
+                switch ($this->uri->segment(1)) {
+                        case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                        case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+                        default: break;
+                } ?>
+                <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
             </a>
         </div>
         <div class="collapse navbar-collapse" id="dengomirCollapsed">

@@ -63,7 +63,7 @@ if(!isset($my_title))
     $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Zaimomix';
     $description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }
-include "templates/common/new2/php/form_header.php";
+include "templates/common/new/php/form_header.php";
 include "header.php";
 ?>
 <main class="ex-form">

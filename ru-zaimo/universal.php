@@ -8,7 +8,7 @@
         $link = str_replace("#name#", implode('',$this->input->get()), $link);
     else 
         $link = str_replace("#name#", $domen, $link);
-    require 'templates/common/new2/php/check_bot.php';
+    require 'templates/common/new/php/check_bot.php';
 
     function getDomain3()
     {
@@ -135,7 +135,7 @@
             }
         }
 
-        <?php require 'templates/common/new2/css/common.css';
+        <?php require 'templates/common/new/css/common.css';
 
         ?>li>a {
             font-size: 16px;
@@ -849,7 +849,7 @@
     </div>
     <script>
         <?php
-        require 'templates/common/new2/js/bootstrap.min.js';
+        require 'templates/common/new/js/bootstrap.min.js';
         $phone = '';
         if($this->uri->segment(1) && $this->uri->segment(2))
         {

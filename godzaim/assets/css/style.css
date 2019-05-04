@@ -136,10 +136,10 @@ img{max-width:100%;}
     color: #99a4ac;
 }
 
-@font-face{font-family:Roboto Bold;src:url("/templates/common/new2/fonts/RobotoBold.ttf");}
-@font-face{font-family:Roboto Light;src:url("/templates/common/new2/fonts/RobotoLight.ttf");}
-@font-face{font-family:Roboto Regular;src:url("/templates/common/new2/fonts/RobotoRegular.ttf");}
-@font-face{font-family:Roboto Meduim;src:url("/templates/common/new2/fonts/RobotoMedium.ttf");}
+@font-face{font-family:Roboto Bold;src:url("/templates/common/new/fonts/RobotoBold.ttf");}
+@font-face{font-family:Roboto Light;src:url("/templates/common/new/onts/RobotoLight.ttf");}
+@font-face{font-family:Roboto Regular;src:url("/templates/common/new/onts/RobotoRegular.ttf");}
+@font-face{font-family:Roboto Meduim;src:url("/templates/common/new/onts/RobotoMedium.ttf");}
 .top-block-wrap{width:100%;}
 .top-block{max-width:1040px;margin:0 auto;padding:3px 0 6px 0;}
 .top-block .left{display:inline-block;vertical-align:middle;}
@@ -765,7 +765,7 @@ h1, h2{font-size:30px;}
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  background: url(/templates/common/new2/img/cd-top-arrow.png) center 50% no-repeat #093b3f;
+  background: url(/templates/common/new/mg/cd-top-arrow.png) center 50% no-repeat #093b3f;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity .3s 0s, visibility 0s .3s;

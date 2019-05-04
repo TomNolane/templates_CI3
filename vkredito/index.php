@@ -58,36 +58,11 @@
                 </div>
             </div>
             <div class="clearfix"></div>
-            <?php if($setting_array['is_mobile'] != 'мобила') { ?>
-            <br><br><br>
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- vkredito -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-4970738258373085"
-                data-ad-slot="9129421079"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-            <?php } ?>
+            <?php if($setting_array['is_mobile'] != 'мобила') { echo '<br><br><br>'; require 'adsence.php'; } ?>
         </div>
     </div>
 </section>
-<?php if($setting_array['is_mobile'] == 'мобила') { ?>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- vkredito -->
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="9129421079"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<?php } ?>
+<?php if($setting_array['is_mobile'] == 'мобила') { require 'adsence.php'; } ?>
 <section class="howto white text-center hidden-xs">
     <div class="container">
         <h2>Как получить деньги?</h2>

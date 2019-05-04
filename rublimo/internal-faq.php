@@ -1,4 +1,4 @@
-<center><h3><b>Часто задаваемые вопросы и ответы к ним</b></h3></center>
+<h3 class="text-center"><b>Часто задаваемые вопросы и ответы к ним</b></h3>
 
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-default">

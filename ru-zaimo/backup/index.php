@@ -147,7 +147,7 @@ figure.hh1:hover {
 ?> 
 <div>
 <style scoped>
-@font-face{font-family:"'Dosis'";src:url(/templates/common/new2/fonts/Dosis-Regular.eot);src:url(/templates/common/new2/fonts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/new2/fonts/Dosis-Regular.woff) format("woff"),url(/templates/common/new2/fonts/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:"'Dosis'";src:url(/templates/common/new/fonts/Dosis-Regular.eot);src:url(/templates/common/new/fonts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/new/fonts/Dosis-Regular.woff) format("woff"),url(/templates/common/new/fonts/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
 .hh4 {
     font-family: Dosis !important;
     font-size: 34px;

@@ -2,10 +2,8 @@
 <div class="ex-bounds"></div>
 <div class="container ">
     <div class="row">
-        <div class="col-sm-12">
-            <center>
-                <h1 class="oferta-header">Правовые документы</h1>
-            </center>
+        <div class="col-sm-12 text-center"> 
+            <h1 class="oferta-header">Правовые документы</h1> 
         </div>
     </div>
     <div class="ex-main-oferta">

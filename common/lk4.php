@@ -2,14 +2,17 @@
     $my_title = "Мгновенные займы на карту";
     $site = str_replace("www.", "", $site);
     $site = str_replace(".tomnolane", "", $site);
-    $site = str_replace("bziam5", "bziam", $site);
+    $site = str_replace("bzaim5", "bzaim", $site);
+    $site = str_replace("zaimomirsu", "zaimomir", $site);
+    $site = str_replace("zaimnowsu", "zaimnow", $site);
+    $site = str_replace(".ru", "", str_replace(".su", "",str_replace(".info", "", str_replace(".com", "", $site))));
 
     require realpath(__DIR__ . '/..').'/'.$site.'/header.php';
     $this->load->model('offers/offers_model', 'offers');
     
     (isset($_GET['loan']) && $_GET['loan']) ? $loan = 0 : $loan = 0;
     
-    $data = $this->offers->all(18, 0);
+    $data = $this->offers->all2(18, 0);
     
     // IP
     $this->load->helper('ip');
@@ -31,6 +34,16 @@
     $base_url = str_replace("https:","",$base_url);
     $base_url = str_replace("http:","",$base_url);
     $pixel = $this->pixel->stat($base_url);
+
+    $email = 'support@'.getDomain();
+    $logo_foot = 'templates/common/img/logo-fanzaim.png';
+    switch ($this->uri->segment(1)) {
+        case 'offerwall': $logo_foot = 'templates/common/img/logo-fanzaim.png'; $email = 'support@fanzaim.ru'; break;
+        case 'pixell': $logo_foot = 'templates/common/img/logo-fanzaim.png'; $email = 'support@fanzaim.ru'; break;
+        case 'offerwall2': $logo_foot = 'templates/common/img/logo-edenga.png'; $email = 'support@edenga.ru'; break;
+        default: break;
+    }
+
 	if($setting_array['is_mobile'] != 'мобила') {
     
 ?>
@@ -73,8 +86,7 @@ figure.hh1:hover {
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     background-color: #f7f7f7;
-} 
-
+}
 .offers { 
     padding-left: 20px;
     padding-right: 20px;
@@ -136,7 +148,7 @@ figure.hh1:hover {
 </style></div>
 <div>
 <style scoped>
-@font-face{font-family:"'Dosis'";src:url(/templates/common/new2/fonts/Dosis-Regular.eot);src:url(/templates/common/new2/fonts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/new2/fonts/Dosis-Regular.woff) format("woff"),url(/templates/common/new2/fonts/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:"'Dosis'";src:url(/templates/common/new/fonts/Dosis-Regular.eot);src:url(/templates/common/new/fonts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/new/fonts/Dosis-Regular.woff) format("woff"),url(/templates/common/new/fonts/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
 .hh4 {
     font-family: Dosis !important;
     font-size: 34px;
@@ -436,14 +448,12 @@ tr>td:first-child {
 </div> 
 
 <div class="row container3"><div class="col-md-12">
- <!-- adsence-->
-<? //if (file_exists(realpath(__DIR__ . '/..').'/'.$site.'/internal-google-tmp.php')) require(realpath(__DIR__ . '/..').'/'.$site.'/internal-google-tmp.php'); ?>
-<? if (!file_exists(realpath(__DIR__ . '/..').'/'.$site.'/internal-header-1.php')) : ?>
+<? if (!file_exists(realpath(__DIR__ . '/..').'/common/new/special-header-1.php')) : ?>
 <h2 class="text-center hh hh4"> Для вас подобраны организации для <span class="gold_font">получения займа или кредита</span> в России:</h2>
-<? else : require(realpath(__DIR__ . '/..').'/'.$site.'/internal-header-1.php'); endif; ?>
-<? if (!file_exists(realpath(__DIR__ . '/..').'/'.$site.'/internal-header-2.php')) : ?>
+<? else : require(realpath(__DIR__ . '/..').'/common/new/special-header-1.php'); endif; ?>
+<? if (!file_exists(realpath(__DIR__ . '/..').'/common/new/special-header-2.php')) : ?>
 <h2 class="text-center hh hh4 grey" style="font-size: 18px;line-height:initial">На нашем сайте вы можете найти нужную информацию о кредитах и займах, которые можно получить в России. <br>Все публикуемые на сайте организации имеют лицензии и внесены в реестр кредитных организаций.</h2>
-<? else : require(realpath(__DIR__ . '/..').'/'.$site.'/internal-header-2.php'); endif; ?>
+<? else : require(realpath(__DIR__ . '/..').'/common/new/special-header-2.php'); endif; ?>
     <br>
     <div class="row" id="for_google">
     
@@ -455,24 +465,22 @@ tr>td:first-child {
         $_plural_years = array('год', 'года', 'лет');
         $_plural_months = array('месяц', 'месяца', 'месяцев');
         $_plural_days = array('дня', 'дня', 'дней');
-        $_plural_times = array('раз', 'раза', 'раз'); 
+        $_plural_times = array('раз', 'раза', 'раз');
+        
         echo '<div class="row"><div class="col-md-12 col-xs-12">';
 
         foreach($data as $item)
         {
             $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-
-            $item['link'] = $item['link'].'&aff_sub=Pixel&aff_sub1=Pixel&aff_sub2=Pixel&aff_sub3=Pixel&aff_sub4=Pixel&s=Pixel&s1=Pixel&sub=Pixel&sub1=Pixel&sub2=Pixel';
- 
-            $words = array (
-                '<span class="empty"> </span>',
-                '<span class="green">Выгодно сегодня</span>',
-                '<span class="gold">Лучшее предложение дня</span>',
-                '<span class="yellow">Предложение месяца</span>',
-                '<span class="blue">Одобрение 96,5%</span>',
-                '<span class="empty"> </span>'
-            );
- 
+            
+            if (strpos($item['link'], 'guruleads'))
+                $item['link'] = $item['link'].'?sub1=Pixel';
+            else if(strpos($item['link'], 'kviku') || strpos($item['link'], 'tech'))
+                $item['link'] = $item['link'].'';
+            else if(strpos($item['link'], 'leadgid'))
+                $item['link'] = $item['link'].'?source=Pixel';
+            else
+                $item['link'] = $item['link'].'?source=Pixel';
 
                 $sum = number_format($item['amount'],0,'',' ');
                 $im = $item['img'];
@@ -518,13 +526,13 @@ END;
 <br><br>
 <?php } else {  
     echo '<div><style scoped>';
-    require realpath(__DIR__ . '/..').'/common/new2/css/lk2.php';
+    require realpath(__DIR__ . '/..').'/common/new/ss/lk2.php';
     echo '</style></div>'; 
     ?>
 
 <div>
 <style scoped>
-@font-face{font-family:"'Dosis'";src:url(/templates/common/new2/fonts/Dosis-Regular.eot);src:url(/templates/common/new2/fonts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/new2/fonts/Dosis-Regular.woff) format("woff"),url(/templates/common/new2/fonts/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:"'Dosis'";src:url(/templates/common/new/onts/Dosis-Regular.eot);src:url(/templates/common/nnew/nts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/nenew/ts/Dosis-Regular.woff) format("woff"),url(/templates/common/newnew/s/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
 .hh4 {
     font-family: Dosis !important;
     font-size: 34px;
@@ -646,9 +654,12 @@ tr>td:first-child {
     padding: 20px;
 }
 .lk_special_offer {
+    /* -webkit-animation: neon .08s ease-in-out infinite alternate;
+    animation: neon .08s ease-in-out infinite alternate; */
     font-size: 1.8em;
     font-weight: 700; 
-    color: #00da00; 
+    /* text-shadow: 0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000; */
+  color: #00da00; 
 } 
 @media (max-width: 450px) { 
     .font08 {
@@ -712,13 +723,13 @@ tr>td:first-child {
         $_plural_months = array('месяц', 'месяца', 'месяцев');
         $_plural_days = array('дня', 'дня', 'дней');
         $_plural_times = array('раз', 'раза', 'раз');
-        $temp = 0;
+
         echo '<div class="row"><div class="col-md-12 col-xs-12">';
 
         foreach($data as $item)
         {
             $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
-            
+
             $item['link'] = $item['link'].'&aff_sub=Pixel&aff_sub1=Pixel&aff_sub2=Pixel&aff_sub3=Pixel&aff_sub4=Pixel&s=Pixel&s1=Pixel&sub=Pixel&sub1=Pixel&sub2=Pixel';
 
             $words = array (

@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-default ex-main-header">
     <div class="container">
         <div class="navbar-header">

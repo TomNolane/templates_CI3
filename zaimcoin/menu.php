@@ -1,4 +1,4 @@
-<a class="anchor" name="id1"></a>
+
 <header style="height: 0 !important;">
     <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header" style="z-index: 777 !important;">
         <div class="container">
@@ -10,7 +10,13 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/" class="navbar-brand">
-                    <img src="templates/zaimcoin/assets/img/logo.png" class="logo-header" alt="logo.png">
+                    <?php $logo_addon = '/templates/zaimcoin/assets/img/logo.png';
+                    switch ($this->uri->segment(1)) {
+                            case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                            case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+                            default: break;
+                    } ?>
+                    <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
                 </a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse">

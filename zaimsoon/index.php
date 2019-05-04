@@ -102,20 +102,7 @@
     <section class="ex-section-2">
         <div class="container">
             <div class="row">
-                
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-               <?php if($setting_array['is_mobile'] != 'мобила') { ?>
-            <!-- zaimsoon -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-4970738258373085"
-                data-ad-slot="4548012382"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-               <?php } ?>
+               <?php if($setting_array['is_mobile'] != 'мобила') { require 'adsence.php'; } ?>
                 <div class="col-md-10 col-md-offset-1 hidden-xs hidden-sm">
                     <h3>Как получить деньги?</h3>
                     <div class="ex-get-money">
@@ -185,5 +172,4 @@
         </div>
     </section>
 </main>
-
 <?php require 'footer.php'; ?>

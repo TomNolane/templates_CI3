@@ -58,34 +58,11 @@ if(!isset($sum))
         } 
     } 
 $px = ($px - 3.5) . '%';
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
+if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'offerwall2', 'pixell', 'vitrina', 'form')))
 {
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156788691" alt="MYTARGET">';
-    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
-        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- godzaim -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="5116247776"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-    }
-	 if($setting_array['is_mobile'] != 'мобила') {
-    echo '<ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="5116247776"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
+    require 'adsence.php';
     echo '<a href="#0" class="cd-top">Наверх</a>';
-        }
 }?>
     <div class="footer-wrap">
         <div class="footer">
@@ -100,12 +77,12 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                         <img src="/templates/godzaim/assets/img/logo-footer.png" alt="logo-footer.png" class="logo logo-spec">
                     <?php } ?>
                 </div>
-                <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
+                <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                 <div class="col-md-3 col-md-offset-1 col-xs-12 spec_footer4">
                     <p>
                         Cервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. ул. Осипенко,
                         12, оф 201
-                        <a href="mailto:support@godzaim.ru" target="_blank">support@godzaim.ru</a>
+                        <?=$email?>
                         <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
                     </p>
                 </div>
@@ -120,24 +97,9 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
                 </div>
                 <?php } else { ?>
                     <div class="col-md-10 col-xs-12"> 
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- godzaim -->
-                        <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-client="ca-pub-4970738258373085"
-                            data-ad-slot="5116247776"
-                            data-ad-format="auto"
-                            data-full-width-responsive="true"></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
+                        <?php require 'adsence.php';?>
                     </div>
                 <?php } ?>
-                <div class="col-sm-12">
-                    <hr/>
-                    <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') { 
-                    } ?>
-                </div>
             </div>
         </div>
     </div>
@@ -153,8 +115,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
     require 'footer_common_js.php';
     echo '/* private JS */';
     require 'templates/godzaim/assets/js/main.js';  
-    if($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') {
-?>
+    if(in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) { ?>
         $(".amount").ionRangeSlider({
         min: 1000,
         max: 100000,
@@ -333,7 +294,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
             $("#form_slrd").val(range3.from);
         }
     }); 
-    <?php } if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {?> 
+    <?php } if (in_array($this->uri->segment(1), array(' ', '', 'index'))) {?> 
         var slider = $('.amount').data('ionRangeSlider');
         var slider_plus = true;
         var n = 10;
@@ -566,14 +527,14 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
         });
         traffic("godzaim.ru",0);
 <?php }
-if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
 {
-    include "templates/common/new2/js/lk.js";      
+    include "templates/common/new/js/lk.js";
     echo 'traffic("godzaim.ru",4);'; 
 }
-elseif($this->uri->segment(1) == 'reviews')
+else if($this->uri->segment(1) == 'reviews')
 {
-    include "../modules/owl/owl.carousel.js";      
+    include "../modules/owl/owl.carousel.js";
     echo '$("#owl-demo").owlCarousel({
         autoPlay: 5000, //Set AutoPlay to 3 seconds
         items : 2,
@@ -582,74 +543,25 @@ elseif($this->uri->segment(1) == 'reviews')
         navigation : false
     });';
 }
-elseif($this->uri->segment(1) == '404')
+else if($this->uri->segment(1) == '404')
 {
     echo 'traffic("godzaim.ru",9);'; 
 }
-else if($this->uri->segment(1) == 'form')
-{ } 
 echo "}";
-require 'templates/common/new2/js/exeption.js';
+require 'templates/common/new/js/exeption.js';
 ?>
 </script>
 <?php
     include "google.php";
     include "yandexmetrika.php"; 
     include "yandex_rtb.php";
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
-    {     
-        
-        echo '<!-- Google Code for  
-        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
-        Page -->
-            <script>
-                /* <![CDATA[ */
-                var google_conversion_id = 830227331;
-                var google_conversion_label = "M_bzCPqNnHcQg4fxiwM";
-                var google_remarketing_only = false;
-                /* ]]> */
-            </script>
-            <script src="//www.googleadservices.com/pagead/conversion.js">
-            </script>
-            <noscript>
-                <div style="display:inline;">
-                    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/830227331/?label=M_bzCPqNnHcQg4fxiwM&amp;guid=ON&amp;script=0"
-                    />
-                </div>
-            </noscript>'; 
-    } else {
-        echo '<script>!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308476-dwNvj"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308476-dwNvj" style="position:fixed; left:-999px;" alt=""/></noscript>';
-    }
-?>
-<!-- Rating@Mail.ru counter -->
-<script>
-var _tmr = window._tmr || (window._tmr = []);
-_tmr.push({id: "3052558", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
-(function (d, w, id) {
-if (d.getElementById(id)) return;
-var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-ts.src = "//top-fwz1.mail.ru/js/code.js";
-var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-})(document, window, "topmailru-code");
-</script><noscript><div>
-<img src="//top-fwz1.mail.ru/counter?id=3052558;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
-</div></noscript>
-<!-- //Rating@Mail.ru counter -->
-<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script>
-var _tmr = _tmr || [];
-_tmr.push({
-type: 'itemView',
-productid: 'VALUE',
-pagetype: 'VALUE',
-list: 'VALUE',
-totalvalue: 'VALUE'
-});
-</script>
-<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
-<?php
-require 'templates/common/new2/php/modal3_close.php';
+
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+        require 'google_lk.php';
+    else 
+        require 'vk.php';
+    
+    require 'mailru.php';
 ?>
 </body>
 </html>

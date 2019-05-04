@@ -2,22 +2,17 @@
     $my_title = "Автоматическое одобрение займа";
     $site = str_replace("www.", "", $site);
     $site = str_replace(".tomnolane", "", $site);
-    
-    if($site == 'bzaim5') $site = 'bzaim';
-    else if($site == 'www.mikrodengi') $site = 'mikrodengi';
-    
-    $site = str_replace("www.", "", $site);
+    $site = str_replace("bzaim5", "bzaim", $site);
+    $site = str_replace("zaimomirsu", "zaimomir", $site);
+    $site = str_replace("zaimnowsu", "zaimnow", $site);
+    $site = str_replace(".ru", "", str_replace(".su", "",str_replace(".info", "", str_replace(".com", "", $site))));
 
-    $dir_site = str_replace(".ru", "", str_replace(".su", "",str_replace(".info", "", $site)));
-    require realpath(__DIR__ . '/..').'/'.$dir_site.'/header.php';
+    require realpath(__DIR__ . '/..').'/'.$site.'/header.php';
     $this->load->model('offers/offers_model', 'offers');
     
     (isset($_GET['loan']) && $_GET['loan']) ? $loan = 0 : $loan = 0;
     
-    //  if($site == 'zaimol')
-    //     $data = $this->offers->all(8, 0);
-    // else 
-        $data = $this->offers->all(10, 0);
+    $data = $this->offers->all3(10, 0);
         
     // IP
     $this->load->helper('ip');
@@ -39,14 +34,23 @@
     $base_url = str_replace("https:","",$base_url);
     $base_url = str_replace("http:","",$base_url);
     $pixel = $this->pixel->stat($base_url);
+
+    $email = 'support@'.getDomain();
+    $logo_foot = 'templates/common/img/logo-fanzaim.png';
+    switch ($this->uri->segment(1)) {
+        case 'offerwall': $logo_foot = 'templates/common/img/logo-fanzaim.png'; $email = 'support@fanzaim.ru'; break;
+        case 'pixell': $logo_foot = 'templates/common/img/logo-fanzaim.png'; $email = 'support@fanzaim.ru'; break;
+        case 'offerwall2': $logo_foot = 'templates/common/img/logo-edenga.png'; $email = 'support@edenga.ru'; break;
+        default: break;
+    }
+
 	echo '<div><style scoped>';
-	require 'new2/css/lk2.php';
+	require 'new/css/lk2.php';
 	echo '</style></div>'; 
 ?> 
 <div>
 <style scoped>
-@font-face{font-family:"'Dosis'";src:url(/templates/common/new2/fonts/Dosis-Regular.eot);src:url(/templates/common/new2/fonts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/new2/fonts/Dosis-Regular.woff) format("woff"),url(/templates/common/new2/fonts/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
-/* SLASH START HERE */
+@font-face{font-family:"'Dosis'";src:url(/templates/common/new/onts/Dosis-Regular.eot);src:url(/templates/common/nnew/nts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/nenew/ts/Dosis-Regular.woff) format("woff"),url(/templates/common/newnew/s/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
 .hh4 {
     font-family: Impact !important;
     font-size: 34px;
@@ -66,8 +70,6 @@
 }
 @media (min-width: 600px) {
     .div-spec {
-        /* margin-left: 40px;
-        margin-right: 40px; */
     }
 }
 .container3 {
@@ -194,12 +196,9 @@ tr>td:first-child {
     padding: 20px;
 }
 .lk_special_offer {
-    /* -webkit-animation: neon .08s ease-in-out infinite alternate;
-    animation: neon .08s ease-in-out infinite alternate; */
     font-size: 1.8em;
     font-weight: 700; 
-    /* text-shadow: 0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000; */
-  color: #00da00; 
+    color: #00da00; 
 } 
 @media (max-width: 450px) {
     .caption  {
@@ -263,59 +262,28 @@ tr>td:first-child {
     float: right;
     padding-right: 10px;
 }
-/** MEGA FIX =) **/
-html, body {
-    /*overflow-x:hidden;*/
-}
-.my-full {/*margin: 0 auto;*/}
-
-/* =========================== offerwall new ========================== */
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
 @media (min-width: 1281px) and (max-width: 1500px) {
-    .my-md2 {width: 24% !important;}
+    .my-md2 {width: 21% !important;}
     .colfix {margin-left: 0%;}
     .mycol {margin-right: -55px;}
 }
-
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
 @media (min-width: 1025px) and (max-width: 1280px) {
     .my-md2 {width: 20% !important;}
-    .colfix {margin-left: 6%;}
+    .colfix {margin-left: -15px;}
     .lk-text {font-size: 85%;}
     .caption {font-size: 92%;}
 }
-
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
 @media (min-width: 768px) and (max-width: 1024px) {
     .my-md2 {width: 35% !important;}
     .colfix {margin-left: 4%;}
     .hh4 span:first-of-type {font-size: 93% !important;}
 }
-
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .my-md2 {width: 35% !important;}
     .colfix {margin-left: 4%;}
     .hh4 span:first-of-type {font-size: 67% !important;}
     .green_font {font-size: 77%;}
 }
-
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
 @media (min-width: 481px) and (max-width: 767px) {
     .my-md2 {width: 53% !important;}
     .colfix {margin-left: 4%;}
@@ -323,11 +291,6 @@ html, body {
     .green_font {font-size: 77%;}
     .top-exclamation {display: none;}
 }
-
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
 @media (min-width: 320px) and (max-width: 480px) {
     .my-md2 {width: 53% !important;}
     .colfix {margin-left: 6%;}
@@ -371,8 +334,7 @@ html, body {
 .skewheader_pink {background-image: linear-gradient(#cb2d4b, #B50022);}
 .skewheader_none {background-image: linear-gradient(#D7D4D4, #5C5C5C);}
 
-.myclear {disply: none; clear: both;}
-/* SLASH END HERE */
+.myclear {disply: none; clear: both;}\
 </style>
 </div>
 
@@ -385,7 +347,7 @@ html, body {
 </nav>
 <?php } ?>
 <div class="row container3"><div class="col-md-12">
-<? if (!file_exists(realpath(__DIR__ . '/..').'/'.$site.'/internal-header-1.php')) : ?>
+<? if (!file_exists(realpath(__DIR__ . '/..').'/common/new/special-header-1.php')) : ?>
     <h2 class="text-center hh hh4"><span style="font-size: 32px; color: #000; font-family: Helvetica;">Согласно Вашим данным сформирован список онлайн займов со скидкой до 50%.</span><br>
         <span class="green_font">
             <span style="background-color: #e8392c; color: #FFF;">
@@ -394,7 +356,7 @@ html, body {
                 <span style="color: #000 !important;">Оставьте заявку в трех компаниях и повысьте шанс получить займ до 99%.</span>
             </span>
     </h2>
-<? else : require(realpath(__DIR__ . '/..').'/'.$site.'/internal-header-1.php'); endif; ?>
+<? else : require(realpath(__DIR__ . '/..').'/common/new/special-header-1.php'); endif; ?>
     <br>
     <hr>
     <div class="row" id="for_google"></div>
@@ -410,120 +372,22 @@ html, body {
         $_plural_months = array('месяц', 'месяца', 'месяцев');
         $_plural_days = array('дня', 'дня', 'дней');
         $_plural_times = array('раз', 'раза', 'раз');
-        $temp = 0;
-        echo '<div class="row"><div class="col-md-12 col-xs-12 div-spec colfix my-full">';
+        
+        echo '<div class="row" style="overflow-x: hidden;"><div class="col-md-12 col-xs-12 div-spec colfix my-full">';
 
         foreach($data as $item)
         {
             $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
 
-
-            /*
-            $item['link'] = str_replace("#site1", ucfirst($domen), $item['link']);
-            $item['link'] = str_replace("#site", $domen, $item['link']);
-
-            if ( $domen == 'zaimhome.ru' ){
-                $item['link'] = str_replace("https://kviku.ru/cards/?promo=nb&utm_source=bzaim5", 'https://kviku.ru/cards/?promo=nb&utm_source=zaimhome', $item['link']);
-            }
-            if ( $domen == 'dengoman.ru' ){
-                $item['link'] = str_replace("https://kviku.ru/cards/?promo=nb&utm_source=bzaim5", 'https://kviku.ru/cards/?promo=nb&utm_source=dengoman', $item['link']);
-            }            
-            if ( $domen == 'dengibystra.ru' ){
-                $item['link'] = str_replace("https://kviku.ru/cards/?promo=nb&utm_source=bzaim5", 'https://kviku.ru/cards/?promo=nb&utm_source=dengibystra', $item['link']);
-            }
-            if ( $domen == 'bzaim5.ru'){
-                $item['link'] = str_replace("https://kviku.ru/cards/?promo=nb&utm_source=bzaim5", 'https://kviku.ru/cards/?promo=nb&utm_source=dengibystra', $item['link']);
-            }
- 
-			if(strpos($item['link'], "aff_sub1=") == true)
-            {
-                $item['link'] = str_replace( "aff_sub1=#site1", $domen, $item['link']);
-                $item['link'] = str_replace( "aff_sub1=#site", $domen, $item['link']);
-
-                if(trim($this->input->get('utm_source', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub2='.$this->input->get('utm_source', TRUE);
-                else
-                    $item['link'] = $item['link'].'&aff_sub2='.$domen;
-
-                if(trim($this->input->get('utm_campaign', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
-                else if(trim($this->input->get('campaign_id', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
-                else if(trim($this->input->get('doi', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3=doi';
-                else
-                    $item['link'] = $item['link'].'&aff_sub3='.$domen;
-
-                if(trim($this->input->get('utm_term', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
-                else if(trim($this->input->get('utm;_term', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm;_term', TRUE);
-                else if(trim($this->input->get('keyword', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
-                else
-                    $item['link'] = $item['link'].'&aff_sub4='.$domen;
-            }
-            else if (strpos($item['link'], "aff_sub=") == true)
-            {
-                $item['link'] = str_replace( "aff_sub=bzaim5.ru", "aff_sub=".$domen, $item['link']);
-                $item['link'] = str_replace( "aff_sub2=#site", "", $item['link']);
-                $item['link'] = str_replace( "aff_sub2=#site1", "", $item['link']);
-
-                if(trim($this->input->get('utm_source', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub2='.$this->input->get('utm_source', TRUE);
-                else
-                    $item['link'] = $item['link'].'&aff_sub2='.$domen;
-
-                if(trim($this->input->get('utm_campaign', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
-                else if(trim($this->input->get('campaign_id', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
-                else if(trim($this->input->get('doi', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3=doi';
-                else
-                    $item['link'] = $item['link'].'&aff_sub3='.$domen;
-
-                if(trim($this->input->get('utm_term', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
-                else if(trim($this->input->get('utm;_term', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm;_term', TRUE);
-                else if(trim($this->input->get('keyword', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
-                else
-                    $item['link'] = $item['link'].'&aff_sub4='.$domen;
-            }
-            else if (strpos($item['link'], "promo=") == true)
-            {
-                $item['link'] = str_replace( "utm_source=bzaim5", "utm_source=".$domen, $item['link']);
-
-                if(trim($this->input->get('utm_source', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub2='.$this->input->get('utm_source', TRUE);
-                else
-                    $item['link'] = $item['link'].'&aff_sub2='.$domen;
-
-                if(trim($this->input->get('utm_campaign', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
-                else if(trim($this->input->get('campaign_id', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
-                else if(trim($this->input->get('doi', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3=doi';
-                else
-                    $item['link'] = $item['link'].'&aff_sub3='.$domen;
-
-                if(trim($this->input->get('utm_term', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
-                else if(trim($this->input->get('utm;_term', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm;_term', TRUE);
-                else if(trim($this->input->get('keyword', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
-                else
-                    $item['link'] = $item['link'].'&aff_sub4='.$domen;
-            }
-            */
-            $item['link'] = $item['link'].'&aff_sub=Offerwall&aff_sub1=Offerwall&aff_sub2=Offerwall&aff_sub3=Offerwall&aff_sub4=Offerwall&s=Offerwall&s1=Offerwall&sub=Offerwall&sub1=Offerwall&sub2=Offerwall';
-             
-            $temp++; 
-
+           if (strpos($item['link'], 'guruleads'))
+                $item['link'] = $item['link'].'?sub1=Vitrina';
+            else if(strpos($item['link'], 'kviku') || strpos($item['link'], 'tech'))
+                $item['link'] = $item['link'].'';
+            else if(strpos($item['link'], 'leadgid'))
+                $item['link'] = $item['link'].'?source=Vitrina';
+            else
+                $item['link'] = $item['link'].'?source=Vitrina';
+            
             $words = array (
                 '<div class="skewheader__bg skewheader_green"></div><div class="skewinside caption">Без документов</div>',
                 '<div class="skewheader__bg skewheader_orange"></div><div class="skewinside caption">Одобрение 100% сегодня</div>',
@@ -548,4 +412,4 @@ html, body {
     ?>
     </div></div>
 <br><br>
-<?php require realpath(__DIR__ . '/..').'/'.$dir_site.'/footer.php';?>
+<?php require realpath(__DIR__ . '/..').'/'.$site.'/footer.php';?>

@@ -1,6 +1,4 @@
-<?php 
-require 'header.php';
-?>
+<?php require 'header.php'; ?>
 <div class="ex-home-bg"></div>
 <div class="container">
     <div class="row">
@@ -64,39 +62,7 @@ require 'header.php';
                             </div>
                         </div>
                     </div>
-                    <?php if($setting_array['is_mobile'] != 'мобила') { ?>
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- zaimhome -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-4970738258373085"
-                        data-ad-slot="7107437553"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script> 
-                    <?php } ?> 
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="hidden-xs hidden-sm"><br><br><br><br><br></div>
-    <h2 class="text-center ex-money-receive-title">Как получить деньги</h2><hr/>
-     <?php if($setting_array['is_mobile'] == 'мобила') { ?>
-    <br><br><br>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- zaimhome -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="7107437553"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    <?php } ?>
+    <?php if($setting_array['is_mobile'] != 'мобила') { echo '<br><br><br>'; require 'adsence.php'; } ?>
     <div id="ex-how-receive" class="row hidden-xs hidden-sm">
         <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
             <div>

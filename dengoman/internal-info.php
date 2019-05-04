@@ -1,5 +1,4 @@
 <h1>Получение займа</h1>
-
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-default">
 	<a name="card"></a>

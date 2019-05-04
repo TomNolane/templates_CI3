@@ -8,7 +8,7 @@
         $link = str_replace("#name#", implode('',$this->input->get()), $link);
     else 
         $link = str_replace("#name#", $domen, $link);
-    require 'templates/common/new2/php/check_bot.php';
+    require 'templates/common/new/php/check_bot.php';
 
     function getDomain3()
     {
@@ -51,7 +51,7 @@
     <script src="/templates/dengos/js/universal/tilda-slds-1.4.min.js"></script>
     <script src="/templates/dengos/js/universal/hammer.min.js"></script>
     <script src="/templates/dengos/js/universal/tilda-zoom-2.0.min.js"></script>
-    <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/7c8ebb6294d764a87f0f15175f7d0d99_1.js" async></script>
+    <script  src="//cdn.sendpulse.com/js/push/7c8ebb6294d764a87f0f15175f7d0d99_1.js" async></script>
     <style>
         <?php echo '.t338__logo{float: unset;max-width: 320px !important;}.t338__title{margin-bottom: 40px;padding-top: 180px;text-align: center;} .t-prefix_1{padding-left: 0;padding-right: 0;}';
         echo '@media (max-width: 450px) {.t-valign_middle{vertical-align: unset !important;}.t338__title{margin-bottom: 40px;padding-top: 60px;}.t338__logo{margin-top: 0 !important;float: initial;margin-bottom:0;} }';
@@ -135,7 +135,7 @@
             }
         }
 
-        <?php require 'templates/common/new2/css/common.css';?>li>a {
+        <?php require 'templates/common/new/css/common.css';?>li>a {
             font-size: 16px;
             color: #000;
             margin: 0 auto;
@@ -792,7 +792,7 @@ enable_page_level_ads: true
     </div>
     <script>
         <?php
-        require 'templates/common/new2/js/bootstrap.min.js';
+        require 'templates/common/new/js/bootstrap.min.js';
         $phone = '';
         if($this->uri->segment(1) && $this->uri->segment(2))
         {

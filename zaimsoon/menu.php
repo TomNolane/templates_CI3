@@ -1,4 +1,3 @@
-
 <header style="height: 0 !important;">
     <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header">
         <div class="container">
@@ -10,7 +9,13 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/" class="navbar-brand">
-                    <img src="/templates/zaimsoon/assets/img/logo.png" alt="Image missing">
+                     <?php $logo_addon = '/templates/zaimsoon/assets/img/logo.png';
+                    switch ($this->uri->segment(1)) {
+                            case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                            case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+                            default: break;
+                    } ?>
+                    <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
                 </a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse">
@@ -39,7 +44,7 @@
             </div>
         </div>
     </nav>
-</heade> 
+</header> 
     <div id="askQuestion" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">

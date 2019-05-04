@@ -1,7 +1,6 @@
 <body class="ex-sticky">
 <nav class="navbar navbar-default ex-main-header">
     <div class="container">
-    <a class="anchor" name="id1"></a>
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dengomirCollapsed">
                 <span class="icon-bar"></span>
@@ -9,7 +8,13 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">
-                <i></i>
+                <?php $logo_addon = '/templates/dengomir/assets/img/icons/logo-header.png';
+				switch ($this->uri->segment(1)) {
+					case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+					case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+					default: break;
+				} ?>
+				<img src="<?=$logo_addon?>" alt="Image missing">
             </a>
         </div>
         <div class="collapse navbar-collapse" id="dengomirCollapsed">

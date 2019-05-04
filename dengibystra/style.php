@@ -18,16 +18,16 @@
     <?php 
         echo '<!-- common style css--> ';
         echo '<style>'; 
-        require "templates/common/new2/css/common.css";
+        require "templates/common/new/css/common.css";
         require "templates/dengibystra/assets/css/style.css";
-        if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') 
+        if (in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) 
         {
             require "templates/dengibystra/assets/css/style_lk.css";
-            require "templates/common/new2/css/lk.php";
+            require "templates/common/new/css/lk.php";
         }
         if ($this->uri->segment(1) == 'form') 
         {
-            require "templates/common/new2/css/form.css";
+            require "templates/common/new/css/form.css";
             require "templates/dengibystra/assets/css/style_form.css";
         }
 		echo '</style>'; 

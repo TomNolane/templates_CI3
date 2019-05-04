@@ -128,115 +128,115 @@ else
 	{ 
 		require 'internal-about.php'; 
 	} 
-	elseif($this->uri->segment(1) == 'faq')
+	else if($this->uri->segment(1) == 'faq')
 	{  
 		require 'internal-faq.php';  
 	}
-	elseif($this->uri->segment(1) == '404')
+	else if($this->uri->segment(1) == '404')
 	{  
 		require 'internal-404.php';  
 	}
-	elseif ($this->uri->segment(1) == 'info')
+	else if ($this->uri->segment(1) == 'info')
 	{ 
 		require 'internal-info.php'; 
 	}
-	elseif ($this->uri->segment(1) == 'oferta') 
+	else if ($this->uri->segment(1) == 'oferta') 
 	{ 
 		require 'internal-oferta.php'; 
 	}
-	elseif ($this->uri->segment(1) == 'agree')
+	else if ($this->uri->segment(1) == 'agree')
 	{ 
 		require 'internal-agree.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'soglasie') 
+	else if ($this->uri->segment(1) == 'soglasie') 
 	{ 
 		require 'internal-soglasie.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'rules')
+	else if ($this->uri->segment(1) == 'rules')
 	{ 
 		require 'internal-rules.php'; 
 	}
-	elseif ($this->uri->segment(1) == 'contacts')
+	else if ($this->uri->segment(1) == 'contacts')
 	{ 
 		require 'internal-contacts.php'; 
 	}  
-	elseif ($this->uri->segment(1) == 'credits')
+	else if ($this->uri->segment(1) == 'credits')
 	{ 
 		require 'internal-credits.php'; 
 	}  
-	elseif ($this->uri->segment(1) == 'restructuring')
+	else if ($this->uri->segment(1) == 'restructuring')
 	{ 
 		require 'internal-restructuring.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'refinancing')
+	else if ($this->uri->segment(1) == 'refinancing')
 	{ 
 		require 'internal-refinancing.php'; 
 	}
-	elseif ($this->uri->segment(1) == 'insolvency')
+	else if ($this->uri->segment(1) == 'insolvency')
 	{ 
 		require 'internal-insolvency.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'docs')
+	else if ($this->uri->segment(1) == 'docs')
 	{ 
 		require 'internal-docs.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'money')
+	else if ($this->uri->segment(1) == 'money')
 	{ 
 		require 'internal-money.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'zaim-card')
+	else if ($this->uri->segment(1) == 'zaim-card')
 	{ 
 		require 'internal-zaim-card.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'zaim-yandex')
+	else if ($this->uri->segment(1) == 'zaim-yandex')
 	{ 
 		require 'internal-zaim-yandex.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'zaim-bank')
+	else if ($this->uri->segment(1) == 'zaim-bank')
 	{ 
 		require 'internal-zaim-bank.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'zaim-contact')
+	else if ($this->uri->segment(1) == 'zaim-contact')
 	{ 
 		require 'internal-zaim-contact.php'; 
 	}
-	elseif ($this->uri->segment(1) == 'zaim-qiwi')
+	else if ($this->uri->segment(1) == 'zaim-qiwi')
 	{ 
 		require 'internal-zaim-qiwi.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'borrow')
+	else if ($this->uri->segment(1) == 'borrow')
 	{ 
 		require 'internal-borrow.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'targets')
+	else if ($this->uri->segment(1) == 'targets')
 	{ 
 		require 'internal-targets.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'executive-production')
+	else if ($this->uri->segment(1) == 'executive-production')
 	{ 
 		require 'internal-executive-production.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'fix-credit')
+	else if ($this->uri->segment(1) == 'fix-credit')
 	{ 
 		require 'internal-fix-credit.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'history-of-microloans')
+	else if ($this->uri->segment(1) == 'history-of-microloans')
 	{ 
 		require 'internal-history-of-microloans.php'; 
 	}
-	elseif ($this->uri->segment(1) == 'promotion')
+	else if ($this->uri->segment(1) == 'promotion')
 	{ 
 		require 'internal-promotion.php'; 
 	}
-	elseif ($this->uri->segment(1) == 'rate')
+	else if ($this->uri->segment(1) == 'rate')
 	{ 
 		require 'internal-rate.php'; 
 	} 
-	elseif ($this->uri->segment(1) == 'errors')
+	else if ($this->uri->segment(1) == 'errors')
 	{ 
 		require 'internal-errors.php'; 
 	}
-	elseif ($this->uri->segment(1) == 'allarticles')
+	else if ($this->uri->segment(1) == 'allarticles')
 	{ 
 		require 'internal-allarticles.php'; 
 	} 

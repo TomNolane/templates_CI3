@@ -1,8 +1,16 @@
 <nav id="exMainHeader" class="navbar navbar-default">
     <div class="container">
-        <a class="anchor" name="id1"></a>
+        
         <div class="navbar-header">
-            <a class="navbar-brand" href="/"></a>
+            <a class="navbar-brand" href="/">
+                <?php $logo_addon = '/templates/fanzaim/assets/img/icons/fanzaim-logo.png';
+				switch ($this->uri->segment(1)) {
+					case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+					case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+					default: break;
+				} ?>
+				<img src="<?=$logo_addon?>" alt="Image missing">
+            </a>
         </div>
         <div class="nav navbar-nav navbar-right">
             <div href="#" class="dropdown">
@@ -42,8 +50,7 @@
                             </div>
                             <div class="col-md-3">
                                 <button class="ex-main-btn ex-ask-question" data-toggle="modal" data-target="#askQuestion">Обратная связь</button> 
-                                <!-- <button class="ex-main-btn ex-ask-question" data-toggle="modal" data-target="#askQuestion">Обратная связь</button> -->
-                                <a href="/form"><button class="ex-main-btn">Получить деньги</button></a>
+                                    <a href="/form"><button class="ex-main-btn">Получить деньги</button></a>
                             </div>
                         </div>
                     </div>

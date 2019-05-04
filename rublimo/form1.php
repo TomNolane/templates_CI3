@@ -29,12 +29,12 @@
 </div>
 <input type="hidden" id="period" name="period" value="<?=$period;?>" />
 <br>
-<div class="form-group has-feedback hidden"> 
+<div class="form-group has-feedback"> 
 	<label class="col-sm-4 control-label label-required hidden-xs" for="f">Фамилия</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию"
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
-			    required value="Тестовое">
+			    required>
 			<span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2">Нужно указать фамилию</p>
 			<p class="text-muted helpblock">Пример: Иванова</p>
@@ -52,12 +52,12 @@
 	 
 	</div>
 </div>
-<div class="form-group has-feedback hidden">
+<div class="form-group has-feedback">
 	<label class="col-sm-4 control-label label-required hidden-xs"  for="o">Отчество</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="text" class="form-control ec tip" name="o" id="o" placeholder="Отчество" title="Укажите свое отчество"
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
-			    required value="Тестовое">
+			    required>
 			<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2">Нужно указать отчество</p> 
 			<p class="text-muted helpblock">Пример: Ивановна</p>
@@ -143,7 +143,7 @@
 		<p class="text-muted helpblock">Проверьте почту. Письмо могло попасть в папку "СПАМ"</p>
 	</div>
 </div>
-<div class="form-group hidden">
+<div class="form-group">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="credit">Кредитная история</label>
 	<div class="col-sm-8 col-xs-12">
 		<select class="form-control" id="credit">

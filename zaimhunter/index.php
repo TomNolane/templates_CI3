@@ -72,25 +72,9 @@ require 'header.php';
                     </div>
                 </div>
             </div>
-             <?php if($setting_array['is_mobile'] != 'мобила') { ?>
-                   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                   <br><br><br>
-                    <!-- zaimhunter -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-4970738258373085"
-                        data-ad-slot="2625815808"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                    <?php } ?>
+             <?php if($setting_array['is_mobile'] != 'мобила') { echo '<br><br><br>'; require 'adsence.php'; } ?>
         </div>
-        <?php if($setting_array['is_mobile'] == 'мобила') { ?>
-         <br><br><br><br><br>
-       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
-        <?php } ?>
+        <?php if($setting_array['is_mobile'] == 'мобила') { echo '<br><br><br><br><br>'; require 'adsence.php'; } ?>
     </section>
     <section class="ex-service hidden-xs hidden-sm">
         <div class="container">

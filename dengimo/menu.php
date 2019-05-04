@@ -1,10 +1,16 @@
 <div class="page">
 	<nav class="navbar">
 		<div class="container">
-		<a class="anchor" name="id1"></a>
+		
 			<div class="navbar-header">
 				<a class="navbar-brand" href="/">
-					<img alt="logo.png" src="/templates/dengimo/assets/img/logo.png">
+					<?php $logo_addon = '/templates/dengimo/assets/img/logo.png';
+                    switch ($this->uri->segment(1)) {
+                        case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                        case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+                        default: break;
+                    } ?>
+                    <img src="<?=$logo_addon?>" alt="Image missing">
 				</a>
 				<button type="button" class="navbar-toggle collapsed pull-right hidden-sm hidden-xs" data-toggle="collapse" data-target="#navbar-collapse-1"
 					aria-expanded="false">

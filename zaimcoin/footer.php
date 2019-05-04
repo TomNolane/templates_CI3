@@ -1,41 +1,13 @@
 <?php $from = '15';
-if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') 
+if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) 
 {
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156578754" alt="mytarget">';
 }
-if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
+if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell', 'form')))
 {
-    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index' && $this->uri->segment(1) != 'form') 
-    {
-        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- zaimcoin -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="9741339751"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-    }
-
-    if($this->uri->segment(1) != 'form')
-    {
-        echo ' <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="9741339751"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-        echo '<a href="#0" class="cd-top">Наверх</a>';
-    }
-    
+    require 'adsence.php';
 }
-if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == ' ') 
+if (in_array($this->uri->segment(1), array(' ', '', 'index'))) 
 {
 echo '<footer class="ex-main-footer">
     <div class="container">
@@ -118,7 +90,7 @@ echo '<footer class="ex-main-footer">
             <div id="special_footer" class="ex-for-btn"><a onclick="goToUp(); return false;">ВЕРНУТЬСЯ В НАЧАЛО</a></div>
         </div>
         <p class="spec_footer5">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург,
-            ул. Осипенко, 12, оф 201 | support@zaimcoin.ru <span id="sp_footer1" class="hidden-xs hidden-sm"> | +7 (495) 006 19 61.</span><br>
+            ул. Осипенко, 12, оф 201 | '.$email.' <span id="sp_footer1" class="hidden-xs hidden-sm"> | +7 (495) 006 19 61.</span><br>
             <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
             Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
             Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
@@ -133,13 +105,13 @@ else
     echo '
     <footer class="ex-main-footer-bg">
         <div class="container">';
-                if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') 
+                if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) 
                 {
                     echo '<div class="ex-foot-logo text-center">
                         <img src="/templates/zaimcoin/assets/img/logo-footer.png" alt="logo-footer.png">
                     </div>
                      <p class="spec_footer5">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург,
-                    ул. Осипенко, 12, оф 201 | support@zaimcoin.ru
+                    ул. Осипенко, 12, оф 201 | '.$email.'
                     <span class="hidden-xs hidden-sm"><span id="sp_footer2">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
                     Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
                     Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
@@ -150,24 +122,12 @@ else
                 {
                     echo '<div class="row">
                             <div class="col-md-3 hidden-xs">
-                                <div class="ex-foot-logo text-center">
-                                    <img src="/templates/zaimcoin/assets/img/logo-footer.png" alt="logo-footer.png" class="logo-spec">
-                                </div>
+                                <div class="ex-foot-logo text-center"><img src="'.$logo_foot.'" class="logo-spec" alt="logo-footer.png"></div>
                             </div>
                             <div class="col-md-9 col-xs-12">
-                            <br>
-                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                                <!-- zaimcoin -->
-                                <ins class="adsbygoogle"
-                                    style="display:block"
-                                    data-ad-client="ca-pub-4970738258373085"
-                                    data-ad-slot="9741339751"
-                                    data-ad-format="auto"
-                                    data-full-width-responsive="true"></ins>
-                                <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script>
-                            </div>
+                            <br>';
+                                require 'adsence.php';
+                            echo '</div>
                         </div>';
                 } 
                 echo '<hr/></div></footer>';
@@ -189,9 +149,9 @@ else
             scrollTop: $(\'.toUp\').offset().top
         }, 1000);
     }';
-if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
+if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) { ?>
 
-    <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {?>
+    <?php if (in_array($this->uri->segment(1), array(' ', '', 'index'))) {?>
     function GetMoney() {
         $('form#anketa').submit();
     }
@@ -214,11 +174,7 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
         
     if(pathname.indexOf(substring) !== -1 || pathname.indexOf(substring2) !== -1)
     {
-        if(Number(client_w) > 767)
-        {
-            
-        } 
-        else
+        if(Number(client_w) <= 767)
         {
             $("#specialIndex").swap("#specialIndex2");
             $("#ex-slider-val").css("margin-top","0");
@@ -328,138 +284,33 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
                 $("#form_slrd").val(range3.from);
             }
         }); 
-        <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {?>
-       
-        $(document).ready(function () {
-        var slider = $('#rangeSlider').data('ionRangeSlider');
-        var slider_plus = true;
-        var n = 10;
-        var slider_init = setInterval(function () {
-            if (slider_plus) {
-                n++;
-            } else {
-                n--;
-            }
-            if (n == 21 && n != <?php echo $from; ?>) {
-                slider_plus = false;
-            }else if (n == <?php echo $from; ?> && slider_plus == false) {
-                clearInterval(slider_init);
-            }else if (n == 21 && n == <?php echo $from; ?>) {
-                clearInterval(slider_init);
-            }
-
-            slider.update({
-                from: n
-            });
-
-            if (n <= 9) {
-            $('#period').val('7');
-            $('#period2').val('От 61 до 130 дней');
-            $('#percent').val('95');
-            } else if (n <= 14 && n > 9) {
-                $('#period').val('14');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('95');
-            } else if (n <= 15 && n > 14) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('95');
-            } else if (n <= 17 && n > 15) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('85');
-            } else if (n <= 19 && n > 17) {
-                $('#period').val('30');
-                $('#period2').val('От 130 до 250 дней');
-                $('#percent').val('77');
-            } else if (n > 19) {
-                $('#period').val('30');
-                $('#period2').val('От 250 до 365 дней');
-                $('#percent').val('65');
-            }
-            $('#amount').val(slider.result.from_value);
-            $("#form_slrd").val(slider.result.from);
-        }, 50); 
-        traffic("zaimcoin.ru",0);
-    });
-<?php }
+    <?php if (in_array($this->uri->segment(1), array(' ', '', 'index'))) {
+        echo 'traffic("zaimcoin.ru",0);'; 
+     }
 }
-elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+elseif(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
 {
-    include "templates/common/new2/js/lk.js";      
-    echo 'traffic("zaimcoin.ru",4);'; 
-
+    include "templates/common/new/js/lk.js";
+    echo 'traffic("zaimcoin.ru",4);';
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic("zaimcoin.ru",9);'; 
+    echo 'traffic("zaimcoin.ru",9);';
 }
-else if($this->uri->segment(1) == 'form')
-{ } 
 echo "}";
-require 'templates/common/new2/js/exeption.js';
+require 'templates/common/new/s/exeption.js';
 ?>
 </script>
 <?php
     include "google.php";
     include "yandexmetrika.php"; 
     include "yandex_rtb.php";
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
-    {     
-        
-        echo '<!-- Google Code for  
-        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
-        Page -->
-        <script>
-        /* <![CDATA[ */
-        var google_conversion_id = 827428872;
-        var google_conversion_label = "xmjJCLrypHkQiKDGigM";
-        var google_remarketing_only = false;
-        /* ]]> */
-        </script>
-        <script  
-        src="//www.googleadservices.com/pagead/conversion.js">
-        </script>
-        <noscript>
-        <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt=""  
-        src="//www.googleadservices.com/pagead/conversion/827428872/?label=xmjJCLrypHkQiKDGigM&amp;guid=ON&amp;script=0"/>
-        </div>
-        </noscript>'; 
-    }
-    else {
-        echo  '<script>!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308478-a8mPU"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308478-a8mPU" style="position:fixed; left:-999px;" alt=""/></noscript>';
-    }
-?>
-<!-- Rating@Mail.ru counter -->
-<script>
-var _tmr = window._tmr || (window._tmr = []);
-_tmr.push({id: "3052554", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
-(function (d, w, id) {
-if (d.getElementById(id)) return;
-var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-})(document, window, "topmailru-code");
-</script><noscript><div>
-<img src="//top-fwz1.mail.ru/counter?id=3052554;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
-</div></noscript>
-<!-- //Rating@Mail.ru counter -->
-<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script>
-var _tmr = _tmr || [];
-_tmr.push({
-type: 'itemView',
-productid: 'VALUE',
-pagetype: 'VALUE',
-list: 'VALUE',
-totalvalue: 'VALUE'
-});
-</script>
-<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
-<?php
-require 'templates/common/new2/php/modal3_close.php';
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+        require 'google_lk.php';
+    else
+        require 'vk.php';
+
+    require 'mailru.php';
 ?>
 </body>
 </html>

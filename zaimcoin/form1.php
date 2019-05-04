@@ -24,13 +24,13 @@
         </div>
     </div>
     <div class="form-horizontal">
-        <div class="form-group has-feedback hidden">
+        <div class="form-group has-feedback">
             <label class="control-label col-md-2" for="f">Фамилия</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Пожалуйста, введите свою фамилию"
 			        data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свою фамилию"
-                    required value="Тестовое">
+                    required>
                     <figure></figure>
 			        <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
@@ -47,13 +47,13 @@
                 </div>
             </div>
         </div>
-        <div class="form-group has-feedback hidden">
+        <div class="form-group has-feedback">
             <label class="control-label col-md-2" for="o">Отчество</label>
             <div class="col-md-8">
                 <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Пожалуйста, введите свое отчество"
                     data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Пожалуйста, введите свое отчество"
-                    required value="Тестовое">
+                    required>
                     <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
             </div>
@@ -132,7 +132,7 @@
                 </div>
             </div>
         </div>
-        <div class="form-group hidden">
+        <div class="form-group">
             <label class="control-label col-md-2" for="delays_type">Кредитная история</label>
             <div class="col-md-8">
                 <select class="form-control ec" name="delays_type" id="delays_type">

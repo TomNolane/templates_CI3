@@ -44,12 +44,12 @@
 @font-face {
     font-family: 'Glyphicons Halflings';
   
-    src: url('/templates/common/new2/fonts/glyphicons-halflings-regular.eot');
-    src: url('/templates/common/new2/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/templates/common/new2/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('/templates/common/new2/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/templates/common/new2/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/templates/common/new2/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+    src: url('/templates/common/new/fonts/glyphicons-halflings-regular.eot');
+    src: url('/templates/common/new/onts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/templates/common/nnew/nts/glyphicons-halflings-regular.woff2') format('woff2'), url('/templates/common/nenew/ts/glyphicons-halflings-regular.woff') format('woff'), url('/templates/common/newnew/s/glyphicons-halflings-regular.ttf') format('truetype'), url('/templates/common/new/new//glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
   }
 @font-face { 
     font-family: 'SFUIDisplayRegular';
-    src: url('/templates/common/new2/fonts/sfuidisplay-medium.otf'), url('/templates/common/new2/fonts/sfuidisplay-regular.otf');
+    src: url('/templates/common/new/onts/sfuidisplay-medium.otf'), url('/templates/common/nnew/nts/sfuidisplay-regular.otf');
   }
 html, body{
     height: 100%;
@@ -1105,7 +1105,7 @@ footer .copy{
     overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
-    background: url(/templates/common/new2/img/cd-top-arrow.png) center 50% no-repeat rgb(69, 64, 64);
+    background: url(/templates/common/new/mg/cd-top-arrow.png) center 50% no-repeat rgb(69, 64, 64);
     border-radius: 15px;
     visibility: hidden;
     opacity: 0;

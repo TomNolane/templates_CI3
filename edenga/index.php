@@ -137,19 +137,7 @@
         </div>
     </form>
 </section>
-  <?php if($setting_array['is_mobile'] != 'мобила') { ?>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- edenga -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="3535572793"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  <?php } ?>
+  <?php if($setting_array['is_mobile'] != 'мобила') { require 'adsence.php';} ?>
 <section id="conditions" class="hidden-xs hidden-sm">
     <div class="container container-services">
         <div class="row conditions">

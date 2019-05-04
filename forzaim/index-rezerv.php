@@ -56,7 +56,7 @@
         </div>
     </div>
 </section>
-<a class="anchor" name="id2"></a>
+
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- forzaim -->
 <ins class="adsbygoogle"
@@ -109,7 +109,7 @@
         </div>
     </div>
 </section>
-<a class="anchor" name="id3"></a>
+
 <section class="ex-section-3 hidden-xs hidden-sm">
     <h2 class="text-center">Отзывы о нас</h2>
     <div class="ex-slider-wrap">
@@ -166,7 +166,7 @@
         </div>
     </div>
 </section>
-<a class="anchor" name="id4"></a>
+
 <section class="ex-section-4 hidden-xs hidden-sm">
     <h2 class="text-center">Быстрый старт</h2>
     <div class="ex-fast-start-wrap">
@@ -217,5 +217,5 @@
     </div>
 </section>
 </form>
-<a class="anchor" name="id5"></a>
+
 <?php require 'footer.php'; ?>

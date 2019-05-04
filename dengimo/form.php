@@ -125,7 +125,7 @@ if(!isset($my_title))
     $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Dengimo';
     $description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }
-include "templates/common/new2/php/form_header.php";
+include "templates/common/new/php/form_header.php";
 include "header.php";
 ?>
 <div class="container">
@@ -198,7 +198,6 @@ include "header.php";
                                 <?php require('form3.php'); ?>
                                 <div class="row">
                                     <div class="col-sm-8 col-sm-offset-4 col-xs-12">
-                                        <!--a href="#doiModal" class="btn btn-block" id="form-send" data-toggle="modal" data-target="#doiModal" style="padding: 13px;" onclick="yaCounter39556840.reachGoal('popup'); return true;">Отправить заявку</a-->
                                         <a class="btn btn-block" id="form-send" style="padding: 13px;">Отправить заявку</a>
                                     </div>
                                 </div>
@@ -209,17 +208,6 @@ include "header.php";
                 </div>
             </div>
         </div>
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- dengimo -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="1070967656"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
         <div class="triggers hidden-xs hidden-sm">
             <div class="row">
                 <div class="col-sm-2 col-sm-offset-2">
@@ -284,39 +272,6 @@ include "header.php";
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal"> Закрыть </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <style> 
-@media (min-width: 768px) {
-    .modal-dialog {
-        width: 900px;
-        margin: 30px auto;
-    } 
-}
-    </style>
-    <!-- Modal Iphone -->
-    <div class="modal fade" id="tosModal2" tabindex="-1" role="dialog" aria-labelledby="tosModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h1 class="modal-title" id="tosModalLabel">Подтвердите адрес электронной почты</h1> 
-                    
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <p><span id="form_name"></span> на указанный email было отправлено письмо. Подтвердите свою почту и участвуйте в розыгрыше Iphone XS уже 16.11.2018</p>
-                            <img class='img-responsive' src="/templates/common/img/iphone2.png">
-                         </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="text-center"><button type="button" class="btn btn-primary btn-spec" data-dismiss="modal"> Закрыть </button></div>
                 </div>
             </div>
         </div>

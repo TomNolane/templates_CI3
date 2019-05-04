@@ -63,34 +63,9 @@
                     </div>
                 </div>
             </div>
-             <?php if($setting_array['is_mobile'] != 'мобила') { ?>
-             <br><br><br>
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- zaimoking -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-4970738258373085"
-                data-ad-slot="7850222323"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script><br>
-            <?php } ?>
+             <?php if($setting_array['is_mobile'] != 'мобила') { echo '<br><br><br>'; require 'adsence.php'; } ?>
         <div class="ex-get-money">
-             <?php if($setting_array['is_mobile'] == 'мобила') { ?>
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- zaimoking -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-4970738258373085"
-                data-ad-slot="7850222323"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script><br>
-            <?php } ?>
+             <?php if($setting_array['is_mobile'] == 'мобила') { require 'adsence.php'; echo '<br>'; } ?>
             <h2 class="text-center">
                 Как получить деньги?
             </h2>
@@ -198,18 +173,9 @@
                 </div>
             </div>
         </div>
-        
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- zaimoking -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-4970738258373085"
-                data-ad-slot="7850222323"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script><br><br>
+        <?php
+            require 'adsence.php';
+        ?><br><br>
         <div class="ex-about">
             <h2 class="text-center">Отзывы о нас</h2>
             <div class="row">

@@ -2,9 +2,10 @@
 <div class="ex-bounds"></div>
     <div class="container ">
     <div class="row">
-    <div class="col-sm-12"> 
-    <center><h1 class="oferta-agreement">Пользовательское соглашение</h1></center> 
-    </div></div>  
+        <div class="col-sm-12 text-center"> 
+            <h1 class="oferta-agreement">Пользовательское соглашение</h1>
+        </div>
+    </div>  
     <div class="ex-main-oferta">
         <div class="row"> 
             <div class="col-sm-12 oferta">
@@ -58,7 +59,5 @@
             </div>
         </div>
     </div>
-</div> 
-
-
+</div>
 <?php include 'footer.php';?>

@@ -1,24 +1,3 @@
-<?php 
-$this->load->model('offers/offers_model', 'offers');
-$data = $this->offers->all();
-// IP
-$this->load->helper('ip');
-// GEO
-require_once FCPATH.'modules/ipgeobase/ipgeobase.php';
-$gb = new IPGeoBase();
-$geo = $gb->getRecord(IP::$ip);
-if ($geo)
-{
-	if (isset($geo['region'])) $region_name = $geo['region'];
-}
-// Список регионов
-$this->load->model('geo/geo_model', 'geo');
-$regions = $this->geo->regions();
-
-//pixel stat
-$this->load->model('pixel/pixel_model', 'pixel');
-$pixel = $this->pixel->stat('dengoman.ru');
-?>
 <div class="contacts">
   <strong>
     Сервис моментальных займов Dengoman

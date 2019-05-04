@@ -1,88 +1,41 @@
 <?php $from = '15'; $px = '63.974'; 
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
+if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'offerwall2', 'pixell', 'vitrina', 'form')))
 {
-    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
-        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- zaimrubli -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="4278094234"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-    }
-	
-    echo '<ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="4278094234"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
+    require 'adsence.php';
     echo '<a href="#0" class="cd-top">Наверх</a>';
-}
-if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') 
-{
-    // это от zaimhoime echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534155815490" alt="mytarget">';
 }
 ?>
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
         <div class="row">
-            <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') { ?>
-            <div class="col-md-2 hidden-xs">
-            <?php } else { ?>
-             <div class="col-md-2">
-            <?php } ?>
+            <div class="col-md-2">
                 <div class="ex-foot-logo">
-                    <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') { ?>
-                    <img src="templates/zaimrubli/assets/img/logo.svg" alt="logo.svg" class="logo-spec">
+                    <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                        <img src="<?=$logo_foot?>" class="logo-spec"  alt="logo-footer.png">
                     <?php } else { ?>
-                    <img src="/templates/zaimrubli/assets/img/logo-footer.png" alt="logo-footer.png" class="logo-spec">
+                        <img alt="logo.png"  class="logo-spec" src="/templates/zaimrubli/assets/img/logo-footer.png">
                     <?php } ?>
                 </div>
             </div>
              <div class="col-md-10 col-xs-12">
-             <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
+             <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                 <p>Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г.
-                    Санкт-Петербург, ул. Осипенко, 12, оф 201 <a href="mailto:support@zaimrubli.ru" class="spec_foot" target="_blank">support@zaimrubli.ru</a> <span class="hidden-xs hidden-sm">| 8 (960) 950 93 53</span><br>
-                    <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
+                    Санкт-Петербург, ул. Осипенко, 12, оф 201 <?=$email?> <span class="hidden-xs hidden-sm">| 8 (960) 950 93 53</span><br>
+                    <span>Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
                     Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.<br>
                     Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день;
                     проценты за весь период составят
                     11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в
                     случае своевременного погашения<br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span></p>
-             <?php } else { ?>
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- zaimrubli -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-4970738258373085"
-                    data-ad-slot="4278094234"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-             <?php } ?>
-            </div>
-            <div class="col-lg-12">
-            <br>
-            <hr/>
-                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') { 
-                } ?>
+             <?php } else { require 'adsence.php'; } ?>
             </div>
         </div>
     </div>
 </footer>
 <!-- [if lt IE 10]>
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
-<![endif] --> 
+<![endif] -->
+
 <!-- common JS -->
 <script>
 <?php
@@ -189,132 +142,29 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
                 $("#form_slrd").val(range3.from);
             }
         }); 
-        <?php if ($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'money' || $this->uri->segment(1) == 'zaim-bank' || $this->uri->segment(1) == 'zaim-yandex' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-contact') {?>
-        var slider = $('#rangeSlider').data('ionRangeSlider');
-        var slider_plus = true;
-        var n = 10;
-        var slider_init = setInterval(function () {
-            if (slider_plus) {
-                n++;
-            } else {
-                n--;
-            }
-            if (n == 21 && n != <?php echo $from; ?>) {
-                slider_plus = false;
-            }else if (n == <?php echo $from; ?> && slider_plus == false) {
-                clearInterval(slider_init);
-            }else if (n == 21 && n == <?php echo $from; ?>) {
-                clearInterval(slider_init);
-            }
-
-            slider.update({
-                from: n
-            });
-
-            if (n <= 9) {
-            $('#period').val('7');
-            $('#period2').val('От 61 до 130 дней');
-            $('#percent').val('95');
-            } else if (n <= 14 && n > 9) {
-                $('#period').val('14');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('95');
-            } else if (n <= 15 && n > 14) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('95');
-            } else if (n <= 17 && n > 15) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('85');
-            } else if (n <= 19 && n > 17) {
-                $('#period').val('30');
-                $('#period2').val('От 130 до 250 дней');
-                $('#percent').val('77');
-            } else if (n > 19) {
-                $('#period').val('30');
-                $('#period2').val('От 250 до 365 дней');
-                $('#percent').val('65');
-            }
-            $('#amount').val(slider.result.from_value);
-            $("#form_slrd").val(slider.result.from);
-        }, 50); 
+<?php if ($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'money' || $this->uri->segment(1) == 'zaim-bank' || $this->uri->segment(1) == 'zaim-yandex' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-contact') {?>
         traffic("zaimrubli.ru",0);
 <?php }
 }
-elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+elseif(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
 {
-    include "templates/common/new2/js/lk.js";      
-    echo 'traffic("zaimrubli.ru",4);'; 
-
+    include "templates/common/new/js/lk.js";
+    echo 'traffic("zaimrubli.ru",4);';
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic("zaimrubli.ru",9);'; 
+    echo 'traffic("zaimrubli.ru",9);';
 }
-else if($this->uri->segment(1) == 'form')
-{ } 
 echo "}";
-require 'templates/common/new2/js/exeption.js';
+require 'templates/common/new/s/exeption.js';
 ?>
 </script>
 <?php
     include "google.php";
     include "yandexmetrika.php"; 
     include "yandex_rtb.php";
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
-    {     
-        echo '<!-- Google Code for  
-        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
-        Page -->
-        <script>
-        /* <![CDATA[ */
-        var google_conversion_id = 822854490;
-        var google_conversion_label = "joByCJCX5XoQ2oaviAM";
-        var google_remarketing_only = false;
-        /* ]]> */
-        </script>
-        <script  
-        src="//www.googleadservices.com/pagead/conversion.js">
-        </script>
-        <noscript>
-        <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt=""  
-        src="//www.googleadservices.com/pagead/conversion/822854490/?label=joByCJCX5XoQ2oaviAM&amp;guid=ON&amp;script=0"/>
-        </div>
-        </noscript><!-- Global site tag (gtag.js) - Google Ads: 755948010 -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-755948010"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag(\'js\', new Date());
-        gtag(\'config\', \'AW-755948010\');
-        </script>'; 
-        echo '<script>
-        $( ".ex-off-block").find(\'button\').css("display" , "none");
-            if($(".ex-off-block").hasClass("ex-offers-active")) {
-                $( ".ex-off-block.ex-offers-active").find(\'p\').css("display" , "none");
-                $( ".ex-off-block.ex-offers-active").find(\'button\').css("display" , "block");
-            }
-            $(".ex-off-block").hover(function(){
-                if($(".ex-off-block").hasClass("ex-offers-active")) {
-                    $( ".ex-off-block.ex-offers-active").find(\'p\').css("display" , "block");
-                    $( ".ex-off-block.ex-offers-active").find(\'button\').css("display" , "none");
-            $( ".ex-off-block").removeClass( "ex-offers-active");
-                }
-                $(this).addClass( "ex-offers-active");
-                $( ".ex-off-block.ex-offers-active").find(\'p\').css("display" , "none");
-                $( ".ex-off-block.ex-offers-active").find(\'button\').css("display" , "block");
-
-            });
-            $( ".ex-off-block:first").addClass("ex-offers-active");
-            $( ".ex-off-block:first").find(\'p\').css("display" , "none");
-                $( ".ex-off-block:first").find(\'button\').css("display" , "block");
-        </script>';
-    }
-?>
-<?php
-require 'templates/common/new2/php/modal3_close.php';
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+        require 'google_lk.php';
 ?>
 </body>
 </html>

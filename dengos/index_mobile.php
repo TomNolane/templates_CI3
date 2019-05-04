@@ -1,6 +1,6 @@
 <?php
 require 'css/index_mobile_css.php'; 
-require 'templates/common/new2/php/modal.php'; 
+require 'templates/common/new/php/modal.php'; 
 ?>
 <div class="container3"><div class="col-md-12">
  <!-- dengos.ru adsence -->

@@ -23,8 +23,6 @@
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 <script >(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=rVpGPTSLprQmO8sgq5rzujYj085R/MNyDfSe6D7FiBVU/ce1AAU5tZ6fkTV5*R7c4K1TjnXVIoIjAo/sNmJ9wJ5mWNyUGhHsu54iZzlmwqrXb2nDFU*EwxOtZIY8tdCiIK6hwF9SwXK8N9vCiCVr3O9R8FdFX6G0PvTUlhfc7dk-&pixel_id=1000099085';</script>
-<!--Константин Гутлид-->
-<script >(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=ISE1RYyD*mRdoi0TCOSmzLd9lPOPOw8OsUQwzOCRHERjILwv5UHUu9nI1bIsjZLVnb7WP3y/uZsgbMd5yAvEXF*8WRIuzuYKBSMc3E8dsKAFZl7wLVRO5yHTL286msqSou5CpAUqWP8RM4Wd8o/dXK7r9mRHpAPfNtsKH35gIMs-&pixel_id=1000099726';</script>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

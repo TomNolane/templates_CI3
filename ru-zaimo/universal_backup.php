@@ -104,7 +104,7 @@
 .t-col_12 {max-width: inherit !important;} 
 
 <?php
-require 'templates/common/new2/css/common.css';
+require 'templates/common/new/css/common.css';
 ?>
 li > a {
     font-size: 16px;
@@ -637,7 +637,7 @@ data-full-width-responsive="true"></ins>
     </div>
     <script>
     <?php
-        require 'templates/common/new2/js/bootstrap.min.js';
+        require 'templates/common/new/s/bootstrap.min.js';
         $phone = '';
         if($this->uri->segment(1) && $this->uri->segment(2))
         {

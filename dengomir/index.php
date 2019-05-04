@@ -86,29 +86,12 @@
                                     </div>
                                 </div>
                             </div>
-                             <?php if($setting_array['is_mobile'] != 'мобила') { ?>
-                            <br><br><br><br>
-                             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- dengomir -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-4970738258373085"
-                        data-ad-slot="4639511728"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                             <?php } ?>
+                             <?php if($setting_array['is_mobile'] != 'мобила') { require 'adsence.php'; } ?>
                         </div>
-                       
                     </div>
-                    
                 </div>
             </div>
         </section>
-        
-        <a class="anchor" name="id2"></a>
         <section class="ex-section-2 hidden-xs hidden-sm">
             <div class="container">
                 <div class="row">
@@ -130,13 +113,11 @@
                     </div>
                     <div class="col-md-5">
                         <div class="ex-for-img">
-
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <a class="anchor" name="id3"></a>
         <section class="ex-section-3 hidden-xs hidden-sm">
             <div class="ex-rus-map">
                 <div class="container">
@@ -215,7 +196,7 @@
                 </div>
             </div>
         </section>
-        <a class="anchor" name="id4"></a>
+        
         <section class="ex-section-4 hidden-xs hidden-sm">
             <div class="container">
                 <h2>О нас говорят</h2>
@@ -280,5 +261,4 @@
         </section>
     </form>
 </main>
-<a class="anchor" name="id5"></a>
 <?php require 'footer.php'; ?>

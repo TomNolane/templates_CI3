@@ -28,13 +28,13 @@
                 </div>
             </div>
             <!-- /слайдер -->
-            <div class="row hidden">
+            <div class="row">
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="f">Фамилия</label>
                         <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию" data-sanitize="capitalize"
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
-                            required value="Тестовое">
+                            required>
                         <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать фамилию</p>
                         <p class="text-muted helpblock">Пример: Иванова</p>
@@ -55,12 +55,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 hidden" style="height: 90px;">
+                <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="o">Отчество</label>
                         <input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Укажите свое отчество"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
-                            required value="Тестовое">
+                            required>
                         <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать отчество</p> 
                         <p class="text-muted helpblock">Пример: Ивановна</p>
@@ -152,7 +152,7 @@
                         <p class="text-muted helpblock">Проверьте почту. Письмо могло попасть в папку "СПАМ"</p>
                     </div>
                 </div>
-                <div class="col-sm-6 hidden">
+                <div class="col-sm-6">
                     <div class="form-group ex-arrow-on">
                         <label for="credit">Кредитная история</label>
                         <select class="form-control" id="credit">
@@ -184,7 +184,7 @@
                     <span class="font12">Я согласен на получение рекламных сообщений</span>
                     <input type="checkbox" value="" id="marketing" checked>
                     <i></i>
-                </label>            
+                </label>
             </div>
             <div class="col-sm-4 col-xs-12">
                 <button class="ex-main-btn" id="next1" type="button"> Получить займ </button>
@@ -193,15 +193,7 @@
     </div>
 </div>
 <br><br>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- bzaim5.ru -->
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="5816862028"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<?php
+require 'adsence.php';
+?>
 <br><br>

@@ -22,12 +22,3 @@
 <meta name="twitter:domain" content="edenga.ru" />
 <meta name="yandex-verification" content="d280fffdcc4852a0" />
 <link rel="manifest" href="/manifest2.json" />
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-<script>
-  var OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "807cff54-6f57-41ec-8529-6559e87fd0f8",
-    });
-  });
-</script>

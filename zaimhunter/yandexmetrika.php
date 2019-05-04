@@ -2,9 +2,11 @@
 <script>
 <?php  
     if($this->uri->segment(1) == 'offerwall')
-        echo '_mark = 1;';
+        echo '_mark = 2;';
     else if($this->uri->segment(1) == 'offerwall2')
         echo '_mark = 2;';
+    else if($this->uri->segment(1) == 'pixell')
+        echo '_mark = 1;';
     else
         echo '_mark = 0;';
 ?>
@@ -13,7 +15,7 @@ function markTarget(target,param, _id){
 	if (typeof param == 'undefined') yaCounter46581393.reachGoal(target);
 	else yaCounter46581393.reachGoal(target,param);
         
-    <?php if ($this->uri->segment(1) == 'offerwall' || $this->uri->segment(1) == 'offerwall2' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+    <?php if (in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'offerwall2', 'pixell'))) { ?>
     $.ajax({
         type: 'POST',
         url: '/pixel/',

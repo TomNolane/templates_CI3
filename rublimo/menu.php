@@ -3,7 +3,13 @@
 		<div class="col-md-12">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="/">
-					<img alt="Rublimo.ru" class="img-responsive" src="/templates/rublimo/assets/img/logo.png">
+					 <?php $logo_addon = '/templates/rublimo/assets/img/logo.png';
+							switch ($this->uri->segment(1)) {
+									case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+									case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+									default: break;
+							} ?>
+							<img class="img-responsive" src="<?=$logo_addon?>" alt="Image missing">
 				</a>
 			</div>
 			<div class="navbar-collapsem hidden-xs" id="navbar-collapse-1">
@@ -156,7 +162,7 @@
   </div>
 </div>
 <?php
-if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index' && $this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') {
+if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', ' ', '', 'index', 'form', 'vitrina'))) {
     echo '<div class="row">
   <div class="col-md-12">
     <span id="adsence_about"></span>

@@ -1,6 +1,4 @@
 <div class="more-services-container section-container">
-
-
     <div class="panel-body text-center contacts-rublimo">
         <strong>
             Онлайн сервис RUBLIMO
@@ -149,6 +147,6 @@
             </div> 
         </div>
 
-    </div>   
+    </div>
 </div> 
 <br>

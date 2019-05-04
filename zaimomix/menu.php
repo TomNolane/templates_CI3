@@ -275,9 +275,15 @@
                     <div class="navbar-nav ">
                         <a class="ex-dropdown nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            меню
-                            <i></i>
-                        </a>
+                            меню';?>
+                            <?php $logo_addon = '/templates/zaimrubli/assets/img/logo.svg';
+                            switch ($this->uri->segment(1)) {
+                                    case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                                    case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+                                    default: break;
+                            } ?>
+                            <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
+                        <?php echo '</a>
                         <div class="dropdown-menu justify-content-end" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/about">О сервисе</a>
                             <a class="dropdown-item" href="/oferta">Публичная оферта</a>

@@ -1,86 +1,46 @@
 <?php $from = '15';
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
+if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'offerwall2', 'pixell', 'vitrina', 'form')))
 {
-    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') 
-    {
-        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- fanzaim -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="5186306631"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-    }
-     if($setting_array['is_mobile'] != 'мобила') {
-    echo '<ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="5186306631"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
+    require 'adsence.php';
     echo '<a href="#0" class="cd-top">Наверх</a>';
-        }
 }
-if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') 
+if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) 
 {
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="//top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156142315" alt="123">';
 }
 ?> 
 <footer class="ex-main-footer">
-        <div class="container text-center">
-            <div>
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
-                <div class="ex-wrapper">
-                    <img src="/templates/fanzaim/assets/img/icons/Fanzaim-logo-footer.png"  alt="Image">
-                </div> 
-                <p class="spec_footer7">
-                Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Алтайский край, г. Барнаул, ул. Ленина 54, оф 218 | <a href="mailto:support@fanzaim" target="_blank">support@fanzaim</a> <span class="hidden-xs hidden-sm">|  +7 (495) 006 19 61</span>
-                <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
-                Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.
-                Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001. Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201</span>
-                </p>
-            <?php } else { ?>
-                <div class='row'>
-                    <div class='col-md-4 hidden-xs'>
-                        <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') { ?>
-                            <img class="img-responsive" src="/templates/fanzaim/assets/img/icons/Fanzaim-logo-footer.png"  alt="Image">
-                        <?php } else { ?>
-                             <img class="img-responsive" src="/templates/fanzaim/assets/img/icons/Fanzaim-logo-footer.png"  alt="Image" class='logo-special'>
-                        <?php } ?>
-                    </div>
-                    <div class='col-md-8 col-xs-12'>
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- fanzaim -->
-                        <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-client="ca-pub-4970738258373085"
-                            data-ad-slot="5186306631"
-                            data-ad-format="auto"
-                            data-full-width-responsive="true"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                    </div>
+    <div class="container text-center">
+        <div>
+        <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+            <div class="ex-wrapper">
+                <img src="/templates/fanzaim/assets/img/icons/Fanzaim-logo-footer.png"  alt="Image">
+            </div> 
+            <p class="spec_footer7">
+            Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Алтайский край, г. Барнаул, ул. Ленина 54, оф 218 | <a href="mailto:support@fanzaim" target="_blank">support@fanzaim</a> <span class="hidden-xs hidden-sm">|  +7 (495) 006 19 61</span>
+            <span>Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
+            Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.
+            Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001. Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201</span>
+            </p>
+        <?php } else { ?>
+            <div class='row'>
+                <div class='col-md-4'>
+                    <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                        <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png">
+                    <?php } else { ?>
+                        <img alt="logo.png" src="/templates/fanzaim/assets/img/icons/Fanzaim-logo-footer.png">
+                    <?php } ?>
                 </div>
+                <div class='col-md-8 col-xs-12'>
+                        <?php
+                            require 'adsence.php';
+                        ?>
                 </div>
-            <?php } ?>
-            <div class="col-sm-12">
-                <hr/>
-                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-
-                } ?>
             </div>
         </div>
-    </footer> 
-     
-     
+        <?php } ?>
+    </div>
+</footer>
     <!--[if lt IE 10]>
     <script  src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
     <![endif]-->
@@ -92,7 +52,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
     echo '/* private JS */';
     require 'templates/fanzaim/assets/js/main.js'; 
     
-if($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?> 
+if(in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) { ?> 
     $(document).ready(function () {
         $.mask.definitions['*'] = "[а-яёА-ЯЁA-Za-z0-9\/\-_]";
         $('[data-toggle="popover"]').popover();
@@ -187,159 +147,61 @@ values: [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 120
     }); 
 });    
 <?php }
-
-    if ($this->uri->segment(1) == ' ' || $this->uri->segment(1) == '' || $this->uri->segment(1) == 'index')  { ?>
-    $(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 40,
-        nav: false,
-        navText : ["",""],
-        dots: false,
-        navContainer: '#customNav',
-        autoplay: false,
-        autoplayTimeout: 5000,
-        autoplaySpeed: 1000,
-        autoplayHoverPause: true,
-        responsive:{
-            0:{
-                items:1,
-                nav:true
-            },
-            768:{
-                items:2,
-                nav:true
-            },
-            991:{
-                items:4,
-                nav:false
-            },
-        }
-    }); 
-    var slider3 = $('#rangeSlider').data('ionRangeSlider');
-    var slider_plus = true;
-    var n = 10;
-    var slider_init = setInterval(function () {
-        if (slider_plus) {
-            n++;
-        } else {
-            n--;
-        }
-        if (n == 21 && n != <?php echo $from;?>) {
-            slider_plus = false;
-        }else if (n == <?php echo $from;?> && slider_plus == false) {
-            clearInterval(slider_init);
-        }else if (n == 21 && n == <?php echo $from;?>) {
-            clearInterval(slider_init);
-        }
- 
-        slider3.update({
-            from: n
+    if (in_array($this->uri->segment(1), array(' ', '', 'index'))) {
+echo "$(document).ready
+    (function (){
+        $('.owl-carousel').owlCarousel
+        ({
+            loop: true,
+            margin: 40,
+            nav: false,
+            navText : ['',''],
+            dots: false,
+            navContainer: '#customNav',
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                768:{
+                    items:2,
+                    nav:true
+                },
+                991:{
+                    items:4,
+                    nav:false
+                },
+            }
         }); 
- 
-        if (n <= 9) {
-            $('#period').val('7'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 14 && n > 9) {
-            $('#period').val('14'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 15 && n > 14) {
-            $('#period').val('21'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 17 && n > 15) {
-            $('#period').val('21'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n <= 19 && n > 17) {
-            $('#period').val('30'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } else if (n > 19) {
-            $('#period').val('30'); 
-            $('#form_slrd').val(n);
-            $('#amount').val(slider3.result.from_value);
-        } 
-
-    }, 50);
-    
-    
-    
-});
-<?php }elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+        traffic('fanzaim.ru',0);
+    });";
+} 
+else if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
 {
-    include "templates/common/new2/js/lk.js";      
-    echo 'traffic("fanzaim.ru",4);'; 
-
+    include "templates/common/new/js/lk.js";
+    echo 'traffic("fanzaim.ru",4);';
 }
 elseif($this->uri->segment(1) == '404')
 {
     echo 'traffic("fanzaim.ru",9);'; 
 }
-else if($this->uri->segment(1) == 'form')
-{ } 
 echo "}";
-require 'templates/common/new2/js/exeption.js';
+require 'templates/common/new/js/exeption.js';
 ?>
 </script>
     <?php 
     include "google.php";
     include "yandexmetrika.php"; 
     include "yandex_rtb.php";
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
-    {     
-        echo '<!-- Google Code for  
-        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
-        Page -->
-        <script >
-        /* <![CDATA[ */
-        var google_conversion_id = 825395112;
-        var google_conversion_label = "NBh1CM-NhXoQqI_KiQM";
-        var google_remarketing_only = false;
-        /* ]]> */
-        </script>
-        <script   
-        src="//www.googleadservices.com/pagead/conversion.js">
-        </script>
-        <noscript>
-        <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt=""  
-        src="//www.googleadservices.com/pagead/conversion/825395112/?label=NBh1CM-NhXoQqI_KiQM&amp;guid=ON&amp;script=0"/>
-        </div>
-        </noscript>'; 
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+    {
+        require 'google_lk.php';
     }
-?>
-<!-- Rating@Mail.ru counter -->
-<script>
-var _tmr = window._tmr || (window._tmr = []);
-_tmr.push({id: "3052551", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
-(function (d, w, id) {
-if (d.getElementById(id)) return;
-var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-ts.src = "//top-fwz1.mail.ru/js/code.js";
-var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-})(document, window, "topmailru-code");
-</script><noscript><div>
-<img src="//top-fwz1.mail.ru/counter?id=3052551;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
-</div></noscript>
-<!-- //Rating@Mail.ru counter -->
-<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script>
-var _tmr = _tmr || [];
-_tmr.push({
-type: 'itemView',
-productid: 'VALUE',
-pagetype: 'VALUE',
-list: 'VALUE',
-totalvalue: 'VALUE'
-});
-</script>
-<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
-<?php
-require 'templates/common/new2/php/modal3_close.php';
+    require 'mailru.php';
 ?>
 </body>
 </html>

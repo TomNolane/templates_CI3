@@ -20,7 +20,6 @@
                             <option value="9" > Как я узнаю какое решение было вынесено по моей заявке?</option>
                             <option value="10" > Как подать заявку на ещё один займ?</option>
                         </select>
-                        <!-- <i></i> -->
                         <span></span>
                     </div>
                     <div class="ex-faq-block"> 

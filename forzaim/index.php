@@ -11,7 +11,14 @@
     <nav class="ex-main-header ex-transparent">
         <div class="container">
             <i class="ex-hamburger"></i>
-            <a class="ex-brand" href="/">Forzaim</a>
+            <?php $logo_addon = '/templates/forzaim/assets/img/logo.png';
+            switch ($this->uri->segment(1)) {
+                case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+                default: break;
+            } ?>
+            <img src="<?=$logo_addon?>" alt="Image missing">
+            <!-- <a class="ex-brand" href="/">Forzaim</a> -->
         </div>
     </nav>
     <div class="ex-main">
@@ -53,36 +60,11 @@
                     </div>
                 </div>
             </div>
-            <?php if($setting_array['is_mobile'] != 'мобила') { ?>
-            <br><br><br>
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- forzaim -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-4970738258373085"
-                data-ad-slot="6265677912"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-            <?php } ?>
+            <?php if($setting_array['is_mobile'] != 'мобила') { echo '<br><br><br>'; require 'adsence.php'; } ?>
         </div>
     </div>
 </section>
-<?php if($setting_array['is_mobile'] == 'мобила') { ?>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- forzaim -->
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="6265677912"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<?php } ?>
+<?php if($setting_array['is_mobile'] == 'мобила') { require 'adsence.php'; } ?>
 <section class="ex-section-2 hidden-xs hidden-sm">
     <div class="container">
         <div class="row">

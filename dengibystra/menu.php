@@ -2,7 +2,7 @@
     <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header">
         <div class="container">
             <div class="navbar-header">
-                <a class="anchor" name="id1"></a>
+                
                 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -10,7 +10,13 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/">
-                    <img src="/templates/dengibystra/assets/img/logo.png" alt="Image missing">
+                    <?php $logo_addon = '/templates/dengibystra/assets/img/logo.png';
+                    switch ($this->uri->segment(1)) {
+                        case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                        case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+                        default: break;
+                    } ?>
+                    <img src="<?=$logo_addon?>" alt="Image missing">
                 </a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse">

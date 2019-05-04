@@ -10,7 +10,13 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/" rel="nofollow">
-                    <img src="/templates/zaimhunter/assets/img/logo-zaimhunter.png" alt="logo-zaimhunter">
+                    <?php $logo_addon = '/templates/zaimhunter/assets/img/logo-zaimhunter.png';
+                    switch ($this->uri->segment(1)) {
+                        case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                        case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+                        default: break;
+                    } ?>
+                    <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
                 </a>
             </div>
             <div id="navbarCollapse" class="collapse navbar-collapse">

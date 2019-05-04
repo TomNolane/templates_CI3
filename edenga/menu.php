@@ -1,4 +1,4 @@
-<a class="anchor" name="id1"></a>
+
 <nav class="navbar">
     <div class="container">
         <div class="navbar-header">
@@ -8,7 +8,13 @@
                 <img src="/templates/edenga/assets/img/mobile/menu.png" alt="menu.png">
             </button>
             <a class="navbar-brand" href="/">
-                <img alt="" src="/templates/edenga/assets/img/logo.png" alt="logo.png">
+                <?php $logo_addon = '/templates/edenga/assets/img/logo.png';
+				switch ($this->uri->segment(1)) {
+					case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+					case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+					default: break;
+				} ?>
+				<img src="<?=$logo_addon?>" alt="Image missing">
             </a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">

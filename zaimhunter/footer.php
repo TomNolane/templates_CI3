@@ -1,53 +1,29 @@
 <br><br>
 <?php $from = '15'; $px = '63.974'; 
-if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
+if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
 {
-    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
-        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- zaimhunter -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="2625815808"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-    }
-    
-    if($this->uri->segment(1) != 'form') {
-        echo '<ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="2625815808"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-        echo '<a href="#0" class="cd-top">Наверх</a>';
-    }
+    require 'adsence.php';
+    echo '<a href="#0" class="cd-top">Наверх</a>';
 } 
 ?>
 <footer class="ex-start-footer">
     <div class="container">
         <div class="row ex-main-footer">
-        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
             <div class="col-md-2">
-        <?php } else { ?>
-             <div class="col-md-2 hidden-xs">
-        <?php } ?>
                 <div class="ex-footer-logo">
-                     <img src="/templates/zaimhunter/assets/img/footer-logo-zaimhunter.png" alt="logo-zaimhunter" class="logo-spec">
+                    <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                        <img src="<?=$logo_foot?>" class="logo-spec" alt="logo-footer.png">
+                    <?php } else { ?>
+                        <img alt="logo.png" src="/templates/zaimhunter/assets/img/footer-logo-zaimhunter.png" class="logo-spec">
+                    <?php } ?>
                 </div>
             </div>
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
+            <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
             <div class="col-md-10 spec_footer4">
                 <p>Сервис по подбору выгодных онлайн займов
                     находящийся по адресу Россия, Ленинградская обл.
                     г. Санкт-Петербург, ул. Осипенко, 12, оф 201
-                    <a rel="nofollow" href="mailto:support@zaimhunter.ru">support@zaimhunter.ru</a> <span class="hidden-xs hidden-sm">| +7 (495) 006 19 61</span><br>
+                    <?=$email?> <span class="hidden-xs hidden-sm">| +7 (495) 006 19 61</span><br>
                     <span id="special_footer" class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
                     Максимальная процентная ставка по займу составляет
                     0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок
@@ -58,24 +34,11 @@ if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->u
             </div>
             <?php } else { ?>
                  <div class="col-md-10">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- zaimhunter -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-4970738258373085"
-                        data-ad-slot="2625815808"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    <?php
+                        require 'adsence.php';
+                    ?>
                   </div>
             <?php } ?>
-            <div class="col-sm-12">
-                <hr/>
-                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') { 
-                } ?>
-            </div>
         </div>
     </div> 
 </footer>  
@@ -91,7 +54,7 @@ if($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->u
     echo '/* private JS */';
     require 'templates/zaimhunter/assets/js/main.js'; 
 
-if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
+if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) { ?>
  
     $("#rangeSlider").ionRangeSlider
     (
@@ -190,56 +153,7 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
                 $("#form_slrd").val(range3.from);
             }
         }); 
-        <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {?>
-        var slider = $('#rangeSlider').data('ionRangeSlider');
-        var slider_plus = true;
-        var n = 10;
-        var slider_init = setInterval(function () {
-            if (slider_plus) {
-                n++;
-            } else {
-                n--;
-            }
-            if (n == 21 && n != <?php echo $from; ?>) {
-                slider_plus = false;
-            }else if (n == <?php echo $from; ?> && slider_plus == false) {
-                clearInterval(slider_init);
-            }else if (n == 21 && n == <?php echo $from; ?>) {
-                clearInterval(slider_init);
-            }
-
-            slider.update({
-                from: n
-            });
-
-            if (n <= 9) {
-            $('#period').val('7');
-            $('#period2').val('От 61 до 130 дней');
-            $('#percent').val('95');
-            } else if (n <= 14 && n > 9) {
-                $('#period').val('14');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('95');
-            } else if (n <= 15 && n > 14) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('95');
-            } else if (n <= 17 && n > 15) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('85');
-            } else if (n <= 19 && n > 17) {
-                $('#period').val('30');
-                $('#period2').val('От 130 до 250 дней');
-                $('#percent').val('77');
-            } else if (n > 19) {
-                $('#period').val('30');
-                $('#period2').val('От 250 до 365 дней');
-                $('#percent').val('65');
-            }
-            $('#amount').val(slider.result.from_value);
-            $("#form_slrd").val(slider.result.from);
-        }, 50); 
+        <?php if (in_array($this->uri->segment(1), array(' ', '', 'index'))) {?>
         traffic("zaimhunter.ru",0);
 
         $(document).ready(function () 
@@ -301,18 +215,15 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
         });
 <?php }
 }
-elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+elseif(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
 {
-    include "templates/common/new2/js/lk.js";      
-    echo 'traffic("zaimhunter.ru",4);'; 
-
+    include "templates/common/new/js/lk.js";
+    echo 'traffic("zaimhunter.ru",4);';
 }
 elseif($this->uri->segment(1) == '404')
 {
     echo 'traffic("zaimhunter.ru",9);'; 
 }
-else if($this->uri->segment(1) == 'form')
-{ }
 else if($this->uri->segment(1) == 'faq')
 {
     echo '$(".my_select").change(function() {
@@ -365,20 +276,15 @@ else if($this->uri->segment(1) == 'money')
     });';
 } 
 echo "}";
-require 'templates/common/new2/js/exeption.js';
+require 'templates/common/new/s/exeption.js';
 ?>
 </script>
 <?php
     include "google.php";
     include "yandexmetrika.php"; 
     include "yandex_rtb.php";
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
-    {     
-        echo '<!-- Global site tag (gtag.js) - Google Ads: 755948010 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-755948010"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag(\'js\', new Date()); gtag(\'config\', \'AW-755948010\'); </script>'; 
-    }
-?>
-<?php
-require 'templates/common/new2/php/modal3_close.php';
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+        require 'google_lk.php';
 ?>
 </body>
 </html>

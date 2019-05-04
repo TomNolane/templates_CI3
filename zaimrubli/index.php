@@ -67,19 +67,9 @@
                 </div>
                 </form>
                  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                  <?php if($setting_array['is_mobile'] != 'мобила') { ?>
-               
-                <!-- zaimrubli -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-4970738258373085"
-                    data-ad-slot="4278094234"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-                  <?php } ?>
+                  <?php if($setting_array['is_mobile'] != 'мобила') { 
+                      require 'adsence.php';
+                   } ?>
             </div>
             <ul class="ex-section-money hidden-xs hidden-sm">
                 <li class="active"><a data-toggle="tab" href="/zaim-card"><img src="/templates/zaimrubli/assets/img/visa.png" alt="visa.png"></a></li>

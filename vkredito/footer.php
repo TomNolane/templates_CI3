@@ -1,52 +1,10 @@
-<script>
-// onbeforeunload = function(){ 
-// 	return 'Вы покидаете нас!';
-// }
-// window.onbeforeunload = function() {
-//   return "Данные не сохранены. Точно перейти?";
-// };
-//window.onunload = function() { 
-
-    //  var url = "https://vkredito.ru/addnew/?send=true&display=0&referer=https%3A%2F%2Fvkredito.ru%2F&id=&step=5&ad_id=4&fingerprint=4bd0fabe60cfc05a0bcbfcceac4752ff&amount=15000&period=21&f=%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0&i=%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9&o=%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%BD%D0%B0&gender=0&birth_dd=0&birth_mm=0&birth_yyyy=0&birthdate=06%2F12%2F1988&phone=8+(911)+111+1111&email=df%40mail.ru&delays_type=never&passport=&passport_s=&passport_n=&passport_dd=0&passport_mm=0&passport_yyyy=0&passportdate=&passport_code=&passport_who=&birthplace=&region=0&city=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80&street=&building=&housing=&flat=&reg_type=1&reg_same=1&work=%D0%A8%D0%A2%D0%90%D0%A2%D0%9D%D0%AB%D0%99+%D0%A1%D0%9E%D0%A2%D0%A0%D0%A3%D0%94%D0%9D%D0%98%D0%9A&work_name=&work_occupation=&work_phone=&work_experience=&work_salary=&work_region=0&work_city=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80&work_street=&work_house=&work_building=&work_office=";
-    // fetch(url)
-    // .then(data => data.text())
-    // .then((text) => { 
-    // }).catch(function (error) {
-    //     console.log('request failed', error)
-    // })
-//};
-</script>
-
 </div><?php $from = '15';
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
+if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'offerwall2', 'pixell', 'vitrina', 'form')))
 {
-    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
-        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- vkredito -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="9129421079"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-    }
-	 if($setting_array['is_mobile'] != 'мобила') {
-    echo ' <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="9129421079"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-     }
+    require 'adsence.php';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') 
+if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) 
 {
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534156867187" alt="MYTARGET">';
 }
@@ -54,19 +12,25 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
 <footer>
     <div class="container">
         <div class="row">
-         <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
+         <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
             <div class="col-md-2 col-sm-4 col-xs-12"> 
          <?php } else {?>
-             <div class="col-md-2 col-sm-4 hidden-xs"> 
+             <div class="col-md-2 col-sm-4"> 
          <?php } ?>
-                <img src="/templates/vkredito/assets/img/logo.png" class="logo" alt="logo.png">
+
+                <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                    <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png">
+                <?php } else { ?>
+                    <img alt="logo.png" src="/templates/vkredito/assets/img/logo.png" class="logo">
+                <?php } ?>
+
             </div>
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
+            <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
             <div class="col-md-4 col-sm-4 col-xs-12 spec_footer4">
                 <div style="font-size: 12px;">
                     <p>Сервис по подбору выгодных онлайн займов находящийся по адресу
                         <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
-                        <br><a href="mailto:support@vkredito.ru" target="_blank">support@vkredito.ru</a>
+                        <?=$email?>
                         <span class="hidden-xs hidden-sm"> | +7(495) 006 19 61</span>
                     </p>
                 </div>
@@ -81,24 +45,11 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
             </div>
             <?php } else { ?>
                  <div class="col-md-10 col-xs-12">
-                     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- vkredito -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-4970738258373085"
-                        data-ad-slot="9129421079"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                     <?php
+                        require 'adsence.php';
+                     ?>
                 </div>
             <?php } ?>
-            <div class="col-sm-12 col-xs-12">
-                <hr/>
-                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-                } ?>
-            </div>
         </div>
         <div class="clearfix">&nbsp;</div>
     </div>
@@ -115,7 +66,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
     echo '/* private JS */';
     require 'templates/vkredito/assets/js/main.js'; 
 
-if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
+if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) { ?>
     var amount = 15000;
     var day = 10;
     var updateComm = function () {
@@ -258,7 +209,7 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
                 updateComm();
             }
         }); 
-        <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {?>
+        <?php if (in_array($this->uri->segment(1), array(' ', '', 'index'))) {?>
         $('.period').ionRangeSlider({
             min: 1,
             max: 30,
@@ -332,78 +283,29 @@ $('.docs, .info').click(function () {
     }, 1000);
 });
 <?php }
-elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+elseif(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
 {
-    include "templates/common/new2/js/lk.js";
-    echo 'traffic("vkredito.ru",4);'; 
+    include "templates/common/new/js/lk.js";
+    echo 'traffic("vkredito.ru",4);';
 
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic("vkredito.ru",9);'; 
+    echo 'traffic("vkredito.ru",9);';
 }
-else if($this->uri->segment(1) == 'form')
-{ } 
 echo "}";
-require 'templates/common/new2/js/exeption.js';
+require 'templates/common/new/s/exeption.js';
 ?>
 </script>
 <?php
     include "google.php";
     include "yandexmetrika.php"; 
     include "yandex_rtb.php";
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
     {     
-        echo '<!-- Google Code for  
-        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
-        Page -->
-        <script>
-        /* <![CDATA[ */
-        var google_conversion_id = 844462441;
-        var google_conversion_label = "NxPcCNq4sHUQ6fLVkgM";
-        var google_remarketing_only = false;
-        /* ]]> */
-        </script>
-        <script  
-        src="//www.googleadservices.com/pagead/conversion.js">
-        </script>
-        <noscript>
-        <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt=""  
-        src="//www.googleadservices.com/pagead/conversion/844462441/?label=NxPcCNq4sHUQ6fLVkgM&amp;guid=ON&amp;script=0"/>
-        </div>
-        </noscript>'; 
+        require 'google_lk.php';
     }
-?>
-<!-- Rating@Mail.ru counter -->
-<script>
-var _tmr = window._tmr || (window._tmr = []);
-_tmr.push({id: "3052560", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
-(function (d, w, id) {
-if (d.getElementById(id)) return;
-var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-})(document, window, "topmailru-code");
-</script><noscript><div>
-<img src="//top-fwz1.mail.ru/counter?id=3052560;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
-</div></noscript>
-<!-- //Rating@Mail.ru counter -->
-<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script>
-var _tmr = _tmr || [];
-_tmr.push({
-type: 'itemView',
-productid: 'VALUE',
-pagetype: 'VALUE',
-list: 'VALUE',
-totalvalue: 'VALUE'
-});
-</script>
-<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
-<?php
-require 'templates/common/new2/php/modal3_close.php';
+    require 'mailru.php';
 ?>
 </body>
 </html>

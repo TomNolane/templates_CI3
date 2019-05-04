@@ -4,80 +4,57 @@
 <?php 
 $from = '15';
 
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3')
+if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'offerwall2', 'pixell', 'vitrina', 'form')))
 {
-    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
-        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- dengoman -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="4110287868"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-    }
-	
-    echo '';
+    require 'adsence.php'; 
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') 
+if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell'))) 
 {
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="//top-fwz1.mail.ru/tracker?id=3052545;e=RG%3A/trg-pixel-2721105-1534147134779" alt="mypixel">';
 }
 ?>
-<style>
-.black {
-    font-size: 12px;
-}
-</style>
 <footer>
     <div class="container">
         <div class="col-md-12 ">
             <div class="row"> 
                 <div class="col-md-3 hidden-xs">
                     <h1 class="logo-spec" id="for_lk">
-                        <img alt="logo.png" src="/templates/dengoman/assets/img/logo.png">
+                        <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                            <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png">
+                        <?php } else { ?>
+                             <img alt="logo.png" src="/templates/dengoman/assets/img/logo.png">
+                        <?php } ?>
                     </h1>
                     <div class="footer-copyright"></div>
                 </div> 
-                <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3') { ?>
-                <div class="col-md-3 hidden-xs hidden-sm" >
+                <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell'))) { ?>
+                <div class="col-md-3" >
                     <div class="footer-text spec_footer4" style="font-size: 12px; line-height: 1;">
                         <p>Сервис по подбору выгодных онлайн займов находящийся по адресу <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
-                        <br><a href="mailto:support@dengoman.ru">support@dengoman.ru</a> <span class="hidden-xs hidden-sm"> | +7(495) 006 19 61</span></p>
+                        <br><?=$email?> <span class="hidden-xs hidden-sm"> | +7(495) 006 19 61</span></p>
                     </div>
                 </div>
-                <div class="col-md-6 hidden-xs hidden-sm spec_footer5">
+                <div class="col-md-6 spec_footer5">
                     <p style="font-size: 12px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
                         <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001.</p>
                 </div>
             <?php } else { ?>
                 <div class="col-md-9 col-sm-9 col-xs-12">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- dengoman -->
-                        <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-client="ca-pub-4970738258373085"
-                            data-ad-slot="4110287868"
-                            data-ad-format="auto"
-                            data-full-width-responsive="true"></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    <?php
+                        require 'adsence.php';
+                    ?>
                 </div>
             <?php } ?>
             </div>
         </div>
         <div class="col-sm-12">
-            <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { ?>
+            <?php if (in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                 <hr/>
                 <div class="col-sm-12">
                     <p class="black">
-                        Сервис по подбору выгодных онлайн займов находящийся по адресу:
-                    Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 email: support@dengoman.ru <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+                        Сервис по подбору выгодных онлайн займов находящийся по адресу:<br>
+                        Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 email: <?=$email?> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
                     </p>
                 </div>
             <?php } ?>
@@ -96,7 +73,7 @@ echo 'try{';
 require 'footer_common_js.php';
 echo '/* private JS */';
 require 'templates/dengoman/assets/js/main.js'; 
-if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' '|| $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form' ) {?>
+if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) {?>
 	$(document).ready(function () {
 		$('.form h2 span span').text(zero(d.getHours()) + ':' + zero(d.getMinutes()))
 		$('#rangeSlider').ionRangeSlider({
@@ -231,108 +208,35 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' '|| $this->uri->
 
 <?php
     if ($this->uri->segment(1) != 'form'){
-    echo '$(document).ready(function () {
-        var slider3 = $(\'#rangeSlider\').data(\'ionRangeSlider\');
-        var slider_plus = true;
-        var n = 10;
-        var slider_init = setInterval(function () {
-            if (slider_plus) {
-                n++;
-            } else {
-                n--;
-            }
-            if (n == 21 && n != '.$from.') {
-                slider_plus = false;
-            }else if (n == '.$from.' && slider_plus == false) {
-                clearInterval(slider_init);
-            }else if (n == 21 && n == '.$from.') {
-                clearInterval(slider_init);
-            }
-
-            slider3.update({
-                from: n
-            });
-            
-            $(\'#amount\').val(slider3.result.from_value);
-            $(\'#form_slrd\').val(slider3.result.from);
-            amount = slider3.result.from_value;
-            updateComm();
-        }, 50);
-    });traffic("dengoman.ru",0);';
+        echo 'traffic("dengoman.ru",0);';
     }
 }
-elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+else if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
 {
-    include "templates/common/new2/js/lk.js";      
+    include "templates/common/new/js/lk.js";      
     echo 'traffic("dengoman.ru",4);';  
 }
-elseif($this->uri->segment(1) == '404')
+else if($this->uri->segment(1) == '404')
 {
     echo 'traffic("dengoman.ru",9);'; 
 }
-else if($this->uri->segment(1) == 'form')
-{ } 
 echo "}";
-require 'templates/common/new2/js/exeption.js';
+require 'templates/common/new/js/exeption.js';
 ?>
 </script>
 <?php
 include "google.php";
 include "yandexmetrika.php"; 
 include "yandex_rtb.php";
-if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')  { 
+if (in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))  { 
     
-    echo '<!-- Google Code for  
-    &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080;  
-    (&#1041;&#1077;&#1079; &#1044;&#1054;&#1048;) Conversion Page -->
-    <script >
-    /* <![CDATA[ */
-    var google_conversion_id = 832750617;
-    var google_conversion_label = "luceCP6xmngQmYiLjQM";
-    var google_remarketing_only = false;
-    /* ]]> */
-    </script>
-    <script   
-    src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-    <div style="display:inline;">
-    <img height="1" width="1" style="border-style:none;" alt=""  
-    src="//www.googleadservices.com/pagead/conversion/832750617/?label=luceCP6xmngQmYiLjQM&amp;guid=ON&amp;script=0"/>
-    </div>
-    </noscript>';
+    require 'google_lk.php';
 } 
 else
 {
-    echo '<script>!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308478-a8mPU"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308478-a8mPU" style="position:fixed; left:-999px;" alt=""/></noscript>';
+    require 'vk.php';
 }
+require 'mailru.php';
 ?>
-<!-- Rating@Mail.ru counter -->
-<script>
-var _tmr = window._tmr || (window._tmr = []);
-_tmr.push({id: "3052545", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
-(function (d, w, id) {
-if (d.getElementById(id)) return;
-var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-ts.src = "//top-fwz1.mail.ru/js/code.js";
-var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-})(document, window, "topmailru-code");
-</script><noscript><div>
-<img src="//top-fwz1.mail.ru/counter?id=3052545;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
-</div></noscript>
-<!-- //Rating@Mail.ru counter -->
-<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script>
-var _tmr = _tmr || [];
-_tmr.push({
-type: 'itemView',
-productid: 'VALUE',
-pagetype: 'VALUE',
-list: 'VALUE',
-totalvalue: 'VALUE'
-});
-</script>
-<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
 </body>
 </html>

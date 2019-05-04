@@ -2,17 +2,17 @@
     $my_title = "Вам персональное предложение";
     $site = str_replace("www.", "", $site);
     $site = str_replace(".tomnolane", "", $site);
-
-    $dir_site = str_replace(".ru", "", str_replace(".su", "",str_replace(".info", "", $site)));
-    require realpath(__DIR__ . '/..').'/'.$dir_site.'/header.php';
+    $site = str_replace("bzaim5", "bzaim", $site);
+    $site = str_replace("zaimomirsu", "zaimomir", $site);
+    $site = str_replace("zaimnowsu", "zaimnow", $site);
+    $site = str_replace(".ru", "", str_replace(".su", "",str_replace(".info", "", str_replace(".com", "", $site))));
+    
+    require realpath(__DIR__ . '/..').'/'.$site.'/header.php';
     $this->load->model('offers/offers_model', 'offers');
     
     (isset($_GET['loan']) && $_GET['loan']) ? $loan = 0 : $loan = 0;
     
-    //  if($site == 'zaimol')
-    //     $data = $this->offers->all(8, 0);
-    // else 
-        $data = $this->offers->all(8, 0);
+    $data = $this->offers->all(8, 0);
         
     // IP
     $this->load->helper('ip');
@@ -35,17 +35,15 @@
     $base_url = str_replace("http:","",$base_url);
     $pixel = $this->pixel->stat($base_url);
 	echo '<div><style scoped>';
-	require 'new2/css/lk2.php';
+	require 'new/css/lk2.php';
 	echo '</style></div>'; 
 ?> 
 <div>
 <style scoped>
-@font-face{font-family:"'Dosis'";src:url(/templates/common/new2/fonts/Dosis-Regular.eot);src:url(/templates/common/new2/fonts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/new2/fonts/Dosis-Regular.woff) format("woff"),url(/templates/common/new2/fonts/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:"'Dosis'";src:url(/templates/common/new/onts/Dosis-Regular.eot);src:url(/templates/common/nnew/nts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/nenew/ts/Dosis-Regular.woff) format("woff"),url(/templates/common/newnew/s/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
 .hh4 {
-    /*font-family: Dosis !important;*/
     font-family: Impact !important;
     font-size: 34px;
-    /*color: #777 !important;*/
     letter-spacing: 0.04em;
     font-weight: normal;
 }
@@ -68,10 +66,13 @@
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
-@media (min-width: 600px) {
+@media (max-width: 600px) {
     .div-spec {
-        /* margin-left: 40px;
-        margin-right: 40px; */
+       margin-left: 5px;
+        overflow-x: hidden;
+    }
+    .div-spec2 {
+        overflow-x: hidden;
     }
 }
 .container3 {
@@ -207,12 +208,9 @@ tr>td:first-child {
     padding: 20px;
 }
 .lk_special_offer {
-    /* -webkit-animation: neon .08s ease-in-out infinite alternate;
-    animation: neon .08s ease-in-out infinite alternate; */
     font-size: 1.8em;
     font-weight: 700; 
-    /* text-shadow: 0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000,0 0 1px #000; */
-  color: #00da00; 
+    color: #00da00; 
 } 
 @media (max-width: 450px) {
     .caption  {
@@ -268,69 +266,40 @@ tr>td:first-child {
 .mycol {margin-right: -3%;}
 .colfix {margin-left: 6%;}
 .start-text {color: #959595;}
-
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
 @media (min-width: 1281px) and (max-width: 1500px) {
     .mycol {margin-right: -3%;}
     .colfix {margin-left: 6%;}
 }
-
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
 @media (min-width: 1025px) and (max-width: 1280px) {
     .mycol {margin-right: -3%;}
     .colfix {margin-left: 6%;}
     .letsminimize {width: 92% !important;}
     .caption {font-size: 14px;}
 }
-
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
 @media (min-width: 768px) and (max-width: 1024px) {
     .mycol {margin-right: -3%;}
     .colfix {margin-left: 2%;}
     .letsminimize {width: 98% !important;}
     .caption {font-size: 12px; height: 30px;}
 }
-
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .mycol {margin-right: -3%;}
     .colfix {margin-left: 6%;}
     .letsminimize {width: 98% !important;}
     .caption {font-size: 12px; height: 30px;}
 }
-
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
 @media (min-width: 481px) and (max-width: 767px) {
     .mycol {margin-right: -3%;}
     .colfix {margin-left: 6%;}
 }
 
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
 @media (min-width: 320px) and (max-width: 480px) {
     .mycol {margin-right: -3%;}
     .colfix {margin-left: 3%;}
     .letsminimize {width: 92% !important;}
     .caption {height: 24px;}
     .lk-text {font-size: 13px;}
-    .ex-main-btn2 {padding: 2px 14px; font-size: 14px;}
+    .ex-main-btn2 {padding: 15px 14px; font-size: 14px;}
 }
 </style>
 </div>
@@ -344,15 +313,15 @@ tr>td:first-child {
 </nav>
 <?php } ?>
 
-<div class="row container3"><div class="col-md-12">
-<? if (!file_exists(realpath(__DIR__ . '/..').'/'.$site.'/internal-header-1.php')) : ?>
+<div class="row container3"><div class="col-md-12 div-spec2">
+<? if (!file_exists(realpath(__DIR__ . '/..').'/common/new/special-header-1.php')) : ?>
 <h2 class="text-center hh hh4">Заявка с таким номером телефона уже существует, но ВАМ<br><span class="gold_font">  предварительно одобрен займ</span> в организациях ниже:</h2>
-<? else : require(realpath(__DIR__ . '/..').'/'.$site.'/internal-header-1.php'); endif; ?>
-<? if (!file_exists(realpath(__DIR__ . '/..').'/'.$site.'/internal-header-2.php')) : ?>
-<h2 class="text-center hh hh4 grey" style="font-size: 19px;">Для 100% вероятности получения денег, заполните заявки во всех компаниях</h2>
-<? else : require(realpath(__DIR__ . '/..').'/'.$site.'/internal-header-2.php'); endif; ?>
+<? else : require(realpath(__DIR__ . '/..').'/common/new/special-header-1.php'); endif; ?>
+<? if (!file_exists(realpath(__DIR__ . '/..').'/common/new/special-header-2.php')) : ?>
+<h2 class="text-center hh hh4 grey" style="font-size: 19px;">Для 100% вероятности получения денег, заполните заявки в трёх компаниях</h2>
+<? else : require(realpath(__DIR__ . '/..').'/common/new/special-header-2.php'); endif; ?>
     <br>
-    <div class="row" id="for_google">
+    <div class="row" id="for_google"></div>
     
 	 <div class="text-center hidden-xs" id="img_agree"><img src="/templates/common/img/stamp.png" /></div>
      
@@ -365,118 +334,21 @@ tr>td:first-child {
         $_plural_months = array('месяц', 'месяца', 'месяцев');
         $_plural_days = array('дня', 'дня', 'дней');
         $_plural_times = array('раз', 'раза', 'раз');
-        $temp = 0;
-        echo '<div class="row"><div class="col-md-12 col-xs-12 div-spec colfix">';
+        
+        echo '<div class="row"><div class="col-md-12 col-xs-12 div-spec">';
 
         foreach($data as $item)
         {
             $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
 
-            /*
-            $item['link'] = str_replace("#site1", ucfirst($domen), $item['link']);
-            $item['link'] = str_replace("#site", $domen, $item['link']);
-
-            if ( $domen == 'zaimhome.ru' ){
-                $item['link'] = str_replace("https://kviku.ru/cards/?promo=nb&utm_source=bzaim5", 'https://kviku.ru/cards/?promo=nb&utm_source=zaimhome', $item['link']);
-            }
-            if ( $domen == 'dengoman.ru' ){
-                $item['link'] = str_replace("https://kviku.ru/cards/?promo=nb&utm_source=bzaim5", 'https://kviku.ru/cards/?promo=nb&utm_source=dengoman', $item['link']);
-            }            
-            if ( $domen == 'dengibystra.ru' ){
-                $item['link'] = str_replace("https://kviku.ru/cards/?promo=nb&utm_source=bzaim5", 'https://kviku.ru/cards/?promo=nb&utm_source=dengibystra', $item['link']);
-            }
-            if ( $domen == 'bzaim5.ru'){
-                $item['link'] = str_replace("https://kviku.ru/cards/?promo=nb&utm_source=bzaim5", 'https://kviku.ru/cards/?promo=nb&utm_source=dengibystra', $item['link']);
-            }
- 
-			if(strpos($item['link'], "aff_sub1=") == true)
-            {
-                $item['link'] = str_replace( "aff_sub1=#site1", $domen, $item['link']);
-                $item['link'] = str_replace( "aff_sub1=#site", $domen, $item['link']);
-
-                if(trim($this->input->get('utm_source', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub2='.$this->input->get('utm_source', TRUE);
-                else
-                    $item['link'] = $item['link'].'&aff_sub2='.$domen;
-
-                if(trim($this->input->get('utm_campaign', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
-                else if(trim($this->input->get('campaign_id', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
-                else if(trim($this->input->get('doi', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3=doi';
-                else
-                    $item['link'] = $item['link'].'&aff_sub3='.$domen;
-
-                if(trim($this->input->get('utm_term', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
-                else if(trim($this->input->get('utm;_term', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm;_term', TRUE);
-                else if(trim($this->input->get('keyword', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
-                else
-                    $item['link'] = $item['link'].'&aff_sub4='.$domen;
-            }
-            else if (strpos($item['link'], "aff_sub=") == true)
-            {
-                $item['link'] = str_replace( "aff_sub=bzaim5.ru", "aff_sub=".$domen, $item['link']);
-                $item['link'] = str_replace( "aff_sub2=#site", "", $item['link']);
-                $item['link'] = str_replace( "aff_sub2=#site1", "", $item['link']);
-
-                if(trim($this->input->get('utm_source', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub2='.$this->input->get('utm_source', TRUE);
-                else
-                    $item['link'] = $item['link'].'&aff_sub2='.$domen;
-
-                if(trim($this->input->get('utm_campaign', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
-                else if(trim($this->input->get('campaign_id', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
-                else if(trim($this->input->get('doi', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3=doi';
-                else
-                    $item['link'] = $item['link'].'&aff_sub3='.$domen;
-
-                if(trim($this->input->get('utm_term', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
-                else if(trim($this->input->get('utm;_term', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm;_term', TRUE);
-                else if(trim($this->input->get('keyword', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
-                else
-                    $item['link'] = $item['link'].'&aff_sub4='.$domen;
-            }
-            else if (strpos($item['link'], "promo=") == true)
-            {
-                $item['link'] = str_replace( "utm_source=bzaim5", "utm_source=".$domen, $item['link']);
-
-                if(trim($this->input->get('utm_source', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub2='.$this->input->get('utm_source', TRUE);
-                else
-                    $item['link'] = $item['link'].'&aff_sub2='.$domen;
-
-                if(trim($this->input->get('utm_campaign', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('utm_campaign', TRUE);
-                else if(trim($this->input->get('campaign_id', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3='.$this->input->get('campaign_id', TRUE);
-                else if(trim($this->input->get('doi', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub3=doi';
-                else
-                    $item['link'] = $item['link'].'&aff_sub3='.$domen;
-
-                if(trim($this->input->get('utm_term', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm_term', TRUE);
-                else if(trim($this->input->get('utm;_term', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('utm;_term', TRUE);
-                else if(trim($this->input->get('keyword', TRUE)) != false)
-                    $item['link'] = $item['link'].'&aff_sub4='.$this->input->get('keyword', TRUE);
-                else
-                    $item['link'] = $item['link'].'&aff_sub4='.$domen;
-            }
-
-            */
-             
-            $temp++; 
+            if (strpos($item['link'], 'guruleads'))
+                $item['link'] = $item['link'].'?sub1=Vitrina';
+            else if(strpos($item['link'], 'kviku') || strpos($item['link'], 'tech'))
+                $item['link'] = $item['link'].'';
+            else if(strpos($item['link'], 'leadgid'))
+                $item['link'] = $item['link'].'?source=Vitrina';
+            else
+                $item['link'] = $item['link'].'?source=Vitrina';
 
             $words = array (
                 '<div class="caption empty"><span></span></div>',
@@ -489,7 +361,7 @@ tr>td:first-child {
                 '<div class="caption empty"><span></span></div>'
             );
 
-            echo '<div class="col-md-3 col-xs-6 mycol" >
+            echo '<div class="col-md-3 col-xs-6" >
             <figure class="hh3 letsminimize">
                 '.$words[rand(0,7)].'
                 <img class="lk-img2 img-responsive" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
@@ -502,6 +374,6 @@ tr>td:first-child {
         }
         echo '</div></div>';?>
     </div></div>
-</div>
+
 <br><br>
-<?php require realpath(__DIR__ . '/..').'/'.$dir_site.'/footer.php';?>
+<?php require realpath(__DIR__ . '/..').'/'.$site.'/footer.php';?>

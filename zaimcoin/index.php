@@ -63,20 +63,9 @@
                         <button class="ex-orange-btn main-btn-offerwall"  type="submit" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;Получить деньги&nbsp;&nbsp;&nbsp;</button> 
                     </div>
                     <div class="col-md-12 text-center "> 
-                        <?php if($setting_array['is_mobile'] != 'мобила') { ?>
-                        <br><br><br>
-                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- zaimcoin -->
-                        <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-client="ca-pub-4970738258373085"
-                            data-ad-slot="9741339751"
-                            data-ad-format="auto"
-                            data-full-width-responsive="true"></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                        <?php } ?>
+                        <?php if($setting_array['is_mobile'] != 'мобила') { 
+                            echo '<br><br><br>'; require 'adsence.php';
+                         } ?>
                     </div>
                 </div>
             </div>
@@ -90,19 +79,7 @@
                 <div class="col-md-12"> 
                     <h2 class="text-center">Самый быстрый и удобный сервис<br>
                         по подбору онлайн займов на нужную сумму и период</h2>
-                         <?php if($setting_array['is_mobile'] == 'мобила') { ?>
-                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- zaimcoin -->
-                        <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-client="ca-pub-4970738258373085"
-                            data-ad-slot="9741339751"
-                            data-ad-format="auto"
-                            data-full-width-responsive="true"></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                        <?php } ?>
+                         <?php if($setting_array['is_mobile'] == 'мобила') { require 'adsence.php'; } ?>
                     <div class="ex-adv-bg">
                         <div class="row">
                             <div class="col-md-4 ex-line-right ">
@@ -179,5 +156,4 @@
         </div>
     </section>
 </main>
-
 <?php require 'footer.php'; ?>

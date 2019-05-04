@@ -55,17 +55,9 @@
             </div>
              <?php if($setting_array['is_mobile'] != 'мобила') { ?>
                     <br><br><br>
-                   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- bzaim5.ru -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-4970738258373085"
-                        data-ad-slot="5816862028"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                    <?php
+                        require 'adsence.php';
+                    ?>
                <?php } ?>
         </div>
     </div>
@@ -75,18 +67,8 @@
         <div class="row"> 
             <h1 class="hidden-xs hidden-sm visible-md visible-lg">Как получить деньги сейчас?</h1> 
 			<h2 class="hidden-md hidden-lg visible-xs visible-sm special_ind42">Как получить деньги сейчас?</h2> 
-            <?php  if($setting_array['is_mobile'] == 'мобила') {
-            echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- bzaim5.ru -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="5816862028"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
+            <?php  if($setting_array['is_mobile'] == 'мобила') { 
+                require 'adsence.php'; 
             } ?>
             <br><br><br>
             <div class="col-md-6 hidden-xs hidden-sm visible-md visible-lg">

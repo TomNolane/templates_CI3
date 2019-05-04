@@ -63,7 +63,7 @@ if(!isset($my_title))
     $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Zaimcoin';
     $description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }
-include "templates/common/new2/php/form_header.php";
+include "templates/common/new/php/form_header.php";
 include "header.php";
 ?>
 <div class="container ex-form">
@@ -131,15 +131,4 @@ include "header.php";
         </div>
     </div>
 </div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- zaimcoin -->
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="9741339751"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <?php include 'footer.php';?>

@@ -9,16 +9,16 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/">
-                    <? $logo_addon = '';
+                    <?php $logo_addon = '/templates/bzaim/assets/img/logo.png';
                     switch ($this->uri->segment(1)) {
-                        case 'offerwall': $logo_addon = '-fanzaim'; break;
-                        case 'offerwall2': $logo_addon = '-edenga'; break;
+                        case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                        case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
                         default: break;
                     } ?>
-                    <img src="/templates/bzaim/assets/img/logo<?=$logo_addon?>.png" alt="Image missing">
+                    <img src="<?=$logo_addon?>" alt="Image missing">
                 </a>
             </div>
-            <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2'))) : ?>
+            <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
                 <div id="navbarCollapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right"> 
                     <li><a href="/about" class="hov">О нас</a></li>

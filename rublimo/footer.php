@@ -1,33 +1,10 @@
 <?php $from = '15';
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
+if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'offerwall2', 'pixell', 'vitrina', 'form')))
 {
-    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
-        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- rublimo --> 
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="8065296007"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-    }
-	 if($setting_array['is_mobile'] != 'мобила') {
-    echo '<ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="8065296007"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-     }
+    require 'adsence.php';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') 
+if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) 
 {
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="https://top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534155967818" alt="MYTARGET">';
 }
@@ -35,20 +12,25 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
 <footer>
     <div class="container">
         <div class="row">
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
+            <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
             <div class="col-md-2 col-xs-12"> 
             <?php } else { ?>
-             <div class="col-md-2 hidden-xs"> 
+             <div class="col-md-2"> 
              <?php }  ?>
-                <img src="/templates/rublimo/assets/img/logo-footer.png" alt="logo" class="logo">
+
+                <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                    <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png">
+                <?php } else { ?>
+                    <img alt="logo.png" src="/templates/rublimo/assets/img/llogo-footer.png" class="logo">
+                <?php } ?>
            
             </div>
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
+            <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
             <div class="col-md-4 col-xs-12 spec_footer4">
                 <p class="gut font10">
                     «RUBLIMO» - сервис по подбору выгодных онлайн займов находящийся по адресу: Россия, Ленинградская обл. г. Санкт-Петербург,
                     ул. Осипенко, 12, оф 201 email:
-                    <a href="mailto:support@rublimo.ru" target="_blank">support@rublimo.ru</a>
+                    <?=$email?>
                     <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
                 </p>
             </div>
@@ -61,24 +43,11 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
             </div>
             <?php } else { ?>
             <div class="col-md-10 col-xs-12">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- rublimo --> 
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-4970738258373085"
-                        data-ad-slot="8065296007"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
+                <?php
+                    require 'adsence.php';
+                ?>
             </div>
             <?php } ?>
-            <div class="col-sm-12">
-                <hr/>
-                <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3') { 
-                } ?>
-            </div>
         </div>
     </div>
     <div class="clearfix">&nbsp;</div>
@@ -95,7 +64,7 @@ if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->
     echo '/* private JS */';
     require 'templates/rublimo/assets/js/main.js'; 
 
-if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
+if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) { ?>
         var updateComm = function () {
             if (amount <= 30000) {
                 percent = 1.3;
@@ -337,7 +306,7 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
                 $("#form_slrd").val(range3.from);
             }
         }); 
-        <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {?>
+        <?php if (in_array($this->uri->segment(1), array(' ', '', 'index'))) {?>
         var slider = $('.amount').data('ionRangeSlider');
         var slider2 = $('.amount2').data('ionRangeSlider');
         var slider_plus = true;
@@ -402,7 +371,7 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
             updateComm();
 
         }, 50); 
-        traffic("rublimo.ru".ru,0);
+        traffic("rublimo.ru",0);
 <?php }
 }
 elseif($this->uri->segment(1) == 'faq')
@@ -415,84 +384,31 @@ elseif($this->uri->segment(1) == 'faq')
         });
     });";
 }
-elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+elseif(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
 {
-    include "templates/common/new2/js/lk.js";      
+    include "templates/common/new/js/lk.js";
     echo 'traffic("rublimo.ru",4);'; 
 
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic("rublimo.ru",9);'; 
+    echo 'traffic("rublimo.ru",9);';
 }
-else if($this->uri->segment(1) == 'form')
-{ } 
 echo "}";
-require 'templates/common/new2/js/exeption.js';
+require 'templates/common/new/js/exeption.js';
 ?>
 </script>
 <?php
     include "google.php";
-    include "yandexmetrika.php"; 
+    include "yandexmetrika.php";
     include "yandex_rtb.php";
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
-    {     
-        
-        echo '<!-- Google Code for  
-        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080;  
-        (&#1073;&#1077;&#1079; &#1044;&#1086;&#1080;) Conversion Page -->
-        <script>
-        /* <![CDATA[ */
-        var google_conversion_id = 832752826;
-        var google_conversion_label = "rzldCPv3u3gQupmLjQM";
-        var google_remarketing_only = false;
-        /* ]]> */
-        </script>
-        <script  
-        src="//www.googleadservices.com/pagead/conversion.js">
-        </script>
-        <noscript>
-        <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt=""  
-        src="//www.googleadservices.com/pagead/conversion/832752826/?label=rzldCPv3u3gQupmLjQM&amp;guid=ON&amp;script=0"/>
-        </div>
-        </noscript>
-        <!-- Global site tag (gtag.js) - Google Ads: 755943017 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-755943017"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag(\'js\', new Date()); gtag(\'config\', \'AW-755943017\'); </script> 
-        <!-- Event snippet for Конверсия conversion page --> <script> gtag(\'event\', \'conversion\', {\'send_to\': \'AW-755943017/aaCRCNGGlpcBEOmMu-gC\'});</script> '; 
-    }
-    else {
-        echo '<script>!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-308478-a8mPU"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-308478-a8mPU" style="position:fixed; left:-999px;" alt=""/></noscript>';
-    }
-?>
-<!-- Rating@Mail.ru counter -->
-<script>
-var _tmr = window._tmr || (window._tmr = []);
-_tmr.push({id: "3052549", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
-(function (d, w, id) {
-if (d.getElementById(id)) return;
-var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-})(document, window, "topmailru-code");
-</script><noscript><div>
-<img src="//top-fwz1.mail.ru/counter?id=3052549;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
-</div></noscript>
-<!-- //Rating@Mail.ru counter -->
-<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script>
-var _tmr = _tmr || [];
-_tmr.push({
-type: 'itemView',
-productid: 'VALUE',
-pagetype: 'VALUE',
-list: 'VALUE',
-totalvalue: 'VALUE'
-});
-</script>
-<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
-<?php
-require 'templates/common/new2/php/modal3_close.php';
+
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+        require 'google_lk.php';
+    else 
+        require 'vk.php';
+
+    require 'mailru.php';
 ?>
 </body>
 </html>

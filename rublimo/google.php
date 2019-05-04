@@ -20,11 +20,6 @@
     (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
         '//vk.com/rtrg?r=UzhaCPx8CdujAr5T6aQ/0Bm3ERynfPznf2dnE8LQ2Z8ux3b6Hx7uaeYYT0htNFbnPyzRR/AwkpL1S*co2CawMJzshhbBYJn43IAV00/rM8iULK5bmmSbvYIvGFpZ1oLAlD5bxFxTF/eWSCa*lTsoXNN4vJkpMOzY4oIS50dEoqM-&pixel_id=1000099081';
 </script>
-<!--Константин Гутлид-->
-<script >
-    (window.Image ? (new Image()) : document.createElement('img')).src = location.protocol +
-        '//vk.com/rtrg?r=NOf/xn/SOZZu1z5zSTnJwkDlXpuyNIuW73Up0x84SEhs8D7Ji1kcZl7xrzCtd3T4c3wWr89FtkTlWDHt0039QoieLbBJEzvITZLZpZ2tLq7N6OxU0n8/1z2dHACFGd22hi7UhhWpkpB83L4j1xzZm/ZHZg2e09SoMlbOaLb00rE-&pixel_id=1000099731';
-</script>
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;

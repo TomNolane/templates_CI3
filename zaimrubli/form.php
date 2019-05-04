@@ -63,7 +63,7 @@ if(!isset($my_title))
     $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Zaimrubli';
     $description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }
-include "templates/common/new2/php/form_header.php";
+include "templates/common/new/php/form_header.php";
 include "header.php";
 ?>
 <div class="ex-form">
@@ -102,16 +102,5 @@ include "header.php";
         </form>
     </section>
 </div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- zaimrubli -->
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="4278094234"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <br><br>
 <?php include 'footer.php';?>

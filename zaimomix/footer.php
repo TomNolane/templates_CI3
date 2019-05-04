@@ -1,79 +1,37 @@
 <?php $from = '15';
-if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall')
+if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'offerwall2', 'pixell', 'vitrina', 'form')))
 {
-    if ($this->uri->segment(1) != ' ' && $this->uri->segment(1) != '' && $this->uri->segment(1) != 'index') {
-        echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- zaimomix -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="1488279360"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
-    }
-	echo ' <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="1488279360"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>';
+    require 'adsence.php';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 } 
 ?>
 <footer class="ex-main-footer ex-sticky-footer">
     <div class="container">
         <div class="row">
-        <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
-            <div class="col-lg-2">
-        <?php } else { ?>
-        <style>.row{display: block;}</style>
-         <div class="col-lg-2 hidden-xs">
-        <?php } ?>
+            <div class="col-lg-2 col-xs-3">
                 <div class="ex-foot-logo">
-                    <img src="/templates/zaimomix/assets/img/logo-footer.png" alt="logo-footer.png" class="logo-spec">
+                    <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                        <img src="<?=$logo_foot?>" class="logo-spec"  alt="logo-footer.png">
+                    <?php } else { ?>
+                        <img alt="logo.png"  class="logo-spec" src="/templates/zaimomix/assets/img/logo-footer.png">
+                    <?php } ?>
                 </div>
             </div>
-            <div class="col-lg-10 col-xs-12">
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'offerwall') { ?>
+            
+            <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                <div class="col-lg-10 col-xs-12">
                 <p>Сервис по подбору выгодных онлайн займов и кредитов находящийся по адресу:<br>
-                    Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 support@zaimomix.ru<span class="hidden-xs hidden-sm"> | 8
+                    Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 <?=$email?><span class="hidden-xs hidden-sm"> | 8
                     (960) 950 93 53</span><br>
-                    <span class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365
+                    <span>Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365
                     дней.<br>
                     Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.<br>
                     Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день;
                     проценты за весь период составят
                     11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в
                     случае своевременного погашения
-                    ООО «Альянс» | ОГРН 5177746353054 | ИНН 9705113909 | КПП 770501001</span></p>
-            <?php } else { ?>
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- zaimomix -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-4970738258373085"
-                    data-ad-slot="1488279360"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            <?php } ?>
-            </div>
-            <hr/>
-            <div class="col-lg-12">
-            <br>
-            <?php if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'lk2' && $this->uri->segment(1) != 'lk3' && $this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'offerwall') { ?>
-                    
-                <?php } else if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' || $this->uri->segment(1) == 'offerwall') {
-                } ?>
-            </div>
+                    ООО «Альянс» | ОГРН 5177746353054 | ИНН 9705113909 | КПП 770501001</span></p> </div>
+            <?php } else { echo '<div class="col-lg-10 col-xs-7">'; require 'adsence.php'; echo '</div>'; } ?>
         </div>
     </div>
 </footer>
@@ -89,7 +47,7 @@ if($this->uri->segment(1) != 'form' && $this->uri->segment(1) != 'lk' && $this->
     echo '/* private JS */';
     require 'templates/zaimomix/assets/js/main.js'; 
 
-if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->uri->segment(1) == 'form') { ?>
+if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) { ?>
  
     $("#rangeSlider").ionRangeSlider({
         hide_min_max: true,
@@ -194,7 +152,7 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
                 $('#form_slrd').val(data.from);
             }
         }); 
-        <?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index') {?>
+        <?php if (in_array($this->uri->segment(1), array(' ', '', 'index'))) {?>
         $('.owl-carousel').owlCarousel({
             stagePadding: 40,
             center: true,
@@ -227,141 +185,29 @@ if ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index' || $this->
 
             }
         });
-        var slider = $('#rangeSlider').data('ionRangeSlider');
-        var slider_plus = true;
-        var n = 10;
-        var slider_init = setInterval(function () {
-            if (slider_plus) {
-                n++;
-            } else {
-                n--;
-            }
-            if (n == 21 && n != <?php echo $from; ?>) {
-                slider_plus = false;
-            }else if (n == <?php echo $from; ?> && slider_plus == false) {
-                clearInterval(slider_init);
-            }else if (n == 21 && n == <?php echo $from; ?>) {
-                clearInterval(slider_init);
-            }
-
-            slider.update({
-                from: n
-            });
-
-            if (n <= 9) {
-            $('#period').val('7');
-            $('#period2').val('От 61 до 130 дней');
-            $('#percent').val('95');
-            } else if (n <= 14 && n > 9) {
-                $('#period').val('14');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('95');
-            } else if (n <= 15 && n > 14) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('95');
-            } else if (n <= 17 && n > 15) {
-                $('#period').val('21');
-                $('#period2').val('От 61 до 130 дней');
-                $('#percent').val('85');
-            } else if (n <= 19 && n > 17) {
-                $('#period').val('30');
-                $('#period2').val('От 130 до 250 дней');
-                $('#percent').val('77');
-            } else if (n > 19) {
-                $('#period').val('30');
-                $('#period2').val('От 250 до 365 дней');
-                $('#percent').val('65');
-            }
-            $('#amount').val(slider.result.from_value);
-            $("#form_slrd").val(slider.result.from);
-        }, 50); 
         traffic("zaimomix.ru",0);
 <?php }
 }
-elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
+elseif(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
 {
-    include "templates/common/new2/js/lk.js";      
-    echo 'traffic("zaimomix.ru",4);'; 
-
+    include "templates/common/new/js/lk.js";
+    echo 'traffic("zaimomix.ru",4);';
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic("zaimomix.ru",9);'; 
+    echo 'traffic("zaimomix.ru",9);';
 }
-else if($this->uri->segment(1) == 'form')
-{ } 
 echo "}";
-require 'templates/common/new2/js/exeption.js';
+require 'templates/common/new/s/exeption.js';
 ?>
 </script>
 <?php
     include "google.php";
     include "yandexmetrika.php"; 
     include "yandex_rtb.php";
-    if($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3')
-    {     
-        echo '<!-- Google Code for  
-        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Conversion  
-        Page -->
-        <script >
-        /* <![CDATA[ */
-        var google_conversion_id = 818877984;
-        var google_conversion_label = "W56FCL7S43sQoKy8hgM";
-        var google_remarketing_only = false;
-        /* ]]> */
-        </script>
-        <script   
-        src="//www.googleadservices.com/pagead/conversion.js">
-        </script>
-        <noscript>
-        <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt=""  
-        src="//www.googleadservices.com/pagead/conversion/818877984/?label=W56FCL7S43sQoKy8hgM&amp;guid=ON&amp;script=0"/>
-        </div>
-        </noscript>
-        <!-- Google Code for  
-        &#1050;&#1086;&#1085;&#1074;&#1077;&#1088;&#1089;&#1080;&#1080; Conversion  
-        Page -->
-        <script >
-        /* <![CDATA[ */
-        var google_conversion_id = 818913167;
-        var google_conversion_label = "g0PrCKW2-nsQj7--hgM";
-        var google_remarketing_only = false;
-        /* ]]> */
-        </script>
-        <script   
-        src="//www.googleadservices.com/pagead/conversion.js">
-        </script>
-        <noscript>
-        <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt=""  
-        src="//www.googleadservices.com/pagead/conversion/818913167/?label=g0PrCKW2-nsQj7--hgM&amp;guid=ON&amp;script=0"/>
-        </div>
-        </noscript>'; 
-    }
-?>
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1337253769702359'); 
-fbq('track', 'PageView');
-</script>
-<noscript>
-<img height="1" width="1" 
-src="https://www.facebook.com/tr?id=1337253769702359&ev=PageView
-&noscript=1"/>
-</noscript>
-<!-- End Facebook Pixel Code -->
-<?php
-require 'templates/common/new2/php/modal3_close.php';
+    include "facebook.php";
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+        require 'google_lk.php';
 ?>
 </body>
 </html>

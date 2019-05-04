@@ -41,7 +41,7 @@ if(!isset($my_title))
     $my_title = 'Подача Заявки на Получение Займа Онлайн | Сервис Vkredito';
     $description = 'Хотите получить денежный заем в сжатые сроки?Тогда заполните несложную форму заявка на нашем онлайн-сервисе по выдаче денежных займов в России';
 }
-include "templates/common/new2/php/form_header.php";
+include "templates/common/new/php/form_header.php";
 include "header.php";
 ?>
 <!--Start of Modal --> 
@@ -129,17 +129,6 @@ include "header.php";
     <div class="clearfix visible-sm visible-xs">&nbsp;</div>
 </div>
 <br>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- vkredito -->
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="9129421079"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <!-- Modal -->
 <div class="modal fade" id="tosModal" tabindex="-1" role="dialog" aria-labelledby="tosModalLabel">
     <div class="modal-dialog" role="document">
