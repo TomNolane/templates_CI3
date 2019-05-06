@@ -136,7 +136,7 @@ figure.hh1:hover {
  <?php require 'templates/common/new/php/modal.php'; ?>
 <div>
 <style scoped>
-@font-face{font-family:"'Dosis'";src:url(/templates/common/new/onts/Dosis-Regular.eot);src:url(/templates/common/nnew/nts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/nenew/ts/Dosis-Regular.woff) format("woff"),url(/templates/common/newnew/s/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:"'Dosis'";src:url(/templates/common/new/onts/Dosis-Regular.eot);src:url(/templates/common/nnew/nts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/new/fonts/Dosis-Regular.woff) format("woff"),url(/templates/common/newnew/s/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
 .hh4 {
     font-family: Dosis !important;
     font-size: 34px;
@@ -437,15 +437,15 @@ tr>td:first-child {
 
 <div class="row container3"><div class="col-md-12">
  <!-- Ru-zaimo.ru -->
-            <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="9321709999"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-4970738258373085"
+data-ad-slot="9321709999"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <h2 class="text-center hh hh4"> Для вас подобраны организации для <span class="gold_font">получения займа или кредита</span> в России:</h2>
  <h2 class="text-center hh hh4 grey" style="font-size: 18px;line-height:initial">На нашем сайте вы можете найти нужную информацию о кредитах и займах, которые можно получить в России. <br>Все публикуемые на сайте организации имеют лицензии и внесены в реестр кредитных организаций.</h2>
     <br>
@@ -466,6 +466,15 @@ tr>td:first-child {
         foreach($data as $item)
         {
             $domen = str_replace('www.','',$_SERVER['HTTP_HOST']); 
+
+            if (strpos($item['link'], 'guruleads'))
+                $item['link'] = $item['link'].'?sub1=Prelend';
+            else if(strpos($item['link'], 'kviku') || strpos($item['link'], 'tech'))
+                $item['link'] = $item['link'].'';
+            else if(strpos($item['link'], 'leadgid'))
+                $item['link'] = $item['link'].'?source=Prelend';
+            else
+                $item['link'] = $item['link'].'?source=Prelend';
 
                 $sum = number_format($item['amount'],0,'',' ');
                 $im = $item['img'];
@@ -517,7 +526,7 @@ END;
  <?php require 'templates/common/new/php/modal.php'; ?>
 <div>
 <style scoped>
-@font-face{font-family:"'Dosis'";src:url(/templates/common/new/onts/Dosis-Regular.eot);src:url(/templates/common/nnew/nts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/nenew/ts/Dosis-Regular.woff) format("woff"),url(/templates/common/newnew/s/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:"'Dosis'";src:url(/templates/common/new/onts/Dosis-Regular.eot);src:url(/templates/common/nnew/nts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/new/fonts/Dosis-Regular.woff) format("woff"),url(/templates/common/newnew/s/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
 .hh4 {
     font-family: Dosis !important;
     font-size: 34px;

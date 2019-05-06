@@ -46,7 +46,7 @@
     
 	echo '<div><style scoped>';
     require 'new/css/lk2.php';
-    require 'new/css/offerwall.php';
+    require 'new/css/offerwall.css';
     echo '</style></div>';
 
 if( $site == 'forzaim') { ?>

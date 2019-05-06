@@ -276,7 +276,7 @@ else if($this->uri->segment(1) == 'money')
     });';
 } 
 echo "}";
-require 'templates/common/new/s/exeption.js';
+require 'templates/common/new/js/exeption.js';
 ?>
 </script>
 <?php

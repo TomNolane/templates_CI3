@@ -10,16 +10,9 @@ var fingerprint0 = $("#fingerprint").val(), ip = $("#ip").val(), my_timer = 0; $
     }, 700)
 });
 function start_check() {
-    if (document.querySelector('#fingerprint')) {
-        if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || document.querySelector('#fingerprint').value == '') {
-            if (document.location.host == 'rublimo.ru' || document.location.host == 'zaimhome.ru') {
-                //send_clickfrod();
-            }
-        }
-    }
 } 
 $(document).on('click','.main-btn-offerwall',function(){
-    window.location.href = '/offerwall';
+    window.location.href = '/pixell';
     window.open(
         '/form/',
         '_blank'
@@ -28,7 +21,7 @@ $(document).on('click','.main-btn-offerwall',function(){
 });
 document.querySelectorAll("a[href='/form']").forEach((item, i) => {
     item.onclick = function () {
-        window.location.href = '/offerwall';
+        window.location.href = '/pixell';
         window.open(
             '/form/',
             '_blank'

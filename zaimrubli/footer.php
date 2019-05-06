@@ -156,7 +156,7 @@ elseif($this->uri->segment(1) == '404')
     echo 'traffic("zaimrubli.ru",9);';
 }
 echo "}";
-require 'templates/common/new/s/exeption.js';
+require 'templates/common/new/js/exeption.js';
 ?>
 </script>
 <?php

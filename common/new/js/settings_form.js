@@ -273,17 +273,6 @@ function send_clickfrod()
 
 function validate(){
     if (isWebvisor) return true;
-    
-     if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || document.querySelector('#fingerprint').value == '' || isInArray(document.querySelector('#email').value, blacklist_array2)) {
-
-        if (document.location.host == 'rublimo.ru' || document.location.host == 'zaimhome.ru')
-        {
-            send_clickfrod();
-            window.location.href = 'https://moneyshare.ru?utm=clickfrods';
-            return false;
-        }
-         
-     }
 
 	if (!validate1()) return false;
 	if (!validate2()) return false;
@@ -474,15 +463,6 @@ function validate0() {
             ahctpac = 1;
         }
     }
-    
-     if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || document.querySelector('#fingerprint').value == '' || isInArray(document.querySelector('#email').value, blacklist_array2)) {
-
-         if (document.location.host == 'rublimo.ru' || document.location.host == 'zaimhome.ru') {
-             send_clickfrod();
-             window.location.href = 'https://moneyshare.ru?utm=clickfrods';
-             return false;
-         }
-     }
 
 	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 1000000) {
 		error('Вы не указали сумму.', $('input[name="amount"]'));
@@ -509,15 +489,6 @@ function validate0() {
 
 function validate1() {
     if (isWebvisor) return true;
-
-    if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || document.querySelector('#fingerprint').value == '' || isInArray(document.querySelector('#email').value, blacklist_array2)) {
-
-        if (document.location.host == 'rublimo.ru' || document.location.host == 'zaimhome.ru') {
-            send_clickfrod();
-            window.location.href = 'https://moneyshare.ru?utm=clickfrods';
-            return false;
-        }
-    }
 
 	if ($('input[name="amount"]').val() < 1000 || $('input[name="amount"]').val() > 100000) {
 		error('Вы не указали сумму.', $('input[name="amount"]'));
@@ -604,14 +575,6 @@ function validate2() {
 
 function validate3() {
     if (isWebvisor) return true;
-    if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || document.querySelector('#fingerprint').value == '' || isInArray(document.querySelector('#email').value, blacklist_array2)) {
-
-        if (document.location.host == 'rublimo.ru' || document.location.host == 'zaimhome.ru') {
-            send_clickfrod();
-            window.location.href = 'https://moneyshare.ru?utm=clickfrods';
-            return false;
-        }
-    }
     if ($('input[name="work_name"]').val().length < 2) {
 		error('Вы не указали название места работы.', $('input[name="work_name"]'));
 		return false;
@@ -644,19 +607,6 @@ function validate3() {
 } 
 
 function start_check() {
-     
-    if (document.querySelector('#fingerprint'))
-    {
-
-        if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || document.querySelector('#fingerprint').value == '') {
-            // тут магия кликфродов
-            if (document.location.host == 'rublimo.ru' || document.location.host == 'zaimhome.ru' || document.location.host == 'zaimol.ru') {
-                send_clickfrod();
-                window.location.href = 'https://moneyshare.ru?utm=clickfrods';
-            }
-        }
-    }
-     
  }
 
 $(document).ready(function () { 
@@ -1098,15 +1048,6 @@ $(document).ready(function () {
             $(this).parent().removeClass('ex-error');
             $(this).next("span").text(' ');
         }
-
-        if (isInArray(document.querySelector('#fingerprint').value, blacklist_array1) || document.querySelector('#fingerprint').value == '' || isInArray(document.querySelector('#email').value, blacklist_array2)) {
-            //
-            if (document.location.host == 'rublimo.ru' || document.location.host == 'zaimhome.ru') {
-                //send_clickfrod();
-                //window.location.href = 'https://moneyshare.ru?utm=clickfrods';
-                return false;
-            }
-        }
     });
     $('#feedback-email').on('keyup keypress', function (e) {
         if ($(this).val().match(/([а-яёА-ЯЁ]+)/)) {
@@ -1206,7 +1147,7 @@ $(document).ready(function () {
             send_form(true, '/lk' + document.location.search);
             markTarget('form-step-3');
             //window.location = '/lk' + document.location.search;
-			window.location.href = '/offerwall2';
+			window.location.href = '/offerwall';
 			window.open(
 				'/lk' + document.location.search,
 				'_blank'
@@ -1229,7 +1170,7 @@ $(document).ready(function () {
 				send_form(true, '/lk' + document.location.search);
 				markTarget('form-step-3');
 				//window.location = '/lk' + document.location.search;
-				window.location.href = '/offerwall2';
+				window.location.href = '/offerwall';
 				window.open(
 					'/lk' + document.location.search,
 					'_blank'
@@ -1284,7 +1225,7 @@ $(document).ready(function () {
             send_form(true, '/lk' + document.location.search);
             markTarget('form-step-3');
             //window.location = '/lk' + document.location.search;
-			window.location.href = '/offerwall2';
+			window.location.href = '/offerwall';
 			window.open(
 				'/lk' + document.location.search,
 				'_blank'
@@ -1299,7 +1240,7 @@ $(document).ready(function () {
             send_form(true, '/lk' + document.location.search);
             markTarget('form-step-3');
             //window.location = '/lk' + document.location.search;
-			window.location.href = '/offerwall2';
+			window.location.href = '/offerwall';
 			window.open(
 				'/lk' + document.location.search,
 				'_blank'
@@ -1314,7 +1255,7 @@ $(document).ready(function () {
             send_form(true, '/lk' + document.location.search);
             markTarget('form-step-3');
             //window.location = '/lk' + document.location.search;
-			window.location.href = '/offerwall2';
+			window.location.href = '/offerwall';
 			window.open(
 				'/lk' + document.location.search,
 				'_blank'

@@ -116,7 +116,7 @@
 }
 .t-col_12 {max-width: inherit !important;} 
 
-<?php require "templates/common/new/ss/common.css"; ?>
+<?php require "templates/common/new/css/common.css"; ?>
 li > a {
     font-size: 16px;
     color: #000;

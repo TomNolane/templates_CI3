@@ -30,6 +30,15 @@ enable_page_level_ads: true
 
         foreach($data as $item)
         {
+            if (strpos($item['link'], 'guruleads'))
+                $item['link'] = $item['link'].'?sub1=Prelend';
+            else if(strpos($item['link'], 'kviku') || strpos($item['link'], 'tech'))
+                $item['link'] = $item['link'].'';
+            else if(strpos($item['link'], 'leadgid'))
+                $item['link'] = $item['link'].'?source=Prelend';
+            else
+                $item['link'] = $item['link'].'?source=Prelend';
+
                 $sum = number_format($item['amount'],0,'',' ');
                 $im = $item['img'];
                 $percent = $item['percent'];
@@ -37,6 +46,8 @@ enable_page_level_ads: true
                 $onclick = '"markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')"';
                 $over_sum = number_format( $item['amount'] * ( $item['percent'] + 100) / 100 ,0,'',' ');
                 $over_per_day = number_format( $item['amount'] * $item['percent'] / 100 ,0,'',' ');
+
+                
 
                 $words = array (
                     '',

@@ -31,7 +31,7 @@
         }
         if ($this->uri->segment(1) == 'form') 
         {
-            require "templates/common/new/ss/form.css";
+            require "templates/common/new/css/form.css";
             require "templates/zaimcoin/assets/css/style_form.css";
         }
 		echo '</style>'; 

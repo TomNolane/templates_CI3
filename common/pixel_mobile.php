@@ -1,7 +1,7 @@
 <div><style scoped>
 <?php
-require realpath(__DIR__ . '/..').'/common/new/css/lk2.php';
-require realpath(__DIR__ . '/..').'/common/new/css/pixell_mobile.php';
+require 'templates/common/new/css/lk2.php';
+require 'templates/common/new/css/pixell_mobile.css';
 ?> 
 </style></div>
 <div class="row container3"><div class="col-md-12">

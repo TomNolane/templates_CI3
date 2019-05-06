@@ -124,7 +124,7 @@
     }
 }
 <?php
-require 'templates/common/new/ss/common.css';
+require 'templates/common/new/css/common.css';
 ?>
 li > a {
     font-size: 16px;

@@ -34,13 +34,23 @@
     $base_url = str_replace("https:","",$base_url);
     $base_url = str_replace("http:","",$base_url);
     $pixel = $this->pixel->stat($base_url);
+
+    $email = 'support@'.getDomain();
+    $logo_foot = 'templates/common/img/logo-fanzaim.png';
+    switch ($this->uri->segment(1)) {
+        case 'offerwall': $logo_foot = 'templates/common/img/logo-fanzaim.png'; $email = 'support@fanzaim.ru'; break;
+        case 'pixell': $logo_foot = 'templates/common/img/logo-fanzaim.png'; $email = 'support@fanzaim.ru'; break;
+        case 'offerwall2': $logo_foot = 'templates/common/img/logo-edenga.png'; $email = 'support@edenga.ru'; break;
+        default: break;
+    }
+    
 	echo '<div><style scoped>';
 	require 'new/css/lk2.php';
 	echo '</style></div>'; 
 ?> 
 <div>
 <style scoped>
-@font-face{font-family:"'Dosis'";src:url(/templates/common/new/onts/Dosis-Regular.eot);src:url(/templates/common/nnew/nts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/nenew/ts/Dosis-Regular.woff) format("woff"),url(/templates/common/newnew/s/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:"'Dosis'";src:url(/templates/common/new/onts/Dosis-Regular.eot);src:url(/templates/common/nnew/nts/Dosis-Regular.eot?#iefix) format("embedded-opentype"),url(/templates/common/new/fonts/Dosis-Regular.woff) format("woff"),url(/templates/common/newnew/s/Dosis-Regular.ttf) format("truetype");font-weight:400;font-style:normal}
 .hh4 {
     font-family: Impact !important;
     font-size: 34px;

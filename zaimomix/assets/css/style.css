@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'HelveticaRegular';
   src: url("/templates/common/new/fonts/HelveticaRegular.eot");
-  src: url("/templates/common/new/onts/HelveticaRegular.eot?#iefix") format("embedded-opentype"), url("/templates/common/nnew/nts/HelveticaRegular.woff") format("woff"), url("/templates/common/nenew/ts/HelveticaRegular.ttf") format("truetype");
+  src: url("/templates/common/new/onts/HelveticaRegular.eot?#iefix") format("embedded-opentype"), url("/templates/common/nnew/nts/HelveticaRegular.woff") format("woff"), url("/templates/common/new/fonts/HelveticaRegular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

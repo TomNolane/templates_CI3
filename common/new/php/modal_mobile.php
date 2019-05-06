@@ -1,5 +1,5 @@
 <?php
-if ($this->uri->segment(1) == 'offerwall' || getDomain() == 'ru-zaimo.ru' || getDomain() == 'sumas.ru') {
+if ($this->uri->segment(1) == 'offerwall' || $this->uri->segment(1) == 'pixell' || getDomain() == 'ru-zaimo.ru' || getDomain() == 'sumas.ru' | getDomain() == 'dengos.ru') {
   $this->load->model('analytics/forms_model', 'analytics');
   $json = $this->analytics->popup10secGetJson2();
 
@@ -8,7 +8,7 @@ if ($this->uri->segment(1) == 'offerwall' || getDomain() == 'ru-zaimo.ru' || get
   // $url = 'https://pxl.leads.su/click/3b00787cbb4b9484e25cbe512163ca7d?source=Popup&aff_sub1=Popup&aff_sub2=Popup&aff_sub3=Popup&aff_sub4=Popup';
   
 }
-else if ($this->uri->segment(1) == 'offerwall2')
+else if ($this->uri->segment(1) == 'offerwall')
 {
   $this->load->model('analytics/forms_model', 'analytics');
   $json = $this->analytics->popup10secGetJson3();
