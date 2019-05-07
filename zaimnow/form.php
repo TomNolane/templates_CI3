@@ -117,7 +117,7 @@ include "header.php";
             <input type="hidden" name="ad_id" value="<?=$ad_id?>">
             <input type="hidden" name="fingerprint" id="fingerprint" value="">
             <input type="hidden" id="amount" name="amount" value="<?=$sum?>"/>
-            <input type="hidden" id="period" name="period" value="<?=$preriod?>"/>
+            <input type="hidden" id="period" name="period" value="<?=$period?>"/>
             <div class="tab-content">
                 <div id="firstStep" class="tab-pane active">
                     <?php require 'form1.php';?>

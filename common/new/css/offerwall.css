@@ -196,7 +196,7 @@ tr>td:first-child {
 }
 
 .letsminimize {width: 80% !important;}
-.mycol {margin-right: -35px;}
+.mycol {margin-right: -35px;margin-left: 35px;}
 .my-md2 {width: 20% !important;}
 .start-text {
     color: #959595;
@@ -214,9 +214,7 @@ tr>td:first-child {
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
     .my-md2 {width: 20% !important;}
-    .colfix {
-        margin-left: -15px;
-    }
+    .colfix {margin-left: -15px;}
     .lk-text {font-size: 85%;}
     .caption {font-size: 92%;}
 }
@@ -231,17 +229,17 @@ tr>td:first-child {
     .hh4 span:first-of-type {font-size: 67% !important;}
     .green_font {font-size: 77%;}
 }
-
 @media (min-width: 481px) and (max-width: 767px) {
-    .my-md2 {width: 53% !important;}
-    .colfix {margin-left: 4%;}
+    .my-md2 {width: 50% !important;}
+    .mycol{margin-left: 20px;}
     .hh4 span:first-of-type {font-size: 67% !important;}
     .green_font {font-size: 77%;}
     .top-exclamation {display: none;}
+
 }
 @media (min-width: 320px) and (max-width: 480px) {
-    .my-md2 {width: 53% !important;}
-    .colfix {margin-left: 6%;}
+    .my-md2 {width: 50% !important;}
+    .mycol{margin-left: 20px;}
     .hh4 span:first-of-type {
         color: #333 !important;
         font-size: 80% !important;
@@ -250,6 +248,7 @@ tr>td:first-child {
     .start-text {font-size: 80%;}
     .end-text {font-size: 80%;}
     .top-exclamation {display: none;}
+
 }
 
 .skewheader {

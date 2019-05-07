@@ -13,9 +13,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell', 'offer
         <div class="row">
             <div class="col-sm-8">
                 <div class="ex-footer-logo">
-                    <a href="/">
-                        <img src="/templates/bzaim/assets/img/logo.png" alt="logo-foot.png">
-                    </a>
+                    <img src="/templates/bzaim/assets/img/logo.png" alt="logo-foot.png">
                 </div>
                 <p class="ex-text spec_footer4">
                     Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 дня до 1 года. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: ' . $email . '  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
@@ -50,7 +48,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell', 'offer
     </div>
 </footer>'; 
 }
-else if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'pixell')))
+else if(in_array($this->uri->segment(1), array('offerwall', 'pixell')))
 {
     echo '<footer class="ex-footer">
         <div class="container">
@@ -72,6 +70,28 @@ else if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 
         </div>
 </footer>';
 }
+else if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3')))
+{
+    echo '<footer class="ex-footer">
+        <div class="container">
+            <div class="row">
+            <hr/> 
+                <div class="ex-footer-logo col-md-3">
+                    <img src="/templates/bzaim/assets/img/logo.png" alt="logo-foot.png">
+                </div>
+                <div class="col-xs-12 col-md-9">';
+                require 'adsence.php';
+                echo '</div>
+            </div>
+             <div class="col-sm-12">
+                <p class="ex-text">
+                    Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 дня до 1 года. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: ' . $email . '  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+                    <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001. Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
+                </p>
+            </div>
+        </div>
+</footer>';
+}
 else if($this->uri->segment(1) == 'form' )
 {
     echo '<footer class="ex-footer">
@@ -79,7 +99,7 @@ else if($this->uri->segment(1) == 'form' )
             <div class="row">
                 <div class="col-xs-12">
                     <div class="text-center">
-                        <a href="/"><img src="/templates/bzaim/assets/img/logo-2.png" alt="logo-2.png"></a>
+                        <img src="/templates/bzaim/assets/img/logo-2.png" alt="logo-2.png">
                         <p class="spec_footer4">Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>'.$email.' </p>
                     </div>
                 </div>

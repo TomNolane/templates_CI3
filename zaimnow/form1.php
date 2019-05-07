@@ -150,7 +150,7 @@
                 <div class="col-md-9 offset-md-3">
                     <div class="row justify-content-center">
                         <div class="col-md-6">
-                            <button type="button" id="submitOne" class="nav nav-tabs ex-main-btn text-center"> Получить деньги </button>
+                            <button type="button" id="next1" class="nav nav-tabs ex-main-btn text-center"> Получить деньги </button>
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="ex-foot-logo">
-                    <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                    <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                         <img src="<?=$logo_foot?>" alt="logo-footer.png">
                     <?php } else { ?>
                         <img alt="logo.png" src="/templates/zaimomir/assets/img/logo-footer.png">

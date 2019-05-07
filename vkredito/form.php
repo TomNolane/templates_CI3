@@ -44,24 +44,6 @@ if(!isset($my_title))
 include "templates/common/new/php/form_header.php";
 include "header.php";
 ?>
-<!--Start of Modal --> 
-<div class="modal__popup">
-    <input id="modal__trigger" type="checkbox" />
-    <label for="modal__trigger"></label>
-    <div class="modal__overlay" role="dialog" aria-labelledby="modal__title" aria-describedby="modal_desc">
-        <div class="modal__wrap text-center"> 
-            <h2 id="modal__title" class="header1">Подтвердите адрес вашей электронной почты</h2>
-          <hr class="hr_black">
-          
-            <p class="text" id="modal__desc"><span id="form_name"></span> на указанный email было отправлено письмо.</p>
-          <p class="text2">Подтвердите свою почту и учавствуйте в розыгрыше iPhone XS уже сегодня</p>
-            
-          <img class='img_iphone img-responsive' src='//zaimhome.ru/templates/common/img/iphone3.png'>
-          <div class="text-center"><input type="button" class="btn_modall" id="btn_modall" value="Закрыть"></div>
-        </div>
-    </div>
-</div>
-<!--End of Modal   -->
 <div class="container">
     <section class="form">
         <div class="row">

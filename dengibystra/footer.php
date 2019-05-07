@@ -4,7 +4,7 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
     require 'adsence.php';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell', 'offerwall', 'offerwall2', 'vitrina'))) 
+if (!in_array($this->uri->segment(1), array('lk3', 'pixell', 'offerwall', 'offerwall2', 'vitrina'))) 
 {
 echo '<footer class="ex-start-footer">
     <div class="container">
@@ -15,7 +15,7 @@ echo '<footer class="ex-start-footer">
                         <img src="/templates/dengibystra/assets/img/logo-foot.png" alt="logo-foot.png">
                     </a>
                 </div>
-                <p class="ex-text spec_footer4">
+                <p class="ex-text">
                     Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 дня до 1 года. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: '.$email.'  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
                     <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001 | +7(495) 006 19 61 | Россия, Санкт-Петербург, улица Осипенко, 12
                 </p>
@@ -62,7 +62,7 @@ echo '<footer class="ex-start-footer">
     </div>
 </footer>';
 }
-if (in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell', 'offerwall', 'offerwall2', 'vitrina'))) 
+if (in_array($this->uri->segment(1), array('lk3', 'pixell', 'offerwall', 'offerwall2', 'vitrina'))) 
 {
     echo '<footer class="ex-footer">
         <div class="container">
@@ -114,7 +114,7 @@ else if($this->uri->segment(1) == 'form' )
     require 'footer_common_js.php';
     echo '/* private JS */';
     require 'templates/dengibystra/assets/js/main.js'; 
-if (in_array($this->uri->segment(1), array(' ', '', 'index'))) 
+if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) 
 { 
 ?>
         $("#rangeSlider").ionRangeSlider({
@@ -220,12 +220,12 @@ if (in_array($this->uri->segment(1), array(' ', '', 'index')))
 }
 else if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'pixell')))
 {
-    include "templates/common/new/js/lk.js";      
-    echo 'traffic("dengibystra.ru",4);';  
+    include "templates/common/new/js/lk.js";
+    echo 'traffic("dengibystra.ru",4);';
 }
 else if($this->uri->segment(1) == '404')
 {
-    echo 'traffic("dengibystra.ru",9);'; 
+    echo 'traffic("dengibystra.ru",9);';
 }
 echo "}";
 require 'templates/common/new/js/exeption.js';

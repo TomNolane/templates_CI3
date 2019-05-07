@@ -13,7 +13,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
 <div class="container" style="width: 100%">
     <div class="col-sm-2 text-center">
         <div class="ex-footer-logo">
-            <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+            <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                 <img src="<?=$logo_foot?>" class="special_foot22" alt="logo-footer.png">
             <?php } else { ?>
                 <img alt="logo.png" src="/templates/zaimhome/assets/img/header-logo.png" class="special_foot22">

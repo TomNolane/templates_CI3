@@ -1,22 +1,22 @@
 <?php 
 require 'templates/common/new/js/get_display_size.js';
-require 'templates/common/new/s/jquery-1.11.3.min.js';
-require 'templates/common/new/s/bootstrap.min.js';
-require 'templates/common/new/s/detect.min.js';
-require 'templates/common/new/s/get_parameter.js'; 
-require 'templates/common/new/s/ion.rangeSlider.min.js';
-require 'templates/common/new/s/jquery.maskedinput.1.4.2.min.js';
-require 'templates/common/new/s/jquery.poshytip.min.js';
-require 'templates/common/new/s/jquery.form-validator.js';
-require 'templates/common/new/s/jquery.suggestions.min.js';
-require 'templates/common/new/s/coockie.js';
-require 'templates/common/new/s/traffic.js';
-require 'templates/common/new/s/modal.js';
-require 'templates/common/new/s/owl.carousel.min.js';
-require 'templates/common/new/s/settings_form.js';
-require 'templates/common/new/s/backtotop.js';
-require 'templates/common/new/s/fingerprintjs2.js';
-require 'templates/common/new/s/count_time.js';
+require 'templates/common/new/js/jquery-1.11.3.min.js';
+require 'templates/common/new/js/bootstrap.min.js';
+require 'templates/common/new/js/detect.min.js';
+require 'templates/common/new/js/get_parameter.js'; 
+require 'templates/common/new/js/ion.rangeSlider.min.js';
+require 'templates/common/new/js/jquery.maskedinput.1.4.2.min.js';
+require 'templates/common/new/js/jquery.poshytip.min.js';
+require 'templates/common/new/js/jquery.form-validator.js';
+require 'templates/common/new/js/jquery.suggestions.min.js';
+require 'templates/common/new/js/coockie.js';
+require 'templates/common/new/js/traffic.js';
+require 'templates/common/new/js/modal.js';
+require 'templates/common/new/js/owl.carousel.min.js';
+require 'templates/common/new/js/settings_form.js';
+require 'templates/common/new/js/backtotop.js';
+require 'templates/common/new/js/fingerprintjs2.js';
+require 'templates/common/new/js/count_time.js';
 
 if ($this->uri->segment(1) != 'form')
 {
@@ -24,5 +24,5 @@ if ($this->uri->segment(1) != 'form')
 }
 if (in_array($this->uri->segment(1), array(' ', '', 'index'))) 
 {
-    require 'templates/common/new/s/for_index.js';
+    require 'templates/common/new/js/for_index.js';
 }?>

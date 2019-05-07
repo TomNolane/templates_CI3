@@ -2,11 +2,13 @@
 <nav class="navbar">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed hidden-sm hidden-xs" data-toggle="collapse" data-target="#navbar-collapse-1"
+             <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1"
                 aria-expanded="false">
                 <span class="sr-only">Раскрыть меню</span>
                 <img src="/templates/edenga/assets/img/mobile/menu.png" alt="menu.png">
             </button>
+            <? endif; ?>
             <a class="navbar-brand" href="/">
                 <?php $logo_addon = '/templates/edenga/assets/img/logo.png';
 				switch ($this->uri->segment(1)) {
@@ -17,6 +19,7 @@
 				<img src="<?=$logo_addon?>" alt="Image missing">
             </a>
         </div>
+         <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav menu">
                 <li>
@@ -36,6 +39,7 @@
                 </li>
             </ul>
         </div>
+        <? endif; ?>
     </div>
 </nav>
 <!-- Modal -->

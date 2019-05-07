@@ -69,12 +69,12 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
             <br class="hidden-xs hidden-sm">
             <div class="row">
                
-                    <?php if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'lk3' ||  $this->uri->segment(1) == 'offerwall') { ?>
-                     <div class="col-md-2 hidden-xs">
+                     <?php if (!in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                     <div class="col-md-2">
                         <img alt="logo.png" src="/templates/godzaim/assets/img/logo-footer.png">
                     <?php } else { ?>
                      <div class="col-md-2 col-xs-12">
-                        <img src="/templates/godzaim/assets/img/logo-footer.png" alt="logo-footer.png" class="logo logo-spec">
+                        <img src="<?=$logo_foot?>" alt="logo-footer.png" class="logo logo-spec">
                     <?php } ?>
                 </div>
                 <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>

@@ -21,7 +21,8 @@
                                                 <input type="hidden" id="form_slrd" name="form_slrd" value="15" />
                                                 <input type="hidden" name="fingerprint" id="fingerprint" value="">
                                                 <input type="hidden" name="ip" id="ip" value="<?php echo $ip;?>">
-                                                <input type="hidden" name="referer" value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
+                                                <input type="hidden" name="referer"
+                                                    value="<?php if (isset($_SERVER['HTTP_REFERER'])) echo $_SERVER['HTTP_REFERER']; ?>">
                                                 <?php if (!empty($_REQUEST['ad_id'])) echo '<input type="hidden" name="ad_id" value="'.$_REQUEST['ad_id'].'">'; ?>
                                             </figure>
                                             <div class="ex-slider-info">
@@ -29,7 +30,8 @@
                                                 <span>100 тыс.</span>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary main-btn-offerwall">получить деньги</button>
+                                        <button type="submit" class="btn btn-primary main-btn-offerwall">получить
+                                            деньги</button>
                                     </form>
                                 </div>
                             </div>
@@ -62,34 +64,41 @@
                             </div>
                         </div>
                     </div>
-    <?php if($setting_array['is_mobile'] != 'мобила') { echo '<br><br><br>'; require 'adsence.php'; } ?>
-    <div id="ex-how-receive" class="row hidden-xs hidden-sm">
-        <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
-            <div>
-                <a href="#" onClick="goToUp(); return false;" style="text-decoration: none;">
-                    <i class="ex-notebook-icon"></i>
-                    <span>Выберите нужную сумму</span>
-                </a>
+                    <?php if($setting_array['is_mobile'] != 'мобила') { echo '<br><br><br>'; require 'adsence.php'; } ?>
+                    <div id="ex-how-receive" class="row hidden-xs hidden-sm">
+                        <div
+                            class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
+                            <div>
+                                <a href="#" onClick="goToUp(); return false;" style="text-decoration: none;">
+                                    <i class="ex-notebook-icon"></i>
+                                    <span>Выберите нужную сумму</span>
+                                </a>
+                            </div>
+                            <p>После выбора суммы доступна информация о сроке займа, комиссии, вероятности одобрения</p>
+                        </div>
+                        <div
+                            class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
+                            <div>
+                                <a href="#" onClick="goToForm(); return false;" style="text-decoration: none;">
+                                    <i class="ex-signature-icon"></i>
+                                    <span>Заполните заявку</span>
+                                </a>
+                            </div>
+                            <p>Вносите актуальные данные в анкету, это повысит вероятность выдачи займа</p>
+                        </div>
+                        <div
+                            class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
+                            <div>
+                                <a href="#" onClick="goToReceiveMoney(); return false;" style="text-decoration: none;">
+                                    <i class="ex-card-icon"></i>
+                                    <span>Получите деньги</span>
+                                </a>
+                            </div>
+                            <p>Перевод поступает любым удобным способом.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>После выбора суммы доступна информация о сроке займа, комиссии, вероятности одобрения</p>
-        </div>
-        <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
-            <div>
-                <a href="#" onClick="goToForm(); return false;" style="text-decoration: none;">
-                    <i class="ex-signature-icon"></i>
-                    <span>Заполните заявку</span>
-                </a>
-            </div>
-            <p>Вносите актуальные данные в анкету, это повысит вероятность выдачи займа</p>
-        </div>
-        <div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
-            <div>
-                <a href="#" onClick="goToReceiveMoney(); return false;" style="text-decoration: none;">
-                    <i class="ex-card-icon"></i>
-                    <span>Получите деньги</span>
-                </a>
-            </div>
-            <p>Перевод поступает любым удобным способом.</p>
         </div>
     </div>
 </div>

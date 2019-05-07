@@ -88,8 +88,20 @@
     {
         echo '<body>
         <nav class="navbar navbar-expand-lg ex-main-header ex-grey-header">
-            <div class="container">
-                <a class="ex-brand navbar-brand" href="/"></a>
+            <div class="container">';
+            if (in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina'))) { 
+                $logo_addon = '/templates/zaimhunter/assets/img/logo-zaimhunter.png';
+                switch ($this->uri->segment(1)) {
+                    case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                    case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+                    default: break;
+                } ?>
+                <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
+<?php
+            }
+            else
+            {
+                echo '<a class="ex-brand navbar-brand" href="/"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -109,8 +121,10 @@
                             <a class="nav-link " href="/money">Получение денег</a>
                         </li>
                     </ul>
-                </div>
-            </div>
+                </div>';
+            }
+                
+            echo '</div>
         </nav>';
     }
 ?> 

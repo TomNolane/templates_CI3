@@ -11,9 +11,9 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
 ?>
 <footer class="ex-main-footer">
     <div class="container">
-        <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+        <?php if (!in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
         <h2>Forzaim</h2> 
-        <p class="spec_footer7">
+        <p >
             Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <?=$email?> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
             <span>Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
             Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.</span>
@@ -22,7 +22,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
         <?php } else { ?>
             <div class='row'>
                 <div class='col-md-3'>
-                    <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                    <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                         <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png">
                     <?php } else { ?>
                         <h2 class="black spec-logo hidden-xs hidden-sm" style="color: #fff !important">Forzaim</h2>

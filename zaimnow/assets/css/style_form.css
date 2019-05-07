@@ -7,7 +7,7 @@
 }
 
 .ex-form .ex-anketa-main .form-group input {
-    padding: 15px 5px 15px 15px
+    padding: 20px 5px 20px 15px
 }
 
 ::placeholder {
@@ -105,11 +105,26 @@
 .helpblock {
     float: right !important
 }
+
 .valid {
     border: 2px solid green !important;
     color: green;
 }
+
 .error {
     border: 2px solid red !important;
     color: red;
+}
+
+.glyphicon {
+    position: absolute;
+    top: 15px;
+}
+
+main.ex-form .ex-bg-form .tab-content .ex-main-form label {
+    top: -15px;
+}
+
+input {
+    height: 50px !important;
 }

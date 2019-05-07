@@ -36,6 +36,8 @@ enable_page_level_ads: true
                 $item['link'] = $item['link'].'';
             else if(strpos($item['link'], 'leadgid'))
                 $item['link'] = $item['link'].'?source=Prelend';
+            else if(strpos($item['link'], 'leadbrothers'))
+                $item['link'] = $item['link'].'?s1=Prelend';
             else
                 $item['link'] = $item['link'].'?source=Prelend';
 

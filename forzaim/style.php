@@ -26,6 +26,10 @@
         {
             require "templates/forzaim/assets/css/style_lk.css";
             require "templates/common/new/css/lk.php";
+            if ($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'vitrina') 
+            echo 'footer.ex-main-footer {
+                background-color: #000 !important;
+            }';
         }
         if ($this->uri->segment(1) == 'form') 
         {

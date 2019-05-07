@@ -32,5 +32,9 @@
         require "templates/common/new/css/form.css";
         require "templates/zaimomir/assets/css/style_form.css";
     }
+    if ($this->uri->segment(1) == 'pixell')
+    {
+        echo '.row{display: grid !important;}';
+    }
     echo '</style>'; 
 ?>

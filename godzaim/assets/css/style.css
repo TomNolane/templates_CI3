@@ -765,7 +765,7 @@ h1, h2{font-size:30px;}
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  background: url(/templates/common/new/mg/cd-top-arrow.png) center 50% no-repeat #093b3f;
+  background: url(/templates/common/new/img/cd-top-arrow.png) center 50% no-repeat #093b3f;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity .3s 0s, visibility 0s .3s;

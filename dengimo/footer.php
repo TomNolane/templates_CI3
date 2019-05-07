@@ -16,12 +16,12 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell')))
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="row">
            
-            <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
-             <div class="col-md-3 col-sm-3 hidden-xs"> 
+            <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+             <div class="col-md-3 col-sm-3 col-xs-12"> 
                 <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png">
             <?php } else { ?>
              <div class="col-md-3 col-sm-3 col-xs-12"> 
-                <img src="/templates/dengimo/assets/img/logo-footer.png" class="logo logo-spec" alt="logo-footer.png">
+                <img src="templates/dengimo/assets/img/logo.png" class="logo logo-spec" alt="logo-footer.png">
             <?php } ?>
             </div>
             <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>

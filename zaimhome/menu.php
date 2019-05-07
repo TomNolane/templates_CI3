@@ -3,12 +3,14 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="navbar-header">
+                <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
                 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                 <? endif; ?>
                 <a href="/" class="navbar-brand">
                     <?php $logo_addon = '/templates/zaimhome/assets/img/zaimhome_logo.png';
                     switch ($this->uri->segment(1)) {
@@ -19,6 +21,7 @@
                     <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
                 </a>
             </div>
+            <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -83,6 +86,7 @@
                     </li>
                 </ul>
             </div>
+             <? endif; ?>
         </div>
     </div>
 </div>

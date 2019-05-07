@@ -27,14 +27,7 @@ $email = 'support@dengomir.ru';
 <?php 
 // popup
 require 'templates/common/new/php/modal.php';
-// if ($setting_array['is_mobile'] != 'мобила') require 'templates/common/new/php/modal_polygon.php';
-// else require 'templates/common/new/php/modal_mobile.php';
 require 'menu.php';
-
-if($this->uri->segment(1) == 'form')
-{
-    require 'templates/common/new/php/modal2.php';
-}
 
 if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', ' ', '', 'index', 'form', 'vitrina'))) {
     echo '<br><span id="adsence_about"></span>';

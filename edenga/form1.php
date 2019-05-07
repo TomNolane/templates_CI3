@@ -127,7 +127,7 @@
 </div>
 <br>
 
-  <div class="form-group has-feedback">
+  <div class="form-group has-feedback hiddem">
     <div class="col-sm-4"><img src="<?php echo $_SESSION['captcha']['image_src'] ?>"/></div>
 	<div class="col-sm-8 col-xs-12">
         <br>

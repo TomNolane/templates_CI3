@@ -105,7 +105,7 @@ else
     echo '
     <footer class="ex-main-footer-bg">
         <div class="container">';
-                if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) 
+                if (!in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) 
                 {
                     echo '<div class="ex-foot-logo text-center">
                         <img src="/templates/zaimcoin/assets/img/logo-footer.png" alt="logo-footer.png">

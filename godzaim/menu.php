@@ -2,7 +2,7 @@
 <div class="page">
 <nav class="navbar">
 	<div class="container">
-		<div class="navbar-header">
+		<div class="navbar-header"> 
             <a class="navbar-brand" href="/">
                 <?php $logo_addon = '/templates/godzaim/assets/img/logo.png';
                 switch ($this->uri->segment(1)) {
@@ -12,11 +12,14 @@
                 } ?>
                 <img src="<?=$logo_addon?>" alt="Image missing"> 
             </a>
+             <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
 			<button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
 				<span class="sr-only">Меню</span>
 				<i class="glyphicon glyphicon-menu-hamburger"></i>
 			</button>
+             <? endif; ?>
         </div>
+         <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
 		<div class="collapse navbar-collapse" id="navbar-collapse-1">
 			<ul class="nav navbar-nav menu">
 				<li><a href="/about">О сервисе</a></li>
@@ -25,6 +28,7 @@
 				<li><a href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a></li>
 			</ul>
 		</div>
+        <?php } ?>
 	</div>
 </nav>
 <!-- Modal -->

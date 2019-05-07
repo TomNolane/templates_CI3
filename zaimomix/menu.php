@@ -262,20 +262,28 @@
                 </div>
             </nav>';
     }
-    elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2') {
-        echo '<body class="ex-sticky">
+    elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'pixell' || $this->uri->segment(1) == 'vitrina' || $this->uri->segment(1) == 'offerwall') {
+echo '<body class="ex-sticky">
         <nav class="navbar navbar-expand-lg ex-main-header-white">
             <div class="container">
-                <a class="ex-brand navbar-brand" href="/"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+               ';
+                 if (in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina')))  {
+                echo '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end " id="navbarCollapse">
-                    <div class="navbar-nav ">
-                        <a class="ex-dropdown nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                </button>';
+                 }
+                 else
+                 {
+                    echo ' <a class="ex-brand navbar-brand" href="/"></a>';
+                 }
+                echo '<div class="collapse navbar-collapse justify-content-end " id="navbarCollapse">
+                    <div class="navbar-nav ">';
+                    if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina'))) {
+                        echo '<a class="ex-dropdown nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            меню';?>
+                            меню'; }
+                    ?>
                             <?php $logo_addon = '/templates/zaimrubli/assets/img/logo.svg';
                             switch ($this->uri->segment(1)) {
                                     case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
@@ -283,16 +291,19 @@
                                     default: break;
                             } ?>
                             <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
-                        <?php echo '</a>
-                        <div class="dropdown-menu justify-content-end" aria-labelledby="navbarDropdown">
+                        <?php  if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina'))) { echo '</a>'; }
+
+                    if (in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina'))) {
+                        echo '<div class="dropdown-menu justify-content-end" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/about">О сервисе</a>
                             <a class="dropdown-item" href="/oferta">Публичная оферта</a>
                             <a class="dropdown-item" href="/soglasie">Согласие на обработку данных</a>
                             <a class="dropdown-item" href="/rules">Правила предоставления займов</a>
                             <a class="dropdown-item" href="/faq">Часто задаваемые вопросы</a>
                             <input  class="ex-ask-question ex-main-btn ex-question-btn text-center" value="задать вопрос"/>
-                        </div>
-                    </div>
+                        </div>';
+                        }
+                    echo '</div>
                 </div>
             </div>
         </nav>';

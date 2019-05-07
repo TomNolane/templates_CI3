@@ -2,7 +2,7 @@
 	<nav class="navbar">
 		<div class="container">
 		
-			<div class="navbar-header">
+			<div class="navbar-header text-center">
 				<a class="navbar-brand" href="/">
 					<?php $logo_addon = '/templates/dengimo/assets/img/logo.png';
                     switch ($this->uri->segment(1)) {

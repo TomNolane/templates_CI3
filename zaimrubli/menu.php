@@ -1,5 +1,6 @@
 <nav class="navbar navbar-default ex-main-header">
     <div class="container">
+         <?php if(!in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#zaimrubliCollapsed">
                 <span class="icon-bar"></span>
@@ -23,6 +24,7 @@
                 <li><a href="" data-toggle="modal" id="askQuestion_" data-target="#askQuestion"><span role="button" class="ex-feedback">Обратная связь</span></a></li>
             </ul>
         </div>
+         <?php } ?>
     </div>
 </nav>
 <!-- Modal -->

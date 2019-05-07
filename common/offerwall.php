@@ -38,7 +38,7 @@
     $email = 'support@'.getDomain();
     $logo_foot = 'templates/common/img/logo-fanzaim.png';
     switch ($this->uri->segment(1)) {
-        case 'offerwall': $logo_foot = 'templates/common/img/logo-fanzaim.png'; $email = 'support@fanzaim.ru'; break;
+        case 'offerwall': $logo_foot = 'templates/common/img/logo-edenga.png'; $email = 'support@edenga.ru'; break;
         case 'pixell': $logo_foot = 'templates/common/img/logo-fanzaim.png'; $email = 'support@fanzaim.ru'; break;
         case 'offerwall2': $logo_foot = 'templates/common/img/logo-edenga.png'; $email = 'support@edenga.ru'; break;
         default: break;
@@ -49,7 +49,7 @@
     require 'new/css/offerwall.css';
     echo '</style></div>';
 
-if( $site == 'forzaim') { ?>
+if( $site == 'forzaim111') { ?>
 <nav class="ex-main-header ex-transparent hidden-xs">
     <div class="container">
         <i class="ex-hamburger"></i>
@@ -96,6 +96,8 @@ if( $site == 'forzaim') { ?>
                 $item['link'] = $item['link'].'';
             else if(strpos($item['link'], 'leadgid'))
                 $item['link'] = $item['link'].'?source=Offerwall';
+            else if(strpos($item['link'], 'leadbrothers'))
+                $item['link'] = $item['link'].'?s1=Offerwall';
             else
                 $item['link'] = $item['link'].'?source=Offerwall';
             

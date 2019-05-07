@@ -3,12 +3,14 @@
     <div class="container">
         <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header">
             <div class="navbar-header">
+            <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
                 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                 <? endif; ?>
                 <a href="/" rel="nofollow">
                     <?php $logo_addon = '/templates/zaimhunter/assets/img/logo-zaimhunter.png';
                     switch ($this->uri->segment(1)) {
@@ -19,6 +21,7 @@
                     <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
                 </a>
             </div>
+            <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right"> 
                     <li class="ex-dropdown-menu dropdown"><a href="#" id="drop1" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">О сервисе</a>
@@ -44,6 +47,7 @@
                     <li><a rel="nofollow" href="" data-toggle="modal" id="askQuestion_" data-target="#askQuestion">Обратная связь</a></li>
                 </ul>
             </div>
+             <? endif; ?>
         </nav>
     </div>
 </header>

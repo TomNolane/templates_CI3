@@ -18,7 +18,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
              <div class="col-md-2 col-sm-4"> 
          <?php } ?>
 
-                <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                <?php if(in_array($this->uri->segment(1), array( 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                     <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png">
                 <?php } else { ?>
                     <img alt="logo.png" src="/templates/vkredito/assets/img/logo.png" class="logo">

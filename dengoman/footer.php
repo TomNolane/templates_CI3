@@ -18,9 +18,9 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell')))
     <div class="container">
         <div class="col-md-12 ">
             <div class="row"> 
-                <div class="col-md-3 hidden-xs">
+                <div class="col-md-3">
                     <h1 class="logo-spec" id="for_lk">
-                        <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                        <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                             <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png">
                         <?php } else { ?>
                              <img alt="logo.png" src="/templates/dengoman/assets/img/logo.png">

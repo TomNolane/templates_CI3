@@ -1,7 +1,21 @@
 <body class="ex-sticky">
 <nav class="navbar navbar-expand-lg ex-main-header">
     <div class="container">
-        <a class="ex-brand navbar-brand" href="/"></a>
+     <? if (in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina'))) : ?>
+         <?php 
+         $logo_addon = '/templates/dengomir/assets/img/icons/logo-header.png';
+            switch ($this->uri->segment(1)) {
+                case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+                default: break;
+            } 
+            echo '<img src="'.$logo_addon.'" alt="Image missing">';
+            ?>
+        <? endif; ?>
+         <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina'))) : ?>
+         <a class="ex-brand navbar-brand" href="/"></a>
+         <? endif; ?>
+         <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,9 +44,9 @@
                 <li class="nav-item">
                     <a class="nav-link ex-ask-question" href="#">Обратная связь</a>
                 </li>
-
             </ul>
         </div>
+        <? endif; ?>
     </div>
 </nav>
 <!-- Modal -->

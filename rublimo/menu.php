@@ -12,7 +12,8 @@
 							<img class="img-responsive" src="<?=$logo_addon?>" alt="Image missing">
 				</a>
 			</div>
-			<div class="navbar-collapsem hidden-xs" id="navbar-collapse-1">
+			<? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
+			<div class="navbar-collapsem" id="navbar-collapse-1">
 				<ul class="nav navbar-nav menu">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" >
@@ -101,6 +102,7 @@
 					</li>
 				</ul>
 			</div>
+			<? endif; ?>
 		</div>
 	</nav> 
 </div>   

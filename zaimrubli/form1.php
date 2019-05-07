@@ -143,7 +143,7 @@
                             <div class="col-md-8">
                                 <label class="checkbox-inline">
                                     <span class="font12">Я согласен(на) на обработку персональных данных и с публичной офертой</span>
-                                    <input type="checkbox" onClick="checkme_form();" id="agree" value="1" checked>
+                                    <input type="checkbox" onClick="checkMee();" id="agree" value="1" checked>
                                     <i></i>
                                 </label>
                             </div>

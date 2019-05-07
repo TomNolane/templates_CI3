@@ -34,6 +34,8 @@ require 'templates/common/new/css/pixell_mobile.css';
                 $item['link'] = $item['link'].'';
             else if(strpos($item['link'], 'leadgid'))
                 $item['link'] = $item['link'].'?source=Pixel';
+            else if(strpos($item['link'], 'leadbrothers'))
+                $item['link'] = $item['link'].'?s1=Pixel';
             else
                 $item['link'] = $item['link'].'?source=Pixel';
             

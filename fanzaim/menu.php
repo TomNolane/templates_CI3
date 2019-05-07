@@ -1,6 +1,5 @@
 <nav id="exMainHeader" class="navbar navbar-default">
     <div class="container">
-        
         <div class="navbar-header">
             <a class="navbar-brand" href="/">
                 <?php $logo_addon = '/templates/fanzaim/assets/img/icons/fanzaim-logo.png';
@@ -12,6 +11,7 @@
 				<img src="<?=$logo_addon?>" alt="Image missing">
             </a>
         </div>
+        <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
         <div class="nav navbar-nav navbar-right">
             <div href="#" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Информация <i></i></a>
@@ -57,6 +57,7 @@
                 </div>
             </div>
         </div>
+        <? endif; ?>
     </div>
 </nav>
 <div id="askQuestion" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">

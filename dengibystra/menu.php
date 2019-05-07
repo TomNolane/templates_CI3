@@ -1,14 +1,15 @@
 <header>
     <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header">
         <div class="container">
-            <div class="navbar-header">
-                
+            <div class="navbar-header" style="text-align: center;">
+                <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
                 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <? endif; ?>
                 <a href="/">
                     <?php $logo_addon = '/templates/dengibystra/assets/img/logo.png';
                     switch ($this->uri->segment(1)) {

@@ -12,7 +12,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
 <footer class="ex-main-footer">
     <div class="container text-center">
         <div>
-        <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+        <?php if (!in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
             <div class="ex-wrapper">
                 <img src="/templates/fanzaim/assets/img/icons/Fanzaim-logo-footer.png"  alt="Image">
             </div> 

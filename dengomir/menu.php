@@ -2,11 +2,13 @@
 <nav class="navbar navbar-default ex-main-header">
     <div class="container">
         <div class="navbar-header">
+            <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dengomirCollapsed">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <? endif; ?>
             <a class="navbar-brand" href="/">
                 <?php $logo_addon = '/templates/dengomir/assets/img/icons/logo-header.png';
 				switch ($this->uri->segment(1)) {
@@ -17,8 +19,9 @@
 				<img src="<?=$logo_addon?>" alt="Image missing">
             </a>
         </div>
+        <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
         <div class="collapse navbar-collapse" id="dengomirCollapsed">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right"> 
                 <li><a href="/about" class="ex-menu-item">О сервисе</a></li>
                 <li><a href="/allarticles" class="ex-menu-item">Статьи</a></li>
                 <li class="ex-dropdown-menu dropdown">
@@ -46,6 +49,7 @@
                 <li><a href="" data-toggle="modal" id="askQuestion_" data-target="#askQuestion"><span role="button" class="ex-feedback">Обратная связь</span></a></li>
             </ul>
         </div>
+         <? endif; ?>
     </div>
 </nav> 
     <div id="askQuestion" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">

@@ -1,5 +1,6 @@
 <?php 
 require 'templates/common/new/php/check_bot.php';
+
 if(!isset($my_title)) 
 	$my_title = 'Срочные займы круглосуточно без проверок Онлайн';
 

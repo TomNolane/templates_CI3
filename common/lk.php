@@ -257,7 +257,7 @@ tr>td:first-child {
     }
     .hh4 {
         padding-top: 0;
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
     .imgg {
         width: 100%;
@@ -357,6 +357,8 @@ tr>td:first-child {
                 $item['link'] = $item['link'].'';
             else if(strpos($item['link'], 'leadgid'))
                 $item['link'] = $item['link'].'?source=Vitrina';
+            else if(strpos($item['link'], 'leadbrothers'))
+                $item['link'] = $item['link'].'?s1=Vitrina';
             else
                 $item['link'] = $item['link'].'?source=Vitrina';
 
