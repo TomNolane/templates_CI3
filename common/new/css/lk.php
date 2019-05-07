@@ -116,3 +116,11 @@ footer {
     background-color: #fff !important;
     <?php }?>
 }
+.adsbygoogle{margin-left: 0 !important;}
+@media (min-width: 600px)
+{
+    .div-spec {
+        padding-left: 90px !important;
+        padding-right: 30px !important;
+    }
+}

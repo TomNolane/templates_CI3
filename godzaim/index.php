@@ -41,17 +41,12 @@
 			</div>
 		</div>
 		<?php if($setting_array['is_mobile'] != 'мобила') { require 'adsence.php'; } ?>
-		<div class="row">
-			<div class="col-md-12">
-				<?php if($setting_array['is_mobile'] == 'мобила') { require 'adsence.php'; } ?>
-			</div>
-		</div>
 	</div>
 </section>
 <section id="services" class="hidden-xs">
 	<div>
 		<div class="container container-services text-center">
-			<h1>Как получить деньги?</h1>
+			<h2 class="h1">Как получить деньги?</h2>
 			<div class="row-row">
 				<div class="row">
 					<div class=" kri1 col-lg-4  col-md-6 col-sm-6 col-xs-12">

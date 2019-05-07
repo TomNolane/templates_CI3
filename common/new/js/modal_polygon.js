@@ -1,6 +1,9 @@
 $(document).ready(function() {
     var body = document.body;
     var polymodal = createModal(document.querySelector("#polymodal-1"));
+    if (typeof _show_modal_timer == "undefined") {
+        _show_modal_timer = 3000;
+    }
     setTimeout(function () { polymodal.open(); }, _show_modal_timer);
     
     $(".polymodal-close").click(function() {

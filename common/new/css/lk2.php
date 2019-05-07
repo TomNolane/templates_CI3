@@ -110,3 +110,6 @@ footer {
     background-color: #fff !important;
     <?php }?>
 }
+.adsbygoogle{margin-left: 0 !important;}
+.container3{max-width: 100%;
+    display: inline-grid;}

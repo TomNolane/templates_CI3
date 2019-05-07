@@ -97,38 +97,4 @@ include "header.php";
         </div>
     </div>
 </div>
-<!-- Modal Iphone -->
-<a href="#" data-toggle="modal" id="modal2" data-target="#tosModal2"></a>
-<style> 
-@media (min-width: 768px) {
-    .modal-dialog {
-        width: 900px;
-        margin: 30px auto;
-    } 
-}
-</style>
-<div class="modal fade" id="tosModal2" tabindex="-1" role="dialog" aria-labelledby="tosModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h1 class="modal-title" id="tosModalLabel">Подтвердите адрес электронной почты</h1> 
-                
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <p><span id="form_name"></span> на указанный email было отправлено письмо. Подтвердите свою почту и участвуйте в розыгрыше Iphone XS уже 16.11.2018</p>
-                        <img class='img-responsive' src="/templates/common/img/iphone2.png">
-                        </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <div class="text-center"><button type="button" class="btn btn-primary btn-spec" data-dismiss="modal"> Закрыть </button></div>
-            </div>
-        </div>
-    </div>
-</div>
 <?php include 'footer.php';?>

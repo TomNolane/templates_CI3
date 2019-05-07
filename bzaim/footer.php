@@ -4,10 +4,10 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
 {
     require 'adsence.php';
     echo '<a href="#0" class="cd-top">Наверх</a>';
-}
-if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell', 'offerwall', 'offerwall2', 'vitrina'))) 
-{
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="//top-fwz1.mail.ru/tracker?id=undefined;e=RG%3A/trg-pixel-2721105-1534155871972" alt="MYTARGET">';
+}
+if (!in_array($this->uri->segment(1), array('lk', 'lk2','lk3', 'pixell', 'offerwall', 'offerwall2', 'vitrina'))) 
+{
     echo '<footer class="ex-start-footer">
     <div class="container">
         <div class="row">
@@ -15,7 +15,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell', 'offer
                 <div class="ex-footer-logo">
                     <img src="/templates/bzaim/assets/img/logo.png" alt="logo-foot.png">
                 </div>
-                <p class="ex-text spec_footer4">
+                <p class="ex-text">
                     Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 дня до 1 года. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: ' . $email . '  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
                     <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001. Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
                 </p>
@@ -41,9 +41,6 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell', 'offer
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-12">
-                <hr/>
-            </div>
         </div>
     </div>
 </footer>'; 
@@ -57,7 +54,8 @@ else if(in_array($this->uri->segment(1), array('offerwall', 'pixell')))
                 <div class="ex-footer-logo col-md-3">
                     <img src="' . $logo_foot . '" alt="logo-foot.png">
                 </div>
-                <div class="col-xs-12 col-md-9">';
+                <br>
+                <div class="col-xs-12 col-md-9" style="margin-left: -30px !important;">';
                 require 'adsence.php';
                 echo '</div>
             </div>
@@ -79,7 +77,8 @@ else if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3')))
                 <div class="ex-footer-logo col-md-3">
                     <img src="/templates/bzaim/assets/img/logo.png" alt="logo-foot.png">
                 </div>
-                <div class="col-xs-12 col-md-9">';
+                <br>
+                <div class="col-xs-12 col-md-9" style="margin-left: -30px !important;">';
                 require 'adsence.php';
                 echo '</div>
             </div>

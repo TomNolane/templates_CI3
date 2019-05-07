@@ -807,103 +807,21 @@ $(document).ready(function () {
     $('input').on('validation', function (evt, valid) {
         if($('input').name == 'rangeSlider')
             return;
-        if (valid) { 
-            
-            
-            if (this.name == 'email' && (document.location.host == 'vkredito.ru' || document.location.host == 'rublimo.ru' || document.location.host == 'edenga.ru' || document.location.host == 'bzaim5.ru' || document.location.host == 'zaimhome.ru'
-                || document.location.host == 'dengibystra.ru' || document.location.host == 'dengimo.ru' || document.location.host == 'dengoman.ru' || document.location.host == 'dengomir.ru' || document.location.host == 'fanzaim.ru' || document.location.host == 'forzaim.ru'
-                || document.location.host == 'godzaim.ru' || document.location.host == 'zaimcoin.ru' || document.location.host == 'zaimhunter.ru' || document.location.host == 'zaimoking.ru' || document.location.host == 'zaimol.ru' || document.location.host == 'zaimomix.ru'
-                || document.location.host == 'zaimrubli.ru' || document.location.host == 'zaimsoon.ru')) {
-                
-                if($('#i').val() != '' && $('#o').val() != '')
-                {
-                    $("#form_name").text($('#i').val() + ' ' + $('#o').val() + ', вам');
-                }
-                else
-                    $("#form_name").text('Вам');
-                
-                // $("#modal2").click();
-                showModal();
-            }  
-            
-           
-            if(this.name == 'birthdate')
-            {    
-                var today = addDate2($('#birthdate').val().split('/')[0],$('#birthdate').val().split('/')[1],$('#birthdate').val().split('/')[2]).getTime();
-                var from = addDate(18).getTime();
-                var to = addDate(70).getTime();
-                var withinRange = today <= from && today >= to;
-
-                if(withinRange)
-                {
-                    $('#birthdate').parent($('#birthdate')).find('.help-block2').css('display','none');
-                    $('#birthdate').parent().parent().prev().removeClass('label_er').addClass('label_true');
-                    $('#birthdate').removeClass('er');
-                    $('#birthdate').parent().removeClass('ex-error').addClass('ex-success');
-                    $('#birthdatestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
-                    return;
-                }
-                else
-                {
-                    $('#birthdate').parent().parent().prev().addClass('label_er').removeClass('label_true');
-                    $('#birthdate').addClass('er');
-                    $('#birthdate').parent().removeClass('ex-success').addClass('ex-error');
-                    $('#birthdate').attr('placeholder',"Возраст должен быть от 18 до 70 лет");
-                    $('#birthdate').parent($('#birthdate')).find('.help-block2').css('display','inline-block');
-                    $('#birthdate').parent($('#birthdate')).find('.help-block2').text("Возраст должен быть от 18 до 70 лет");
-                    return;
-                }
-            }
-
-            if(this.name == 'passportdate')
-            {
-                var today = addDate2($('#passportdate').val().split('/')[0],$('#passportdate').val().split('/')[1],$('#passportdate').val().split('/')[2]).getTime();
-                var from = addDate(0).getTime();
-                var to = addDate(100).getTime();
-                var withinRange = today <= from && today >= to;
-
-                if(withinRange)
-                {
-                    $('#passportdate').parent($('#passportdate')).find('.help-block2').css('display','none');
-                    $('#passportdate').parent().parent().prev().removeClass('label_er').addClass('label_true');
-                    $('#passportdate').removeClass('er');
-                    $('#passportdate').parent().removeClass('ex-error').addClass('ex-success');
-                    $('#passportdatestatus').removeClass('glyphicon-remove').addClass('glyphicon-ok'); 
-                    return;
-                }
-                else
-                {
-                    $('#passportdate').parent().parent().prev().addClass('label_er').removeClass('label_true');
-                    $('#passportdate').addClass('er');
-                    $('#passportdate').parent().removeClass('ex-success').addClass('ex-error');
-                    $('#passportdate').attr('placeholder',"Возраст должен быть от 18 до 100 лет");
-                    $('#passportdate').parent($('#passportdate')).find('.help-block2').css('display','inline-block');
-                    $('#passportdate').parent($('#passportdate')).find('.help-block2').text("Возраст должен быть от 18 до 100 лет");
-                    return;
-                }
-            }
-
+        if (valid) {
             $('#' + this.id + 'status').removeClass('glyphicon-remove').addClass('glyphicon-ok');
-
-            // $(this).closest("label").parent().removeClass('ex-error');
-            //  $('.form-group').find('#' + this.id).addClass('ex-error');
              var w = $('.form-group').find('[for=' + this.id +']');
              w.parent().removeClass('ex-error').addClass('ex-success');
-            // $(this).parent().removeClass('ex-error'); 
-            // $(this).parent().parent().removeClass('ex-error'); 
             $(this).parent($(this)).find('.help-block2').css('display','none');
             
             $(this).parent($(this)).find('.help-block2').text(evt.currentTarget.dataset.validationErrorMsg);
 
             if(this.name == 'email') {
-                //console.log( $('input[name="email"]').val() );
                 if ($('input[name="email"]').val().length < 7 || !re_email.test($('input[name="email"]').val())){
                     $('#' + this.id + 'status').removeClass('glyphicon-ok').addClass('glyphicon-remove');
                     $(this).parent().addClass('ex-error');
                      count_errors++;
                     $(this).parent($(this)).find('.help-block2').text('Укажите свой email адрес. Адрес должен заканчиваться на @mail.ru, @bk.ru, @inbox.ru, @list.ru, @yandex.ru, @ya.ru, @gmail.com, @rambler.ru, @mail.ua');
                     $(this).parent($(this)).find('.help-block2').css('display','inline-block');                    
-                    //console.log( 'error' );
                     return;
                 } else {
                     if( re_gmail.test($('input[name="email"]').val()) ){
@@ -918,7 +836,6 @@ $(document).ready(function () {
                         $(this).parent($(this)).find('.help-block2').html('<span style="font-size: 12px;color: green !important;">Отправьте анкету и вам на почту '+$('input[name="email"]').val()+' будет отправлено письмо с предложением займа.</span>');
                         $(this).parent($(this)).find('.help-block2').css('display','inline-block');                    
                         $('#next1').addClass('pulse');
-                        //console.log( 'success' );                        
                     }
                 }
             }

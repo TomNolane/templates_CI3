@@ -50,10 +50,10 @@
                             <input type="text" class="form-control input-lg" id="feedback-name" placeholder="Имя" title="Имя">
                         </div>
                         <div class="form-group">
-                            <input type="hidden" class="form-control input-lg" id="feedback-phone" value="8(977)7474833" placeholder="Телефон" title="Телефон">
+                            <input type="hidden" class="form-control input-lg" id="feedback-phone" value="8(977)7474833">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control input-lg" id="feedback-email" placeholder="Email" title="Email" required>
+                            <input type="email" class="form-control input-lg" id="feedback-email" required>
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" id="feedback-comment" placeholder="Текст вашего сообщения" title="Текст вашего сообщения"

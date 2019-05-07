@@ -1,12 +1,7 @@
 <?php
-if ($this->uri->segment(1) == 'offerwall' || $this->uri->segment(1) == 'pixell' || getDomain() == 'ru-zaimo.ru' || getDomain() == 'sumas.ru' | getDomain() == 'dengos.ru') {
+if ($this->uri->segment(1) == 'pixell' || getDomain() == 'ru-zaimo.ru' || getDomain() == 'sumas.ru' | getDomain() == 'dengos.ru') {
   $this->load->model('analytics/forms_model', 'analytics');
   $json = $this->analytics->popup10secGetJson2();
-
-  // $text = 'Вам одобрено 15 000 рублей<br>после заявки';
-  // $img = 'bigzaim';
-  // $url = 'https://pxl.leads.su/click/3b00787cbb4b9484e25cbe512163ca7d?source=Popup&aff_sub1=Popup&aff_sub2=Popup&aff_sub3=Popup&aff_sub4=Popup';
-  
 }
 else if ($this->uri->segment(1) == 'offerwall')
 {
@@ -44,77 +39,4 @@ $url = $json[0]["url"];
 </div>
 <script>
 var _show_modal_timer = (document.location.pathname != '/lk') ? <?=$json[0]["seconds_lk"]?> : <?=$json[0]["seconds"]?>;
-
-function setcookie(name, value, expires, path, domain, secure) {
-    document.cookie = name + "=" + escape(value) +
-        ((expires) ? "; expires=" + (new Date(expires)) : "") +
-        ((path) ? "; path=" + path : "; path=/") +
-        ((domain) ? "; domain=" + domain : "") +
-        ((secure) ? "; secure" : "");
-}
-function getcookie(name) {
-    var cookie = " " + document.cookie;
-    var search = " " + name + "=";
-    var setStr = null;
-    var offset = 0;
-    var end = 0;
-
-    if (cookie.length > 0) {
-        offset = cookie.indexOf(search);
-
-        if (offset != -1) {
-            offset += search.length;
-            end = cookie.indexOf(";", offset)
-
-            if (end == -1) {
-                end = cookie.length;
-            }
-
-            setStr = unescape(cookie.substring(offset, end));
-        }
-    }
-
-    return (setStr);
-}
-
-
-function checkOffer (_boolean)
-{
-  var _temp_checkOffer = 0;
-  for (var i = 0; i < Object.keys(arr_offers).length; i++)
-  {
-      if(arr_offers[Object.keys(arr_offers)[i]].count == _offers_count)
-      {
-        _offers_url = arr_offers[Object.keys(arr_offers)[i]].url;
-        _offers_img = arr_offers[Object.keys(arr_offers)[i]].src;
-
-        document.querySelector('#change_img').src = _offers_img;
-        document.querySelector('#notificate_url').href = _offers_url;
-        document.querySelector('#notificate_url2').href = _offers_url;
-        
-        if(_boolean)
-          setcookie(arr_offers[Object.keys(arr_offers)[i]].name,++arr_offers[Object.keys(arr_offers)[i]].count);
-        
-        break;
-      }
-      else
-      {
-        _temp_checkOffer++;
-      }
-  }
-
-  if(_temp_checkOffer == 3)
-  {
-    _offers_count += 1; 
-    checkOffer(_boolean);
-  }
-}
-
-document.querySelector('#notificate_url').addEventListener('click', function () { 
-   //checkOffer(true);
-});
-
-document.querySelector('#notificate_url2').addEventListener('click', function () { 
-   //checkOffer(true);
-});
 </script>

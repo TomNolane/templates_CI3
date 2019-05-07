@@ -49,8 +49,6 @@ enable_page_level_ads: true
                 $over_sum = number_format( $item['amount'] * ( $item['percent'] + 100) / 100 ,0,'',' ');
                 $over_per_day = number_format( $item['amount'] * $item['percent'] / 100 ,0,'',' ');
 
-                
-
                 $words = array (
                     '',
                     '<div class="bem_offer__note">Одобрение 100% сегодня</div>',

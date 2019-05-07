@@ -80,3 +80,9 @@ margin-bottom: 0 !important;
 .ex-form .ex-form-content .form-horizontal .form-group select {
     height: 50px;
 }
+@media (max-width: 600px)
+{
+    .ex-form {
+        padding-top: 0 !important;
+    }
+}

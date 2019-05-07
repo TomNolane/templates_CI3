@@ -4,10 +4,7 @@
 <meta name="Description" content="<?php echo $description;?>" />
 <meta name="Keywords" content="моментальный заем, займы, онлайн, деньги" />
 <meta name="robots" content="all" />
-<meta name="copyright" lang="ru" content="zaimcoin.ru" /> 
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Cache-control" content="no-cache"> 
-<meta http-equiv="Expires" content="Wed, 22 Mar 2018 00:20:05 GMT">
+<meta name="copyright" lang="ru" content="zaimcoin.ru" />
 <meta property="og:title" content="Срочные займы круглосуточно без проверок Онлайн" />
 <meta property="og:description" content="Zaimcoin - лучший онлайн сервис по выдаче мгновенных займов и кредитов без проверки вашей кредитной истории.Только у нас лучшие кредитные предложения!"/>
 <meta property="og:image" content="https://zaimcoin.ru/templates/zaimcoin/assets/img/rubles.png"/>

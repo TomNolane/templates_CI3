@@ -3,7 +3,17 @@ if ($this->uri->segment(1) == 'robots.txt')
 {
 	header("Content-type: text/plain");
 	require 'internal-robots.txt.php';
-} 
+}
+else if ($this->uri->segment(1) == 'fortests') 
+{
+	header("Content-type: text/plain");
+	require 'internal-fortests.php';
+}
+else if ($this->uri->segment(1) == 'fortests2') 
+{
+	header("Content-type: text/plain");
+	require 'internal-fortests2.php';
+}
 else
 {
 $my_title = ''; $description = '';

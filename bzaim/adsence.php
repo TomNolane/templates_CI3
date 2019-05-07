@@ -1,7 +1,7 @@
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- bzaim5.ru adsence -->
 <ins class="adsbygoogle"
-    style="display:block"
+    style="display:block;margin-left: 0 !important;"
     data-ad-client="ca-pub-4970738258373085"
     data-ad-slot="5816862028"
     data-ad-format="auto"

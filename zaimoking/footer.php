@@ -162,8 +162,7 @@ elseif($this->uri->segment(1) == '404')
     echo 'traffic("zaimoking.ru",9);';
 }
 elseif($this->uri->segment(1) == 'faq') {
-    echo '<script>//******select menu *******//
-
+    echo '
     $(\'select\').each(function () {
         var $this = $(this), numberOfOptions = $(this).children(\'option\').length;
 
@@ -214,11 +213,9 @@ elseif($this->uri->segment(1) == 'faq') {
             $(\'.ex-faq-type\').css(\'display\', \'none\');
             $(\'#div\' + value).css(\'display\', \'block\');
         }
-    });</script>';
+    });';
 } elseif($this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-bank' || $this->uri->segment(1) == 'zaim-contact' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-yandex') {
-    echo '<script>
-    //******select menu *******//
-
+    echo '
     $(\'select\').each(function () {
         var $this = $(this), numberOfOptions = $(this).children(\'option\').length;
 
@@ -269,8 +266,7 @@ elseif($this->uri->segment(1) == 'faq') {
             $(\'.ex-money-type\').css(\'display\' , \'none\');
             $(\'#div\' + value).css(\'display\' , \'block\');
         }
-    });
-</script>';
+    });';
 }
 echo "}";
 require 'templates/common/new/js/exeption.js';

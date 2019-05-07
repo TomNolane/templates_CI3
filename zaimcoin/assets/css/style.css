@@ -1514,7 +1514,7 @@ th {
 @font-face {
     font-family: 'Glyphicons Halflings';
     src: url("/templates/common/new/fonts/glyphicons-halflings-regular.eot");
-    src: url("/templates/common/new/onts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/templates/common/nnew/nts/glyphicons-halflings-regular.woff2") format("woff2"), url("/templates/common/new/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/templates/common/newnew/s/glyphicons-halflings-regular.ttf") format("truetype"), url("/templates/common/new/new//glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+    src: url("/templates/common/new/onts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/templates/common/new/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/templates/common/new/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/templates/common/newnew/s/glyphicons-halflings-regular.ttf") format("truetype"), url("/templates/common/new/new//glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 .glyphicon {
@@ -10474,13 +10474,11 @@ header .navbar-default {
     line-height: 24px;
 }
 
-.ex-form {
-    padding-top: 67px;
+.ex-form { 
 }
 
 @media (max-width:768px) {
-    .ex-form {
-        padding-top: 40px;
+    .ex-form { 
     }
 }
 
@@ -11507,8 +11505,8 @@ input#feedback-name {
     .ex-form h1 {
         margin-bottom: 15px;
     }
-    .ex-form {
-        padding-top: 15px;
+    .ex-form { 
+        margin-top: 80px;
     }
 }
 

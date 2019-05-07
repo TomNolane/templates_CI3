@@ -11,45 +11,39 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
 ?>
 <footer>
     <div class="container">
-        <div class="row">
-            <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
-            <div class="col-md-2 col-xs-12"> 
+    <div class="row">
+        <div class="col-md-2 col-xs-4">
+            <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+                <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png">
             <?php } else { ?>
-             <div class="col-md-2"> 
-             <?php }  ?>
-
-                <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
-                    <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png">
-                <?php } else { ?>
-                    <img alt="logo.png" src="/templates/rublimo/assets/img/logo-footer.png" class="logo">
-                <?php } ?>
-           
-            </div>
-            <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
-            <div class="col-md-4 col-xs-12 spec_footer4">
-                <p class="gut font10">
-                    «RUBLIMO» - сервис по подбору выгодных онлайн займов находящийся по адресу: Россия, Ленинградская обл. г. Санкт-Петербург,
-                    ул. Осипенко, 12, оф 201 email:
-                    <?=$email?>
-                    <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
-                </p>
-            </div>
-            <div class="col-md-6 hidden-xs hidden-sm spec_footer5">
-                <p class="gut font10">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная
-                    процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости
-                    займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят
-                    11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае
-                    своевременного погашения. <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</p>
-            </div>
-            <?php } else { ?>
-            <div class="col-md-10 col-xs-12">
-                <?php
-                    require 'adsence.php';
-                ?>
-            </div>
+                <img alt="logo.png" src="/templates/rublimo/assets/img/logo-footer.png" >
             <?php } ?>
+        
         </div>
-    </div>
+        <br>
+        <?php if (in_array($this->uri->segment(1), array('lk','lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+        <div class="col-md-10 col-xs-12" style="margin-left: -30px !important;">
+            <?php
+                require 'adsence.php';
+            ?>
+        </div>
+        <div class="col-md-12 col-xs-12">
+            <p class="gut black">
+                Наш сервис по подбору выгодных онлайн займов находящийся по адресу: Россия, Ленинградская обл. г. Санкт-Петербург,
+                ул. Осипенко, 12, оф 201 email:
+                <?=$email?>
+                <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+            </p>
+        </div>
+        <div class="col-md-12 col-xs-12">
+            <p class="gut black">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная
+                процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости
+                займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят
+                11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае
+                своевременного погашения. <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</p>
+        </div>
+        <?php } ?> 
+         </div>
     <div class="clearfix">&nbsp;</div>
 </footer>
 <!-- [if lt IE 10]>

@@ -147,19 +147,19 @@
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2 ex-agreement-check">
-                <label class="checkbox-inline">
+                <label class="checkbox-inline" for="agree">
                     <span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span>
                     <input type="checkbox" onClick="checkMee();" id="agree" value="1" checked>
                     <i></i>
                 </label>
             </div>
             <div class="col-md-8 col-md-offset-2 ex-agreement-check">
-                <label class="checkbox-inline">
+                <label class="checkbox-inline" for="marketing">
                     <span class="font12">Я согласен на получение рекламных сообщений</span>
                     <input type="checkbox" id="marketing" value="1" checked>
                     <i></i>
                 </label>
-            </div>            
+            </div>
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-right"> 

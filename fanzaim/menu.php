@@ -1,7 +1,8 @@
 <nav id="exMainHeader" class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/">
+            <? if (in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
+            <a href="/">
                 <?php $logo_addon = '/templates/fanzaim/assets/img/icons/fanzaim-logo.png';
 				switch ($this->uri->segment(1)) {
 					case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
@@ -10,6 +11,11 @@
 				} ?>
 				<img src="<?=$logo_addon?>" alt="Image missing">
             </a>
+            <? endif; ?>
+             <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
+                 <a class="navbar-brand" href="/">
+                  </a>
+              <? endif; ?>
         </div>
         <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
         <div class="nav navbar-nav navbar-right">

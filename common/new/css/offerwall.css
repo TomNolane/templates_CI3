@@ -179,7 +179,7 @@ tr>td:first-child {
         font-size: 11px !important;
     }
     .hh4 {
-        padding-top: 0;
+        padding-top: 50px;
         font-size: 1.4em !important;
     }
     .imgg {
@@ -392,3 +392,4 @@ tr>td:first-child {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58ff2e', endColorstr='#58ff2e', GradientType=0 );
     color: #FFF !important;
 }
+.adsbygoogle{margin-left: 0 !important;}

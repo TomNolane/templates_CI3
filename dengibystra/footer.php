@@ -4,7 +4,7 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
     require 'adsence.php';
     echo '<a href="#0" class="cd-top">Наверх</a>';
 }
-if (!in_array($this->uri->segment(1), array('lk3', 'pixell', 'offerwall', 'offerwall2', 'vitrina'))) 
+if (!in_array($this->uri->segment(1), array('lk', 'lk2','lk3', 'pixell', 'offerwall', 'offerwall2', 'vitrina'))) 
 {
 echo '<footer class="ex-start-footer">
     <div class="container">
@@ -62,7 +62,7 @@ echo '<footer class="ex-start-footer">
     </div>
 </footer>';
 }
-if (in_array($this->uri->segment(1), array('lk3', 'pixell', 'offerwall', 'offerwall2', 'vitrina'))) 
+else if (in_array($this->uri->segment(1), array('lk3', 'pixell', 'offerwall', 'offerwall2', 'vitrina'))) 
 {
     echo '<footer class="ex-footer">
         <div class="container">
@@ -71,7 +71,31 @@ if (in_array($this->uri->segment(1), array('lk3', 'pixell', 'offerwall', 'offerw
                 <div class="ex-footer-logo col-md-3"> 
                     <img src="' . $logo_foot . '" alt="logo.png">
                 </div>
-                <div class="col-xs-12 col-md-9">';
+                <br>
+                <div class="col-xs-12 col-md-9" style="margin-left: -30px !important;">';
+                    require 'adsence.php';
+                echo '</div>
+            </div>
+            <div class="col-sm-12">
+                <p class="ex-text">
+                    Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 дня до 1 года. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: '.$email.'  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+                    <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001 | +7(495) 006 19 61 | Россия, Санкт-Петербург, улица Осипенко, 12
+                </p>
+            </div>
+        </div>
+</footer>';
+}
+else if (in_array($this->uri->segment(1), array('lk', 'lk2'))) 
+{
+    echo '<footer class="ex-footer">
+        <div class="container">
+            <div class="row">
+            <hr/> 
+                <div class="ex-footer-logo col-md-3"> 
+                    <img src="/templates/dengibystra/assets/img/logo.png"  alt="logo.png">
+                </div>
+                <br>
+                <div class="col-xs-12 col-md-9" style="margin-left: -30px !important;">';
                     require 'adsence.php';
                 echo '</div>
             </div>

@@ -9,6 +9,7 @@
         {
             require "templates/rublimo/assets/css/style_lk.css";
             require "templates/common/new/css/lk.php";
+            echo '.black {color: #000 !important};';
         }
         if ($this->uri->segment(1) == 'form') 
         {
