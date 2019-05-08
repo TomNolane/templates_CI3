@@ -1,6 +1,10 @@
 <body class="ex-sticky">
 <nav class="navbar navbar-default ex-main-header">
+<? if ($this->uri->segment(1) == 'pixell') : ?>
+    <div class="container" style="margin-bottom: 20px;">
+<? else : ?>
     <div class="container">
+<? endif; ?>
         <div class="navbar-header">
             <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dengomirCollapsed">

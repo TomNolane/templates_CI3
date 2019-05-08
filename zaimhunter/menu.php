@@ -1,5 +1,8 @@
-
+<? if (in_array($this->uri->segment(1), array('offerwall', 'pixell'))) : ?>
+<header style="margin-bottom: 20px;">
+<? else : ?>
 <header>
+<? endif; ?>
     <div class="container">
         <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header">
             <div class="navbar-header">

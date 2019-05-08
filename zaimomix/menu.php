@@ -1,6 +1,5 @@
-<?php 
-    if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index') {
-        echo '<body>
+<?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index') : ?>
+        <body>
         <main class="ex-home">
             <nav class="navbar navbar-expand-lg ex-main-header">
                 <div class="container">
@@ -52,10 +51,9 @@
                         </div>
                     </div>
                 </div>
-            </nav>';
-    }
-    elseif($this->uri->segment(1) == 'form') {
-         echo '<body class="ex-sticky">
+            </nav>
+    <? elseif($this->uri->segment(1) == 'form') : ?>
+         <body class="ex-sticky">
          <nav class="navbar navbar-expand-lg ex-main-header-white">
              <div class="container">
                  <a class="ex-brand navbar-brand" href="/"></a>
@@ -81,10 +79,9 @@
                      </div>
                  </div>
              </div>
-         </nav>';
-    }
-    elseif($this->uri->segment(1) == 'faq') {
-         echo '<body class="ex-sticky">
+         </nav>
+    <? elseif($this->uri->segment(1) == 'faq') : ?>
+         <body class="ex-sticky">
          <nav class="navbar navbar-expand-lg ex-main-header-white">
              <div class="container">
                  <a class="ex-brand navbar-brand" href="/"></a>
@@ -110,10 +107,9 @@
                      </div>
                  </div>
              </div>
-         </nav>';
-    }
-    elseif($this->uri->segment(1) == 'rules' || $this->uri->segment(1) == 'documents' || $this->uri->segment(1) == 'soglasie' || $this->uri->segment(1) == 'oferta' || $this->uri->segment(1) == 'zaim-card' || $this->uri->segment(1) == 'zaim-bank' || $this->uri->segment(1) == 'zaim-qiwi' || $this->uri->segment(1) == 'zaim-yandex' || $this->uri->segment(1) == 'zaim-contact') {
-        echo '<body class="ex-sticky">
+         </nav>
+    <? elseif (in_array($this->uri->segment(1), array('rules', 'documents', 'soglasie', 'oferta', 'zaim-card', 'zaim-bank', 'zaim-qiwi', 'zaim-yandex', 'zaim-contact'))) : ?>
+        <body class="ex-sticky">
         <main>
             <nav class="navbar navbar-expand-lg ex-main-header-white">
                 <div class="container">
@@ -140,10 +136,9 @@
                         </div>
                     </div>
                 </div>
-            </nav>';
-    }
-    elseif($this->uri->segment(1) == 'about') {
-        echo '<body class="ex-sticky">
+            </nav>
+    <? elseif($this->uri->segment(1) == 'about') : ?>
+        <body class="ex-sticky">
         <main class="ex-about">
             <nav class="navbar navbar-expand-lg ex-main-header-white ex-main-header-art">
                 <div class="container">
@@ -170,10 +165,9 @@
                         </div>
                     </div>
                 </div>
-            </nav>';
-    }
-    elseif($this->uri->segment(1) == 'asked-questions') {
-        echo '<body class="ex-sticky">
+            </nav>
+    <? elseif($this->uri->segment(1) == 'asked-questions') : ?>
+        <body class="ex-sticky">
         <main class="ex-article ex-article-1">
             <nav class="navbar navbar-expand-lg ex-main-header-white ex-main-header-art">
                 <div class="container">
@@ -200,10 +194,9 @@
                         </div>
                     </div>
                 </div>
-            </nav>';
-    }
-    elseif($this->uri->segment(1) == 'microfinance') {
-        echo '<body class="ex-sticky">
+            </nav>
+    <? elseif($this->uri->segment(1) == 'microfinance') : ?>
+        <body class="ex-sticky">
         <main class="ex-article ex-article-2">
             <nav class="navbar navbar-expand-lg ex-main-header-white ex-main-header-art">
                 <div class="container">
@@ -230,10 +223,9 @@
                         </div>
                     </div>
                 </div>
-            </nav>';
-    }
-    elseif($this->uri->segment(1) == 'bad-credit-history') {
-        echo '<body class="ex-sticky">
+            </nav>
+    <? elseif($this->uri->segment(1) == 'bad-credit-history') : ?>
+        <body class="ex-sticky">
         <main class="ex-article ex-article-3">
             <nav class="navbar navbar-expand-lg ex-main-header-white ex-main-header-art">
                 <div class="container">
@@ -260,55 +252,27 @@
                         </div>
                     </div>
                 </div>
-            </nav>';
-    }
-    elseif($this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2' || $this->uri->segment(1) == 'pixell' || $this->uri->segment(1) == 'vitrina' || $this->uri->segment(1) == 'offerwall') {
-echo '<body class="ex-sticky">
-        <nav class="navbar navbar-expand-lg ex-main-header-white">
+            </nav>
+    <? elseif(in_array($this->uri->segment(1), array('lk', 'lk2', 'pixell', 'vitrina', 'offerwall'))) : ?>
+        <body class="ex-sticky">
+        <nav class="navbar navbar-expand-lg ex-main-header">
             <div class="container">
-               ';
-                 if (in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina')))  {
-                echo '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>';
-                 }
-                 else
-                 {
-                    echo ' <a class="ex-brand navbar-brand" href="/"></a>';
-                 }
-                echo '<div class="collapse navbar-collapse justify-content-end " id="navbarCollapse">
-                    <div class="navbar-nav ">';
-                    if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina'))) {
-                        echo '<a class="ex-dropdown nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            меню'; }
-                    ?>
-                            <?php $logo_addon = '/templates/zaimrubli/assets/img/logo.svg';
-                            switch ($this->uri->segment(1)) {
-                                    case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
-                                    case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
-                                    default: break;
-                            } ?>
-                            <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
-                        <?php  if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina'))) { echo '</a>'; }
-
-                    if (in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina'))) {
-                        echo '<div class="dropdown-menu justify-content-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/about">О сервисе</a>
-                            <a class="dropdown-item" href="/oferta">Публичная оферта</a>
-                            <a class="dropdown-item" href="/soglasie">Согласие на обработку данных</a>
-                            <a class="dropdown-item" href="/rules">Правила предоставления займов</a>
-                            <a class="dropdown-item" href="/faq">Часто задаваемые вопросы</a>
-                            <input  class="ex-ask-question ex-main-btn ex-question-btn text-center" value="задать вопрос"/>
-                        </div>';
-                        }
-                    echo '</div>
-                </div>
+            <? if ($this->uri->segment(1) != 'lk') : ?>
+                <a href="/">
+            <? endif; ?>
+                <? $logo_addon = '/templates/zaimomix/assets/img/logo-footer.png';
+                switch ($this->uri->segment(1)) {
+                    case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                    case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+                    default: break;
+                } ?>
+                <img src="<?=$logo_addon?>" alt="Image missing">
+                <? if ($this->uri->segment(1) != 'lk') : ?>
+                </a>
+            <? endif; ?>
             </div>
-        </nav>';
-    }
-?>
+        </nav>
+<? endif; ?>
 <!-- Modal -->
 <div id="askQuestion" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">

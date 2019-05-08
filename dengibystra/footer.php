@@ -69,7 +69,7 @@ else if (in_array($this->uri->segment(1), array('lk3', 'pixell', 'offerwall', 'o
             <div class="row">
             <hr/> 
                 <div class="ex-footer-logo col-md-3"> 
-                    <img src="' . $logo_foot . '" alt="logo.png">
+                    <img src="/' . $logo_foot . '" alt="logo.png">
                 </div>
                 <br>
                 <div class="col-xs-12 col-md-9" style="margin-left: -30px !important;">';

@@ -20,44 +20,46 @@
                     <img src="<?=$logo_addon?>" alt="Image missing">
                 </a>
             </div>
-            <div id="navbarCollapse" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right"> 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">О проекте
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="/about" class="hov">О нас</a>
-                            </li>
-                            <li>
-                                <a href="/money" class="hov">Виды займов</a>
-                            </li> 
-                        </ul>
-                    </li>
-                    <li><a href="/faq">Вопросы-ответы</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Информация
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="/oferta" class="hov">Публичная оферта</a>
-                            </li>
-                            <li>
-                                <a href="/rules" class="hov">Правила предоставления займов</a>
-                            </li>
-                            <li>
-                                <a href="/agreement" class="hov">Согласие на обработку данных</a>
-                            </li>
-                            <li>
-                                <a href="/documents" class="hov">Правовые документы</a>
-                            </li>
-                        </ul>
-                    </li> 
-                    <li><a href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a></li>
-                </ul>
-            </div>
+            <? if (!in_array($this->uri->segment(1), array('lk', 'offerwall', 'pixell'))) : ?>
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right"> 
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">О проекте
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/about" class="hov">О нас</a>
+                                </li>
+                                <li>
+                                    <a href="/money" class="hov">Виды займов</a>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li><a href="/faq">Вопросы-ответы</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Информация
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/oferta" class="hov">Публичная оферта</a>
+                                </li>
+                                <li>
+                                    <a href="/rules" class="hov">Правила предоставления займов</a>
+                                </li>
+                                <li>
+                                    <a href="/agreement" class="hov">Согласие на обработку данных</a>
+                                </li>
+                                <li>
+                                    <a href="/documents" class="hov">Правовые документы</a>
+                                </li>
+                            </ul>
+                        </li> 
+                        <li><a href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a></li>
+                    </ul>
+                </div>
+            <? endif; ?>
         </div>
     </nav>
 </header>

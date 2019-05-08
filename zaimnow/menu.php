@@ -1,6 +1,5 @@
-<?php 
-    if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index') {
-        echo '<body>
+<?php if ($this->uri->segment(1) == '' || $this->uri->segment(1) == ' ' || $this->uri->segment(1) == 'index') : ?>
+        <body>
         <main class="ex-home">
             <nav class="navbar navbar-expand-lg ex-main-header">
                 <div class="container">
@@ -26,10 +25,9 @@
                         </ul>
                     </div>
                 </div>
-            </nav>';
-    }
-    elseif($this->uri->segment(1) == 'form') {
-         echo '<body class="ex-sticky">
+            </nav>
+    <? elseif($this->uri->segment(1) == 'form') : ?>
+         <body class="ex-sticky">
          <nav class="navbar navbar-expand-lg ex-main-header">
              <div class="container">
                  <a class="ex-brand navbar-brand" href="/"></a>
@@ -54,42 +52,44 @@
                 </ul>
             </div>
         </div>
-    </nav>';
-    }
-    elseif($this->uri->segment(1) == 'faq' || $this->uri->segment(1) == 'rules' || $this->uri->segment(1) == 'soglasie' || $this->uri->segment(1) == 'oferta' || $this->uri->segment(1) == 'lk' || $this->uri->segment(1) == 'lk2'|| $this->uri->segment(1) == 'money') {
-         echo '<body>
-         <nav class="navbar navbar-expand-lg ex-main-header">
-             <div class="container">
-                 <a class="ex-brand navbar-brand" href="/"></a>
-                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                     <span class="navbar-toggler-icon"></span>
-                 </button>
-                 <div class="collapse navbar-collapse justify-content-end " id="navbarCollapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/about">О сервисе</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/faq">FAQ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link ex-ask-question" href="#">Обратная связь</a> 
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="/money">Получение денег</a>
-                        </li>
-                    </ul>
-                 </div>
-             </div>
-         </nav>';
-    }
-    else 
-    {
-        echo '<body>
+    </nav>
+    <? elseif(in_array($this->uri->segment(1), array('faq', 'rules', 'soglasie', 'oferta', 'lk', 'lk2', 'money'))) : ?>
+        <body>
+        <nav class="navbar navbar-expand-lg ex-main-header">
+            <div class="container">
+                <a class="ex-brand navbar-brand" href="/"></a>
+                <? if ($this->uri->segment(1) != 'lk') : ?>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end " id="navbarCollapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/about">О сервисе</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/faq">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ex-ask-question" href="#">Обратная связь</a> 
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="/money">Получение денег</a>
+                            </li>
+                        </ul>
+                    </div>
+                <? endif; ?>
+            </div>
+        </nav>
+    <? else : ?>
+        <body>
         <nav class="navbar navbar-expand-lg ex-main-header ex-grey-header">
-            <div class="container">';
-            if (in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina'))) { 
+            <div class="container">
+            <? if (in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina'))) : ?>
+            <? if ($this->uri->segment(1) != 'lk') : ?>
+            <a href="/">
+        <? endif; ?><?
                 $logo_addon = '/templates/zaimhunter/assets/img/logo-zaimhunter.png';
                 switch ($this->uri->segment(1)) {
                     case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
@@ -97,11 +97,11 @@
                     default: break;
                 } ?>
                 <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
-<?php
-            }
-            else
-            {
-                echo '<a class="ex-brand navbar-brand" href="/"></a>
+                <? if ($this->uri->segment(1) != 'lk') : ?>
+                </a>
+            <? endif; ?>
+            <? else : ?>
+                <a class="ex-brand navbar-brand" href="/"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -121,13 +121,11 @@
                             <a class="nav-link " href="/money">Получение денег</a>
                         </li>
                     </ul>
-                </div>';
-            }
-                
-            echo '</div>
-        </nav>';
-    }
-?> 
+                </div>
+            <? endif; ?>
+            </div>
+        </nav>
+    <? endif; ?>
 <!-- Modal  -->
 <div id="askQuestion" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">

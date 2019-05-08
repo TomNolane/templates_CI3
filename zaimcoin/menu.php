@@ -1,5 +1,8 @@
-
+<? if (in_array($this->uri->segment(1), array('pixell', 'offerwall'))) : ?>
+<header style="margin-bottom: 20px;">
+<? else : ?>
 <header style="height: 0 !important;">
+<? endif; ?>
     <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header" style="z-index: 777 !important;">
         <div class="container">
             <div class="navbar-header">
@@ -11,14 +14,22 @@
                     <span class="icon-bar"></span>
                 </button>
                  <? endif; ?>
+                <? if ($this->uri->segment(1) == 'offerwall') : ?>
+                <a href="/" class="navbar-brand" style="width: auto; height: auto;">
+                <? else : ?>
                 <a href="/" class="navbar-brand">
+                <? endif; ?>
                     <?php $logo_addon = '/templates/zaimcoin/assets/img/logo.png';
                     switch ($this->uri->segment(1)) {
                             case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
                             case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
                             default: break;
                     } ?>
-                    <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
+                    <? if ($this->uri->segment(1) == 'offerwall') : ?>
+                        <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing" style="height: auto; margin-top: -16px;">
+                    <? else : ?>
+                        <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
+                    <? endif; ?>
                 </a>
             </div>
             <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>

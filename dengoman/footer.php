@@ -14,7 +14,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell')))
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="//top-fwz1.mail.ru/tracker?id=3052545;e=RG%3A/trg-pixel-2721105-1534147134779" alt="mypixel">';
 }
 ?>
-<footer>
+<footer style="color: #000 !important;">
     <div class="col-md-12 ">
         <div class="row"> 
             <div class="col-md-3">

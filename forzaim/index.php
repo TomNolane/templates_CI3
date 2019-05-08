@@ -10,7 +10,9 @@
 <section class="ex-section-1">
     <nav class="ex-main-header ex-transparent">
         <div class="container">
-            <i class="ex-hamburger"></i>
+            <? if (!in_array($this->uri->segment(1), array('lk', 'offerwall', 'pixell'))) : ?>
+                <i class="ex-hamburger"></i>
+            <? endif; ?>
             <?php $logo_addon = '/templates/forzaim/assets/img/logo.png';
             switch ($this->uri->segment(1)) {
                 case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;

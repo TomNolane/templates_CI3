@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default ex-main-header">
     <div class="container">
-         <?php if(!in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+         <?php if(!in_array($this->uri->segment(1), array('lk', 'offerwall2', 'offerwall', 'pixell'))) : ?>
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#zaimrubliCollapsed">
                 <span class="icon-bar"></span>
@@ -24,7 +24,25 @@
                 <li><a href="" data-toggle="modal" id="askQuestion_" data-target="#askQuestion"><span role="button" class="ex-feedback">Обратная связь</span></a></li>
             </ul>
         </div>
-         <?php } ?>
+        <? else : ?>
+            <? if ($this->uri->segment(1) != 'lk') : ?>
+                <a href="/">
+            <? endif; ?>
+            <? $logo_addon = '/templates/zaimrubli/assets/img/logo-footer.png';
+                switch ($this->uri->segment(1)) {
+                    case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                    case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+                    default: break;
+                } ?>
+                <? if ($this->uri->segment(1) == 'pixell') : ?>
+                    <img src="<?=$logo_addon?>" alt="Image missing" style="margin-bottom: 10px;">
+                <? else : ?>
+                    <img src="<?=$logo_addon?>" alt="Image missing">
+                <? endif; ?>
+            <? if ($this->uri->segment(1) != 'lk') : ?>
+                </a>
+            <? endif; ?>
+        <? endif; ?>
     </div>
 </nav>
 <!-- Modal -->

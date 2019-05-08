@@ -14,13 +14,17 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
         <div class="row">
             <div class="col-md-3 ex-foot-logo">
                 <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
-                    <img src="<?=$logo_foot?>" class="spec-logo"  alt="logo-footer.png">
+                    <? if ($this->uri->segment(1) == 'lk') : ?>
+                        <img src="<?=$logo_addon?>" class="spec-logo"  alt="logo-footer.png">
+                    <? else : ?>
+                        <img src="<?=$logo_foot?>" class="spec-logo"  alt="logo-footer.png">
+                    <? endif; ?>
                 <?php } else { ?>
                     <img alt="logo.png"  class="spec-logo" src="/templates/zaimsoon/assets/img/logo-footer.png">
                 <?php } ?>
             </div>
              <div class="col-md-9 col-xs-12">
-            <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
+            <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) : ?>
                     <p class="spec_footer7">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г.
                         Санкт-Петербург, ул. Осипенко, 12, оф 201| <?=$email?> | +7(495) 006 19 61 <span>Займы
                         предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
@@ -29,9 +33,23 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
                         за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей
                         выдается по ставке 0% в случае своевременного погашения
                     <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span></p>
-            <?php } else { require 'adsence.php'; } ?>
+            <?php else : ?>
+                <? require 'adsence.php'; ?>
+            <? endif; ?>
             </div>
         </div>
+        <?php if (in_array($this->uri->segment(1), array('lk', 'offerwall', 'pixell'))) : ?>
+            <style>footer.ex-main-footer p {color: #000 !important;}</style>
+            <div class="row">
+                <p class="">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург,
+                    ул. Осипенко, 12, оф 201 | <?=$email?>
+                    <span class=""><span id="sp_footer2">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
+                    Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
+                    Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
+                    за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.
+                    Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</span></span></p>
+            </div>
+        <? endif; ?>
     </div>
 </footer>
 <!-- [if lt IE 10]>

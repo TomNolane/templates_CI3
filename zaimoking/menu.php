@@ -21,6 +21,9 @@
         </div>
         <a class="ex-brand" href="/"></a>
         <? } else  { ?>
+            <? if ($this->uri->segment(1) != 'lk') : ?>
+                <a href="/">
+            <? endif; ?>
              <?php $logo_addon = '/templates/zaimoking/assets/img/logo.png';
                 switch ($this->uri->segment(1)) {
                         case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
@@ -28,6 +31,9 @@
                         default: break;
                 } ?>
                 <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
+                <? if ($this->uri->segment(1) != 'lk') : ?>
+                </a>
+            <? endif; ?>
         <?php } ?>
     </div>
 </nav>

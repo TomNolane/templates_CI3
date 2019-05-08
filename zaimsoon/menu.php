@@ -1,47 +1,63 @@
+<? if (in_array($this->uri->segment(1), array('pixell', 'offerwall'))) : ?>
+<header style="height: 0 !important; margin-bottom: 80px;">
+<? else : ?>
 <header style="height: 0 !important;">
+<? endif; ?>
     <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                <? if (!in_array($this->uri->segment(1), array('lk', 'offerwall', 'pixell'))) : ?>
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <? endif; ?>
+                <? if ($this->uri->segment(1) != 'lk') : ?>
                 <a href="/" class="navbar-brand">
+                <? endif; ?>
                      <?php $logo_addon = '/templates/zaimsoon/assets/img/logo.png';
                     switch ($this->uri->segment(1)) {
                             case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
                             case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
                             default: break;
                     } ?>
-                    <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
+                    <? if ($this->uri->segment(1) == 'offerwall') : ?>
+                        <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing" style="width: auto; height: auto; margin-top: -10px;">
+                    <? else : ?>
+                        <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
+                    <? endif; ?>
+                <? if ($this->uri->segment(1) != 'lk') : ?>
                 </a>
+                <? endif; ?>
             </div>
-            <div id="navbarCollapse" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="ex-dropdown-menu dropdown"><a href="#" class="dropdown-toggle"
-                                                             data-toggle="dropdown"
-                                                             aria-expanded="false">Как работает сервис</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/about">О сервисе Zaimsoon</a></li>
-                            <li><a href="/allarticles">Статьи о займах</a></li>
-                            <li><a href="/faq">FAQ</a></li>
-                        </ul>
-                    </li>
-                    <li class="ex-dropdown-menu dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                                                             aria-expanded="false">Документы</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/oferta">Публичная оферта</a></li>
-                            <li><a href="/soglasie">Согласие на обработку данных</a></li>
-                            <li><a href="/rules">Правила предоставления займов</a></li>
-                        </ul>
-                    </li>
-                    <li> 
-                        <a href="" data-toggle="modal" data-target="#askQuestion">Задать вопрос</a>
-                    </li>
-                </ul>
-            </div>
+            <? if (!in_array($this->uri->segment(1), array('lk', 'offerwall', 'pixell'))) : ?>
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="ex-dropdown-menu dropdown"><a href="#" class="dropdown-toggle"
+                                                                data-toggle="dropdown"
+                                                                aria-expanded="false">Как работает сервис</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/about">О сервисе Zaimsoon</a></li>
+                                <li><a href="/allarticles">Статьи о займах</a></li>
+                                <li><a href="/faq">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="ex-dropdown-menu dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                                                aria-expanded="false">Документы</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/oferta">Публичная оферта</a></li>
+                                <li><a href="/soglasie">Согласие на обработку данных</a></li>
+                                <li><a href="/rules">Правила предоставления займов</a></li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <a href="" data-toggle="modal" data-target="#askQuestion">Задать вопрос</a>
+                        </li>
+                    </ul>
+                </div>
+            <? endif; ?>
         </div>
     </nav>
 </header> 

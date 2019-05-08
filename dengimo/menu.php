@@ -18,22 +18,24 @@
 					<i class="glyphicon glyphicon-menu-hamburger"></i>
 				</button>
 			</div>
-			<div class="collapse navbar-collapse" id="navbar-collapse-1">
-				<ul class="nav navbar-nav menu navbar-right">
-					<li>
-						<a href="/about">О сервисе</a>
-					</li>
-					<li>
-						<a href="/form">Получить деньги</a>
-					</li>
-					<li>
-						<a href="/faq">Вопросы-ответы</a>
-					</li>
-					<li>
-						<a href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a>
-					</li>
-				</ul>
-			</div>
+            <? if (!in_array($this->uri->segment(1), array('lk', 'offerwall', 'pixell'))) : ?>
+                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <ul class="nav navbar-nav menu navbar-right">
+                        <li>
+                            <a href="/about">О сервисе</a>
+                        </li>
+                        <li>
+                            <a href="/form">Получить деньги</a>
+                        </li>
+                        <li>
+                            <a href="/faq">Вопросы-ответы</a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a>
+                        </li>
+                    </ul>
+                </div>
+            <? endif; ?>
 		</div>
 	</nav>
 	<!-- Modal -->

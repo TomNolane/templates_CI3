@@ -13,7 +13,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell')))
 ?>
 <footer> 
     <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-3 col-sm-3 col-xs-3" style="text-align: center;">
         <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
             <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png">
         <?php } else { ?>

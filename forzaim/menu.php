@@ -1,3 +1,4 @@
+<? if (!in_array($this->uri->segment(1), array('lk', 'offerwall', 'pixell'))) : ?>
 <aside class="ex-aside-menu">
     <div>
         <i class="ex-close-menu"></i>
@@ -55,3 +56,24 @@
             </div>
         </div>
     </div>
+<? else : ?>
+<? if ($this->uri->segment(1) == 'pixell') : ?>
+<div class="container" style="margin-bottom: 34px;">
+<? else : ?>
+<div class="container">
+<? endif; ?>
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+            <?php $logo_addon = '/templates/forzaim/assets/img/icons/logo-header.png';
+            switch ($this->uri->segment(1)) {
+                case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
+                case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
+                default: break;
+            } ?>
+            <? if ($this->uri->segment(1) != 'lk') : ?>
+                <img src="<?=$logo_addon?>" alt="Image missing">
+            <? endif; ?>
+        </a>
+    </div>
+</div>
+<? endif; ?>

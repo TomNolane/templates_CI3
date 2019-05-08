@@ -268,11 +268,11 @@ tr>td:first-child {
 }
 @media (min-width: 600px) {
     .div-spec {
-        padding-left: 90px !important;padding-right: 30px !important;
+        padding-left: 30px !important;padding-right: 30px !important;
     }
 }
 
-.letsminimize {width: 80% !important;}
+.letsminimize {width: 100% !important;}
 .mycol {margin-right: -3%;}
 .colfix {margin-left: 6%;}
 .start-text {color: #959595;}
@@ -317,7 +317,9 @@ tr>td:first-child {
 <?php if( $site == 'forzaim') { ?>
 <nav class="ex-main-header ex-transparent hidden-xs">
     <div class="container">
-        <i class="ex-hamburger"></i>
+        <? if (!in_array($this->uri->segment(1), array('lk', 'offerwall', 'pixell'))) : ?>
+            <i class="ex-hamburger"></i>
+        <? endif; ?>
         <a class="ex-brand" href="/">Forzaim</a>
     </div>
 </nav>
