@@ -18,7 +18,7 @@
         if (in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) 
         {
             echo '.footer, .footer-wrap {
-                    background-color: #000 !important;
+                    background-color: #fff !important;
                 }';
         }
         echo '</style>';

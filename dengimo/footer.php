@@ -40,7 +40,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell')))
         </div> 
         <?php } else { ?>
             <br>
-            <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="col-md-9 col-sm-9 col-xs-9">
             <?php
                 require 'adsence.php';
             ?>

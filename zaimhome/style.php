@@ -23,6 +23,10 @@
         {
             require "templates/zaimhome/assets/css/style_lk.css";
             require "templates/common/new/css/lk.php";
+            if (in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell')))
+            {
+                echo '.ex-main-header{background-color: #ffffff;}.ex-main-footer{background-color: #ffffff;color: #000;}';
+            }
         }
         if ($this->uri->segment(1) == 'form') 
         {

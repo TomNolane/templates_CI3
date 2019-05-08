@@ -13,22 +13,22 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'of
                 <div class="ex-footer-logo">
                     <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                         <? if ($this->uri->segment(1) == 'pixell') : ?>
-                            <img src="<?=$logo_foot?>" alt="logo-footer.png" style="width: auto; height: 100%;">
+                            <img src="<?=$logo_foot?>" alt="logo-footer.png" class="img-responsive">
                         <? else : ?>
-                            <img src="<?=$logo_foot?>" alt="logo-footer.png" style="width: auto; height: auto;">
+                            <img src="<?=$logo_foot?>" alt="logo-footer.png" class="img-responsive">
                         <? endif; ?>
                     <?php } else { ?>
-                        <img alt="logo.png" src="/templates/zaimhunter/assets/img/footer-logo-zaimhunter.png" style="width: auto; height: auto;">
+                        <img alt="logo.png" src="/templates/zaimhunter/assets/img/footer-logo-zaimhunter.png" class="img-responsive">
                     <?php } ?>
                 </div>
             </div>
             <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
-            <div class="col-md-10 spec_footer4">
+            <div class="col-md-10">
                 <p>Сервис по подбору выгодных онлайн займов
                     находящийся по адресу Россия, Ленинградская обл.
                     г. Санкт-Петербург, ул. Осипенко, 12, оф 201
                     <?=$email?> <span class="hidden-xs hidden-sm">| +7 (495) 006 19 61</span><br>
-                    <span id="special_footer" class="hidden-xs hidden-sm">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
+                    <span id="special_footer" class="black">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
                     Максимальная процентная ставка по займу составляет
                     0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок
                     пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате
@@ -45,7 +45,7 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'of
                   </div><div class="row">
                 <p class="">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург,
                     ул. Осипенко, 12, оф 201 | <?=$email?>
-                    <span class=""><span id="sp_footer2">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
+                    <span class="black"><span id="sp_footer2">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней.
                     Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
                     Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты
                     за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.

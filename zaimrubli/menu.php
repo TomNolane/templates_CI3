@@ -25,7 +25,7 @@
             </ul>
         </div>
         <? else : ?>
-            <? if ($this->uri->segment(1) != 'lk') : ?>
+            <? if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'offerwall' && $this->uri->segment(1) != 'pixell' && $this->uri->segment(1) != 'lk2') : ?>
                 <a href="/">
             <? endif; ?>
             <? $logo_addon = '/templates/zaimrubli/assets/img/logo-footer.png';
@@ -39,7 +39,7 @@
                 <? else : ?>
                     <img src="<?=$logo_addon?>" alt="Image missing">
                 <? endif; ?>
-            <? if ($this->uri->segment(1) != 'lk') : ?>
+            <? if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'offerwall' && $this->uri->segment(1) != 'pixell' && $this->uri->segment(1) != 'lk2') : ?>
                 </a>
             <? endif; ?>
         <? endif; ?>

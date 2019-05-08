@@ -14,24 +14,24 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
     <div class="row">
         <div class="col-md-2 col-xs-4">
             <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
-                <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png">
+                <img src="<?=$logo_foot?>" class="img-responsive" alt="logo-footer.png">
             <?php } else { ?>
                 <? if ($this->uri->segment(1) == 'lk') : ?>
-                    </div></div><div class="row"><div class="col-md-12 col-xs-12">
+                    </div></div><div class="row"><div class="col-md-2 col-xs-4">
                 <? endif; ?>
-                <img alt="logo.png" src="/templates/rublimo/assets/img/logo-footer.png" >
+                <img alt="logo.png" class="img-responsive" src="/templates/rublimo/assets/img/logo-footer.png" >
             <?php } ?>
         
         </div>
         <br>
         <?php if (in_array($this->uri->segment(1), array('lk','lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
-        <div class="col-md-10 col-xs-12" style="margin-left: -30px !important;">
+        <div class="col-md-10 col-xs-8">
             <?php
                 require 'adsence.php';
             ?>
         </div>
         <style>.gut {color: #000 !important;}</style>
-        <div class="col-md-12 col-xs-12">
+        <div class="col-md-10 col-xs-8">
             <p class="gut">
                 Наш сервис по подбору выгодных онлайн займов находящийся по адресу: Россия, Ленинградская обл. г. Санкт-Петербург,
                 ул. Осипенко, 12, оф 201 email:

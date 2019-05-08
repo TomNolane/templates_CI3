@@ -20,11 +20,12 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
                 <?php } ?>
             </div>
             <?php if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) {  ?>
-            <div class="col-md-10 col-xs-12">
+            <div class="col-md-10 col-xs-10">
                 <?php require 'adsence.php'; ?>
             </div> 
             <?php }  ?>
         </div>
+        <hr>
         <div class="row">
             <div class="col-md-3 col-xs-12">
                 Cервис по подбору выгодных онлайн займов находящийся по адресу Россия, Новосибирская область г. Новосибирск, ул. Маршала Покрышкина, 12, оф 201

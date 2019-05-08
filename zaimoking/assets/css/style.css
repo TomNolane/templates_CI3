@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Akrobat-Regular';
     src: url("/templates/common/new/fonts/Akrobat-Regular.eot");
-    src: url("/templates/common/new/onts/Akrobat-Regular.eot?#iefix") format("embedded-opentype"), url("/templates/common/new/fonts/Akrobat-Regular.woff") format("woff"), url("/templates/common/new/fonts/Akrobat-Regular.ttf") format("truetype");
+    src: url("/templates/common/new/fonts/Akrobat-Regular.eot?#iefix") format("embedded-opentype"), url("/templates/common/new/fonts/Akrobat-Regular.woff") format("woff"), url("/templates/common/new/fonts/Akrobat-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -1902,8 +1902,8 @@ th {
 
 @font-face {
     font-family: 'Glyphicons Halflings';
-    src: url("/templates/common/new/onts/glyphicons-halflings-regular.eot");
-    src: url("/templates/common/new/onts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/templates/common/new/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/templates/common/new/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/templates/common/newnew/s/glyphicons-halflings-regular.ttf") format("truetype"), url("/templates/common/new/new//glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+    src: url("/templates/common/new/fonts/glyphicons-halflings-regular.eot");
+    src: url("/templates/common/new/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/templates/common/new/fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("/templates/common/new/fonts/glyphicons-halflings-regular.woff") format("woff"), url("/templates/common/newnew/s/glyphicons-halflings-regular.ttf") format("truetype"), url("/templates/common/new/new//glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 /* line 269, ../sass/library/_bootstrap.scss */
