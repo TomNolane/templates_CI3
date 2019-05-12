@@ -15,7 +15,7 @@ else
 }
 
 $text = $json[0]["text"];
-$img = $json[0]["header"];
+$img = trim($json[0]["header"]);
 $url = $json[0]["url"];
 
 ?>

@@ -1,22 +1,14 @@
 <?php
+    require 'templates/common/new/php/check_bot.php';
+    $domain = getDomain();
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
     $link = str_replace("#site1", ucfirst($domen), $link);
     $link = str_replace("#site", $domen, $link);
-	$domen = '';
 
     if($this->input->get())
         $link = str_replace("#name#", implode('',$this->input->get()), $link);
     else 
         $link = str_replace("#name#", $domen, $link);
-    require 'templates/common/new/php/check_bot.php';
-
-    function getDomain3()
-    {
-        $CI =& get_instance();
-        return preg_replace("/^[\w]{2,6}:\/\/([\w\d\.\-]+).*$/","$1", $CI->config->slash_item('base_url'));
-    }
-
-    $domain = getDomain3();
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -135,7 +127,8 @@
             }
         }
 
-        <?php require 'templates/common/new/css/common.css';?>li>a {
+        <?php require 'templates/common/new/css/common.css';?>
+        li>a {
             font-size: 16px;
             color: #000;
             margin: 0 auto;
@@ -315,15 +308,15 @@
                                                 </a></div>
 
                                                  <?php if($setting_array['is_mobile'] != 'мобила') { ?> 
-                                                 <br><br><br>
-                                                <!-- dengos.ru adsense--> 
-                                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "ca-pub-4970738258373085",
-enable_page_level_ads: true
-});
-</script>
+                                                    <br><br><br>
+                                                     <!-- dengos.ru adsense--> 
+                                                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                                    <script>
+                                                    (adsbygoogle = window.adsbygoogle || []).push({
+                                                    google_ad_client: "ca-pub-4970738258373085",
+                                                    enable_page_level_ads: true
+                                                    });
+                                                    </script>
                                                     <br><br> 
                                                 <?php } ?>
                                         </div>
@@ -415,15 +408,15 @@ enable_page_level_ads: true
         <br class="hidden-xs"><br class="hidden-xs">
 
         <?php if($setting_array['is_mobile'] == 'мобила') { ?> 
-        <!-- dengos.ru adsense -->
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "ca-pub-4970738258373085",
-enable_page_level_ads: true
-});
-</script>
-    <?php } ?>
+            <!-- dengos.ru adsense -->
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-4970738258373085",
+            enable_page_level_ads: true
+            });
+            </script>
+        <?php } ?>
 
         <div id="rec63469080" class="r t-rec t-rec_pt_90 t-rec_pb_75"
             style="padding-top:35px;padding-bottom:75px;background-color:#ffffff; " data-record-type="490"
@@ -730,7 +723,7 @@ enable_page_level_ads: true
                 });
             </script>
         </div>
-        <?php if($setting_array['is_mobile'] != 'мобила') { ?>\
+        <?php if($setting_array['is_mobile'] != 'мобила') { ?>
             <!-- dengos.ru adsense -->
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
@@ -818,7 +811,7 @@ enable_page_level_ads: true
                 case 'hot-zaimw':
                 case 'zaim365w':
                 case 'credilow':
-		case 'bigzaimn':
+		        case 'bigzaimn':
                 case 'ypetrovichag': // + Отказной Квику
                 case 'visamew':
                     echo "_url = 'https://sms';"; break;
