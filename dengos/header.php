@@ -27,20 +27,14 @@
     else 
         $link = str_replace("#name#", $domen, $link);
 
-    function getDomain3()
-    {
-        $CI =& get_instance();
-        return preg_replace("/^[\w]{2,6}:\/\/([\w\d\.\-]+).*$/","$1", $CI->config->slash_item('base_url'));
-    }
-
-    $domain = getDomain3();
+    $domain = getDomain();
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php if($this->uri->segment(1) != 'index' && $this->uri->segment(1) != '') echo $my_title; else echo 'dengos доступные займы';?></title>
+    <title><?php if($this->uri->segment(1) != 'index' && $this->uri->segment(1) != '') echo $my_title; else echo $domain.' доступные займы';?></title>
     <meta name="description" content="<?=$description?>">
     <meta property="og:url" content="https://<?=$domain?>/<?=$main?>">
     <meta property="og:title" content="Вам одобрено!">
@@ -137,14 +131,6 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 
 }?>
 <body class="t-body" style="margin: 0px;">
-<?php
-// if(empty($previous) || $previous == 'https://dengos.ru/' || $previous == 'https://dengos.ru/faq' || $previous == 'https://dengos.ru/about' || $previous == 'https://dengos.ru/oferta'
-//     || $previous == 'https://dengos.ru/soglasie' || $previous == 'https://dengos.ru/rules' || $previous == 'https://dengos.ru/personal-data' || $previous == 'https://dengos.ru/calls'
-//     || $previous == 'https://dengos.ru/regulation' || $previous == 'https://dengos.ru/safety' || $previous == 'https://dengos.ru/zaim-card' || $previous == 'https://dengos.ru/zaim-yandex'
-//     || $previous == 'https://dengos.ru/zaim-contact' || $previous == 'https://dengos.ru/zaim-qiwi' || $previous == 'https://dengos.ru/zaim-bank' || $previous == 'https://dengos.ru/offerwall')
-if(1 == 1)
-{
-?>
     <header style="margin: 0 20px; top: 0;">
     <nav class="navbar">
 		<div class="col-md-12">
@@ -205,17 +191,5 @@ if(1 == 1)
 		</div>
 	</nav>  
   </header>
-  <?php if(!empty($previous) && $previous != 'https://dengos.ru/' && $previous != 'https://sumas.ru/') { 
-      if($this->uri->segment(1) != '/' && $this->uri->segment(1) != '' && $this->uri->segment(1) != ' ') { ?>
-        <!-- dengos.ru adsence --> 
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "ca-pub-4970738258373085",
-enable_page_level_ads: true
-});
-</script>
- <?php } }?>
-    <!--allrecords-->
-<?php } ?>
+<?php require 'adsence_all.php'; ?>
 <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="663907" data-tilda-page-id="3385037" data-tilda-page-alias="push" data-tilda-formskey="93c3cbd6dbbe2328e90d7d614020b440">

@@ -309,14 +309,7 @@
 
                                                  <?php if($setting_array['is_mobile'] != 'мобила') { ?> 
                                                     <br><br><br>
-                                                     <!-- dengos.ru adsense--> 
-                                                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                                                    <script>
-                                                    (adsbygoogle = window.adsbygoogle || []).push({
-                                                    google_ad_client: "ca-pub-4970738258373085",
-                                                    enable_page_level_ads: true
-                                                    });
-                                                    </script>
+                                                    <?php require 'adsence_all.php'; ?>
                                                     <br><br> 
                                                 <?php } ?>
                                         </div>
@@ -408,14 +401,7 @@
         <br class="hidden-xs"><br class="hidden-xs">
 
         <?php if($setting_array['is_mobile'] == 'мобила') { ?> 
-            <!-- dengos.ru adsense -->
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-4970738258373085",
-            enable_page_level_ads: true
-            });
-            </script>
+           <?php require 'adsence_all.php'; ?>
         <?php } ?>
 
         <div id="rec63469080" class="r t-rec t-rec_pt_90 t-rec_pb_75"
@@ -724,14 +710,7 @@
             </script>
         </div>
         <?php if($setting_array['is_mobile'] != 'мобила') { ?>
-            <!-- dengos.ru adsense -->
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "ca-pub-4970738258373085",
-enable_page_level_ads: true
-});
-</script>
+        <?php require 'adsence_all.php'; ?>
         <br><br>
         <?php } ?>
         <div id="rec63469085" class="r t-rec t-rec_pt_30 t-rec_pb_90"
