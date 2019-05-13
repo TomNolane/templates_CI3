@@ -63,7 +63,7 @@
     <script src="/templates/dengos/js/universal/tilda-slds-1.4.min.js" charset="utf-8"></script>
     <script src="/templates/dengos/js/universal/hammer.min.js" charset="utf-8"></script>
     <script src="/templates/dengos/js/universal/tilda-zoom-2.0.min.js" charset="utf-8"></script>
-    <script  src="//cdn.sendpulse.com/js/push/7c8ebb6294d764a87f0f15175f7d0d99_1.js" async></script>
+    <?php require 'sendpuls_all.php'; ?>
     <style>
     <?php
     echo '.t338__logo{float: unset;max-width: 220px !important;}.t338__title{margin-bottom: 40px;padding-top: 200px;text-align: center;} .t-prefix_1{padding-left: 0;padding-right: 0;}';
