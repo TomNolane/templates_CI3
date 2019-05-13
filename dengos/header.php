@@ -40,7 +40,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php if($this->uri->segment(1) != 'index' && $this->uri->segment(1) != '') echo $my_title; else echo 'dengos доступные займы';?></title>
+    <title><?php if($this->uri->segment(1) != 'index' && $this->uri->segment(1) != '') echo $my_title; else echo $domain.' доступные займы';?></title>
     <meta name="description" content="<?=$description?>">
     <meta property="og:url" content="https://<?=$domain?>/<?=$main?>">
     <meta property="og:title" content="Вам одобрено!">
