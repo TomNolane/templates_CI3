@@ -45,6 +45,7 @@
     margin-left: 10px;
 }
 </style>
+<?php require 'adsence_all.php'; ?>
 <div class="container">
     <div class="row">
         <div class="col-xs-12 footer-clear">
@@ -259,7 +260,7 @@ accurateTrackBounce:true,
 webvisor:true
 });
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/53492980" style="position:absolute; left:-9999px;" alt="alt" /></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/53492980" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </body>
 </html>
