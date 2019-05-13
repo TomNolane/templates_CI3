@@ -26,6 +26,8 @@
     {
         require "templates/zaimnow/assets/css/style_lk.css";
         require "templates/common/new/css/lk.php";
+        if (in_array($this->uri->segment(1), array('offerwall')))
+        echo 'footer.ex-main-footer{background-image: none;}footer.ex-main-footer p{color: #000000;}';
     }
     if ($this->uri->segment(1) == 'form') 
     {

@@ -87,9 +87,8 @@
         <nav class="navbar navbar-expand-lg ex-main-header ex-grey-header">
             <div class="container">
             <? if (in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'pixell', 'vitrina'))) : ?>
-            <? if ($this->uri->segment(1) != 'lk') : ?>
-            <a href="/">
-        <? endif; ?><?
+            <a>
+                <?
                 $logo_addon = '/templates/zaimhunter/assets/img/logo-zaimhunter.png';
                 switch ($this->uri->segment(1)) {
                     case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
@@ -101,7 +100,11 @@
                 </a>
             <? endif; ?>
             <? else : ?>
-                <a class="ex-brand navbar-brand" href="/"></a>
+                <? if (in_array($this->uri->segment(1), array('lk', 'lk2'))) { ?>
+                <a class="ex-brand navbar-brand" ></a>
+                <? } else { ?>
+                 <a class="ex-brand navbar-brand" href="/"></a>
+                <? } ?>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

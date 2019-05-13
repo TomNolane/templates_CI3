@@ -32,5 +32,9 @@
             require "templates/common/new/css/form.css";
             require "templates/dengomir/assets/css/style_form.css";
         }
+        if (in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) 
+        {
+            echo '.container3{width: 100% !important;}.black{color: #000 !important;}';
+        }
 		echo '</style>'; 
     ?>

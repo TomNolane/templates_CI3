@@ -1,8 +1,8 @@
 <body class="ex-sticky">
 <nav class="navbar navbar-expand-lg ex-main-header">
     <div class="container">
-     <? if (in_array($this->uri->segment(1), array('lk', 'offerwall', 'offerwall2', 'pixell', 'vitrina'))) : ?>
-     <? if ($this->uri->segment(1) != 'lk') : ?>
+     <? if (in_array($this->uri->segment(1), array('lk','lk2', 'offerwall', 'offerwall2', 'pixell', 'vitrina'))) : ?>
+     <? if (!in_array($this->uri->segment(1), array('lk','lk2', 'offerwall', 'offerwall2', 'pixell', 'vitrina'))) : ?>
                 <a href="/">
             <? endif; ?>
          <?php 
@@ -15,11 +15,11 @@
             } 
             echo '<img src="'.$logo_addon.'" alt="Image missing">';
             ?>
-            <? if ($this->uri->segment(1) != 'lk') : ?>
+            <? if (!in_array($this->uri->segment(1), array('lk', 'lk2','offerwall', 'offerwall2', 'pixell', 'vitrina'))) : ?>
                 </a>
             <? endif; ?>
         <? endif; ?>
-         <? if (!in_array($this->uri->segment(1), array('lk', 'offerwall', 'offerwall2', 'pixell', 'vitrina'))) : ?>
+         <? if (!in_array($this->uri->segment(1), array('lk', 'lk2','offerwall', 'offerwall2', 'pixell', 'vitrina'))) : ?>
          <a class="ex-brand navbar-brand" href="/"></a>
          <? endif; ?>
          <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>

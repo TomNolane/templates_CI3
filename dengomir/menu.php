@@ -23,6 +23,7 @@
 				<img src="<?=$logo_addon?>" alt="Image missing">
             </a>
         </div>
+        <br><br>
         <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
         <div class="collapse navbar-collapse" id="dengomirCollapsed">
             <ul class="nav navbar-nav navbar-right"> 

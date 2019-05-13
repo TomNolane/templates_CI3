@@ -26,6 +26,8 @@
     {
         require "templates/zaimomir/assets/css/style_lk.css";
         require "templates/common/new/css/lk.php";
+        if (in_array($this->uri->segment(1), array( 'lk3', 'offerwall2', 'offerwall', 'pixell'))) 
+            echo 'footer.ex-main-footer{background-color: #ffffff;}footer.ex-main-footer p{color: #000;}';
     }
     if ($this->uri->segment(1) == 'form') 
     {

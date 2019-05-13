@@ -137,9 +137,9 @@ img{max-width:100%;}
 }
 
 @font-face{font-family:Roboto Bold;src:url("/templates/common/new/fonts/RobotoBold.ttf");}
-@font-face{font-family:Roboto Light;src:url("/templates/common/new/onts/RobotoLight.ttf");}
-@font-face{font-family:Roboto Regular;src:url("/templates/common/new/onts/RobotoRegular.ttf");}
-@font-face{font-family:Roboto Meduim;src:url("/templates/common/new/onts/RobotoMedium.ttf");}
+@font-face{font-family:Roboto Light;src:url("/templates/common/new/fonts/RobotoLight.ttf");}
+@font-face{font-family:Roboto Regular;src:url("/templates/common/new/fonts/RobotoRegular.ttf");}
+@font-face{font-family:Roboto Meduim;src:url("/templates/common/new/fonts/RobotoMedium.ttf");}
 .top-block-wrap{width:100%;}
 .top-block{max-width:1040px;margin:0 auto;padding:3px 0 6px 0;}
 .top-block .left{display:inline-block;vertical-align:middle;}
@@ -178,7 +178,7 @@ img{max-width:100%;}
 .info .info-bot{display:table;margin:40px auto 40px auto;}
 .info .kre4{left:51px;margin-right:100px;position:relative;}
 .info .kre5{left:24px;margin-right:44px;position:relative;}
-.footer-wrap{width:100%;background-color:#093b3f;}
+.footer-wrap{width:100%;background-color:#fff;}
 .footer{max-width:1040px;margin:0 auto;padding:5px 0;}
 .footer .footer-left{display:inline-block;vertical-align:top;margin-right:25px;}
 .footer .footer-right{display:inline-block;vertical-align:top;}
@@ -500,7 +500,7 @@ label.green{color:#7e975a;}
 .results-small img{height:50px;max-width:100%;}
 .results-small p{text-indent:0;}
 .results-small .btn{height:30px;padding:6px;width:200px;}
-footer{background:#093b3f;color:#fff;height:170px;padding-top:30px;}
+footer{background:#fff;color:#fff;height:170px;padding-top:30px;}
 footer a, footer a:hover, footer a:visited{color:#000;text-decoration:none;}
 footer .menu{margin:15px 0;}
 footer .menu a{color:#fff;font-size:16px;font-weight:bold;line-height:16px;margin:10px 0;}
@@ -551,7 +551,7 @@ footer .copy{font-size:16px;line-height:55px;}
 .ser .info-bot .inf1{display:inline-block;vertical-align:top;}
 .ser .info-bot .inf3-mar{margin-right:127px;}
 .ser .info-bot .inf4-mar{margin-right:116px;}
-.footer-wrap{width:100%;background-color:#093b3f;}
+.footer-wrap{width:100%;background-color:#fff;}
 .footer{max-width:1040px;margin:0 auto;padding:5px 0;}
 .footer .footer-left{display:inline-block;vertical-align:top;margin-right:25px;}
 .footer .footer-right{display:inline-block;vertical-align:top;}

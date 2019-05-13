@@ -257,7 +257,7 @@
         <body class="ex-sticky">
         <nav class="navbar navbar-expand-lg ex-main-header">
             <div class="container">
-            <? if ($this->uri->segment(1) != 'lk') : ?>
+            <? if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'offerwall' && $this->uri->segment(1) != 'pixell' && $this->uri->segment(1) != 'lk2') : ?>
                 <a href="/">
             <? endif; ?>
                 <? $logo_addon = '/templates/zaimomix/assets/img/logo-footer.png';
@@ -267,7 +267,7 @@
                     default: break;
                 } ?>
                 <img src="<?=$logo_addon?>" alt="Image missing">
-                <? if ($this->uri->segment(1) != 'lk') : ?>
+                <? if ($this->uri->segment(1) != 'lk' && $this->uri->segment(1) != 'offerwall' && $this->uri->segment(1) != 'pixell' && $this->uri->segment(1) != 'lk2') : ?>
                 </a>
             <? endif; ?>
             </div>

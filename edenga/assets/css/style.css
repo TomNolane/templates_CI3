@@ -45,11 +45,11 @@
     font-family: 'Glyphicons Halflings';
   
     src: url('/templates/common/new/fonts/glyphicons-halflings-regular.eot');
-    src: url('/templates/common/new/onts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/templates/common/new/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('/templates/common/new/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/templates/common/newnew/s/glyphicons-halflings-regular.ttf') format('truetype'), url('/templates/common/new/new//glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+    src: url('/templates/common/new/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/templates/common/new/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('/templates/common/new/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/templates/common/newnew/s/glyphicons-halflings-regular.ttf') format('truetype'), url('/templates/common/new/new//glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
   }
 @font-face { 
     font-family: 'SFUIDisplayRegular';
-    src: url('/templates/common/new/onts/sfuidisplay-medium.otf'), url('/templates/common/new/fonts/sfuidisplay-regular.otf');
+    src: url('/templates/common/new/fonts/sfuidisplay-medium.otf'), url('/templates/common/new/fonts/sfuidisplay-regular.otf');
   }
 html, body{
     height: 100%;

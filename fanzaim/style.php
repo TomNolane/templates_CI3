@@ -26,9 +26,12 @@
     {
         require "templates/fanzaim/assets/css/style_lk.css";
         require "templates/common/new/css/lk.php";
-        echo 'footer.ex-main-footer {
-            background-color: #000;
-        }';
+        if ($this->uri->segment(1) == 'lk')
+        {
+            echo 'footer.ex-main-footer {
+                background-color: #000;
+            }';
+        }
     }
     if ($this->uri->segment(1) == 'form') 
     {

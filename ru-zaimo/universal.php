@@ -1,22 +1,14 @@
 <?php
+    require 'templates/common/new/php/check_bot.php';
+    $domain = getDomain();
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
     $link = str_replace("#site1", ucfirst($domen), $link);
     $link = str_replace("#site", $domen, $link);
-	$domen = '';
 
     if($this->input->get())
         $link = str_replace("#name#", implode('',$this->input->get()), $link);
     else 
         $link = str_replace("#name#", $domen, $link);
-    require 'templates/common/new/php/check_bot.php';
-
-    function getDomain3()
-    {
-        $CI =& get_instance();
-        return preg_replace("/^[\w]{2,6}:\/\/([\w\d\.\-]+).*$/","$1", $CI->config->slash_item('base_url'));
-    }
-
-    $domain = getDomain3();
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -135,9 +127,9 @@
             }
         }
 
-        <?php require 'templates/common/new/css/common.css';
-
-        ?>li>a {
+        <?php require 'templates/common/new/css/common.css';?>
+        
+        li>a {
             font-size: 16px;
             color: #000;
             margin: 0 auto;
@@ -875,7 +867,7 @@
                 case 'hot-zaimw':
                 case 'zaim365w':
                 case 'credilow':
-		case 'bigzaimn':
+		        case 'bigzaimn':
                 case 'ypetrovichag': // + Отказной Квику
                 case 'visamew':
                     echo "_url = 'https://sms';"; break;

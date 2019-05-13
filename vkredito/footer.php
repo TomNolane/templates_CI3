@@ -25,8 +25,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
                 <?php } ?>
 
             </div>
-            <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
-            <div class="col-md-4 col-sm-4 col-xs-12 spec_footer4">
+            <div class="col-md-4 col-sm-4 col-xs-12">
                 <div style="font-size: 12px;">
                     <p>Сервис по подбору выгодных онлайн займов находящийся по адресу
                         <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
@@ -35,7 +34,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
                     </p>
                 </div>
             </div>
-            <div class="col-md-6 hidden-xs hidden-sm spec_footer5">
+            <div class="col-md-6">
                 <p style="font-size:12px">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная
                     процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости
                     займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят
@@ -43,13 +42,11 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
                     своевременного погашения.
                     <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001.</p>
             </div>
-            <?php } else { ?>
-                 <div class="col-md-10 col-xs-12">
+                 <div class="col-md-12 col-xs-12">
                      <?php
                         require 'adsence.php';
                      ?>
                 </div>
-            <?php } ?>
         </div>
         <div class="clearfix">&nbsp;</div>
     </div>

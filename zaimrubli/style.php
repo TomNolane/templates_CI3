@@ -26,6 +26,7 @@
     {
         require "templates/zaimrubli/assets/css/style_lk.css";
         require "templates/common/new/css/lk.php";
+         echo 'footer.ex-main-footer p{color: #000 !important}';
     }
     if ($this->uri->segment(1) == 'form') 
     {
