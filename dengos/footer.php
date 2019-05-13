@@ -206,7 +206,11 @@ enable_page_level_ads: true
             <!-- T420 -->
             <div class="t420">
                 <div class="t-container">
-                    <img src="templates/dengos/img/dengos-logo.png" style="margin: 0 20px;" class="t338__logo t-img">
+                    <? if (in_array($domain, array('vkredito.ru', 'vkredito.tomnolane.ru'))) : ?>
+                        <img src="/templates/vkredito/assets/img/logo.png" style="margin: 0 20px;" class="t338__logo t-img">
+                    <? else : ?>
+                        <img src="templates/dengos/img/dengos-logo.png" style="margin: 0 20px;" class="t338__logo t-img">
+                    <? endif; ?>
                     <p style="padding: 10px 10px 0 10px; color:#ffffff;font-size:15px;margin:0;">Сайт НЕ является представительством МФО или банком, не выдает займов и кредитов. Персональные данные пользователей не собираются и не хранятся. Все рекомендуемые на сайте кредитные учреждения имеют соответствующие лицензии. Условия неуплаты можно уточнить на сайте МФО.</p>
                     <p style="padding: 0 10px;"><span style="color:#ffffff;font-size:15px;"> Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 дня до 1 года. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения. Email: support@<?=$domain?>  <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
                     <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001 | +7(495) 006 19 61 | Россия, Санкт-Петербург, улица Осипенко, 12</p>

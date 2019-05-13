@@ -150,11 +150,13 @@ if(1 == 1)
 		<div class="col-md-12">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="/">
-                    <?php if($domain == 'dengos.ru') { ?>
-					<img src="/templates/dengos/img/dengos-logo.png" class="t338__logo t-img">
-                    <?php } else { ?>
-                    <img src="/templates/dengos/img/sumas.png" class="t338__logo t-img">
-                    <?php } ?>
+                    <?php if(in_array($domain, array('dengos.ru', 'dengos.tomnolane.ru'))) : ?>
+                        <img src="/templates/dengos/img/dengos-logo.png" class="t338__logo t-img">
+                    <? elseif (in_array($domain, array('vkredito.ru', 'vkredito.tomnolane.ru'))) : ?>
+                        <img src="/templates/vkredito/assets/img/logo.png" class="t338__logo t-img">
+                    <?php else : ?>
+                        <img src="/templates/dengos/img/sumas.png" class="t338__logo t-img">
+                    <?php endif; ?>
 				</a>
 			</div>
 			<div class="navbar-collapsem hidden-xs" id="navbar-collapse-1">

@@ -226,7 +226,11 @@ tr>td:first-child {
     background-color: #FFF;
     color: #5b9062;
     font-size: 14px;
-    right: 6%;
+    <? if (in_array($domain, array('vkredito.ru', 'vkredito.tomnolane.ru', 'dengos.ru', 'dengos.tomnolane.ru'))) : ?>
+        left: 2%;
+    <? else : ?>
+        right: 6%;
+    <? endif; ?>
     padding: 0px 13px 0px;
     position: absolute;
     top: 3px;
@@ -243,10 +247,18 @@ tr>td:first-child {
     text-align: center;
     align-items: center;
 }
+<? if (in_array($domain, array('vkredito.ru', 'vkredito.tomnolane.ru', 'dengos.ru', 'dengos.tomnolane.ru'))) : ?>
+.bem_offer__image > img {
+    vertical-align: unset !important;
+    padding-top: 26px !important;
+    height: 55%;
+}
+<? else : ?>
 .bem_offer__image > img {
     vertical-align: unset !important;
     padding-top: 26px !important;
 }
+<? endif; ?>
 .bem_offer__info {
     color: #000;
     width: auto;
@@ -387,10 +399,17 @@ tr>td:first-child {
 }
 }
 
+<? if (in_array($domain, array('vkredito.ru', 'vkredito.tomnolane.ru', 'dengos.ru', 'dengos.tomnolane.ru'))) : ?>
+.my-col {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+<? else : ?>
 .my-col {
     padding-left: 0px !important;
     padding-right: 0px !important;
 }
+<? endif; ?>
 
 .info-text-wrap {
     text-align: left;
@@ -434,26 +453,52 @@ tr>td:first-child {
     padding: 2px;
 }
 
+<? if (in_array($domain, array('vkredito.ru', 'vkredito.tomnolane.ru', 'dengos.ru', 'dengos.tomnolane.ru'))) : ?>
+.bo-left {
+    border: 1px solid #5b9062;
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+.bo-right {
+    border: 1px solid #5b9062;
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+<? else : ?>
 .bo-left {
     border: 1px solid #5b9062;
     margin-right: 5px;
     margin-bottom: 10px;
-}
-.bobg-top {
-    background: rgb(248,255,232);
-    background: -moz-linear-gradient(top, rgba(248,255,232,1) 0%, rgba(227,245,171,1) 100%);
-    background: -webkit-linear-gradient(top, rgba(248,255,232,1) 0%,rgba(227,245,171,1) 100%);
-    background: linear-gradient(to bottom, rgba(248,255,232,1) 0%,rgba(227,245,171,1) 100%);
 }
 .bo-right {
     border: 1px solid #5b9062;
     margin-left: 5px;
     margin-bottom: 10px;
 }
+<? endif; ?>
+.bobg-top {
+    background: rgb(248,255,232);
+    background: -moz-linear-gradient(top, rgba(248,255,232,1) 0%, rgba(227,245,171,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(248,255,232,1) 0%,rgba(227,245,171,1) 100%);
+    background: linear-gradient(to bottom, rgba(248,255,232,1) 0%,rgba(227,245,171,1) 100%);
+}
 .bobg-bottom {
     background: rgb(227,245,171);
     background: -moz-linear-gradient(top, rgba(227,245,171,1) 0%, rgba(248,255,232,1) 100%);
     background: -webkit-linear-gradient(top, rgba(227,245,171,1) 0%,rgba(248,255,232,1) 100%);
     background: linear-gradient(to bottom, rgba(227,245,171,1) 0%,rgba(248,255,232,1) 100%);
+}
+
+.stars-n-rating {
+    position: absolute;
+    top: 3px;
+    right: 7%;
+}
+
+.pre-rating {
+    margin-right: 5px;
+    font-weight: bold;
+    padding: 2px;
+    border: 1px solid;
 }
 </style>

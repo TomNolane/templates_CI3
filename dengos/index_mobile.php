@@ -19,7 +19,20 @@ enable_page_level_ads: true
     <?php 
         function plural_type($n) { 
             return ($n%10==1 && $n%100!=11 ? 0 : ($n%10>=2 && $n%10<=4 && ($n%100<10 || $n%100>=20) ? 1 : 2)); 
-        } 
+        }
+
+        function getStars() {
+            $stars_num = rand(3, 5);
+            $str = '<i class="fa fa-star" aria-hidden="true"></i>';
+            $rating = '';
+            switch ($stars_num) {
+                case 3: $rating = rand(6, 7) . '.' . rand(0, 9); break;
+                case 4: $rating = rand(7, 8) . '.' . rand(0, 9); break;
+                case 5: $rating = rand(8, 9) . '.' . rand(0, 9); break;
+            }
+
+            return '<span class="pre-rating">' . $rating . '</span>' . str_repeat($str, $stars_num);
+        }
 
         $_plural_years = array('год', 'года', 'лет');
         $_plural_months = array('месяц', 'месяца', 'месяцев');
@@ -55,13 +68,17 @@ enable_page_level_ads: true
                     '',
                     '<div class="bem_offer__note">Одобрение 100% сегодня</div>',
                     '<div class="bem_offer__note">Круглосуточная выдача</div>',
-                    '<div class="bem_offer__note">Займа без отказов</div>',
+                    '<div class="bem_offer__note">Займ без отказов</div>',
                     '<div class="bem_offer__note">Без документов</div>',
                     '<div class="bem_offer__note">Одобряют каждому</div>',
                     '<div class="bem_offer__note">С плохой кредитной историей</div>',
                     ''
                 );
                 $rand_word = $words[rand(0,7)];
+
+                if (in_array($domain, array('vkredito.ru', 'vkredito.tomnolane.ru', 'dengos.ru', 'dengos.tomnolane.ru')))
+                    $addons = '<div class="stars-n-rating">' . getStars() . '</div>';
+                else $addons = '';
                 
                 if($temp % 2 > 0)
                     echo '<div class="row">';
@@ -69,12 +86,12 @@ enable_page_level_ads: true
                 echo <<<END
                 <div class="col-md-6 col-xs-6 my-col">
                 <div class="bem_offers__wrapper">
-                    <a href="$href" onclick=$onclick class="bem_offer bo-left bobg-top" target="_blank">
+                    <a href="$href" onclick=$onclick class="bem_offer bo-left" target="_blank">
                         $rand_word
                         <div class="bem_offer__image">
                             <img src="/templates/common/img/offers/$im.png" alt="$im.png">
                         </div>
-                        <div class="bem_offer__button">Получить деньги</div>
+                        $addons
                         <div class="bem_offer__info">
                             <div class="info-text-wrap">
                                 <div class="info-text-up">Заем:</div>
@@ -89,6 +106,7 @@ enable_page_level_ads: true
                                 <div class="info-text-down">$over_per_day <i class="fa fa-rub"></i></div>
                             </div>
                         </div>
+                        <div class="bem_offer__button">Получить деньги</div>
                     </a>
                 </div></div>
 END;
