@@ -45,14 +45,7 @@
     margin-left: 10px;
 }
 </style>
-<!-- dengos.ru adsence --> 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "ca-pub-4970738258373085",
-enable_page_level_ads: true
-});
-</script>
+<?php require 'adsence_all.php'; ?>
 <div class="container">
     <div class="row">
         <div class="col-xs-12 footer-clear">
@@ -144,7 +137,6 @@ enable_page_level_ads: true
             <div class="ex-info-block bo-left footer-block">
                 <div class="row">
                     <div class="col-xs-4">
-                        <!-- <div class="white offers"> -->
                         <div class="white">
                             <p>
                                 ООО МФО «СМСФИНАНС» № лицензии 2120177002022 Адрес: 115201, г. Москва, ул. Котляковская, д.3, стр. 13 Годовая процентная
@@ -166,7 +158,6 @@ enable_page_level_ads: true
                                 ООО «СрочноДеньги» № лицензии 2110552000304 Адрес: Нижний Новгород, ул. Тимирязева, 15/2, БЦ «КМ-Сити», 4 этаж Годовая процентная
                                 ставка: 360%
                             </p>
-                            
                         </div>
                     </div>
                 </div>

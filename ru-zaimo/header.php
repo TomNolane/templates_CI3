@@ -137,14 +137,6 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 
 }?>
 <body class="t-body" style="margin: 0px;">
-<?php
-// if(empty($previous) || $previous == 'https://ru-zaimo.ru/' || $previous == 'https://ru-zaimo.ru/faq' || $previous == 'https://ru-zaimo.ru/about' || $previous == 'https://ru-zaimo.ru/oferta'
-//     || $previous == 'https://ru-zaimo.ru/soglasie' || $previous == 'https://ru-zaimo.ru/rules' || $previous == 'https://ru-zaimo.ru/personal-data' || $previous == 'https://ru-zaimo.ru/calls'
-//     || $previous == 'https://ru-zaimo.ru/regulation' || $previous == 'https://ru-zaimo.ru/safety' || $previous == 'https://ru-zaimo.ru/zaim-card' || $previous == 'https://ru-zaimo.ru/zaim-yandex'
-//     || $previous == 'https://ru-zaimo.ru/zaim-contact' || $previous == 'https://ru-zaimo.ru/zaim-qiwi' || $previous == 'https://ru-zaimo.ru/zaim-bank' || $previous == 'https://ru-zaimo.ru/offerwall')
-if(1 == 1)
-{
-?>
     <header style="margin: 0 20px; top: 0;">
     <nav class="navbar">
 		<div class="col-md-12">
@@ -203,40 +195,7 @@ if(1 == 1)
 		</div>
 	</nav>  
   </header>
-  <?php if(!empty($previous) && $previous != 'https://ru-zaimo.ru/' && $previous != 'https://sumas.ru/') { 
-      if($this->uri->segment(1) != '/' && $this->uri->segment(1) != '' && $this->uri->segment(1) != ' ') { ?>
-<?php if($domain == 'ru-zaimo.ru') { ?>
-         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Ru-zaimo.ru -->
-        <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="9321709999"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        <?php } else { ?>
-        
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-4970738258373085",
-        enable_page_level_ads: true
-        });
-        </script>
-        <?php } ?>
- <?php } }?>
-    <!--allrecords-->
-<?php } else { ?>
-<!-- <header  style="margin: 20px 0 0 0;  text-align: center">
-    <a class="" href="/">
-        <img src="/templates/ru-zaimo/img/ru-zaimo.png" class="t-img">
-    </a> 
-  </header> -->
-<?php }?>
-  
+    <?php require 'adsence_all.php'; ?>
     <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="663907"
         data-tilda-page-id="3385037" data-tilda-page-alias="push" data-tilda-formskey="93c3cbd6dbbe2328e90d7d614020b440"
         style="overflow-x: hidden;">
