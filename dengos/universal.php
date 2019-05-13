@@ -713,8 +713,10 @@
                 });
             </script>
         </div>
+        <?php if($setting_array['is_mobile'] != 'мобила') { ?>
         <?php require 'adsence_all.php'; ?>
         <br><br>
+        <?php } ?>
         <div id="rec63469085" class="r t-rec t-rec_pt_30 t-rec_pb_90"
             style="padding-top:30px;padding-bottom:90px;background-color:#3b3b3b;" data-animationappear="off"
             data-record-type="420" data-bg-color="#3b3b3b">
