@@ -719,8 +719,13 @@
             <!-- T420 -->
             <div class="t420">
                 <div class="t-container">
-                    <img src="/templates/dengos/img/dengos-logo.png" style="margin: 0 20px;" alt="t338__logo t-img"
+                    <? if (in_array($domain, array('vkredito.ru', 'vkredito.tomnolane.ru'))) : ?>
+                        <img src="/templates/vkredito/assets/img/logo.png" style="margin: 0 20px;" alt="t338__logo t-img"
                         class="t338__logo t-img"> 
+                    <? else : ?>
+                        <img src="/templates/dengos/img/dengos-logo.png" style="margin: 0 20px;" alt="t338__logo t-img"
+                        class="t338__logo t-img"> 
+                    <? endif; ?>
                     <p style="padding: 10px 10px 0 10px; color:#ffffff;font-size:15px;margin:0;">Сайт НЕ является
                         представительством МФО или банком, не выдает займов и кредитов. Персональные данные
                         пользователей не собираются и не хранятся. Все рекомендуемые на сайте кредитные учреждения имеют
