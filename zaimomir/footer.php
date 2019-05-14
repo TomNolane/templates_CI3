@@ -180,7 +180,7 @@ require 'templates/common/new/js/exeption.js';
 <?php
     include "google.php";
     include "yandexmetrika.php";
-    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3')))
         require 'google_lk.php';
 ?>
 </body>

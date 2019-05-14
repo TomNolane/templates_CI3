@@ -1064,10 +1064,10 @@ $(document).ready(function () {
             send_form(true, '/lk' + document.location.search);
             markTarget('form-step-3');
             //window.location = '/lk' + document.location.search;
-			window.location.href = '/offerwall';
+			//window.location.href = '/offerwall';
 			window.open(
 				'/lk' + document.location.search,
-				'_blank'
+				'_self' //'_blank'
 			);
             //window.location = '/lk?loan='+loans+'&keyword=' + ((getParameterByName('keyword') === null) ? window.location.hostname : getParameterByName('keyword')) + '&campaign_id=' + ((getParameterByName('campaign_id') === null) ? window.location.hostname : getParameterByName('campaign_id')) + '&utm_source=' + ((getParameterByName('utm_source') === null) ? window.location.hostname : getParameterByName('utm_source'));
         }
