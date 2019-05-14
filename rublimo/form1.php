@@ -1,5 +1,13 @@
-<div class="form-group has-feedback hidden-lg hidden-md hidden-sm visible-xs text-center">
-	<label class="col-sm-4 control-label label-required hidden-xs"></label>
+<? if ($setting_array['is_mobile'] != 'мобила') : ?>
+<style>
+.mycol {
+    width: 46%;
+    margin-left: 34px;
+}
+</style>
+<? endif; ?>
+<div class="form-group has-feedback hidden-lg hidden-md hidden-sm hidden-xs text-center">
+	<label class="col-sm-4 control-label label-required hidden-lg hidden-md hidden-sm hidden-xs"></label>
 	<div class="col-sm-7 col-xs-12 am">
 		<div class="">
 			<div>Сумма</div>
@@ -9,55 +17,63 @@
 		</div>
 	</div>
 </div>
-<div class="form-group has-feedback has-success hidden-xs text-center">
-	<label class="col-sm-4 control-label label-required hidden-xs" for="amount">Сумма</label>
-	<div class="col-sm-8 col-xs-12">
+<div class="form-group has-feedback has-success text-center">
+	<label class="col-sm-4 col-md-4 control-label hidden-xs" for="amount"></label>
+	<div class="col-sm-6 col-md-6 col-xs-12 mycol">
 		<div class="form-slider green irs2">
 			<input type="text" class="amount2" name="amount" value="<?=$sum;?>"
 			/>
 		</div>
 	</div>
 </div>
-<div class="form-group has-feedback has-success hidden-xs">
-	<label class="col-sm-4 control-label label-required hidden-xs" for="period2">Срок</label>
-	<div class="col-sm-8 col-xs-12">
+<div class="form-group has-feedback hidden-xs" style="margin-top: 14px; margin-bottom: 14px;">
+	<label class="col-sm-4 col-md-4 control-label hidden-xs" for="period2"></label>
+	<div class="col-sm-6 col-md-6 col-xs-12 mycol">
 		<div class="form-slider green">
-			<input type="text" class="form-control" id="period2" name="period2" value="От 61 до 130 дней" readonly/>
+			<input style="color: #000;" type="text" class="form-control" id="period2" name="period2" disabled="disabled" value="От 61 до 130 дней" readonly/>
 			<span id="periodstatus" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
 		</div>
 	</div>
 </div>
+
+<div class="form-group has-feedback has-success hidden-xs" style="margin-top: 14px;">
+	<label class="col-sm-4 col-md-4 control-label hidden-xs"></label>
+	<div class="col-sm-6 col-md-6 col-xs-12 mycol">
+        <hr style="border: 1px dashed #71c386;" />
+	</div>
+</div>
+
 <input type="hidden" id="period" name="period" value="<?=$period;?>" />
 <br>
-<div class="form-group has-feedback"> 
+<div class="form-group has-feedback hidden"> 
 	<label class="col-sm-4 control-label label-required hidden-xs" for="f">Фамилия</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию"
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
-			    required>
+			    required value="тест">
 			<span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2">Нужно указать фамилию</p>
 			<p class="text-muted helpblock">Пример: Иванова</p>
 	</div>
 </div>
-<div class="form-group has-feedback">
+<div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="i">Имя</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="text" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Укажите свое имя" data-sanitize="capitalize"
 			    data-validation="custom"  data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое имя"
-			    required>
+			    required value="тест">
 			<span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2">Нужно указать имя</p> 
 			<p class="text-muted helpblock">Пример: Лариса</p>
 	 
 	</div>
 </div>
-<div class="form-group has-feedback">
+<div class="form-group has-feedback hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs"  for="o">Отчество</label>
 	<div class="col-sm-8 col-xs-12"> 
 			<input type="text" class="form-control ec tip" name="o" id="o" placeholder="Отчество" title="Укажите свое отчество"
 			    data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
-			    required>
+			    required value="тест">
 			<span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 			<p class="help-block2">Нужно указать отчество</p> 
 			<p class="text-muted helpblock">Пример: Ивановна</p>
@@ -125,25 +141,25 @@
 	</div>
 </div>
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs" for="phone">Телефон</label>
-	<div class="col-sm-8 col-xs-12">
-		<input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Укажите № телефона" title="Введите свой телефон" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Укажите № телефона" required="">
+	<label class="col-sm-4 control-label hidden-xs" for="phone"></label>
+	<div class="col-md-6 col-sm-6 col-xs-12 mycol">
+		<input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="№ телефона" title="Введите свой телефон" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Укажите № телефона" required="">
 		<span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 		<p class="help-block2">Нужно указать номер телефона</p>
 		<p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
 	</div>
 </div>
 <div class="form-group has-feedback">
-	<label class="col-sm-4 control-label label-required hidden-xs" for="email">Почта</label>
-	<div class="col-sm-8 col-xs-12"> 
-		<input type="email" class="form-control ec tip" name="email" id="email" title="Укажите свой email адрес" placeholder="Пример: email@mail.ru"
+	<label class="col-sm-4 control-label hidden-xs" for="email"></label>
+	<div class="col-sm-6 col-md-6 col-xs-12 mycol"> 
+		<input type="email" class="form-control ec tip" name="email" id="email" title="Укажите свой email адрес" placeholder="Email"
 			  data-validation="email" data-validation-error-msg="Укажите свой email" required>
 		<span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
 		<p class="help-block2"></p>
-		<p class="text-muted helpblock">Проверьте почту. Письмо могло попасть в папку "СПАМ"</p>
+		<p class="text-muted helpblock">Пример: ivanov@email.ru</p>
 	</div>
 </div>
-<div class="form-group">
+<div class="form-group hidden">
 	<label class="col-sm-4 control-label label-required hidden-xs" for="credit">Кредитная история</label>
 	<div class="col-sm-8 col-xs-12">
 		<select class="form-control" id="credit">
@@ -159,16 +175,20 @@
 <div class="clearfix"></div>
 <div class="form-group">
 	<label class="col-sm-4 control-label"></label>
-	<div class="col-sm-8 col-xs-12">
-		<label>
+	<div class="col-sm-5 col-sm-offset-4 col-md-5 col-xs-12 mycol">
+        <? if ($setting_array['is_mobile'] != 'мобила') : ?>
+            <label style="line-height: 0.8;">
+        <? else : ?>
+            <label style="line-height: 0.8; margin-top: -20px;">
+        <? endif; ?>
 			<input type="checkbox" id="agree" onclick="checkMee()"value="1" checked>
 			<b class="font12">Я согласен на обработку персональных данных и с
 				<a href="#" data-toggle="modal" data-target="#tosModal">публичной офертой</a>
 			</b>
 		</label>
 	</div>
-	<label class="col-sm-4 control-label"></label>
-	<div class="col-sm-8 col-xs-12">
+	<label class="col-sm-4 control-label hidden"></label>
+	<div class="col-sm-8 col-xs-12 hidden">
 		<label>
 			<input type="checkbox" id="marketing" value="1" checked>
 			<b class="font12">Я согласен на получение рекламных сообщений</b>
@@ -176,8 +196,12 @@
 	</div>
 </div>
 <div class="clearfix"></div>
-<div class="col-sm-7 col-sm-offset-4 col-xs-12">
-<div class="shadow">
-<a class="btn btn-ok btn-block" id="next1">Отправить заявку</a>
-</div>
+<div class="col-sm-6 col-md-6 col-sm-offset-4 col-xs-12">
+    <div class="shadow">
+        <? if ($setting_array['is_mobile'] != 'мобила') : ?>
+            <a class="btn btn-ok btn-block" id="next1" style="width: 56% !important; font-size: 16px; margin-left: 28% !important;">Отправить заявку</a>
+        <? else : ?>
+            <a class="btn btn-ok btn-block" id="next1" style="width: 70% !important; font-size: 16px; margin-left: 16% !important;">Отправить заявку</a>
+        <? endif; ?>
+    </div>
 </div>
