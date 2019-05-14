@@ -218,8 +218,8 @@ if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) {?>
 }
 else if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
 {
-    include "templates/common/new/js/lk.js";      
-    echo 'traffic("dengoman.ru",4);';  
+    include "templates/common/new/js/lk.js";
+    echo 'traffic("dengoman.ru",4);';
 }
 else if($this->uri->segment(1) == '404')
 {
@@ -233,8 +233,8 @@ require 'templates/common/new/js/exeption.js';
 include "google.php";
 include "yandexmetrika.php"; 
 include "yandex_rtb.php";
-if (in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))  { 
-    
+if (in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3')))
+{ 
     require 'google_lk.php';
 } 
 else

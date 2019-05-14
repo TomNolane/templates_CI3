@@ -10,7 +10,30 @@
             }
         }
          </style>
-        <?php require 'adsence_all.php'; ?>
+        <?php if($domain == 'ru-zaimo.ru') { ?>
+         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Ru-zaimo.ru -->
+        <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="9321709999"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <?php } else { ?>
+        
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4970738258373085",
+        enable_page_level_ads: true
+        });
+        </script>
+        <?php } ?>
+        
+
          <div class="container">
         <div class="row">
             <div class="col-xs-12">
@@ -200,7 +223,7 @@
     <?php require 'templates/common/new/js/popup_modal.js'; ?>
     </script>
     <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
+<script>
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
@@ -211,7 +234,7 @@
         webvisor:true
    });
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/53258287" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="https://mc.yandex.ru/watch/53258287" style="position:absolute; left:-9999px;" alt="alt" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 <script>
 function markTarget(target,param, id){

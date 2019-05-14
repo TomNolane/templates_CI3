@@ -547,7 +547,7 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
 if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
 {
     include "templates/common/new/js/lk.js";
-    echo 'traffic("godzaim.ru",4);'; 
+    echo 'traffic("godzaim.ru",4);';
 }
 else if($this->uri->segment(1) == 'reviews')
 {
@@ -562,7 +562,7 @@ else if($this->uri->segment(1) == 'reviews')
 }
 else if($this->uri->segment(1) == '404')
 {
-    echo 'traffic("godzaim.ru",9);'; 
+    echo 'traffic("godzaim.ru",9);';
 }
 echo "}";
 require 'templates/common/new/js/exeption.js';
@@ -573,7 +573,7 @@ require 'templates/common/new/js/exeption.js';
     include "yandexmetrika.php"; 
     include "yandex_rtb.php";
 
-    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3')))
         require 'google_lk.php';
     else 
         require 'vk.php';

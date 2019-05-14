@@ -301,7 +301,7 @@ require 'templates/common/new/js/exeption.js';
     include "google.php";
     include "yandexmetrika.php"; 
     include "yandex_rtb.php";
-    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3')))
         require 'google_lk.php';
     else
         require 'vk.php';

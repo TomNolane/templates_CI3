@@ -16,9 +16,9 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
             <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                 <img src="<?=$logo_foot?>" class="img-responsive" alt="logo-footer.png">
             <?php } else { ?>
-                <? if ($this->uri->segment(1) == 'lk') : ?>
+                <? if ($this->uri->segment(1) == 'lk') {?>
                     </div></div><div class="row"><div class="col-md-2 col-xs-4">
-                <? endif; ?>
+                <? } ?>
                 <img alt="logo.png" class="img-responsive" src="/templates/rublimo/assets/img/logo-footer.png" >
             <?php } ?>
         
@@ -46,16 +46,16 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
                 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае
                 своевременного погашения. <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001</p>
         </div>
-        <?php } else {?> 
+        <?php } else { ?> 
             <div class="col-md-12 col-xs-12">
-            <p >
-            Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <?=$email?> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
-            <span>Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
-            Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.</span>
-            Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001
-        </p> 
+            <p>
+                Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <?=$email?> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
+                <span>Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.
+                Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей.</span>
+                Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001
+            </p>
             </div>
-        <? } ?>
+        <?php } ?>
          </div>
     <div class="clearfix">&nbsp;</div>
 </footer>
@@ -65,8 +65,8 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
 
 <!-- common JS -->
 <script>
+try{
 <?php
-    echo 'try{';
     require 'footer_common_js.php';
     echo '/* private JS */';
     require 'templates/rublimo/assets/js/main.js'; 
@@ -379,40 +379,39 @@ if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) { ?>
 
         }, 50); 
         traffic("rublimo.ru",0);
-<?php }
-}
-elseif($this->uri->segment(1) == 'faq')
-{
-    echo "
-    $(document).ready(function(){
-        $('.panel-title a').click(function(){
-        $('.panel-heading').removeClass('green');
-        if ($(this).hasClass('collapsed')) $(this).parent().addClass('green');
-        });
-    });";
-}
-elseif(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
-{
-    include "templates/common/new/js/lk.js";
-    echo 'traffic("rublimo.ru",4);'; 
+    <?php }
+    }
+    elseif($this->uri->segment(1) == 'faq')
+    {
+        echo "
+        $(document).ready(function(){
+            $('.panel-title a').click(function(){
+            $('.panel-heading').removeClass('green');
+            if ($(this).hasClass('collapsed')) $(this).parent().addClass('green');
+            });
+        });";
+    }
+    elseif(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+    {
+        include "templates/common/new/js/lk.js";
+        echo 'traffic("rublimo.ru",4);';
+    }
+    elseif($this->uri->segment(1) == '404')
+    {
+        echo 'traffic("rublimo.ru",9);';
+    } ?>
 
 }
-elseif($this->uri->segment(1) == '404')
-{
-    echo 'traffic("rublimo.ru",9);';
-}
-echo "}";
-require 'templates/common/new/js/exeption.js';
-?>
+<?php require 'templates/common/new/js/exeption.js'; ?>
 </script>
 <?php
     include "google.php";
     include "yandexmetrika.php";
     include "yandex_rtb.php";
 
-    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3')))
         require 'google_lk.php';
-    else 
+    else
         require 'vk.php';
 
     require 'mailru.php';

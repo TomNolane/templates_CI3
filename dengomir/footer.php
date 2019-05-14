@@ -23,7 +23,6 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
                     </div>
                     <div class="col-md-9 col-xs-9">
                     <?php if (!in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
-                    
                         <p class="black">Сервис по подбору выгодных онлайн займов Dengomir, находящийся по адресу
                             Россия, Ленинградская обл., г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>
                             <?=$email?></span> | +7(495) 006 19 61<br>
@@ -35,7 +34,6 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
                             рублей.
                             Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.<br>
                             ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001 </span></p>
-                    
                     <?php } else { ?>
                         <style>footer.ex-main-footer p {color: #000 !important;}</style>
                         <div class="col-md-3" >
@@ -53,7 +51,7 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
                                 require 'adsence.php';
                             ?>
                         </div>
-                    <? } ?>
+                    <?php } ?>
                     </div>
                 </div>
             </div>
@@ -226,13 +224,13 @@ if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) { ?>
 }
 elseif(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
 {
-    include "templates/common/new/js/lk.js";      
-    echo 'traffic("dengomir.ru",4);'; 
+    include "templates/common/new/js/lk.js";
+    echo 'traffic("dengomir.ru",4);';
 
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic("dengomir.ru",9);'; 
+    echo 'traffic("dengomir.ru",9);';
 }
 echo "}";
 require 'templates/common/new/js/exeption.js';
@@ -242,7 +240,7 @@ require 'templates/common/new/js/exeption.js';
     include "google.php";
     include "yandexmetrika.php"; 
     include "yandex_rtb.php";
-    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3')))
     {     
         require 'google_lk.php';
     }

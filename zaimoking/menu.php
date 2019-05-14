@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default ex-main-header hidden-xs">
     <div class="container">
-        <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) { ?>
+        <?php if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) { ?>
         <div class="nav navbar-nav">
             <div class="ex-dropdown-menu dropdown">
                  <a href="#" class="ex-menu-item dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Меню <i></i></a>
@@ -20,10 +20,10 @@
             </div>
         </div>
         <a class="ex-brand" href="/"></a>
-        <? } else  { ?>
-            <? if ($this->uri->segment(1) != 'lk') : ?>
+        <?php } else  { ?>
+            <?php if ($this->uri->segment(1) != 'lk') : ?>
                 <a href="/">
-            <? endif; ?>
+            <?php endif; ?>
              <?php $logo_addon = '/templates/zaimoking/assets/img/logo.png';
                 switch ($this->uri->segment(1)) {
                         case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
@@ -31,22 +31,22 @@
                         default: break;
                 } ?>
                 <img class="logo-header"  src="<?=$logo_addon?>" alt="Image missing">
-                <? if ($this->uri->segment(1) != 'lk') : ?>
+                <?php if ($this->uri->segment(1) != 'lk') : ?>
                 </a>
-            <? endif; ?>
+            <?php endif; ?>
         <?php } ?>
     </div>
 </nav>
 <nav class="navbar navbar-default ex-main-header visible-xs">
     <div class="container">
         <div class="navbar-header">
-            <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
+            <?php if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dengomirCollapsed">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <? endif; ?>
+            <?php endif; ?>
             <a class="navbar-brand" href="/">
                 <!-- <i></i> -->
                 <?php $logo_addon = '/templates/zaimoking/assets/img/logo.png';
