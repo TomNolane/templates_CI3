@@ -1,6 +1,6 @@
 
 </div>
-<div class="buffer"></div>
+<!--<div class="buffer"></div>-->
 <?php 
 $from = '15';
 
@@ -14,10 +14,10 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell')))
     echo '<!-- ПИКСЕЛЬ MYTARGET --><img src="//top-fwz1.mail.ru/tracker?id=3052545;e=RG%3A/trg-pixel-2721105-1534147134779" alt="mypixel">';
 }
 ?>
-<footer style="color: #000 !important;">
-    <div class="col-md-12 ">
+<footer style="color: #000 !important; padding: 0; background: #FFF; border-top: 1px solid black;">
+    <div class="col-md-12" style="padding-top: 10px;">
         <div class="row"> 
-            <div class="col-md-3">
+            <div class="col-md-3" style="margin-bottom: 20px;">
                 <h1 class="logo-spec" id="for_lk">
                     <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                         <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png">
@@ -64,7 +64,6 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'pixell')))
                     <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001.</p>
             </div>
         <?php } ?>
-            <hr/>
     </div>
 </footer>
 <div class="clearfix"></div>
