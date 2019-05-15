@@ -70,10 +70,10 @@ include "header.php";
 <nav class="ex-main-header">
     <div class="container">
         <i class="ex-hamburger"></i>
-        <a class="ex-brand" href="/">Forzaim</a>
+        <a class="ex-brand" href="/" style="margin-left: -60px;">Forzaim</a>
     </div>
 </nav>  
-<main class="container ex-form">
+<main class="container ex-form" style="padding-bottom: 70px !important;">
     <?php $period; ?>
     <form id="anketa" action="/lk" method="post" class="form-horizontal" autocomplete="off" novalidate>
         <input type="hidden" name="display" id="display" value="0">
@@ -86,7 +86,7 @@ include "header.php";
         <input type="hidden" id="period" name="period" value="<?=$period;?>"/>
         <div class="tab-content" id="to_scroll">
             <div id="firstStep" class="tab-pane fade in active">
-                <h2 class="text-center">Заполните личные данные</h2>
+                <h2 class="text-center">Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки</h2>
                 <div class="ex-calc-wraper">
                     <div class="row">
                         <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2  col-sm-10 col-sm-offset-1">
@@ -136,4 +136,15 @@ include "header.php";
         </div>
     </form>
 </main>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- forzaim -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="6265677912"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <?php include 'footer.php';?>

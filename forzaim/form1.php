@@ -1,38 +1,113 @@
+<style>
+/* top h2 */
+main.ex-form .tab-content h2 {
+<? if ($setting_array['is_mobile'] == 'мобила') : ?>
+    font-size: 21px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0px !important;
+    margin-top: 10px !important;
+<? else : ?>
+    margin-top: 38px !important;
+<? endif; ?>
+}
+
+/* calc */
+main.ex-form .tab-content .ex-calc-wraper .ex-tab-section .ex-calc-block li .ex-result-style {
+<? if ($setting_array['is_mobile'] == 'мобила') : ?>
+    font-size: 20px !important;
+<? endif; ?>
+}
+main.ex-form .tab-content .ex-calc-wraper .ex-tab-section .ex-calc-block li .ex-unique {
+<? if ($setting_array['is_mobile'] == 'мобила') : ?>
+    padding-top: 18px !important;
+<? endif; ?>
+}
+
+/* agree checkbox */
+.ex-agreement-check label span {
+<? if ($setting_array['is_mobile'] == 'мобила') : ?>
+    font-size: 12px;
+<? endif; ?>
+}
+
+.myfnt {font-size: 21px !important;}
+.myinput {
+    text-align: center !important;
+    color: #666 !important;
+<? if ($setting_array['is_mobile'] == 'мобила') : ?>
+    height: 40px !important;
+<? endif; ?>
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
+   font-size: 21px !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+   font-size: 21px !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+   font-size: 21px !important;
+}
+
+:-ms-input-placeholder {  
+   text-align: center;
+   font-size: 21px !important;
+}
+
+.ex-main-btn {
+    width: 70% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 50px !important;
+<? if ($setting_array['is_mobile'] == 'мобила') : ?>
+    font-size: 17px !important;
+    padding: 15px 5px !important;
+<? else : ?>
+    font-size: 24px !important;
+    padding: 15px 18px !important;
+<? endif; ?>
+}
+</style>
 <section class="ex-main-form">
     <div class="row">
         <div class="col-md-9">
             <div class="ex-pr">
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="f">Фамилия</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                data-validation-error-msg="Укажите свою фамилию" required>
+                                data-validation-error-msg="Укажите свою фамилию" required value="тест">
                                 <p class="help-block2">Нужно указать фамилию</p>
                                 <p class="text-muted helpblock">Пример: Иванова</p>
                         </div>
                     </div>
                 </div>
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="i">Имя</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Укажите свое имя" data-sanitize="capitalize"
                                 data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое имя"
-                                required>
+                                required value="тест">
                                 <p class="help-block2">Нужно указать имя</p>
                                 <p class="text-muted helpblock hidden-xs hidden-sm">Пример: Лариса</p>
                         </div>
                     </div>
                 </div>
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="o">Отчество</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper">
                             <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Укажите свое отчество"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                data-validation-error-msg="Укажите свое отчество" required>
+                                data-validation-error-msg="Укажите свое отчество" required value="тест">
                                 <p class="help-block2">Нужно указать отчество</p> 
                                 <p class="text-muted helpblock">Пример: Ивановна</p>
                         </div>
@@ -98,25 +173,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group has-feedback">
-                    <label class="control-label col-md-4" for="phone">Телефон</label>
-                    <div class="col-md-8">
+                <div class="form-group has-feedback" style="margin-top: <?=(($setting_array['is_mobile'] == 'мобила')? '-': '')?>20px;">
+                    <label class="control-label col-md-4 hidden" for="phone">Телефон</label>
+                    <div class="col-md-6 col-sm-offset-5 col-xs-12">
                         <div class="ex-wrapper">
-                            <input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Укажите № телефона" title="Введите свой телефон" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Укажите № телефона" required="">
+                            <input type="tel" class="form-control ec tip myfnt myinput" name="phone" id="phone" placeholder="№ телефона" title="Введите свой телефон" data-validation="custom" data-validation-regexp="^[8]\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}$" data-validation-error-msg="Укажите № телефона" required="">
                             <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             <p class="help-block2">Нужно указать номер телефона</p>
                             <p class="text-muted helpblock  hidden-xs hidden-sm">Пример: 8 (977) 777 7777</p>
                         </div>
                     </div>
                 </div>
-                <div class="form-group has-feedback">
-                    <label class="control-label col-md-4" for="email">Email</label>
-                    <div class="col-md-8">
+                <div class="form-group has-feedback" style="margin-top: <?=(($setting_array['is_mobile'] == 'мобила')? '-10px': '20px')?>;">
+                    <label class="control-label col-md-4 hidden" for="email">Email</label>
+                    <div class="col-md-6 col-sm-offset-5 col-xs-12">
                         <div class="ex-wrapper">
-                            <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Укажите свой email адрес" placeholder="Пример: email@mail.ru"
+                            <input type="email" class="form-control ec tip special_form myfnt myinput" name="email" id="email" title="Укажите свой email адрес" placeholder="Email"
                                 data-validation="email" data-validation-error-msg="Укажите свой email" required>
                                 <p class="help-block2"></p>
-                                <p class="text-muted helpblock  hidden-xs hidden-sm">Проверьте почту. Письмо могло попасть в папку "СПАМ"</p>
+                                <p class="text-muted helpblock  hidden-xs hidden-sm">Пример: email@mail.ru</p>
                         </div>
                     </div>
                 </div>
@@ -155,7 +230,7 @@
                 <!-- Регион и город -->
                 
                 
-                <div class="form-group has-feedback">
+                <div class="form-group has-feedback hidden">
                     <label class="control-label col-md-4" for="delays_type">Кредитная история</label>
                     <div class="col-md-8">
                         <div class="ex-wrapper ex-arrow">
@@ -170,15 +245,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-4 ex-agreement-check">
+                <? if ($setting_array['is_mobile'] == 'мобила') : ?>
+                    <div class="row" style="margin-top: -30px;">
+                <? else : ?>
+                    <div class="row">
+                <? endif; ?>
+                    <div class="col-md-6 col-md-offset-5 ex-agreement-check col-xs-12">
                         <label class="checkbox-inline">
                             <span>Я согласен на обработку персональных данных и с публичной офертой</span>
                             <input type="checkbox" onClick="checkMee();" id="agree" value="1" checked>
                             <i></i>
                         </label>
                     </div>
-                    <div class="col-md-8 col-md-offset-4 ex-agreement-check">
+                    <div class="col-md-8 col-md-offset-4 ex-agreement-check hidden">
                         <label class="checkbox-inline">
                             <span>Я согласен на получение рекламных сообщений</span>
                             <input type="checkbox" id="marketing" value="1" checked>
@@ -189,8 +268,8 @@
                 </div>
                 <div class="form-group">
                     <a id="next1">
-                        <div class="col-md-8 col-md-offset-4 text-right">
-                            <span id="getmoney" class="ex-main-btn hidden-sm hidden-xs">Получить деньги</span>
+                        <div class="col-md-6 col-md-offset-5 text-right col-xs-12">
+                            <span id="getmoney" class="ex-main-btn hidden-sm hidden-xs myfnt">Получить деньги</span>
                         </div>
                     </a>
                 </div>
@@ -205,15 +284,3 @@
         </a>
     </div>
 </section>
-<br><br><br>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- forzaim -->
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="6265677912"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
