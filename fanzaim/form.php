@@ -120,7 +120,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
     $ad_id = '4';
 }
 ?>
-<main class="ex-main-form">
+<main class="ex-main-form" style="padding-top: 0px;">
 <?php $period; ?>
         <form id="anketa" method="post" class="form-horizontal" novalidate autocomplete="off">
             <input type="hidden" name="display" id="display" value="0">
@@ -133,10 +133,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
             <input type="hidden" id="period" name="period" value="<?php echo $period; ?>" />
             <div class="tab-content" id="to_scroll">
                 <div id="firstStep" class="tab-pane fade in active">
-                    <h2 class="text-center">
+                    <h2 class="text-center hidden">
                         До одобрения займа вас отделяют всего 1 шаг
                     </h2>
-                    <div class="ex-step-info">Заполните личные данные</div>
+                    <div class="ex-step-info" style="background: #77c6f0; font-weight: bold;">Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки</div>
                     <?php require 'form1.php'; ?>
                 </div>
                 <div id="secondStep" class="tab-pane fade">
