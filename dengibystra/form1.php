@@ -1,6 +1,7 @@
+<style>.ex-form .ex-anketa-main #ex-slider-val i {width: 18px !important;}</style>
 <div class="ex-anketa-head">
     <p class="text-conf text-center">
-        Личные данные (всего 1 шаг)
+    Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки
     </p>
 </div>
 <div class="ex-anketa-main">
@@ -9,7 +10,7 @@
             <!-- слайдер -->
             <div class="ex-calc-wraper">
                 <div class="row">
-                    <div class="col-sm-7">
+                    <div class="col-sm-6 col-sm-offset-3">
                         <div class="ex-range-scope">
                             <div id="ex-main-slider-range">
                                 <figure class="ex-range-slider">
@@ -20,7 +21,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-5">
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
                         <figure class="ex-val-block">
                             <p id="ex-slider-val" class="text-center"></p>
                         </figure>
@@ -28,39 +31,39 @@
                 </div>
             </div>
             <!-- /слайдер -->
-            <div class="row">
+            <div class="row hidden">
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="f">Фамилия</label>
                         <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию" data-sanitize="capitalize"
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свою фамилию"
-                            required>
+                            required value="тест">
                         <span id="fstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать фамилию</p>
                         <p class="text-muted helpblock">Пример: Иванова</p>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row hidden">
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="i">Имя</label>
                         <input type="text" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Укажите свое имя" data-sanitize="capitalize"
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое имя"
-                            required>
+                            required value="тест">
                         <span id="istatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать имя</p> 
                         <p class="text-muted helpblock">Пример: Лариса</p>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row hidden">
                 <div class="col-sm-12" style="height: 90px;">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="o">Отчество</label>
                         <input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Укажите свое отчество"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Укажите свое отчество"
-                            required>
+                            required value="тест">
                         <span id="ostatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2">Нужно указать отчество</p> 
                         <p class="text-muted helpblock">Пример: Ивановна</p>
@@ -69,7 +72,7 @@
             </div>
             <input type="hidden" id="gender" value="1" name="gender">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-8 col-sm-offset-2">
                     <div class="form-group has-feedback">
                         <label class="label-required" for="phone">Номер телефона</label>
                         <input type="tel" class="form-control ec tip" name="phone" id="phone" placeholder="Телефон" title="Укажите свой телефон"
@@ -141,18 +144,18 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12"> 
+                <div class="col-sm-8 col-sm-offset-2"> 
                     <div class="form-group has-feedback">
                         <label class="label-required" for="email">Электронная почта</label>
                         <input type="email" class="form-control ec tip sp_push_custom_data" name="email" id="email" title="Укажите свой email адрес"
-                            placeholder="Укажите свой email адрес" data-validation="email" data-validation-error-msg="Укажите свой email адрес"
+                            placeholder="Email" data-validation="email" data-validation-error-msg="Укажите свой email адрес"
                             required>
                         <span id="emailstatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="help-block2"></p>
-                        <p class="text-muted helpblock">Проверьте почту. Письмо могло попасть в папку "СПАМ"</p>
+                        <p class="text-muted helpblock">Пример: ivanov@mail.ru</p>
                     </div>
                 </div>
-                <div class="col-sm-12">
+                <div class="col-sm-6 hidden">
                     <div class="form-group ex-arrow-on">
                         <label for="credit">Кредитная история</label>
                         <select class="form-control" id="credit">
@@ -166,42 +169,43 @@
                     </div>
                 </div>
             </div>
+            <style>
+                .ex-main-btn {margin-top: 16px; margin-bottom: 16px;}/*TODO: вынести потом в css*/
+                <? if ($setting_array['is_mobile'] != 'мобила') : ?>
+                    .ex-agreement-check label i {bottom: -2px !important;}
+                <? else : ?>
+                    .ex-agreement-check label i {bottom: 14px !important;}
+                <? endif; ?>
+            </style>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 ex-agreement-check">
+                    <label class="checkbox-inline" style="padding-top: 0px!important;">
+                        <span class="font12" style="font-size: 85% !important;">Я согласен на обработку персональных данных и с публичной офертой</span>
+                        <input type="checkbox" value="" id="agree" onclick="checkMee();" checked>
+                        <i></i>
+                    </label>
+                </div>
+                <? if ($setting_array['is_mobile'] == 'мобила') : ?>
+                <div class="col-sm-8 col-sm-offset-2">
+                <? else : ?>
+                <div class="col-sm-4 col-sm-offset-4">
+                <? endif; ?>
+                    <button class="ex-main-btn" id="next1" type="button"> Получить займ </button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="ex-anketa-foot">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-            <div class="col-sm-8 col-xs-12 ex-agreement-check">
-                <label class="checkbox-inline">
-                    <span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span>
-                    <input type="checkbox" value="" id="agree" onclick="checkMee();" checked>
-                    <i></i>
-                </label>
-            </div>    
-            <div class="col-sm-8 col-xs-12 ex-agreement-check">
+            <div class="col-sm-8 col-xs-12 ex-agreement-check hidden">
                 <label class="checkbox-inline">
                     <span class="font12">Я согласен на получение рекламных сообщений</span>
                     <input type="checkbox" value="" id="marketing" checked>
                     <i></i>
                 </label>
             </div>
-            <div class="col-sm-4 col-xs-12">
-                <button class="ex-main-btn" id="next1" type="button"> Получить займ </button>
-            </div>
         </div>
     </div>
 </div>
-<br><br>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- dengybistra -->
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="9919758561"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<br><br>

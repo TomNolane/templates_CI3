@@ -69,7 +69,7 @@ include "header.php";
 ?>
 <input type="hidden" class="percent" id="percent" name="percent" value="<?= $percent;?>" />
 <div class="ex-bounds"></div>
-<div class="container ex-form">
+<div class="container ex-form" style="margin-bottom: 100px !important;">
     <h1 class="text-center" id="to_scroll">Заполните анкету</h1>  
     <form class="tab-content" id="anketa" method="post" autocomplete="off" novalidate>
         <input type="hidden" name="referer" value="<?=$referer?>">
@@ -91,4 +91,15 @@ include "header.php";
         </div>
     </form>
 </div> 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- dengybistra -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="9919758561"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <?php include 'footer.php';?>

@@ -1,3 +1,4 @@
+<style>.ex-form .ex-anketa-main #ex-slider-val i {width: 18px !important;}</style>
 <div class="ex-anketa-head">
     <p class="text-conf text-center">
     Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки
@@ -208,8 +209,3 @@
         </div>
     </div>
 </div>
-<br><br>
-<?php
-require 'adsence.php';
-?>
-<br><br>
