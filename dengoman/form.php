@@ -164,7 +164,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
                         <? if ($setting_array['is_mobile'] != 'мобила') : ?>
                             <a class="btn btn-ok btn-block" style="width: 60%; font-weight: bold;" id="next1">Отправить заявку</a>
                         <? else : ?>
-                            <a class="btn btn-ok btn-block" style="width: 64%; font-weight: bold; margin-bottom: 20px;" id="next1">Отправить заявку</a>
+                            <a class="btn btn-ok btn-block" style="width: 64%; font-weight: bold; margin-top: 20px; margin-bottom: 40px;" id="next1">Отправить заявку</a>
                         <? endif; ?>
                     </div>
                     <div class="col-md-4"></div>

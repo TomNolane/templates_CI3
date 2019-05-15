@@ -9,7 +9,7 @@
 
 .toprow {
     <? if ($setting_array['is_mobile'] == 'мобила') : ?>
-    margin: -8px 0px 20px 2px;
+    margin: -8px 0px 30px 2px;
     border-radius: 24px 24px 10px 10px;
     -moz-border-radius: 24px 24px 10px 10px;
     -webkit-border-radius: 24px 24px 10px 10px;
@@ -26,6 +26,12 @@
 }
 
 .white p {margin-bottom: 5px !important;}
+
+.mymargins4blocks {
+	<? if ($setting_array['is_mobile'] == 'мобила') : ?>
+	margin-bottom: 20px !important;
+	<? endif; ?>
+}
 </style>
 <div class="row">
     <div class="col-md-12 col-xs-12 col-sm-offset-2 col-md-offset-2 text-center toprow myfnt">Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки</div>
@@ -41,7 +47,7 @@
 		</div>
 	</div>
 </div>
-<div class="form-group has-feedback has-success" style="margin-bottom: 14px;">
+<div class="form-group has-feedback has-success mymargins4blocks" style="margin-bottom: 14px;">
 	<label class="col-sm-3 control-label label-required hidden hidden-xs">Сумма</label>
 	<div class="col-sm-6 col-md-6 col-xs-12 col-sm-offset-5">
 		<div class="form-slider green irs2">
@@ -165,7 +171,7 @@
 		</div>
 	</div>
 </div>
-<div class="form-group has-feedback">
+<div class="form-group has-feedback mymargins4blocks">
 	<label class="col-sm-4 control-label label-required hidden hidden-xs" id="spec_form2">Телефон</label>
 	<div class="col-sm-6 col-md-6 col-xs-12 col-sm-offset-5">
 		<input type="tel" class="form-control ec tip myborder myfnt" name="phone" id="phone" placeholder="№ телефона" title="Укажите свой телефон"
@@ -176,7 +182,7 @@
 		<p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
 	</div>
 </div>
-<div class="form-group has-feedback">
+<div class="form-group has-feedback mymargins4blocks">
 	<label class="col-sm-4 control-label label-required hidden hidden-xs">Почта</label>
 	<div class="col-sm-6 col-md-6 col-xs-12 col-sm-offset-5">
 		<div class="shadow ">
