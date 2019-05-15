@@ -67,9 +67,9 @@ if(!isset($my_title))
 include "templates/common/new/php/form_header.php";
 include "header.php";
 ?>
-<div class="ex-form">
+<div class="ex-form" style="padding-bottom: 10px; padding-top: 10px;">
 <div class="container" id="to_scroll">
-    <h2 class="text-center">До одобрения займа вас отделяют всего 1 шаг</h2>
+    <h2 class="text-center" style="color: #FFF; background: #6781e7; padding-top: 8px; padding-bottom: 8px;">Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки</h2>
     <div class="ex-bg-form">
             <?php $period; ?>
             <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off">
@@ -82,7 +82,7 @@ include "header.php";
                 <input type="hidden" id="amount" name="amount" value="<?=$sum;?>"/>
                 <input type="hidden" id="period" name="period" value="<?=$period;?>"/>
             <div class="tab-content">
-                <div id="firstStep" class="tab-pane fade in active">
+                <div id="firstStep" class="tab-pane fade in active" style="padding-top: 0;">
                     <?php require 'form1.php';?>
                 </div>
                 <div id="secondStep" class="tab-pane fade">
