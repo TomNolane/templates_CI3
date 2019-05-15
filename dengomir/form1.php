@@ -1,7 +1,58 @@
 <style>
 .myfnt {font-size: 21px !important;}
+.toprow {
+    color: #FFF;
+    background: #6781e7;
+    margin-top: 10px;
+    padding: 8px;
+    display: block;
+    <? if ($setting_array['is_mobile'] != 'мобила') : ?>
+    font-size: 26px !important;
+    <? else : ?>
+    font-size: 20px !important;
+    <? endif; ?>
+}
+.myinput {
+    border: 2px solid #30323e !important;
+    <? if ($setting_array['is_mobile'] == 'мобила') : ?>
+    height: 48px !important;
+    <? endif; ?>
+}
+.ex-form .tab-content .ex-main-form .ex-form-wrap .ex-wrapper.ex-error:after {
+    width: 20px;
+    height: 20px;
+    <? if ($setting_array['is_mobile'] == 'мобила') : ?>
+    top: 14px;
+    <? endif; ?>
+}
+.form-control {
+    padding-left: 5px !important;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+   font-size: 21px !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+   font-size: 21px !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+   font-size: 21px !important;
+}
+
+:-ms-input-placeholder {  
+   text-align: center;
+   font-size: 21px !important;
+}
 </style>
+<div class="row" style="margin: 0 auto; padding-top: 18px;">
+    <span class="text-center myborder toprow">Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки</span>
+</div>
 <section class="ex-main-form">
+    
     <div class="ex-range-slider-block">
         <div class="ex-range-scope">
             <div id="ex-main-slider-range">
@@ -10,7 +61,11 @@
                 </figure>
             </div>
         </div>
-        <div class="ex-calc-wraper">
+        <? if ($setting_array['is_mobile'] == 'мобила') : ?>
+            <div class="ex-calc-wraper" style="padding-bottom: 14px;">
+        <? else : ?>
+            <div class="ex-calc-wraper">
+        <? endif; ?>
             <div class="ex-tab-section">
                 <div class="ex-calc-block ">
                     <div class="row ">
@@ -64,8 +119,12 @@
                 </div>
             </div>
         </div>
-    </div> 
-    <div class="ex-form-wrap" style="padding: 15px 48px;">
+    </div>
+    <? if ($setting_array['is_mobile'] == 'мобила') : ?>
+        <div class="ex-form-wrap" style="padding: 15px 38px;">
+    <? else : ?>
+        <div class="ex-form-wrap" style="padding: 15px 48px;">
+    <? endif; ?>
         <div class="form-group has-feedback hidden">
             <div class="row">
                 <label class="control-label col-md-3" for="f">Фамилия</label>
@@ -118,10 +177,10 @@
         </div>
         <div class="form-group has-feedback">
             <div class="row">
-                <label class="control-label col-md-3 myfnt hidden-xs" id="spec_form2" for="phone">Телефон</label>
-                <div class="col-md-6 col-xs-12">
+                <label class="control-label col-md-3 hidden hidden-xs" id="spec_form2" for="phone">Телефон</label>
+                <div class="col-md-6 col-sm-offset-3 col-xs-12">
                     <div class="ex-wrapper">
-                        <input type="tel" class="form-control ec tip special_form myfnt" name="phone" id="phone" placeholder="№ телефона"
+                        <input type="tel" class="form-control ec tip special_form myfnt myborder myinput" name="phone" id="phone" placeholder="№ телефона"
                             title="Введите свой номер телефона" data-validation-error-msg="Введите номер телефона" required>
                         <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     </div>
@@ -130,10 +189,10 @@
         </div>
         <div class="form-group has-feedback">
             <div class="row">
-                <label class="control-label col-md-3 myfnt hidden-xs" for="email">Email</label>
-                <div class="col-md-6 col-xs-12">
+                <label class="control-label col-md-3 hidden hidden-xs" for="email">Email</label>
+                <div class="col-md-6 col-sm-offset-3 col-xs-12">
                     <div class="ex-wrapper">
-                        <input type="email" class="form-control ec tip special_form myfnt" name="email" id="email" title="Email" placeholder="Email"
+                        <input type="email" class="form-control ec tip special_form myfnt myborder myinput" name="email" id="email" title="Email" placeholder="Email"
                             data-validation="email" data-validation-error-msg="Введите свой email" required>
                     </div>
                 </div>
@@ -179,24 +238,10 @@
         </div>
         <div class="row">
             <a id="next1">
-                <div class="col-md-6 col-md-offset-3">
-                    <span id="submitOne" class="ex-main-btn" style="font-size: 18px; margin-top: 18px; padding: 10px 5px;">Получить деньги
-                        <i></i>
-                    </span>
+                <div class="col-md-4 col-md-offset-4">
+                    <span id="submitOne" class="ex-main-btn" style="font-size: 18px; margin-top: 18px; padding: 10px 5px;">Получить деньги</span>
                 </div>
             </a>
         </div>
     </div>
 </section>
-<br><br>
- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- dengomir -->
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="4639511728"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
