@@ -235,4 +235,5 @@ include "header.php";
 			</div>
 		</div>
 	</div>
+	<? require ('adsence.php'); ?>
 <?php include 'footer.php';?>
