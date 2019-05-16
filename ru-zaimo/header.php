@@ -3,8 +3,7 @@
 	$my_title = ''; $description = ''; $universal_folder = 0; $price = "8 000";
 	$main = 'bigzaim';
 	$link = 'https://pxl.leads.su/click/3b00787cbb4b9484e25cbe512163ca7d?source=ru-zaimo.ru/bigzaim';
-	$my_title = 'Bigzaim Лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
-	$description = 'Bigzaim осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
+	
     
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
     $link = str_replace("#site1", ucfirst($domen), $link);
@@ -27,13 +26,10 @@
     else 
         $link = str_replace("#name#", $domen, $link);
 
-    function getDomain3()
-    {
-        $CI =& get_instance();
-        return preg_replace("/^[\w]{2,6}:\/\/([\w\d\.\-]+).*$/","$1", $CI->config->slash_item('base_url'));
-    }
+    $domain = getDomain();
 
-    $domain = getDomain3();
+    $my_title = $domain.' Лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
+	$description = $domain.' осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
 ?>
 <!DOCTYPE html>
 <html>
@@ -69,7 +65,7 @@
     <script src="/templates/ru-zaimo/js/universal/tilda-slds-1.4.min.js" charset="utf-8"></script>
     <script src="/templates/ru-zaimo/js/universal/hammer.min.js" charset="utf-8"></script>
     <script src="/templates/ru-zaimo/js/universal/tilda-zoom-2.0.min.js" charset="utf-8"></script>
-    <script  src="//cdn.sendpulse.com/js/push/33505121ee025ec05bae5fd44c7ba208_1.js" async></script>
+    <?php require 'sendpuls_all.php'; ?>
     <style>
     <?php
     echo '.t338__logo{float: unset;max-width: 220px !important;}.t338__title{margin-bottom: 40px;padding-top: 200px;text-align: center;} .t-prefix_1{padding-left: 0;padding-right: 0;}';
@@ -137,19 +133,11 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 
 }?>
 <body class="t-body" style="margin: 0px;">
-<?php
-// if(empty($previous) || $previous == 'https://ru-zaimo.ru/' || $previous == 'https://ru-zaimo.ru/faq' || $previous == 'https://ru-zaimo.ru/about' || $previous == 'https://ru-zaimo.ru/oferta'
-//     || $previous == 'https://ru-zaimo.ru/soglasie' || $previous == 'https://ru-zaimo.ru/rules' || $previous == 'https://ru-zaimo.ru/personal-data' || $previous == 'https://ru-zaimo.ru/calls'
-//     || $previous == 'https://ru-zaimo.ru/regulation' || $previous == 'https://ru-zaimo.ru/safety' || $previous == 'https://ru-zaimo.ru/zaim-card' || $previous == 'https://ru-zaimo.ru/zaim-yandex'
-//     || $previous == 'https://ru-zaimo.ru/zaim-contact' || $previous == 'https://ru-zaimo.ru/zaim-qiwi' || $previous == 'https://ru-zaimo.ru/zaim-bank' || $previous == 'https://ru-zaimo.ru/offerwall')
-if(1 == 1)
-{
-?>
     <header style="margin: 0 20px; top: 0;">
     <nav class="navbar">
 		<div class="col-md-12">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/be">
+				<a class="navbar-brand" href="/">
                     <?php if($domain == 'ru-zaimo.ru') { ?>
 					<img src="/templates/ru-zaimo/img/ru-zaimo.png" class="t338__logo t-img">
                     <?php } else { ?>
@@ -203,40 +191,7 @@ if(1 == 1)
 		</div>
 	</nav>  
   </header>
-  <?php if(!empty($previous) && $previous != 'https://ru-zaimo.ru/' && $previous != 'https://sumas.ru/') { 
-      if($this->uri->segment(1) != '/' && $this->uri->segment(1) != '' && $this->uri->segment(1) != ' ') { ?>
-<?php if($domain == 'ru-zaimo.ru') { ?>
-         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Ru-zaimo.ru -->
-        <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="9321709999"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        <?php } else { ?>
-        
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-4970738258373085",
-        enable_page_level_ads: true
-        });
-        </script>
-        <?php } ?>
- <?php } }?>
-    <!--allrecords-->
-<?php } else { ?>
-<!-- <header  style="margin: 20px 0 0 0;  text-align: center">
-    <a class="" href="/">
-        <img src="/templates/ru-zaimo/img/ru-zaimo.png" class="t-img">
-    </a> 
-  </header> -->
-<?php }?>
-  
+    <?php require 'adsence_all.php'; ?>
     <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="663907"
         data-tilda-page-id="3385037" data-tilda-page-alias="push" data-tilda-formskey="93c3cbd6dbbe2328e90d7d614020b440"
         style="overflow-x: hidden;">

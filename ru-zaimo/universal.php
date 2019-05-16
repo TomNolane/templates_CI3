@@ -169,7 +169,6 @@
             outline: 2px solid transparent !important;
         }
     </style>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <style>
         #rec63469314 .t-btn[data-btneffects-first],
         #rec63469314 .t-btn[data-btneffects-second],
@@ -309,29 +308,11 @@
                                                     </table> 
                                                 </a></div>
 
-                                                 <?php if($setting_array['is_mobile'] != 'мобила') { ?> 
+                                                <?php if($setting_array['is_mobile'] != 'мобила') { ?> 
                                                  <br><br><br> 
-                                                 <?php if($domain == 'ru-zaimo.ru') { ?>
-                                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                                                <!-- Ru-zaimo.ru -->
-                                                 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4970738258373085"
-                                                    data-ad-slot="9321709999" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                                                <script>
-                                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                                </script>
-                                                <?php } else { ?>
-                                                <!-- sumas 111 -->
-                                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                                                <script>
-                                                (adsbygoogle = window.adsbygoogle || []).push({
-                                                google_ad_client: "ca-pub-4970738258373085",
-                                                enable_page_level_ads: true
-                                                });
-                                                </script>
-                                                <?php } ?>
-                                                   
+                                                <?php require 'adsence_all.php'; ?>
                                                     <br><br> 
-                                                    <?php } ?>
+                                                <?php } ?>
                                         </div>
                                     </div>
                                 </div>
@@ -347,9 +328,6 @@
             <!-- cover -->
             <div class="t-cover" id="recorddiv63581518"
                 style="height:100vh; background-image:url(&#39;/templates/ru-zaimo/img/universal/<?=$main?>_header.jpg&#39;);">
-                <!-- <div class="t-cover__carrier" id="coverCarry63581518" data-content-cover-id="63581518"
-                    data-content-cover-bg="/templates/ru-zaimo/img/universal/<?=$main?>.jpg"
-                    data-content-cover-height="100vh" data-content-cover-parallax="" style="height:100vh;background-attachment:scroll; "></div> -->
                 <div class="t-cover__filter"
                     style="height:100vh;background-image: -moz-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -webkit-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -o-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -ms-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=&#39;#fe000000&#39;, endColorstr=&#39;#fe000000&#39;);">
                 </div>
@@ -376,7 +354,6 @@
                                                         style="font-size: 33px;text-shadow:1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000"><br>Вам
                                                         одобрено 20000 рублей после заявки. <br>Жмите получить
                                                         деньги.</span><br><span style="font-size: 42px;">
-                                                        <!-- <span style="color: rgb(255, 226, 0);text-shadow:1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000" data-redactor-style="color: rgb(255, 226, 0);">Круглосуточно. Быстро. Выгодно</span> -->
                                                     </span></div>
 
                                             </div>
@@ -425,24 +402,7 @@
         <br class="hidden-xs"><br class="hidden-xs">
 
         <?php if($setting_array['is_mobile'] == 'мобила') { ?> 
-        <?php if($domain == 'ru-zaimo.ru') { ?>
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Ru-zaimo.ru -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="9321709999" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        <?php } else { ?>
-        <!-- sumas 111 -->
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-4970738258373085",
-        enable_page_level_ads: true
-        });
-        </script>
-        <?php } ?>
+            <?php require 'adsence_all.php'; ?>
         <?php } ?>
 
         <div id="rec63469080" class="r t-rec t-rec_pt_90 t-rec_pb_75"
@@ -501,19 +461,7 @@
                         </div>
                     </div>
                     <?php } ?>
-                </div>
-
-                <!-- Ru-zaimo.ru -->
-                <!-- <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-4970738258373085"
-            data-ad-slot="9321709999"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script> -->
-
+                </div> 
 
                 <div class="t-section__container t-container">
                     <div class="t-col t-col_12">
@@ -763,26 +711,7 @@
             </script>
         </div>
         <?php if($setting_array['is_mobile'] != 'мобила') { ?>
-        
-        <?php if($domain == 'ru-zaimo.ru') { ?>
-                                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                                                <!-- Ru-zaimo.ru -->
-                                                 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4970738258373085"
-                                                    data-ad-slot="9321709999" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                                                <script>
-                                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                                </script>
-                                                <?php } else { ?>
-                                                <!-- sumas 111 -->
-                                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                                                <script>
-                                                (adsbygoogle = window.adsbygoogle || []).push({
-                                                google_ad_client: "ca-pub-4970738258373085",
-                                                enable_page_level_ads: true
-                                                });
-                                                </script>
-                                                <?php } ?>
-                                                
+            <?php require 'adsence_all.php'; ?>
         <br><br>
         <?php } ?>
         <div id="rec63469085" class="r t-rec t-rec_pt_30 t-rec_pb_90"

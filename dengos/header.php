@@ -3,8 +3,6 @@
 	$my_title = ''; $description = ''; $universal_folder = 0; $price = "8 000";
 	$main = 'bigzaim';
 	$link = 'https://pxl.leads.su/click/3b00787cbb4b9484e25cbe512163ca7d?source=dengos.ru/bigzaim';
-	$my_title = 'Bigzaim Лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
-	$description = 'Bigzaim осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
     
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
     $link = str_replace("#site1", ucfirst($domen), $link);
@@ -27,13 +25,10 @@
     else 
         $link = str_replace("#name#", $domen, $link);
 
-    function getDomain3()
-    {
-        $CI =& get_instance();
-        return preg_replace("/^[\w]{2,6}:\/\/([\w\d\.\-]+).*$/","$1", $CI->config->slash_item('base_url'));
-    }
+    $domain = getDomain();
 
-    $domain = getDomain3();
+    $my_title = $domain.' Лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
+	$description = $domain.' осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
 ?>
 <!DOCTYPE html>
 <html>
@@ -69,7 +64,7 @@
     <script src="/templates/dengos/js/universal/tilda-slds-1.4.min.js" charset="utf-8"></script>
     <script src="/templates/dengos/js/universal/hammer.min.js" charset="utf-8"></script>
     <script src="/templates/dengos/js/universal/tilda-zoom-2.0.min.js" charset="utf-8"></script>
-    <script  src="//cdn.sendpulse.com/js/push/7c8ebb6294d764a87f0f15175f7d0d99_1.js" async></script>
+    <?php require 'sendpuls_all.php'; ?>
     <style>
     <?php
     echo '.t338__logo{float: unset;max-width: 220px !important;}.t338__title{margin-bottom: 40px;padding-top: 200px;text-align: center;} .t-prefix_1{padding-left: 0;padding-right: 0;}';
@@ -137,14 +132,6 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 
 }?>
 <body class="t-body" style="margin: 0px;">
-<?php
-// if(empty($previous) || $previous == 'https://dengos.ru/' || $previous == 'https://dengos.ru/faq' || $previous == 'https://dengos.ru/about' || $previous == 'https://dengos.ru/oferta'
-//     || $previous == 'https://dengos.ru/soglasie' || $previous == 'https://dengos.ru/rules' || $previous == 'https://dengos.ru/personal-data' || $previous == 'https://dengos.ru/calls'
-//     || $previous == 'https://dengos.ru/regulation' || $previous == 'https://dengos.ru/safety' || $previous == 'https://dengos.ru/zaim-card' || $previous == 'https://dengos.ru/zaim-yandex'
-//     || $previous == 'https://dengos.ru/zaim-contact' || $previous == 'https://dengos.ru/zaim-qiwi' || $previous == 'https://dengos.ru/zaim-bank' || $previous == 'https://dengos.ru/offerwall')
-if(1 == 1)
-{
-?>
     <header style="margin: 0 20px; top: 0;">
     <nav class="navbar">
 		<div class="col-md-12">
@@ -205,17 +192,5 @@ if(1 == 1)
 		</div>
 	</nav>  
   </header>
-  <?php if(!empty($previous) && $previous != 'https://dengos.ru/' && $previous != 'https://sumas.ru/') { 
-      if($this->uri->segment(1) != '/' && $this->uri->segment(1) != '' && $this->uri->segment(1) != ' ') { ?>
-        <!-- dengos.ru adsence --> 
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "ca-pub-4970738258373085",
-enable_page_level_ads: true
-});
-</script>
- <?php } }?>
-    <!--allrecords-->
-<?php } ?>
+<?php require 'adsence_all.php'; ?>
 <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="663907" data-tilda-page-id="3385037" data-tilda-page-alias="push" data-tilda-formskey="93c3cbd6dbbe2328e90d7d614020b440">

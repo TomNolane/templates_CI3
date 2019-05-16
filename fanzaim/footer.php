@@ -206,7 +206,7 @@ else if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2',
 }
 elseif($this->uri->segment(1) == '404')
 {
-    echo 'traffic("fanzaim.ru",9);'; 
+    echo 'traffic("fanzaim.ru",9);';
 }
 echo "}";
 require 'templates/common/new/js/exeption.js';
@@ -216,7 +216,7 @@ require 'templates/common/new/js/exeption.js';
     include "google.php";
     include "yandexmetrika.php"; 
     include "yandex_rtb.php";
-    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell')))
+    if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3')))
     {
         require 'google_lk.php';
     }

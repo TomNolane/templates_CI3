@@ -221,7 +221,7 @@ if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form')))
             }
         }); 
 
-    <?php if (in_array($this->uri->segment(1), array(' ', '', 'index'))) 
+    <?php if (in_array($this->uri->segment(1), array(' ', '', 'index')))
     { 
         echo 'traffic("bzaim5.ru",0);';
     }
@@ -229,7 +229,7 @@ if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form')))
 else if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'pixell')))
 {
     include "templates/common/new/js/lk.js";
-    echo 'traffic("bzaim5.ru",4);'; 
+    echo 'traffic("bzaim5.ru",4);';
 
 }
 else if($this->uri->segment(1) == '404')
@@ -246,13 +246,9 @@ require 'templates/common/new/js/exeption.js';
     include "yandex_rtb.php";
 
     if(in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3')))
-    {
         require 'google_lk.php';
-    } 
     else 
-    {
         require 'vk.php';
-    }
 
     require 'mailru.php';
 ?>
