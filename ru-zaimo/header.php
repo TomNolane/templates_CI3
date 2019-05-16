@@ -3,8 +3,7 @@
 	$my_title = ''; $description = ''; $universal_folder = 0; $price = "8 000";
 	$main = 'bigzaim';
 	$link = 'https://pxl.leads.su/click/3b00787cbb4b9484e25cbe512163ca7d?source=ru-zaimo.ru/bigzaim';
-	$my_title = 'Bigzaim Лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
-	$description = 'Bigzaim осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
+	
     
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
     $link = str_replace("#site1", ucfirst($domen), $link);
@@ -27,13 +26,10 @@
     else 
         $link = str_replace("#name#", $domen, $link);
 
-    function getDomain3()
-    {
-        $CI =& get_instance();
-        return preg_replace("/^[\w]{2,6}:\/\/([\w\d\.\-]+).*$/","$1", $CI->config->slash_item('base_url'));
-    }
+    $domain = getDomain();
 
-    $domain = getDomain3();
+    $my_title = $domain.' Лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
+	$description = $domain.' осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
 ?>
 <!DOCTYPE html>
 <html>
@@ -141,7 +137,7 @@ if(isset($_SERVER['HTTP_REFERER'])) {
     <nav class="navbar">
 		<div class="col-md-12">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/be">
+				<a class="navbar-brand" href="/">
                     <?php if($domain == 'ru-zaimo.ru') { ?>
 					<img src="/templates/ru-zaimo/img/ru-zaimo.png" class="t338__logo t-img">
                     <?php } else { ?>

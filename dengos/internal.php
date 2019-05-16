@@ -4,19 +4,27 @@ if ($this->uri->segment(1) == 'robots.txt'){
     require 'internal-robots.txt.php';
 } else 
 {
-    $universal_folder = 0; $price = "30 000"; 
+    $universal_folder = 0; $price = "30 000";
 
-    $params = array('prelend' => $this->uri->segment(1));
-    $ch = curl_init("https://bzaim5.ru/getprelend");
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $result = curl_exec($ch);
-    curl_close($ch);
-    $result2 = json_decode(substr($result, 3),true);
-
-    $main = $result2[0]["img"];
-    $link =  $result2[0]["link_offer"];
+    if (!in_array($this->uri->segment(1), array('about', 'faq', 'oferta', 'soglasie', 'rules', 'personal-data', 'calls', 'regulation', 'zaim-card', 'zaim-yandex', 'zaim-qiwi', 'zaim-bank', 'zaim-contact'))) 
+    {
+        $params = array('prelend' => $this->uri->segment(1));
+        $ch = curl_init("https://bzaim5.ru/getprelend");
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $result = curl_exec($ch);
+        curl_close($ch);
+        $result2 = json_decode(substr($result, 3),true);
+        
+        $main = $result2[0]["img"];
+        $link =  $result2[0]["link_offer"];
+    }
+    else
+    {
+        $main = 'dengos';
+        $link = '';
+    }
 
     $prefix = '?aff_sub1=#name#&aff_sub=#name#&source=#name#&s1=#name#&subid=#name#&sub1=#name#'; $prefix2 = '&aff_sub1=#name#&aff_sub=#name#&source=#name#&s1=#name#&subid=#name#&sub1=#name#';
 
@@ -25,9 +33,17 @@ if ($this->uri->segment(1) == 'robots.txt'){
     else 
         $link .= $prefix;
 
-    $my_title = $result2[0]["img"].' лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
-    $description = $result2[0]["img"].' осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
-    
+    if (!in_array($this->uri->segment(1), array('about', 'faq', 'oferta', 'soglasie', 'rules', 'personal-data', 'calls', 'regulation', 'zaim-card', 'zaim-yandex', 'zaim-qiwi', 'zaim-bank', 'zaim-contact'))) 
+    {
+        $my_title = $result2[0]["img"].' лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
+        $description = $result2[0]["img"].' осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
+    }
+    else
+    {
+        $my_title = 'Dengos лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
+        $description = 'Dengos осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
+    }
+
     if ($this->uri->segment(1) == 'about') require 'templates/dengos/internal-about.php';
     elseif ($this->uri->segment(1) == 'faq') require 'templates/dengos/internal-faq.php';
     elseif ($this->uri->segment(1) == 'rules') require 'templates/dengos/internal-rules.php';
