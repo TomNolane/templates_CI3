@@ -3,8 +3,6 @@
 	$my_title = ''; $description = ''; $universal_folder = 0; $price = "8 000";
 	$main = 'bigzaim';
 	$link = 'https://pxl.leads.su/click/3b00787cbb4b9484e25cbe512163ca7d?source=dengos.ru/bigzaim';
-	$my_title = 'Bigzaim Лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
-	$description = 'Bigzaim осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
     
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
     $link = str_replace("#site1", ucfirst($domen), $link);
@@ -28,6 +26,9 @@
         $link = str_replace("#name#", $domen, $link);
 
     $domain = getDomain();
+
+    $my_title = $domain.' Лучший Онлайн Сервис в РФ по Подбору Выгодных Займов'; 
+	$description = $domain.' осуществляет посреднические услуги между клиентом, который хочет получить деньги в заём, и кредитным учреждением, чья деятельность лицензирована';
 ?>
 <!DOCTYPE html>
 <html>
