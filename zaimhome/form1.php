@@ -22,9 +22,22 @@
    font-size: 21px !important;
 }
 
+@keyframes shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+     }
+     100% {
+          box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+     }
+}
+
 .ex-main-btn {
     padding: 15px 5px !important;
     letter-spacing: 1px !important;
+<? if ($setting_array['is_mobile'] == 'мобила') : ?>
+    animation: shadow-pulse 1s infinite;
+<? endif; ?>
 }
 
 .ex-form form .form-group .ex-wrapper input {
@@ -32,13 +45,44 @@
     height: 48px !important;
 <? endif; ?>
 }
+
+#phonestatus {
+<? if ($setting_array['is_mobile'] == 'мобила') : ?>
+    top: 3px !important;
+<? endif; ?>
+}
+
+#ex-slider-val {
+    margin: 0 !important;
+    font-size: 28px !important;
+    padding-left: 0px !important;
+    position: relative !important;
+}
+#ex-slider-val::after {
+    content: "";
+    width: 30px;
+    height: 29px;
+    background: url(/templates/zaimhome/assets/img/ruble-icon.png) no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    display: block;
+    margin-left: 23px;
+    text-align: center;
+    position: absolute;
+    top: 2px;
+<? if ($setting_array['is_mobile'] != 'мобила') : ?>
+    left: calc(60% - 10px);
+<? else : ?>
+    left: calc(60%);
+<? endif; ?>
+}
 </style>
 <div class="row" style="padding-bottom: 30px;">
     <div class="col-md-6 col-sm-offset-3 col-xs-12">
         <div id="ex-main-slider-range">
             <figure class="ex-range-slider">
-                <p id="ex-slider-val"></p>
-                <i></i>
+                <p id="ex-slider-val" class="text-center"></p>
+                
                 <input type="text" id="rangeSlider" name="rangeSlider" />
                 <input type="hidden" id="amount" name="amount" value="20000" />
                 <input type="hidden" id="period" name="period" value="21" />
@@ -180,17 +224,17 @@
     </div>
 </div>
 <div class="form-group hidden">
-<label class="control-label col-md-4" for="credit">Кредитная история</label>
-<div class="col-md-6">
-    <select size="1" class="form-control" id="credit">
-        <option selected>Никогда не брал кредитов</option>
-        <option>Кредиты закрыты, просрочек не было</option>
-        <option>Кредиты есть, просрочек нет</option>
-        <option>Кредиты закрыты, просрочки были</option>
-        <option>Просрочки были, сейчас нет</option>
-        <option>Просрочки сейчас есть</option>
-    </select>
-</div>
+    <label class="control-label col-md-4" for="credit">Кредитная история</label>
+    <div class="col-md-6">
+        <select size="1" class="form-control" id="credit">
+            <option selected>Никогда не брал кредитов</option>
+            <option>Кредиты закрыты, просрочек не было</option>
+            <option>Кредиты есть, просрочек нет</option>
+            <option>Кредиты закрыты, просрочки были</option>
+            <option>Просрочки были, сейчас нет</option>
+            <option>Просрочки сейчас есть</option>
+        </select>
+    </div>
 </div>
 <div class="row">
 <? if ($setting_array['is_mobile'] != 'мобила') : ?>
@@ -212,9 +256,8 @@
     </label>    
 </div>   
     
-</div>
 <div class="form-group" style="margin-top: 10px; margin-bottom: 80px;">
     <div class="col-md-6 col-md-offset-2 col-xs-12 text-center" id="my_btn">  
-        <button class="ex-main-btn myfnt" id="next1" type="button">Получить заём</button> 
+        <button class="ex-main-btn myfnt" id="next1" type="button">Получить деньги</button> 
     </div>
 </div>

@@ -12,7 +12,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
 <footer class="ex-main-footer">
     <div class="container">
         <?php if (!in_array($this->uri->segment(1), array('lk', 'offerwall2', 'offerwall', 'pixell'))) { ?>
-        <h2>Forzaim</h2> 
+        <h2><img src="/templates/forzaim/assets/img/logo.png" /></h2> 
         <p >
             Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201 | <?=$email?> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span>
             <span>Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от  61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%.

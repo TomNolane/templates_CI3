@@ -59,6 +59,16 @@ main.ex-form .tab-content .ex-calc-wraper .ex-tab-section .ex-calc-block li .ex-
    font-size: 21px !important;
 }
 
+@keyframes shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+     }
+     100% {
+          box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+     }
+}
+
 .ex-main-btn {
     width: 70% !important;
     margin-left: auto !important;
@@ -71,6 +81,27 @@ main.ex-form .tab-content .ex-calc-wraper .ex-tab-section .ex-calc-block li .ex-
     font-size: 24px !important;
     padding: 15px 18px !important;
 <? endif; ?>
+
+    animation: shadow-pulse 1s infinite;
+}
+
+#phonestatus {
+    z-index: 100001 !important;
+<? if ($setting_array['is_mobile'] == 'мобила') : ?>
+    right: 4px !important;
+    top: 0px !important;
+<? else : ?>
+    top: 7px !important;
+    right: 5px !important;
+<? endif; ?>
+}
+
+.glyphicon-ok:before {
+    content: "" !important;
+}
+
+main.ex-form .tab-content .ex-main-form .ex-wrapper.ex-success:after {
+    top: 22px !important;
 }
 </style>
 <section class="ex-main-form">

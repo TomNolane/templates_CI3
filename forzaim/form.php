@@ -70,7 +70,7 @@ include "header.php";
 <nav class="ex-main-header">
     <div class="container">
         <i class="ex-hamburger"></i>
-        <a class="ex-brand" href="/" style="margin-left: -60px;">Forzaim</a>
+        <a class="ex-brand" href="/" style="margin-left: -60px;"><img src="/templates/forzaim/assets/img/logo.png" /></a>
     </div>
 </nav>  
 <main class="container ex-form" style="padding-bottom: 70px !important;">

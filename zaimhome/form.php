@@ -66,13 +66,17 @@ if(!isset($my_title))
 include "templates/common/new/php/form_header.php";
 include "header.php";
 ?>
-<div class="container ex-form">
+<div class="container ex-form" style="padding-left: 0; padding-right: 0;">
     <? if ($setting_array['is_mobile'] == 'мобила') : ?>
         <h1 class="text-center" id="to_scroll" style="font-size: 16px; line-height: 1.5;">Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки</h1>
     <? else : ?>
         <h1 class="text-center" id="to_scroll">Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки</h1>
     <? endif; ?>
-    <div class="row">
+    <? if ($setting_array['is_mobile'] == 'мобила') : ?>
+        <div class="row" style="margin-left: 0px !important; margin-right: 0px !important;">
+    <? else : ?>
+        <div class="row">
+    <? endif; ?>
         <div class="col-md-12 col-md-offset-0 col-xs-10 col-xs-offset-1">
             <div class="row hidden-xs">
                 <div class="col-sm-10 col-sm-offset-1">
