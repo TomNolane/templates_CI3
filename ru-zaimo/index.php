@@ -436,16 +436,7 @@ tr>td:first-child {
 </div> 
 
 <div class="row container3"><div class="col-md-12">
- <!-- Ru-zaimo.ru -->
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-4970738258373085"
-data-ad-slot="9321709999"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <h2 class="text-center hh hh4"> Для вас подобраны организации для <span class="gold_font">получения займа или кредита</span> в России:</h2>
  <h2 class="text-center hh hh4 grey" style="font-size: 18px;line-height:initial">На нашем сайте вы можете найти нужную информацию о кредитах и займах, которые можно получить в России. <br>Все публикуемые на сайте организации имеют лицензии и внесены в реестр кредитных организаций.</h2>
     <br>
