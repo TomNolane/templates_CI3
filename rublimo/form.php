@@ -69,7 +69,7 @@ include "header.php";
 ?>
 <div class="container">
 		<div class="steps">
-			<div class="row">
+			<div class="row hidden-xs">
 				<div class="col-xs-12">
 					<div class="form-steps-line">
 						<div class="form-steps-green-line">
@@ -97,16 +97,17 @@ include "header.php";
 		</div>
 		<section>
 			<div class="row">
-				<div class="col-sm-12 col-xs-12 text-center"> 
-					<h3 id="htitle">
+				<div class="col-md-10 col-xs-12 col-md-offset-1 text-center" style="background: #71c386; margin-bottom: 20px;"> 
+					<!--<h3 id="htitle">
 						<b>Заполните свои личные данные</b>
 					</h3> 
 					<h3 class="hidden">Заполните свои паспортные данные</h3>
-					<h3 class="hidden">Заполните свои личные данные</h3>
+					<h3 class="hidden">Заполните свои личные данные</h3>-->
+                    <h3>Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки</h3>
 				</div>
 			</div>
 		</section>
-		<div class="hidden-sm hidden-xs">
+		<div class="hidden-sm hidden-xs hidden">
 			<div class="row">
 				<div class="col-sm-12 col-xs-12 text-center">
 					<div class="secure">
@@ -234,4 +235,5 @@ include "header.php";
 			</div>
 		</div>
 	</div>
+	<? require ('adsence.php'); ?>
 <?php include 'footer.php';?>

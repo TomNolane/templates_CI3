@@ -1,5 +1,9 @@
 <body class="ex-sticky">
-<nav class="navbar navbar-default ex-main-header">
+<? if ($this->uri->segment(1) == 'form') : ?>
+    <nav class="navbar navbar-default ex-main-header" style="background: #30323e;">
+<? else : ?>
+    <nav class="navbar navbar-default ex-main-header">
+<? endif; ?>
 <? if ($this->uri->segment(1) == 'pixell') : ?>
     <div class="container" style="margin-bottom: 20px;">
 <? else : ?>
@@ -14,7 +18,8 @@
             </button>
             <? endif; ?>
             <a class="navbar-brand" href="/">
-                <?php $logo_addon = '/templates/dengomir/assets/img/icons/logo-header.png';
+                <? if ($this->uri->segment(1) == 'form') $logo_addon = '/templates/dengomir/assets/img/icons/logo-footer.png';
+                else $logo_addon = '/templates/dengomir/assets/img/icons/logo-header.png';
 				switch ($this->uri->segment(1)) {
 					case 'pixell': $logo_addon = '/templates/common/img/logo-fanzaim.png'; break;
 					case 'offerwall': $logo_addon = '/templates/common/img/logo-edenga.png'; break;
@@ -24,6 +29,18 @@
             </a>
         </div>
         <br><br>
+        <? if ($this->uri->segment(1) == 'form') : ?>
+        <style>
+        .ex-menu-item {
+            color: #FFF !important;
+            font-size: 16px !important;
+        }
+        .ex-menu-item:hover {
+            color: #6781e7 !important;
+            font-size: 16px !important;
+        }
+        </style>
+        <? endif; ?>
         <? if (!in_array($this->uri->segment(1), array('offerwall', 'offerwall2', 'lk', 'lk2', 'pixell', 'vitrina'))) : ?>
         <div class="collapse navbar-collapse" id="dengomirCollapsed">
             <ul class="nav navbar-nav navbar-right"> 
@@ -51,7 +68,13 @@
                     </ul>
                 </li>
                 <li><a href="/faq" class="ex-menu-item">Faq</a></li>
-                <li><a href="" data-toggle="modal" id="askQuestion_" data-target="#askQuestion"><span role="button" class="ex-feedback">Обратная связь</span></a></li>
+                <li><a href="" data-toggle="modal" id="askQuestion_" data-target="#askQuestion">
+                    <? if ($this->uri->segment(1) == 'form') : ?>
+                        <span role="button" class="ex-feedback" style="color: #c7bcff; border-color: #c7bcff;">Обратная связь</span>
+                    <? else : ?>
+                        <span role="button" class="ex-feedback">Обратная связь</span>
+                    <? endif; ?>
+                </a></li>
             </ul>
         </div>
          <? endif; ?>

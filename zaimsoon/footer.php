@@ -23,9 +23,9 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
                     <img alt="logo.png"  class="spec-logo" src="/templates/zaimsoon/assets/img/logo-footer.png">
                 <?php } ?>
             </div>
-             <div class="col-md-9 col-xs-9">
-                <? require 'adsence.php'; ?>
-            </div>
+            <? if ($this->uri->segment(1) != 'form') : ?>
+                <div class="col-md-9 col-xs-9"><? require 'adsence.php'; ?></div>
+            <? endif; ?>
              <div class="col-md-12 col-xs-12">
                     <p class="spec_footer7">Сервис по подбору выгодных онлайн займов находящийся по адресу Россия, Ленинградская обл. г.
                         Санкт-Петербург, ул. Осипенко, 12, оф 201| <?=$email?> <span class="hidden-xs hidden-sm">| +7(495) 006 19 61</span> <span>Займы

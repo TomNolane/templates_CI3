@@ -26,7 +26,7 @@ $email = 'support@dengoman.ru';
 <script>var amount = 15000;</script>
 </head>
 <body>
-<div class="page">
+<div class="page" style="min-height: unset;">
 <?php 
 // popup
 require 'templates/common/new/php/modal.php';

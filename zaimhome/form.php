@@ -66,13 +66,21 @@ if(!isset($my_title))
 include "templates/common/new/php/form_header.php";
 include "header.php";
 ?>
-<div class="container ex-form">
-    <h1 class="text-center" id="to_scroll">Как получить деньги?</h1>
-    <div class="row">
+<div class="container ex-form" style="padding-left: 0; padding-right: 0;">
+    <? if ($setting_array['is_mobile'] == 'мобила') : ?>
+        <h1 class="text-center" id="to_scroll" style="font-size: 16px; line-height: 1.5;">Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки</h1>
+    <? else : ?>
+        <h1 class="text-center" id="to_scroll">Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки</h1>
+    <? endif; ?>
+    <? if ($setting_array['is_mobile'] == 'мобила') : ?>
+        <div class="row" style="margin-left: 0px !important; margin-right: 0px !important;">
+    <? else : ?>
+        <div class="row">
+    <? endif; ?>
         <div class="col-md-12 col-md-offset-0 col-xs-10 col-xs-offset-1">
-            <div class="row">
+            <div class="row hidden-xs">
                 <div class="col-sm-10 col-sm-offset-1">
-                    <div class="ex-indicator-scope ex-on-second-step ex-on-last-step nav nav-tabs" role="tablist">
+                    <div class="ex-indicator-scope ex-on-second-step ex-on-last-step nav nav-tabs" role="tablist" style="margin-bottom: 50px;">
                         <figure class="ex-first-step">
                             <p>
                                 <br> </p>
@@ -81,8 +89,7 @@ include "header.php";
                             <div>
                                 <span></span>
                             </div>
-                            <p>Личные данные 
-                                <br> (всего 1 шаг)</p>
+                            <p></p>
                         </figure>
                         <figure class="ex-last-step">
                             <p style="width: 105px; left: -130%;"></p>
@@ -120,5 +127,16 @@ include "header.php";
         </div>
     </div>
 </div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- zaimhome -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="7107437553"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <br><br>
 <?php include 'footer.php';?>

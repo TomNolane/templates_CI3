@@ -67,33 +67,45 @@ if(!isset($my_title))
 include "templates/common/new/php/form_header.php";
 include "header.php";
 ?>
-<div class="ex-form">
-<div class="container" id="to_scroll">
-    <h2 class="text-center">До одобрения займа вас отделяют всего 1 шаг</h2>
-    <div class="ex-bg-form">
-            <?php $period; ?>
-            <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off">
-                <input type="hidden" name="display" id="display" value="0">
-                <input type="hidden" name="referer" value="<?=$referer?>">
-                <input type="hidden" name="id" value="">
-                <input type="hidden" name="step" value="1">
-                <input type="hidden" name="fingerprint" id="fingerprint" value="">
-                <input type="hidden" name="ad_id" value="<?=$ad_id?>">
-                <input type="hidden" id="amount" name="amount" value="<?=$sum;?>"/>
-                <input type="hidden" id="period" name="period" value="<?=$period;?>"/>
-            <div class="tab-content">
-                <div id="firstStep" class="tab-pane fade in active">
-                    <?php require 'form1.php';?>
+<div class="ex-form" style="padding-bottom: 10px; padding-top: 10px;">
+    <div class="container" id="to_scroll" style="padding-bottom: 50px;">
+        <div class="ex-bg-form myborder" style="background-image: none; background: #bfd8ff; padding-bottom: 18px;">
+                <?php $period; ?>
+                <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off">
+                    <input type="hidden" name="display" id="display" value="0">
+                    <input type="hidden" name="referer" value="<?=$referer?>">
+                    <input type="hidden" name="id" value="">
+                    <input type="hidden" name="step" value="1">
+                    <input type="hidden" name="fingerprint" id="fingerprint" value="">
+                    <input type="hidden" name="ad_id" value="<?=$ad_id?>">
+                    <input type="hidden" id="amount" name="amount" value="<?=$sum;?>"/>
+                    <input type="hidden" id="period" name="period" value="<?=$period;?>"/>
+                <div class="tab-content" style="width: 800px;">
+                    <div id="firstStep" class="tab-pane fade in active" style="padding-top: 0;">
+                        <?php require 'form1.php';?>
+                    </div>
+                    <div id="secondStep" class="tab-pane fade">
+                        <?php require 'form2.php';?>
+                    </div>
+                    <div id="thirdStep" class="tab-pane fade">
+                        <?php require 'form3.php';?>
+                    </div>
                 </div>
-                <div id="secondStep" class="tab-pane fade">
-                    <?php require 'form2.php';?>
-                </div>
-                <div id="thirdStep" class="tab-pane fade">
-                    <?php require 'form3.php';?>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- dengomir -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4970738258373085"
+        data-ad-slot="4639511728"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </div>
-</div>
+
 <?php include 'footer.php';?>

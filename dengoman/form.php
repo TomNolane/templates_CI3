@@ -121,10 +121,10 @@ if(isset($_SERVER['HTTP_REFERER'])){
     $ad_id = '2';
 }
 ?>
-<div class="container">
-<h1 id="pageh">Заполните свои личные данные</h1>
-<section class="steps">
-<div class="row">
+<div class="container" style="margin-top: 20px;">
+<h1 id="pageh" class="hidden">Заполните свои личные данные</h1>
+<section class="steps hidden">
+<div class="row hidden">
 	<div class="col-xs-12 text-center">
 		<div class="row" role="tablist" id="form-steps" role="presentation">
 			<span>
@@ -136,7 +136,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 	</div>
 </div>
 </section>
-<section class="white">
+<section class="white" style="padding-top: 10px;">
 <div class="row">
 	<div class="col-sm-9">
 		<form class="form-horizontal" id="anketa"  method="post" autocomplete="off">
@@ -160,7 +160,13 @@ if(isset($_SERVER['HTTP_REFERER'])){
                     <div class="row">
                     <br>
                     <div class="col-md-4"></div>
-                    <div class="text-center col-md-4"><a class="btn btn-ok btn-block" id="next1">Отправить заявку</a></div>
+                    <div class="col-sm-6 col-md-6 col-xs-12 col-sm-offset-5">
+                        <? if ($setting_array['is_mobile'] != 'мобила') : ?>
+                            <a class="btn btn-ok btn-block" style="width: 60%; font-weight: bold;" id="next1">Отправить заявку</a>
+                        <? else : ?>
+                            <a class="btn btn-ok btn-block" style="width: 64%; font-weight: bold; margin-top: 20px; margin-bottom: 40px;" id="next1">Отправить заявку</a>
+                        <? endif; ?>
+                    </div>
                     <div class="col-md-4"></div>
                     </div>
 					<div class="clearfix"></div>
@@ -196,7 +202,7 @@ if(isset($_SERVER['HTTP_REFERER'])){
 			</div>
 		</form>
 	</div>
-	<div class="col-sm-3 hidden-xs text-center triggers">
+	<div class="col-sm-3 hidden-xs text-center triggers hidden">
 		<div>
 			<img src="/templates/dengoman/assets/img/form/1.png" alt="1.png">
 			<p>Ваши персональные<br>данные надёжно<br>защищены</p>

@@ -153,9 +153,9 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 							О сервисе
 						</a>
 					</li>
-					<li>
+					<!--li>
 						<a href="<?=$link?>" target="_blank">Получить деньги</a>
-					</li>
+					</li-->
 					<li>
 						<a id="test" href="/faq">Вопросы-ответы</a>
 					</li>

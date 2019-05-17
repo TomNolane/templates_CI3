@@ -5,7 +5,7 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
     echo '<a href="#0" class="cd-top">Наверх</a>';
 } 
 ?>
-<footer class="ex-main-footer ex-sticky-footer">
+<footer class="ex-main-footer ex-sticky-footer" style="padding-bottom: 0;">
     <div class="container">
         <div class="row">
         <?php if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
@@ -14,14 +14,16 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
              <div class="col-md-12">
         <?php } ?>
                 <div class="row"> 
-                    <div class="col-md-3 ex-foot-logo">
+                    <div class="col-md-3 col-xs-12 ex-foot-logo">
                         <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                             <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png" style="margin: 0;">
                         <?php } else { ?>
                             <img alt="logo.png" src="/templates/dengomir/assets/img/icons/logo-header.png">
                         <?php } ?> 
                     </div>
-                    <div class="col-md-9 col-xs-9">
+                </div>
+                <div class="row">
+                    <div class="col-md-9 col-xs-12">
                     <?php if (!in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                         <p class="black">Сервис по подбору выгодных онлайн займов Dengomir, находящийся по адресу
                             Россия, Ленинградская обл., г. Санкт-Петербург, ул. Осипенко, 12, оф 201<br>

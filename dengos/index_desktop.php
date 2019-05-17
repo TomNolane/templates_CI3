@@ -3,14 +3,7 @@ require 'css/index_desktop_css.php';
 require 'templates/common/new/php/modal.php'; 
 ?>
 <div class="container3"><div class="col-md-12">
- <!-- dengos.ru adsence -->
- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "ca-pub-4970738258373085",
-enable_page_level_ads: true
-});
-</script>
+<?php require 'adsence_all.php';?>
 <h2 class="text-center hh hh4"> Для вас подобраны организации для <span class="green_font">получения займа</span> в России:</h2>
  <h2 class="text-center hh hh4 grey" style="font-size: 18px;line-height:initial">На нашем сайте вы можете найти нужную информацию о займах, которые можно получить в России. <br>Все публикуемые на сайте организации имеют лицензии и внесены в реестр кредитных организаций.</h2>
     <br>
@@ -45,8 +38,12 @@ enable_page_level_ads: true
         {
             if (strpos($item['link'], 'guruleads'))
                 $item['link'] = $item['link'].'?sub1=Prelend';
-            else if(strpos($item['link'], 'kviku') || strpos($item['link'], 'tech'))
+            else if(strpos($item['link'], 'kviku'))
                 $item['link'] = $item['link'].'';
+            else if(strpos($item['link'], 'g24.me'))
+                $item['link'] = $item['link'].'?subid=Prelend';
+            else if(strpos($item['link'], 'tech'))
+                $item['link'] = $item['link'].'&sub1=Prelend';
             else if(strpos($item['link'], 'leadgid'))
                 $item['link'] = $item['link'].'?source=Prelend';
             else if(strpos($item['link'], 'leadbrothers'))

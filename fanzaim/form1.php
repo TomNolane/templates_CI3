@@ -1,53 +1,124 @@
-<section class="container-fluid ex-main-form">
+<style>
+#exMainHeader .navbar-header .navbar-brand {
+    width: 250px !important;
+    height: 50px !important;
+}
+.myfnt {font-size: 21px !important;}
+.myinput {
+    border: 2px solid #666 !important;
+    background: #FFF !important;
+    text-align: center !important;
+}
+.ex-slider-val {
+    font-size: 40px !important;
+    line-height: 40px !important;
+}
+main.ex-main-form .tab-content .ex-wrapper.ex-val-select p i {
+    height: 40px;
+    width: 24px;
+    margin-left: 10px;
+}
+main.ex-main-form .tab-content .ex-wrapper.ex-val-select p {
+    padding: 9px 0px !important;
+    text-align: center !important;
+}
+.irs-bar, .irs-bar-edge, .irs-line,.irs-slider{
+    height: 50% !important;
+}
+.irs-bar-edge, .irs-slider {
+    border-radius: 10px !important;
+}
+.myborder {
+    border-radius: 15px 15px 15px 15px !important;
+    -moz-border-radius: 15px 15px 15px 15px !important;
+    -webkit-border-radius: 15px 15px 15px 15px !important;
+}
+.form-control {
+    padding-left: 5px !important;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+   font-size: 21px !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+   font-size: 21px !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+   font-size: 21px !important;
+}
+
+:-ms-input-placeholder {  
+   text-align: center;
+   font-size: 21px !important;
+}
+.ex-main-btn {
+    width: 70% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 10px 0 10px !important;
+    <? if ($setting_array['is_mobile'] == 'мобила') : ?>
+    font-size: 18px;
+    width: 100% !important;
+    <? endif; ?>
+    border-radius: 30px 30px 30px 30px !important;
+    -moz-border-radius: 30px 30px 30px 30px !important;
+    -webkit-border-radius: 30px 30px 30px 30px !important;
+}
+</style>
+<section class="container-fluid ex-main-form" style="padding-bottom: 100px;">
     <div class="row">
-        <div class="col-md-7 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+        <div class="col-md-6 col-md-offset-2 col-sm-6 col-sm-offset-2 col-xs-10 col-xs-offset-1">
             <!-- <div class="form-group has-feedback"> -->
             <div class="">
-                <div class="col-md-9 col-md-offset-3">
+                <div class="col-md-8 col-md-offset-4">
                     <div class="ex-wrapper ex-val-select">
-                        <p class="ex-slider-val"></p>
+                        <p class="ex-slider-val myborder"></p>
                     </div>
                 </div>
             </div>
             <!-- <div class="form-group has-feedback"> -->
             <div class="">
-                <div class="col-md-9 col-md-offset-3">
+                <div class="col-md-8 col-md-offset-4">
                     <div class="ex-wrapper ex-slider-wrapper">
                         <input type="text" id="rangeSlider" name="rangeSlider" value="" />
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback hidden">
                 <label class="control-label col-md-3" for="f">Фамилия</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                data-validation-error-msg="Укажите свою фамилию" required>
+                                data-validation-error-msg="Укажите свою фамилию" required value="тест">
                                 <p class="help-block2">Нужно указать фамилию</p>
                                 <p class="text-muted helpblock">Пример: Иванова</p>
                     </div>
                 </div>
             </div> 
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback hidden">
                 <label class="control-label col-md-3" for="i">Имя</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Укажите свое имя"
                                 data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                                data-validation-error-msg="Укажите свое имя" required>
+                                data-validation-error-msg="Укажите свое имя" required value="тест">
                                 <p class="help-block2">Нужно указать имя</p>
                                 <p class="text-muted helpblock">Пример: Лариса</p>
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback hidden">
                 <label class="control-label col-md-3" for="o">Отчество</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                     <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Укажите свое отчество"
                     data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$"
-                    data-validation-error-msg="Укажите свое отчество" required>
+                    data-validation-error-msg="Укажите свое отчество" required value="тест">
                     <p class="help-block2">Нужно указать отчество</p> 
                     <p class="text-muted helpblock">Пример: Ивановна</p>
                     </div>
@@ -114,11 +185,11 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback">
-                <label class="control-label col-md-3" id="spec_form2" for="phone">Телефон</label>
-                <div class="col-md-9">
+            <div class="form-group has-feedback" style="margin-bottom: 40px; margin-top: 40px;">
+                <label class="control-label col-sm-offset-1 col-md-4 hidden" id="spec_form2" for="phone">Телефон</label>
+                <div class="col-md-8 col-sm-offset-4 col-xs-12">
                     <div class="ex-wrapper">
-                        <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Укажите свой номер телефона"
+                        <input type="tel" class="form-control ec tip special_form myfnt myinput" name="phone" id="phone" placeholder="№ телефона"
                                 title="Укажите свой номер телефона" data-validation-error-msg="Укажите номер телефона"
                                 required>
                             <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -128,17 +199,17 @@
                 </div>
             </div>
             <div class="form-group has-feedback">
-                <label class="control-label col-md-3" for="email">Email</label>
-                <div class="col-md-9">
+                <label class="control-label col-sm-offset-1 col-md-4 hidden" for="email">Email</label>
+                <div class="col-md-8 col-sm-offset-4 col-xs-12">
                     <div class="ex-wrapper">
-                        <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Укажите свой email адрес"
-                        placeholder="Пример: email@mail.ru" data-validation="email" data-validation-error-msg="Укажите свой email" required>
+                        <input type="email" class="form-control ec tip special_form myfnt myinput" name="email" id="email" title="Укажите свой email адрес"
+                        placeholder="Email" data-validation="email" data-validation-error-msg="Укажите свой email" required>
                         <p class="help-block2"></p>
-                        <p class="text-muted helpblock">Проверьте почту. Письмо могло попасть в папку "СПАМ"</p>
+                        <p class="text-muted helpblock">Пример: email@mail.ru</p>
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback">
+            <div class="form-group has-feedback hidden">
                 <label class="control-label col-md-3" for="delays_type">Кредитная история</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper ex-arrow">
@@ -154,14 +225,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-9 col-md-offset-3 ex-agreement-check">
+                <div class="col-md-8 col-sm-offset-4 col-xs-12 ex-agreement-check">
                     <label class="checkbox-inline">
                         <a href="/oferta" target="_blank"><span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span></a>
                         <input type="checkbox" onClick="checkMee();" id="agree" value="1" checked>
                         <i></i>
                     </label>
                 </div>
-                <div class="col-md-9 col-md-offset-3 ex-agreement-check">
+                <div class="col-md-9 col-md-offset-3 ex-agreement-check hidden">
                     <label class="checkbox-inline">
                             <span class="font12">Я согласен на получение рекламных сообщений</span>
                             <input type="checkbox" id="marketing" value="1" checked>
@@ -170,7 +241,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-md-9 col-md-offset-3">
+                <div class="col-md-8 col-xs-12 col-md-offset-4">
                     <a id="next1"><span class="ex-main-btn">Получить деньги</span></a>
                 </div>
             </div>

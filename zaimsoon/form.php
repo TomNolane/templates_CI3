@@ -66,7 +66,7 @@ if(!isset($my_title))
 include "templates/common/new/php/form_header.php";
 include "header.php";
 ?>
-<main class="container ex-form">
+<main class="container ex-form" style="margin-top: 90px; margin-bottom: 100px;">
         <?php $period; ?>
         <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off">
             <input type="hidden" name="display" id="display" value="0">
@@ -79,7 +79,11 @@ include "header.php";
             <input type="hidden" name="fingerprint" id="fingerprint" value="">
             <div class="tab-content" id="to_scroll">
                 <div id="firstStep" class="tab-pane fade in active">
-                    <h2 class="text-center">Заполните личные данные</h2>
+                    <? if ($setting_array['is_mobile'] != 'мобила') : ?>
+                        <h2 class="text-center">Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки</h2>
+                    <? else : ?>
+                        <h2 class="text-center" style="font-size: 22px !important;">Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки</h2>
+                    <? endif; ?>
                     <div class="ex-calc-wraper">
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3  col-sm-10 col-sm-offset-1">
@@ -106,5 +110,16 @@ include "header.php";
                 </div>
             </div>
         </form>
-    </main>
+</main>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- zaimsoon -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4970738258373085"
+    data-ad-slot="4548012382"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <?php include 'footer.php';?>
