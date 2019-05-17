@@ -217,6 +217,7 @@ if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) { ?>
                 updateComm();
             }
         });
+        /*
         var slider = $('.amount').data('ionRangeSlider');
         var slider_plus = true;
         var n = 10;
@@ -268,6 +269,7 @@ if (in_array($this->uri->segment(1), array(' ', '', 'index', 'form'))) { ?>
             $('.srok').text($('#period2').val());
             updateComm();
         }, 50); 
+        */
         traffic("vkredito.ru",0);
 <?php } ?>
 $('.docs, .info').click(function () {

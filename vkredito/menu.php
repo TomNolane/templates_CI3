@@ -28,12 +28,12 @@
                     <li>
                         <a href="/faq">Вопрос-ответ</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="/form">Забрать деньги</a>
-                    </li>
-                    <li>
+                    </li> -->
+                    <!-- <li>
                         <a href="#" data-toggle="modal" data-target="#feedbackModal">Обратная связь</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <? endif; ?>
