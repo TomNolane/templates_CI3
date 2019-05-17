@@ -255,8 +255,6 @@
                 alt="t338__logo t-img">
         </a>
     </header>
-    
-    <?php if($setting_array['is_mobile'] != 'мобила') require 'adsence_all.php'; ?>
     <!--allrecords-->
     <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="663907"
         data-tilda-page-id="3385037" data-tilda-page-alias="push" data-tilda-formskey="93c3cbd6dbbe2328e90d7d614020b440"
@@ -310,7 +308,7 @@
                                                 </a></div>
 
                                                  <?php if($setting_array['is_mobile'] != 'мобила') { ?> 
-                                                    <br><br><br>
+                                                    <br>
                                                     <?php require 'adsence_all.php'; ?>
                                                     <br><br> 
                                                 <?php } ?>
@@ -419,6 +417,10 @@
                                     data-customstyle="yes"><span style="font-weight: 400;">Как получить займ
                                         <br></span><br></div>
                             </div>
+                              <?php if($setting_array['is_mobile'] != 'мобила') 
+                            require 'adsence_all.php'; 
+                            ?>
+                            <br><br>
                             <div class="t-section__descr t-descr t-descr_xl t-margin_auto">
                                 <div style="font-size:20px;line-height:24px;font-family:&#39;Circe&#39;;"
                                     data-customstyle="yes">Получить займ онлайн очень просто: нужен паспорт и
