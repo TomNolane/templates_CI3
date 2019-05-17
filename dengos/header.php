@@ -3,6 +3,7 @@
 	$my_title = ''; $description = ''; $universal_folder = 0; $price = "8 000";
 	$main = 'bigzaim';
 	$link = 'https://pxl.leads.su/click/3b00787cbb4b9484e25cbe512163ca7d?source=dengos.ru/bigzaim';
+	
     
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
     $link = str_replace("#site1", ucfirst($domen), $link);
@@ -153,9 +154,9 @@ if(isset($_SERVER['HTTP_REFERER'])) {
 							О сервисе
 						</a>
 					</li>
-					<li>
+					<!--li>
 						<a href="<?=$link?>" target="_blank">Получить деньги</a>
-					</li>
+					</li-->
 					<li>
 						<a id="test" href="/faq">Вопросы-ответы</a>
 					</li>

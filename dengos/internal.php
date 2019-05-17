@@ -59,5 +59,5 @@ if ($this->uri->segment(1) == 'robots.txt'){
 	elseif ($this->uri->segment(1) == 'regulation') require 'templates/dengos/internal-regulation.php';
 	elseif ($this->uri->segment(1) == 'safety') require 'templates/dengos/internal-safety.php';
     else require 'templates/dengos/universal.php';
-    file_put_contents('log', $this->uri->segment(2).PHP_EOL, FILE_APPEND);
+    //file_put_contents('log', $this->uri->segment(2).PHP_EOL, FILE_APPEND);
     }

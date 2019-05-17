@@ -256,6 +256,7 @@
                 alt="t338__logo t-img">
         </a>
     </header>
+    <?php if($setting_array['is_mobile'] != 'мобила') require 'adsence_all.php'; ?>
     <!--allrecords-->
     <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="663907"
         data-tilda-page-id="3385037" data-tilda-page-alias="push" data-tilda-formskey="93c3cbd6dbbe2328e90d7d614020b440"
@@ -710,10 +711,8 @@
                 });
             </script>
         </div>
-        <?php if($setting_array['is_mobile'] != 'мобила') { ?>
             <?php require 'adsence_all.php'; ?>
         <br><br>
-        <?php } ?>
         <div id="rec63469085" class="r t-rec t-rec_pt_30 t-rec_pb_90"
             style="padding-top:30px;padding-bottom:90px;background-color:#3b3b3b;" data-animationappear="off"
             data-record-type="420" data-bg-color="#3b3b3b">
