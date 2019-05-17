@@ -1,0 +1,416 @@
+{
+    "availablecolors": [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "purple",
+        "white",
+        "black",
+        "gray"
+    ],
+    "hexesforcolors": [
+        {
+            "color": "red",
+            "hex": "#ff5858"
+        },{
+            "color": "orange",
+            "hex": "#e88023"
+        },{
+            "color": "yellow",
+            "hex": "#ffe101"
+        },{
+            "color": "green",
+            "hex": "#21bf16"
+        },{
+            "color": "blue",
+            "hex": "#2395e8"
+        },{
+            "color": "purple",
+            "hex": "#cb23e8"
+        },{
+            "color": "white",
+            "hex": "#FFF"
+        },{
+            "color": "black",
+            "hex": "#000"
+        },{
+            "color": "gray",
+            "hex": "#999"
+        }
+    ],
+    "background": [
+        {
+            "inuse": 0,
+            "style": {
+                "background": "none",
+                "raw": "",
+                "_comment": "raw - это то, что внутри <style>...</style>"
+            },
+            "color": ["gray"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "24zaem_header.jpg",
+                "raw": ""
+            },
+            "color": ["green"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "checkmoney_header.jpg",
+                "raw": ""
+            },
+            "color": ["blue", "gray"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "credilo_header.jpg",
+                "raw": ""
+            },
+            "color": ["gray"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "creditplus_header.jpg",
+                "raw": ""
+            },
+            "color": ["gray"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "creditstar_header.jpg",
+                "raw": ""
+            },
+            "color": ["blue", "red"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "deltazaim_header.jpg",
+                "raw": ""
+            },
+            "color": ["gray"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "dom-creditov_header.jpg",
+                "raw": ""
+            },
+            "color": ["gray"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "getsomemoney_header.jpg",
+                "raw": ""
+            },
+            "color": ["blue", "green"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "getzaim_header.jpg",
+                "raw": ""
+            },
+            "color": ["blue", "green", "gray"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "glavfinans_header.jpg",
+                "raw": ""
+            },
+            "color": ["gray", "white"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "gutfin_header.jpg",
+                "raw": ""
+            },
+            "color": ["gray"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "hot-zaim_header.jpg",
+                "raw": ""
+            },
+            "color": ["blue"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "joymoney_header.jpg",
+                "raw": ""
+            },
+            "color": ["green", "red", "orange"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "limezaim_header.jpg",
+                "raw": ""
+            },
+            "color": ["green", "blue"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "mangomoney_header.jpg",
+                "raw": ""
+            },
+            "color": ["orange"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "manimo_header.jpg",
+                "raw": ""
+            },
+            "color": ["gray"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "mazilla_header.jpg",
+                "raw": ""
+            },
+            "color": ["gray", "orange"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "migcredit_header.jpg",
+                "raw": ""
+            },
+            "color": ["green"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "mkcredit_header.jpg",
+                "raw": ""
+            },
+            "color": ["white"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "moneyman_header.jpg",
+                "raw": ""
+            },
+            "color": ["blue", "green"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "myzaim_header.jpg",
+                "raw": ""
+            },
+            "color": ["blue"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "online-zaim_header.jpg",
+                "raw": ""
+            },
+            "color": ["white"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "optimazaim_header.jpg",
+                "raw": ""
+            },
+            "color": ["blue"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "turbozaim_header.jpg",
+                "raw": ""
+            },
+            "color": ["white"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "zaim365_header.jpg",
+                "raw": ""
+            },
+            "color": ["black"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "zanimalo_header.jpg",
+                "raw": ""
+            },
+            "color": ["orange", "white"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "zaymer_header.jpg",
+                "raw": ""
+            },
+            "color": ["green", "orange", "white"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "zaymigo_header.jpg",
+                "raw": ""
+            },
+            "color": ["gray", "blue", "green"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "dozarplati_header.jpg",
+                "raw": ""
+            },
+            "color": ["green"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "visame_header.jpg",
+                "raw": ""
+            },
+            "color": ["gray", "blue"]
+        },{
+            "inuse": 0,
+            "style": {
+                "background": "moneykite_header.jpg",
+                "raw": ""
+            },
+            "color": ["red"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "ekapusta_header.jpg",
+                "raw": ""
+            },
+            "color": ["gray"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "planetacash_header.jpg",
+                "raw": ""
+            },
+            "color": ["orange"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "webbankir_header.jpg",
+                "raw": ""
+            },
+            "color": ["blue", "green"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "ypetrovicha_header.jpg",
+                "raw": ""
+            },
+            "color": ["gray"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "bigzaim_header.jpg",
+                "raw": ""
+            },
+            "color": ["blue", "green"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "ezaimo_header.jpg",
+                "raw": ""
+            },
+            "color": ["blue", "green"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "onezaim_header.jpg",
+                "raw": ""
+            },
+            "color": ["white"]
+        }
+    ],
+    "text": {
+        "summ_symbol": "%%yarr%%",
+        "_comment": "последовательность символов для замены на сумму",
+        "values": [
+        {
+            "_comment": "как пример",
+            "inuse": 0,
+            "text": "bla-%%yarr%%-bla",
+            "style": {
+                "raw": ""
+            }
+        },{
+            "inuse": 0,
+            "summ_symbol": "$",
+            "_comment": "для каждого конкретного 'текста' можно указать свою последовательность для замены",
+            "text": "bla-bla-bla $",
+            "style": {
+                "raw": ""
+            }
+        },{
+            "inuse": 1,
+            "text": "Вам подготовлено %%yarr%% рублей после заявки"
+        },{
+            "inuse": 1,
+            "text": "Вам предварительно одобрено %%yarr%% рублей после анкеты"
+        },{
+            "inuse": 1,
+            "text": "Для вас одобрено %%yarr%% рублей на сайте"
+        },{
+            "inuse": 1,
+            "text": "Заберите ваши %%yarr%% рублей после регистрации"
+        },{
+            "inuse": 1,
+            "text": "Получите %%yarr%% рублей онлайн после заполнения анкеты"
+        },{
+            "inuse": 1,
+            "text": "Подготовлен перевод %%yarr%% рублей после заявки"
+        },{
+            "inuse": 1,
+            "text": "Вам одобрено %%yarr%% рублей после регистрации"
+        },{
+            "inuse": 1,
+            "text": "Получите Ваши %%yarr%% рублей, подтвердив заявку на сайте"
+        },{
+            "inuse": 1,
+            "text": "Заполните короткую анкету и заберите %%yarr%% рублей"
+        },{
+            "inuse": 1,
+            "text": "Подтвердите перевод по заему, %%yarr%% рублей уже готовы!"
+        },{
+            "inuse": 1,
+            "text": "Заполните анкету сейчас, чтобы получить %%yarr%%₽"
+        },{
+            "inuse": 1,
+            "text": "%%yarr%%₽ на любые цели уже в личном кабинете"
+        },{
+            "inuse": 1,
+            "text": "Вы прошли проверку. Вам одобрено %%yarr%% рублей после заявки"
+        }
+    ]},
+    "animatedtext": [
+        "Круглосуточно",
+        "Повсюду",
+        "Быстро",
+        "Безопасно",
+        "Одобрение 95%"
+    ],
+    "summ": [
+        5000,
+        10000,
+        15000,
+        20000,
+        25000,
+        30000,
+        35000,
+        40000
+    ],
+    "button": {
+        "style": [],
+        "text": [
+            "Забрать деньги",
+            "Получить деньги",
+            "Заполнить заявку",
+            "Оформить завку",
+            "Забрать займ",
+            "Получить займ"
+        ]
+    },
+    "default": {
+        "_comment": "пока не знаю зачем, но пусть будет",
+        "background": "",
+        "text": "",
+        "animatedtext": "",
+        "summ": "",
+        "button": ""
+    }
+}

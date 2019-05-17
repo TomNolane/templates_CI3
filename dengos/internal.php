@@ -5,6 +5,7 @@ if ($this->uri->segment(1) == 'robots.txt'){
 } else 
 {
     $universal_folder = 0; $price = "30 000";
+    $random = null;
 
     if (!in_array($this->uri->segment(1), array('about', 'faq', 'oferta', 'soglasie', 'rules', 'personal-data', 'calls', 'regulation', 'zaim-card', 'zaim-yandex', 'zaim-qiwi', 'zaim-bank', 'zaim-contact'))) 
     {
@@ -19,6 +20,9 @@ if ($this->uri->segment(1) == 'robots.txt'){
         
         $main = $result2[0]["img"];
         $link =  $result2[0]["link_offer"];
+
+        require 'random.php';
+        $random = new Random();
     }
     else
     {
@@ -59,5 +63,5 @@ if ($this->uri->segment(1) == 'robots.txt'){
 	elseif ($this->uri->segment(1) == 'regulation') require 'templates/dengos/internal-regulation.php';
 	elseif ($this->uri->segment(1) == 'safety') require 'templates/dengos/internal-safety.php';
     else require 'templates/dengos/universal.php';
-    //file_put_contents('log', $this->uri->segment(2).PHP_EOL, FILE_APPEND);
+    file_put_contents('log', $this->uri->segment(2).PHP_EOL, FILE_APPEND);
     }
