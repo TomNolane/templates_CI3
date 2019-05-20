@@ -336,6 +336,13 @@
                 "raw": ""
             },
             "color": ["gray"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "metrokredt_header.jpg",
+                "raw": ""
+            },
+            "color": ["white", "orange"]
         }
     ],
     "text": {
