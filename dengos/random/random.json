@@ -315,6 +315,27 @@
                 "raw": ""
             },
             "color": ["white"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "viva_header.jpg",
+                "raw": ""
+            },
+            "color": ["orange"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "otclichnyenalichnye_header.jpg",
+                "raw": ""
+            },
+            "color": ["blue"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "sbergrad_header.jpg",
+                "raw": ""
+            },
+            "color": ["gray"]
         }
     ],
     "text": {
