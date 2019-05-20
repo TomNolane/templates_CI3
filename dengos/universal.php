@@ -9,6 +9,16 @@
         $link = str_replace("#name#", implode('',$this->input->get()), $link);
     else 
         $link = str_replace("#name#", $domen, $link);
+
+     function getDomainUrl()
+    {
+        $CI =& get_instance();
+        
+        return preg_replace("/^[\w]{2,6}:\/\/([\w\d\.\-]+).*$/","$1", $CI->config->slash_item('base_url'));
+    }
+
+    $maindomain = getDomainUrl();
+    $email = "info@".$maindomain;
 ?>
 <!DOCTYPE html>
 <html lang="ru">
