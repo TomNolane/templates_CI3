@@ -23,7 +23,6 @@
     <meta property="og:title" content="Вам одобрено!">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
-    <!--<meta property="og:image" content="/templates/dengos/img/universal/<?=$main?>_header.jpg">-->
     <meta property="og:image" content="/templates/dengos/img/universal/<?=$rnd_bg?>">
     <meta name="format-detection" content="telephone=no">
     <link rel="canonical" href="https://<?=$domain?>/<?=$main?>">
@@ -265,13 +264,6 @@
         <div id="rec63469314" class="r t-rec t-screenmin-480px" style=" " data-animationappear="off"
             data-record-type="338" data-screen-min="480px">
             <!-- cover -->
-            <!--<div class="t-cover" id="recorddiv63469314"
-                style="height:100vh; background-image:url(&#39;/templates/dengos/img/universal/<?=$main?>_header.jpg&#39;);">
-                <div class="t-cover__carrier loaded" id="coverCarry63469314" data-content-cover-id="63469314"
-                    data-content-cover-bg="/templates/dengos/img/universal/<?=$main?>_header.jpg"
-                    data-content-cover-height="100vh" data-content-cover-parallax=""
-                    style="height: 100vh; background-attachment: scroll; background-image: url(&quot;/templates/dengos/img/universal/<?=$main?>_header.jpg&quot;);">
-                </div>-->
             <div class="t-cover" id="recorddiv63469314"
                 style="height:100vh; background-image:url(&#39;/templates/dengos/img/universal/<?=$rnd_bg?>&#39;);">
                 <div class="t-cover__carrier loaded" id="coverCarry63469314" data-content-cover-id="63469314"
@@ -340,7 +332,7 @@
             data-record-type="338" data-screen-max="480px">
             <!-- cover -->
             <div class="t-cover" id="recorddiv63581518"
-                style="height:100vh; background-image:url(&#39;/templates/dengos/img/universal/<?=$main?>_header.jpg&#39;);">
+                style="height:100vh; background-image:url(&#39;/templates/dengos/img/universal/<?=$rnd_bg?>&#39;);">
                 <div class="t-cover__filter"
                     style="height:100vh;background-image: -moz-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -webkit-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -o-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -ms-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=&#39;#fe000000&#39;, endColorstr=&#39;#fe000000&#39;);">
                 </div>
@@ -364,9 +356,9 @@
                                                 style="transition-delay: 0.5s;">
 
                                                 <div style="font-size:52px;" data-customstyle="yes"><span
-                                                        style="font-size: 33px;text-shadow:1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000"><br>Вам
-                                                        одобрено 20000 рублей после заявки. <br>Жмите получить
-                                                        деньги.</span><br><span style="font-size: 42px;">
+                                                        style="color: <?=$preferredColors[0]?>; font-size: 33px;text-shadow:1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000">
+                                                            <br><?=$random->getText();?>
+                                                        </span><br><span style="font-size: 42px;">
                                                        </span></div>
 
                                             </div>
@@ -378,7 +370,7 @@
                                                     <table style="width:100%; height:100%;">
                                                         <tbody>
                                                             <tr>
-                                                                <td>ПОЛУЧИТЬ ДЕНЬГИ</td>
+                                                                <td><?=$random->getButtonText();?></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>

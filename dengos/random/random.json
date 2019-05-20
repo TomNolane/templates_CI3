@@ -239,7 +239,7 @@
             },
             "color": ["green", "orange", "white"]
         },{
-            "inuse": 1,
+            "inuse": 0,
             "style": {
                 "background": "zaymigo_header.jpg",
                 "raw": ""

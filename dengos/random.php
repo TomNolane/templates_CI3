@@ -122,8 +122,5 @@ class Random {
         $r = rand(0, count($this->params->button->text) - 1);
         return ($this->buttonTextInUpperCase)? mb_strtoupper($this->params->button->text[$r], 'utf8'): $this->params->button->text[$r];
     }
-
-    public function getButtonStyle() {
-    }
 }
 ?>
