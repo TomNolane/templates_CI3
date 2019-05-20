@@ -171,11 +171,11 @@
             </div>
             <style>
                 .ex-main-btn {margin-top: 16px; margin-bottom: 16px;}/*TODO: вынести потом в css*/
-                <? if ($setting_array['is_mobile'] != 'мобила') : ?>
+                <?php if ($setting_array['is_mobile'] != 'мобила') { ?>
                     .ex-agreement-check label i {bottom: -2px !important;}
-                <? else : ?>
+                <?php } else { ?>
                     .ex-agreement-check label i {bottom: 14px !important;}
-                <? endif; ?>
+                <?php } ?>
             </style>
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 ex-agreement-check">
@@ -185,11 +185,11 @@
                         <i></i>
                     </label>
                 </div>
-                <? if ($setting_array['is_mobile'] == 'мобила') : ?>
+                <?php if ($setting_array['is_mobile'] == 'мобила') { ?>
                 <div class="col-sm-8 col-sm-offset-2">
-                <? else : ?>
+                <?php } else { ?>
                 <div class="col-sm-4 col-sm-offset-4">
-                <? endif; ?>
+                <?php } ?>
                     <button class="ex-main-btn" id="next1" type="button"> Получить займ </button>
                 </div>
             </div>
@@ -209,3 +209,4 @@
         </div>
     </div>
 </div>
+<br><br>
