@@ -192,7 +192,7 @@
         },{
             "inuse": 1,
             "style": {
-                "background": "myzaim_header.jpg",
+                "background": "my-zaim_header.jpg",
                 "raw": ""
             },
             "color": ["blue"]
@@ -318,14 +318,14 @@
         },{
             "inuse": 1,
             "style": {
-                "background": "viva_header.jpg",
+                "background": "vivadengi_header.jpg",
                 "raw": ""
             },
             "color": ["orange"]
         },{
             "inuse": 1,
             "style": {
-                "background": "otclichnyenalichnye_header.jpg",
+                "background": "otlnal_header.jpg",
                 "raw": ""
             },
             "color": ["blue"]
