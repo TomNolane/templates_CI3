@@ -14,6 +14,12 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
              <div class="col-md-12">
         <?php } ?>
                 <div class="row"> 
+                    <div class="col-md-12 col-sm-12 col-xs-12" style="margin-left: 0 !important;">
+                        <?php if (in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) {
+                            require 'adsence.php';
+                        } ?>
+                    </div>
+
                     <div class="col-md-3 col-xs-12 ex-foot-logo">
                         <?php if(in_array($this->uri->segment(1), array('lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
                             <img src="<?=$logo_foot?>" class="logo logo-spec" alt="logo-footer.png" style="margin: 0;">
@@ -38,6 +44,7 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
                             ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001 </span></p>
                     <?php } else { ?>
                         <style>footer.ex-main-footer p {color: #000 !important;}</style>
+                         
                         <div class="col-md-3" >
                             <div class="footer-text black">
                                 <p>Сервис по подбору выгодных онлайн займов находящийся по адресу <br>Россия, Ленинградская обл. г. Санкт-Петербург, ул. Осипенко, 12, оф 201
@@ -48,11 +55,7 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
                             <p class="black">Займы предоставляются на сумму от 1 000 до 100 000 рублей включительно на срок от 61 до 365 дней. Максимальная процентная ставка по займу составляет 0,98% в день, а минимальная 0,08%. Пример расчета общей стоимости займа: заём 20 000 руб. срок пользования 10 недель под 0,08% в день; проценты за весь период составят 11 200 руб. Итого к выплате 31 200 рублей. Первый заём до 10 000 рублей выдается по ставке 0% в случае своевременного погашения.
                                 <br>ООО «Альянс» ОГРН 5177746353054 ИНН 9705113909 КПП 770501001.</p>
                         </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12" style="margin-left: 0 !important;">
-                            <?php
-                                require 'adsence.php';
-                            ?>
-                        </div>
+                       
                     <?php } ?>
                     </div>
                 </div>
@@ -82,7 +85,7 @@ if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'off
             <div class="col-sm-12">
                 <hr/>
                 <?php if (in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { 
-                    require 'adsence.php';
+                    //require 'adsence.php';
                 } ?>
             </div>
         </div>

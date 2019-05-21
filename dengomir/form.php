@@ -95,17 +95,7 @@ include "header.php";
         </div>
     </div>
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- dengomir -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-4970738258373085"
-        data-ad-slot="4639511728"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    <?php require 'adsence.php';?>
 </div>
 
 <?php include 'footer.php';?>

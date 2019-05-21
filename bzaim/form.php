@@ -68,7 +68,7 @@ include "header.php";
 ?>
 <input type="hidden" class="percent" id="percent" name="percent" value="<?= $percent;?>" />
 <div class="ex-bounds"></div>
-<div class="container ex-form" style="margin-bottom: 100px !important;">
+<div class="container ex-form">
     <h1 class="text-center" id="to_scroll">Заполните анкету</h1>  
     <form class="tab-content" id="anketa" method="post" autocomplete="off" novalidate>
         <input type="hidden" name="referer" value="<?=$referer?>">
@@ -90,5 +90,6 @@ include "header.php";
         </div>
     </form>
 </div>
-<? require 'adsence.php'; ?>
+<?php require 'adsence.php'; ?>
+<br><br>
 <?php include 'footer.php';?>

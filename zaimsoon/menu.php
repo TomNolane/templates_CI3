@@ -1,8 +1,4 @@
-<? if (in_array($this->uri->segment(1), array('pixell', 'offerwall'))) : ?>
-<header style="height: 0 !important; margin-bottom: 80px;">
-<? else : ?>
-<header style="height: 0 !important;">
-<? endif; ?>
+<header >
     <nav id="ex-homepage-header" class="navbar navbar-default ex-main-header">
         <div class="container">
             <div class="navbar-header">

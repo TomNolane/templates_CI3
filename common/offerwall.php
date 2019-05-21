@@ -118,9 +118,9 @@ if( $site == 'forzaim111') { ?>
                     '.$words[rand(0,3)].'
                 </div>
                 <img class="lk-img2 img-responsive" src="/templates/common/img/offers/'.$item['img'].'.png" alt="'.$item['title'].'">
-                <div class="lk-text"><span class="start-text">Сумма</span>: <span class="end-text">до '.number_format($item['amount'],0,'',' ').' <i class="fa fa-rub"></i></span><div class="myclear"></div></div>
-                <div class="lk-text"><span class="start-text">Основная ставка</span>: <span class="end-text">'.$item['percent'].' <i class="fa fa-percent"></i></span><div class="myclear"></div></div>
-                <div class="lk-text"><span class="start-text">Возраст</span>: <span class="end-text">от '.$item['min_year'].' до '.$item['max_year'].' <i class="fa fa-user"></i></span><div class="myclear"></div></div>
+                <div class="lk-text"><span class="start-text">Сумма:</span> <span class="end-text">до '.number_format($item['amount'],0,'',' ').' <i class="fa fa-rub"></i></span><div class="myclear"></div></div>
+                <div class="lk-text"><span class="start-text">Основная ставка:</span> <span class="end-text">'.$item['percent'].' <i class="fa fa-percent"></i></span><div class="myclear"></div></div>
+                <div class="lk-text"><span class="start-text">Возраст:</span> <span class="end-text">от '.$item['min_year'].' до '.$item['max_year'].' <i class="fa fa-user"></i></span><div class="myclear"></div></div>
                 <div class="center2"><a href="'.$item['link'].'" onclick="markTarget(\'pixel_result\', \''.$item['title'].'\', \''.$pixel.'\')" target="_blank"><button type="button" class="ex-main-btn2 skewheader_green">Получить деньги</button></a></div>
             </figure>
             </div>';

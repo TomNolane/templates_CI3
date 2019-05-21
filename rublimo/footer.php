@@ -25,7 +25,7 @@ if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall2', 'o
         </div>
         <br>
         <?php if (in_array($this->uri->segment(1), array('lk','lk2', 'lk3', 'offerwall2', 'offerwall', 'pixell'))) { ?>
-        <div class="col-md-10 col-xs-8">
+        <div style="margin-left: -30px" class="col-md-10 col-xs-12">
             <?php
                 require 'adsence.php';
             ?>

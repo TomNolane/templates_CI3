@@ -26,7 +26,12 @@
         {
             require "templates/zaimsoon/assets/css/style_lk.css";
             require "templates/common/new/css/lk.php";
-            echo '.ex-main-footer p{color: #000 !important}';
+            echo '.ex-main-footer p{color: #000 !important}
+            @media (max-width: 480px) and (min-width: 320px) {
+                .start-text {
+                    font-size: 68% !important;
+                }
+            }';
         }
         if ($this->uri->segment(1) == 'form') 
         {

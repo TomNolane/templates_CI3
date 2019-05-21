@@ -66,7 +66,7 @@ if(!isset($my_title))
 include "templates/common/new/php/form_header.php";
 include "header.php";
 ?>
-<main class="container ex-form" style="margin-top: 90px; margin-bottom: 100px;">
+<main class="container ex-form" style="margin-top: 10px; margin-bottom: 100px;">
         <?php $period; ?>
         <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off">
             <input type="hidden" name="display" id="display" value="0">

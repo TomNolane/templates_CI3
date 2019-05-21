@@ -237,27 +237,28 @@
     </div>
 </div>
 <div class="row">
-<? if ($setting_array['is_mobile'] != 'мобила') : ?>
-    <div class="col-md-6 col-md-offset-3 ex-agreement-check col-xs-12">
-<? else : ?>
-    <div class="col-md-6 col-md-offset-3 ex-agreement-check col-xs-12" style="margin-top: -20px;">
-<? endif; ?>
-    <br>
-    <label class="checkbox-inline"><span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span>
-        <input type="checkbox" value="" id="agree" onclick="checkMe();" checked>
-        <i></i>
-    </label>    
-</div>
-<div class="col-md-6 col-md-offset-4 ex-agreement-check hidden">
-    <br>    
-    <label class="checkbox-inline"><span class="font12">Я согласен на получение рекламных сообщений</span>
-        <input type="checkbox" value="" id="marketing" checked>
-        <i></i>
-    </label>    
-</div>   
-    
-<div class="form-group" style="margin-top: 10px; margin-bottom: 80px;">
-    <div class="col-md-6 col-md-offset-2 col-xs-12 text-center" id="my_btn">  
-        <button class="ex-main-btn myfnt" id="next1" type="button">Получить деньги</button> 
+    <? if ($setting_array['is_mobile'] != 'мобила') : ?>
+        <div class="col-md-6 col-md-offset-3 ex-agreement-check col-xs-12">
+    <? else : ?>
+        <div class="col-md-6 col-md-offset-3 ex-agreement-check col-xs-12" style="margin-top: -20px;">
+    <? endif; ?>
+        <br>
+        <label class="checkbox-inline"><span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span>
+            <input type="checkbox" value="" id="agree" onclick="checkMe();" checked>
+            <i></i>
+        </label>    
+    </div>
+    <div class="col-md-6 col-md-offset-4 ex-agreement-check hidden">
+        <br>    
+        <label class="checkbox-inline"><span class="font12">Я согласен на получение рекламных сообщений</span>
+            <input type="checkbox" value="" id="marketing" checked>
+            <i></i>
+        </label>    
+    </div>   
+        
+    <div class="form-group" style="margin-top: 10px; margin-bottom: 80px;">
+        <div class="col-md-6 col-md-offset-2 col-xs-12 text-center" id="my_btn">  
+            <button class="ex-main-btn myfnt" id="next1" type="button">Получить деньги</button> 
+        </div>
     </div>
 </div>
