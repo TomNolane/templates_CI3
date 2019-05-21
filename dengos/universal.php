@@ -4,7 +4,9 @@
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
     $link = str_replace("#site1", ucfirst($domen), $link);
     $link = str_replace("#site", $domen, $link);
-
+    $rnd_bg = $random->getBackground();
+    $preferredColors = $random->getPreferredColors();
+    
     if($this->input->get())
         $link = str_replace("#name#", implode('',$this->input->get()), $link);
     else 
@@ -21,7 +23,7 @@
     <meta property="og:title" content="Вам одобрено!">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/templates/dengos/img/universal/<?=$main?>_header.jpg">
+    <meta property="og:image" content="/templates/dengos/img/universal/<?=$rnd_bg?>">
     <meta name="format-detection" content="telephone=no">
     <link rel="canonical" href="https://<?=$domain?>/<?=$main?>">
     <link rel="shortcut icon" href="/templates/dengos/img/universal/<?=$main?>.ico" type="image/x-icon">
@@ -263,11 +265,11 @@
             data-record-type="338" data-screen-min="480px">
             <!-- cover -->
             <div class="t-cover" id="recorddiv63469314"
-                style="height:100vh; background-image:url(&#39;/templates/dengos/img/universal/<?=$main?>_header.jpg&#39;);">
+                style="height:100vh; background-image:url(&#39;/templates/dengos/img/universal/<?=$rnd_bg?>&#39;);">
                 <div class="t-cover__carrier loaded" id="coverCarry63469314" data-content-cover-id="63469314"
-                    data-content-cover-bg="/templates/dengos/img/universal/<?=$main?>_header.jpg"
+                    data-content-cover-bg="/templates/dengos/img/universal/<??>"
                     data-content-cover-height="100vh" data-content-cover-parallax=""
-                    style="height: 100vh; background-attachment: scroll; background-image: url(&quot;/templates/dengos/img/universal/<?=$main?>_header.jpg&quot;);">
+                    style="height: 100vh; background-attachment: scroll; background-image: url(&quot;/templates/dengos/img/universal/<?=$rnd_bg?>&quot;);">
                 </div>
                 <div class="t-cover__filter"
                     style="height:100vh;background-image: -moz-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -webkit-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -o-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -ms-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=&#39;#fe000000&#39;, endColorstr=&#39;#fe000000&#39;);">
@@ -286,11 +288,16 @@
                                                     src="/templates/dengos/img/universal/<?=$main?>_logo.png"
                                                     data-original="/templates/dengos/img/universal/<?=$main?>_logo.png"
                                                     data-hook-clogo="coverlogo"></a>
-                                            <div class="t338__title t-title t-title_xxs" style="">
+                                            <div class="t338__title t-title t-title_xxs" style="color: <?=$preferredColors[0]?> !important;">
                                                 <div style="text-align: center;font-size:52px;text-shadow: 1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000"
-                                                    data-customstyle="yes">Вам одобрено 20000 рублей после заявки.<br>
-                                                    Жмите получить деньги.<br>
-                                                    <span class="typed-cursor">|</span><br></div>
+                                                    data-customstyle="yes">
+                                                    <?=$random->getText();?>
+                                                    <br>
+                                                    <style>
+                                                        .t635__typing-text {color: <?=$preferredColors[1]?> !important;}
+                                                        .typed-cursor {color: <?=$preferredColors[1]?> !important;}
+                                                    </style>
+                                                    <span class="typed-cursor" style="color: <?=$preferredColors[1]?> !important;">|</span><br></div>
                                             </div>
                                            
                                             <div class="t338__buttonwrapper click_offer" style="text-align: center;"><a
@@ -300,15 +307,14 @@
                                                     <table style="width:100%; height:100%;">
                                                         <tbody>
                                                             <tr>
-                                                                <td>ПОЛУЧИТЬ ДЕНЬГИ</td>
-                                                                
+                                                                <td><?=$random->getButtonText();?></td>
                                                             </tr>
                                                         </tbody> 
                                                     </table> 
                                                 </a></div>
 
                                                  <?php if($setting_array['is_mobile'] != 'мобила') { ?> 
-                                                    <br>
+                                                    <br><br><br>
                                                     <?php require 'adsence_all.php'; ?>
                                                     <br><br> 
                                                 <?php } ?>
@@ -326,7 +332,7 @@
             data-record-type="338" data-screen-max="480px">
             <!-- cover -->
             <div class="t-cover" id="recorddiv63581518"
-                style="height:100vh; background-image:url(&#39;/templates/dengos/img/universal/<?=$main?>_header.jpg&#39;);">
+                style="height:100vh; background-image:url(&#39;/templates/dengos/img/universal/<?=$rnd_bg?>&#39;);">
                 <div class="t-cover__filter"
                     style="height:100vh;background-image: -moz-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -webkit-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -o-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -ms-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=&#39;#fe000000&#39;, endColorstr=&#39;#fe000000&#39;);">
                 </div>
@@ -350,9 +356,9 @@
                                                 style="transition-delay: 0.5s;">
 
                                                 <div style="font-size:52px;" data-customstyle="yes"><span
-                                                        style="font-size: 33px;text-shadow:1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000"><br>Вам
-                                                        одобрено 20000 рублей после заявки. <br>Жмите получить
-                                                        деньги.</span><br><span style="font-size: 42px;">
+                                                        style="color: <?=$preferredColors[0]?>; font-size: 33px;text-shadow:1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000">
+                                                            <br><?=$random->getText();?>
+                                                        </span><br><span style="font-size: 42px;">
                                                        </span></div>
 
                                             </div>
@@ -364,7 +370,7 @@
                                                     <table style="width:100%; height:100%;">
                                                         <tbody>
                                                             <tr>
-                                                                <td>ПОЛУЧИТЬ ДЕНЬГИ</td>
+                                                                <td><?=$random->getButtonText();?></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -382,8 +388,7 @@
 
         <div id="rec63469593" class="r t-rec" style=" " data-animationappear="off" data-record-type="635">
             <!-- T635 -->
-            <div class="t635__textholder" data-recid="63469314" data-text1="Круглосуточно" data-text2="Повсюду"
-                data-text3="Быстро" data-text4="Безопасно" data-text5="Одобрение 95%"></div>
+            <div class="t635__textholder" data-recid="63469314" <?=$random->printAnimatedText(5)?>></div>
             <script>
                 $(document).ready(function () {
                     setTimeout(function () {
@@ -417,10 +422,6 @@
                                     data-customstyle="yes"><span style="font-weight: 400;">Как получить займ
                                         <br></span><br></div>
                             </div>
-                              <?php if($setting_array['is_mobile'] != 'мобила') 
-                            require 'adsence_all.php'; 
-                            ?>
-                            <br><br>
                             <div class="t-section__descr t-descr t-descr_xl t-margin_auto">
                                 <div style="font-size:20px;line-height:24px;font-family:&#39;Circe&#39;;"
                                     data-customstyle="yes">Получить займ онлайн очень просто: нужен паспорт и
