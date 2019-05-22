@@ -11,34 +11,32 @@
         "gray"
     ],
     "hexesforcolors": [
-        {
-            "color": "red",
-            "hex": "#ff5858"
-        },{
-            "color": "orange",
-            "hex": "#e88023"
-        },{
-            "color": "yellow",
-            "hex": "#ffe101"
-        },{
-            "color": "green",
-            "hex": "#21bf16"
-        },{
-            "color": "blue",
-            "hex": "#2395e8"
-        },{
-            "color": "purple",
-            "hex": "#cb23e8"
-        },{
-            "color": "white",
-            "hex": "#FFF"
-        },{
-            "color": "black",
-            "hex": "#000"
-        },{
-            "color": "gray",
-            "hex": "#999"
-        }
+        {"color": "red", "hex": "#ff5858"},
+        {"color": "orange", "hex": "#e88023"},
+        {"color": "yellow", "hex": "#ffe101"},
+        {"color": "green", "hex": "#21bf16"},
+        {"color": "blue", "hex": "#2395e8"},
+        {"color": "purple", "hex": "#cb23e8"},
+        {"color": "white", "hex": "#FFF"},
+        {"color": "black", "hex": "#000"},
+        {"color": "gray", "hex": "#999"}
+    ],
+    "gradients": [
+        {"color": "white", "hex": "#FFF"},
+        {"color": "yellow", "hex": "#fefcea"},
+        {"color": "yellow", "hex": "#f1da36"},
+        {"color": "green", "hex": "#b7df2d"},
+        {"color": "green", "hex": "#9ecb2d"},
+        {"color": "blue", "hex": "#00b7ea"},
+        {"color": "blue", "hex": "#009ec3"},
+        {"color": "blue", "hex": "#e4f5fc"},
+        {"color": "orange", "hex": "#ffaf4b"},
+        {"color": "orange", "hex": "#ff920a"},
+        {"color": "purple", "hex": "#F99AF8"},
+        {"color": "red", "hex": "#febbbb"},
+        {"color": "red", "hex": "#ff5c5c"},
+        {"color": "gray", "hex": "#dbdce2"},
+        {"color": "gray", "hex": "#b8bac6"}
     ],
     "background": [
         {
@@ -288,7 +286,7 @@
             },
             "color": ["blue", "green"]
         },{
-            "inuse": 1,
+            "inuse": 0,
             "style": {
                 "background": "ypetrovicha_header.jpg",
                 "raw": ""
@@ -343,6 +341,13 @@
                 "raw": ""
             },
             "color": ["white", "orange"]
+        },{
+            "inuse": 1,
+            "style": {
+                "background": "zaymergn_header.jpg",
+                "raw": ""
+            },
+            "color": ["green"]
         }
     ],
     "text": {
