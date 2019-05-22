@@ -288,7 +288,7 @@
             },
             "color": ["blue", "green"]
         },{
-            "inuse": 1,
+            "inuse": 0,
             "style": {
                 "background": "ypetrovicha_header.jpg",
                 "raw": ""
