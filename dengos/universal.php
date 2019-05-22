@@ -4,8 +4,12 @@
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
     $link = str_replace("#site1", ucfirst($domen), $link);
     $link = str_replace("#site", $domen, $link);
+
+    // random backs go here
     $rnd_bg = $random->getBackground();
     $preferredColors = $random->getPreferredColors();
+    $gradient_bg = $random->getGradientBackground();
+    $preferredGradientColors = $random->getPreferredColors();
     
     if($this->input->get())
         $link = str_replace("#name#", implode('',$this->input->get()), $link);
@@ -23,7 +27,7 @@
     <meta property="og:title" content="Вам одобрено!">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/templates/dengos/img/universal/<?=$rnd_bg?>">
+    <meta property="og:image" content="/<?=$rnd_bg?>">
     <meta name="format-detection" content="telephone=no">
     <link rel="canonical" href="https://<?=$domain?>/<?=$main?>">
     <link rel="shortcut icon" href="/templates/dengos/img/universal/<?=$main?>.ico" type="image/x-icon">
@@ -265,11 +269,11 @@
             data-record-type="338" data-screen-min="480px">
             <!-- cover -->
             <div class="t-cover" id="recorddiv63469314"
-                style="height:100vh; background-image:url(&#39;/templates/dengos/img/universal/<?=$rnd_bg?>&#39;);">
+                style="height:100vh; background-image:url(&#39;/<?=$rnd_bg?>&#39;);">
                 <div class="t-cover__carrier loaded" id="coverCarry63469314" data-content-cover-id="63469314"
                     data-content-cover-bg="/templates/dengos/img/universal/<??>"
                     data-content-cover-height="100vh" data-content-cover-parallax=""
-                    style="height: 100vh; background-attachment: scroll; background-image: url(&quot;/templates/dengos/img/universal/<?=$rnd_bg?>&quot;);">
+                    style="height: 100vh; background-attachment: scroll; background-image: url(&quot;/<?=$rnd_bg?>&quot;);">
                 </div>
                 <div class="t-cover__filter"
                     style="height:100vh;background-image: -moz-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -webkit-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -o-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -ms-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=&#39;#fe000000&#39;, endColorstr=&#39;#fe000000&#39;);">
@@ -328,11 +332,10 @@
             </div>
         </div>
         
-        <div id="rec63581518" class="r t-rec t-screenmax-480px" style=" " data-animationappear="off"
+        <div id="rec63581518" class="r t-rec t-screenmax-480px" style="" data-animationappear="off"
             data-record-type="338" data-screen-max="480px">
             <!-- cover -->
-            <div class="t-cover" id="recorddiv63581518"
-                style="height:100vh; background-image:url(&#39;/templates/dengos/img/universal/<?=$rnd_bg?>&#39;);">
+            <div class="t-cover" id="recorddiv63581518" style="height:100vh; <?=$gradient_bg?>">
                 <div class="t-cover__filter"
                     style="height:100vh;background-image: -moz-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -webkit-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -o-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: -ms-linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-image: linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=&#39;#fe000000&#39;, endColorstr=&#39;#fe000000&#39;);">
                 </div>
@@ -356,7 +359,7 @@
                                                 style="transition-delay: 0.5s;">
 
                                                 <div style="font-size:52px;" data-customstyle="yes"><span
-                                                        style="color: <?=$preferredColors[0]?>; font-size: 33px;text-shadow:1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000">
+                                                        style="color: <?=$preferredGradientColors[0]?>; font-size: 33px;text-shadow:1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000,1px 1px 1px #000, 1px 1px 1px #000">
                                                             <br><?=$random->getText();?>
                                                         </span><br><span style="font-size: 42px;">
                                                        </span></div>
