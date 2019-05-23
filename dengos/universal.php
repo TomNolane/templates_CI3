@@ -275,6 +275,7 @@
                 alt="t338__logo t-img">
         </a>
     </header>
+	<?php require 'adsence_all.php'; ?>
     <!--allrecords-->
     <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="663907"
         data-tilda-page-id="3385037" data-tilda-page-alias="push" data-tilda-formskey="93c3cbd6dbbe2328e90d7d614020b440"
