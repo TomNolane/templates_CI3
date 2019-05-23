@@ -30,8 +30,5 @@ require 'templates/common/new/php/modal.php';
 
 require 'menu.php';
 
-if (!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', ' ', '', 'index', 'form', 'vitrina'))) 
-{
-    echo '<span id="adsence_about"></span>';
-}
+require 'adsence.php';
 ?>
