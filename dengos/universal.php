@@ -1,6 +1,7 @@
 <?php
     require 'templates/common/new/php/check_bot.php';
     $domain = getDomain();
+    
     $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
     $link = str_replace("#site1", ucfirst($domen), $link);
     $link = str_replace("#site", $domen, $link);
@@ -9,7 +10,7 @@
         require 'random.php';
         $random = new Random();
     }
-    
+
     // random backs go here
     if ($random !== null) {
         $rnd_bg = $random->getBackground();
@@ -22,6 +23,8 @@
         $link = str_replace("#name#", implode('',$this->input->get()), $link);
     else 
         $link = str_replace("#name#", $domen, $link);
+
+        
 ?>
 <!DOCTYPE html>
 <html lang="ru">
