@@ -1,4 +1,6 @@
 <?php
+require 'utm_mark.php';
+
 if ($this->uri->segment(1) == 'pixell' || getDomain() == 'ru-zaimo.ru' || getDomain() == 'sumas.ru' | getDomain() == 'dengos.ru') {
   $this->load->model('analytics/forms_model', 'analytics');
   $json = $this->analytics->popup10secGetJson2();
@@ -16,7 +18,7 @@ else
 
 $text = $json[0]["text"];
 $img = trim($json[0]["header"]);
-$url = $json[0]["url"];
+$url = setUtm($json[0]["url"],'Popup');
 
 ?>
 <div class="notificate-wrapper pulse2"><table class="table table-hover table-responsive">

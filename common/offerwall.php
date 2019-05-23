@@ -43,20 +43,12 @@
         case 'offerwall2': $logo_foot = 'templates/common/img/logo-edenga.png'; $email = 'support@edenga.ru'; break;
         default: break;
     }
-    
+    require '/templates/common/php/utm_mark.php';
 	echo '<div><style scoped>';
     require 'new/css/lk2.php';
     require 'new/css/offerwall.css';
-    echo '</style></div>';
+    echo '</style></div>';?> 
 
-if( $site == 'forzaim111') { ?>
-<nav class="ex-main-header ex-transparent hidden-xs">
-    <div class="container">
-        <i class="ex-hamburger"></i>
-        <a class="ex-brand" href="/">Forzaim</a>
-    </div>
-</nav>
-<?php } ?>
 <div class="row container3"><div class="col-md-12">
 <? if (!file_exists(realpath(__DIR__ . '/..').'/common/php/special-header-1.php')) : ?>
     <h2 class="text-center hh hh4"><span style="font-size: 32px; color: #000; font-family: Helvetica;">Согласно Вашим данным сформирован список онлайн займов со скидкой до 50%.</span><br>
@@ -90,20 +82,7 @@ if( $site == 'forzaim111') { ?>
         {
             $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
 
-            if (strpos($item['link'], 'guruleads'))
-                $item['link'] = $item['link'].'?sub1=Offerwall';
-            else if(strpos($item['link'], 'kviku'))
-                $item['link'] = $item['link'].'';
-            else if(strpos($item['link'], 'g24.me'))
-                $item['link'] = $item['link'].'?subid=Offerwall';
-            else if(strpos($item['link'], 'tech'))
-                $item['link'] = $item['link'].'&sub1=Offerwall';
-            else if(strpos($item['link'], 'leadgid'))
-                $item['link'] = $item['link'].'?source=Offerwall';
-            else if(strpos($item['link'], 'leadbrothers'))
-                $item['link'] = $item['link'].'?s1=Offerwall';
-            else
-                $item['link'] = $item['link'].'?source=Offerwall';
+            $item['link'] = setUtm($item['link'],'Offerwall');
             
             $words = array (
                 '<div class="skewheader__bg skewheader_green"></div><div class="skewinside caption">Без документов</div>',

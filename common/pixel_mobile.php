@@ -28,20 +28,7 @@ require 'templates/common/new/css/pixell_mobile.css';
         {
             $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
 
-             if (strpos($item['link'], 'guruleads'))
-                $item['link'] = $item['link'].'?sub1=Pixel';
-            else if(strpos($item['link'], 'kviku'))
-                $item['link'] = $item['link'].'';
-            else if(strpos($item['link'], 'g24.me'))
-                $item['link'] = $item['link'].'?subid=Pixel';
-            else if(strpos($item['link'], 'tech'))
-                $item['link'] = $item['link'].'&sub1=Pixel';
-            else if(strpos($item['link'], 'leadgid'))
-                $item['link'] = $item['link'].'?source=Pixel';
-            else if(strpos($item['link'], 'leadbrothers'))
-                $item['link'] = $item['link'].'?s1=Pixel';
-            else
-                $item['link'] = $item['link'].'?source=Pixel';
+            $item['link'] = setUtm($item['link'],'Pixel');
             
             $words = array (
                 '<div class="caption empty"><span></span></div>',

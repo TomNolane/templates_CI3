@@ -353,20 +353,7 @@ tr>td:first-child {
         {
             $domen = str_replace('www.','',$_SERVER['HTTP_HOST']);
 
-            if (strpos($item['link'], 'guruleads'))
-                $item['link'] = $item['link'].'?sub1=Vitrina';
-            else if(strpos($item['link'], 'kviku'))
-                $item['link'] = $item['link'].'';
-            else if(strpos($item['link'], 'g24.me'))
-                $item['link'] = $item['link'].'?subid=Vitrina';
-            else if(strpos($item['link'], 'tech'))
-                $item['link'] = $item['link'].'&sub1=Vitrina';
-            else if(strpos($item['link'], 'leadgid'))
-                $item['link'] = $item['link'].'?source=Vitrina';
-            else if(strpos($item['link'], 'leadbrothers'))
-                $item['link'] = $item['link'].'?s1=Vitrina';
-            else
-                $item['link'] = $item['link'].'?source=Vitrina';
+            $item['link'] = setUtm($item['link'],'Vitrina');
 
             $words = array (
                 '<div class="caption empty"><span></span></div>',

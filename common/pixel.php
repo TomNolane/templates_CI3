@@ -43,7 +43,7 @@
         case 'offerwall2': $logo_foot = '/templates/common/img/logo-edenga.png'; $email = 'support@edenga.ru'; break;
         default: break;
     }
-
+    require '/templates/common/php/utm_mark.php';
 if($setting_array['is_mobile'] != 'мобила') 
     require 'pixel_desktop.php';
 else
