@@ -34,4 +34,5 @@ $email = 'support@rublimo.ru';
 // popup
 require 'templates/common/new/php/modal.php';
 require 'menu.php';
+require 'adsence.php';
 ?>
