@@ -1,5 +1,5 @@
 <?php $from = '15'; 
-if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'offerwall2', 'pixell', 'vitrina', 'form')))
+if(!in_array($this->uri->segment(1), array('lk', 'lk2', 'lk3', 'offerwall', 'offerwall2', 'pixell', 'vitrina')))
 {
     require 'adsence.php';
     echo '<a href="#0" class="cd-top">Наверх</a>';
