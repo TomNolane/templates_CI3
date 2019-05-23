@@ -20,9 +20,6 @@ if ($this->uri->segment(1) == 'robots.txt'){
         
         $main = $result2[0]["img"];
         $link =  $result2[0]["link_offer"];
-
-        require 'random.php';
-        $random = new Random();
     }
     else
     {
