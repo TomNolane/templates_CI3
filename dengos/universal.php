@@ -286,7 +286,7 @@
                 <div class="t-cover" id="recorddiv63469314"
                     style="height:100vh; background-image:url(&#39;/<?=$rnd_bg?>&#39;);">
                     <div class="t-cover__carrier loaded" id="coverCarry63469314" data-content-cover-id="63469314"
-                        data-content-cover-bg="/templates/dengos/img/universal/<??>"
+                        data-content-cover-bg="/<?=$rnd_bg?>"
                         data-content-cover-height="100vh" data-content-cover-parallax=""
                         style="height: 100vh; background-attachment: scroll; background-image: url(&quot;/<?=$rnd_bg?>&quot;);">
                     </div>
