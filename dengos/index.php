@@ -8,6 +8,7 @@
     }
 
     $site = str_replace(".ru", "", getMainDomain());
+    $site = str_replace(".tomnolane", "", $site);
 
     require realpath(__DIR__ . '/..').'/'.$site.'/header.php';
     $this->load->model('offers/offers_model', 'offers');
