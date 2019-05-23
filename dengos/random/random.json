@@ -11,34 +11,32 @@
         "gray"
     ],
     "hexesforcolors": [
-        {
-            "color": "red",
-            "hex": "#ff5858"
-        },{
-            "color": "orange",
-            "hex": "#e88023"
-        },{
-            "color": "yellow",
-            "hex": "#ffe101"
-        },{
-            "color": "green",
-            "hex": "#21bf16"
-        },{
-            "color": "blue",
-            "hex": "#2395e8"
-        },{
-            "color": "purple",
-            "hex": "#cb23e8"
-        },{
-            "color": "white",
-            "hex": "#FFF"
-        },{
-            "color": "black",
-            "hex": "#000"
-        },{
-            "color": "gray",
-            "hex": "#999"
-        }
+        {"color": "red", "hex": "#ff5858"},
+        {"color": "orange", "hex": "#e88023"},
+        {"color": "yellow", "hex": "#ffe101"},
+        {"color": "green", "hex": "#21bf16"},
+        {"color": "blue", "hex": "#2395e8"},
+        {"color": "purple", "hex": "#cb23e8"},
+        {"color": "white", "hex": "#FFF"},
+        {"color": "black", "hex": "#000"},
+        {"color": "gray", "hex": "#999"}
+    ],
+    "gradients": [
+        {"color": "white", "hex": "#FFF"},
+        {"color": "yellow", "hex": "#fefcea"},
+        {"color": "yellow", "hex": "#f1da36"},
+        {"color": "green", "hex": "#b7df2d"},
+        {"color": "green", "hex": "#9ecb2d"},
+        {"color": "blue", "hex": "#00b7ea"},
+        {"color": "blue", "hex": "#009ec3"},
+        {"color": "blue", "hex": "#e4f5fc"},
+        {"color": "orange", "hex": "#ffaf4b"},
+        {"color": "orange", "hex": "#ff920a"},
+        {"color": "purple", "hex": "#F99AF8"},
+        {"color": "red", "hex": "#febbbb"},
+        {"color": "red", "hex": "#ff5c5c"},
+        {"color": "gray", "hex": "#dbdce2"},
+        {"color": "gray", "hex": "#b8bac6"}
     ],
     "background": [
         {
@@ -51,298 +49,322 @@
             "color": ["gray"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "24zaem_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "24zaem_header.jpg", "raw": ""},
             "color": ["green"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "checkmoney_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "checkmoney_header.jpg", "raw": ""},
             "color": ["blue", "gray"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "credilo_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "credilo_header.jpg", "raw": ""},
             "color": ["gray"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "creditplus_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "creditplus_header.jpg", "raw": ""},
             "color": ["gray"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "creditstar_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "creditstar_header.jpg", "raw": ""},
             "color": ["blue", "red"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "deltazaim_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "deltazaim_header.jpg", "raw": ""},
             "color": ["gray"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "dom-creditov_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "dom-creditov_header.jpg", "raw": ""},
             "color": ["gray"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "getsomemoney_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "getsomemoney_header.jpg", "raw": ""},
             "color": ["blue", "green"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "getzaim_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "getzaim_header.jpg", "raw": ""},
             "color": ["blue", "green", "gray"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "glavfinans_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "glavfinans_header.jpg", "raw": ""},
             "color": ["gray", "white"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "gutfin_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "gutfin_header.jpg", "raw": ""},
             "color": ["gray"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "hot-zaim_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "hot-zaim_header.jpg", "raw": ""},
             "color": ["blue"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "joymoney_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "joymoney_header.jpg", "raw": ""},
             "color": ["green", "red", "orange"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "limezaim_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "limezaim_header.jpg", "raw": ""},
             "color": ["green", "blue"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "mangomoney_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "mangomoney_header.jpg", "raw": ""},
             "color": ["orange"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "manimo_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "manimo_header.jpg", "raw": ""},
             "color": ["gray"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "mazilla_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "mazilla_header.jpg", "raw": ""},
             "color": ["gray", "orange"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "migcredit_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "migcredit_header.jpg", "raw": ""},
             "color": ["green"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "mkcredit_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "mkcredit_header.jpg", "raw": ""},
             "color": ["white"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "moneyman_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "moneyman_header.jpg", "raw": ""},
             "color": ["blue", "green"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "my-zaim_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "my-zaim_header.jpg", "raw": ""},
             "color": ["blue"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "online-zaim_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "online-zaim_header.jpg", "raw": ""},
             "color": ["white"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "optimazaim_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "optimazaim_header.jpg", "raw": ""},
             "color": ["blue"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "turbozaim_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "turbozaim_header.jpg", "raw": ""},
             "color": ["white"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "zaim365_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "zaim365_header.jpg", "raw": ""},
             "color": ["black"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "zanimalo_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "zanimalo_header.jpg", "raw": ""},
             "color": ["orange", "white"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "zaymer_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "zaymer_header.jpg", "raw": ""},
             "color": ["green", "orange", "white"]
         },{
             "inuse": 0,
-            "style": {
-                "background": "zaymigo_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "zaymigo_header.jpg", "raw": ""},
             "color": ["gray", "blue", "green"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "dozarplati_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "dozarplati_header.jpg", "raw": ""},
             "color": ["green"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "visame_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "visame_header.jpg", "raw": ""},
             "color": ["gray", "blue"]
         },{
             "inuse": 0,
-            "style": {
-                "background": "moneykite_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "moneykite_header.jpg", "raw": ""},
             "color": ["red"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "ekapusta_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "ekapusta_header.jpg", "raw": ""},
             "color": ["gray"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "planetacash_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "planetacash_header.jpg", "raw": ""},
             "color": ["orange"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "webbankir_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "webbankir_header.jpg", "raw": ""},
             "color": ["blue", "green"]
         },{
             "inuse": 0,
-            "style": {
-                "background": "ypetrovicha_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "ypetrovicha_header.jpg", "raw": ""},
             "color": ["gray"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "bigzaim_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "bigzaim_header.jpg", "raw": ""},
             "color": ["blue", "green"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "ezaimo_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "ezaimo_header.jpg", "raw": ""},
             "color": ["blue", "green"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "onezaim_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "onezaim_header.jpg", "raw": ""},
             "color": ["white"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "vivadengi_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "vivadengi_header.jpg", "raw": ""},
             "color": ["orange"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "otlnal_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "otlnal_header.jpg", "raw": ""},
             "color": ["blue"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "sbergrad_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "sbergrad_header.jpg", "raw": ""},
             "color": ["gray"]
         },{
             "inuse": 1,
-            "style": {
-                "background": "metrokredt_header.jpg",
-                "raw": ""
-            },
+            "style": {"background": "metrokredit_header.jpg", "raw": ""},
             "color": ["white", "orange"]
+        },{
+            "inuse": 1,
+            "style": {"background": "zaymergn_header.jpg", "raw": ""},
+            "color": ["green"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "_comment": "rndentity означает, что данный бекграунд находится в папке рандом",
+            "style": {"background": "01_bg_desktop.jpg", "raw": ""},
+            "color": ["blue", "white"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "02_bg_desktop.jpg","raw": ""},
+            "color": ["gray"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "03_bg_desktop.jpg","raw": ""},
+            "color": ["blue"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "04_bg_desktop.jpg","raw": ""},
+            "color": ["blue", "gray"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "05_bg_desktop.jpg","raw": ""},
+            "color": ["green"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "06_bg_desktop.jpg","raw": ""},
+            "color": ["green", "yellow", "orange"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "07_bg_desktop.jpg","raw": ""},
+            "color": ["yellow"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "08_bg_desktop.jpg","raw": ""},
+            "color": ["blue"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "09_bg_desktop.jpg","raw": ""},
+            "color": ["green"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "10_bg_desktop.jpg","raw": ""},
+            "color": ["green"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "11_bg_desktop.jpg","raw": ""},
+            "color": ["orange", "yellow", "red"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "12_bg_desktop.jpg","raw": ""},
+            "color": ["red"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "13_bg_desktop.jpg","raw": ""},
+            "color": ["green", "blue"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "14_bg_desktop.jpg","raw": ""},
+            "color": ["green", "red"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "15_bg_desktop.jpg","raw": ""},
+            "color": ["green"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "16_bg_desktop.jpg","raw": ""},
+            "color": ["white"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "17_bg_desktop.jpg","raw": ""},
+            "color": ["blue"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "18_bg_desktop.jpg","raw": ""},
+            "color": ["white", "gray"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "19_bg_desktop.jpg","raw": ""},
+            "color": ["orange"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "20_bg_desktop.jpg","raw": ""},
+            "color": ["orange", "yellow"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "21_bg_desktop.jpg","raw": ""},
+            "color": ["white", "blue"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "22_bg_desktop.jpg","raw": ""},
+            "color": ["orange", "yellow", "red"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "23_bg_desktop.jpg","raw": ""},
+            "color": ["orange", "red", "yellow"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "24_bg_desktop.jpg","raw": ""},
+            "color": ["yellow"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "25_bg_desktop.jpg","raw": ""},
+            "color": ["green", "yellow", "orange"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "26_bg_desktop.jpg","raw": ""},
+            "color": ["gray"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "27_bg_desktop.jpg","raw": ""},
+            "color": ["yellow", "orange"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "28_bg_desktop.jpg","raw": ""},
+            "color": ["red", "orange", "yellow"]
+        },{
+            "inuse": 1,
+            "rndentity": "true",
+            "style": {"background": "29_bg_desktop.jpg","raw": ""},
+            "color": ["green", "yellow"]
         }
     ],
     "text": {
