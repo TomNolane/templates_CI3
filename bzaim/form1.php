@@ -1,4 +1,7 @@
-<style>.ex-form .ex-anketa-main #ex-slider-val i {width: 18px !important;}</style>
+<style>
+    .ex-form .ex-anketa-main #ex-slider-val i {width: 18px !important;}
+    .shortform {height: 90px !important;}
+</style>
 <div class="ex-anketa-head">
     <p class="text-conf text-center">
     Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки
@@ -32,7 +35,7 @@
             </div>
             <!-- /слайдер -->
             <div class="row hidden">
-                <div class="col-sm-12" style="height: 90px;">
+                <div class="col-sm-12 shortform">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="f">Фамилия</label>
                         <input type="text" class="form-control ec tip" name="f" id="f" placeholder="Фамилия" title="Укажите свою фамилию" data-sanitize="capitalize"
@@ -45,7 +48,7 @@
                 </div>
             </div>
             <div class="row hidden">
-                <div class="col-sm-12" style="height: 90px;">
+                <div class="col-sm-12 shortform">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="i">Имя</label>
                         <input type="text" class="form-control ec tip" name="i" id="i" placeholder="Имя" title="Укажите свое имя" data-sanitize="capitalize"
@@ -58,7 +61,7 @@
                 </div>
             </div>
             <div class="row hidden">
-                <div class="col-sm-12" style="height: 90px;">
+                <div class="col-sm-12 shortform">
                     <div class="form-group has-feedback">
                         <label class="control-label col-md-4 label-required" for="o">Отчество</label>
                         <input type="text" class="form-control ec tip sp_push_custom_data" name="o" id="o" placeholder="Отчество" title="Укажите свое отчество"
@@ -170,17 +173,20 @@
                 </div>
             </div>
             <style>
-                .ex-main-btn {margin-top: 16px; margin-bottom: 16px;}/*TODO: вынести потом в css*/
+                .ex-main-btn {margin-top: 16px; margin-bottom: 16px;}
                 <?php if ($setting_array['is_mobile'] != 'мобила') { ?>
                     .ex-agreement-check label i {bottom: -2px !important;}
+                    .shortform2 {margin-top: -44px !important;}
                 <?php } else { ?>
                     .ex-agreement-check label i {bottom: 14px !important;}
+                    .shortform2 {margin-top: -30px !important;}
                 <?php } ?>
+                .shortform3 {font-size: 85% !important;}
             </style>
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 ex-agreement-check">
-                    <label class="checkbox-inline" style="padding-top: 0px!important;">
-                        <span class="font12" style="font-size: 85% !important;">Я согласен на обработку персональных данных и с публичной офертой</span>
+                    <label class="shortform2 checkbox-inline">
+                        <span class="font12 shortform3">Я согласен на обработку персональных данных и с публичной офертой</span>
                         <input type="checkbox" value="" id="agree" onclick="checkMee();" checked>
                         <i></i>
                     </label>
