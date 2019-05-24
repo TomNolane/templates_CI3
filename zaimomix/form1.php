@@ -1,8 +1,67 @@
+<style>
+.myfnt {font-size: 21px !important;}
+.myinput {
+    text-align: center !important;
+    border: 1px solid #777 !important;
+    border-radius: 10px 10px 10px 10px !important;
+    -moz-border-radius: 10px 10px 10px 10px !important;
+    -webkit-border-radius: 10px 10px 10px 10px !important;
+    height: 50px !important;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+   font-size: 21px !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+   font-size: 21px !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+   font-size: 21px !important;
+}
+
+:-ms-input-placeholder {  
+   text-align: center;
+   font-size: 21px !important;
+}
+
+.shortform1 {
+    border-radius: 20px 20px 20px 20px !important;
+    -moz-border-radius: 20px 20px 20px 20px !important;
+    -webkit-border-radius: 20px 20px 20px 20px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    height: 50px !important;
+    padding: 0 !important;
+}
+
+.shortform2 {
+    <?php if ($setting_array['is_mobile'] != 'мобила') : ?>
+        padding-top: 20px !important;
+    <?php endif; ?>
+}
+
+.shortform3 {
+    <?php if ($setting_array['is_mobile'] == 'мобила') : ?>
+        margin-top: -20px;
+        margin-bottom: -20px;
+    <?php endif; ?>
+}
+
+main.ex-form .tab-content .ex-main-form .ex-wrapper.ex-error:after {
+    <?php if ($setting_array['is_mobile'] != 'мобила') : ?>
+        top: 20px !important;
+    <?php endif; ?>
+}
+</style>
 <section class="ex-main-form">
     <div class="row">
         <div class="col-lg-8 offset-lg-1">
             <div class="row">
-                <div class="col-md-9 offset-md-3">
+                <div class="col-md-7 col-sm-offset-4 col-xs-12">
                     <div class="ex-calc-block">
                         <div class="ex-wrapper">
                             <div class="ex-slider-block ">
@@ -18,35 +77,35 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback row">
+            <div class="form-group has-feedback row hidden">
                 <label class="col-md-3  d-flex align-items-center justify-content-md-end" for="f">Фамилия</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="f" id="f" placeholder="Фамилия" title="Введите свою фамилию"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свою фамилию"
-                            required>
+                            required value="тест">
                             <p class="text-muted helpblock">Пример: Иванова</p>
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback row">
+            <div class="form-group has-feedback row hidden">
                 <label class="col-md-3 d-flex align-items-center justify-content-md-end" for="i">Имя</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="i" id="i" placeholder="Имя" title="Введите свое имя" data-sanitize="capitalize"
                             data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое имя"
-                            required>
+                            required value="тест">
                             <p class="text-muted helpblock">Пример: Лариса</p>
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback row">
+            <div class="form-group has-feedback row hidden">
                 <label class="col-md-3 d-flex align-items-center justify-content-md-end" for="o">Отчество</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper">
                         <input type="text" class="form-control ec tip special_form" name="o" id="o" placeholder="Отчество" title="Введите свое отчество"
                             data-sanitize="capitalize" data-validation="custom" data-validation-regexp="^[А-Яа-яЁё\-\s]+$" data-validation-error-msg="Введите свое отчество"
-                            required>
+                            required value="тест">
                             <p class="text-muted helpblock">Пример: Ивановна</p>
                     </div>
                 </div>
@@ -112,10 +171,10 @@
                 </div>
             </div>
             <div class="form-group has-feedback row">
-                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="phone" id="spec_form2">Телефон</label>
-                <div class="col-md-9">
+                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end hidden" for="phone" id="spec_form2">Телефон</label>
+                <div class="col-md-7 col-xs-12 col-sm-offset-4 shortform2">
                     <div class="ex-wrapper">
-                        <input type="tel" class="form-control ec tip special_form" name="phone" id="phone" placeholder="Введите свой номер телефона"
+                        <input type="tel" class="form-control ec tip special_form myfnt myinput" name="phone" id="phone" placeholder="№ телефона"
                             title="Введите свой номер телефона" data-validation-error-msg="Введите номер телефона" required>
                         <span id="phonestatus" class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         <p class="text-muted helpblock">Пример: 8 (977) 777 7777</p>
@@ -123,16 +182,16 @@
                 </div>
             </div>
             <div class="form-group has-feedback row">
-                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="email">Email</label>
-                <div class="col-md-9">
+                <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end hidden" for="email">Email</label>
+                <div class="col-md-7 col-xs-12 col-sm-offset-4">
                     <div class="ex-wrapper">
-                        <input type="email" class="form-control ec tip special_form" name="email" id="email" title="Введите свой email адрес" placeholder="Пример: email@mail.ru"
+                        <input type="email" class="form-control ec tip special_form myfnt myinput" name="email" id="email" title="Введите свой email адрес" placeholder="Email"
                             data-validation="email" data-validation-error-msg="Введите свой email" required>
-                            <p class="text-muted helpblock">Проверьте почту. Письмо могло попасть в папку "СПАМ"</p>
+                            <p class="text-muted helpblock">Пример: email@mail.ru</p>
                     </div>
                 </div>
             </div>
-            <div class="form-group has-feedback row"> 
+            <div class="form-group has-feedback row hidden"> 
                 <label class="control-label col-md-3 d-flex align-items-center justify-content-md-end" for="delays_type">Кредитная история</label>
                 <div class="col-md-9">
                     <div class="ex-wrapper ex-arrow">
@@ -147,15 +206,15 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-9  offset-md-3  ex-agreement-check">
+            <div class="row shortform3">
+                <div class="col-md-7 col-sm-offset-4 col-xs-12 ex-agreement-check">
                     <label class="checkbox-inline">
                         <span class="font12">Я согласен на обработку персональных данных и с публичной офертой</span>
                         <input type="checkbox" id="agree" value="1" onclick="checkMee();" checked>
                         <i></i>
                     </label>
                 </div>
-                <div class="col-md-9  offset-md-3  ex-agreement-check">
+                <div class="col-md-9  offset-md-3  ex-agreement-check hidden">
                     <label class="checkbox-inline">
                         <span class="font12">Я согласен на получение рекламных сообщений</span>
                         <input type="checkbox" id="marketing" value="1" checked>
@@ -164,10 +223,10 @@
                 </div>               
             </div>
             <div class="form-group has-feedback row">
-                <div class="col-md-9 offset-md-3">
+                <div class="col-md-7 col-sm-offset-4 col-xs-12">
                     <div class="row justify-content-center">
-                        <div class="col-md-10">
-                            <button type="button" id="next1" class="nav nav-tabs ex-orange-btn text-center"> Получить деньги </button>
+                        <div class="col-md-8">
+                            <button type="button" id="next1" class="nav nav-tabs ex-orange-btn text-center shortform1 myfnt"> Получить деньги </button>
                         </div>
                     </div>
                 </div>
@@ -177,14 +236,4 @@
 </section>
 <br><br>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- zaimomix -->
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-4970738258373085"
-    data-ad-slot="1488279360"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <br><br>

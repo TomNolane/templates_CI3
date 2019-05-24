@@ -67,14 +67,14 @@ include "templates/common/new/php/form_header.php";
 include "header.php";
 ?>
 <main class="ex-form">
-    <h1 class="text-center" id="form-steps">До одобрения кредита вас отделяют всего 1 шаг</h1>
+    <h1 class="text-center hidden-xs" id="form-steps">Заполнив 1-й шаг, получите +30% к вероятности одобрения заявки</h1>
     <div class="ex-tab-steps text-center">
         <p class="ex-step-counter ex-step-active"></p>
         <p class="ex-step-counter ex-step-active">Заполните личные данные</p>
         <p class="ex-step-counter ex-step-active"></p>
     </div>
     <div class="container">
-    <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off"> 
+        <form id="anketa" action="/lk" method="post" class="form-horizontal" novalidate autocomplete="off"> 
                 <input type="hidden" name="display" id="display" value="0">
                 <input type="hidden" name="referer" value="<?=$referer?>">
                 <input type="hidden" name="id" value="">
@@ -96,5 +96,6 @@ include "header.php";
             </div>
         </form>
     </div>
+    <?php require('adsence.php'); ?>
 </main>
 <?php include 'footer.php';?>
