@@ -1,11 +1,29 @@
-<? if ($setting_array['is_mobile'] != 'мобила') : ?>
 <style>
 .mycol {
-    width: 46%;
-    margin-left: 34px;
+    <?php if ($setting_array['is_mobile'] != 'мобила') : ?>
+        width: 46%; margin-left: 34px;
+    <?php endif; ?>
+}
+.shortform1 {margin-top: 14px !important; margin-bottom: 14px !important;}
+.shortform2 {color: #000 !important;}
+.shortform3 {margin-top: 14px !important;}
+.shortform4 {border: 1px dashed #71c386;}
+.shortform5 {
+    <?php if ($setting_array['is_mobile'] != 'мобила') : ?>
+        line-height: 0.8 !important;
+    <?php else : ?>
+        line-height: 0.8 !important;
+        margin-top: -20px !important;
+    <?php endif; ?>
+}
+#next1 {
+    <?php if ($setting_array['is_mobile'] != 'мобила') : ?>
+        width: 56% !important; font-size: 16px !important; margin-left: 28% !important;
+    <? else : ?>
+        width: 70% !important; font-size: 16px !important; margin-left: 16% !important;
+    <? endif; ?>
 }
 </style>
-<? endif; ?>
 <div class="form-group has-feedback hidden-lg hidden-md hidden-sm hidden-xs text-center">
 	<label class="col-sm-4 control-label label-required hidden-lg hidden-md hidden-sm hidden-xs"></label>
 	<div class="col-sm-7 col-xs-12 am">
@@ -26,20 +44,20 @@
 		</div>
 	</div>
 </div>
-<div class="form-group has-feedback hidden-xs" style="margin-top: 14px; margin-bottom: 14px;">
+<div class="form-group has-feedback hidden-xs shortform1">
 	<label class="col-sm-4 col-md-4 control-label hidden-xs" for="period2"></label>
 	<div class="col-sm-6 col-md-6 col-xs-12 mycol">
 		<div class="form-slider green">
-			<input style="color: #000;" type="text" class="form-control" id="period2" name="period2" disabled="disabled" value="От 61 до 130 дней" readonly/>
+			<input type="text" class="form-control shortform2" id="period2" name="period2" disabled="disabled" value="От 61 до 130 дней" readonly/>
 			<span id="periodstatus" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
 		</div>
 	</div>
 </div>
 
-<div class="form-group has-feedback has-success hidden-xs" style="margin-top: 14px;">
+<div class="form-group has-feedback has-success hidden-xs shortform3">
 	<label class="col-sm-4 col-md-4 control-label hidden-xs"></label>
 	<div class="col-sm-6 col-md-6 col-xs-12 mycol">
-        <hr style="border: 1px dashed #71c386;" />
+        <hr class="shortform4" />
 	</div>
 </div>
 
@@ -176,12 +194,8 @@
 <div class="form-group">
 	<label class="col-sm-4 control-label"></label>
 	<div class="col-sm-5 col-sm-offset-4 col-md-5 col-xs-12 mycol">
-        <? if ($setting_array['is_mobile'] != 'мобила') : ?>
-            <label style="line-height: 0.8;">
-        <? else : ?>
-            <label style="line-height: 0.8; margin-top: -20px;">
-        <? endif; ?>
-			<input type="checkbox" id="agree" onclick="checkMee()"value="1" checked>
+        <label class="shortform5">
+			<input type="checkbox" id="agree" onclick="checkMee()" value="1" checked>
 			<b class="font12">Я согласен на обработку персональных данных и с
 				<a href="#" data-toggle="modal" data-target="#tosModal">публичной офертой</a>
 			</b>
@@ -198,10 +212,6 @@
 <div class="clearfix"></div>
 <div class="col-sm-6 col-md-6 col-sm-offset-4 col-xs-12">
     <div class="shadow">
-        <? if ($setting_array['is_mobile'] != 'мобила') : ?>
-            <a class="btn btn-ok btn-block" id="next1" style="width: 56% !important; font-size: 16px; margin-left: 28% !important;">Отправить заявку</a>
-        <? else : ?>
-            <a class="btn btn-ok btn-block" id="next1" style="width: 70% !important; font-size: 16px; margin-left: 16% !important;">Отправить заявку</a>
-        <? endif; ?>
+        <a class="btn btn-ok btn-block" id="next1">Отправить заявку</a>
     </div>
 </div>
